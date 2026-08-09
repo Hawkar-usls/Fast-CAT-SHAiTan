@@ -1,35 +1,71 @@
 {
+  "schema": "Fast-CAT/PILOT-001/genesis-corrections/v1.1",
   "claim_boundary": "These are acquisition/protocol corrections. They improve calibration and false-positive control but do not replace validated 48-landmark and CatFACS-compatible event-onset evidence.",
   "model_corrections": [
-    "PTS is authoritative; nominal frame_count/fps timestamps are diagnostic only when PTS exists.",
-    "A frame-localized delta-t point estimate carries at least one nominal-frame acquisition radius; detector/event-localization uncertainty is additional.",
+    "Decoded frame PTS is authoritative for event timing; avg_frame_rate/r_frame_rate are diagnostic stream-header fields only.",
+    "The previous v1.0 nominal-FPS acquisition-radius calculation is superseded because the hugging file advertises 120/1 in its stream header while its decoded PTS contains only 50 frames across 3.050 s with 58-67 ms inter-frame gaps.",
+    "A final first-visible action onset must be bracketed by the immediately previous decoded frame explicitly reviewed as action-absent and the first decoded frame reviewed as action-present.",
+    "For signaller bracket (s_prev, s] and responder bracket (r_prev, r], the point estimate is r-s and the conservative acquisition interval is [r_prev-s, r-s_prev]. Detector/reviewer localization uncertainty is additional.",
     "Primary actions and source order are frozen before outcome inspection.",
     "No-match windows are preserved rather than discarded.",
     "If an automated detector is scanned adaptively over many windows, a marginal average false-positive rate is insufficient for a sequential familywise claim; a history-wise conditional cap or an anytime-valid alternative is required.",
     "Multiple candidate events per trial multiply the guessing/false-positive budget and cannot be hidden by postselection."
   ],
-  "precision": {
-    "coarsest_delta_acquisition_radius_ms": 33.333333333333336,
-    "finest_delta_acquisition_radius_ms": 8.333333333333334,
+  "superseded_precision_model": {
+    "schema": "Fast-CAT/PILOT-001/genesis-corrections/v1.0",
+    "reason": "It used 1000/header_fps as the acquisition interval. Decoded PTS replay falsified that assumption for the hugging source.",
+    "old_hugging_nominal_interval_ms": 8.333333333333334,
+    "old_conflict_nominal_interval_ms": 33.333333333333336,
+    "must_not_be_used_for_final_latency": true
+  },
+  "decoded_pts_evidence": {
+    "workflow_run_id": 31291826104,
+    "workflow_artifact_id": 9031646102,
+    "workflow_artifact_digest": "sha256:e55ebdd8ecc3859a25e84957027efdbedc6b02582d9a7e559b7d22f866c0a77d",
+    "verified_head_sha": "78e3e5a40d56a11bd016805531fcfeefbcb40711",
+    "independent_frame_ledger_verifier": "PASS",
     "sources": [
       {
-        "delta_acquisition_radius_ms": 8.333333333333334,
-        "fps": 120.0,
-        "nominal_frame_interval_ms": 8.333333333333334,
-        "note": "event/model localization uncertainty is additional",
-        "source_id": "commons_hugging_2019"
+        "source_id": "commons_hugging_2019",
+        "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+        "header_avg_frame_rate": "120/1",
+        "header_r_frame_rate": "120/1",
+        "decoded_frame_count": 50,
+        "first_pts_s": 0.0,
+        "last_pts_s": 3.05,
+        "decoded_pts_gap_ms_min": 58.0,
+        "decoded_pts_gap_ms_median": 59.0,
+        "decoded_pts_gap_ms_max": 67.0,
+        "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee",
+        "ledger_payload_sha256": "8e9124cfe2150a30e15ed84d4a05f3008275a3fac5b0180cbcd612204659025d",
+        "interpretation": "The 120/1 stream header is not the decoded-frame cadence and must not define millisecond acquisition precision."
       },
       {
-        "delta_acquisition_radius_ms": 33.333333333333336,
-        "fps": 30.0,
-        "nominal_frame_interval_ms": 33.333333333333336,
-        "note": "event/model localization uncertainty is additional",
-        "source_id": "commons_tomcats_conflict_2020"
+        "source_id": "commons_tomcats_conflict_2020",
+        "raw_media_sha256": "79ea8a60c5aee25438ee70c2fff192ba953e89d29219c3d6ce5ed8e10e2078cf",
+        "header_avg_frame_rate": "30/1",
+        "header_r_frame_rate": "30/1",
+        "decoded_frame_count": 1218,
+        "first_pts_s": 0.007,
+        "last_pts_s": 45.274,
+        "decoded_pts_gap_ms_min": 33.0,
+        "decoded_pts_gap_ms_median": 33.0,
+        "decoded_pts_gap_ms_max": 167.0,
+        "frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
+        "ledger_payload_sha256": "0c6e924137ac52d8e74ca3f72d766320fe477522caba10d36de7f924842db781",
+        "interpretation": "The source is mostly near a 30 fps cadence but contains decoded PTS gaps up to 167 ms, so uncertainty must be local to the event frames."
       }
     ]
   },
-  "protocol_sha256": "4acf5c298e23e60751469eb62d51ffadd8408aee8c2b488343b60ac8c9902e4d",
-  "schema": "Fast-CAT/PILOT-001/genesis-corrections/v1.0",
+  "final_latency_acquisition_rule": {
+    "onset_definition": "first decoded frame judged action-present, with the immediately previous reviewed decoded frame judged action-absent",
+    "point_estimate": "delta_hat_ms = (responder_onset_pts_s - signaller_onset_pts_s) * 1000",
+    "lower_bound": "(responder_previous_absent_pts_s - signaller_onset_pts_s) * 1000",
+    "upper_bound": "(responder_onset_pts_s - signaller_previous_absent_pts_s) * 1000",
+    "note": "This is acquisition quantization only; detector/reviewer/model uncertainty remains additional and must not be hidden inside the PTS bracket."
+  },
+  "protocol_sha256": "4acf5c298e23e6075143d3ea964b3f1720bb60ed90f4795b9d2b4f6457aad81",
+  "protocol_sha256_note": "The original v1.0 record contained a protocol hash. Recompute and bind the live protocol in the next final admission receipt rather than trusting this field for gate admission.",
   "sequential_false_positive_examples": [
     {
       "candidates_per_trial": 1,
@@ -51,10 +87,5 @@
     }
   ],
   "source_preflight_sha256": "b09dd6a6052d0e53f04724c3a964b3f1720bb60ed90f4795b9d2b4f6457aad81",
-  "ci_evidence": {
-    "workflow_run_id": 31290674581,
-    "artifact_id": 9031255564,
-    "artifact_digest": "sha256:856b089699c64c4ea50f801b7f0d9c55f31edcb5697550fad48742b5c72fd2a6",
-    "verified_head_sha": "0f9e9f5cf32ef596d779093690dc772771b4e47f"
-  }
+  "claim_ceiling": "Decoded-frame timing is now bound to real PTS rather than nominal FPS, but no landmark accuracy, CatFACS action onset, or feline delta-t is established."
 }
