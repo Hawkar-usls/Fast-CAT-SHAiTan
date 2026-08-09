@@ -49,6 +49,7 @@ jobs:
           python -m unittest \
             tests.test_review_ingestion \
             tests.test_review_submission_binding \
+            tests.test_bound_review_ingestion \
             -v
 
       - name: Assert reviewer attestation template is fail-closed
@@ -197,6 +198,7 @@ jobs:
           v=json.load(open('artifacts/review_ingestion_test/synthetic_verifier.json'))
           assert a['status']=='PASS'
           assert a['scientific_outcome']=='VALID_REVIEW_ZERO_MATCHES'
+          assert a['exact_frozen_package_binding_established'] is True
           assert len(a['derived_onsets'])==0
           assert a['summary']['n_matches']==0
           assert a['independent_frame_level_estimate_established'] is False
@@ -205,5 +207,6 @@ jobs:
           assert v['matches_count_recomputed']==0
           assert v['independent_frame_level_estimate_established'] is False
           print('ZERO_EVENT_NEGATIVE_OUTCOME_PRESERVED = PASS')
+          print('EXACT_FROZEN_PACKAGE_BINDING = PASS')
           print('CI_SYNTHETIC_FIXTURE_IS_NOT_BIOLOGICAL_EVIDENCE = TRUE')
           PY
