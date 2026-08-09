@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Deterministically replay Fast-CAT-SHAiTan PILOT_000.
 
-This is a reproducibility/sanity-check program over the example event sequence
-published by Martvel et al. (2024). It does not analyze raw video and does not
-establish a biological reaction-time distribution.
+The inputs below reproduce the explicit sample-event fixture in the authors'
+public facial_mimicry_analysis.py. The upstream file marks it as an example and
+contains a TODO to load the real data. This program therefore tests replay
+machinery only: it does not analyze raw video and does not establish measured
+feline reaction times.
 """
 
 from __future__ import annotations
@@ -45,33 +47,27 @@ def sha256(value: Any) -> str:
 
 def replay(events: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     matches: list[dict[str, Any]] = []
-
     for index, event in enumerate(events):
         if event["actor"] != "signaller":
             continue
-
         for candidate in events[index + 1 :]:
             if candidate["actor"] != "responder":
                 continue
             if candidate["action"] != event["action"]:
                 continue
-
             dt_s = float(candidate["t_s"]) - float(event["t_s"])
             if 0.0 <= dt_s <= WINDOW_S:
-                matches.append(
-                    {
-                        "action": event["action"],
-                        "signaller_t_s": event["t_s"],
-                        "responder_t_s": candidate["t_s"],
-                        "latency_ms": round(dt_s * 1000.0),
-                    }
-                )
+                matches.append({
+                    "action": event["action"],
+                    "signaller_t_s": event["t_s"],
+                    "responder_t_s": candidate["t_s"],
+                    "latency_ms": round(dt_s * 1000.0),
+                })
                 break
 
     latencies = [int(match["latency_ms"]) for match in matches]
     if not latencies:
         raise RuntimeError("PILOT_000 produced no matching events")
-
     summary = {
         "n_matches": len(latencies),
         "latencies_ms": latencies,
@@ -86,7 +82,6 @@ def replay(events: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str
 def main() -> int:
     matches, summary = replay(EVENTS)
     analysis_payload = {"events": EVENTS, "matches": matches, "summary": summary}
-
     events_digest = sha256(EVENTS)
     analysis_digest = sha256(analysis_payload)
 
@@ -109,7 +104,7 @@ def main() -> int:
         "summary": summary,
         "events_sha256": events_digest,
         "analysis_payload_sha256": analysis_digest,
-        "claim_ceiling": "published-example replay only; no independent raw-video latency estimate",
+        "claim_ceiling": "authors-code sample fixture replay only; no raw-study-data or biological latency claim",
     }
     print(json.dumps(output, indent=2, ensure_ascii=False, sort_keys=True))
     return 0
