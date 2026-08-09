@@ -1,0 +1,45 @@
+{
+  "schema": "Fast-CAT/PILOT-001/control-full-rate-landmark-candidate-protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_tomcats_conflict_2020",
+  "role": "non_affiliative_control",
+  "preregistered_after_sampled_preflight": true,
+  "sampled_preflight_receipt": "experiments/pilot_001/control_landmark_candidate_receipt_v1_0.json",
+  "source_binding": {
+    "raw_media_sha256": "79ea8a60c5aee25438ee70c2fff192ba953e89d29219c3d6ce5ed8e10e2078cf",
+    "decoded_frame_count": 1218,
+    "frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
+    "frame_set": "all decoded frames 0 through 1217 in chronological order"
+  },
+  "backend": {
+    "repository": "hugocornellier/cat_detection",
+    "commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "mode": "CatDetectionMode.faceOnly on two frozen spatial ROIs",
+    "expected_landmark_count": 48
+  },
+  "fixed_rois_normalized_xyxy": {
+    "cat_C_brown_left": [0.25, 0.10, 0.54, 0.55],
+    "cat_D_gray_right": [0.49, 0.08, 0.82, 0.55]
+  },
+  "roi_policy_frozen_before_full_rate_probe": true,
+  "duplicate_face_guard_fraction_of_frame_diagonal": 0.08,
+  "coverage_policy": {
+    "every_frame_must_be_preserved": true,
+    "valid_channel_requires_exactly_one_face_with_48_finite_points": true,
+    "two_spatially_distinct_channels": "PASS_CANDIDATE_ONLY",
+    "one_or_both_channels_missing_or_duplicate_risk": "REVIEW",
+    "review_frames_are_preserved_and_do_not_fail_the_experiment",
+    "zero_pass_frames": "NO_FEASIBLE_FULL_RATE_CONTROL_COVERAGE"
+  },
+  "admission_boundary": {
+    "fixed_roi_identity": "candidate_only",
+    "finite_48_point_geometry": "candidate_only",
+    "landmark_accuracy": "not_established",
+    "landmark_confidence": "unavailable_from_backend_public_result",
+    "catfacs_action": "not_established",
+    "facial_action_onset": "not_established",
+    "delta_t": "not_established",
+    "independent_frame_level_estimate": "not_established"
+  },
+  "claim_ceiling": "This gate measures full-rate candidate detector coverage on the non-affiliative control. It preserves every decoded frame and any detector failure/review state. It cannot by itself validate landmark accuracy, final identity, CatFACS actions, mimicry, or latency."
+}
