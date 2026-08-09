@@ -8,6 +8,8 @@ It does not ask Fast-CAT, CatGPT, the landmark backend, or the current model-ass
 
 Use the exact blinded package bound in [`experiments/pilot_001/independent_review_submission_protocol.json`](../experiments/pilot_001/independent_review_submission_protocol.json).
 
+The frozen package is identified by its GitHub Actions artifact digest plus byte-level SHA-256 identities for the blank review form, frame manifest, package manifest and review instructions. The submission protocol also preserves the producing Fast-CAT head/tree, workflow run/artifact IDs, raw-media SHA-256 and decoded-PTS identity.
+
 The reviewer completes all 100 rows of `review_form.csv`:
 
 - `identity_confirmed`: `yes`, `no`, or `uncertain`;
@@ -17,6 +19,15 @@ The reviewer completes all 100 rows of `review_form.csv`:
 No model score, landmark field, predicted action, or ranking column may be added.
 
 After the CSV is complete, compute its SHA-256 **before** revealing any Fast-CAT landmark/motion ranking to that reviewer. Then complete a copy of [`reviewer_attestation.template.json`](../experiments/pilot_001/reviewer_attestation.template.json).
+
+In addition to the completed-form hash, the reviewer attestation must copy these two identifiers from the frozen submission protocol:
+
+```text
+blinded_package_artifact_digest
+blank_review_form_sha256
+```
+
+Those fields prevent a completed CSV from being silently paired with a different starting package or blank-form lineage.
 
 The attestation is evidence of a declaration, not magical proof of reviewer identity or expertise. Reviewer identity/competence must be documented honestly; software only checks the declared fields and cryptographic lineage.
 
@@ -30,6 +41,8 @@ python scripts/ingest_independent_action_review.py \
   --attestation /path/to/reviewer_attestation.json \
   --out artifacts/pilot_001_independent_review.json
 ```
+
+The production command first validates the **exact frozen-package binding**. If the frame-manifest file SHA-256, GitHub Actions artifact digest, or blank-form SHA-256 does not match the frozen package, ingestion fails before any submitted label can become an onset or matched event.
 
 A valid submission is tied to:
 
@@ -89,7 +102,7 @@ python scripts/verify_independent_action_review.py \
   --out artifacts/pilot_001_independent_review_verifier.json
 ```
 
-The verifier does not import the review-ingestion analysis module. It re-parses the CSV and independently recomputes the onset table and deterministic pairing before comparing content hashes.
+The verifier does not import the review-ingestion analysis module. It independently checks frozen package lineage, re-parses the CSV, recomputes the onset table and deterministic pairing, then compares content hashes with the analysis report.
 
 ## Negative outcomes
 
@@ -106,7 +119,7 @@ A zero-event or zero-match review is not a failed experiment.
 
 ## Claim boundary
 
-A successful ingestion may establish that an independent blinded review submission is internally consistent and that its onset/pairing tables replay deterministically.
+A successful ingestion may establish that an independent blinded review submission is internally consistent, bound to the frozen review input, and that its onset/pairing tables replay deterministically.
 
 It **does not automatically set**:
 
