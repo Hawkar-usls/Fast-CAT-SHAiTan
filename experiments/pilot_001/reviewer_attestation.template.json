@@ -1,0 +1,11 @@
+{
+  "schema": "Fast-CAT/PILOT-001/reviewer-attestation/v1.0",
+  "reviewer_id": "",
+  "independent_of_fastcat_model_evidence_before_label_freeze": null,
+  "saw_landmark_or_motion_rankings_before_label_freeze": null,
+  "labels_frozen_before_model_reveal": null,
+  "catfacs_competence_basis": "",
+  "completed_review_form_sha256": "",
+  "review_completed_utc": "",
+  "attestation_note": "Fill this only after completing and freezing the blinded review CSV. The software verifies internal consistency of the declaration; it cannot independently prove reviewer identity, competence, or what the reviewer saw. False or unsupported attestations invalidate the scientific claim."
+}
