@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "project": "Fast-CAT-SHAiTan",
   "maturity": "research_prototype",
   "code_license": "Apache-2.0",
@@ -8,7 +8,7 @@
   "independent_frame_level_estimate_established": false,
   "pilot_000_status": "complete_authors_code_sample_fixture_replay_lineage_corrected",
   "pilot_000_raw_study_data_used": false,
-  "pilot_001_status": "candidate_landmark_coverage_and_ear_triage_established_action_gate_open",
+  "pilot_001_status": "blinded_review_input_and_fail_closed_ingestion_software_boundary_established_external_review_pending",
   "pilot_001_open_video": "established",
   "pilot_001_raw_sha256": "established",
   "pilot_001_stream_timing_metadata": "established_independent_replay",
@@ -34,6 +34,32 @@
     "action_review_protocol": "frozen_before_final_labels",
     "current_model_assisted_review_is_independent": false
   },
+  "pilot_001_blinded_review_package": {
+    "status": "frozen_model_blinded_input_boundary",
+    "producer_fastcat_head_sha": "70e20113aa1acd2311bed3a61e77fb1ee26e5424",
+    "producer_fastcat_tree_sha": "cd90a48a77eff3f3ee183427dfd3716cb4cb9dfc",
+    "workflow_run_id": 31293673630,
+    "workflow_artifact_id": 9032245626,
+    "workflow_artifact_digest": "sha256:ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f",
+    "frame_manifest_file_sha256": "0271018446726ccabd3be78e29c426e03d772e2bc01bb40ceb32ff246ae51c67",
+    "blank_review_form_sha256": "b464040c69491ac1ce7e1083f2745a85361fe3884cce1b37d6c9c7bae946622d",
+    "package_manifest_file_sha256": "85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4",
+    "frames": 50,
+    "blank_annotation_rows": 100,
+    "model_evidence_excluded": true,
+    "action_labels_present": false
+  },
+  "pilot_001_independent_review_ingestion": {
+    "software_gate": "fail_closed_exact_frozen_package_binding_then_label_validation_then_deterministic_replay",
+    "exact_frame_manifest_file_binding_required": true,
+    "exact_artifact_digest_binding_required": true,
+    "exact_blank_form_lineage_required": true,
+    "independent_second_verifier": true,
+    "zero_onset_and_zero_match_outcomes_preserved": true,
+    "synthetic_zero_event_fixture_is_biological_evidence": false,
+    "real_independent_reviewer_submission_received": false,
+    "real_independent_action_labels_received": false
+  },
   "pilot_001_conflict_control": {
     "decoded_frame_count": 1218,
     "frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
@@ -54,10 +80,11 @@
   "pilot_001_landmark_structure": "candidate_coverage_established_not_ground_truth",
   "pilot_001_landmark_accuracy": "not_established",
   "pilot_001_final_two_cat_identity": "not_established_independently",
+  "pilot_001_independent_reviewer_submission": "not_received",
   "pilot_001_EAD103": "not_established",
   "pilot_001_EAD104": "not_established",
   "pilot_001_facial_action_onset": "not_established",
   "pilot_001_delta_t": "not_established",
-  "claim_ceiling": "PILOT_001 establishes exact open-video bytes, decoded frame PTS, full-rate 48-point candidate coverage for both hugging ROI channels, sampled 83/83 candidate coverage for the conflict control, and deterministic face-aligned ear-motion triage. None of these candidate/model outputs establishes landmark accuracy, independent cat identity, CatFACS EAD103/EAD104, action onset, mimicry, or feline response latency. INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
-  "current_next_gate": "PILOT_001: BLINDED_INDEPENDENT_EAD103_EAD104_FRAME_REVIEW -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> DELTA_T_INTERVAL -> INDEPENDENT_REPLAY; conflict full-rate candidate gate may proceed separately after sampled 83/83 feasibility"
+  "claim_ceiling": "PILOT_001 now has exact source/decoded-PTS provenance, candidate landmark coverage, deterministic ear-motion triage, a cryptographically frozen model-blinded EAD review package, and a fail-closed software path for ingesting and independently replaying a future external review. No real independent reviewer submission or biological action labels have been received. Landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, action onset, mimicry, delta-t and feline response latency remain NOT_ESTABLISHED; INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
+  "current_next_gate": "PILOT_001: REAL_INDEPENDENT_BLINDED_REVIEW_SUBMISSION -> EXACT_PACKAGE_BINDING -> EAD103_EAD104_FRAME_STATE_REPLAY -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> EVENT_LOCAL_DELTA_T_INTERVAL -> FULL_PROTOCOL_CLAIM_GATE; conflict full-rate candidate gate may proceed separately"
 }

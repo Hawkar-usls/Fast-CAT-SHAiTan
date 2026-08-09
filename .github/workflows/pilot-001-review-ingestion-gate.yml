@@ -1,0 +1,212 @@
+name: pilot-001-review-ingestion-gate
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  review-ingestion-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact Fast-CAT head revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Bind exact checkout
+        run: |
+          checked_out="$(git rev-parse HEAD)"
+          echo "FASTCAT_CHECKED_OUT_SHA=$checked_out" >> "$GITHUB_ENV"
+          echo "FASTCAT_CHECKED_OUT_TREE=$(git rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test "$checked_out" = "${{ github.event.pull_request.head.sha }}"
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg and Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install pillow==11.3.0
+
+      - name: Unit-test review ingestion and frozen-package binding
+        run: |
+          python -m unittest \
+            tests.test_review_ingestion \
+            tests.test_review_submission_binding \
+            tests.test_bound_review_ingestion \
+            -v
+
+      - name: Assert reviewer attestation template is fail-closed
+        run: |
+          python - <<'PY'
+          import json
+          p='experiments/pilot_001/reviewer_attestation.template.json'
+          d=json.load(open(p))
+          assert d['reviewer_id'] == ''
+          assert d['independent_of_fastcat_model_evidence_before_label_freeze'] is None
+          assert d['saw_landmark_or_motion_rankings_before_label_freeze'] is None
+          assert d['labels_frozen_before_model_reveal'] is None
+          assert d['completed_review_form_sha256'] == ''
+          assert d['blinded_package_artifact_digest'] == ''
+          assert d['blank_review_form_sha256'] == ''
+          print('ATTESTATION_TEMPLATE_FAIL_CLOSED = PASS')
+          PY
+
+      - name: Assert frozen blinded-package receipt identity
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
+          assert p['schema'] == 'Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1'
+          e=p['expected_blinded_package']
+          assert e['producer_fastcat_head_sha'] == '70e20113aa1acd2311bed3a61e77fb1ee26e5424'
+          assert e['producer_fastcat_tree_sha'] == 'cd90a48a77eff3f3ee183427dfd3716cb4cb9dfc'
+          assert e['workflow_run_id'] == 31293673630
+          assert e['workflow_artifact_id'] == 9032245626
+          assert e['workflow_artifact_name'] == 'pilot-001-hugging-blinded-review-package'
+          assert e['workflow_artifact_digest'] == 'sha256:ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f'
+          assert e['model_evidence_excluded'] is True
+          assert e['action_labels_present_in_frozen_package'] is False
+          print('FROZEN_BLINDED_PACKAGE_RECEIPT_IDENTITY = PASS')
+          PY
+
+      - name: Fetch frozen hugging source
+        run: python scripts/fetch_open_video.py commons_hugging_2019
+
+      - name: Rebuild exact full-rate blinded-package frame ledger
+        run: |
+          python scripts/build_frame_ledger.py \
+            --source-id commons_hugging_2019 \
+            --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
+            --step-frames 1 \
+            --out-dir artifacts/review_ingestion_test/frame_review
+          python scripts/verify_frame_ledger.py \
+            --source-id commons_hugging_2019 \
+            --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
+            --ledger artifacts/review_ingestion_test/frame_review/frame_ledger.json \
+            --frame-dir artifacts/review_ingestion_test/frame_review/frames \
+            --out artifacts/review_ingestion_test/frame_review/verifier.json
+
+      - name: Rebuild exact model-blinded package inputs
+        run: |
+          python scripts/build_blinded_action_review_pack.py \
+            --protocol experiments/pilot_001/blinded_review_package_protocol.json \
+            --frame-ledger artifacts/review_ingestion_test/frame_review/frame_ledger.json \
+            --frame-dir artifacts/review_ingestion_test/frame_review/frames \
+            --out-dir artifacts/review_ingestion_test/package
+          python - <<'PY'
+          import hashlib, json
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,'rb') as f:
+                  for block in iter(lambda:f.read(1024*1024),b''):
+                      h.update(block)
+              return h.hexdigest()
+          p=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
+          e=p['expected_blinded_package']
+          checks = {
+              'artifacts/review_ingestion_test/package/frame_manifest.json': e['frame_manifest_file_sha256'],
+              'artifacts/review_ingestion_test/package/review_form.csv': e['blank_review_form_sha256'],
+              'artifacts/review_ingestion_test/package/package_manifest.json': e['package_manifest_file_sha256'],
+              'artifacts/review_ingestion_test/package/REVIEW_INSTRUCTIONS.md': e['instructions_file_sha256'],
+          }
+          for path, expected in checks.items():
+              actual=sha(path)
+              assert actual == expected, (path, actual, expected)
+          print('FROZEN_BLINDED_PACKAGE_LINEAGE_REBUILT = PASS')
+          PY
+
+      - name: Build software-only zero-event fixture
+        run: |
+          python - <<'PY'
+          import csv, hashlib, json, pathlib
+          root=pathlib.Path('artifacts/review_ingestion_test')
+          blank=root/'package'/'review_form.csv'
+          completed=root/'synthetic_completed_review.csv'
+          with blank.open('r',encoding='utf-8',newline='') as f:
+              reader=csv.DictReader(f)
+              fields=reader.fieldnames
+              rows=list(reader)
+          for row in rows:
+              row['identity_confirmed']='yes'
+              for c in ('left_ear_EAD103','right_ear_EAD103','left_ear_EAD104','right_ear_EAD104'):
+                  row[c]='ABSENT'
+              row['review_notes']=''
+          with completed.open('w',encoding='utf-8',newline='') as f:
+              writer=csv.DictWriter(f,fieldnames=fields)
+              writer.writeheader(); writer.writerows(rows)
+          form_sha=hashlib.sha256(completed.read_bytes()).hexdigest()
+          proto=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
+          exp=proto['expected_blinded_package']
+          att={
+              'schema':'Fast-CAT/PILOT-001/reviewer-attestation/v1.0',
+              'reviewer_id':'CI_SYNTHETIC_SOFTWARE_FIXTURE_NOT_SCIENTIFIC_REVIEW',
+              'independent_of_fastcat_model_evidence_before_label_freeze':True,
+              'saw_landmark_or_motion_rankings_before_label_freeze':False,
+              'labels_frozen_before_model_reveal':True,
+              'catfacs_competence_basis':'SOFTWARE TEST FIXTURE ONLY; NOT A SCIENTIFIC CATFACS REVIEW',
+              'completed_review_form_sha256':form_sha,
+              'blinded_package_artifact_digest':exp['workflow_artifact_digest'],
+              'blank_review_form_sha256':exp['blank_review_form_sha256'],
+              'review_completed_utc':'2000-01-01T00:00:00Z',
+              'attestation_note':'CI synthetic zero-event fixture; must never be admitted as biological evidence.'
+          }
+          (root/'synthetic_attestation.json').write_text(json.dumps(att,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print('SYNTHETIC_FIXTURE_FORM_SHA256='+form_sha)
+          PY
+
+      - name: Replay synthetic zero-event submission through analysis
+        run: |
+          python scripts/ingest_independent_action_review.py \
+            --protocol experiments/pilot_001/independent_review_submission_protocol.json \
+            --frame-manifest artifacts/review_ingestion_test/package/frame_manifest.json \
+            --review-form artifacts/review_ingestion_test/synthetic_completed_review.csv \
+            --attestation artifacts/review_ingestion_test/synthetic_attestation.json \
+            --out artifacts/review_ingestion_test/synthetic_analysis.json
+
+      - name: Independently replay synthetic zero-event submission
+        run: |
+          python scripts/verify_independent_action_review.py \
+            --protocol experiments/pilot_001/independent_review_submission_protocol.json \
+            --frame-manifest artifacts/review_ingestion_test/package/frame_manifest.json \
+            --review-form artifacts/review_ingestion_test/synthetic_completed_review.csv \
+            --attestation artifacts/review_ingestion_test/synthetic_attestation.json \
+            --analysis-report artifacts/review_ingestion_test/synthetic_analysis.json \
+            --out artifacts/review_ingestion_test/synthetic_verifier.json
+
+      - name: Assert negative outcome is preserved without claim promotion
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('artifacts/review_ingestion_test/synthetic_analysis.json'))
+          v=json.load(open('artifacts/review_ingestion_test/synthetic_verifier.json'))
+          assert a['status']=='PASS'
+          assert a['scientific_outcome']=='VALID_REVIEW_ZERO_MATCHES'
+          assert a['exact_frozen_package_binding_established'] is True
+          assert len(a['derived_onsets'])==0
+          assert a['summary']['n_matches']==0
+          assert a['independent_frame_level_estimate_established'] is False
+          assert v['status']=='PASS'
+          assert v['derived_onsets_count_recomputed']==0
+          assert v['matches_count_recomputed']==0
+          assert v['independent_frame_level_estimate_established'] is False
+          print('ZERO_EVENT_NEGATIVE_OUTCOME_PRESERVED = PASS')
+          print('EXACT_FROZEN_PACKAGE_BINDING = PASS')
+          print('CI_SYNTHETIC_FIXTURE_IS_NOT_BIOLOGICAL_EVIDENCE = TRUE')
+          PY
