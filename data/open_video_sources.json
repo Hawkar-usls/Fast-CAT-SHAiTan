@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Candidate public video sources for detector development and manually reviewed timing experiments. Inclusion is not an assertion that a clip contains rapid facial mimicry.",
+  "sources": [
+    {
+      "source_id": "commons_kittys_2023",
+      "title": "Kittys.webm",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kittys.webm",
+      "provider": "Wikimedia Commons",
+      "author": "Anggggggela",
+      "description": "Two cats; short domestic-cat video.",
+      "duration_s": 8.5,
+      "width_px": 1280,
+      "height_px": 720,
+      "license": "CC-BY-SA-4.0",
+      "interaction_context_candidate": "unknown",
+      "raw_sha256": null,
+      "fps": null,
+      "analysis_status": "candidate_unvalidated"
+    },
+    {
+      "source_id": "commons_hugging_2019",
+      "title": "Two cats holding each other and hugging.webm",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Two_cats_holding_each_other_and_hugging.webm",
+      "provider": "Wikimedia Commons",
+      "author": "the Technophant",
+      "description": "Two male cats rescued from the same colony; uploader states they frequently lie together and mutually groom.",
+      "duration_s": 3.058,
+      "width_px": 1440,
+      "height_px": 1080,
+      "license": "CC-BY-SA-4.0",
+      "interaction_context_candidate": "affiliative",
+      "raw_sha256": null,
+      "fps": null,
+      "analysis_status": "candidate_unvalidated"
+    },
+    {
+      "source_id": "commons_play_fight_2013",
+      "title": "Play fight between cats.webmhd.webm",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Play_fight_between_cats.webmhd.webm",
+      "provider": "Wikimedia Commons",
+      "author": "Erik Zachte",
+      "description": "Two 14-week-old littermates in a playful fight.",
+      "duration_s": 294.0,
+      "width_px": 1077,
+      "height_px": 606,
+      "license": "CC-BY-SA-3.0",
+      "interaction_context_candidate": "play_affiliative_candidate",
+      "raw_sha256": null,
+      "fps": null,
+      "analysis_status": "candidate_unvalidated"
+    },
+    {
+      "source_id": "commons_tomcats_conflict_2020",
+      "title": "Tomcats conflict.webm",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tomcats_conflict.webm",
+      "provider": "Wikimedia Commons",
+      "author": "Drummyfish",
+      "description": "Two tomcats in a conflict situation with loud calls.",
+      "duration_s": 45.485,
+      "width_px": 640,
+      "height_px": 480,
+      "license": "CC0-1.0",
+      "interaction_context_candidate": "non_affiliative",
+      "upstream_sha1": "7ba449b9a29f65ce6695c2d8cfadbad98f4ef617",
+      "raw_sha256": null,
+      "fps": null,
+      "analysis_status": "candidate_unvalidated"
+    }
+  ],
+  "admission_rule": "Before millisecond analysis, fetch the original media, record exact bytes with SHA-256, inspect frame-rate/time-base metadata, and manually verify that two visible cat faces support the intended event annotation."
+}
