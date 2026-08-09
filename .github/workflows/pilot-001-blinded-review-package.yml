@@ -1,0 +1,140 @@
+name: pilot-001-blinded-review-package
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  blinded-review-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact Fast-CAT head revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Bind exact Fast-CAT checkout
+        run: |
+          checked_out="$(git rev-parse HEAD)"
+          echo "FASTCAT_CHECKED_OUT_SHA=$checked_out" >> "$GITHUB_ENV"
+          echo "FASTCAT_CHECKED_OUT_TREE=$(git rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test "$checked_out" = "${{ github.event.pull_request.head.sha }}"
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg and Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install pillow==11.3.0
+
+      - name: Fetch frozen hugging source
+        run: python scripts/fetch_open_video.py commons_hugging_2019
+
+      - name: Build exact full-rate frame ledger
+        run: |
+          python scripts/build_frame_ledger.py \
+            --source-id commons_hugging_2019 \
+            --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
+            --step-frames 1 \
+            --out-dir artifacts/blinded_review_build/frame_review
+
+      - name: Independently replay full-rate frame pixels
+        run: |
+          python scripts/verify_frame_ledger.py \
+            --source-id commons_hugging_2019 \
+            --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
+            --ledger artifacts/blinded_review_build/frame_review/frame_ledger.json \
+            --frame-dir artifacts/blinded_review_build/frame_review/frames \
+            --out artifacts/blinded_review_build/frame_review/verifier.json
+
+      - name: Build model-blinded review package
+        run: |
+          python scripts/build_blinded_action_review_pack.py \
+            --protocol experiments/pilot_001/blinded_review_package_protocol.json \
+            --frame-ledger artifacts/blinded_review_build/frame_review/frame_ledger.json \
+            --frame-dir artifacts/blinded_review_build/frame_review/frames \
+            --out-dir artifacts/blinded_review/package
+
+      - name: Independently verify blinded package boundary
+        run: |
+          python scripts/verify_blinded_action_review_pack.py \
+            --protocol experiments/pilot_001/blinded_review_package_protocol.json \
+            --frame-ledger artifacts/blinded_review_build/frame_review/frame_ledger.json \
+            --package-dir artifacts/blinded_review/package \
+            --out artifacts/blinded_review/verifier.json
+
+      - name: Assert package remains unlabeled and model-blinded
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('artifacts/blinded_review/verifier.json'))
+          assert d['status'] == 'PASS', d
+          assert d['frames_verified'] == 50
+          assert d['annotation_rows_verified_blank'] == 100
+          assert d['model_evidence_excluded'] is True
+          assert d['independent_frame_level_estimate_established'] is False
+          print('BLINDED_REVIEW_INPUT_BOUNDARY = PASS')
+          PY
+
+      - name: Freeze package receipt
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib
+          root=pathlib.Path('.').resolve()
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,'rb') as f:
+                  for block in iter(lambda:f.read(1024*1024),b''):
+                      h.update(block)
+              return h.hexdigest()
+          package=root/'artifacts'/'blinded_review'/'package'
+          receipt={
+              'schema':'Fast-CAT/PILOT-001/blinded-review-package-receipt/v1.0',
+              'fastcat_checked_out_sha':os.environ['FASTCAT_CHECKED_OUT_SHA'],
+              'fastcat_checked_out_tree':os.environ['FASTCAT_CHECKED_OUT_TREE'],
+              'raw_media_sha256':'1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e',
+              'frame_pts_sha256':'98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee',
+              'protocol_sha256':sha(root/'experiments'/'pilot_001'/'blinded_review_package_protocol.json'),
+              'action_review_protocol_sha256':sha(root/'experiments'/'pilot_001'/'action_review_protocol.json'),
+              'frame_ledger_sha256':sha(root/'artifacts'/'blinded_review_build'/'frame_review'/'frame_ledger.json'),
+              'frame_verifier_sha256':sha(root/'artifacts'/'blinded_review_build'/'frame_review'/'verifier.json'),
+              'frame_manifest_sha256':sha(package/'frame_manifest.json'),
+              'blank_review_form_sha256':sha(package/'review_form.csv'),
+              'instructions_sha256':sha(package/'REVIEW_INSTRUCTIONS.md'),
+              'package_manifest_sha256':sha(package/'package_manifest.json'),
+              'package_verifier_sha256':sha(root/'artifacts'/'blinded_review'/'verifier.json'),
+              'annotation_rows':100,
+              'model_evidence_excluded':True,
+              'action_labels_present':False,
+              'independent_frame_level_estimate_established':False,
+              'claim_ceiling':'Verified model-blinded review input only. No independent labels, action onset or latency result.'
+          }
+          out=root/'artifacts'/'blinded_review'/'receipt.json'
+          out.write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(json.dumps(receipt,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload blinded reviewer package
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-hugging-blinded-review-package
+          path: artifacts/blinded_review
+          if-no-files-found: error
+          retention-days: 30
