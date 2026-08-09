@@ -1,0 +1,69 @@
+{
+  "schema": "Fast-CAT/PILOT-001/landmark-candidate-frozen-receipt/v1.1",
+  "experiment_id": "PILOT_001",
+  "status": "PASS_CANDIDATE_ONLY",
+  "evidence": {
+    "fastcat_head_sha": "9d6472687de953f1a909a069148880f35bfbb842",
+    "fastcat_tree_sha": "f7a2945f0502df604ee46362433ce196e12089ab",
+    "workflow_run_id": 31292336339,
+    "workflow_artifact_id": 9031825888,
+    "workflow_artifact_digest": "sha256:87a697054cd4d5398007266bc42610100a9d70cb537636eccb227c6b3985a68d",
+    "artifact_name": "pilot-001-hugging-landmark-candidate",
+    "candidate_normalization_file_sha256": "28e51f33843af065adf7cde0a66449988fc7f8cb946ecaedbb0615ad3184cf09",
+    "raw_landmark_probe_file_sha256": "c1b5d5d7b853883a0e2f937371cb67d2377fbb90ffd3b1824220b4222e426669",
+    "frame_ledger_file_sha256": "a8dda9d30996b6da3e7be1587f0df21fbb92c857925cd5025b914cdf76e0dee4",
+    "frame_verifier_file_sha256": "78fd6efae866b37d85ad4aea2ee2a43ff30ad0b5c35ba7ee5d495d446f7ecba9"
+  },
+  "source": {
+    "source_id": "commons_hugging_2019",
+    "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+    "decoded_frame_count": 50,
+    "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee"
+  },
+  "backend": {
+    "repository": "hugocornellier/cat_detection",
+    "commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "tree_sha": "61d38ba8c589a188f2f33228aef9eb86e16e8844",
+    "license_file_sha256": "762fee0df63a4e7777dde14808bee8e944109252e9bfa91a9a3073b9576a265d",
+    "cat_face_localizer_tflite_sha256": "db0dbdc8430221cec96fcd907e7390fa0b23546e7673d08e508f1f6838ce2737",
+    "cat_face_landmarks_full_tflite_sha256": "b44c94955e9f92ef210bbfdfada7247a3c19c766c66b97d2be82cb0c197d917c",
+    "mode": "faceOnly-dual-fixed-roi"
+  },
+  "candidate_result": {
+    "frames_processed": 50,
+    "valid_channel_frame_counts": {
+      "cat_A_tabby_left": 50,
+      "cat_B_black_right": 50
+    },
+    "frames_with_two_spatially_distinct_roi_candidates": 50,
+    "frames_with_duplicate_face_risk": 0,
+    "frames_with_incomplete_roi_face_channels": 0,
+    "two_candidate_coverage_fraction": 1.0,
+    "candidate_identity_complete_all_frames": true,
+    "structural_landmark_rows_sha256": "0863e7db51c9a921723a9af14734f66ad649148585e2738e8cd4ac68300c9cb3",
+    "region_motion_rows_sha256": "b394ef5921a485d56c7f41fa8d48639907ad4136d30395b63b17b5dfbb95eedc"
+  },
+  "top_motion_triage_examples": {
+    "cat_A_tabby_left_ears": [
+      {"from_frame": 11, "to_frame": 12, "from_pts_s": 0.642, "to_pts_s": 0.700, "normalized_rms_delta": 0.15358998525718645},
+      {"from_frame": 14, "to_frame": 15, "from_pts_s": 0.817, "to_pts_s": 0.875, "normalized_rms_delta": 0.15004576244292098},
+      {"from_frame": 48, "to_frame": 49, "from_pts_s": 2.983, "to_pts_s": 3.050, "normalized_rms_delta": 0.13014095257082064}
+    ],
+    "cat_B_black_right_ears": [
+      {"from_frame": 26, "to_frame": 27, "from_pts_s": 1.517, "to_pts_s": 1.583, "normalized_rms_delta": 0.20335381957556103},
+      {"from_frame": 11, "to_frame": 12, "from_pts_s": 0.642, "to_pts_s": 0.700, "normalized_rms_delta": 0.12879176322099956},
+      {"from_frame": 22, "to_frame": 23, "from_pts_s": 1.283, "to_pts_s": 1.342, "normalized_rms_delta": 0.1275793248368613}
+    ]
+  },
+  "admission": {
+    "two_cat_identity": "CANDIDATE_ONLY_PENDING_INDEPENDENT_FULL_RATE_REVIEW",
+    "landmark_structure_48": "CANDIDATE_ONLY_50_OF_50_PER_ROI_CHANNEL",
+    "landmark_accuracy": "NOT_ESTABLISHED",
+    "landmark_confidence": "UNAVAILABLE_FROM_BACKEND_PUBLIC_RESULT",
+    "ear_eye_mouth_motion": "TRIAGE_ONLY_NOT_CATFACS",
+    "facial_action_onset": "NOT_ESTABLISHED",
+    "delta_t": "NOT_ESTABLISHED",
+    "independent_frame_level_estimate": "NOT_ESTABLISHED"
+  },
+  "claim_ceiling": "The pinned external backend produced structurally valid 48-point candidate geometry for both preregistered spatial ROI channels on all 50 decoded hugging frames, with no duplicate-face-risk flags. This establishes detector coverage only in candidate scope. It does not establish landmark accuracy, final cat identity, CatFACS action onset, mimicry, or feline latency."
+}
