@@ -64,8 +64,7 @@
     "upper_bound": "(responder_onset_pts_s - signaller_previous_absent_pts_s) * 1000",
     "note": "This is acquisition quantization only; detector/reviewer/model uncertainty remains additional and must not be hidden inside the PTS bracket."
   },
-  "protocol_sha256": "4acf5c298e23e6075143d3ea964b3f1720bb60ed90f4795b9d2b4f6457aad81",
-  "protocol_sha256_note": "The original v1.0 record contained a protocol hash. Recompute and bind the live protocol in the next final admission receipt rather than trusting this field for gate admission.",
+  "protocol_sha256": "4acf5c298e23e60751469eb62d51ffadd8408aee8c2b488343b60ac8c9902e4d",
   "sequential_false_positive_examples": [
     {
       "candidates_per_trial": 1,
