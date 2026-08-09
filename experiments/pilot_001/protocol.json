@@ -1,0 +1,73 @@
+{
+  "schema": "Fast-CAT/PILOT-001/protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "title": "Open-video feline facial-response timing gate",
+  "analysis_frozen_before_measurement": true,
+  "sources": [
+    "commons_hugging_2019",
+    "commons_tomcats_conflict_2020"
+  ],
+  "source_roles": {
+    "commons_hugging_2019": "affiliative_candidate_primary",
+    "commons_tomcats_conflict_2020": "non_affiliative_control"
+  },
+  "rapid_mimicry_window_ms": 1000,
+  "timestamp_basis": "decoded packet/frame presentation timestamps (PTS); frame_count/fps is diagnostic only",
+  "landmark_count": 48,
+  "min_landmark_confidence": 0.5,
+  "min_event_confidence": 0.5,
+  "primary_actions": [
+    "EAD103",
+    "EAD104"
+  ],
+  "secondary_actions": [
+    "AU25",
+    "AU26",
+    "AU47",
+    "EAD102",
+    "EAD105"
+  ],
+  "allowed_event_sources": [
+    "manual_catfacs_frame_review",
+    "validated_fastcat_model"
+  ],
+  "matching_policy": "earliest_unused_same_action_other_cat_forward_within_window",
+  "selection_policy": "all_eligible_events_no_posthoc_dropping",
+  "negative_outcome_policy": "no_match_is_valid_and_must_be_preserved",
+  "precision_policy": {
+    "latency_point_estimate": "responder_onset_pts - signaller_onset_pts",
+    "quantization_bound": "at_least_one_nominal_frame_interval_for_delta_of_two_frame_quantized_onsets",
+    "forbid_sub_frame_claim_without_sub_frame_measurement": true
+  },
+  "model_selection": {
+    "split_unit": "source_video_or_interaction_not_random_frames",
+    "catgpt_role": "interpretable_autoregressive_baseline",
+    "temporal_attention_role": "candidate_model_only_after_validation",
+    "hyperparameter_optimization": "standard_GP_EI_allowed_on_frozen_validation_split",
+    "forbidden_heuristics": [
+      "digital_root_resonance",
+      "tachyonic_filter_37",
+      "post_hoc_action_selection",
+      "post_hoc_source_dropping"
+    ]
+  },
+  "landmark_detector_admission": {
+    "scheme": "CatFLW/Finka-compatible 48 landmarks",
+    "reference_detector_family": "ELD or equivalently validated 48-landmark detector",
+    "reference_nme_iod_context": 2.91,
+    "require_domain_review_on_each_admitted_open_video": true,
+    "require_event_level_frame_review_for_pilot_001": true
+  },
+  "claim_gate": {
+    "INDEPENDENT_FRAME_LEVEL_ESTIMATE": [
+      "raw_media_sha256_verified",
+      "ffprobe_pts_fps_verified",
+      "two_cat_identity_established",
+      "48_landmark_rows_valid",
+      "facial_action_onsets_preregistered_and_reviewed",
+      "deterministic_matching_replayed",
+      "latency_quantization_bound_reported",
+      "independent_verifier_pass"
+    ]
+  }
+}
