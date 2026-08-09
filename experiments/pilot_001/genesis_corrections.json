@@ -1,0 +1,60 @@
+{
+  "claim_boundary": "These are acquisition/protocol corrections. They improve calibration and false-positive control but do not replace validated 48-landmark and CatFACS-compatible event-onset evidence.",
+  "model_corrections": [
+    "PTS is authoritative; nominal frame_count/fps timestamps are diagnostic only when PTS exists.",
+    "A frame-localized delta-t point estimate carries at least one nominal-frame acquisition radius; detector/event-localization uncertainty is additional.",
+    "Primary actions and source order are frozen before outcome inspection.",
+    "No-match windows are preserved rather than discarded.",
+    "If an automated detector is scanned adaptively over many windows, a marginal average false-positive rate is insufficient for a sequential familywise claim; a history-wise conditional cap or an anytime-valid alternative is required.",
+    "Multiple candidate events per trial multiply the guessing/false-positive budget and cannot be hidden by postselection."
+  ],
+  "precision": {
+    "coarsest_delta_acquisition_radius_ms": 33.333333333333336,
+    "finest_delta_acquisition_radius_ms": 8.333333333333334,
+    "sources": [
+      {
+        "delta_acquisition_radius_ms": 8.333333333333334,
+        "fps": 120.0,
+        "nominal_frame_interval_ms": 8.333333333333334,
+        "note": "event/model localization uncertainty is additional",
+        "source_id": "commons_hugging_2019"
+      },
+      {
+        "delta_acquisition_radius_ms": 33.333333333333336,
+        "fps": 30.0,
+        "nominal_frame_interval_ms": 33.333333333333336,
+        "note": "event/model localization uncertainty is additional",
+        "source_id": "commons_tomcats_conflict_2020"
+      }
+    ]
+  },
+  "protocol_sha256": "4acf5c298e23e60751469eb62d51ffadd8408aee8c2b488343b60ac8c9902e4d",
+  "schema": "Fast-CAT/PILOT-001/genesis-corrections/v1.0",
+  "sequential_false_positive_examples": [
+    {
+      "candidates_per_trial": 1,
+      "familywise_alpha": 0.05,
+      "required_historywise_per_trial_pmax": 0.0005128014162623096,
+      "trials": 100
+    },
+    {
+      "candidates_per_trial": 1,
+      "familywise_alpha": 0.05,
+      "required_historywise_per_trial_pmax": 5.1291978908962754e-05,
+      "trials": 1000
+    },
+    {
+      "candidates_per_trial": 1,
+      "familywise_alpha": 0.05,
+      "required_historywise_per_trial_pmax": 5.129316283714047e-06,
+      "trials": 10000
+    }
+  ],
+  "source_preflight_sha256": "b09dd6a6052d0e53f04724c3a964b3f1720bb60ed90f4795b9d2b4f6457aad81",
+  "ci_evidence": {
+    "workflow_run_id": 31290674581,
+    "artifact_id": 9031255564,
+    "artifact_digest": "sha256:856b089699c64c4ea50f801b7f0d9c55f31edcb5697550fad48742b5c72fd2a6",
+    "verified_head_sha": "0f9e9f5cf32ef596d779093690dc772771b4e47f"
+  }
+}
