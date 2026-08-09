@@ -1,0 +1,20 @@
+# Third-party raw media stays local unless explicitly admitted with its licence.
+data/raw/
+
+# Local model/checkpoint output
+artifacts/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
