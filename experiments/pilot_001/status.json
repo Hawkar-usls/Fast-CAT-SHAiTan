@@ -1,0 +1,12 @@
+{
+  "schema": "Fast-CAT/PILOT-001/status/v1.0",
+  "experiment_id": "PILOT_001",
+  "implementation_status": "GATE_IMPLEMENTED_PENDING_CI_AND_LANDMARK_DATA",
+  "source_preflight": "PENDING_PR_CI",
+  "landmark_detector": "NOT_ADMITTED_YET",
+  "facial_action_onset": "NOT_ESTABLISHED",
+  "delta_t": "NOT_ESTABLISHED",
+  "independent_frame_level_estimate_established": false,
+  "blocking_gate": "VALIDATED_48_LANDMARK_PLUS_EVENT_ONSET_EVIDENCE",
+  "claim_ceiling": "PILOT_001 currently establishes protocol/code only. It does not yet establish a feline response latency from raw open video."
+}
