@@ -18,7 +18,12 @@ from typing import Any
 
 
 def canonical_bytes(value: Any) -> bytes:
-    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    return json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
 
 
 def canonical_sha256(value: Any) -> str:
@@ -70,12 +75,14 @@ def probe_frame_pts(video: Path) -> list[dict[str, Any]]:
         if last is not None and d <= last:
             raise RuntimeError(f"PTS_NOT_STRICT:{index}:{d}<={last}")
         last = d
-        out.append({
-            "frame_index": index,
-            "pts_s": str(pts),
-            "key_frame": int(frame.get("key_frame", 0)),
-            "pict_type": str(frame.get("pict_type", "")),
-        })
+        out.append(
+            {
+                "frame_index": index,
+                "pts_s": str(pts),
+                "key_frame": int(frame.get("key_frame", 0)),
+                "pict_type": str(frame.get("pict_type", "")),
+            }
+        )
     if not out:
         raise RuntimeError("NO_FRAMES")
     return out
@@ -88,19 +95,38 @@ def expected_indices(frame_count: int, step: int) -> list[int]:
     return values
 
 
-def rgb24_hash(video: Path, index: int, width: int, height: int) -> tuple[str, int]:
+def select_expression(indices: list[int]) -> str:
+    if not indices:
+        raise ValueError("SELECTED_INDEX_SET_EMPTY")
+    return "select=" + "+".join(f"eq(n\\,{index})" for index in indices)
+
+
+def replay_rgb24(
+    video: Path,
+    indices: list[int],
+    width: int,
+    height: int,
+) -> list[tuple[str, int]]:
     raw = subprocess.check_output(
         [
             "ffmpeg", "-v", "error", "-i", str(video),
-            "-vf", f"select=eq(n\\,{index})", "-frames:v", "1",
-            "-an", "-sn", "-dn", "-pix_fmt", "rgb24",
-            "-f", "rawvideo", "pipe:1",
+            "-vf", select_expression(indices),
+            "-vsync", "0",
+            "-an", "-sn", "-dn",
+            "-pix_fmt", "rgb24", "-f", "rawvideo", "pipe:1",
         ]
     )
-    expected_len = width * height * 3
+    frame_bytes = width * height * 3
+    expected_len = frame_bytes * len(indices)
     if len(raw) != expected_len:
-        raise RuntimeError(f"RGB_LENGTH:{index}:{len(raw)}!={expected_len}")
-    return hashlib.sha256(raw).hexdigest(), len(raw)
+        raise RuntimeError(
+            f"RGB_SELECTED_LENGTH:{len(raw)}!={expected_len}"
+        )
+    result: list[tuple[str, int]] = []
+    for offset in range(0, len(raw), frame_bytes):
+        frame = raw[offset : offset + frame_bytes]
+        result.append((hashlib.sha256(frame).hexdigest(), len(frame)))
+    return result
 
 
 def verify(args: argparse.Namespace) -> dict[str, Any]:
@@ -143,7 +169,7 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
     step = int(selection.get("step_frames", 0))
     if step <= 0:
         failures.append("STEP_FRAMES_INVALID")
-        expected = []
+        expected: list[int] = []
     else:
         expected = expected_indices(len(frame_pts), step)
     selected = selection.get("selected", [])
@@ -153,9 +179,10 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
     if int(selection.get("selected_count", -1)) != len(selected):
         failures.append("SELECTED_COUNT_MISMATCH")
 
+    replayed = replay_rgb24(args.video, selected_indices, width, height) if selected_indices else []
     pixel_checks = 0
     png_checks = 0
-    for item in selected:
+    for item, (digest, byte_length) in zip(selected, replayed):
         index = int(item["frame_index"])
         if index < 0 or index >= len(frame_pts):
             failures.append(f"FRAME_INDEX_OUT_OF_RANGE:{index}")
@@ -163,7 +190,6 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
         if str(item.get("pts_s")) != frame_pts[index]["pts_s"]:
             failures.append(f"SELECTED_PTS_MISMATCH:{index}")
 
-        digest, byte_length = rgb24_hash(args.video, index, width, height)
         pixel_checks += 1
         if digest != item.get("rgb24_sha256"):
             failures.append(f"RGB24_SHA256_MISMATCH:{index}")
@@ -201,10 +227,14 @@ def verify(args: argparse.Namespace) -> dict[str, Any]:
         "ledger_payload_sha256_recomputed": payload_digest,
         "selected_frames_replayed": pixel_checks,
         "review_pngs_rehashed": png_checks,
+        "replay_strategy": "single_pass_select_filter",
         "claim_ceiling": "Independent replay of source bytes, decoded PTS, deterministic sample membership and RGB24 pixel identity only.",
     }
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    args.out.write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     print(json.dumps(report, indent=2, sort_keys=True))
     return report
 
