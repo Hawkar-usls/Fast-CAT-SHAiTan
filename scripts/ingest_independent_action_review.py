@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Ingest a completed independent PILOT_001 blinded action review.
 
-This command never creates review labels. It validates an externally completed
-CSV + reviewer attestation, derives first-visible onsets deterministically, and
-pairs same-action cross-subject events under the frozen protocol.
+This command never creates review labels. It first proves that the submission is
+bound to the exact frozen model-blinded package, then validates an externally
+completed CSV + reviewer attestation, derives first-visible onsets
+deterministically, and pairs same-action cross-subject events under the frozen
+protocol.
 """
 
 from __future__ import annotations
@@ -12,11 +14,8 @@ import argparse
 import json
 from pathlib import Path
 
-from fastcat.review_ingestion import (
-    build_submission_report,
-    read_review_csv,
-    sha256_file,
-)
+from fastcat.bound_review_ingestion import build_bound_submission_report
+from fastcat.review_ingestion import read_review_csv, sha256_file
 
 
 def main() -> int:
@@ -37,17 +36,19 @@ def main() -> int:
     attestation = json.loads(args.attestation.read_text(encoding="utf-8"))
     headers, rows = read_review_csv(args.review_form)
     form_sha = sha256_file(args.review_form)
+    frame_manifest_sha = sha256_file(args.frame_manifest)
 
-    report = build_submission_report(
+    report = build_bound_submission_report(
         protocol=protocol,
         frame_manifest=frame_manifest,
+        frame_manifest_file_sha256=frame_manifest_sha,
         headers=headers,
         review_rows=rows,
         attestation=attestation,
         completed_review_form_sha256=form_sha,
     )
     report["protocol_sha256"] = sha256_file(args.protocol)
-    report["frame_manifest_file_sha256"] = sha256_file(args.frame_manifest)
+    report["frame_manifest_file_sha256"] = frame_manifest_sha
     report["attestation_file_sha256"] = sha256_file(args.attestation)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -61,6 +62,9 @@ def main() -> int:
                 "status": report["status"],
                 "scientific_outcome": report["scientific_outcome"],
                 "failures": report["failures"],
+                "exact_frozen_package_binding_established": report.get(
+                    "exact_frozen_package_binding_established", False
+                ),
                 "derived_onsets": len(report["derived_onsets"]),
                 "matches": report["summary"]["n_matches"],
                 "completed_review_form_sha256": report[
