@@ -1,0 +1,42 @@
+{
+  "schema": "Fast-CAT/PILOT-001/control-landmark-preflight/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_tomcats_conflict_2020",
+  "role": "non_affiliative_control",
+  "purpose": "sampled 48-landmark backend feasibility before any full-rate control action analysis",
+  "timing": {
+    "authority": "decoded frame PTS",
+    "sampling": "frame 0, every 15th decoded frame, and final decoded frame",
+    "expected_decoded_frame_count": 1218,
+    "expected_selected_frame_count": 83,
+    "expected_frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
+    "sampled_frames_are_not_onset_measurement": true
+  },
+  "backend": {
+    "repository": "hugocornellier/cat_detection",
+    "commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "mode": "CatDetectionMode.faceOnly on two preregistered spatial ROIs",
+    "expected_landmark_count": 48
+  },
+  "fixed_rois_normalized_xyxy": {
+    "cat_C_brown_left": [0.25, 0.10, 0.54, 0.55],
+    "cat_D_gray_right": [0.49, 0.08, 0.82, 0.55]
+  },
+  "roi_policy_frozen_before_probe": true,
+  "roi_basis": "pre-existing deterministic control contact sheets generated before this probe; the two cats remain spatially separated in the frozen scene",
+  "duplicate_face_guard": "if returned face centers are closer than 8 percent of the full-frame diagonal, mark the frame REVIEW_DUPLICATE_FACE_RISK",
+  "preflight_outcomes": {
+    "PASS_CANDIDATE_ONLY": "both ROI channels return one structurally valid 48-point face on the sampled frame and the face centers are spatially distinct",
+    "REVIEW": "one channel is missing/ambiguous or duplicate-face risk is triggered",
+    "NO_CLAIM": "sampled control feasibility never establishes action onset or delta-t"
+  },
+  "admission_boundary": {
+    "sampled_roi_identity": "candidate_only",
+    "landmark_structure": "candidate_only",
+    "landmark_accuracy": "not_established",
+    "facial_action_onset": "not_established",
+    "delta_t": "not_established",
+    "full_rate_control_analysis": "requires a separately frozen gate after this preflight"
+  },
+  "claim_ceiling": "This preflight tests whether the pinned open 48-landmark backend can produce two spatially distinct candidate faces on a deterministic 83-frame sample of the conflict control. It does not establish landmark accuracy, CatFACS actions, action onset, mimicry, or latency."
+}

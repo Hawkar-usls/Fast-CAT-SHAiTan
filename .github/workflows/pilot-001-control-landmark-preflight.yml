@@ -1,0 +1,183 @@
+name: pilot-001-control-landmark-preflight
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  conflict-control-landmark-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      PYTHONPATH: .
+      FASTCAT_BACKEND_COMMIT: 9759bcbec55ea93c1f42745abd0baf0f8a4d57dd
+      FASTCAT_SOURCE_ID: commons_tomcats_conflict_2020
+
+    steps:
+      - name: Checkout exact Fast-CAT head revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Bind exact Fast-CAT checkout
+        run: |
+          checked_out="$(git rev-parse HEAD)"
+          echo "FASTCAT_CHECKED_OUT_SHA=$checked_out" >> "$GITHUB_ENV"
+          echo "FASTCAT_CHECKED_OUT_TREE=$(git rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test "$checked_out" = "${{ github.event.pull_request.head.sha }}"
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install media and Linux desktop dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            ffmpeg \
+            ninja-build \
+            libgtk-3-dev \
+            libgstreamer1.0-dev \
+            libgstreamer-plugins-base1.0-dev \
+            xvfb
+          python -m pip install --upgrade pip
+          python -m pip install pillow==11.3.0
+
+      - name: Set up Flutter stable
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Fetch frozen conflict-control source
+        run: python scripts/fetch_open_video.py commons_tomcats_conflict_2020
+
+      - name: Build deterministic 83-frame control sample
+        run: |
+          python scripts/build_frame_ledger.py \
+            --source-id commons_tomcats_conflict_2020 \
+            --video "data/raw/commons_tomcats_conflict_2020/Tomcats conflict.webm" \
+            --step-frames 15 \
+            --out-dir artifacts/control_landmark_preflight/frame_review
+
+      - name: Independently replay sampled control pixels
+        run: |
+          python scripts/verify_frame_ledger.py \
+            --source-id commons_tomcats_conflict_2020 \
+            --video "data/raw/commons_tomcats_conflict_2020/Tomcats conflict.webm" \
+            --ledger artifacts/control_landmark_preflight/frame_review/frame_ledger.json \
+            --frame-dir artifacts/control_landmark_preflight/frame_review/frames \
+            --out artifacts/control_landmark_preflight/frame_review/verifier.json
+
+      - name: Assert frozen control sample
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('artifacts/control_landmark_preflight/frame_review/frame_ledger.json'))
+          assert d['frame_count'] == 1218, d['frame_count']
+          assert d['selection']['selected_count'] == 83, d['selection']['selected_count']
+          assert d['frame_pts_sha256'] == '8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46'
+          print('FROZEN_CONTROL_SAMPLE = PASS')
+          PY
+
+      - name: Clone exact external 48-landmark backend
+        run: |
+          mkdir -p external
+          git clone --filter=blob:none https://github.com/hugocornellier/cat_detection.git external/cat_detection
+          git -C external/cat_detection fetch --depth=1 origin "$FASTCAT_BACKEND_COMMIT"
+          git -C external/cat_detection checkout --detach "$FASTCAT_BACKEND_COMMIT"
+          test "$(git -C external/cat_detection rev-parse HEAD)" = "$FASTCAT_BACKEND_COMMIT"
+          echo "BACKEND_TREE=$(git -C external/cat_detection rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+
+      - name: Cache external OpenCV native build
+        uses: actions/cache@v4
+        with:
+          path: external/cat_detection/example/.dart_tool/hooks_runner/shared
+          key: fastcat-cat-detection-linux-${{ env.FASTCAT_BACKEND_COMMIT }}
+
+      - name: Install pinned backend dependencies
+        working-directory: external/cat_detection/example
+        run: flutter pub get
+
+      - name: Inject control integration probe
+        run: |
+          cp tools/fastcat_control_landmark_probe_test.dart \
+            external/cat_detection/example/integration_test/fastcat_control_probe_test.dart
+
+      - name: Run sampled dual-ROI control probe
+        env:
+          FASTCAT_INPUT_DIR: ${{ github.workspace }}/artifacts/control_landmark_preflight/frame_review/frames
+          FASTCAT_OUT: ${{ github.workspace }}/artifacts/control_landmark_preflight/raw_control_probe.json
+        working-directory: external/cat_detection/example
+        run: |
+          set +e
+          xvfb-run flutter test integration_test/fastcat_control_probe_test.dart -d linux --timeout 2700s \
+            2>&1 | tee "$GITHUB_WORKSPACE/artifacts/control_landmark_preflight/flutter_probe.log"
+          flutter_status=${PIPESTATUS[0]}
+          set -e
+          test -s "$GITHUB_WORKSPACE/artifacts/control_landmark_preflight/raw_control_probe.json"
+          if grep -q "Some tests failed" "$GITHUB_WORKSPACE/artifacts/control_landmark_preflight/flutter_probe.log"; then
+            exit 1
+          fi
+          if ! grep -qE "tests? passed|All tests passed" "$GITHUB_WORKSPACE/artifacts/control_landmark_preflight/flutter_probe.log"; then
+            echo "No Flutter success summary; original exit=$flutter_status"
+            exit 1
+          fi
+
+      - name: Normalize sampled control candidates
+        run: |
+          python scripts/normalize_control_landmark_probe.py \
+            --raw-probe artifacts/control_landmark_preflight/raw_control_probe.json \
+            --frame-ledger artifacts/control_landmark_preflight/frame_review/frame_ledger.json \
+            --frame-dir artifacts/control_landmark_preflight/frame_review/frames \
+            --out-dir artifacts/control_landmark_preflight/candidate
+
+      - name: Freeze control backend receipt
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib
+          root=pathlib.Path('.').resolve()
+          ext=root/'external'/'cat_detection'
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,'rb') as f:
+                  for block in iter(lambda:f.read(1024*1024),b''):
+                      h.update(block)
+              return h.hexdigest()
+          receipt={
+              'schema':'Fast-CAT/PILOT-001/control-landmark-backend-receipt/v1.0',
+              'fastcat_checked_out_sha':os.environ['FASTCAT_CHECKED_OUT_SHA'],
+              'fastcat_checked_out_tree':os.environ['FASTCAT_CHECKED_OUT_TREE'],
+              'backend_repository':'hugocornellier/cat_detection',
+              'backend_commit':os.environ['FASTCAT_BACKEND_COMMIT'],
+              'backend_tree':os.environ['BACKEND_TREE'],
+              'model_assets':{
+                  'cat_face_localizer.tflite':sha(ext/'assets/models/cat_face_localizer.tflite'),
+                  'cat_face_landmarks_full.tflite':sha(ext/'assets/models/cat_face_landmarks_full.tflite')
+              },
+              'policy_sha256':sha(root/'experiments/pilot_001/control_landmark_preflight.json'),
+              'frame_ledger_sha256':sha(root/'artifacts/control_landmark_preflight/frame_review/frame_ledger.json'),
+              'frame_verifier_sha256':sha(root/'artifacts/control_landmark_preflight/frame_review/verifier.json'),
+              'raw_probe_sha256':sha(root/'artifacts/control_landmark_preflight/raw_control_probe.json'),
+              'normalization_sha256':sha(root/'artifacts/control_landmark_preflight/candidate/control_candidate_normalization.json'),
+              'claim_ceiling':'Sampled non-affiliative control landmark feasibility only; no action or latency admission.'
+          }
+          out=root/'artifacts'/'control_landmark_preflight'/'backend_receipt.json'
+          out.write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(json.dumps(receipt,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload control landmark preflight pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-conflict-control-landmark-preflight
+          path: artifacts/control_landmark_preflight
+          if-no-files-found: error
+          retention-days: 30
