@@ -1,0 +1,57 @@
+{
+  "schema": "Fast-CAT/PILOT-001/control-landmark-candidate-frozen-receipt/v1.0",
+  "experiment_id": "PILOT_001",
+  "status": "PASS_CANDIDATE_ONLY",
+  "main_merge_commit": "70a1ae3ec6249b19468e08f8688bd8ebc7832c2d",
+  "evidence": {
+    "verified_pr_head_sha": "ca8ca2417db3f9a4354c5addfb847c1d63d9b967",
+    "verified_pr_head_tree": "078799e429c1e1d1db3c6433df239b85f8f530ec",
+    "workflow_run_id": 31293088526,
+    "workflow_artifact_id": 9032085120,
+    "workflow_artifact_digest": "sha256:93da70f8d1233e4c615a22f2a8ac962336f7bd38c385bc7707cf566183a4eb14",
+    "artifact_name": "pilot-001-conflict-control-landmark-preflight",
+    "policy_file_sha256": "9a3038e68615ec1e1cdf37f037863acc19bceaa2c6a8ef0bfba422a0e9d15cc8",
+    "frame_ledger_file_sha256": "d491f5d30d5c0573107d82a3750f9f98b8e5b64e905f70761d87a521506e54c0",
+    "frame_verifier_file_sha256": "96d6b5fa03955c28b0e06edd59bf7796894da5fdb7c6fefd462e2162ddbdb43a",
+    "raw_probe_file_sha256": "43c808d90ba568b521556bc64f46fdfaf62bd5e20733ca3f9d9090d39d04012c",
+    "normalization_file_sha256": "a4297f05a985b25cc402a9e7cd215339d1f81a2d2ea46fd4ae0a9ab812928ab3"
+  },
+  "source": {
+    "source_id": "commons_tomcats_conflict_2020",
+    "role": "non_affiliative_control",
+    "raw_media_sha256": "79ea8a60c5aee25438ee70c2fff192ba953e89d29219c3d6ce5ed8e10e2078cf",
+    "decoded_frame_count": 1218,
+    "sampled_frame_count": 83,
+    "sampling": "frame 0, every 15th decoded frame, and final decoded frame",
+    "frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46"
+  },
+  "backend": {
+    "repository": "hugocornellier/cat_detection",
+    "commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "tree_sha": "61d38ba8c589a188f2f33228aef9eb86e16e8844",
+    "cat_face_localizer_tflite_sha256": "db0dbdc8430221cec96fcd907e7390fa0b23546e7673d08e508f1f6838ce2737",
+    "cat_face_landmarks_full_tflite_sha256": "b44c94955e9f92ef210bbfdfada7247a3c19c766c66b97d2be82cb0c197d917c"
+  },
+  "candidate_result": {
+    "sampled_frames": 83,
+    "pass_candidate_frames": 83,
+    "review_frames": 0,
+    "pass_candidate_fraction": 1.0,
+    "valid_channel_frame_counts": {
+      "cat_C_brown_left": 83,
+      "cat_D_gray_right": 83
+    },
+    "structural_rows_sha256": "174422853ea4d5e27fd793b2d82b94fe561a35f4e22ce4f01dab2faf0ffe0a64",
+    "duplicate_face_risk_flags": 0
+  },
+  "admission": {
+    "sampled_two_cat_roi_coverage": "CANDIDATE_ONLY_83_OF_83",
+    "landmark_structure_48": "CANDIDATE_ONLY",
+    "landmark_accuracy": "NOT_ESTABLISHED",
+    "facial_action_onset": "NOT_ESTABLISHED",
+    "delta_t": "NOT_ESTABLISHED",
+    "full_rate_control_gate": "NOT_STARTED",
+    "independent_frame_level_estimate": "NOT_ESTABLISHED"
+  },
+  "claim_ceiling": "All 83 preregistered sampled control frames produced two spatially distinct structurally valid 48-point candidate face channels under the exact pinned backend. This establishes sampled feasibility only. It does not establish landmark accuracy, CatFACS actions, action onset, mimicry, or latency."
+}

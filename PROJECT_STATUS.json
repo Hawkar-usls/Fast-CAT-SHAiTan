@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "project": "Fast-CAT-SHAiTan",
   "maturity": "research_prototype",
   "code_license": "Apache-2.0",
@@ -8,28 +8,56 @@
   "independent_frame_level_estimate_established": false,
   "pilot_000_status": "complete_authors_code_sample_fixture_replay_lineage_corrected",
   "pilot_000_raw_study_data_used": false,
-  "pilot_001_status": "decoded_pts_gate_established_landmark_gate_open",
+  "pilot_001_status": "candidate_landmark_coverage_and_ear_triage_established_action_gate_open",
   "pilot_001_open_video": "established",
   "pilot_001_raw_sha256": "established",
   "pilot_001_stream_timing_metadata": "established_independent_replay",
   "pilot_001_decoded_frame_pts": "established_independent_replay",
   "pilot_001_nominal_fps_is_timing_authority": false,
-  "pilot_001_hugging_header_rate": "120/1",
-  "pilot_001_hugging_decoded_frame_count": 50,
-  "pilot_001_hugging_decoded_pts_gap_ms": {
-    "min": 58.0,
-    "median": 59.0,
-    "max": 67.0
+  "pilot_001_hugging": {
+    "decoded_frame_count": 50,
+    "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee",
+    "decoded_pts_gap_ms": {
+      "min": 58.0,
+      "median": 59.0,
+      "max": 67.0
+    },
+    "candidate_48_landmark_roi_channels": {
+      "cat_A_tabby_left": "50_of_50",
+      "cat_B_black_right": "50_of_50"
+    },
+    "candidate_two_roi_spatial_distinctness": "50_of_50_no_duplicate_risk_flags",
+    "landmark_accuracy": "not_established",
+    "landmark_confidence": "unavailable_from_backend_public_result",
+    "face_aligned_ear_motion_triage": "established_deterministic_triage_only_98_of_98_transitions",
+    "ear_motion_transitions_sha256": "630e4af1fc814858906d5f6dbfdff5669570a340a93be9ab9cfab6fa79076838",
+    "action_review_protocol": "frozen_before_final_labels",
+    "current_model_assisted_review_is_independent": false
   },
-  "pilot_001_conflict_decoded_frame_count": 1218,
-  "pilot_001_conflict_decoded_pts_gap_ms": {
-    "min": 33.0,
-    "median": 33.0,
-    "max": 167.0
+  "pilot_001_conflict_control": {
+    "decoded_frame_count": 1218,
+    "frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
+    "decoded_pts_gap_ms": {
+      "min": 33.0,
+      "median": 33.0,
+      "max": 167.0
+    },
+    "sampled_landmark_preflight": "pass_candidate_only_83_of_83",
+    "candidate_48_landmark_roi_channels": {
+      "cat_C_brown_left": "83_of_83_sampled",
+      "cat_D_gray_right": "83_of_83_sampled"
+    },
+    "sampled_duplicate_face_risk_flags": 0,
+    "landmark_accuracy": "not_established",
+    "full_rate_landmark_control_gate": "not_started"
   },
-  "pilot_001_landmark_gate": "not_admitted_yet",
+  "pilot_001_landmark_structure": "candidate_coverage_established_not_ground_truth",
+  "pilot_001_landmark_accuracy": "not_established",
+  "pilot_001_final_two_cat_identity": "not_established_independently",
+  "pilot_001_EAD103": "not_established",
+  "pilot_001_EAD104": "not_established",
   "pilot_001_facial_action_onset": "not_established",
   "pilot_001_delta_t": "not_established",
-  "claim_ceiling": "PILOT_000 is only a replay of the authors' public sample-code fixture. PILOT_001 independently establishes exact source bytes and decoded frame PTS for two frozen open videos. Nominal header FPS is not used as timing authority. INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED until validated two-cat identity, 48-landmark evidence and CatFACS-compatible action onsets pass deterministic independent replay.",
-  "current_next_gate": "PILOT_001: TWO_CAT_ID -> 48_LANDMARKS -> FACIAL_ACTION_ONSET_WITH_PREVIOUS_ABSENT_FRAME -> DELTA_T_INTERVAL -> INDEPENDENT_REPLAY"
+  "claim_ceiling": "PILOT_001 establishes exact open-video bytes, decoded frame PTS, full-rate 48-point candidate coverage for both hugging ROI channels, sampled 83/83 candidate coverage for the conflict control, and deterministic face-aligned ear-motion triage. None of these candidate/model outputs establishes landmark accuracy, independent cat identity, CatFACS EAD103/EAD104, action onset, mimicry, or feline response latency. INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
+  "current_next_gate": "PILOT_001: BLINDED_INDEPENDENT_EAD103_EAD104_FRAME_REVIEW -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> DELTA_T_INTERVAL -> INDEPENDENT_REPLAY; conflict full-rate candidate gate may proceed separately after sampled 83/83 feasibility"
 }
