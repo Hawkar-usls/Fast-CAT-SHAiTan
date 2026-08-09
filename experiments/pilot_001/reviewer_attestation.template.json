@@ -6,6 +6,8 @@
   "labels_frozen_before_model_reveal": null,
   "catfacs_competence_basis": "",
   "completed_review_form_sha256": "",
+  "blinded_package_artifact_digest": "",
+  "blank_review_form_sha256": "",
   "review_completed_utc": "",
-  "attestation_note": "Fill this only after completing and freezing the blinded review CSV. The software verifies internal consistency of the declaration; it cannot independently prove reviewer identity, competence, or what the reviewer saw. False or unsupported attestations invalidate the scientific claim."
+  "attestation_note": "Fill this only after completing and freezing the blinded review CSV. The completed CSV SHA-256 must identify the submitted bytes. blinded_package_artifact_digest and blank_review_form_sha256 must identify the exact frozen model-blinded package from which the review began. The software verifies internal consistency and exact package lineage; it cannot independently prove reviewer identity, competence, or what the reviewer saw. False or unsupported attestations invalidate the scientific claim."
 }
