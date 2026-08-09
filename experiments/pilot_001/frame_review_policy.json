@@ -1,0 +1,34 @@
+{
+  "schema": "Fast-CAT/PILOT-001/frame-review-policy/v1.0",
+  "experiment_id": "PILOT_001",
+  "purpose": "deterministic visual triage and identity review only; not final facial-action onset measurement",
+  "source_order": [
+    "commons_hugging_2019",
+    "commons_tomcats_conflict_2020"
+  ],
+  "sources": {
+    "commons_hugging_2019": {
+      "step_frames": 10,
+      "expected_nominal_fps": 120.0,
+      "approx_review_hz": 12.0,
+      "reason": "short primary affiliative clip; dense review sampling while preserving a small inspectable contact-sheet pack"
+    },
+    "commons_tomcats_conflict_2020": {
+      "step_frames": 15,
+      "expected_nominal_fps": 30.0,
+      "approx_review_hz": 2.0,
+      "reason": "long non-affiliative control; broad identity/activity triage before any separately frozen full-rate event review"
+    }
+  },
+  "rules": {
+    "selection": "take frame index 0, every step_frames frame, and the final decoded frame",
+    "timing_authority": "ffprobe best_effort_timestamp_time for decoded video frames; nominal FPS is diagnostic only",
+    "pixel_identity": "SHA-256 of ffmpeg-decoded RGB24 bytes for every selected frame",
+    "review_artifact": "lossless PNG plus contact sheets; PNG is for review, RGB24 hash is the pixel-identity channel",
+    "no_onset_claim_from_sampling": true,
+    "no_latency_claim_from_sampling": true,
+    "fine_review_requirement": "any candidate facial-action interval must later be reviewed at native decoded-frame cadence and bound to the same raw-media SHA-256",
+    "negative_preservation": "reviewed intervals with no admissible event remain in the ledger"
+  },
+  "claim_ceiling": "Passing this policy establishes a deterministic, replayable frame ledger and review pack only. It does not establish cat identity, 48-landmark accuracy, CatFACS action onset, or delta-t."
+}
