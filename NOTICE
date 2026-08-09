@@ -1,0 +1,14 @@
+Fast-CAT-SHAiTan
+Copyright 2026 Hawkar-usls
+
+This product includes software and documentation developed for Fast-CAT-SHAiTan.
+
+Third-party datasets, papers, source code, model weights, images, and video referenced by this repository are not relicensed under Apache License 2.0 unless explicitly stated. Each external asset retains its original license and attribution requirements.
+
+Scientific methods and terminology reference:
+Martvel G. et al. (2024), Computational investigation of the social function of domestic cat facial signals, Scientific Reports 14, 27533.
+https://doi.org/10.1038/s41598-024-79216-2
+
+The authors' reference implementation is maintained separately at:
+https://github.com/teddy4445/social_function_of_domestic_facial_signals
+and retains its upstream license.
