@@ -1,0 +1,102 @@
+name: pilot-001-frame-ledger
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frame-ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg and Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install pillow==11.3.0
+
+      - name: Fetch frozen primary open video
+        run: python scripts/fetch_open_video.py commons_hugging_2019
+
+      - name: Fetch frozen non-affiliative control
+        run: python scripts/fetch_open_video.py commons_tomcats_conflict_2020
+
+      - name: Build hugging decoded-frame ledger
+        run: |
+          python scripts/build_frame_ledger.py \
+            --source-id commons_hugging_2019 \
+            --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
+            --step-frames 10 \
+            --out-dir artifacts/frame_review/commons_hugging_2019
+
+      - name: Independently replay hugging decoded frames
+        run: |
+          python scripts/verify_frame_ledger.py \
+            --source-id commons_hugging_2019 \
+            --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
+            --ledger artifacts/frame_review/commons_hugging_2019/frame_ledger.json \
+            --frame-dir artifacts/frame_review/commons_hugging_2019/frames \
+            --out artifacts/frame_review/commons_hugging_2019/verifier.json
+
+      - name: Build conflict-control decoded-frame ledger
+        run: |
+          python scripts/build_frame_ledger.py \
+            --source-id commons_tomcats_conflict_2020 \
+            --video "data/raw/commons_tomcats_conflict_2020/Tomcats conflict.webm" \
+            --step-frames 15 \
+            --out-dir artifacts/frame_review/commons_tomcats_conflict_2020
+
+      - name: Independently replay conflict-control decoded frames
+        run: |
+          python scripts/verify_frame_ledger.py \
+            --source-id commons_tomcats_conflict_2020 \
+            --video "data/raw/commons_tomcats_conflict_2020/Tomcats conflict.webm" \
+            --ledger artifacts/frame_review/commons_tomcats_conflict_2020/frame_ledger.json \
+            --frame-dir artifacts/frame_review/commons_tomcats_conflict_2020/frames \
+            --out artifacts/frame_review/commons_tomcats_conflict_2020/verifier.json
+
+      - name: Freeze runner environment receipt
+        run: |
+          mkdir -p artifacts/frame_review
+          {
+            echo "GITHUB_SHA=${GITHUB_SHA}"
+            echo "RUNNER_OS=${RUNNER_OS}"
+            python --version
+            ffmpeg -version | head -1
+            ffprobe -version | head -1
+            python - <<'PY'
+          import hashlib, json, pathlib
+          policy = pathlib.Path('experiments/pilot_001/frame_review_policy.json').read_bytes()
+          print('FRAME_REVIEW_POLICY_SHA256=' + hashlib.sha256(policy).hexdigest())
+          for p in sorted(pathlib.Path('artifacts/frame_review').glob('*/frame_ledger.json')):
+              print(p.as_posix() + '_SHA256=' + hashlib.sha256(p.read_bytes()).hexdigest())
+          for p in sorted(pathlib.Path('artifacts/frame_review').glob('*/verifier.json')):
+              print(p.as_posix() + '_SHA256=' + hashlib.sha256(p.read_bytes()).hexdigest())
+          PY
+          } > artifacts/frame_review/environment_receipt.txt
+          cat artifacts/frame_review/environment_receipt.txt
+
+      - name: Upload deterministic frame review pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-frame-review-pack
+          path: artifacts/frame_review
+          if-no-files-found: error
+          retention-days: 30
