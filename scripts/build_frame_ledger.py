@@ -6,6 +6,9 @@ Scientific boundary:
 - selected PNGs are review aids only;
 - pixel identity is SHA-256 over decoded RGB24 bytes;
 - this script does not infer cat identity, landmarks, CatFACS actions, or latency.
+
+Implementation note: all selected frames are decoded in one ffmpeg pass per output
+representation. This avoids repeatedly decoding a long video from frame zero.
 """
 
 from __future__ import annotations
@@ -51,15 +54,8 @@ def run_json(cmd: list[str]) -> dict[str, Any]:
 def ffprobe_stream(video: Path) -> dict[str, Any]:
     probe = run_json(
         [
-            "ffprobe",
-            "-v",
-            "error",
-            "-select_streams",
-            "v:0",
-            "-show_streams",
-            "-of",
-            "json",
-            str(video),
+            "ffprobe", "-v", "error", "-select_streams", "v:0",
+            "-show_streams", "-of", "json", str(video),
         ]
     )
     streams = probe.get("streams", [])
@@ -71,17 +67,10 @@ def ffprobe_stream(video: Path) -> dict[str, Any]:
 def ffprobe_frames(video: Path) -> list[dict[str, Any]]:
     probe = run_json(
         [
-            "ffprobe",
-            "-v",
-            "error",
-            "-select_streams",
-            "v:0",
-            "-show_frames",
-            "-show_entries",
+            "ffprobe", "-v", "error", "-select_streams", "v:0",
+            "-show_frames", "-show_entries",
             "frame=best_effort_timestamp_time,pkt_dts_time,key_frame,pict_type",
-            "-of",
-            "json",
-            str(video),
+            "-of", "json", str(video),
         ]
     )
     frames = probe.get("frames", [])
@@ -128,61 +117,77 @@ def select_indices(frame_count: int, step_frames: int) -> list[int]:
     return selected
 
 
-def decoded_rgb24(video: Path, frame_index: int, width: int, height: int) -> bytes:
-    select_expr = f"select=eq(n\\,{frame_index})"
+def select_expression(indices: list[int]) -> str:
+    if not indices:
+        raise ValueError("SELECTED_INDEX_SET_EMPTY")
+    return "select=" + "+".join(f"eq(n\\,{index})" for index in indices)
+
+
+def decode_selected_rgb24(
+    video: Path,
+    indices: list[int],
+    width: int,
+    height: int,
+) -> list[bytes]:
     raw = subprocess.check_output(
         [
-            "ffmpeg",
-            "-v",
-            "error",
-            "-i",
-            str(video),
-            "-vf",
-            select_expr,
-            "-frames:v",
-            "1",
-            "-an",
-            "-sn",
-            "-dn",
-            "-pix_fmt",
-            "rgb24",
-            "-f",
-            "rawvideo",
-            "pipe:1",
+            "ffmpeg", "-v", "error", "-i", str(video),
+            "-vf", select_expression(indices),
+            "-vsync", "0",
+            "-an", "-sn", "-dn",
+            "-pix_fmt", "rgb24",
+            "-f", "rawvideo", "pipe:1",
         ]
     )
-    expected = width * height * 3
+    frame_bytes = width * height * 3
+    expected = frame_bytes * len(indices)
     if len(raw) != expected:
         raise RuntimeError(
-            f"RGB24_BYTE_LENGTH_MISMATCH:f{frame_index}:{len(raw)}!={expected}"
+            f"SELECTED_RGB24_BYTE_LENGTH_MISMATCH:{len(raw)}!={expected}"
         )
-    return raw
+    return [
+        raw[offset : offset + frame_bytes]
+        for offset in range(0, len(raw), frame_bytes)
+    ]
 
 
-def extract_png(video: Path, frame_index: int, out_path: Path) -> None:
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    select_expr = f"select=eq(n\\,{frame_index})"
+def extract_selected_pngs(
+    video: Path,
+    indices: list[int],
+    frame_pts: list[dict[str, Any]],
+    frame_dir: Path,
+) -> list[tuple[int, str, Path]]:
+    frame_dir.mkdir(parents=True, exist_ok=True)
+    for stale in frame_dir.glob("selected_*.png"):
+        stale.unlink()
+    pattern = frame_dir / "selected_%06d.png"
     subprocess.run(
         [
-            "ffmpeg",
-            "-v",
-            "error",
-            "-y",
-            "-i",
-            str(video),
-            "-vf",
-            select_expr,
-            "-frames:v",
-            "1",
-            "-an",
-            "-sn",
-            "-dn",
-            str(out_path),
+            "ffmpeg", "-v", "error", "-y", "-i", str(video),
+            "-vf", select_expression(indices),
+            "-vsync", "0",
+            "-an", "-sn", "-dn",
+            str(pattern),
         ],
         check=True,
     )
-    if not out_path.exists() or out_path.stat().st_size <= 0:
-        raise RuntimeError(f"PNG_EXTRACTION_FAILED:{frame_index}")
+    generated = sorted(frame_dir.glob("selected_*.png"))
+    if len(generated) != len(indices):
+        raise RuntimeError(
+            f"PNG_SELECTED_COUNT_MISMATCH:{len(generated)}!={len(indices)}"
+        )
+
+    out: list[tuple[int, str, Path]] = []
+    for index, temp_path in zip(indices, generated):
+        pts = frame_pts[index]["pts_s"]
+        pts_ms = int(round(float(Decimal(pts) * Decimal(1000))))
+        canonical_name = f"f{index:06d}_pts{pts_ms:+09d}ms.png"
+        canonical_path = frame_dir / canonical_name
+        if canonical_path.exists():
+            canonical_path.unlink()
+        temp_path.rename(canonical_path)
+        out.append((index, pts, canonical_path))
+    return out
 
 
 def make_contact_sheets(
@@ -222,7 +227,10 @@ def make_contact_sheets(
             x = col * thumb_w
             y = row * max_tile_h
             canvas.paste(thumb, (x, y))
-            draw.rectangle((x, y + thumb.height, x + thumb_w, y + max_tile_h), fill="white")
+            draw.rectangle(
+                (x, y + thumb.height, x + thumb_w, y + max_tile_h),
+                fill="white",
+            )
             draw.text((x + 4, y + thumb.height + 4), label, fill="black", font=font)
 
         page_path = sheet_dir / f"contact_sheet_{page_index + 1:02d}.png"
@@ -230,7 +238,7 @@ def make_contact_sheets(
         page_records.append(
             {
                 "page": page_index + 1,
-                "filename": str(page_path.name),
+                "filename": page_path.name,
                 "sha256": sha256_file(page_path),
                 "frame_indices": [x["frame_index"] for x in page_items],
             }
@@ -270,23 +278,18 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         for a, b in zip(frame_pts, frame_pts[1:])
     ]
     selected_indices = select_indices(len(frame_pts), args.step_frames)
+    rgb_frames = decode_selected_rgb24(video, selected_indices, width, height)
+    png_frames = extract_selected_pngs(video, selected_indices, frame_pts, frame_dir)
 
     selected_records: list[dict[str, Any]] = []
-    for index in selected_indices:
-        pts = frame_pts[index]["pts_s"]
-        pts_ms = int(round(float(Decimal(pts) * Decimal(1000))))
-        png_name = f"f{index:06d}_pts{pts_ms:+09d}ms.png"
-        png_path = frame_dir / png_name
-
-        rgb = decoded_rgb24(video, index, width, height)
-        extract_png(video, index, png_path)
+    for rgb, (index, pts, png_path) in zip(rgb_frames, png_frames):
         selected_records.append(
             {
                 "frame_index": index,
                 "pts_s": pts,
                 "rgb24_sha256": hashlib.sha256(rgb).hexdigest(),
                 "rgb24_byte_length": len(rgb),
-                "png_filename": png_name,
+                "png_filename": png_path.name,
                 "png_sha256": sha256_file(png_path),
             }
         )
@@ -305,6 +308,7 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
                 ["ffprobe", "-version"], text=True
             ).splitlines()[0],
             "pixel_format_for_identity": "rgb24",
+            "selected_decode_strategy": "single_pass_select_filter",
         },
         "stream": {
             "codec_name": stream.get("codec_name"),
@@ -343,16 +347,25 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
     )
 
     out_path = out_dir / "frame_ledger.json"
-    out_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps({
-        "status": "PASS",
-        "source_id": args.source_id,
-        "frame_count": len(frame_pts),
-        "selected_count": len(selected_records),
-        "frame_pts_sha256": report["frame_pts_sha256"],
-        "ledger_payload_sha256": report["ledger_payload_sha256"],
-        "out": str(out_path),
-    }, indent=2, sort_keys=True))
+    out_path.write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    print(
+        json.dumps(
+            {
+                "status": "PASS",
+                "source_id": args.source_id,
+                "frame_count": len(frame_pts),
+                "selected_count": len(selected_records),
+                "frame_pts_sha256": report["frame_pts_sha256"],
+                "ledger_payload_sha256": report["ledger_payload_sha256"],
+                "out": str(out_path),
+            },
+            indent=2,
+            sort_keys=True,
+        )
+    )
     return report
 
 
