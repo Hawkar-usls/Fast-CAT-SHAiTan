@@ -1,0 +1,56 @@
+{
+  "schema": "Fast-CAT/PILOT-001/frozen-source-preflight/v1.0",
+  "experiment_id": "PILOT_001",
+  "status": "PASS",
+  "verified_head_sha": "1228e98f7cbb6761811043689de548db44cd6ddc",
+  "workflow_run_id": 31290326910,
+  "workflow_artifact_id": 9031157345,
+  "workflow_artifact_digest": "sha256:27ebe7e62960c2294a0f3fe40c89b87824386260e6397313da582177e902cf60",
+  "protocol_sha256": "4acf5c298e23e60751469eb62d51ffadd8408aee8c2b488343b60ac8c9902e4d",
+  "manifest_sha256": "8a093370b7909f499eb78420eca775f73e22fd8980a79a6d4934076b532cb489",
+  "sources": [
+    {
+      "source_id": "commons_hugging_2019",
+      "role": "affiliative_candidate_primary",
+      "license": "CC-BY-SA-4.0",
+      "byte_length": 907974,
+      "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+      "codec": "vp8",
+      "width": 1440,
+      "height": 1080,
+      "duration_s": 3.058,
+      "fps": 120.0,
+      "nominal_frame_interval_ms": 8.333333333333334,
+      "time_base": "1/1000",
+      "independent_raw_byte_replay": "PASS"
+    },
+    {
+      "source_id": "commons_tomcats_conflict_2020",
+      "role": "non_affiliative_control",
+      "license": "CC0-1.0",
+      "byte_length": 1919770,
+      "raw_media_sha256": "79ea8a60c5aee25438ee70c2fff192ba953e89d29219c3d6ce5ed8e10e2078cf",
+      "codec": "vp9",
+      "width": 640,
+      "height": 480,
+      "duration_s": 45.485,
+      "fps": 30.0,
+      "nominal_frame_interval_ms": 33.333333333333336,
+      "time_base": "1/1000",
+      "independent_raw_byte_replay": "PASS"
+    }
+  ],
+  "established_scope": [
+    "OPEN_VIDEO",
+    "RAW_SHA256",
+    "PTS_FPS_METADATA"
+  ],
+  "not_established": [
+    "TWO_CAT_IDENTITY_THROUGH_EVENT_INTERVAL",
+    "48_LANDMARKS",
+    "FACIAL_ACTION_ONSET",
+    "DELTA_T",
+    "INDEPENDENT_FRAME_LEVEL_ESTIMATE"
+  ],
+  "claim_ceiling": "Exact open-video bytes and stream timing are established for the two frozen sources. No landmark, facial-action onset, or feline latency result is established by this receipt."
+}

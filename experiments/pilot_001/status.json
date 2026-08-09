@@ -1,0 +1,17 @@
+{
+  "schema": "Fast-CAT/PILOT-001/status/v1.1",
+  "experiment_id": "PILOT_001",
+  "implementation_status": "SOURCE_TIMING_GATE_ESTABLISHED_LANDMARK_GATE_OPEN",
+  "source_preflight": "PASS_INDEPENDENT_REPLAY",
+  "open_video": "ESTABLISHED",
+  "raw_sha256": "ESTABLISHED",
+  "pts_fps_metadata": "ESTABLISHED",
+  "landmark_detector": "NOT_ADMITTED_YET",
+  "facial_action_onset": "NOT_ESTABLISHED",
+  "delta_t": "NOT_ESTABLISHED",
+  "independent_frame_level_estimate_established": false,
+  "blocking_gate": "VALIDATED_48_LANDMARK_PLUS_EVENT_ONSET_EVIDENCE",
+  "verified_head_sha": "1228e98f7cbb6761811043689de548db44cd6ddc",
+  "source_receipt": "source_preflight.json",
+  "claim_ceiling": "Exact open-video bytes and PTS/FPS metadata are independently replayed. No 48-landmark, facial-action onset, delta-t, or feline reaction-time result is established yet."
+}

@@ -1,0 +1,68 @@
+name: pilot-001-source-preflight
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Unit-test Gate 001
+        run: python -m unittest discover -s tests -v
+
+      - name: Fetch frozen affiliative source
+        run: python scripts/fetch_open_video.py commons_hugging_2019
+
+      - name: Fetch frozen non-affiliative control
+        run: python scripts/fetch_open_video.py commons_tomcats_conflict_2020
+
+      - name: Build source preflight
+        run: |
+          python scripts/pilot_001_source_preflight.py \
+            --protocol experiments/pilot_001/protocol.json \
+            --manifest data/open_video_sources.json \
+            --receipt-dir data/receipts \
+            --out artifacts/pilot_001_source_preflight.json
+
+      - name: Independent raw-byte and timing replay
+        run: |
+          python scripts/verify_pilot_001_source_preflight.py \
+            --protocol experiments/pilot_001/protocol.json \
+            --manifest data/open_video_sources.json \
+            --receipt-dir data/receipts \
+            --raw-dir data/raw \
+            --out artifacts/pilot_001_source_verifier.json
+
+      - name: Upload receipts and verifier reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-source-preflight
+          path: |
+            data/receipts/*.json
+            artifacts/pilot_001_source_preflight.json
+            artifacts/pilot_001_source_verifier.json
+          if-no-files-found: error
+          retention-days: 30
