@@ -1,0 +1,87 @@
+{
+  "schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_hugging_2019",
+  "purpose": "ingest a completed model-blinded EAD103/EAD104 review without creating or guessing labels inside Fast-CAT",
+  "expected_blinded_package": {
+    "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+    "decoded_frame_count": 50,
+    "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee",
+    "subjects": ["subject_A", "subject_B"],
+    "expected_annotation_rows": 100,
+    "expected_review_dimensions": [
+      "left_ear_EAD103",
+      "right_ear_EAD103",
+      "left_ear_EAD104",
+      "right_ear_EAD104"
+    ]
+  },
+  "allowed_review_states": ["ABSENT", "PRESENT", "UNCERTAIN", "NOT_VISIBLE"],
+  "allowed_identity_states": ["yes", "no", "uncertain"],
+  "reviewer_attestation_required": {
+    "reviewer_id": "non-empty pseudonymous or institutional identifier",
+    "independent_of_fastcat_model_evidence_before_label_freeze": true,
+    "saw_landmark_or_motion_rankings_before_label_freeze": false,
+    "labels_frozen_before_model_reveal": true,
+    "catfacs_competence_basis": "non-empty description; competence is declared and preserved, not inferred by software",
+    "completed_review_form_sha256": "must equal the submitted CSV bytes",
+    "review_completed_utc": "non-empty ISO-8601-like reviewer-declared timestamp"
+  },
+  "label_admission": {
+    "all_100_rows_required": true,
+    "all_four_action_state_fields_required_on_every_row": true,
+    "identity_confirmed_required_on_every_row": true,
+    "review_notes_may_be_blank": true,
+    "model_fields_forbidden": true,
+    "row_order": "frame_index ascending, then subject_A, subject_B",
+    "decoded_pts_must_match_blinded_frame_manifest": true,
+    "completed_csv_sha256_frozen_before_any_model_comparison": true
+  },
+  "onset_derivation": {
+    "unit": "subject + action + laterality",
+    "rule": "current frame PRESENT and immediately previous decoded frame ABSENT, with identity_confirmed=yes on both rows",
+    "first_frame_can_never_be_an_onset": true,
+    "UNCERTAIN_cannot_bridge": true,
+    "NOT_VISIBLE_cannot_bridge": true,
+    "identity_no_or_uncertain_cannot_support_onset": true,
+    "event_time": "current row decoded PTS",
+    "previous_absent_time": "immediately previous row decoded PTS",
+    "all_derived_onsets_preserved": true
+  },
+  "matching": {
+    "actions": ["EAD103", "EAD104"],
+    "same_action_required": true,
+    "other_subject_required": true,
+    "laterality": "preserve signaller and responder laterality explicitly; matching is by action code regardless of left/right laterality",
+    "point_estimate_window_ms": 1000,
+    "earliest_unused_response": true,
+    "same_time_response_allowed": true,
+    "no_match_is_valid_and_preserved": true,
+    "interval_boundary_ambiguity_is_reported": true
+  },
+  "acquisition_interval": {
+    "point_ms": "(responder_onset_pts_s - signaller_onset_pts_s) * 1000",
+    "lower_ms": "(responder_previous_absent_pts_s - signaller_onset_pts_s) * 1000",
+    "upper_ms": "(responder_onset_pts_s - signaller_previous_absent_pts_s) * 1000",
+    "detector_or_reviewer_localization_uncertainty_is_additional": true
+  },
+  "claim_gate": {
+    "successful_ingestion_may_establish": [
+      "independent_review_submission_integrity",
+      "independently_reviewed_frame_state_table",
+      "derived_first_visible_action_onset_table_in_review_scope",
+      "deterministic_same_action_pairing_in_review_scope"
+    ],
+    "successful_ingestion_does_not_automatically_establish": [
+      "landmark_accuracy",
+      "population_level_feline_reaction_time",
+      "causal_mimicry",
+      "intentional_communication",
+      "INDEPENDENT_FRAME_LEVEL_ESTIMATE"
+    ],
+    "independent_frame_level_estimate_default": false,
+    "reason": "final admission still requires the full protocol claim gate, including independently adequate subject identity and admissible landmark/manual geometry evidence; this ingestion gate cannot self-promote those conditions"
+  },
+  "negative_outcome_policy": "a valid completed review with zero onsets or zero matched pairs is a successful scientific outcome and must be frozen as such",
+  "claim_ceiling": "This gate can validate and deterministically replay a genuinely independent blinded review submission. It cannot fabricate a reviewer, infer missing labels, or by itself establish a universal feline latency or causal mimicry claim."
+}
