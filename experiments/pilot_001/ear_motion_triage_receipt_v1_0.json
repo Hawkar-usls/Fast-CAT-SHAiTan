@@ -1,0 +1,59 @@
+{
+  "schema": "Fast-CAT/PILOT-001/ear-motion-triage-frozen-receipt/v1.0",
+  "experiment_id": "PILOT_001",
+  "status": "PASS_TRIAGE_ONLY",
+  "main_merge_commit": "f843ea8af9e24b0e7c021d37536fa0f9dbfc44de",
+  "evidence": {
+    "verified_pr_head_sha": "fb34cbf8bd6b5709414c303b394803b2736c6472",
+    "verified_pr_head_tree": "3a28ba4a3a67bd4c0012fbeacd0ddeee1cbc5178",
+    "workflow_run_id": 31293330751,
+    "workflow_artifact_id": 9032160980,
+    "workflow_artifact_digest": "sha256:f09b31ee7376439d10d728b844fbc92fc31c6b1aa87b4a80d673d1a1fa3bc5ed",
+    "artifact_name": "pilot-001-hugging-landmark-candidate",
+    "frame_ledger_file_sha256": "a8dda9d30996b6da3e7be1587f0df21fbb92c857925cd5025b914cdf76e0dee4",
+    "frame_verifier_file_sha256": "78fd6efae866b37d85ad4aea2ee2a43ff30ad0b5c35ba7ee5d495d446f7ecba9",
+    "raw_landmark_probe_file_sha256": "c1b5d5d7b853883a0e2f937371cb67d2377fbb90ffd3b1824220b4222e426669",
+    "candidate_normalization_file_sha256": "28e51f33843af065adf7cde0a66449988fc7f8cb946ecaedbb0615ad3184cf09",
+    "action_review_protocol_file_sha256": "7ab9f0fe83c2b52febf6c8a1dcac856199d93027648c19ad47a5c2b2ab2f9879",
+    "ear_motion_triage_code_sha256": "3cf10a9f26b4fa82b6512208174a7c2de58e5deac2a228bb15711b6da490f3e3",
+    "ear_motion_triage_file_sha256": "ea00191b2c7bdc440ac612a9d1452f4bb78ea83e765d37538a5f47af371dd433"
+  },
+  "source": {
+    "source_id": "commons_hugging_2019",
+    "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+    "decoded_frame_count": 50,
+    "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee"
+  },
+  "backend": {
+    "repository": "hugocornellier/cat_detection",
+    "commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "tree_sha": "61d38ba8c589a188f2f33228aef9eb86e16e8844",
+    "cat_face_localizer_tflite_sha256": "db0dbdc8430221cec96fcd907e7390fa0b23546e7673d08e508f1f6838ce2737",
+    "cat_face_landmarks_full_tflite_sha256": "b44c94955e9f92ef210bbfdfada7247a3c19c766c66b97d2be82cb0c197d917c"
+  },
+  "triage_result": {
+    "transition_count": 98,
+    "all_transitions_preserved": true,
+    "transitions_sha256": "630e4af1fc814858906d5f6dbfdff5669570a340a93be9ab9cfab6fa79076838",
+    "rankings_sha256": "7958038bab7d1456eb610d2d9e6675d074f481759278d167f56f2c89f025c553",
+    "alignment": "least-squares orientation-preserving 2D similarity current-to-previous on all non-ear landmarks",
+    "normalization": "previous-frame landmark 4-to-8 interocular distance",
+    "ranking_is_action_probability": false,
+    "no_threshold_creates_EAD103_or_EAD104": true
+  },
+  "independence_boundary": {
+    "final_manual_labels_must_be_blinded_to_model_ranking": true,
+    "current_chatgpt_model_assisted_review_is_independent": false,
+    "labels_must_be_frozen_and_hashed_before_ranking_is_revealed": true
+  },
+  "admission": {
+    "face_aligned_ear_motion": "ESTABLISHED_AS_DETERMINISTIC_GEOMETRIC_TRIAGE_ONLY",
+    "landmark_accuracy": "NOT_ESTABLISHED",
+    "EAD103": "NOT_ESTABLISHED",
+    "EAD104": "NOT_ESTABLISHED",
+    "facial_action_onset": "NOT_ESTABLISHED",
+    "delta_t": "NOT_ESTABLISHED",
+    "independent_frame_level_estimate": "NOT_ESTABLISHED"
+  },
+  "claim_ceiling": "The exact pinned pipeline deterministically preserved and ranked all 98 adjacent-cat ear-geometry transitions after non-ear face alignment. This is a triage result only. It does not validate landmark accuracy, establish CatFACS actions or action onset, or measure feline response latency."
+}
