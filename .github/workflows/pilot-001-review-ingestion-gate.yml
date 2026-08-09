@@ -44,9 +44,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pillow==11.3.0
 
-      - name: Unit-test review ingestion
+      - name: Unit-test review ingestion and frozen-package binding
         run: |
-          python -m unittest tests.test_review_ingestion -v
+          python -m unittest \
+            tests.test_review_ingestion \
+            tests.test_review_submission_binding \
+            -v
 
       - name: Assert reviewer attestation template is fail-closed
         run: |
@@ -59,7 +62,27 @@ jobs:
           assert d['saw_landmark_or_motion_rankings_before_label_freeze'] is None
           assert d['labels_frozen_before_model_reveal'] is None
           assert d['completed_review_form_sha256'] == ''
+          assert d['blinded_package_artifact_digest'] == ''
+          assert d['blank_review_form_sha256'] == ''
           print('ATTESTATION_TEMPLATE_FAIL_CLOSED = PASS')
+          PY
+
+      - name: Assert frozen blinded-package receipt identity
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
+          assert p['schema'] == 'Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1'
+          e=p['expected_blinded_package']
+          assert e['producer_fastcat_head_sha'] == '70e20113aa1acd2311bed3a61e77fb1ee26e5424'
+          assert e['producer_fastcat_tree_sha'] == 'cd90a48a77eff3f3ee183427dfd3716cb4cb9dfc'
+          assert e['workflow_run_id'] == 31293673630
+          assert e['workflow_artifact_id'] == 9032245626
+          assert e['workflow_artifact_name'] == 'pilot-001-hugging-blinded-review-package'
+          assert e['workflow_artifact_digest'] == 'sha256:ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f'
+          assert e['model_evidence_excluded'] is True
+          assert e['action_labels_present_in_frozen_package'] is False
+          print('FROZEN_BLINDED_PACKAGE_RECEIPT_IDENTITY = PASS')
           PY
 
       - name: Fetch frozen hugging source
@@ -96,8 +119,15 @@ jobs:
               return h.hexdigest()
           p=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
           e=p['expected_blinded_package']
-          assert sha('artifacts/review_ingestion_test/package/frame_manifest.json') == e['frame_manifest_file_sha256']
-          assert sha('artifacts/review_ingestion_test/package/review_form.csv') == e['blank_review_form_sha256']
+          checks = {
+              'artifacts/review_ingestion_test/package/frame_manifest.json': e['frame_manifest_file_sha256'],
+              'artifacts/review_ingestion_test/package/review_form.csv': e['blank_review_form_sha256'],
+              'artifacts/review_ingestion_test/package/package_manifest.json': e['package_manifest_file_sha256'],
+              'artifacts/review_ingestion_test/package/REVIEW_INSTRUCTIONS.md': e['instructions_file_sha256'],
+          }
+          for path, expected in checks.items():
+              actual=sha(path)
+              assert actual == expected, (path, actual, expected)
           print('FROZEN_BLINDED_PACKAGE_LINEAGE_REBUILT = PASS')
           PY
 
