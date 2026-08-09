@@ -1,0 +1,69 @@
+{
+  "schema": "Fast-CAT/PILOT-001/blinded-review-package-protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_hugging_2019",
+  "purpose": "prepare an exact raw-frame package for an independent EAD103/EAD104 reviewer without exposing model-derived landmarks, motion scores, rankings, or predicted actions",
+  "source_binding": {
+    "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+    "decoded_frame_count": 50,
+    "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee",
+    "frame_set": "all decoded frames in chronological order"
+  },
+  "subjects": {
+    "subject_A": "tabby/brown cat, left/foreground in the frozen short source",
+    "subject_B": "black cat, right/background in the frozen short source"
+  },
+  "review_dimensions": [
+    "left_ear_EAD103",
+    "right_ear_EAD103",
+    "left_ear_EAD104",
+    "right_ear_EAD104"
+  ],
+  "allowed_states": [
+    "ABSENT",
+    "PRESENT",
+    "UNCERTAIN",
+    "NOT_VISIBLE"
+  ],
+  "reviewer_input": {
+    "allowed": [
+      "raw full-frame PNGs decoded from the frozen source",
+      "frame index",
+      "decoded PTS",
+      "subject identity description",
+      "action appearance guidance and uncertainty rules"
+    ],
+    "forbidden": [
+      "landmark coordinates",
+      "landmark overlays",
+      "motion scores",
+      "motion rankings",
+      "candidate action predictions",
+      "model confidence",
+      "model-generated onset candidates",
+      "previous ChatGPT/model-assisted labels"
+    ]
+  },
+  "annotation_policy": {
+    "one_row_per_subject_per_frame": true,
+    "expected_rows": 100,
+    "identity_confirmed_field": "reviewer must mark yes/no/uncertain independently for each subject/frame",
+    "labels_initially_blank": true,
+    "review_notes_initially_blank": true,
+    "chronological_review": true,
+    "no_model_prioritization": true,
+    "all_frames_must_be_reviewed": true
+  },
+  "onset_policy_after_labels_are_frozen": {
+    "onset_requires_previous_absent_then_present": true,
+    "uncertain_or_not_visible_cannot_bridge_onset": true,
+    "decoded_pts_is_authoritative": true,
+    "label_file_must_be_hashed_before_model_results_are_revealed": true
+  },
+  "independence_boundary": {
+    "current_chatgpt_session_is_eligible_as_independent_reviewer": false,
+    "reason": "this session has already inspected model-derived landmark overlays and ear-motion rankings",
+    "eligible_reviewer": "a reviewer or separately validated system that has not seen Fast-CAT model-derived rankings/predictions before freezing labels"
+  },
+  "claim_ceiling": "Building and verifying this package establishes only a blinded review input boundary. It does not establish subject identity, CatFACS actions, action onset, mimicry, delta-t, or feline reaction latency."
+}
