@@ -1,0 +1,86 @@
+{
+  "schema": "Fast-CAT/PILOT-001/action-review-protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "frozen_before_final_action_labels": true,
+  "primary_source": "commons_hugging_2019",
+  "primary_actions": ["EAD103", "EAD104"],
+  "scientific_context": {
+    "cat_study_doi": "10.1038/s41598-024-79216-2",
+    "catfacs_development_doi": "10.1016/j.applanim.2017.01.005",
+    "public_cross_species_appearance_reference_doi": "10.1371/journal.pone.0131738",
+    "boundary": "The public EquiFACS EAD103/EAD104 descriptions are only an appearance sanity reference. Final feline coding must not claim certified CatFACS equivalence without CatFACS-specific reviewer competence or separately validated automation."
+  },
+  "timing": {
+    "authority": "decoded frame PTS",
+    "header_fps_role": "diagnostic_only",
+    "frame_set": "all decoded frames in chronological order",
+    "onset_definition": "first decoded frame judged PRESENT, immediately preceded by a decoded frame judged ABSENT",
+    "onset_required_fields": [
+      "previous_absent_frame_index",
+      "previous_absent_pts_s",
+      "onset_frame_index",
+      "onset_pts_s"
+    ],
+    "forbidden_onset_bridge": "UNCERTAIN or NOT_VISIBLE cannot serve as the previous ABSENT frame",
+    "latency_interval_rule": "for signaller (s_prev,s] and responder (r_prev,r], point=r-s and acquisition interval=[r_prev-s, r-s_prev]"
+  },
+  "review_states": [
+    "ABSENT",
+    "PRESENT",
+    "UNCERTAIN",
+    "NOT_VISIBLE"
+  ],
+  "review_dimensions": [
+    "left_ear_EAD103",
+    "right_ear_EAD103",
+    "left_ear_EAD104",
+    "right_ear_EAD104"
+  ],
+  "appearance_sanity_reference": {
+    "EAD103": "ear flattener: pinna/ear is pulled caudally and flattened toward the head; do not infer this label from landmark displacement alone",
+    "EAD104": "ear rotator: pinna rotates caudally/laterally; distinguish rotation from flattening; the two actions may co-occur",
+    "species_boundary": "wording is a cross-species public FACS sanity reference, not a substitute for the CatFACS manual"
+  },
+  "identity": {
+    "candidate_channels": {
+      "cat_A_tabby_left": "tabby/brown cat, left/foreground in the frozen short source",
+      "cat_B_black_right": "black cat, right/background in the frozen short source"
+    },
+    "final_identity_requirement": "reviewer must confirm identity continuity on every onset-supporting frame; fixed ROI labels alone are candidate identity, not proof"
+  },
+  "occlusion_and_quality": {
+    "ear_must_be_visible": true,
+    "partial_occlusion_rule": "if the relevant pinna contour/orientation cannot be judged, label NOT_VISIBLE or UNCERTAIN rather than inferring the action",
+    "exposure_change_rule": "exposure/brightness changes cannot establish action onset",
+    "head_motion_rule": "global head rotation cannot establish an ear action unless ear motion relative to the head is separately visible"
+  },
+  "independence": {
+    "phase_A_final_manual_labels": "independent reviewer sees chronological raw frame pairs/crops and decoded PTS but no landmark overlay, motion score, model ranking, or predicted action",
+    "phase_B_model_comparison": "only after phase_A labels are frozen and hashed may model/landmark triage scores be revealed",
+    "current_chatgpt_review_is_independent": false,
+    "reason": "the current analysis has already inspected landmark overlays and model-derived motion rankings, so it cannot be used as the blinded independent action coder"
+  },
+  "model_triage": {
+    "purpose": "prioritize debugging and model-development inspection only",
+    "all_transitions_preserved": true,
+    "ranking_may_not_drop_negative_or_low_score_transitions": true,
+    "geometry_motion_is_not_catfacs": true,
+    "final_action_labels_must_not_be_backfilled_from_model_rank": true
+  },
+  "matching": {
+    "window_ms": 1000,
+    "same_action_required": true,
+    "other_cat_required": true,
+    "ear_laterality_policy": "same CatFACS action may be compared regardless of left/right laterality only if the final preregistered analysis explicitly records the laterality channel; never silently collapse it",
+    "earliest_unused_response": true,
+    "no_match_is_valid": true,
+    "no_posthoc_dropping": true
+  },
+  "admission": {
+    "screening_labels_from_nonindependent_reviewer": "CANDIDATE_ONLY",
+    "blinded_independent_frame_review": "REQUIRED_FOR_MANUAL_ACTION_ADMISSION",
+    "automated_action_detector": "MUST_BE_SEPARATELY_VALIDATED_BEFORE_ADMISSION",
+    "landmark_geometry": "SUPPORTING_EVIDENCE_ONLY"
+  },
+  "claim_ceiling": "This protocol freezes how EAD103/EAD104 candidates must be reviewed and timed. It contains no action labels and establishes no facial-action onset, mimicry event, delta-t, or feline reaction-time estimate."
+}
