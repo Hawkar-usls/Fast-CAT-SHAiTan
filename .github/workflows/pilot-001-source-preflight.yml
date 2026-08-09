@@ -56,6 +56,13 @@ jobs:
             --raw-dir data/raw \
             --out artifacts/pilot_001_source_verifier.json
 
+      - name: Genesis-derived acquisition and sequential corrections
+        run: |
+          python scripts/pilot_001_genesis_corrections.py \
+            --source-preflight experiments/pilot_001/source_preflight.json \
+            --protocol experiments/pilot_001/protocol.json \
+            --out artifacts/pilot_001_genesis_corrections.json
+
       - name: Upload receipts and verifier reports
         uses: actions/upload-artifact@v4
         with:
@@ -64,5 +71,6 @@ jobs:
             data/receipts/*.json
             artifacts/pilot_001_source_preflight.json
             artifacts/pilot_001_source_verifier.json
+            artifacts/pilot_001_genesis_corrections.json
           if-no-files-found: error
           retention-days: 30
