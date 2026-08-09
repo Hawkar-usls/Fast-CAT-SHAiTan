@@ -54,6 +54,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pillow==11.3.0
 
+      - name: Unit-test face-aligned ear triage
+        run: python -m unittest tests.test_ear_motion_triage -v
+
       - name: Set up Flutter stable
         uses: subosito/flutter-action@v2
         with:
@@ -136,13 +139,29 @@ jobs:
           fi
           echo "Flutter probe result accepted from test summary; original exit=$flutter_status"
 
-      - name: Normalize structure, ROI identity and motion triage
+      - name: Normalize structure, ROI identity and raw geometry motion
         run: |
           python scripts/normalize_landmark_probe.py \
             --raw-probe artifacts/landmark_probe/raw_landmark_probe.json \
             --frame-ledger artifacts/landmark_probe/frame_review/frame_ledger.json \
             --frame-dir artifacts/landmark_probe/frame_review/frames \
             --out-dir artifacts/landmark_probe/candidate
+
+      - name: Build face-aligned ear-motion triage ledger
+        run: |
+          python scripts/build_ear_motion_triage.py \
+            --candidate-normalization artifacts/landmark_probe/candidate/candidate_normalization.json \
+            --out artifacts/landmark_probe/candidate/ear_motion_triage.json
+          python - <<'PY'
+          import json
+          d=json.load(open('artifacts/landmark_probe/candidate/ear_motion_triage.json'))
+          assert d['transition_count'] == 98, d['transition_count']
+          assert d['review_policy']['all_transitions_preserved'] is True
+          assert d['review_policy']['rank_is_not_action_probability'] is True
+          assert d['admission']['EAD103'] == 'NOT_ESTABLISHED'
+          assert d['admission']['EAD104'] == 'NOT_ESTABLISHED'
+          print('EAR_MOTION_TRIAGE_CLAIM_CEILING = PASS')
+          PY
 
       - name: Freeze exact backend and result receipt
         run: |
@@ -160,7 +179,7 @@ jobs:
           def first(cmd):
               return subprocess.check_output(cmd, text=True).splitlines()[0]
           receipt = {
-              'schema': 'Fast-CAT/PILOT-001/landmark-backend-receipt/v1.1',
+              'schema': 'Fast-CAT/PILOT-001/landmark-backend-receipt/v1.2',
               'fastcat_checked_out_sha': os.environ['FASTCAT_CHECKED_OUT_SHA'],
               'fastcat_checked_out_tree': os.environ['FASTCAT_CHECKED_OUT_TREE'],
               'github_trigger_sha_diagnostic_only': os.environ['GITHUB_SHA'],
@@ -175,19 +194,22 @@ jobs:
               },
               'fastcat_probe_test_sha256': sha(root / 'tools/fastcat_landmark_probe_test.dart'),
               'backend_policy_sha256': sha(root / 'experiments/pilot_001/landmark_backend_candidate.json'),
+              'action_review_protocol_sha256': sha(root / 'experiments/pilot_001/action_review_protocol.json'),
+              'ear_motion_triage_code_sha256': sha(root / 'scripts/build_ear_motion_triage.py'),
               'frame_ledger_sha256': sha(root / 'artifacts/landmark_probe/frame_review/frame_ledger.json'),
               'frame_verifier_sha256': sha(root / 'artifacts/landmark_probe/frame_review/verifier.json'),
               'raw_landmark_probe_sha256': sha(root / 'artifacts/landmark_probe/raw_landmark_probe.json'),
               'candidate_normalization_sha256': sha(root / 'artifacts/landmark_probe/candidate/candidate_normalization.json'),
+              'ear_motion_triage_sha256': sha(root / 'artifacts/landmark_probe/candidate/ear_motion_triage.json'),
               'flutter_version_first_line': first(['flutter', '--version']),
-              'claim_ceiling': 'Pinned exact-head backend execution receipt only. Fixed-ROI external candidate landmarks and geometry-motion triage are not admitted ground truth.'
+              'claim_ceiling': 'Pinned exact-head candidate-geometry and face-aligned ear-motion triage receipt only. EAD103/EAD104, action onset and latency remain not established.'
           }
           out.parent.mkdir(parents=True, exist_ok=True)
           out.write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\n', encoding='utf-8')
           print(json.dumps(receipt, indent=2, sort_keys=True))
           PY
 
-      - name: Upload full-rate landmark candidate review pack
+      - name: Upload full-rate landmark and ear-triage review pack
         uses: actions/upload-artifact@v4
         with:
           name: pilot-001-hugging-landmark-candidate
