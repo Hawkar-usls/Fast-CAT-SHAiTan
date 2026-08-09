@@ -19,8 +19,22 @@ jobs:
       FASTCAT_SOURCE_ID: commons_hugging_2019
 
     steps:
-      - name: Checkout exact Fast-CAT revision
+      - name: Checkout exact Fast-CAT head revision
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Bind exact Fast-CAT checkout
+        run: |
+          checked_out="$(git rev-parse HEAD)"
+          echo "FASTCAT_CHECKED_OUT_SHA=$checked_out" >> "$GITHUB_ENV"
+          echo "FASTCAT_CHECKED_OUT_TREE=$(git rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+          echo "checked_out=$checked_out"
+          echo "github_sha=${GITHUB_SHA}"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test "$checked_out" = "${{ github.event.pull_request.head.sha }}"
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,15 +63,15 @@ jobs:
       - name: Fetch frozen hugging source
         run: python scripts/fetch_open_video.py commons_hugging_2019
 
-      - name: Build exact sampled-frame review ledger
+      - name: Build exact full-rate decoded-frame ledger
         run: |
           python scripts/build_frame_ledger.py \
             --source-id commons_hugging_2019 \
             --video "data/raw/commons_hugging_2019/Two cats holding each other and hugging.webm" \
-            --step-frames 10 \
+            --step-frames 1 \
             --out-dir artifacts/landmark_probe/frame_review
 
-      - name: Independently replay sampled-frame pixels
+      - name: Independently replay all decoded-frame pixels
         run: |
           python scripts/verify_frame_ledger.py \
             --source-id commons_hugging_2019 \
@@ -65,6 +79,17 @@ jobs:
             --ledger artifacts/landmark_probe/frame_review/frame_ledger.json \
             --frame-dir artifacts/landmark_probe/frame_review/frames \
             --out artifacts/landmark_probe/frame_review/verifier.json
+
+      - name: Assert full decoded frame set
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('artifacts/landmark_probe/frame_review/frame_ledger.json'))
+          assert d['frame_count'] == 50, d['frame_count']
+          assert d['selection']['selected_count'] == 50, d['selection']['selected_count']
+          assert d['frame_pts_sha256'] == '98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee'
+          print('FULL_DECODED_FRAME_SET = PASS')
+          PY
 
       - name: Clone exact external 48-landmark backend
         run: |
@@ -90,7 +115,7 @@ jobs:
           cp tools/fastcat_landmark_probe_test.dart \
             external/cat_detection/example/integration_test/fastcat_probe_test.dart
 
-      - name: Run pinned candidate 48-landmark probe
+      - name: Run pinned full-rate dual-ROI 48-landmark probe
         env:
           FASTCAT_INPUT_DIR: ${{ github.workspace }}/artifacts/landmark_probe/frame_review/frames
           FASTCAT_OUT: ${{ github.workspace }}/artifacts/landmark_probe/raw_landmark_probe.json
@@ -111,7 +136,7 @@ jobs:
           fi
           echo "Flutter probe result accepted from test summary; original exit=$flutter_status"
 
-      - name: Normalize structure and sampled identity candidates
+      - name: Normalize structure, ROI identity and motion triage
         run: |
           python scripts/normalize_landmark_probe.py \
             --raw-probe artifacts/landmark_probe/raw_landmark_probe.json \
@@ -135,8 +160,10 @@ jobs:
           def first(cmd):
               return subprocess.check_output(cmd, text=True).splitlines()[0]
           receipt = {
-              'schema': 'Fast-CAT/PILOT-001/landmark-backend-receipt/v1.0',
-              'fastcat_head_sha': os.environ['GITHUB_SHA'],
+              'schema': 'Fast-CAT/PILOT-001/landmark-backend-receipt/v1.1',
+              'fastcat_checked_out_sha': os.environ['FASTCAT_CHECKED_OUT_SHA'],
+              'fastcat_checked_out_tree': os.environ['FASTCAT_CHECKED_OUT_TREE'],
+              'github_trigger_sha_diagnostic_only': os.environ['GITHUB_SHA'],
               'backend_repository': 'hugocornellier/cat_detection',
               'backend_commit': os.environ['FASTCAT_BACKEND_COMMIT'],
               'backend_tree': os.environ['BACKEND_TREE'],
@@ -147,19 +174,20 @@ jobs:
                   'cat_face_landmarks_full.tflite': sha(ext / 'assets/models/cat_face_landmarks_full.tflite'),
               },
               'fastcat_probe_test_sha256': sha(root / 'tools/fastcat_landmark_probe_test.dart'),
+              'backend_policy_sha256': sha(root / 'experiments/pilot_001/landmark_backend_candidate.json'),
               'frame_ledger_sha256': sha(root / 'artifacts/landmark_probe/frame_review/frame_ledger.json'),
               'frame_verifier_sha256': sha(root / 'artifacts/landmark_probe/frame_review/verifier.json'),
               'raw_landmark_probe_sha256': sha(root / 'artifacts/landmark_probe/raw_landmark_probe.json'),
               'candidate_normalization_sha256': sha(root / 'artifacts/landmark_probe/candidate/candidate_normalization.json'),
               'flutter_version_first_line': first(['flutter', '--version']),
-              'claim_ceiling': 'Pinned backend execution receipt only. External candidate landmarks are not admitted ground truth.'
+              'claim_ceiling': 'Pinned exact-head backend execution receipt only. Fixed-ROI external candidate landmarks and geometry-motion triage are not admitted ground truth.'
           }
           out.parent.mkdir(parents=True, exist_ok=True)
           out.write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\n', encoding='utf-8')
           print(json.dumps(receipt, indent=2, sort_keys=True))
           PY
 
-      - name: Upload landmark candidate review pack
+      - name: Upload full-rate landmark candidate review pack
         uses: actions/upload-artifact@v4
         with:
           name: pilot-001-hugging-landmark-candidate
