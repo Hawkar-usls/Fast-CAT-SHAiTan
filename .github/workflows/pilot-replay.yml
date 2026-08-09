@@ -1,0 +1,31 @@
+name: pilot-replay
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay-pilot-000:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Replay frozen pilot
+        run: python scripts/replay_pilot_000.py
+
+      - name: Validate machine-readable JSON
+        run: |
+          python -m json.tool PROJECT_STATUS.json >/dev/null
+          python -m json.tool data/open_video_sources.json >/dev/null
+          python -m json.tool experiments/pilot_000/pilot_000.json >/dev/null
