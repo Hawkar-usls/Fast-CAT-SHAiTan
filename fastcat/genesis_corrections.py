@@ -1,33 +1,53 @@
 from __future__ import annotations
 
 import math
-from typing import Any
 
 
-def delta_quantization_interval_ms(delta_ms: float, frame_interval_ms: float) -> dict[str, float]:
-    """Conservative acquisition interval for two frame-quantized onsets.
+def decoded_pts_latency_interval_ms(
+    *,
+    signaller_previous_absent_pts_s: float,
+    signaller_onset_pts_s: float,
+    responder_previous_absent_pts_s: float,
+    responder_onset_pts_s: float,
+) -> dict[str, float]:
+    """Acquisition interval from actual decoded-PTS onset brackets.
 
-    If both onsets are localized only to decoded frames from the same stream,
-    the difference can shift by up to one frame interval relative to the PTS
-    point estimate. Detector/event-localization uncertainty is additional and
-    is intentionally not hidden inside this acquisition term.
+    An admitted first-visible onset is bracketed by the immediately previous
+    reviewed decoded frame where the action is absent and the first reviewed
+    decoded frame where it is present. Header FPS is deliberately absent from
+    this calculation.
     """
-    if not math.isfinite(delta_ms) or delta_ms < 0:
-        raise ValueError("delta_ms must be finite and non-negative")
-    if not math.isfinite(frame_interval_ms) or frame_interval_ms <= 0:
-        raise ValueError("frame_interval_ms must be finite and positive")
+    sp = float(signaller_previous_absent_pts_s)
+    s = float(signaller_onset_pts_s)
+    rp = float(responder_previous_absent_pts_s)
+    r = float(responder_onset_pts_s)
+    if not all(math.isfinite(x) for x in (sp, s, rp, r)):
+        raise ValueError("PTS values must be finite")
+    if not (0.0 <= sp < s <= r and 0.0 <= rp < r):
+        raise ValueError("invalid decoded-PTS onset brackets")
+
+    point = (r - s) * 1000.0
+    lower = (rp - s) * 1000.0
+    upper = (r - sp) * 1000.0
     return {
-        "point_ms": float(delta_ms),
-        "acquisition_lower_ms": max(0.0, float(delta_ms) - float(frame_interval_ms)),
-        "acquisition_upper_ms": float(delta_ms) + float(frame_interval_ms),
-        "acquisition_radius_ms": float(frame_interval_ms),
+        "point_ms": point,
+        "acquisition_lower_ms": lower,
+        "acquisition_upper_ms": upper,
+        "signaller_bracket_ms": (s - sp) * 1000.0,
+        "responder_bracket_ms": (r - rp) * 1000.0,
+        "acquisition_interval_width_ms": upper - lower,
     }
 
 
-def sequential_any_false_positive_bound(*, per_trial_pmax: float, trials: int, candidates_per_trial: int = 1) -> float:
+def sequential_any_false_positive_bound(
+    *,
+    per_trial_pmax: float,
+    trials: int,
+    candidates_per_trial: int = 1,
+) -> float:
     """JANUS-Genesis-style history-wise familywise bound.
 
-    Valid only when per_trial_pmax is a certified conditional false-positive
+    Valid only when ``per_trial_pmax`` is a certified conditional false-positive
     probability cap for every admissible pre-trial history. It is NOT valid
     when the number is merely a marginal/average validation error that can
     collapse on selected histories.
@@ -46,7 +66,12 @@ def sequential_any_false_positive_bound(*, per_trial_pmax: float, trials: int, c
     return -math.expm1(trials * math.log1p(-q))
 
 
-def required_historywise_pmax(*, familywise_alpha: float, trials: int, candidates_per_trial: int = 1) -> float:
+def required_historywise_pmax(
+    *,
+    familywise_alpha: float,
+    trials: int,
+    candidates_per_trial: int = 1,
+) -> float:
     """Maximum history-wise per-candidate pmax compatible with a target FWER."""
     if not (0.0 < familywise_alpha < 1.0):
         raise ValueError("familywise_alpha must be in (0,1)")
@@ -56,23 +81,3 @@ def required_historywise_pmax(*, familywise_alpha: float, trials: int, candidate
         raise ValueError("candidates_per_trial must be >= 1")
     per_trial_set = 1.0 - math.exp(math.log1p(-familywise_alpha) / trials)
     return min(1.0, per_trial_set / candidates_per_trial)
-
-
-def source_precision_profile(source_preflight: dict[str, Any]) -> dict[str, Any]:
-    rows = []
-    for source in source_preflight.get("sources", []):
-        h = float(source["nominal_frame_interval_ms"])
-        rows.append({
-            "source_id": source["source_id"],
-            "fps": float(source["fps"]),
-            "nominal_frame_interval_ms": h,
-            "delta_acquisition_radius_ms": h,
-            "note": "event/model localization uncertainty is additional",
-        })
-    if not rows:
-        raise ValueError("source_preflight contains no sources")
-    return {
-        "sources": rows,
-        "coarsest_delta_acquisition_radius_ms": max(x["delta_acquisition_radius_ms"] for x in rows),
-        "finest_delta_acquisition_radius_ms": min(x["delta_acquisition_radius_ms"] for x in rows),
-    }

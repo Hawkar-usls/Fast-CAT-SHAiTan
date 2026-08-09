@@ -47,7 +47,7 @@ jobs:
             --receipt-dir data/receipts \
             --out artifacts/pilot_001_source_preflight.json
 
-      - name: Independent raw-byte and timing replay
+      - name: Independent raw-byte and stream-metadata replay
         run: |
           python scripts/verify_pilot_001_source_preflight.py \
             --protocol experiments/pilot_001/protocol.json \
@@ -56,12 +56,22 @@ jobs:
             --raw-dir data/raw \
             --out artifacts/pilot_001_source_verifier.json
 
-      - name: Genesis-derived acquisition and sequential corrections
+      - name: Genesis sequential-control policy receipt
         run: |
           python scripts/pilot_001_genesis_corrections.py \
             --source-preflight experiments/pilot_001/source_preflight.json \
             --protocol experiments/pilot_001/protocol.json \
             --out artifacts/pilot_001_genesis_corrections.json
+          python - <<'PY'
+          import json
+          p='artifacts/pilot_001_genesis_corrections.json'
+          d=json.load(open(p))
+          assert d['timing_precision']['authority'] == 'decoded_frame_pts'
+          assert d['timing_precision']['header_fps_role'] == 'diagnostic_only'
+          assert d['timing_precision']['global_nominal_frame_radius_forbidden'] is True
+          assert 'precision' not in d
+          print('NO_NOMINAL_FPS_PRECISION_ARTIFACT = PASS')
+          PY
 
       - name: Upload receipts and verifier reports
         uses: actions/upload-artifact@v4
