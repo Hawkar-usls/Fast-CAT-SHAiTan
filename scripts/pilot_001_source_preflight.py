@@ -40,20 +40,23 @@ def main() -> int:
             "license": source["license"],
             "raw_media_sha256": receipt.get("raw_media_sha256"),
             "byte_length": receipt.get("byte_length"),
-            "timing": timing,
+            "stream_metadata": timing,
             "source_receipt_sha256": canonical_sha256(receipt),
         })
 
     passed = not failures and len(rows) == len(protocol["sources"])
     report = {
-        "schema": "Fast-CAT/PILOT-001/source-preflight/v1.0",
+        "schema": "Fast-CAT/PILOT-001/source-preflight/v1.1",
         "status": "PASS" if passed else "FAIL",
         "failures": failures,
         "sources": rows,
         "protocol_sha256": canonical_sha256(protocol),
         "manifest_sha256": canonical_sha256(manifest),
-        "established_scope": ["OPEN_VIDEO", "RAW_SHA256", "PTS_FPS_METADATA"] if passed else [],
-        "not_established": ["48_LANDMARKS", "FACIAL_ACTION_ONSET", "DELTA_T", "INDEPENDENT_FRAME_LEVEL_ESTIMATE"],
+        "established_scope": ["OPEN_VIDEO", "RAW_SHA256", "STREAM_TIMING_METADATA"] if passed else [],
+        "decoded_frame_pts_authority": "SEPARATE_FRAME_LEDGER_GATE",
+        "header_fps_is_timing_authority": False,
+        "not_established": ["DECODED_FRAME_PTS_BY_THIS_REPORT", "48_LANDMARK_ACCURACY", "FACIAL_ACTION_ONSET", "DELTA_T", "INDEPENDENT_FRAME_LEVEL_ESTIMATE"],
+        "claim_ceiling": "Source preflight binds exact source bytes, licences and stream metadata only. Decoded-frame PTS authority is established and replayed by the separate frame-ledger gate; header FPS is diagnostic only."
     }
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
