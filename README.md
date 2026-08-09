@@ -1,92 +1,101 @@
 <div align="center">
 
 # Fast-CAT-SHAiTan
-### Cryptographically reproducible feline facial-response timing experiments
+### Reproducible feline facial-response timing experiments
 
 ![Status](https://img.shields.io/badge/status-research%20prototype-f0ad4e)
 ![License](https://img.shields.io/badge/code-Apache--2.0-2f81f7)
-![Result](https://img.shields.io/badge/final%20latency-not%20established-6e7681)
+![PILOT_001](https://img.shields.io/badge/PILOT__001-landmark%20gate%20open-6e7681)
 
-`cat facial timing` · `temporal ML` · `CatFACS / landmarks` · `SHA-256 provenance`
+`cat facial timing` · `CatFLW / CatFACS` · `temporal ML` · `SHA-256 provenance`
 
 </div>
 
-## Abstract
+## Goal
 
-**Fast-CAT-SHAiTan** is an experimental, reproducible pipeline for measuring how quickly one cat produces a facial movement corresponding to a facial movement produced by another cat.
-
-The primary quantity is a latency in milliseconds:
+Measure the delay between a facial action by one cat and the corresponding action by another cat:
 
 ```text
-latency_ms = (t_responder - t_signaller) * 1000
+Δt_ms = (t_responder - t_signaller) * 1000
 ```
 
-For rapid facial mimicry we initially use the conventional search window `0 <= latency <= 1000 ms`, then estimate the observed latency distribution instead of treating one second as the answer.
+Fast-CAT treats video timing, visual measurement, model inference and claim admission as separate evidence layers. SHA-256 is used for integrity/lineage, not as a biological feature.
 
-The project uses public or otherwise lawfully accessible source material, AI-assisted temporal detection, explicit uncertainty, and SHA-256-bound experiment records. **No final biological estimate is claimed yet.**
+The project name is a tribute to **Shaitan**, the cat who inspired it; `SHA` in `SHAiTan` also reflects the provenance layer.
 
-The name is a small tribute to **Shaitan**, the cat who inspired the project; `SHA` in `SHAiTan` also reflects the provenance layer.
+## Current state
 
-## Research question
-
-Given two tracked cats and a facial action `a`, identify:
-
-```text
-(signaller, a, t0) -> (responder, a, t1)
-```
-
-and measure:
-
-```text
-Δt = t1 - t0
-```
-
-The goal is to estimate distributions of `Δt` by facial action, interaction context, source quality, and model confidence — not merely to classify an event as occurring "within one second".
-
-## Current status
-
-| Component | Status |
+| Gate | Status |
 | --- | --- |
-| Repository / Apache-2.0 code license | established |
-| Open-video source catalogue | started |
-| Cryptographic result schema | started |
-| Published-sequence replay | **PILOT_000 complete** |
-| Raw-video facial-event detector | not yet validated |
-| Independent frame-level latency estimate | not established |
-| Population-level feline reaction time | **not established** |
+| Open source media | **ESTABLISHED** for PILOT_001 |
+| Exact raw-media SHA-256 | **ESTABLISHED** |
+| PTS / FPS / codec time-base | **ESTABLISHED + independently replayed** |
+| Stable two-cat identity through event intervals | pending |
+| 48 CatFLW-compatible landmarks | pending admission |
+| CatFACS-compatible facial-action onset | not established |
+| `Δt` from raw open video | not established |
+| `INDEPENDENT_FRAME_LEVEL_ESTIMATE` | **NOT_ESTABLISHED** |
 
-Machine-readable status: [`PROJECT_STATUS.json`](PROJECT_STATUS.json)
+Machine-readable state: [`PROJECT_STATUS.json`](PROJECT_STATUS.json)
 
-## PILOT_000 — published timestamp replay
+## PILOT_001 — open-video gate
 
-The first reproducibility check replays the example event sequence published in:
+Frozen sources:
 
-> Martvel G. et al. (2024), *Computational investigation of the social function of domestic cat facial signals*, Scientific Reports.
+1. `commons_hugging_2019` — affiliative candidate / primary source.
+2. `commons_tomcats_conflict_2020` — non-affiliative control.
 
-Paper: https://doi.org/10.1038/s41598-024-79216-2  
-Reference implementation: https://github.com/teddy4445/social_function_of_domestic_facial_signals
+The exact downloaded media and stream timing have already passed independent replay:
 
-For the matching signaller → responder actions present in the published example sequence:
+| source | SHA-256 | video timing |
+| --- | --- | --- |
+| hugging | `1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e` | 1440×1080, VP8, **120 fps**, 3.058 s |
+| tomcats conflict | `79ea8a60c5aee25438ee70c2fff192ba953e89d29219c3d6ce5ed8e10e2078cf` | 640×480, VP9, **30 fps**, 45.485 s |
 
-| action | signaller | responder | latency |
-| --- | ---: | ---: | ---: |
-| AU25 | 0.00 s | 0.30 s | **300 ms** |
-| AU26 | 0.30 s | 0.45 s | **150 ms** |
-| EAD104 | 1.00 s | 1.15 s | **150 ms** |
+Frozen receipt: [`experiments/pilot_001/source_preflight.json`](experiments/pilot_001/source_preflight.json)
 
-Pilot summary:
+The remaining admission path is:
 
 ```text
-N_MATCHES = 3
-MIN_MS    = 150
-MEDIAN_MS = 150
-MEAN_MS   = 200
-MAX_MS    = 300
+OPEN VIDEO                 PASS
+    ↓
+RAW SHA-256                PASS
+    ↓
+PTS / FPS / time-base      PASS + independent replay
+    ↓
+TWO-CAT ID                 OPEN
+    ↓
+48 LANDMARKS               OPEN
+    ↓
+FACIAL-ACTION ONSET        OPEN
+    ↓
+Δt + uncertainty           OPEN
+    ↓
+INDEPENDENT REPLAY         OPEN
 ```
 
-**Interpretation boundary:** these three values come from an example sequence in the paper. They are useful for testing our timing/replay machinery, but they are **not** an independent estimate of "the reaction time of cats" and must not be presented as one.
+The protocol is frozen before the latency measurement in [`experiments/pilot_001/protocol.json`](experiments/pilot_001/protocol.json). Primary facial actions are `EAD103` and `EAD104`; no-match windows are preserved and post-hoc source/action dropping is forbidden.
 
-Replay:
+### Timing precision
+
+Video PTS is authoritative. Nominal `frame_index / fps` is diagnostic only when PTS exists.
+
+For frame-localized event onsets, the acquisition component of the `Δt` uncertainty is conservatively bounded by at least one nominal frame interval:
+
+```text
+hugging 120 fps  -> ±8.33 ms acquisition radius
+control  30 fps  -> ±33.33 ms acquisition radius
+```
+
+Detector/action-onset localization error is **additional**; the figures above are not claims of total model accuracy.
+
+Genesis-derived correction record: [`experiments/pilot_001/genesis_corrections.json`](experiments/pilot_001/genesis_corrections.json)
+
+## PILOT_000 — software fixture replay
+
+PILOT_000 replays the **sample events in the authors' public `facial_mimicry_analysis.py` code**. That upstream file explicitly marks the sequence as an example and says the real data still need to be loaded.
+
+The deterministic replay gives `300 ms`, `150 ms`, and `150 ms`, but these values are only a software/replay fixture. They are **not attributed to the raw study dataset and are not measured feline reaction times**.
 
 ```bash
 python scripts/replay_pilot_000.py
@@ -94,130 +103,51 @@ python scripts/replay_pilot_000.py
 
 Frozen record: [`experiments/pilot_000/pilot_000.json`](experiments/pilot_000/pilot_000.json)
 
-## Why we need a new experiment
+## Model architecture
 
-The 2024 study defines rapid facial mimicry within a **1-second window** and reports a source dataset of 184 videos recorded at 60 fps. The raw dataset is available from the authors upon reasonable request rather than bundled with the public code repository.
+Fast-CAT separates three roles:
 
-At 60 fps, one frame is approximately:
+- **CatGPT baseline** — interpretable autoregressive transition/n-gram/Slime-Trace baseline; it does not create timestamp truth.
+- **48-landmark detector** — CatFLW-compatible visual measurement for ears, eyes, nose, mouth and face geometry.
+- **Temporal model** — candidate attention/Transformer layer for event onset and cross-cat temporal structure, validated only after a frozen train/validation split.
 
-```text
-1000 / 60 = 16.67 ms
-```
+Model notes: [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md)  
+Landmark/event boundary: [`docs/LANDMARK_EVENT_ADMISSION.md`](docs/LANDMARK_EVENT_ADMISSION.md)
 
-That is fine enough to ask a more precise question: where inside the 0–1000 ms window do matched responses actually occur?
+## JANUS method reuse
 
-## Open raw-video candidates
+Fast-CAT reuses bounded engineering ideas from sibling repositories:
 
-We do **not** treat random internet clips as ground truth. They are candidate material for detector development, false-positive testing, and later manually reviewed timing measurements.
+- **Janus-Fundamentum** — evidence discipline, negative-result preservation and strict claim ceilings;
+- **Janus_Genesis** — canonical hashing, fail-closed replay, preregistration and sequential false-positive accounting;
+- **janus-lapis** — `PASS / REVIEW / REJECT` candidate-triage structure, not its domain-specific numerical constants;
+- **Janus-Demiurge** — ordinary GP/EI Bayesian optimization on a frozen validation split only.
 
-The initial catalogue contains openly licensed Wikimedia Commons footage of two-cat interactions, including affiliative/play and non-affiliative/conflict contexts:
+Speculative legacy heuristics such as digital-root resonance, tachyonic filters and `filter_37` are explicitly excluded from Fast-CAT scientific calibration.
 
-- `Kittys.webm` — two cats — CC BY-SA 4.0
-- `Two cats holding each other and hugging.webm` — mutual contact/grooming — CC BY-SA 4.0
-- `Play fight between cats.webmhd.webm` — two 14-week-old littermates play fighting — CC BY-SA 3.0
-- `Tomcats conflict.webm` — two tomcats in conflict — CC0 1.0
-
-Source metadata and stable source pages: [`data/open_video_sources.json`](data/open_video_sources.json)
-
-Raw third-party media is not automatically relicensed by this repository and should not be committed without preserving its original licence and attribution requirements.
-
-## Proposed measurement pipeline
-
-```text
-public video
-    ↓
-source URL + source licence + media hash
-    ↓
-cat detection / stable cat IDs
-    ↓
-face crop + 48 feline landmarks / CatFACS-compatible features
-    ↓
-temporal facial-action event detector
-    ↓
-(signaller action, responder matching action)
-    ↓
-frame-accurate Δt in milliseconds
-    ↓
-confidence + uncertainty + reviewer decision
-    ↓
-SHA-256-bound result record
-```
-
-### Timing rule
-
-For each signaller event, candidate matches must satisfy:
-
-```text
-same_action = true
-responder != signaller
-0 <= t_responder - t_signaller <= 1.0 s
-```
-
-A later validated protocol will specify collision handling, repeated actions, simultaneous events, occlusion, dropped frames, variable-frame-rate video, and minimum detector confidence before any aggregate claim is admitted.
-
-## Model direction
-
-An existing **CatGPT** prototype from the JANUS working set is relevant as a baseline. It already represents cat state with features including ear positions, head/body variables and context; learns autoregressive transitions and n-grams; tracks motion statistics; maintains a reinforced `Slime Trace`; and checkpoints state to JSON.
-
-Important: that CatGPT implementation is **not a Transformer**. It is a compact statistical autoregressive model. That makes it useful as an interpretable baseline, while a dedicated temporal attention/Transformer model can be evaluated separately for frame sequences.
-
-See [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md).
-
-## Cryptographic provenance
-
-SHA-256 is used here for **integrity and lineage**, not as a biological feature.
-
-Each admitted experiment should bind at least:
-
-```text
-source_page
-source_media_url
-source_license
-raw_media_sha256
-video_stream_metadata
-frame_selection_policy
-model_id
-model_weights_sha256
-code_commit
-configuration_sha256
-event_table_sha256
-result_sha256
-```
-
-This allows another reviewer to determine whether a reported result came from exactly the same media, model, code, and configuration.
+Details: [`docs/CROSS_REPO_METHOD.md`](docs/CROSS_REPO_METHOD.md)
 
 ## Scientific boundaries
 
-This repository does not currently claim:
-
-- a universal feline reaction time;
-- that every matched facial movement is intentional communication;
-- that temporal correlation alone proves mimicry or empathy;
-- that an AI detector is equivalent to expert CatFACS annotation;
-- that a low-resolution or unknown-frame-rate internet clip can support millisecond precision beyond its acquisition limits.
+Fast-CAT does not currently claim a universal feline reaction time, intentional communication from temporal correlation alone, equivalence between an AI detector and expert CatFACS annotation, or sub-frame precision without a sub-frame measurement method.
 
 Negative and inconclusive results are valid outcomes.
 
+## Reproducibility
+
+```bash
+python scripts/replay_pilot_000.py
+python -m unittest discover -s tests -v
+```
+
+PILOT_001 source CI downloads the frozen open media, recomputes raw SHA-256, re-runs `ffprobe`, checks the source manifest, executes an independent verifier and publishes receipts as a workflow artifact.
+
 ## Related work
 
-- Martvel G. et al., *Computational investigation of the social function of domestic cat facial signals* — https://doi.org/10.1038/s41598-024-79216-2
-- Authors' code — https://github.com/teddy4445/social_function_of_domestic_facial_signals
-- Martvel G. et al., *CatFLW: Cat Facial Landmarks in the Wild Dataset* — https://arxiv.org/abs/2305.04232
-
-## Repository layout
-
-```text
-data/                       source manifests; no implied media relicensing
-docs/                       protocol and model notes
-experiments/                frozen pilot/result records
-scripts/                    deterministic replay and analysis tools
-PROJECT_STATUS.json         machine-readable maturity / claim ceiling
-LICENSE                     Apache License 2.0 for repository-authored code
-NOTICE                      attribution and third-party boundary
-```
+- Martvel et al. (2024), *Computational investigation of the social function of domestic cat facial signals* — DOI `10.1038/s41598-024-79216-2`
+- Martvel et al. (2024), *Automated Detection of Cat Facial Landmarks* — CatFLW / 48-landmark reference
+- Authors' public analysis code: `teddy4445/social_function_of_domestic_facial_signals`
 
 ## License
 
-Repository-authored code and documentation are licensed under **Apache License 2.0** unless a file states otherwise.
-
-Third-party datasets, papers, code, models, and media retain their own licences and terms. References to them do not place those works under Apache-2.0.
+Repository-authored code and documentation are licensed under **Apache License 2.0** unless a file states otherwise. Third-party papers, datasets, models and media retain their original licences and attribution requirements.

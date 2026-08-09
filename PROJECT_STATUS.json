@@ -1,12 +1,13 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "project": "Fast-CAT-SHAiTan",
   "maturity": "research_prototype",
   "code_license": "Apache-2.0",
   "final_latency_established": false,
   "raw_video_detector_validated": false,
   "independent_frame_level_estimate_established": false,
-  "pilot_000_status": "complete_published_sequence_replay",
+  "pilot_000_status": "complete_authors_code_sample_fixture_replay_lineage_corrected",
+  "pilot_000_raw_study_data_used": false,
   "pilot_001_status": "source_timing_gate_established_landmark_gate_open",
   "pilot_001_open_video": "established",
   "pilot_001_raw_sha256": "established",
@@ -14,6 +15,6 @@
   "pilot_001_landmark_gate": "not_admitted_yet",
   "pilot_001_facial_action_onset": "not_established",
   "pilot_001_delta_t": "not_established",
-  "claim_ceiling": "PILOT_001 independently establishes the exact bytes and timing metadata of its two frozen open-video sources. INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED until validated 48-landmark and facial-action onset evidence passes deterministic independent replay.",
-  "current_next_gate": "PILOT_001: 48_LANDMARKS -> FACIAL_ACTION_ONSET -> DELTA_T -> INDEPENDENT_REPLAY"
+  "claim_ceiling": "PILOT_000 is only a replay of the authors' public sample-code fixture. PILOT_001 independently establishes exact bytes and timing metadata for two frozen open videos. INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED until validated 48-landmark and facial-action onset evidence passes deterministic independent replay.",
+  "current_next_gate": "PILOT_001: TWO_CAT_ID -> 48_LANDMARKS -> FACIAL_ACTION_ONSET -> DELTA_T -> INDEPENDENT_REPLAY"
 }
