@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "project": "Fast-CAT-SHAiTan",
+  "maturity": "research_prototype",
+  "code_license": "Apache-2.0",
+  "final_latency_established": false,
+  "raw_video_detector_validated": false,
+  "independent_frame_level_estimate_established": false,
+  "pilot_000_status": "complete_published_sequence_replay",
+  "claim_ceiling": "PILOT_000 replays a published example event sequence only; it is not an independent estimate of feline reaction time.",
+  "current_next_gate": "validate facial-action event detection on openly licensed raw video with verified stream timing metadata"
+}
