@@ -1,6 +1,8 @@
 name: pilot-001-source-preflight
 
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
