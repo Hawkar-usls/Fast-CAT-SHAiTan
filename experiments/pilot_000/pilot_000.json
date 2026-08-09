@@ -1,14 +1,17 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "experiment_id": "PILOT_000",
-  "kind": "published_example_sequence_replay",
-  "status": "complete",
+  "kind": "authors_public_code_sample_replay",
+  "status": "complete_lineage_corrected",
   "source": {
     "paper": "Computational investigation of the social function of domestic cat facial signals",
     "doi": "10.1038/s41598-024-79216-2",
-    "source_fragment": "published example event sequence associated with Figure 3",
+    "code_repository": "teddy4445/social_function_of_domestic_facial_signals",
+    "source_file": "facial_mimicry_analysis.py",
+    "source_fragment": "explicit sample events in authors' public code; the file says TODO load the real data",
     "raw_video_used": false,
-    "note": "Illustrative published timestamp sequence; not an independent biological sample."
+    "real_study_event_table_used": false,
+    "note": "This sequence is a software/example fixture, not a raw-video measurement and not evidence that these three delays occurred in the study dataset."
   },
   "rapid_mimicry_window_ms": 1000,
   "events": [
@@ -41,5 +44,5 @@
     "analysis_payload_definition": "{events,matches,summary}",
     "analysis_payload_sha256_canonical_json": "a36f7321c1c3f15adaffb5c8195058c0ff02f12a270e0a8628b69eb8bfb8df28"
   },
-  "claim_ceiling": "The three observed delays validate only the deterministic replay logic against a published example sequence. They do not establish a population-level or independently measured feline reaction time."
+  "claim_ceiling": "The 300/150/150 ms values validate only Fast-CAT deterministic replay against the authors' sample code fixture. They are not measured feline reaction times and are not attributed to the raw study dataset."
 }
