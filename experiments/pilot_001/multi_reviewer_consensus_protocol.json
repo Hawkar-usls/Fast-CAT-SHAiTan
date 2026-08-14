@@ -1,0 +1,102 @@
+{
+  "schema": "Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_hugging_2019",
+  "purpose": "preregister a fail-closed multi-reviewer consensus boundary for independently verified model-blinded EAD103/EAD104 reviews without fabricating, averaging, or imputing biological labels",
+  "required_reviewers": 2,
+  "distinct_reviewer_ids_required": true,
+  "distinct_attestation_hashes_required": true,
+  "point_estimate_window_ms": 1000,
+  "required_input_bundle_per_reviewer": {
+    "attestation": "the exact reviewer attestation whose canonical SHA-256 is embedded in the ingestion analysis",
+    "analysis": "PASS output of Fast-CAT/PILOT-001/independent-review-ingestion/v1.1 with exact_frozen_package_binding_established=true",
+    "verifier": "PASS output of Fast-CAT/PILOT-001/independent-review-verifier/v1.0 with independent_replay_established=true"
+  },
+  "cross_reviewer_binding": {
+    "same_source_id_required": true,
+    "same_frame_manifest_file_sha256_required": true,
+    "same_row_key_sequence_required": true,
+    "row_key": [
+      "source_id",
+      "frame_index",
+      "pts_s",
+      "subject_id"
+    ],
+    "distinct_completed_review_form_sha256_required": false,
+    "reason_completed_forms_may_match": "independent reviewers can legitimately produce byte-identical completed forms when labels and blank notes are identical; reviewer distinctness is therefore bound through reviewer_id plus attestation identity, not forced form inequality"
+  },
+  "per_review_replay": {
+    "canonical_attestation_sha256_must_match_analysis": true,
+    "normalized_review_rows_sha256_must_recompute": true,
+    "derived_onsets_are_rederived_from_normalized_rows": true,
+    "matches_are_rederived_from_replayed_onsets": true,
+    "analysis_hashes_must_match_replay": true,
+    "independent_verifier_hashes_must_match_analysis": true,
+    "analysis_and_verifier_must_keep_independent_frame_level_estimate_false": true
+  },
+  "consensus_state_fields": [
+    "identity_confirmed",
+    "left_ear_EAD103",
+    "right_ear_EAD103",
+    "left_ear_EAD104",
+    "right_ear_EAD104"
+  ],
+  "consensus_rule": {
+    "method": "exact_unanimity",
+    "unanimous_value": "preserve the common reviewer state verbatim",
+    "non_unanimous_value": "DISAGREEMENT",
+    "disagreement_is_imputed": false,
+    "disagreement_is_dropped": false,
+    "adjudication_in_v1_0": "none",
+    "reason": "the first multi-reviewer gate should preserve disagreement as evidence rather than silently converting it into a majority or model-assisted label"
+  },
+  "agreement_reporting": {
+    "report_exact_state_agreement_rate": true,
+    "report_unanimous_state_cell_count": true,
+    "report_disagreement_state_cell_count": true,
+    "report_by_field_counts": true,
+    "kappa_required": false,
+    "reason_kappa_not_required": "v1.0 uses exact state agreement as an audit quantity and avoids attaching inferential meaning to a small, prevalence-sensitive pilot"
+  },
+  "consensus_onset_derivation": {
+    "unit": "subject + action + laterality",
+    "rule": "current consensus frame PRESENT and immediately previous consensus frame ABSENT, with unanimous identity_confirmed=yes on both frames",
+    "DISAGREEMENT_cannot_bridge": true,
+    "UNCERTAIN_cannot_bridge": true,
+    "NOT_VISIBLE_cannot_bridge": true,
+    "first_frame_can_never_be_an_onset": true,
+    "event_time": "current decoded PTS",
+    "previous_absent_time": "immediately previous decoded PTS",
+    "event_source": "multi_reviewer_unanimous_manual_catfacs_consensus"
+  },
+  "matching": {
+    "same_action_required": true,
+    "other_subject_required": true,
+    "earliest_unused_response": true,
+    "laterality_is_preserved_but_not_required_to_match": true,
+    "point_estimate_window_ms": 1000,
+    "zero_match_is_valid": true,
+    "acquisition_interval_uses_both_local_pts_brackets": true
+  },
+  "negative_outcome_policy": "a valid pair of independent reviews with disagreement, zero consensus onsets, or zero consensus matches remains a valid scientific outcome and must not be converted into a positive latency claim",
+  "software_fixture_policy": "synthetic CI reviewer bundles test only the software boundary and are never biological evidence",
+  "claim_gate": {
+    "successful_consensus_may_establish": [
+      "multi_reviewer_input_lineage_in_consensus_scope",
+      "exact_state_agreement_table",
+      "unanimous_frame_state_consensus_table",
+      "unanimous_first_visible_action_onset_table_in_review_scope",
+      "deterministic_same_action_pairing_in_consensus_scope"
+    ],
+    "successful_consensus_does_not_establish": [
+      "landmark_accuracy",
+      "independent_subject_identity_outside_reviewer_scope",
+      "population_level_feline_reaction_time",
+      "causal_mimicry",
+      "intentional_communication",
+      "INDEPENDENT_FRAME_LEVEL_ESTIMATE"
+    ]
+  },
+  "current_real_data_status": "NO_REAL_MULTI_REVIEWER_BUNDLE_RECEIVED",
+  "claim_ceiling": "This protocol preregisters a two-reviewer unanimous consensus software boundary. Until two distinct real independent blinded reviews, their exact attestations, and their independent verifier receipts are received and admitted, no multi-reviewer biological result exists. Even a successful consensus remains review-scope evidence and does not by itself establish population-level feline latency, causal mimicry, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+}
