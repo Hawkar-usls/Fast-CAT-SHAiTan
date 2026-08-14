@@ -252,6 +252,68 @@ jobs:
           print(json.dumps(receipt,indent=2,sort_keys=True))
           PY
 
+      - name: Build compact scientific summary
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('artifacts/control_full_rate')
+          c=json.loads((root/'candidate/candidate_normalization.json').read_text())
+          t=json.loads((root/'candidate/ear_motion_triage.json').read_text())
+          r=json.loads((root/'backend_receipt.json').read_text())
+          summary={
+              'schema':'Fast-CAT/PILOT-001/control-full-rate-summary/v1.0',
+              'source_id':'commons_tomcats_conflict_2020',
+              'status':c['status'],
+              'scientific_outcome':c['scientific_outcome'],
+              'selected_frames_expected':c['selected_frames_expected'],
+              'selected_frames_processed':c['selected_frames_processed'],
+              'valid_channel_frame_counts':c['valid_channel_frame_counts'],
+              'frames_with_two_spatially_distinct_roi_candidates':c['frames_with_two_spatially_distinct_roi_candidates'],
+              'frames_with_duplicate_face_risk':c['frames_with_duplicate_face_risk'],
+              'frames_with_incomplete_roi_face_channels':c['frames_with_incomplete_roi_face_channels'],
+              'two_candidate_coverage_fraction':c['two_candidate_coverage_fraction'],
+              'adjacent_full_rate_ear_triage_admitted':c['adjacent_full_rate_ear_triage_admitted'],
+              'ear_motion_receipt_schema':t.get('schema'),
+              'ear_motion_receipt_status':t.get('status'),
+              'ear_motion_transition_count':t.get('transition_count'),
+              'structural_landmark_rows_sha256':c['structural_landmark_rows_sha256'],
+              'region_motion_rows_sha256':c['region_motion_rows_sha256'],
+              'candidate_normalization_sha256':r['candidate_normalization_sha256'],
+              'ear_motion_triage_or_blocked_receipt_sha256':r['ear_motion_triage_or_blocked_receipt_sha256'],
+              'frame_ledger_sha256':r['frame_ledger_sha256'],
+              'frame_verifier_sha256':r['frame_verifier_sha256'],
+              'raw_probe_sha256':r['raw_probe_sha256'],
+              'fastcat_checked_out_sha':r['fastcat_checked_out_sha'],
+              'fastcat_checked_out_tree':r['fastcat_checked_out_tree'],
+              'backend_repository':r['backend_repository'],
+              'backend_commit':r['backend_commit'],
+              'backend_tree':r['backend_tree'],
+              'landmark_accuracy':'NOT_ESTABLISHED',
+              'independent_subject_identity':'NOT_ESTABLISHED',
+              'EAD103':'NOT_ESTABLISHED',
+              'EAD104':'NOT_ESTABLISHED',
+              'facial_action_onset':'NOT_ESTABLISHED',
+              'mimicry':'NOT_ESTABLISHED',
+              'delta_t':'NOT_ESTABLISHED',
+              'independent_frame_level_estimate':'NOT_ESTABLISHED',
+              'claim_ceiling':r['claim_ceiling'],
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload compact full-rate control receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-conflict-control-full-rate-summary
+          path: |
+            artifacts/control_full_rate/summary.json
+            artifacts/control_full_rate/backend_receipt.json
+            artifacts/control_full_rate/candidate/ear_motion_triage.json
+            artifacts/control_full_rate/frame_review/verifier.json
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Upload full-rate conflict-control pack
         uses: actions/upload-artifact@v4
         with:
