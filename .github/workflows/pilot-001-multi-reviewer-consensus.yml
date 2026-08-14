@@ -1,0 +1,75 @@
+name: pilot-001-multi-reviewer-consensus
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  multi-reviewer-consensus-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact Fast-CAT revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate frozen consensus protocol JSON
+        run: |
+          python -m json.tool experiments/pilot_001/multi_reviewer_consensus_protocol.json >/dev/null
+          python - <<'PY'
+          import json
+          p=json.load(open('experiments/pilot_001/multi_reviewer_consensus_protocol.json'))
+          assert p['schema']=='Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0'
+          assert p['required_reviewers']==2
+          assert p['distinct_reviewer_ids_required'] is True
+          assert p['distinct_attestation_hashes_required'] is True
+          assert p['consensus_rule']['method']=='exact_unanimity'
+          assert p['consensus_rule']['disagreement_is_imputed'] is False
+          assert p['consensus_rule']['adjudication_in_v1_0']=='none'
+          assert p['current_real_data_status']=='NO_REAL_MULTI_REVIEWER_BUNDLE_RECEIVED'
+          print('MULTI_REVIEWER_CONSENSUS_PROTOCOL = FROZEN')
+          print('REAL_MULTI_REVIEWER_BIOLOGICAL_EVIDENCE = NONE')
+          PY
+
+      - name: Compile consensus implementation
+        run: |
+          python -m py_compile \
+            fastcat/review_consensus.py \
+            scripts/build_multi_reviewer_consensus.py \
+            tests/test_review_consensus.py
+
+      - name: Run fail-closed consensus unit tests
+        run: python -m unittest tests.test_review_consensus -v
+
+      - name: Assert claim ceiling remains closed
+        run: |
+          python - <<'PY'
+          from tests.test_review_consensus import make_bundle, policy
+          from fastcat.review_consensus import build_consensus_report
+          r=build_consensus_report(
+              bundles=[make_bundle('CI_REVIEWER_A'), make_bundle('CI_REVIEWER_B')],
+              policy=policy(),
+          )
+          assert r['status']=='PASS'
+          assert r['multi_reviewer_consensus_established_in_review_scope'] is True
+          assert r['independent_frame_level_estimate_established'] is False
+          assert r['scientific_outcome']=='VALID_UNANIMOUS_CONSENSUS_ZERO_MATCHES'
+          print('SYNTHETIC_TWO_REVIEWER_SOFTWARE_FIXTURE = PASS')
+          print('INDEPENDENT_FRAME_LEVEL_ESTIMATE = NOT_ESTABLISHED')
+          print('SYNTHETIC_FIXTURE_IS_BIOLOGICAL_EVIDENCE = FALSE')
+          PY
