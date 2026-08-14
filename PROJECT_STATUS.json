@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.6",
+  "schema_version": "1.7",
   "project": "Fast-CAT-SHAiTan",
   "maturity": "research_prototype",
   "code_license": "Apache-2.0",
@@ -8,7 +8,7 @@
   "independent_frame_level_estimate_established": false,
   "pilot_000_status": "complete_authors_code_sample_fixture_replay_lineage_corrected",
   "pilot_000_raw_study_data_used": false,
-  "pilot_001_status": "blinded_review_input_and_fail_closed_ingestion_software_boundary_established_external_review_pending",
+  "pilot_001_status": "fail_closed_single_and_multi_reviewer_consensus_software_boundaries_established_external_reviews_pending",
   "pilot_001_open_video": "established",
   "pilot_001_raw_sha256": "established",
   "pilot_001_stream_timing_metadata": "established_independent_replay",
@@ -60,6 +60,25 @@
     "real_independent_reviewer_submission_received": false,
     "real_independent_action_labels_received": false
   },
+  "pilot_001_multi_reviewer_consensus": {
+    "software_gate": "established_fail_closed_exact_unanimity_v1_0",
+    "merge_commit_sha": "3d5ceda9464dfb41f4c3a5a3a8db9a1cd7d0c4e5",
+    "required_reviewers": 2,
+    "distinct_reviewer_ids_required": true,
+    "distinct_attestation_hashes_required": true,
+    "same_source_and_frame_manifest_binding_required": true,
+    "per_review_onset_and_pairing_replay_required": true,
+    "independent_verifier_hash_binding_required": true,
+    "consensus_rule": "exact_unanimity",
+    "non_unanimous_state": "DISAGREEMENT",
+    "disagreement_imputed": false,
+    "adjudication_enabled": false,
+    "zero_consensus_onset_and_zero_match_outcomes_preserved": true,
+    "synthetic_multi_reviewer_fixture_is_biological_evidence": false,
+    "real_multi_reviewer_bundle_received": false,
+    "biological_consensus_onsets_established": false,
+    "biological_consensus_delta_t_established": false
+  },
   "pilot_001_conflict_control": {
     "decoded_frame_count": 1218,
     "frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
@@ -85,6 +104,6 @@
   "pilot_001_EAD104": "not_established",
   "pilot_001_facial_action_onset": "not_established",
   "pilot_001_delta_t": "not_established",
-  "claim_ceiling": "PILOT_001 now has exact source/decoded-PTS provenance, candidate landmark coverage, deterministic ear-motion triage, a cryptographically frozen model-blinded EAD review package, and a fail-closed software path for ingesting and independently replaying a future external review. No real independent reviewer submission or biological action labels have been received. Landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, action onset, mimicry, delta-t and feline response latency remain NOT_ESTABLISHED; INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
-  "current_next_gate": "PILOT_001: REAL_INDEPENDENT_BLINDED_REVIEW_SUBMISSION -> EXACT_PACKAGE_BINDING -> EAD103_EAD104_FRAME_STATE_REPLAY -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> EVENT_LOCAL_DELTA_T_INTERVAL -> FULL_PROTOCOL_CLAIM_GATE; conflict full-rate candidate gate may proceed separately"
+  "claim_ceiling": "PILOT_001 now has exact source/decoded-PTS provenance, candidate landmark coverage, deterministic ear-motion triage, a cryptographically frozen model-blinded EAD review package, a fail-closed single-review ingestion/replay boundary, and a fail-closed two-reviewer exact-unanimity consensus boundary. No real independent reviewer submission or real multi-reviewer bundle has been received. Landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, biological action onset, mimicry, delta-t and feline response latency remain NOT_ESTABLISHED; INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
+  "current_next_gate": "PILOT_001: RECEIVE_AT_LEAST_TWO_DISTINCT_REAL_INDEPENDENT_BLINDED_REVIEWS -> EXACT_PACKAGE_BINDING_PER_REVIEW -> INDEPENDENT_VERIFIER_REPLAY_PER_REVIEW -> EXACT_UNANIMOUS_FRAME_STATE_CONSENSUS -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> EVENT_LOCAL_DELTA_T_INTERVAL -> FULL_PROTOCOL_CLAIM_GATE; conflict full-rate candidate gate may proceed separately"
 }
