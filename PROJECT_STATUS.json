@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.7",
+  "schema_version": "1.8",
   "project": "Fast-CAT-SHAiTan",
   "maturity": "research_prototype",
   "code_license": "Apache-2.0",
@@ -8,7 +8,7 @@
   "independent_frame_level_estimate_established": false,
   "pilot_000_status": "complete_authors_code_sample_fixture_replay_lineage_corrected",
   "pilot_000_raw_study_data_used": false,
-  "pilot_001_status": "fail_closed_single_and_multi_reviewer_consensus_software_boundaries_established_external_reviews_pending",
+  "pilot_001_status": "full_rate_candidate_geometry_for_primary_and_control_plus_fail_closed_single_and_multi_reviewer_software_boundaries_established_external_reviews_pending",
   "pilot_001_open_video": "established",
   "pilot_001_raw_sha256": "established",
   "pilot_001_stream_timing_metadata": "established_independent_replay",
@@ -88,15 +88,75 @@
       "max": 167.0
     },
     "sampled_landmark_preflight": "pass_candidate_only_83_of_83",
+    "full_rate_landmark_control_gate": "PASS_CANDIDATE_ONLY",
+    "scientific_outcome": "FULL_RATE_TWO_CANDIDATE_COVERAGE_COMPLETE",
+    "merge_commit_sha": "041f0db46bfc4791a19b0adb1afb56f53a68e8e1",
+    "merge_tree_sha": "73c1afa472d792c1ed4c27d06646eb79e7faf0b3",
+    "merge_verification_workflow_run_id": 31833051985,
+    "merge_compact_artifact_id": 9231831129,
+    "merge_compact_artifact_digest": "sha256:a52ed1ac4969306c9b07c44c078bdf3b1eaf57fa25e9caaf5f4a806fe427d998",
+    "merge_full_artifact_id": 9231847774,
+    "merge_full_artifact_digest": "sha256:c2e77e6eb6107256a8e3a5b9931ffe0c4efe96fe5d6dab87766a19355a1352dd",
+    "backend_repository": "hugocornellier/cat_detection",
+    "backend_commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "backend_tree": "61d38ba8c589a188f2f33228aef9eb86e16e8844",
+    "selected_frames_expected": 1218,
+    "selected_frames_processed": 1218,
     "candidate_48_landmark_roi_channels": {
-      "cat_C_brown_left": "83_of_83_sampled",
-      "cat_D_gray_right": "83_of_83_sampled"
+      "cat_C_brown_left": "1218_of_1218_full_rate",
+      "cat_D_gray_right": "1218_of_1218_full_rate"
     },
-    "sampled_duplicate_face_risk_flags": 0,
+    "candidate_two_roi_spatial_distinctness": "1218_of_1218_no_duplicate_risk_flags",
+    "frames_with_duplicate_face_risk": 0,
+    "frames_with_incomplete_roi_face_channels": 0,
+    "two_candidate_coverage_fraction": 1.0,
+    "face_aligned_ear_motion_triage": "established_deterministic_triage_only_2434_of_2434_transitions",
+    "ear_motion_transition_count": 2434,
+    "ear_motion_transitions_sha256_merge_run": "e846076a95b14c60c0d92d45fc99488f3962246ac0d175048748c489e30e4ce1",
     "landmark_accuracy": "not_established",
-    "full_rate_landmark_control_gate": "not_started"
+    "landmark_confidence": "unavailable_from_backend_public_result",
+    "independent_subject_identity": "not_established",
+    "EAD103": "not_established",
+    "EAD104": "not_established",
+    "facial_action_onset": "not_established",
+    "mimicry": "not_established",
+    "delta_t": "not_established",
+    "independent_frame_level_estimate": "not_established"
   },
-  "pilot_001_landmark_structure": "candidate_coverage_established_not_ground_truth",
+  "pilot_001_full_rate_numerical_reproducibility": {
+    "status": "semantic_outcome_reproduced_float_geometry_not_byte_identical",
+    "compared_runs": [
+      {
+        "scope": "pr_head",
+        "fastcat_sha": "dbf651a21f23568d4a03d33da47fa45f5a94fbde",
+        "workflow_run_id": 31831627159,
+        "compact_artifact_id": 9231360607,
+        "compact_artifact_digest": "sha256:242012f0653aa093b4a6bf9b6270655620dd1ccf9bd176d3b5db7c9d2fd4eaa7"
+      },
+      {
+        "scope": "merge_main",
+        "fastcat_sha": "041f0db46bfc4791a19b0adb1afb56f53a68e8e1",
+        "workflow_run_id": 31833051985,
+        "compact_artifact_id": 9231831129,
+        "compact_artifact_digest": "sha256:a52ed1ac4969306c9b07c44c078bdf3b1eaf57fa25e9caaf5f4a806fe427d998"
+      }
+    ],
+    "same_fastcat_tree": true,
+    "same_backend_commit_and_tree": true,
+    "same_frame_ledger_sha256": true,
+    "same_frame_verifier_sha256": true,
+    "same_status": true,
+    "same_scientific_outcome": true,
+    "same_1218_of_1218_candidate_coverage": true,
+    "same_zero_duplicate_and_zero_incomplete_counts": true,
+    "same_2434_transition_count": true,
+    "raw_probe_sha256_byte_identical": false,
+    "structural_landmark_rows_sha256_byte_identical": false,
+    "region_motion_rows_sha256_byte_identical": false,
+    "ear_motion_transitions_sha256_byte_identical": false,
+    "interpretation": "The pinned inference stack reproduced the full-rate admission outcome and cardinalities across two runs of the same Fast-CAT tree/backend, but floating geometry was not byte-identical. A dedicated tolerance-based numerical reproducibility gate is therefore required before treating raw floating output hashes as deterministic evidence."
+  },
+  "pilot_001_landmark_structure": "full_rate_candidate_coverage_established_for_primary_and_control_not_ground_truth",
   "pilot_001_landmark_accuracy": "not_established",
   "pilot_001_final_two_cat_identity": "not_established_independently",
   "pilot_001_independent_reviewer_submission": "not_received",
@@ -104,6 +164,6 @@
   "pilot_001_EAD104": "not_established",
   "pilot_001_facial_action_onset": "not_established",
   "pilot_001_delta_t": "not_established",
-  "claim_ceiling": "PILOT_001 now has exact source/decoded-PTS provenance, candidate landmark coverage, deterministic ear-motion triage, a cryptographically frozen model-blinded EAD review package, a fail-closed single-review ingestion/replay boundary, and a fail-closed two-reviewer exact-unanimity consensus boundary. No real independent reviewer submission or real multi-reviewer bundle has been received. Landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, biological action onset, mimicry, delta-t and feline response latency remain NOT_ESTABLISHED; INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
-  "current_next_gate": "PILOT_001: RECEIVE_AT_LEAST_TWO_DISTINCT_REAL_INDEPENDENT_BLINDED_REVIEWS -> EXACT_PACKAGE_BINDING_PER_REVIEW -> INDEPENDENT_VERIFIER_REPLAY_PER_REVIEW -> EXACT_UNANIMOUS_FRAME_STATE_CONSENSUS -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> EVENT_LOCAL_DELTA_T_INTERVAL -> FULL_PROTOCOL_CLAIM_GATE; conflict full-rate candidate gate may proceed separately"
+  "claim_ceiling": "PILOT_001 now has exact source/decoded-PTS provenance, full-rate candidate 48-landmark coverage for both the primary hugging source and non-affiliative conflict control, deterministic face-aligned ear-motion triage, a cryptographically frozen model-blinded EAD review package, a fail-closed single-review ingestion/replay boundary, and a fail-closed two-reviewer exact-unanimity consensus boundary. The conflict-control full-rate admission outcome reproduced across PR-head and merge-main runs, while raw floating geometry was not byte-identical and remains subject to a future numerical reproducibility tolerance gate. No real independent reviewer submission or real multi-reviewer bundle has been received. Landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, biological action onset, mimicry, delta-t and feline response latency remain NOT_ESTABLISHED; INDEPENDENT_FRAME_LEVEL_ESTIMATE remains NOT_ESTABLISHED.",
+  "current_next_gate": "PRIMARY_SCIENTIFIC_GATE: RECEIVE_AT_LEAST_TWO_DISTINCT_REAL_INDEPENDENT_BLINDED_REVIEWS -> EXACT_PACKAGE_BINDING_PER_REVIEW -> INDEPENDENT_VERIFIER_REPLAY_PER_REVIEW -> EXACT_UNANIMOUS_FRAME_STATE_CONSENSUS -> PREVIOUS_ABSENT_PLUS_FIRST_PRESENT_PTS -> DETERMINISTIC_SAME_ACTION_PAIRING -> EVENT_LOCAL_DELTA_T_INTERVAL -> FULL_PROTOCOL_CLAIM_GATE; PARALLEL_ENGINEERING_GATE: FREEZE_AND_VALIDATE_TOLERANCE_BASED_NUMERICAL_REPRODUCIBILITY_FOR_PINNED_FLOAT_GEOMETRY"
 }

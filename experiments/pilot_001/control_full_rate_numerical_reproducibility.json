@@ -1,0 +1,81 @@
+{
+  "schema": "Fast-CAT/PILOT-001/control-full-rate-numerical-reproducibility/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_tomcats_conflict_2020",
+  "purpose": "freeze a tolerance-based reproducibility boundary for pinned floating landmark/ear-motion geometry after two calibration runs showed stable semantic outcomes but non-bitwise-identical floating output",
+  "calibration_only_runs": [
+    {
+      "scope": "pr_head",
+      "fastcat_sha": "dbf651a21f23568d4a03d33da47fa45f5a94fbde",
+      "fastcat_tree": "73c1afa472d792c1ed4c27d06646eb79e7faf0b3",
+      "workflow_run_id": 31831627159,
+      "compact_artifact_id": 9231360607,
+      "compact_artifact_digest": "sha256:242012f0653aa093b4a6bf9b6270655620dd1ccf9bd176d3b5db7c9d2fd4eaa7"
+    },
+    {
+      "scope": "merge_main",
+      "fastcat_sha": "041f0db46bfc4791a19b0adb1afb56f53a68e8e1",
+      "fastcat_tree": "73c1afa472d792c1ed4c27d06646eb79e7faf0b3",
+      "workflow_run_id": 31833051985,
+      "compact_artifact_id": 9231831129,
+      "compact_artifact_digest": "sha256:a52ed1ac4969306c9b07c44c078bdf3b1eaf57fa25e9caaf5f4a806fe427d998"
+    }
+  ],
+  "calibration_observation": {
+    "same_semantic_status": true,
+    "same_scientific_outcome": true,
+    "same_transition_key_set": true,
+    "same_1218_of_1218_candidate_coverage": true,
+    "same_zero_duplicate_and_zero_incomplete_counts": true,
+    "same_2434_transition_count": true,
+    "same_top10_transition_set_for_each_candidate_cat": true,
+    "byte_identical_float_geometry": false,
+    "observed_max_absolute_difference": {
+      "anchor_rms_iod": 0.000005882051,
+      "interocular_distance_px": 0.00016213393,
+      "left_ear_excess_over_anchor_iod": 0.000014146688,
+      "right_ear_excess_over_anchor_iod": 0.000010674351,
+      "max_ear_excess_over_anchor_iod": 0.000014146688,
+      "left_ear_rms_iod": 0.000015467958,
+      "right_ear_rms_iod": 0.000013333749
+    }
+  },
+  "frozen_validation_requirements": {
+    "fresh_run_must_be_generated_after_this_protocol_commit": true,
+    "calibration_runs_cannot_validate_their_own_thresholds": true,
+    "same_source_id_required": true,
+    "same_backend_repository_commit_and_tree_required": true,
+    "same_decoded_frame_pts_and_pixel_replay_required": true,
+    "same_status_required": "PASS_CANDIDATE_ONLY",
+    "same_scientific_outcome_required": "FULL_RATE_TWO_CANDIDATE_COVERAGE_COMPLETE",
+    "same_selected_frame_count_required": 1218,
+    "same_two_candidate_frame_count_required": 1218,
+    "duplicate_face_risk_frames_required": 0,
+    "incomplete_roi_face_channel_frames_required": 0,
+    "same_transition_count_required": 2434,
+    "transition_identity_key": [
+      "candidate_cat_id",
+      "from_frame_index",
+      "to_frame_index",
+      "from_pts_s",
+      "to_pts_s"
+    ],
+    "transition_key_set_must_match_exactly": true,
+    "top_k_ranking_set": 10,
+    "minimum_top_k_set_overlap_per_candidate_cat": 10,
+    "floating_max_absolute_difference_limits": {
+      "anchor_rms_iod": 0.00002,
+      "interocular_distance_px": 0.0005,
+      "left_ear_excess_over_anchor_iod": 0.00005,
+      "right_ear_excess_over_anchor_iod": 0.00005,
+      "max_ear_excess_over_anchor_iod": 0.00005,
+      "left_ear_rms_iod": 0.00005,
+      "right_ear_rms_iod": 0.00005
+    }
+  },
+  "threshold_provenance": "Thresholds are deliberately wider than the maxima observed in the two calibration runs and are frozen only for validation on a later fresh run. Passing a calibration run is not evidence of validation.",
+  "pass_state_after_fresh_validation": "VALIDATED_WITHIN_FROZEN_NUMERICAL_TOLERANCE",
+  "failure_state": "NUMERICAL_REPRODUCIBILITY_OUTSIDE_FROZEN_TOLERANCE",
+  "byte_identical_float_hashes_required": false,
+  "claim_ceiling": "This gate concerns numerical stability of pinned candidate geometry/triage only. It cannot establish landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, action onset, mimicry, delta-t, feline latency or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+}

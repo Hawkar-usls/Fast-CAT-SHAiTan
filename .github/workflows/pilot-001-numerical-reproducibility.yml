@@ -1,0 +1,70 @@
+name: pilot-001-numerical-reproducibility
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  numerical-reproducibility-protocol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact Fast-CAT revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate frozen numerical reproducibility protocol
+        run: |
+          python -m json.tool experiments/pilot_001/control_full_rate_numerical_reproducibility.json >/dev/null
+          python - <<'PY'
+          import json
+          p=json.load(open('experiments/pilot_001/control_full_rate_numerical_reproducibility.json'))
+          assert p['schema']=='Fast-CAT/PILOT-001/control-full-rate-numerical-reproducibility/v1.0'
+          r=p['frozen_validation_requirements']
+          assert r['fresh_run_must_be_generated_after_this_protocol_commit'] is True
+          assert r['calibration_runs_cannot_validate_their_own_thresholds'] is True
+          assert r['same_transition_count_required']==2434
+          assert r['transition_key_set_must_match_exactly'] is True
+          assert r['top_k_ranking_set']==10
+          assert r['minimum_top_k_set_overlap_per_candidate_cat']==10
+          assert p['byte_identical_float_hashes_required'] is False
+          print('NUMERICAL_REPRODUCIBILITY_PROTOCOL = FROZEN_BEFORE_VALIDATION_RUN')
+          print('CALIBRATION_RUNS_SELF_VALIDATE = FALSE')
+          PY
+
+      - name: Compile reproducibility comparator
+        run: |
+          python -m py_compile \
+            fastcat/numerical_reproducibility.py \
+            scripts/compare_control_full_rate_reproducibility.py \
+            tests/test_numerical_reproducibility.py
+
+      - name: Run fail-closed numerical reproducibility tests
+        run: python -m unittest tests.test_numerical_reproducibility -v
+
+      - name: Assert biological claim ceiling remains closed
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('experiments/pilot_001/control_full_rate_numerical_reproducibility.json'))
+          ceiling=p['claim_ceiling']
+          for claim in ('landmark accuracy','CatFACS EAD103/EAD104','action onset','mimicry','delta-t','INDEPENDENT_FRAME_LEVEL_ESTIMATE'):
+              assert claim in ceiling, claim
+          print('NUMERICAL_GATE_SCOPE = PINNED_CANDIDATE_GEOMETRY_ONLY')
+          print('INDEPENDENT_FRAME_LEVEL_ESTIMATE = NOT_ESTABLISHED')
+          PY
