@@ -1,0 +1,323 @@
+name: pilot-001-control-full-rate
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  conflict-control-full-rate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      PYTHONPATH: .
+      FASTCAT_BACKEND_COMMIT: 9759bcbec55ea93c1f42745abd0baf0f8a4d57dd
+      FASTCAT_SOURCE_ID: commons_tomcats_conflict_2020
+
+    steps:
+      - name: Checkout exact Fast-CAT revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Bind exact Fast-CAT checkout
+        run: |
+          checked_out="$(git rev-parse HEAD)"
+          echo "FASTCAT_CHECKED_OUT_SHA=$checked_out" >> "$GITHUB_ENV"
+          echo "FASTCAT_CHECKED_OUT_TREE=$(git rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test "$checked_out" = "${{ github.event.pull_request.head.sha }}"
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install media and Linux desktop dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            ffmpeg \
+            ninja-build \
+            libgtk-3-dev \
+            libgstreamer1.0-dev \
+            libgstreamer-plugins-base1.0-dev \
+            xvfb
+          python -m pip install --upgrade pip
+          python -m pip install pillow==11.3.0
+
+      - name: Validate protocol and gate semantics
+        run: |
+          python -m json.tool experiments/pilot_001/control_full_rate_gate.json >/dev/null
+          python -m py_compile \
+            fastcat/control_full_rate.py \
+            scripts/normalize_control_full_rate.py \
+            scripts/build_ear_motion_triage.py \
+            tests/test_control_full_rate.py
+          python -m unittest tests.test_control_full_rate tests.test_ear_motion_triage -v
+
+      - name: Set up Flutter stable
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Fetch frozen conflict-control source
+        run: python scripts/fetch_open_video.py commons_tomcats_conflict_2020
+
+      - name: Build exact full-rate decoded-frame ledger
+        run: |
+          python scripts/build_frame_ledger.py \
+            --source-id commons_tomcats_conflict_2020 \
+            --video "data/raw/commons_tomcats_conflict_2020/Tomcats conflict.webm" \
+            --step-frames 1 \
+            --out-dir artifacts/control_full_rate/frame_review
+
+      - name: Independently replay all decoded-frame pixels
+        run: |
+          python scripts/verify_frame_ledger.py \
+            --source-id commons_tomcats_conflict_2020 \
+            --video "data/raw/commons_tomcats_conflict_2020/Tomcats conflict.webm" \
+            --ledger artifacts/control_full_rate/frame_review/frame_ledger.json \
+            --frame-dir artifacts/control_full_rate/frame_review/frames \
+            --out artifacts/control_full_rate/frame_review/verifier.json
+
+      - name: Assert frozen full-rate control frame set
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('artifacts/control_full_rate/frame_review/frame_ledger.json'))
+          assert d['frame_count'] == 1218, d['frame_count']
+          assert d['selection']['selected_count'] == 1218, d['selection']['selected_count']
+          assert d['frame_pts_sha256'] == '8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46'
+          v=json.load(open('artifacts/control_full_rate/frame_review/verifier.json'))
+          assert v['status'] == 'PASS'
+          print('FULL_RATE_CONTROL_DECODED_FRAME_SET = PASS')
+          PY
+
+      - name: Clone exact external 48-landmark backend
+        run: |
+          mkdir -p external
+          git clone --filter=blob:none https://github.com/hugocornellier/cat_detection.git external/cat_detection
+          git -C external/cat_detection fetch --depth=1 origin "$FASTCAT_BACKEND_COMMIT"
+          git -C external/cat_detection checkout --detach "$FASTCAT_BACKEND_COMMIT"
+          test "$(git -C external/cat_detection rev-parse HEAD)" = "$FASTCAT_BACKEND_COMMIT"
+          echo "BACKEND_TREE=$(git -C external/cat_detection rev-parse HEAD^{tree})" >> "$GITHUB_ENV"
+
+      - name: Cache external OpenCV native build
+        uses: actions/cache@v4
+        with:
+          path: external/cat_detection/example/.dart_tool/hooks_runner/shared
+          key: fastcat-cat-detection-linux-${{ env.FASTCAT_BACKEND_COMMIT }}
+
+      - name: Install pinned backend dependencies
+        working-directory: external/cat_detection/example
+        run: flutter pub get
+
+      - name: Inject full-rate control integration probe
+        run: |
+          cp tools/fastcat_control_full_rate_probe_test.dart \
+            external/cat_detection/example/integration_test/fastcat_control_full_rate_probe_test.dart
+
+      - name: Run pinned full-rate dual-ROI control probe
+        env:
+          FASTCAT_INPUT_DIR: ${{ github.workspace }}/artifacts/control_full_rate/frame_review/frames
+          FASTCAT_OUT: ${{ github.workspace }}/artifacts/control_full_rate/raw_control_full_rate_probe.json
+        working-directory: external/cat_detection/example
+        run: |
+          set +e
+          xvfb-run flutter test integration_test/fastcat_control_full_rate_probe_test.dart -d linux --timeout 7200s \
+            2>&1 | tee "$GITHUB_WORKSPACE/artifacts/control_full_rate/flutter_probe.log"
+          flutter_status=${PIPESTATUS[0]}
+          set -e
+          test -s "$GITHUB_WORKSPACE/artifacts/control_full_rate/raw_control_full_rate_probe.json"
+          if grep -q "Some tests failed" "$GITHUB_WORKSPACE/artifacts/control_full_rate/flutter_probe.log"; then
+            exit 1
+          fi
+          if ! grep -qE "tests? passed|All tests passed" "$GITHUB_WORKSPACE/artifacts/control_full_rate/flutter_probe.log"; then
+            echo "No Flutter success summary; original exit=$flutter_status"
+            exit 1
+          fi
+          echo "Full-rate control probe accepted from test summary; original exit=$flutter_status"
+
+      - name: Normalize all control candidate frames
+        run: |
+          python scripts/normalize_control_full_rate.py \
+            --raw-probe artifacts/control_full_rate/raw_control_full_rate_probe.json \
+            --frame-ledger artifacts/control_full_rate/frame_review/frame_ledger.json \
+            --frame-dir artifacts/control_full_rate/frame_review/frames \
+            --out-dir artifacts/control_full_rate/candidate
+
+      - name: Admit or block adjacent-frame ear-motion triage
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib, subprocess
+          candidate_path=pathlib.Path('artifacts/control_full_rate/candidate/candidate_normalization.json')
+          candidate=json.loads(candidate_path.read_text())
+          out=pathlib.Path('artifacts/control_full_rate/candidate/ear_motion_triage.json')
+          if candidate['adjacent_full_rate_ear_triage_admitted']:
+              subprocess.run([
+                  'python','scripts/build_ear_motion_triage.py',
+                  '--candidate-normalization',str(candidate_path),
+                  '--out',str(out),
+              ],check=True)
+              triage=json.loads(out.read_text())
+              assert triage['transition_count'] == 2434, triage['transition_count']
+              assert triage['admission']['EAD103'] == 'NOT_ESTABLISHED'
+              assert triage['admission']['EAD104'] == 'NOT_ESTABLISHED'
+              print('CONTROL_FULL_RATE_EAR_TRIAGE = ADMITTED_TRIAGE_ONLY')
+          else:
+              blocked={
+                  'schema':'Fast-CAT/PILOT-001/control-full-rate-ear-triage-blocked/v1.0',
+                  'status':'BLOCKED_BY_INCOMPLETE_FULL_RATE_CANDIDATE_COVERAGE',
+                  'candidate_normalization_sha256':hashlib.sha256(candidate_path.read_bytes()).hexdigest(),
+                  'scientific_outcome':candidate['scientific_outcome'],
+                  'coverage_fraction':candidate['two_candidate_coverage_fraction'],
+                  'frames_with_duplicate_face_risk':candidate['frames_with_duplicate_face_risk'],
+                  'frames_with_incomplete_roi_face_channels':candidate['frames_with_incomplete_roi_face_channels'],
+                  'EAD103':'NOT_ESTABLISHED',
+                  'EAD104':'NOT_ESTABLISHED',
+                  'delta_t':'NOT_ESTABLISHED',
+                  'claim_ceiling':'Ear-motion triage is blocked rather than bridged across any full-rate candidate-coverage gap.'
+              }
+              out.write_text(json.dumps(blocked,indent=2,sort_keys=True)+'\n')
+              print('CONTROL_FULL_RATE_EAR_TRIAGE = BLOCKED_VALID_NEGATIVE')
+          PY
+
+      - name: Assert control claim ceiling
+        run: |
+          python - <<'PY'
+          import json
+          c=json.load(open('artifacts/control_full_rate/candidate/candidate_normalization.json'))
+          assert c['status'] in {'PASS_CANDIDATE_ONLY','VALID_NEGATIVE_INCOMPLETE_CANDIDATE_COVERAGE'}
+          assert c['admission']['landmark_accuracy'] == 'NOT_ESTABLISHED'
+          assert c['admission']['facial_action_onset'] == 'NOT_ESTABLISHED'
+          assert c['admission']['delta_t'] == 'NOT_ESTABLISHED'
+          assert c['admission']['independent_frame_level_estimate'] == 'NOT_ESTABLISHED'
+          print('CONTROL_FULL_RATE_PIPELINE_INTEGRITY = PASS')
+          print('CONTROL_FULL_RATE_SCIENTIFIC_OUTCOME =', c['scientific_outcome'])
+          print('CONTROL_FULL_RATE_COVERAGE =', c['two_candidate_coverage_fraction'])
+          print('INDEPENDENT_FRAME_LEVEL_ESTIMATE = NOT_ESTABLISHED')
+          PY
+
+      - name: Freeze exact backend and full-rate result receipt
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          root=pathlib.Path('.').resolve()
+          ext=root/'external'/'cat_detection'
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,'rb') as f:
+                  for block in iter(lambda:f.read(1024*1024),b''):
+                      h.update(block)
+              return h.hexdigest()
+          candidate=json.load(open(root/'artifacts/control_full_rate/candidate/candidate_normalization.json'))
+          receipt={
+              'schema':'Fast-CAT/PILOT-001/control-full-rate-backend-receipt/v1.0',
+              'fastcat_checked_out_sha':os.environ['FASTCAT_CHECKED_OUT_SHA'],
+              'fastcat_checked_out_tree':os.environ['FASTCAT_CHECKED_OUT_TREE'],
+              'backend_repository':'hugocornellier/cat_detection',
+              'backend_commit':os.environ['FASTCAT_BACKEND_COMMIT'],
+              'backend_tree':os.environ['BACKEND_TREE'],
+              'license_file_sha256':sha(ext/'LICENSE'),
+              'pubspec_sha256':sha(ext/'pubspec.yaml'),
+              'model_assets':{
+                  'cat_face_localizer.tflite':sha(ext/'assets/models/cat_face_localizer.tflite'),
+                  'cat_face_landmarks_full.tflite':sha(ext/'assets/models/cat_face_landmarks_full.tflite')
+              },
+              'full_rate_policy_sha256':sha(root/'experiments/pilot_001/control_full_rate_gate.json'),
+              'full_rate_probe_test_sha256':sha(root/'tools/fastcat_control_full_rate_probe_test.dart'),
+              'normalizer_code_sha256':sha(root/'scripts/normalize_control_full_rate.py'),
+              'ear_motion_triage_code_sha256':sha(root/'scripts/build_ear_motion_triage.py'),
+              'frame_ledger_sha256':sha(root/'artifacts/control_full_rate/frame_review/frame_ledger.json'),
+              'frame_verifier_sha256':sha(root/'artifacts/control_full_rate/frame_review/verifier.json'),
+              'raw_probe_sha256':sha(root/'artifacts/control_full_rate/raw_control_full_rate_probe.json'),
+              'candidate_normalization_sha256':sha(root/'artifacts/control_full_rate/candidate/candidate_normalization.json'),
+              'ear_motion_triage_or_blocked_receipt_sha256':sha(root/'artifacts/control_full_rate/candidate/ear_motion_triage.json'),
+              'scientific_outcome':candidate['scientific_outcome'],
+              'coverage_fraction':candidate['two_candidate_coverage_fraction'],
+              'adjacent_full_rate_ear_triage_admitted':candidate['adjacent_full_rate_ear_triage_admitted'],
+              'flutter_version_first_line':subprocess.check_output(['flutter','--version'],text=True).splitlines()[0],
+              'claim_ceiling':'Full-rate non-affiliative control candidate-geometry receipt only. Landmark accuracy, independent identity, EAD103/EAD104, action onset, mimicry, delta-t, feline latency and INDEPENDENT_FRAME_LEVEL_ESTIMATE remain not established.'
+          }
+          out=root/'artifacts/control_full_rate/backend_receipt.json'
+          out.write_text(json.dumps(receipt,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(json.dumps(receipt,indent=2,sort_keys=True))
+          PY
+
+      - name: Build compact scientific summary
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('artifacts/control_full_rate')
+          c=json.loads((root/'candidate/candidate_normalization.json').read_text())
+          t=json.loads((root/'candidate/ear_motion_triage.json').read_text())
+          r=json.loads((root/'backend_receipt.json').read_text())
+          summary={
+              'schema':'Fast-CAT/PILOT-001/control-full-rate-summary/v1.0',
+              'source_id':'commons_tomcats_conflict_2020',
+              'status':c['status'],
+              'scientific_outcome':c['scientific_outcome'],
+              'selected_frames_expected':c['selected_frames_expected'],
+              'selected_frames_processed':c['selected_frames_processed'],
+              'valid_channel_frame_counts':c['valid_channel_frame_counts'],
+              'frames_with_two_spatially_distinct_roi_candidates':c['frames_with_two_spatially_distinct_roi_candidates'],
+              'frames_with_duplicate_face_risk':c['frames_with_duplicate_face_risk'],
+              'frames_with_incomplete_roi_face_channels':c['frames_with_incomplete_roi_face_channels'],
+              'two_candidate_coverage_fraction':c['two_candidate_coverage_fraction'],
+              'adjacent_full_rate_ear_triage_admitted':c['adjacent_full_rate_ear_triage_admitted'],
+              'ear_motion_receipt_schema':t.get('schema'),
+              'ear_motion_receipt_status':t.get('status'),
+              'ear_motion_transition_count':t.get('transition_count'),
+              'structural_landmark_rows_sha256':c['structural_landmark_rows_sha256'],
+              'region_motion_rows_sha256':c['region_motion_rows_sha256'],
+              'candidate_normalization_sha256':r['candidate_normalization_sha256'],
+              'ear_motion_triage_or_blocked_receipt_sha256':r['ear_motion_triage_or_blocked_receipt_sha256'],
+              'frame_ledger_sha256':r['frame_ledger_sha256'],
+              'frame_verifier_sha256':r['frame_verifier_sha256'],
+              'raw_probe_sha256':r['raw_probe_sha256'],
+              'fastcat_checked_out_sha':r['fastcat_checked_out_sha'],
+              'fastcat_checked_out_tree':r['fastcat_checked_out_tree'],
+              'backend_repository':r['backend_repository'],
+              'backend_commit':r['backend_commit'],
+              'backend_tree':r['backend_tree'],
+              'landmark_accuracy':'NOT_ESTABLISHED',
+              'independent_subject_identity':'NOT_ESTABLISHED',
+              'EAD103':'NOT_ESTABLISHED',
+              'EAD104':'NOT_ESTABLISHED',
+              'facial_action_onset':'NOT_ESTABLISHED',
+              'mimicry':'NOT_ESTABLISHED',
+              'delta_t':'NOT_ESTABLISHED',
+              'independent_frame_level_estimate':'NOT_ESTABLISHED',
+              'claim_ceiling':r['claim_ceiling'],
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload compact full-rate control receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-conflict-control-full-rate-summary
+          path: |
+            artifacts/control_full_rate/summary.json
+            artifacts/control_full_rate/backend_receipt.json
+            artifacts/control_full_rate/candidate/ear_motion_triage.json
+            artifacts/control_full_rate/frame_review/verifier.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload full-rate conflict-control pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-conflict-control-full-rate
+          path: artifacts/control_full_rate
+          if-no-files-found: error
+          retention-days: 30

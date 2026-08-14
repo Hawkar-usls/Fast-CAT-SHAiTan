@@ -1,0 +1,76 @@
+{
+  "schema": "Fast-CAT/PILOT-001/control-full-rate-gate/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_tomcats_conflict_2020",
+  "role": "non_affiliative_control",
+  "purpose": "promote the previously sampled conflict-control landmark feasibility check to exact full-rate decoded-frame candidate-geometry coverage and, only if coverage is complete, deterministic adjacent-frame ear-motion triage",
+  "preregistered_from": "experiments/pilot_001/control_landmark_preflight.json",
+  "timing": {
+    "authority": "decoded frame PTS",
+    "expected_decoded_frame_count": 1218,
+    "sampling": "every decoded frame; step_frames=1",
+    "expected_selected_frame_count": 1218,
+    "expected_frame_pts_sha256": "8b4c3d6ca63485cfbec384fba1e3490f198474f1d8bdac218c98f053305cae46",
+    "nominal_fps_is_timing_authority": false
+  },
+  "backend": {
+    "repository": "hugocornellier/cat_detection",
+    "commit": "9759bcbec55ea93c1f42745abd0baf0f8a4d57dd",
+    "mode": "CatDetectionMode.faceOnly on two preregistered fixed spatial ROIs",
+    "expected_landmark_count": 48,
+    "landmark_confidence_available": false
+  },
+  "fixed_rois_normalized_xyxy": {
+    "cat_C_brown_left": [0.25, 0.10, 0.54, 0.55],
+    "cat_D_gray_right": [0.49, 0.08, 0.82, 0.55]
+  },
+  "roi_policy_frozen_before_full_rate_probe": true,
+  "duplicate_face_guard": {
+    "metric": "distance between returned face-box centers divided by full-frame diagonal",
+    "minimum_fraction": 0.08,
+    "below_threshold_state": "REVIEW_DUPLICATE_FACE_RISK"
+  },
+  "frame_classification": {
+    "PASS_DISTINCT_ROI_CANDIDATES": "both ROI channels return exactly one structurally valid 48-point face and the two returned face centers pass the preregistered spatial-distinctness guard",
+    "REVIEW_DUPLICATE_FACE_RISK": "both ROI channels return structurally valid faces but spatial distinctness is below the preregistered guard",
+    "INCOMPLETE_ROI_FACE_CHANNELS": "one or both ROI channels fail to return exactly one structurally valid 48-point face"
+  },
+  "gate_semantics": {
+    "pipeline_or_lineage_error": "FAIL",
+    "all_1218_frames_distinct_two_candidate_coverage": "PASS_CANDIDATE_ONLY",
+    "detector_or_duplicate_guard_miss_with_integrity_intact": "VALID_NEGATIVE_INCOMPLETE_CANDIDATE_COVERAGE",
+    "coverage_miss_is_not_silently_imputed": true,
+    "coverage_miss_is_not_converted_to_pipeline_failure": true
+  },
+  "adjacent_ear_motion_triage": {
+    "admission_requires_complete_1218_of_1218_two_candidate_coverage": true,
+    "algorithm": "existing face-aligned non-ear similarity-removal triage in scripts/build_ear_motion_triage.py",
+    "expected_transition_count_if_admitted": 2434,
+    "derivation": "(1218-1) adjacent decoded-frame transitions times two candidate cats",
+    "rank_is_action_probability": false,
+    "no_threshold_creates_EAD103_or_EAD104": true
+  },
+  "artifact_requirements": [
+    "full-rate frame ledger",
+    "independent pixel verifier",
+    "raw pinned-backend dual-ROI probe",
+    "full-rate candidate normalization",
+    "all-frame overlays/contact sheets",
+    "ear-motion triage or explicit blocked receipt",
+    "exact Fast-CAT/backend/model/policy/result receipt"
+  ],
+  "admission_boundary": {
+    "candidate_roi_coverage": "may_be_established_full_rate",
+    "candidate_48_landmark_structure": "may_be_established_full_rate",
+    "face_aligned_ear_motion": "triage_only_if_complete_coverage",
+    "landmark_accuracy": "not_established",
+    "independent_subject_identity": "not_established",
+    "EAD103": "not_established",
+    "EAD104": "not_established",
+    "facial_action_onset": "not_established",
+    "mimicry": "not_established",
+    "delta_t": "not_established",
+    "independent_frame_level_estimate": "not_established"
+  },
+  "claim_ceiling": "The full-rate conflict-control gate may establish exact decoded-frame candidate coverage, pinned 48-landmark structure and deterministic ear-motion triage feasibility for the non-affiliative control. It cannot establish landmark accuracy, independent subject identity, CatFACS EAD103/EAD104, action onset, mimicry, delta-t, feline response latency or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+}
