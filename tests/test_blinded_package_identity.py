@@ -2,6 +2,7 @@ import hashlib
 import json
 import tempfile
 import unittest
+import warnings
 import zipfile
 from pathlib import Path
 
@@ -109,6 +110,21 @@ class BlindedPackageIdentityTests(unittest.TestCase):
             self.assertTrue(
                 any(x.startswith("EXTRA_FILES_INSIDE_PACKAGE:") for x in report["failures"])
             )
+
+    def test_duplicate_zip_member_name_fails(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            identity, archive, _, _ = make_fixture(root)
+            bad = root / "duplicate.zip"
+            with zipfile.ZipFile(archive) as zin, zipfile.ZipFile(bad, "w") as zout:
+                for name in zin.namelist():
+                    zout.writestr(name, zin.read(name))
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore", UserWarning)
+                    zout.writestr("package/review_form.csv", zin.read("package/review_form.csv"))
+            report = verify_package_zip(zip_path=bad, identity=identity)
+            self.assertEqual(report["status"], "FAIL")
+            self.assertIn("DUPLICATE_ZIP_MEMBER_NAMES", report["failures"])
 
     def test_unsafe_manifest_path_fails(self):
         with tempfile.TemporaryDirectory() as td:
