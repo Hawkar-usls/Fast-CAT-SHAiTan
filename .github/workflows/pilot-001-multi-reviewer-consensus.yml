@@ -90,14 +90,38 @@ jobs:
           mkdir -p artifacts/multi_reviewer_v1_2
           python - <<'PY'
           import json, pathlib
+          from fastcat.review_consensus import canonical_sha256
           from tests.test_reviewer_collection import admissible_bundle
           root=pathlib.Path('artifacts/multi_reviewer_v1_2')
-          for label,reviewer in (('a','CI_REVIEWER_A'),('b','CI_REVIEWER_B')):
+          protocol=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
+          expected=protocol['expected_blinded_package']
+          for label,reviewer,transport in (
+              ('a','CI_REVIEWER_A','1'*64),
+              ('b','CI_REVIEWER_B','2'*64),
+          ):
               bundle=admissible_bundle(reviewer)
+              a=bundle['attestation']
+              analysis=bundle['analysis']
+              verifier=bundle['verifier']
+              a['blinded_package_content_identity_file_sha256']=expected['content_identity_file_sha256']
+              a['blinded_package_manifest_sha256']=expected['package_manifest_file_sha256']
+              a['blinded_package_files_payload_sha256']=expected['files_payload_sha256']
+              a['blank_review_form_sha256']=expected['blank_review_form_sha256']
+              a['blinded_package_transport_sha256']=transport
+              analysis['frame_manifest_file_sha256']=expected['frame_manifest_file_sha256']
+              analysis['blinded_package_content_identity_file_sha256']=expected['content_identity_file_sha256']
+              analysis['blinded_package_manifest_sha256']=expected['package_manifest_file_sha256']
+              analysis['blinded_package_files_payload_sha256']=expected['files_payload_sha256']
+              analysis['reviewer_attestation_sha256']=canonical_sha256(a)
+              verifier['frame_manifest_file_sha256']=expected['frame_manifest_file_sha256']
+              verifier['blinded_package_content_identity_file_sha256']=expected['content_identity_file_sha256']
+              verifier['blinded_package_manifest_sha256']=expected['package_manifest_file_sha256']
+              verifier['blinded_package_files_payload_sha256']=expected['files_payload_sha256']
               for part in ('analysis','attestation','verifier'):
                   (root/f'{label}_{part}.json').write_text(
                       json.dumps(bundle[part],indent=2,sort_keys=True)+'\n',encoding='utf-8'
                   )
+          print('PRODUCTION_FIXTURE_BOUND_TO_REAL_V1_2_HASHES = PASS')
           PY
 
       - name: Replay production consensus CLI through reviewer collection v1.1
