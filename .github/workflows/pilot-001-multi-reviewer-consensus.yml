@@ -28,12 +28,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate frozen consensus protocol JSON
+      - name: Validate frozen consensus and active collection protocols
         run: |
           python -m json.tool experiments/pilot_001/multi_reviewer_consensus_protocol.json >/dev/null
+          python -m json.tool experiments/pilot_001/reviewer_collection_protocol.json >/dev/null
           python - <<'PY'
           import json
           p=json.load(open('experiments/pilot_001/multi_reviewer_consensus_protocol.json'))
+          c=json.load(open('experiments/pilot_001/reviewer_collection_protocol.json'))
           assert p['schema']=='Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0'
           assert p['required_reviewers']==2
           assert p['distinct_reviewer_ids_required'] is True
@@ -42,34 +44,94 @@ jobs:
           assert p['consensus_rule']['disagreement_is_imputed'] is False
           assert p['consensus_rule']['adjudication_in_v1_0']=='none'
           assert p['current_real_data_status']=='NO_REAL_MULTI_REVIEWER_BUNDLE_RECEIVED'
-          print('MULTI_REVIEWER_CONSENSUS_PROTOCOL = FROZEN')
+          assert c['schema']=='Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.1'
+          assert c['submission_protocol_schema']=='Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2'
+          assert c['per_bundle_admission']['outer_transport_sha256_equality_required'] is False
+          print('MULTI_REVIEWER_CONSENSUS_PROTOCOL = V1_0_FROZEN')
+          print('REVIEWER_COLLECTION_PROTOCOL = V1_1_ACTIVE')
           print('REAL_MULTI_REVIEWER_BIOLOGICAL_EVIDENCE = NONE')
           PY
 
-      - name: Compile consensus implementation
+      - name: Compile consensus and collection implementations
         run: |
           python -m py_compile \
             fastcat/review_consensus.py \
+            fastcat/reviewer_collection.py \
             scripts/build_multi_reviewer_consensus.py \
-            tests/test_review_consensus.py
+            tests/test_review_consensus.py \
+            tests/test_reviewer_collection.py
 
-      - name: Run fail-closed consensus unit tests
-        run: python -m unittest tests.test_review_consensus -v
+      - name: Run fail-closed consensus and collection unit tests
+        run: |
+          python -m unittest \
+            tests.test_review_consensus \
+            tests.test_reviewer_collection \
+            -v
 
-      - name: Assert claim ceiling remains closed
+      - name: Preserve frozen consensus-core semantics
         run: |
           python - <<'PY'
           from tests.test_review_consensus import make_bundle, policy
           from fastcat.review_consensus import build_consensus_report
           r=build_consensus_report(
-              bundles=[make_bundle('CI_REVIEWER_A'), make_bundle('CI_REVIEWER_B')],
+              bundles=[make_bundle('CI_REVIEWER_A'),make_bundle('CI_REVIEWER_B')],
               policy=policy(),
           )
           assert r['status']=='PASS'
           assert r['multi_reviewer_consensus_established_in_review_scope'] is True
           assert r['independent_frame_level_estimate_established'] is False
           assert r['scientific_outcome']=='VALID_UNANIMOUS_CONSENSUS_ZERO_MATCHES'
-          print('SYNTHETIC_TWO_REVIEWER_SOFTWARE_FIXTURE = PASS')
+          print('FROZEN_CONSENSUS_CORE_SYNTHETIC_FIXTURE = PASS')
+          print('DISAGREEMENT_IMPUTATION = FALSE')
+          PY
+
+      - name: Build active v1.2 collection-bound synthetic bundles
+        run: |
+          mkdir -p artifacts/multi_reviewer_v1_2
+          python - <<'PY'
+          import json, pathlib
+          from tests.test_reviewer_collection import admissible_bundle
+          root=pathlib.Path('artifacts/multi_reviewer_v1_2')
+          for label,reviewer in (('a','CI_REVIEWER_A'),('b','CI_REVIEWER_B')):
+              bundle=admissible_bundle(reviewer)
+              for part in ('analysis','attestation','verifier'):
+                  (root/f'{label}_{part}.json').write_text(
+                      json.dumps(bundle[part],indent=2,sort_keys=True)+'\n',encoding='utf-8'
+                  )
+          PY
+
+      - name: Replay production consensus CLI through reviewer collection v1.1
+        run: |
+          python scripts/build_multi_reviewer_consensus.py \
+            --policy experiments/pilot_001/multi_reviewer_consensus_protocol.json \
+            --collection-policy experiments/pilot_001/reviewer_collection_protocol.json \
+            --submission-protocol experiments/pilot_001/independent_review_submission_protocol.json \
+            --analysis artifacts/multi_reviewer_v1_2/a_analysis.json \
+            --attestation artifacts/multi_reviewer_v1_2/a_attestation.json \
+            --verifier artifacts/multi_reviewer_v1_2/a_verifier.json \
+            --analysis artifacts/multi_reviewer_v1_2/b_analysis.json \
+            --attestation artifacts/multi_reviewer_v1_2/b_attestation.json \
+            --verifier artifacts/multi_reviewer_v1_2/b_verifier.json \
+            --collection-out artifacts/multi_reviewer_v1_2/collection.json \
+            --out artifacts/multi_reviewer_v1_2/consensus.json
+
+      - name: Assert production boundary remains claim-limited
+        run: |
+          python - <<'PY'
+          import json
+          c=json.load(open('artifacts/multi_reviewer_v1_2/collection.json'))
+          r=json.load(open('artifacts/multi_reviewer_v1_2/consensus.json'))
+          assert c['schema']=='Fast-CAT/PILOT-001/reviewer-collection/v1.1'
+          assert c['status']=='PASS'
+          assert c['collection_state']=='READY_FOR_CONSENSUS'
+          assert c['package_binding_authority']=='transport_independent_canonical_content_identity'
+          assert c['outer_transport_sha256_equality_required'] is False
+          assert c['human_independence_proven_by_software'] is False
+          assert r['status']=='PASS'
+          assert r['reviewer_collection_state']=='READY_FOR_CONSENSUS'
+          assert r['scientific_outcome']=='VALID_UNANIMOUS_CONSENSUS_ZERO_MATCHES'
+          assert r['independent_frame_level_estimate_established'] is False
+          print('PRODUCTION_COLLECTION_TO_CONSENSUS = PASS')
           print('INDEPENDENT_FRAME_LEVEL_ESTIMATE = NOT_ESTABLISHED')
           print('SYNTHETIC_FIXTURE_IS_BIOLOGICAL_EVIDENCE = FALSE')
           PY
