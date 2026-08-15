@@ -101,6 +101,8 @@ def verify_package_zip(
         }
     with archive:
         names = [name for name in archive.namelist() if not name.endswith("/")]
+        if len(names) != len(set(names)):
+            failures.append("DUPLICATE_ZIP_MEMBER_NAMES")
         roots: list[str] = []
         if "package/package_manifest.json" in names:
             roots.append("package/")
@@ -110,7 +112,7 @@ def verify_package_zip(
             return {
                 "schema": "Fast-CAT/PILOT-001/blinded-review-content-verification/v1.0",
                 "status": "FAIL",
-                "failures": ["PACKAGE_ROOT_AMBIGUOUS_OR_MISSING"],
+                "failures": sorted(set(failures + ["PACKAGE_ROOT_AMBIGUOUS_OR_MISSING"])),
                 "transport_zip_sha256": transport_sha,
                 "independent_frame_level_estimate_established": False,
             }
