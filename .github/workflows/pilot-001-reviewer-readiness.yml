@@ -1,0 +1,129 @@
+name: pilot-001-reviewer-readiness
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  reviewer-readiness-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONPATH: .
+
+    steps:
+      - name: Checkout exact Fast-CAT revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+
+      - name: Bind exact checkout
+        run: |
+          checked_out="$(git rev-parse HEAD)"
+          echo "FASTCAT_CHECKED_OUT_SHA=$checked_out" >> "$GITHUB_ENV"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            test "$checked_out" = "${{ github.event.pull_request.head.sha }}"
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate frozen reviewer collection protocol
+        run: |
+          python -m json.tool experiments/pilot_001/reviewer_collection_protocol.json >/dev/null
+          python - <<'PY'
+          import json
+          p=json.load(open('experiments/pilot_001/reviewer_collection_protocol.json'))
+          assert p['schema']=='Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.0'
+          assert p['required_reviewers']==2
+          assert p['per_bundle_admission']['attestation_semantics_revalidated_at_collection_boundary'] is True
+          assert p['per_bundle_admission']['analysis_attestation_verifier_completed_review_form_sha256_binding_required'] is True
+          assert p['cross_reviewer_admission']['distinct_reviewer_ids_required'] is True
+          assert p['cross_reviewer_admission']['distinct_attestation_hashes_required'] is True
+          assert p['cross_reviewer_admission']['completed_review_form_hashes_may_match'] is True
+          assert p['independence_semantics']['human_independence_proven_by_software'] is False
+          assert p['current_real_data_status']=='NO_REAL_REVIEWER_COLLECTION_RECEIVED'
+          print('REVIEWER_COLLECTION_PROTOCOL = FROZEN')
+          print('REAL_REVIEWER_COLLECTION = NONE')
+          PY
+
+      - name: Compile reviewer collection implementation
+        run: |
+          python -m py_compile \
+            fastcat/reviewer_collection.py \
+            scripts/build_reviewer_collection_receipt.py \
+            scripts/build_multi_reviewer_consensus.py \
+            tests/test_reviewer_collection.py
+
+      - name: Run fail-closed reviewer collection tests
+        run: python -m unittest tests.test_reviewer_collection tests.test_review_consensus -v
+
+      - name: Exercise waiting and ready state machine
+        run: |
+          python - <<'PY'
+          from fastcat.reviewer_collection import build_reviewer_collection_receipt
+          from tests.test_reviewer_collection import (
+              admissible_bundle,
+              collection_policy,
+              consensus_policy,
+              submission_protocol,
+          )
+          def build(bundles):
+              return build_reviewer_collection_receipt(
+                  bundles=bundles,
+                  collection_policy=collection_policy(),
+                  submission_protocol=submission_protocol(),
+                  consensus_policy=consensus_policy(),
+              )
+          zero=build([])
+          one=build([admissible_bundle('CI_REVIEWER_A')])
+          two=build([admissible_bundle('CI_REVIEWER_A'), admissible_bundle('CI_REVIEWER_B')])
+          assert zero['collection_state']=='WAITING_FOR_FIRST_REVIEWER'
+          assert zero['status']=='PASS' and zero['consensus_admission_ready'] is False
+          assert one['collection_state']=='WAITING_FOR_SECOND_REVIEWER'
+          assert one['status']=='PASS' and one['consensus_admission_ready'] is False
+          assert two['collection_state']=='READY_FOR_CONSENSUS'
+          assert two['status']=='PASS' and two['consensus_admission_ready'] is True
+          assert two['human_independence_proven_by_software'] is False
+          assert two['independent_frame_level_estimate_established'] is False
+          print('ZERO_REVIEWER_STATE = WAITING_FOR_FIRST_REVIEWER')
+          print('ONE_REVIEWER_STATE = WAITING_FOR_SECOND_REVIEWER')
+          print('TWO_DISTINCT_ADMISSIBLE_FIXTURES = READY_FOR_CONSENSUS')
+          print('SYNTHETIC_FIXTURES_ARE_BIOLOGICAL_EVIDENCE = FALSE')
+          PY
+
+      - name: Assert forged independence cannot enter consensus-ready state
+        run: |
+          python - <<'PY'
+          from fastcat.review_consensus import canonical_sha256
+          from fastcat.reviewer_collection import build_reviewer_collection_receipt
+          from tests.test_reviewer_collection import (
+              admissible_bundle,
+              collection_policy,
+              consensus_policy,
+              submission_protocol,
+          )
+          a=admissible_bundle('CI_REVIEWER_A')
+          b=admissible_bundle('CI_REVIEWER_B')
+          b['attestation']['independent_of_fastcat_model_evidence_before_label_freeze']=False
+          b['analysis']['reviewer_attestation_sha256']=canonical_sha256(b['attestation'])
+          r=build_reviewer_collection_receipt(
+              bundles=[a,b],
+              collection_policy=collection_policy(),
+              submission_protocol=submission_protocol(),
+              consensus_policy=consensus_policy(),
+          )
+          assert r['status']=='FAIL'
+          assert r['collection_state']=='INVALID_COLLECTION'
+          assert r['consensus_admission_ready'] is False
+          assert 'REVIEW_1:ATTESTATION_INDEPENDENCE_NOT_CONFIRMED' in r['failures']
+          print('FORGED_PASS_ANALYSIS_WITH_FALSE_INDEPENDENCE = REJECTED')
+          PY

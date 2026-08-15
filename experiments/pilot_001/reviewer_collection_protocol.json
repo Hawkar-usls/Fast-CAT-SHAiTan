@@ -1,0 +1,73 @@
+{
+  "schema": "Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_hugging_2019",
+  "purpose": "admit zero, one, or multiple externally completed blinded reviewer bundles into a fail-closed collection receipt before the frozen unanimous multi-reviewer consensus gate",
+  "required_reviewers": 2,
+  "submission_protocol_file": "experiments/pilot_001/independent_review_submission_protocol.json",
+  "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+  "consensus_policy_file": "experiments/pilot_001/multi_reviewer_consensus_protocol.json",
+  "consensus_policy_schema": "Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0",
+  "collection_states": {
+    "WAITING_FOR_FIRST_REVIEWER": "no admissible reviewer bundle has been received; this is an expected external-dependency state, not a software failure",
+    "WAITING_FOR_SECOND_REVIEWER": "exactly one admissible reviewer bundle has been received; consensus remains blocked",
+    "READY_FOR_CONSENSUS": "at least two admissible distinct reviewer bundles are bound to the frozen package and the consensus core preflight passes",
+    "INVALID_COLLECTION": "one or more submitted artifacts fail integrity, attestation, package-binding, verifier-binding, reviewer-distinctness, or consensus-core preflight checks"
+  },
+  "per_bundle_admission": {
+    "analysis_status_pass_required": true,
+    "exact_frozen_package_binding_required": true,
+    "submission_integrity_required": true,
+    "verifier_status_pass_required": true,
+    "independent_verifier_replay_required": true,
+    "analysis_and_verifier_must_keep_independent_frame_level_estimate_false": true,
+    "attestation_semantics_revalidated_at_collection_boundary": true,
+    "reviewer_declared_independence_must_be_true": true,
+    "reviewer_declared_model_ranking_exposure_must_be_false": true,
+    "reviewer_declared_labels_frozen_before_model_reveal_must_be_true": true,
+    "catfacs_competence_basis_must_be_nonempty": true,
+    "review_completed_utc_must_be_nonempty": true,
+    "analysis_attestation_canonical_sha256_binding_required": true,
+    "analysis_attestation_verifier_completed_review_form_sha256_binding_required": true,
+    "analysis_and_verifier_frame_manifest_must_equal_frozen_package": true,
+    "attestation_package_digest_must_equal_frozen_package": true,
+    "attestation_blank_form_sha256_must_equal_frozen_package": true,
+    "single_bundle_replayed_through_consensus_validation_core": true
+  },
+  "cross_reviewer_admission": {
+    "distinct_reviewer_ids_required": true,
+    "distinct_attestation_hashes_required": true,
+    "completed_review_form_hashes_may_match": true,
+    "reason_completed_review_form_hashes_may_match": "two genuinely independent reviewers can legitimately produce byte-identical completed CSV files when every categorical label and review_notes field are identical; forcing inequality would create a false independence criterion",
+    "full_consensus_core_preflight_required_before_ready_state": true,
+    "disagreement_is_not_an_admission_failure": true,
+    "reason_disagreement_is_not_an_admission_failure": "valid independent reviewers are allowed to disagree; the downstream consensus gate preserves non-unanimous cells as DISAGREEMENT rather than rejecting or imputing them"
+  },
+  "independence_semantics": {
+    "software_can_establish": [
+      "exact blinded-package artifact lineage",
+      "exact frame-manifest lineage",
+      "completed review form hash binding across attestation, analysis and verifier",
+      "canonical attestation identity",
+      "distinct reviewer_id strings",
+      "distinct attestation hashes",
+      "reviewer-declared no pre-freeze model-evidence exposure",
+      "reviewer-declared label freeze before model reveal",
+      "independent verifier replay success"
+    ],
+    "software_cannot_establish": [
+      "physical personhood of a reviewer",
+      "institutional independence beyond supplied identifiers",
+      "truthfulness of the competence declaration",
+      "absence of off-channel collusion",
+      "absence of undisclosed prior exposure outside the submitted attestation"
+    ],
+    "human_independence_proven_by_software": false
+  },
+  "waiting_state_exit_semantics": "WAITING_FOR_FIRST_REVIEWER and WAITING_FOR_SECOND_REVIEWER are successful machine states that preserve an unmet external dependency; they must not be converted into INVALID_COLLECTION or a fabricated biological result",
+  "invalid_state_semantics": "INVALID_COLLECTION is fail-closed and must block consensus until the invalid artifacts are replaced or corrected without mutating any already frozen valid submission",
+  "software_fixture_policy": "CI may synthesize reviewer bundles only to test collection-state transitions and fail-closed checks. Synthetic bundles are never real reviewer submissions or biological evidence.",
+  "current_real_data_status": "NO_REAL_REVIEWER_COLLECTION_RECEIVED",
+  "independent_frame_level_estimate_established": false,
+  "claim_ceiling": "This protocol establishes a machine-verifiable pre-consensus collection boundary only. READY_FOR_CONSENSUS means the supplied artifacts are structurally and cryptographically admissible for the frozen consensus implementation; it does not prove human independence, CatFACS competence, EAD onset truth, mimicry, feline latency, population-level behavior, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+}
