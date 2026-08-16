@@ -1,0 +1,60 @@
+{
+  "schema": "fastcat.causal_world_bridge.result.v1",
+  "case_id": "OSIRIS-GUARDIAN-FIRST-DIVERGENCE-001",
+  "common_prefix": [
+    "OSIRIAN_RESTORATION_CONTEXT"
+  ],
+  "first_divergence_index": 1,
+  "first_divergence_after": "OSIRIAN_RESTORATION_CONTEXT",
+  "next_event_by_world": {
+    "EGYPTIAN_BD17_GUARDED_CHEST": "ANUBIS_GUARDS_CHEST_CONTAINING_OSIRIS_ENTRAILS",
+    "LATE_PLUTARCH_RIVER_FISH": "PHALLUS_REPORTED_THROWN_IN_RIVER",
+    "EGYPTIAN_KHOIAK_RITUAL_FINDING": "PHALLUS_RITUALLY_FOUND_IN_VARIANT_SCHEDULE",
+    "ANUBIS_KEEPER_ALL_ALONG": "PHALLUS_REMAINS_IN_GUARDED_OR_NESTED_CONTAINER"
+  },
+  "pairwise_common_prefix": [
+    {
+      "left": "EGYPTIAN_BD17_GUARDED_CHEST",
+      "right": "LATE_PLUTARCH_RIVER_FISH",
+      "common_prefix_event_count": 1
+    },
+    {
+      "left": "EGYPTIAN_BD17_GUARDED_CHEST",
+      "right": "EGYPTIAN_KHOIAK_RITUAL_FINDING",
+      "common_prefix_event_count": 1
+    },
+    {
+      "left": "EGYPTIAN_BD17_GUARDED_CHEST",
+      "right": "ANUBIS_KEEPER_ALL_ALONG",
+      "common_prefix_event_count": 1
+    },
+    {
+      "left": "LATE_PLUTARCH_RIVER_FISH",
+      "right": "EGYPTIAN_KHOIAK_RITUAL_FINDING",
+      "common_prefix_event_count": 1
+    },
+    {
+      "left": "LATE_PLUTARCH_RIVER_FISH",
+      "right": "ANUBIS_KEEPER_ALL_ALONG",
+      "common_prefix_event_count": 1
+    },
+    {
+      "left": "EGYPTIAN_KHOIAK_RITUAL_FINDING",
+      "right": "ANUBIS_KEEPER_ALL_ALONG",
+      "common_prefix_event_count": 1
+    }
+  ],
+  "source_worlds": [
+    "EGYPTIAN_BD17_GUARDED_CHEST",
+    "EGYPTIAN_KHOIAK_RITUAL_FINDING",
+    "LATE_PLUTARCH_RIVER_FISH"
+  ],
+  "hypothesis_worlds": [
+    "ANUBIS_KEEPER_ALL_ALONG"
+  ],
+  "status": "DISAGREEMENT_PRESERVED",
+  "winner": null,
+  "historical_claim": "NOT_MADE",
+  "cat_rule": "The CAT crosses source-worlds, identifies the first divergence, preserves disagreement, and never invents a bridge or a winner.",
+  "scientific_boundary": "Cross-domain methodology demonstration only. This module does not modify Fast-CAT feline biological claims and does not treat lore as empirical evidence."
+}
