@@ -1,0 +1,71 @@
+{
+  "schema": "fastcat.causal_world_bridge.v1",
+  "case_id": "OSIRIS-GUARDIAN-FIRST-DIVERGENCE-001",
+  "purpose": "Cross-domain methodology fixture: use Fast-CAT's disagreement-preservation and first-onset logic to locate the earliest divergence between source traditions relevant to the Osiris relic hunt.",
+  "cross_domain_demo": true,
+  "does_not_modify_feline_claims": true,
+  "metaphor": "The cat may walk between source-worlds, but it may not fabricate a bridge between them.",
+  "normalization_rule": "Only events stated by, or conservatively abstracted from, the named source root are admitted. Hypothesis worlds are segregated and cannot vote as evidence.",
+  "worlds": [
+    {
+      "world_id": "EGYPTIAN_BD17_GUARDED_CHEST",
+      "status": "SOURCE_ROOT",
+      "source_class": "Egyptian_funerary_text",
+      "source_ref": "https://www.ucl.ac.uk/museums-static/digitalegypt/literature/religious/bd17.html",
+      "events": [
+        "OSIRIAN_RESTORATION_CONTEXT",
+        "ANUBIS_GUARDS_CHEST_CONTAINING_OSIRIS_ENTRAILS",
+        "PHALLUS_LOCATION_NOT_STATED"
+      ],
+      "claim_ceiling": "BD17 establishes an Anubis-guarded chest containing Osirian entrails; it does not explicitly say that the phallus was in that chest."
+    },
+    {
+      "world_id": "LATE_PLUTARCH_RIVER_FISH",
+      "status": "SOURCE_ROOT",
+      "source_class": "late_classical_witness",
+      "source_ref": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/Isis_and_Osiris%2A/A.html",
+      "events": [
+        "OSIRIAN_RESTORATION_CONTEXT",
+        "PHALLUS_REPORTED_THROWN_IN_RIVER",
+        "FISH_CONSUMPTION_REPORTED",
+        "ISIS_REPLICA_REPORTED"
+      ],
+      "claim_ceiling": "Late literary witness; preserved as a branch, not promoted to universal pharaonic doctrine."
+    },
+    {
+      "world_id": "EGYPTIAN_KHOIAK_RITUAL_FINDING",
+      "status": "SOURCE_ROOT",
+      "source_class": "Egyptian_ritual_tradition_synthesis",
+      "source_ref": "https://www.ucl.ac.uk/museums-static/digitalegypt/ideology/khoiak.html",
+      "events": [
+        "OSIRIAN_RESTORATION_CONTEXT",
+        "PHALLUS_RITUALLY_FOUND_IN_VARIANT_SCHEDULE",
+        "OSIRIAN_REASSEMBLY_AND_RENEWAL"
+      ],
+      "claim_ceiling": "Ritual finding is evidence for a recurrent cult operation, not proof of recovery of one biological object."
+    },
+    {
+      "world_id": "ANUBIS_KEEPER_ALL_ALONG",
+      "status": "HYPOTHESIS_ONLY",
+      "source_class": "JANUS_testable_hypothesis",
+      "source_ref": "janus://osiris/anubis-keeper-hypothesis",
+      "events": [
+        "OSIRIAN_RESTORATION_CONTEXT",
+        "PHALLUS_REMAINS_IN_GUARDED_OR_NESTED_CONTAINER",
+        "LATER_TRADITIONS_MISREAD_OR_RITUALIZE_THE_LOSS"
+      ],
+      "claim_ceiling": "Admissible search hypothesis only. It receives zero evidentiary vote until a source or object independently links the phallus to Anubis's guarded container."
+    }
+  ],
+  "expected_first_divergence": {
+    "common_prefix": ["OSIRIAN_RESTORATION_CONTEXT"],
+    "index": 1,
+    "interpretation": "All source-worlds meet only at the abstract restoration context; immediately afterward they diverge into guarded-container, river/fish, ritual-finding, and keeper hypotheses. This is the correct point for targeted evidence acquisition."
+  },
+  "next_questions": [
+    "Does any Egyptian source explicitly include the phallus among the contents guarded by Anubis?",
+    "Do any Anubis-associated chests, shrines, hollow statuettes or reliquaries have radiographic/CT evidence of nested contents?",
+    "Can an object chain connect Anubis guardianship to an Osirian body-part label without relying on the Plutarch branch?",
+    "Where do the guarded-chest and ritual-finding branches first converge again, if at all?"
+  ]
+}
