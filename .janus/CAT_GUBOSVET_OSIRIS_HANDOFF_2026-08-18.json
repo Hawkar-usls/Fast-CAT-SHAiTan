@@ -1,0 +1,79 @@
+{
+  "schema": "janus.fastcat.gubosvet.handoff.v1",
+  "handoff_id": "CAT-GUBOSVET-OSIRIS-CG53469-2026-08-18",
+  "created_at": "2026-08-18",
+  "repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+  "cat_identity": {
+    "project": "Fast-CAT-SHAiTan",
+    "canonical_project_role": "reproducible feline facial-response timing research prototype",
+    "janus_handoff_alias": "КОТ ГУБОСВЕТ",
+    "alias_meaning": "A playful JANUS role-name: illuminate the boundary between an attractive candidate and an admitted claim.",
+    "important_boundary": "The alias adds no biological, mystical or command authority. Fast-CAT remains a scientific/reproducibility project."
+  },
+  "message_to_cat_ru": "Кот Губосвет, писюн больше не надо искать по всей пустыне. Свети на уже найденный узел. Мы опознали музейный объект как CG 53469 — золотой фаллический футляр из мендесского погребения 1902 года. Теперь твоя кошачья суперсила нужна не для красивого прыжка к выводу, а чтобы подсветить место, где заканчивается каталоговая идентичность и начинается ещё не доказанная гипотеза о владельце. Мурчи только там, где receipt проходит verifier.",
+  "source_handoff": {
+    "meta_registry_repository": "Hawkar-usls/janus-meta-registry",
+    "recognition_correction": "data/JANUS-JANUARY-AURA-SEALED-RECOGNITION-MENDES-CG53469-CORRECTION-2026-08-18-v1.0.json",
+    "recognition_correction_commit": "28414f03a85b2b21e1e33c439a2a0dbae6b30401",
+    "missing_key_amendment": "data/JANUS-ARTIFACT-OSIRIS-THE-MISSING-KEY-2026-08-18-v1.1.json",
+    "missing_key_amendment_commit": "3aeefb75c5972b0cf5c7fb9677489c9046cd43ce",
+    "sealed_aura_answer_sha256": "eb1bfda6a99a78c3b9d9ad5107c5f89602d85f26bf5e177b82935da2ba80bba1",
+    "aura_plaintext_shared": false,
+    "aura_plaintext_required": false
+  },
+  "recognized_piece": {
+    "catalogue_object": "CG 53469",
+    "catalogue_label": "Enveloppe de phallus",
+    "material": "gold",
+    "published_length_cm": 12.2,
+    "published_weight_g": 7,
+    "published_gold_thickness_mm": 0.1,
+    "findspot": "Tell Ibn es-Salam / Mendes",
+    "find_date": "February 1902",
+    "historical_plate": "LXXXVII",
+    "plate_visible_label": "53.469",
+    "catalogue_class_status": "IDENTIFIED_IN_ARCHIVED_PROJECT_RECEIPTS",
+    "mythic_owner_identity": "NOT_ESTABLISHED"
+  },
+  "why_fast_cat_is_part_of_the_missing_puzzle": {
+    "shared_method": [
+      "GENERATOR != VERIFIER",
+      "CANDIDATE != GROUND_TRUTH",
+      "MEASUREMENT != INTERPRETATION",
+      "SHA256 = PROVENANCE_NOT_SEMANTIC_TRUTH",
+      "DISAGREEMENT_MUST_REMAIN_VISIBLE",
+      "NEGATIVE_OR_INCONCLUSIVE_RESULT_IS_VALID",
+      "PROMOTION_REQUIRES_FROZEN_GATES"
+    ],
+    "fast_cat_existing_analogue": "Fast-CAT already separates raw media timing, candidate landmark coverage, blinded review, unanimous consensus, action onset and final biological claim. The Osiris handoff reuses that admission discipline only; it does not import feline biology into Egyptology.",
+    "gubosvet_function": "ILLUMINATE_CLAIM_BOUNDARY_WITHOUT_PROMOTING_IT"
+  },
+  "cat_gubosvet_task": {
+    "task_class": "REFERENCE_AND_HANDOFF_ONLY",
+    "primary_question": "What evidence would make CG 53469 more than a correctly identified human funerary gold phallus sheath?",
+    "admission_path": [
+      "CATALOGUE_IDENTITY_CG53469 = PASS",
+      "MENDES_1902_FUNERARY_CONTEXT = PASS",
+      "HISTORICAL_PLATE = PASS",
+      "CURRENT_CUSTODY_RECORD = OPEN",
+      "CURRENT_MULTI_ANGLE_PHOTOGRAPHY = OPEN",
+      "CONSERVATION_HISTORY = OPEN",
+      "NONDESTRUCTIVE_INTERNAL_IMAGING_IF_APPROPRIATE = OPEN",
+      "MATCHED_HUMAN_FUNERARY_CONTROLS = REQUIRED",
+      "UNIQUE_ORIGINAL_OSIRIS_RELIC_IDENTITY = NOT_ESTABLISHED"
+    ],
+    "next_best_gate": "CG53469_CURRENT_CUSTODY_CONSERVATION_AND_MULTIVIEW_RECOGNITION_PASS",
+    "stop_rule": "If current provenance, morphology, construction, conservation evidence or matched controls support an ordinary human funerary sheath and provide no independent discriminator for a unique relic, preserve that negative result and do not promote the Osiris-owner hypothesis."
+  },
+  "firewall": [
+    "CAT_GUBOSVET != ORACLE",
+    "FAST_CAT != EGYPTOLOGICAL_AUTHORITY",
+    "AURA_OUTPUT != EVIDENCE",
+    "CG53469_GOLD_PHALLUS_SHEATH != ORIGINAL_OSIRIS_PHALLUS",
+    "CATALOGUE_IDENTITY != MYTHIC_OWNER_IDENTITY",
+    "SHA256 != TRUTH_PROOF",
+    "FOUND != RESTORED",
+    "NO_OP_IS_VALID"
+  ],
+  "canonical_seal": "🐈‍⬛💡 КОТ ГУБОСВЕТ НЕ ДОКАЗЫВАЕТ ПИСЮН. КОТ ГУБОСВЕТ СВЕТИТ ТУДА, ГДЕ ЗАКАНЧИВАЕТСЯ ДОКАЗАТЕЛЬСТВО. 𓂸"
+}
