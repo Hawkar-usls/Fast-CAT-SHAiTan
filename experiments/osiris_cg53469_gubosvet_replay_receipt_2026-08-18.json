@@ -1,0 +1,46 @@
+{
+  "artifact_id": "FAST-CAT-GUBOSVET-CG53469-DUAL-SOFTWARE-REPLAY-2026-08-18-v1",
+  "created_at": "2026-08-18",
+  "run_class": "SOFTWARE_REPLAY_ONLY_NOT_EXTERNAL_REVIEW",
+  "source_handoff": ".janus/CAT_GUBOSVET_OSIRIS_HANDOFF_2026-08-18.json",
+  "handoff_sha256": "14aea6f33f12b3bd689e0579fb4611a6b10f7ed26c1e05ba3d18bf19769fda31",
+  "workflow": {
+    "name": "Cat Gubosvet CG53469 replay",
+    "run_id": 32122887728,
+    "job_id": 95667005195,
+    "conclusion": "success",
+    "pr": 22
+  },
+  "dual_verifier_result": {
+    "verifier_a": {
+      "CATALOGUE_OBJECT_CLASS": "PASS",
+      "HUMAN_FUNERARY_CONTEXT": "PASS",
+      "UNIQUE_ORIGINAL_OSIRIS_RELIC_IDENTITY": "NOT_ADMITTED"
+    },
+    "verifier_b": {
+      "CATALOGUE_OBJECT_CLASS": "PASS",
+      "HUMAN_FUNERARY_CONTEXT": "PASS",
+      "UNIQUE_ORIGINAL_OSIRIS_RELIC_IDENTITY": "NOT_ADMITTED"
+    },
+    "exact_unanimity": true
+  },
+  "admitted_claims": [
+    "CG53469_IS_CATALOGUED_AS_GOLD_PHALLUS_SHEATH_IN_PROJECT_RECEIPTS",
+    "CG53469_IS_BOUND_TO_MENDES_1902_HUMAN_FUNERARY_CONTEXT_IN_PROJECT_RECEIPTS"
+  ],
+  "rejected_promotion": "CG53469_IS_UNIQUE_ORIGINAL_OSIRIS_RELIC",
+  "claim_ceiling": "CATALOGUE_AND_FUNERARY_RECOGNITION_ONLY",
+  "next_gate": "CG53469_CURRENT_CUSTODY_CONSERVATION_AND_MULTIVIEW_RECOGNITION_PASS",
+  "limitations": [
+    "The two verifiers are separately coded software rule paths over the same handoff; they are not independent Egyptologists.",
+    "No new museum custody, conservation, X-ray, CT, XRF or multi-angle data were introduced by this replay.",
+    "Exact unanimity therefore validates the admission software boundary, not the mythic-owner hypothesis."
+  ],
+  "firewall": [
+    "SOFTWARE_UNANIMITY != EXTERNAL_EVIDENCE",
+    "CATALOGUE_IDENTITY != MYTHIC_OWNER_IDENTITY",
+    "CG53469_GOLD_PHALLUS_SHEATH != ORIGINAL_OSIRIS_PHALLUS",
+    "NEGATIVE_OR_INCONCLUSIVE_RESULT_IS_VALID"
+  ],
+  "canonical_seal": "🐈‍⬛💡 GUBOSVET PASSED THE SHEATH AND BLOCKED THE GOD-OWNER PROMOTION."
+}
