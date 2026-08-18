@@ -1,0 +1,23 @@
+name: Cat Gubosvet CG53469 replay
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.janus/CAT_GUBOSVET_OSIRIS_HANDOFF_2026-08-18.json'
+      - 'experiments/osiris_cg53469_gubosvet_replay.py'
+      - '.github/workflows/gubosvet-osiris-cg53469-replay.yml'
+  workflow_dispatch:
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile replay
+        run: python -m py_compile experiments/osiris_cg53469_gubosvet_replay.py
+      - name: Dual rule-path exact-unanimity replay
+        run: python experiments/osiris_cg53469_gubosvet_replay.py
