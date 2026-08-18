@@ -7,6 +7,11 @@ on:
       - '.janus/CAT_GUBOSVET_OSIRIS_HANDOFF_2026-08-18.json'
       - 'experiments/osiris_cg53469_gubosvet_replay.py'
       - '.github/workflows/gubosvet-osiris-cg53469-replay.yml'
+  pull_request:
+    paths:
+      - '.janus/CAT_GUBOSVET_OSIRIS_HANDOFF_2026-08-18.json'
+      - 'experiments/osiris_cg53469_gubosvet_replay.py'
+      - '.github/workflows/gubosvet-osiris-cg53469-replay.yml'
   workflow_dispatch:
 
 jobs:
