@@ -154,13 +154,16 @@ def verify_package_zip(
             if sha256_bytes(payload) != str(item.get("sha256", "")):
                 failures.append(f"{code}:SHA256_MISMATCH:{relpath}")
 
-        actual_inside = {
-            name for name in names if name.startswith(prefix)
-        } - {manifest_member}
-        extras = sorted(actual_inside - listed_members)
-        missing = sorted(listed_members - actual_inside)
+        # Canonical identity covers the entire non-directory archive surface,
+        # not only members under the selected package prefix. A transport may
+        # repack compression/container metadata, but it may not smuggle model
+        # evidence or any other file beside the manifest + manifest-listed bytes.
+        expected_members = listed_members | {manifest_member}
+        actual_members = set(names)
+        extras = sorted(actual_members - expected_members)
+        missing = sorted(expected_members - actual_members)
         if extras:
-            failures.append("EXTRA_FILES_INSIDE_PACKAGE:" + ",".join(extras))
+            failures.append("EXTRA_ARCHIVE_MEMBERS:" + ",".join(extras))
         if missing:
             failures.append("LISTED_FILES_MISSING:" + ",".join(missing))
 
