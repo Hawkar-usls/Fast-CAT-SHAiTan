@@ -36,35 +36,66 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate frozen reviewer collection protocol
+      - name: Validate frozen reviewer collection and content identity protocols
         run: |
           python -m json.tool experiments/pilot_001/reviewer_collection_protocol.json >/dev/null
+          python -m json.tool experiments/pilot_001/independent_review_submission_protocol.json >/dev/null
+          python -m json.tool experiments/pilot_001/blinded_review_content_identity.json >/dev/null
           python - <<'PY'
-          import json
-          p=json.load(open('experiments/pilot_001/reviewer_collection_protocol.json'))
-          assert p['schema']=='Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.0'
-          assert p['required_reviewers']==2
-          assert p['per_bundle_admission']['attestation_semantics_revalidated_at_collection_boundary'] is True
-          assert p['per_bundle_admission']['analysis_attestation_verifier_completed_review_form_sha256_binding_required'] is True
-          assert p['cross_reviewer_admission']['distinct_reviewer_ids_required'] is True
-          assert p['cross_reviewer_admission']['distinct_attestation_hashes_required'] is True
-          assert p['cross_reviewer_admission']['completed_review_form_hashes_may_match'] is True
-          assert p['independence_semantics']['human_independence_proven_by_software'] is False
-          assert p['current_real_data_status']=='NO_REAL_REVIEWER_COLLECTION_RECEIVED'
-          print('REVIEWER_COLLECTION_PROTOCOL = FROZEN')
+          import hashlib, json
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,'rb') as f:
+                  for block in iter(lambda:f.read(1024*1024),b''):
+                      h.update(block)
+              return h.hexdigest()
+          c=json.load(open('experiments/pilot_001/reviewer_collection_protocol.json'))
+          s=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
+          i=json.load(open('experiments/pilot_001/blinded_review_content_identity.json'))
+          identity_sha=sha('experiments/pilot_001/blinded_review_content_identity.json')
+          assert identity_sha=='87877d69e5fcfd44433b93106740ef641c320a8037b06aefe281fff9179378fd'
+          assert c['schema']=='Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.1'
+          assert c['required_reviewers']==2
+          assert c['submission_protocol_schema']=='Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2'
+          assert c['per_bundle_admission']['transport_independent_exact_package_content_binding_required'] is True
+          assert c['per_bundle_admission']['outer_transport_sha256_equality_required'] is False
+          assert c['cross_reviewer_admission']['different_outer_transport_hashes_may_both_be_valid'] is True
+          assert c['independence_semantics']['human_independence_proven_by_software'] is False
+          assert c['current_real_data_status']=='NO_REAL_REVIEWER_COLLECTION_RECEIVED'
+          assert s['schema']=='Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2'
+          assert s['expected_blinded_package']['content_identity_file_sha256']==identity_sha
+          assert s['label_admission']['original_workflow_artifact_digest_is_provenance_not_admission_authority'] is True
+          assert i['canonical_package']['payload_file_count']==53
+          assert i['exact_content_rules']['outer_zip_byte_identity_required'] is False
+          print('REVIEWER_COLLECTION_PROTOCOL = V1_1_FROZEN')
+          print('SUBMISSION_PROTOCOL = V1_2_FROZEN')
+          print('PACKAGE_BINDING_AUTHORITY = CANONICAL_CONTENT')
           print('REAL_REVIEWER_COLLECTION = NONE')
           PY
 
-      - name: Compile reviewer collection implementation
+      - name: Compile reviewer readiness implementation
         run: |
           python -m py_compile \
+            fastcat/blinded_package_identity.py \
+            fastcat/review_submission_binding.py \
+            fastcat/bound_review_ingestion.py \
             fastcat/reviewer_collection.py \
+            scripts/verify_blinded_package_content.py \
+            scripts/verify_independent_action_review_v1_2.py \
             scripts/build_reviewer_collection_receipt.py \
             scripts/build_multi_reviewer_consensus.py \
+            tests/test_blinded_package_identity.py \
             tests/test_reviewer_collection.py
 
-      - name: Run fail-closed reviewer collection tests
-        run: python -m unittest tests.test_reviewer_collection tests.test_review_consensus -v
+      - name: Run fail-closed reviewer readiness tests
+        run: |
+          python -m unittest \
+            tests.test_blinded_package_identity \
+            tests.test_review_submission_binding \
+            tests.test_bound_review_ingestion \
+            tests.test_reviewer_collection \
+            tests.test_review_consensus \
+            -v
 
       - name: Exercise waiting and ready state machine
         run: |
@@ -85,13 +116,15 @@ jobs:
               )
           zero=build([])
           one=build([admissible_bundle('CI_REVIEWER_A')])
-          two=build([admissible_bundle('CI_REVIEWER_A'), admissible_bundle('CI_REVIEWER_B')])
+          two=build([admissible_bundle('CI_REVIEWER_A'),admissible_bundle('CI_REVIEWER_B')])
           assert zero['collection_state']=='WAITING_FOR_FIRST_REVIEWER'
           assert zero['status']=='PASS' and zero['consensus_admission_ready'] is False
           assert one['collection_state']=='WAITING_FOR_SECOND_REVIEWER'
           assert one['status']=='PASS' and one['consensus_admission_ready'] is False
           assert two['collection_state']=='READY_FOR_CONSENSUS'
           assert two['status']=='PASS' and two['consensus_admission_ready'] is True
+          assert two['package_binding_authority']=='transport_independent_canonical_content_identity'
+          assert two['outer_transport_sha256_equality_required'] is False
           assert two['human_independence_proven_by_software'] is False
           assert two['independent_frame_level_estimate_established'] is False
           print('ZERO_REVIEWER_STATE = WAITING_FOR_FIRST_REVIEWER')
@@ -126,4 +159,33 @@ jobs:
           assert r['consensus_admission_ready'] is False
           assert 'REVIEW_1:ATTESTATION_INDEPENDENCE_NOT_CONFIRMED' in r['failures']
           print('FORGED_PASS_ANALYSIS_WITH_FALSE_INDEPENDENCE = REJECTED')
+          PY
+
+      - name: Assert different transport hashes do not create false reviewer conflict
+        run: |
+          python - <<'PY'
+          from fastcat.review_consensus import canonical_sha256
+          from fastcat.reviewer_collection import build_reviewer_collection_receipt
+          from tests.test_reviewer_collection import (
+              admissible_bundle,
+              collection_policy,
+              consensus_policy,
+              submission_protocol,
+          )
+          a=admissible_bundle('CI_REVIEWER_A')
+          b=admissible_bundle('CI_REVIEWER_B')
+          a['attestation']['blinded_package_transport_sha256']='1'*64
+          b['attestation']['blinded_package_transport_sha256']='2'*64
+          a['analysis']['reviewer_attestation_sha256']=canonical_sha256(a['attestation'])
+          b['analysis']['reviewer_attestation_sha256']=canonical_sha256(b['attestation'])
+          r=build_reviewer_collection_receipt(
+              bundles=[a,b],
+              collection_policy=collection_policy(),
+              submission_protocol=submission_protocol(),
+              consensus_policy=consensus_policy(),
+          )
+          assert r['status']=='PASS'
+          assert r['collection_state']=='READY_FOR_CONSENSUS'
+          assert r['outer_transport_sha256_equality_required'] is False
+          print('BYTE_DISTINCT_TRANSPORTS_SAME_CANONICAL_CONTENT = ADMISSIBLE')
           PY
