@@ -108,7 +108,27 @@ class BlindedPackageIdentityTests(unittest.TestCase):
             report = verify_package_zip(zip_path=bad, identity=identity)
             self.assertEqual(report["status"], "FAIL")
             self.assertTrue(
-                any(x.startswith("EXTRA_FILES_INSIDE_PACKAGE:") for x in report["failures"])
+                any(x.startswith("EXTRA_ARCHIVE_MEMBERS:") for x in report["failures"])
+            )
+
+    def test_top_level_model_file_outside_package_prefix_fails(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            identity, archive, _, _ = make_fixture(root)
+            bad = root / "top-level-extra.zip"
+            with zipfile.ZipFile(archive) as zin, zipfile.ZipFile(bad, "w") as zout:
+                for name in zin.namelist():
+                    zout.writestr(name, zin.read(name))
+                zout.writestr("model_rankings.json", b"{}")
+            report = verify_package_zip(zip_path=bad, identity=identity)
+            self.assertEqual(report["status"], "FAIL")
+            self.assertTrue(
+                any(
+                    x.startswith("EXTRA_ARCHIVE_MEMBERS:")
+                    and "model_rankings.json" in x
+                    for x in report["failures"]
+                ),
+                report,
             )
 
     def test_duplicate_zip_member_name_fails(self):
