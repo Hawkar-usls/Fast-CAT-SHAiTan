@@ -1,0 +1,16 @@
+{
+  "schema": "janus.organism.member_link.v1",
+  "organism_id": "JANUS_FEDERATED_ORGANISM",
+  "canonical_manifest": "Hawkar-usls/Janus:organism/JANUS_ORGANISM_v1.json",
+  "member_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+  "organ_key": "feline_timing_lab",
+  "class": "DOMAIN_LAB",
+  "role": "FELINE_FACIAL_TIMING_EXPERIMENT_LAB",
+  "consumes": ["RAW_VIDEO", "PTS", "FROZEN_PROTOCOL", "REVIEW_BUNDLE"],
+  "emits": ["TIMING_RECEIPT", "BLINDED_REVIEW_PACKET", "NEGATIVE_RESULT"],
+  "routes_to": ["measurement_bench", "guardian_cortex", "memory"],
+  "authority": "FELINE_EXPERIMENT_SCOPE_ONLY",
+  "authority_delta": 0,
+  "cross_repo_write_default": "DENY",
+  "claim_boundary": ["CANDIDATE_GEOMETRY != BIOLOGICAL_EVENT_TRUTH", "MODEL_OUTPUT != INDEPENDENT_REVIEW", "DOMAIN_RESULT != UNIVERSAL_REVIEW_AUTHORITY"]
+}
