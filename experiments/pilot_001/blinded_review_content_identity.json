@@ -1,0 +1,67 @@
+{
+  "schema": "Fast-CAT/PILOT-001/blinded-review-content-identity/v1.0",
+  "experiment_id": "PILOT_001",
+  "source_id": "commons_hugging_2019",
+  "purpose": "define transport-independent byte identity for the already-frozen model-blinded reviewer package so exact scientific input can be verified after any individual archive transport expires",
+  "canonical_package": {
+    "package_manifest_schema": "Fast-CAT/PILOT-001/blinded-review-package-manifest/v1.0",
+    "package_manifest_file_sha256": "85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4",
+    "files_payload_sha256": "2a550d1d32fff07757c6838f224a63fa5d87a00017b4dcc110154bd75fd99513",
+    "payload_file_count": 53,
+    "package_file_count_including_manifest": 54,
+    "frame_manifest_file_sha256": "0271018446726ccabd3be78e29c426e03d772e2bc01bb40ceb32ff246ae51c67",
+    "blank_review_form_sha256": "b464040c69491ac1ce7e1083f2745a85361fe3884cce1b37d6c9c7bae946622d",
+    "instructions_file_sha256": "f0a4df4aa28214a71088f57a0b9b5ee7c5982b1888f2300c17c6b94df3ae0a5b",
+    "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
+    "decoded_frame_count": 50,
+    "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee",
+    "expected_annotation_rows": 100,
+    "protocol_sha256": "d507feb69bf3d9977abba491b28a874bf865022e7447835364272388b33b437f",
+    "frame_ledger_sha256": "a8dda9d30996b6da3e7be1587f0df21fbb92c857925cd5025b914cdf76e0dee4",
+    "labels_initially_blank": true,
+    "model_evidence_excluded": true,
+    "independent_frame_level_estimate_established": false
+  },
+  "original_transport": {
+    "kind": "github_actions_artifact_zip",
+    "workflow_run_id": 31293673630,
+    "artifact_id": 9032245626,
+    "artifact_name": "pilot-001-hugging-blinded-review-package",
+    "artifact_size_bytes": 88780695,
+    "artifact_zip_sha256": "ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f",
+    "expires_at_utc": "2026-09-08T04:02:27Z",
+    "identity_role": "historical transport provenance only; byte-identical canonical package content is the durable admission authority"
+  },
+  "exact_content_rules": {
+    "package_manifest_bytes_must_match": true,
+    "manifest_files_payload_sha256_must_match": true,
+    "every_manifest_listed_file_byte_length_and_sha256_must_match": true,
+    "no_extra_files_inside_package": true,
+    "no_missing_files_inside_package": true,
+    "unsafe_or_ambiguous_package_paths_forbidden": true,
+    "outer_zip_byte_identity_required": false,
+    "repacked_transport_allowed_only_if_canonical_package_content_matches": true,
+    "model_derived_file_injection_forbidden": true
+  },
+  "origin_validation": {
+    "performed_utc_date": "2026-08-15",
+    "source_artifact_was_live_when_downloaded": true,
+    "downloaded_transport_sha256_matches_github_artifact_digest": true,
+    "package_manifest_file_sha256_matches_frozen_protocol": true,
+    "manifest_payload_entries_replayed": 53,
+    "manifest_payload_mismatches": 0,
+    "recomputed_files_payload_sha256_matches": true,
+    "repacked_transport_with_same_canonical_content_test": "PASS",
+    "mutated_blank_form_test": "REJECTED",
+    "extra_model_evidence_file_test": "REJECTED"
+  },
+  "replica_admission": {
+    "admission_authority": "canonical_package_content",
+    "transport_sha256_recorded_as_provenance": true,
+    "transport_sha256_may_differ_from_original": true,
+    "canonical_content_must_match_exactly": true,
+    "verification_status_required": "EXACT_CANONICAL_CONTENT_MATCH"
+  },
+  "independent_frame_level_estimate_established": false,
+  "claim_ceiling": "This identity verifies only that a supplied transport contains the exact already-frozen model-blinded reviewer input bytes. It does not establish reviewer independence, subject identity, CatFACS correctness, EAD103/EAD104 onset, mimicry, delta-t, feline latency, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+}
