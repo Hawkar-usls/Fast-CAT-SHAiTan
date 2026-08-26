@@ -8,6 +8,11 @@ from fastcat.review_consensus import build_consensus_report, canonical_sha256
 
 ATTESTATION_SCHEMA = "Fast-CAT/PILOT-001/reviewer-attestation/v1.0"
 COLLECTION_SCHEMA = "Fast-CAT/PILOT-001/reviewer-collection/v1.0"
+# Trust anchor is intentionally outside caller-supplied collection/submission
+# protocol objects. Changing it requires a reviewed source-code change.
+FROZEN_SUBMISSION_PROTOCOL_CANONICAL_SHA256 = (
+    "645db2a129c42d5220cd34e9f7da81366e446ddf524be9ad47e6687690a92cac"
+)
 
 
 def _prefixed(index: int, code: str) -> str:
@@ -74,12 +79,33 @@ def _validate_attestation_semantics(
     return failures
 
 
+def _validate_analysis_row_shapes(analysis: dict[str, Any], index: int) -> list[str]:
+    """Reject malformed external row containers before consensus code touches them."""
+    rows = analysis.get("normalized_review_rows")
+    if rows is None:
+        return []
+    if not isinstance(rows, list):
+        return [_prefixed(index, "NORMALIZED_REVIEW_ROWS_NOT_LIST")]
+    failures: list[str] = []
+    for row_index, row in enumerate(rows):
+        if not isinstance(row, dict):
+            failures.append(
+                _prefixed(index, f"NORMALIZED_REVIEW_ROW_{row_index}_NOT_OBJECT")
+            )
+    return failures
+
+
 def _validate_bundle_through_consensus_core(
     *, bundle: dict[str, Any], policy: dict[str, Any], index: int
 ) -> list[str]:
     single_policy = deepcopy(policy)
     single_policy["required_reviewers"] = 1
-    probe = build_consensus_report(bundles=[bundle], policy=single_policy)
+    try:
+        probe = build_consensus_report(bundles=[bundle], policy=single_policy)
+    except Exception as exc:
+        return [
+            _prefixed(index, f"CONSENSUS_CORE_REPLAY_EXCEPTION_{type(exc).__name__}")
+        ]
     if probe.get("status") == "PASS":
         return []
     failures: list[str] = []
@@ -100,12 +126,9 @@ def build_reviewer_collection_receipt(
 ) -> dict[str, Any]:
     """Validate a collection of blinded reviewer bundles before consensus.
 
-    This boundary answers only whether the received artifacts are structurally
-    and cryptographically admissible for the already-frozen consensus gate.
-    Human independence and competence remain reviewer-declared facts; software
-    can verify the attestation contents and distinct artifact identities, but it
-    cannot prove personhood, off-channel non-collusion, or the truthfulness of a
-    competence declaration.
+    The exact submission-protocol identity is anchored in this source module,
+    not in caller-controlled policy JSON. The policy copy must agree with the
+    source-controlled anchor, but cannot redefine it.
     """
 
     failures: list[str] = []
@@ -118,6 +141,18 @@ def build_reviewer_collection_receipt(
     )
     if submission_protocol.get("schema") != expected_submission_schema:
         failures.append("SUBMISSION_PROTOCOL_SCHEMA_MISMATCH")
+
+    policy_submission_sha = str(
+        collection_policy.get("submission_protocol_canonical_sha256", "")
+    )
+    actual_submission_sha = canonical_sha256(submission_protocol)
+    if not policy_submission_sha:
+        failures.append("SUBMISSION_PROTOCOL_CANONICAL_SHA256_NOT_PINNED")
+    elif policy_submission_sha != FROZEN_SUBMISSION_PROTOCOL_CANONICAL_SHA256:
+        failures.append("COLLECTION_POLICY_SUBMISSION_PROTOCOL_PIN_NOT_TRUSTED")
+    if actual_submission_sha != FROZEN_SUBMISSION_PROTOCOL_CANONICAL_SHA256:
+        failures.append("SUBMISSION_PROTOCOL_CANONICAL_SHA256_MISMATCH")
+
     expected_consensus_schema = str(collection_policy.get("consensus_policy_schema", ""))
     if consensus_policy.get("schema") != expected_consensus_schema:
         failures.append("CONSENSUS_POLICY_SCHEMA_MISMATCH")
@@ -146,6 +181,7 @@ def build_reviewer_collection_receipt(
                 bundle_failures.append(_prefixed(index, "VERIFIER_REPORT_MISSING"))
 
         if not bundle_failures:
+            bundle_failures.extend(_validate_analysis_row_shapes(analysis, index))
             bundle_failures.extend(
                 _validate_attestation_semantics(
                     attestation=attestation,
@@ -155,13 +191,14 @@ def build_reviewer_collection_receipt(
                     index=index,
                 )
             )
-            bundle_failures.extend(
-                _validate_bundle_through_consensus_core(
-                    bundle=bundle,
-                    policy=consensus_policy,
-                    index=index,
+            if not bundle_failures:
+                bundle_failures.extend(
+                    _validate_bundle_through_consensus_core(
+                        bundle=bundle,
+                        policy=consensus_policy,
+                        index=index,
+                    )
                 )
-            )
 
         reviewer_id = str(attestation.get("reviewer_id", "")).strip()
         bundle_receipts.append(
@@ -210,12 +247,16 @@ def build_reviewer_collection_receipt(
 
     full_consensus_probe: dict[str, Any] | None = None
     if not failures and len(admissible) >= required:
-        full_consensus_probe = build_consensus_report(
-            bundles=bundles,
-            policy=consensus_policy,
-        )
-        if full_consensus_probe.get("status") != "PASS":
-            failures.extend(str(x) for x in full_consensus_probe.get("failures", []))
+        try:
+            full_consensus_probe = build_consensus_report(
+                bundles=bundles,
+                policy=consensus_policy,
+            )
+        except Exception as exc:
+            failures.append(f"CONSENSUS_CORE_EXCEPTION_{type(exc).__name__}")
+        else:
+            if full_consensus_probe.get("status") != "PASS":
+                failures.extend(str(x) for x in full_consensus_probe.get("failures", []))
 
     failures = sorted(set(failures))
     if failures:
@@ -245,6 +286,12 @@ def build_reviewer_collection_receipt(
         "submitted_bundle_count": len(bundles),
         "admissible_bundle_count": len(admissible),
         "bundle_receipts": bundle_receipts,
+        "submission_protocol_canonical_sha256": actual_submission_sha,
+        "trusted_submission_protocol_canonical_sha256": FROZEN_SUBMISSION_PROTOCOL_CANONICAL_SHA256,
+        "submission_protocol_identity_matches_frozen_policy": (
+            actual_submission_sha == FROZEN_SUBMISSION_PROTOCOL_CANONICAL_SHA256
+            and policy_submission_sha == FROZEN_SUBMISSION_PROTOCOL_CANONICAL_SHA256
+        ),
         "reviewer_ids": reviewer_ids,
         "reviewer_attestation_sha256s": attestation_hashes,
         "completed_review_form_sha256s": completed_form_hashes,

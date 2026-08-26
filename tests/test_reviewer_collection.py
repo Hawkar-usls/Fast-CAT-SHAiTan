@@ -11,6 +11,7 @@ def collection_policy():
         "schema": "Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.0",
         "required_reviewers": 2,
         "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+        "submission_protocol_canonical_sha256": canonical_sha256(submission_protocol()),
         "consensus_policy_schema": "Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0",
     }
 
@@ -58,6 +59,35 @@ class ReviewerCollectionTests(unittest.TestCase):
         self.assertFalse(report["consensus_admission_ready"])
         self.assertEqual(report["admissible_bundle_count"], 0)
         self.assertFalse(report["human_independence_proven_by_software"])
+        self.assertTrue(report["submission_protocol_identity_matches_frozen_policy"])
+
+    def test_same_schema_modified_submission_protocol_fails_closed(self):
+        frozen = submission_protocol()
+        policy_value = collection_policy()
+        modified = copy.deepcopy(frozen)
+        modified["expected_blinded_package"]["frame_manifest_file_sha256"] = "0" * 64
+        report = build_reviewer_collection_receipt(
+            bundles=[],
+            collection_policy=policy_value,
+            submission_protocol=modified,
+            consensus_policy=consensus_policy(),
+        )
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["collection_state"], "INVALID_COLLECTION")
+        self.assertIn("SUBMISSION_PROTOCOL_CANONICAL_SHA256_MISMATCH", report["failures"])
+        self.assertFalse(report["submission_protocol_identity_matches_frozen_policy"])
+
+    def test_unpinned_submission_protocol_identity_fails_closed(self):
+        policy_value = collection_policy()
+        del policy_value["submission_protocol_canonical_sha256"]
+        report = build_reviewer_collection_receipt(
+            bundles=[],
+            collection_policy=policy_value,
+            submission_protocol=submission_protocol(),
+            consensus_policy=consensus_policy(),
+        )
+        self.assertEqual(report["status"], "FAIL")
+        self.assertIn("SUBMISSION_PROTOCOL_CANONICAL_SHA256_NOT_PINNED", report["failures"])
 
     def test_one_valid_bundle_waits_for_second_reviewer(self):
         report = receipt([admissible_bundle("reviewer-A")])
@@ -75,6 +105,17 @@ class ReviewerCollectionTests(unittest.TestCase):
         self.assertTrue(report["consensus_admission_ready"])
         self.assertEqual(report["consensus_core_preflight_status"], "PASS")
         self.assertFalse(report["independent_frame_level_estimate_established"])
+
+    def test_malformed_normalized_row_fails_closed_without_exception(self):
+        bundle = admissible_bundle("reviewer-A")
+        bundle["analysis"]["normalized_review_rows"] = [1]
+        report = receipt([bundle])
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["collection_state"], "INVALID_COLLECTION")
+        self.assertIn(
+            "REVIEW_0:NORMALIZED_REVIEW_ROW_0_NOT_OBJECT",
+            report["failures"],
+        )
 
     def test_duplicate_reviewer_id_fails_closed(self):
         first = admissible_bundle("same-reviewer")
