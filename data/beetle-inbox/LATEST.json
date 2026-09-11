@@ -1,0 +1,1615 @@
+{
+  "batch_id": "f5aedc14716fbde0b7a7",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "items": [
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "bc2c9da4c886d83a6bafe58d",
+      "context_id": "d2af000b4f7345a15e2a676a",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat",
+        "sat solver",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_published": "2024-12-20T16:57:15Z",
+      "source_updated": "2024-12-20T16:57:15Z",
+      "summary": "Automated reasoners, such as SAT/SMT solvers and first-order provers, are becoming the backbones of rigorous systems engineering, being used for example in applications of system verification, program synthesis, and cybersecurity. Automation in these domains crucially depends on the efficiency of the underlying reasoners towards finding proofs and/or counterexamples of the task to be enforced. In order to gain efficiency, automated reasoners use dedicated proof rules to keep proof search tractable. To this end, (variants of) subsumption is one of the most important proof rules used by automated reasoners, ranging from SAT solvers to first-order theorem provers and beyond. It is common that millions of subsumption checks are performed during proof search, necessitating efficient implementations. However, in contrast to propositional subsumption as used by SAT solvers and implemented using sophisticated polynomial algorithms, first-order subsumption in first-order theorem provers involves NP-complete search queries, turning the efficient use of first-order subsumption into a huge practical burden. In this paper we argue that the integration of a dedicated SAT solver opens up new venues for efficient implementations of first-order subsumption and related rules. We show that, by using a flexible learning approach to choose between various SAT encodings of subsumption variants, we greatly improve the scalability of first-order theorem proving. Our experimental results demonstrate that, by using a tailored SAT solver within first-order reasoning, we gain a large speedup in solving state-of-the-art benchmarks.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "SAT Solving for Variants of First-Order Subsumption",
+      "url": "https://arxiv.org/abs/2412.16058v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f028dc46f62ba2ba747bf736",
+      "context_id": "f44a0a2c55ce8272dcf81644",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "rup",
+        "sat",
+        "sat solver"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.8333,
+      "source": "arxiv",
+      "source_published": "2023-06-30T16:18:00Z",
+      "source_updated": "2023-06-30T16:18:00Z",
+      "summary": "State-of-the-art model-checking algorithms like IC3/PDR are based on uni-directional modular SAT solving for finding and/or blocking counterexamples. Modular SAT solvers divide a SAT-query into multiple sub-queries, each solved by a separate SAT solver (called a module), and propagate information (lemmas, proof obligations, blocked clauses, etc.) between modules. While modular solving is key to IC3/PDR, it is obviously not as effective as monolithic solving, especially when individual sub-queries are harder to solve than the combined query. This is partially addressed in SAT modulo SAT (SMS) by propagating unit literals back and forth between the modules and using information from one module to simplify the sub-query in another module as soon as possible (i.e., before the satisfiability of any sub-query is established). However, bi-directionality of SMS is limited because of the strict order between decisions and propagation -- only one module is allowed to make decisions, until its sub-query is SAT. In this paper, we propose a generalization of SMS, called SPEC SMS, that speculates decisions between modules. This makes it bi-directional -- decisions are made in multiple modules, and learned clauses are exchanged in both directions. We further extend DRUP proofs and interpolation, these are useful in model checking, to SPEC SMS. We have implemented SPEC SMS in Z3 and show that it performs exponentially better on a series of benchmarks that are provably hard for SMS.",
+      "tags": [
+        "cs.LO",
+        "cs.FL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Speculative SAT Modulo SAT",
+      "url": "https://arxiv.org/abs/2306.17765v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f2d42fa3b6543a7cb16392c6",
+      "context_id": "93ff3bc636ec7adcd33d3cfe",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "proof certificate"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.2917,
+      "source": "arxiv",
+      "source_published": "2024-06-14T14:08:48Z",
+      "source_updated": "2024-06-14T14:08:48Z",
+      "summary": "Property-based testing (PBT) is a technique for validating code against an executable specification by automatically generating test-data. We present a proof-theoretical reconstruction of this style of testing for relational specifications and employ the Foundational Proof Certificate framework to describe test generators. We do this by encoding certain kinds of ``proof outlines'' as proof certificates that can describe various common generation strategies in the PBT literature, ranging from random to exhaustive, including their combination. We also address the shrinking of counterexamples as a first step toward their explanation. Once generation is accomplished, the testing phase is a standard logic programming search. After illustrating our techniques on simple, first-order (algebraic) data structures, we lift it to data structures containing bindings by using the $λ$-tree syntax approach to encode bindings. The $λ$Prolog programming language can perform both generating and checking of tests using this approach to syntax. We then further extend PBT to specifications in a fragment of linear logic. Under consideration in Theory and Practice of Logic Programming (TPLP).",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Property-Based Testing by Elaborating Proof Outlines",
+      "url": "https://arxiv.org/abs/2406.10053v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "abc6b4188cd2a270417d115e",
+      "context_id": "ae3728fe4e919adbac43bd2b",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "proof certificate",
+        "proof checking"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.7083,
+      "source": "arxiv",
+      "source_published": "2019-03-29T20:53:37Z",
+      "source_updated": "2023-05-17T13:39:24Z",
+      "summary": "Modern advances in general-purpose computer algebra systems offer solutions to a variety of problems, which in the past required substantial time investments by trained mathematicians. An excellent example of such development are the Clifford algebras. The main objective of the paper is to demonstrate an utterly algorithmic construction of a Clifford algebra matrix algebra representation of a non-degenerate signature (p, q). While this is not the most economical way of implementation, it offers a transparent mechanism of translation between a Clifford algebra and its faithful real-valued matrix representation and can be used for automated proof checking. This representation is used to derive an algorithm for the computation of an arbitrary multivector inverse as a proof certificate. The proposed algorithm is a mapping of the Faddeev--LeVerrier--Souriau algorithm for computation of the characteristic polynomial of matrices.",
+      "tags": [
+        "math.RA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Symbolic Algorithm for Computation of Non-degenerate Clifford Algebra Matrix Representations",
+      "url": "https://arxiv.org/abs/1904.00084v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "36d36ca85be4f8b6ac5cd1ca",
+      "context_id": "f0b02165419d449214d214b8",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.2083,
+      "source": "arxiv",
+      "source_published": "2013-01-15T10:53:51Z",
+      "source_updated": "2013-01-15T10:53:51Z",
+      "summary": "The cost of LTL model checking is highly sensitive to the length of the formula under verification. We observe that, under some specific conditions, the input LTL formula can be reduced to an easier-to-handle one before model checking. In our reduction, these two formulae need not to be logically equivalent, but they share the same counterexample set w.r.t the model. In the case that the model is symbolically represented, the condition enabling such reduction can be detected with a lightweight effort (e.g., with SAT-solving). In this paper, we tentatively name such technique \"Counterexample-Preserving Reduction\" (CePRe for short), and finally the proposed technquie is experimentally evaluated by adapting NuSMV.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Counterexample-Preserving Reduction for Symbolic Model Checking",
+      "url": "https://arxiv.org/abs/1301.3299v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "159220c37fa9b8ad0793bf66",
+      "context_id": "6933046aed417dee6fb011f9",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat",
+        "unsat core"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.125,
+      "source": "arxiv",
+      "source_published": "2026-02-24T16:35:16Z",
+      "source_updated": "2026-04-08T13:07:55Z",
+      "summary": "Active automata learning (AAL) under a Minimally Adequate Teacher (MAT) has been successfully used to infer a regular language through membership and equivalence queries. This language might not be fully characterized: we are then interested in finding any solution in a target class of possibly many regular languages. Some problems such as regular language separation or inductive invariant synthesis in the context of regular model checking (RMC) may indeed admit more than one answer. We therefore introduce IdMAT: a new teacher formalism answering queries with respect to any language in the target class, all at once. Such a teacher tailored towards invariant synthesis might provide incomplete \"don't know\" answers, but also inductive facts of the form \"if w1 is accepted, so is w2\". We pair IdMAT with a novel AAL algorithm LIndA that 1. encodes all uncertainties as a unique SAT instance and does not fork, 2. leverages incremental SAT solving and UNSAT core analysis, and 3. handles counterexamples of the simple or inductive type in a frugal manner inspired by the Rivest-Schapire refinement technique. We finally evaluate a prototype implementation in the context of regular language separation and RMC.",
+      "tags": [
+        "cs.FL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Automata Learning with an Incomplete but Inductive Teacher (Technical Report)",
+      "url": "https://arxiv.org/abs/2602.21073v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "458fe5d48125b18b5b511599",
+      "context_id": "fba600b75a4a372340fa6f63",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "proof checker",
+        "proof checking",
+        "proof complexity"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.2083,
+      "source": "arxiv",
+      "source_published": "2026-05-28T11:11:17Z",
+      "source_updated": "2026-05-28T11:11:17Z",
+      "summary": "Certification for Quantified Boolean Formulas (QBF) and Dependency Quantified Boolean Formulas (DQBF) is an ongoing challenge. Recent proof complexity work has shown that the majority of QBF and DQBF techniques can be p-simulated by using the independent extension rule. In propositional logic, extension rules are supported by proof checkers using a more general RAT (Resolution Asymmetric Tautology) rule. The next step in (D)QBF certification would be to update these modern RAT formats to match the strength of this independent extension rule. In this paper we first introduce a new dependency scheme called Dpure. This rule is the missing ingredient that when added to Blinkhorn's proof system DQRAT allows it to be provably p-equivalent to the Independent Extended QU-Res, the most powerful of the known QBF and DQBF proof systems. Up until now, DQRAT has only existed in theory, so we implement a prototype checker DQRAT-check which includes our extra rule. In addition to its inclusion in our proof checker we show Dpure has other properties that have been found for previous dependency schemes, and each of these observations has potential in solving/checking including the sound integration into the dependency learning solver Qute.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Strong (D)QBF Dependency Schemes via Pure Paths with Applications to Proof Checking",
+      "url": "https://arxiv.org/abs/2605.29763v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0966a769cc9bbb1da1c2721b",
+      "context_id": "e022271bc650b6f0f206f3b2",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2020-09-18T16:07:33Z",
+      "source_updated": "2020-10-15T23:43:49Z",
+      "summary": "Hyperproperties are properties of systems that relate multiple computation traces, including security and concurrency properties. This paper introduces a bounded model checking (BMC) algorithm for hyperproperties expressed in HyperLTL, which - to the best of our knowledge - is the first such algorithm. Just as the classic BMC technique for LTL primarily aims at finding bugs, our approach also targets identifying counterexamples. BMC for LTL is reduced to SAT solving, because LTL describes a property via inspecting individual traces. HyperLTL allows explicit and simultaneous quantification over traces and describes properties that involves multiple traces and, hence, our BMC approach naturally reduces to QBF solving. We report on successful and efficient model checking, implemented in a tool called HyperQube, of a rich set of experiments on a variety of case studies, including security, concurrent data structures, path planning for robots, and testing.",
+      "tags": [
+        "cs.FL",
+        "cs.CR"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Bounded Model Checking for Hyperproperties",
+      "url": "https://arxiv.org/abs/2009.08907v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ad970d895cc10bdf3aae947b",
+      "context_id": "ba4c0717be90239bef3494d4",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2026-04-20T13:01:05Z",
+      "source_updated": "2026-05-14T00:39:30Z",
+      "summary": "The existence of EFX allocations is a central open problem in discrete fair division. An allocation is EFX (envy-free up to any good) if no agent envies another agent after the removal of any single good from the other agent's bundle. We resolve this longstanding question by providing the \\textbf{first-ever counterexample} to the existence of EFX allocations for agents with monotone valuations, which in turn immediately implies a counterexample for submodular valuations. Specifically, we show that EFX allocations need not exist for instances with $n \\ge 3$ agents and $m \\ge n+5$ goods. In contrast, we prove that every instance with three agents and seven goods admits an EFX allocation. Both results are obtained via SAT solving. We encode the negation of EFX existence as a SAT instance: satisfiability yields a counterexample, while unsatisfiability establishes universal existence. The correctness of the encoding is formally verified in Lean. Finally, we establish positive guarantees for fair allocations with three agents and an arbitrary number of goods. Although EFX allocations may fail to exist, we prove that every instance with three agents and monotone valuations admits at least one of two natural relaxations of EFX: tEFX, or EF1 and EEFX.",
+      "tags": [
+        "cs.GT",
+        "cs.DS"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Counterexample to EFX $n \\ge 3$ Agents, $m \\ge n + 5$ Items, Submodular Valuations via SAT-Solving",
+      "url": "https://arxiv.org/abs/2604.18216v3"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6cb1029549479fee403ffda9",
+      "context_id": "3a060d67112b66911981b0e6",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "sat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2025-11-29T20:13:27Z",
+      "source_updated": "2025-12-29T05:21:48Z",
+      "summary": "Algorithms for resolving majority cycles in preference aggregation have been studied extensively in computational social choice. Several sophisticated cycle-resolving methods, including Tideman's Ranked Pairs, Schulze's Beat Path, and Heitzig's River, are refinements of the Split Cycle (SC) method that resolves majority cycles by discarding the weakest majority victories in each cycle. Recently, Holliday and Pacuit proposed a new refinement of Split Cycle, dubbed Stable Voting, and a simplification thereof, called Simple Stable Voting (SSV). They conjectured that SSV is a refinement of SC whenever no two majority victories are of the same size. In this paper, we prove the conjecture up to 6 alternatives and refute it for more than 6 alternatives. While our proof of the conjecture for up to 5 alternatives uses traditional mathematical reasoning, our 6-alternative proof and 7-alternative counterexample were obtained with the use of SAT solving. The SAT encoding underlying this proof and counterexample is applicable far beyond SC and SSV: it can be used to test properties of any voting method whose choice of winners depends only on the ordering of margins of victory by size.",
+      "tags": [
+        "cs.GT",
+        "cs.AI",
+        "econ.TH"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Stable Voting and the Splitting of Cycles",
+      "url": "https://arxiv.org/abs/2512.00616v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "29a8de420c67aa1171ec947a",
+      "context_id": "b98c5a10e9a4b2cae75d45f8",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat",
+        "sat solver",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_published": "2026-03-25T19:06:06Z",
+      "source_updated": "2026-03-25T19:06:06Z",
+      "summary": "Boolean satisfiability (SAT) problem, the first problem proven to be NP-complete, has become a fundamental challenge in computational complexity, with widespread applications in optimization and verification across many domains. Despite significant algorithmic advances over the past two decades, the performance of SAT solvers has improved at a limited pace. Notably, the 2025 competition winner shows only about a 2X improvement over the 2006 winner in SAT Competition performance after nearly 20 years of effort. This paper introduces GaloisSAT, a novel hybrid GPU-CPU SAT solver that integrates a differentiable SAT solving engine powered by modern machine learning infrastructure on GPUs, followed by a traditional CDCL-based SAT solving stage on CPUs. GaloisSAT is benchmarked against the latest versions of state-of-the-art solvers, Kissat and CaDiCaL, using the SAT Competition 2024 benchmark suite. Results demonstrate substantial improvements in the official SAT Competition metric PAR-2 (penalized average runtime with a timeout of 5,000 seconds and a penalty factor of 2). Specifically, GaloisSAT achieves an 8.41X speedup in the satisfiable category and a 1.29X speedup in the unsatisfiable category compared to the strongest baselines.",
+      "tags": [
+        "cs.LO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "GaloisSAT: Differentiable Boolean Satisfiability Solving via Finite Field Algebra",
+      "url": "https://arxiv.org/abs/2603.28796v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "bc7c49f11ea60c7ec5ffb509",
+      "context_id": "5ecd8ab41c024b531f0f0dce",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat",
+        "sat solver",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_published": "2026-02-24T12:08:32Z",
+      "source_updated": "2026-02-25T14:14:42Z",
+      "summary": "Boolean Satisfiability (SAT) solving underpins a wide range of applications in Electronic Design Automation (EDA), particularly formal verification. However, this paper observes that the mainstream clause reduction heuristic in modern SAT solvers becomes ineffective in the critical domain of complex arithmetic circuit verification, such as multipliers. On these instances, the dominant Literal Block Distance (LBD) metric for measuring clause quality degrades into a simple value of clause length, without any perception of dynamic clause usage during solving. To address this issue, a novel clause reduction mechanism is proposed, which is entirely independent of LBD. Its core idea is to decouple and handle separately the two most fundamental characteristics of learnt clauses--inherent lineage and dynamic usage patterns--thereby avoiding the efficiency degradation caused by inappropriately mixing these properties. Experiments show that our method consistently improves mainstream solvers and achieves speedups of up to 5.74x on complex arithmetic circuit problems, while maintaining comparable performance on general-purpose benchmarks. These results challenge the prevailing LBD-centric clause quality metric for clause management.",
+      "tags": [
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Rethinking Clause Management for CDCL SAT Solvers",
+      "url": "https://arxiv.org/abs/2602.20829v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a189ea46b1f08ec79142a690",
+      "context_id": "194617adc2286dfff8f256f5",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "failure mode",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.4583,
+      "source": "arxiv",
+      "source_published": "2026-09-07T00:20:54Z",
+      "source_updated": "2026-09-07T00:20:54Z",
+      "summary": "Automated experimentation is most effective when the observables, available actions, and objective are defined before the experiment starts, as is the case for Bayesian optimization. However, in many exploratory experiments, the variables that describe the sample must be extracted from the data, new operations emerge during the experiments, and the instrument budget is too small to learn the problem by trials. Here we introduce the Scanning Probe Agentic Research Cycle (SPARC) framework, in which a coding agent and a human operator share one microscope, one notebook, and two persistent memory files. FINDINGS.md stores graded conclusions about the experiment, whereas PITFALLS.md records learned failure modes of analysis and instrument. We apply SPARC to reconfigure the in-plane superdomain direction of a (111)-oriented PbZr0.2Ti0.8O3 film. In an operator-supervised campaign, the agent reanalyzed earlier manual measurements and developed an oriented lattice of stationary bias pulses with alternating polarity to reconfigure the superdomain direction. In a subsequent agent-controlled campaign, PITFALLS.md entries were compiled into checks that validate a design before any write. The experiments showed that spatial polarity alternation, instead of the exact matching between the lattice and lamellar periods, determines directional selection. Combining a raster scan with a masked pulse lattice printed the letters UTK into the superdomain orientation. The campaign also identified practical requirements for agentic experimentation where physical verification of instrument execution, the conditions under which stored findings remain valid, validation of new observables on instrument data, and robust control protocols.",
+      "tags": [
+        "cond-mat.mtrl-sci",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Human-agent discovery of reconfigurable in-plane ferroelectric superdomain control",
+      "url": "https://arxiv.org/abs/2609.06887v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "abc6b4188cd2a270417d115e",
+      "context_id": "8f687295f9edd143ce2b01d5",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "proof certificate",
+        "proof checking"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.7083,
+      "source": "arxiv",
+      "source_published": "2019-03-29T20:53:37Z",
+      "source_updated": "2023-05-17T13:39:24Z",
+      "summary": "Modern advances in general-purpose computer algebra systems offer solutions to a variety of problems, which in the past required substantial time investments by trained mathematicians. An excellent example of such development are the Clifford algebras. The main objective of the paper is to demonstrate an utterly algorithmic construction of a Clifford algebra matrix algebra representation of a non-degenerate signature (p, q). While this is not the most economical way of implementation, it offers a transparent mechanism of translation between a Clifford algebra and its faithful real-valued matrix representation and can be used for automated proof checking. This representation is used to derive an algorithm for the computation of an arbitrary multivector inverse as a proof certificate. The proposed algorithm is a mapping of the Faddeev--LeVerrier--Souriau algorithm for computation of the characteristic polynomial of matrices.",
+      "tags": [
+        "math.RA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Symbolic Algorithm for Computation of Non-degenerate Clifford Algebra Matrix Representations",
+      "url": "https://arxiv.org/abs/1904.00084v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "005f9db2c71b2c93183b8b2f",
+      "context_id": "fe8677f0ae20ec4450fa5d58",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-07T17:44:19Z",
+      "source_updated": "2026-09-07T17:44:19Z",
+      "summary": "Model pruning is widely used to compress deep neural networks, reducing memory and computational requirements with minimal impact on aggregate performance. However, its effect on model behavior remains poorly understood, particularly for long-tailed medical datasets where rare but clinically important conditions are underrepresented. Furthermore, it remains unclear whether pruned models preserve reliable explanations of their predictions. To address this gap, we present a systematic study of long-tail forgetting and explanation reliability under model pruning. Across two long-tailed medical imaging datasets, two CNN architectures, four pruning methods, and sparsity levels up to 95\\%, we evaluate predictive performance, explanation stability, and explanation faithfulness. Our results show that predictive performance exhibits a strong frequency-dependent trend, with lower-frequency classes generally experiencing earlier and larger degradation than higher-frequency classes. In contrast, explanation stability and faithfulness are influenced primarily by the pruning strategy, with gradient-informed methods preserving explanation reliability more effectively under aggressive compression. Qualitative and mechanistic analyses further indicate that explanation degradation is primarily associated with the collapse of class-discriminative gradients rather than the disappearance of feature activations. These findings suggest that model compression should be evaluated beyond aggregate performance. Incorporating class-aware and explanation-aware evaluation reveals failure modes that would otherwise remain hidden, while moderate sparsity levels provide a practical balance between compression, predictive performance, and explanation reliability.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Understanding the Impact of Model Pruning on Long-Tail Forgetting and Explanation Reliability in Medical Imaging",
+      "url": "https://arxiv.org/abs/2609.07803v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "26befc964042e040670c61e1",
+      "context_id": "e59f405a361f3e07741e5710",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-04T05:29:31Z",
+      "source_updated": "2026-09-04T05:29:31Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have experienced rapid growth in recent years. Despite their promise, such systems remain fragile, frequently exhibiting reasoning and coordination errors that can lead to system-level failures. Failure attribution in such systems relies on tracing natural language interactions among agents to identify the decisive error, which refers to the earliest action whose correction can reverse system failure. There are two key challenges: 1) Shallow attribution: Existing methods often capture only minor deviations, such as incomplete retrievals or formatting errors, which verification mechanisms can correct, while missing the decisive cause of system failure. 2) Contextual degradation: As the length of the system traces increases, the model's reasoning ability rapidly deteriorates. To address these challenges, we propose DCFA, a training-free framework for failure attribution. DCFA integrates a global module that constructs structured causal-inspired dependency graphs from system traces to identify the initial decisive error, and a local module that applies local counterfactual-inspired reasoning to refine causal-inspired attribution. Experiments on the Who&When benchmark across six LLMs show that DCFA improves step-level accuracy by up to 8.27% over state-of-the-art baselines.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "DCFA: Dual-view Causal-inspired Attribution for Failure Reasoning in LLM-based Multi-agent Systems",
+      "url": "https://arxiv.org/abs/2609.04749v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "1ebcdc0f875f7d0909a95cb9",
+      "context_id": "d9eae61c023c165075a3f557",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-08-29T03:38:35Z",
+      "source_updated": "2026-08-29T03:38:35Z",
+      "summary": "Multi-agent LLM systems often coordinate by compressing an upstream interaction into a handoff artifact that downstream agents treat as shared state. We show that this handoff step is a structural source of privacy leakage: summaries preferentially preserve operational facts while weakening the boundary metadata that governs how those facts may be used---a failure mode we call \\emph{summary collapse}. On a controlled multi-agent coordination testbed we measure marker survival with a human-validated judge ($κ= 0.74$), where $σ_b = 1$ means every boundary marker survives verbatim and $σ_b = 0$ means all are lost. Boundary-marker and operational-fact survival are nearly uncorrelated at the handoff level on both GPT-5-mini and DeepSeek-R1-32B (Pearson $r$ near zero): uncompressed free-text handoffs preserve boundaries at $σ_b \\approx 0.80$, whereas a $25$-word budget drops $σ_b$ to ${\\approx}0.57$ while operational-fact survival stays near ceiling. Controlled downstream tests reveal that protection depends on \\emph{boundary explicitness}: vague languages leak in $73\\%$ of GPT and $50\\%$ of DeepSeek cases, while explicit constraints reduce leakage to under $15\\%$ across all three tested models. A no-handoff single-agent control further shows the failure is not reducible to multi-agent topology as direct full-marker access still leaks more often than the operationalized handoff. Prompt-only mitigation and exact-string redaction only partially address the problem, while a gold-derived audience allowlist nearly eliminates leakage across models, showing that correctly identifying audience boundaries is the key factor.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Facts Without Rules: Boundary Metadata Collapse in Multi-Agent LLM Handoffs",
+      "url": "https://arxiv.org/abs/2608.29028v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "162435a985035daceeb50722",
+      "context_id": "c93f2491f2f0c76c9c755cfa",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-08T21:46:35Z",
+      "source_updated": "2026-09-08T21:46:35Z",
+      "summary": "In-vehicle assistants must translate natural-language requests into accurate vehicle function calls under strict memory and latency constraints, making small language models (SLMs) attractive for on-device deployment. For such models, a key design choice is how the available function surface is presented. Two approaches are to represent each function with a dedicated Functional Token (FT) or provide function schemas directly in the prompt. FTs enable compact inference but are restricted to functions learned during training, whereas Schema-in-Prompt (SIP) can generalize to unseen functions at the cost of longer prompts and higher inference overhead. We introduce a benchmark of 9,822 single-turn examples spanning 79 vehicle functions derived from Android Automotive, including held-out functions and requests requiring refusal. We compare both approaches under matched fine-tuning across four SLMs from 270M to 1.7B parameters. On functions seen during training, scaling provides limited benefit: the 270M model can match the 1.7B model, while the strongest overall performance occurs at 0.6B. On held-out functions, FT achieves zero accuracy by construction, whereas SIP generalizes and improves substantially with scale. On out-of-scope requests, FT can invoke an unavailable function it was trained to emit, while SIP more reliably refuses based on the functions offered. This flexibility comes with higher memory use and latency. Our theoretical analysis explains how SIP enables generalization and why longer schema contexts increase inference cost. Overall, function-surface representation, rather than model scale alone, determines the capabilities and failure modes of SLM-based vehicle function calling.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "From Fixed Keys to Readable Schemas: Small Language Models for Vehicle Agent Function Calls",
+      "url": "https://arxiv.org/abs/2609.09476v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "1c657877d9c6b0b4e989fe49",
+      "context_id": "af14c2c830abd5e37b0aa567",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-05T00:33:01Z",
+      "source_updated": "2026-09-05T00:33:01Z",
+      "summary": "Vision-language models (VLMs) offer a promising alternative to conventional fire detection systems by reasoning about the semantic context of a scene and thus reducing false alarms, yet their large model size makes deployment on embedded fire sensors impractical. In this paper, we study how domain-specialized VLMs can be compressed for fully on-device deployment without losing the safety-critical behavior required for fire detection. We develop a teacher-student knowledge distillation framework in which large VLMs fine-tuned for fire understanding can be distilled into lightweight students. Experiments across multiple VLM families and model scales show that compact students preserve most of their teachers' fire-understanding capability. We further deploy the distilled models on our commercial Detectium fire detection sensor and jointly evaluate reasoning accuracy, latency, and memory usage. The results show that compression and deployment affect not only accuracy but also model failure modes, with Qwen2.5-0.5B providing the strongest overall deployment trade-off. Our findings provide broader guidance for deploying domain-specialized VLMs in resource-constrained, safety-critical settings.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Distilling Vision-Language Models for On-Device Fire Understanding",
+      "url": "https://arxiv.org/abs/2609.05782v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9a57e1bbf42e06872f604262",
+      "context_id": "9d8302bb4e61217a76e98381",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-05T02:56:47Z",
+      "source_updated": "2026-09-05T02:56:47Z",
+      "summary": "World models promise a general route to embodied intelligence: learn predictive dynamics once, then reason, plan, and act with them. Increasingly, the representations beneath such models are pretrained on large-scale video, interaction, and multimodal corpora, which raises a question prediction quality alone cannot answer: when is a learned representation actually actionable? We identify a failure mode we call counterfactual collapse: a model predicts visually plausible futures while failing to distinguish interventions with different behavioral consequences. This arises whenever a representation is optimized for perceptual similarity rather than intervention structure, which is precisely the objective under which most large-scale pretrained encoders are learned. We introduce Counterfactual Latent World Models (CLWM), which combine a recurrent belief-state encoder, action-conditioned latent dynamics, and a contrastive counterfactual objective that separates futures induced by distinct interventions even when their observations look alike. Across occluded manipulation, aliased navigation, and long-horizon manipulation, CLWM improves planning success over the strongest baseline (65.1% $\\to$ 74.6% on Occluded Push and 67.3% $\\to$ 78.9% on Aliased Maze) and reduces exploitative planning failures (18.4% $\\to$ 9.7% on Deferred Kitchen), with ablations attributing the gains to hard counterfactual negatives, especially perceptual-alias negatives. Finally, our counterfactual separability metric, which tracks planning success across the five baseline model classes ($r \\ge 0.94$), is representation-agnostic: given intervention-outcome labels, it can audit any encoder, pretrained or trained from scratch, before a planner trusts it. We do not yet measure it on large-scale pretrained encoders. Here we establish the metric and its relationship to planning success for world models trained from scratch.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Learning Counterfactual World Models for Embodied Reasoning under Partial Observability",
+      "url": "https://arxiv.org/abs/2609.05834v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7762aef04086bd5acf305fa1",
+      "context_id": "6774f0c4de8518a6ad4713f0",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-04-15T09:36:50Z",
+      "source_updated": "2026-08-05T15:42:25Z",
+      "summary": "European digital sovereignty and security increasingly depend on whether high-impact decisions can be grounded in location evidence that remains credible under adversarial pressure. This paper frames a cross-sector analysis as a location-data provenance problem: whether there is contestable evidence about where and when an asserted event occurred, who or what produced the assertion, what a device or service reported as location, and which audit and retention guarantees apply. Trust-erosion patterns are observable across democratic processes and the information environment, trade and origin-sensitive supply chains, finance and illicit shipping flows, critical infrastructure and mobility, and harms targeting individuals' private and social domains. In these patterns we see a recurring asymmetry in which locality, presence, routing, or jurisdiction can be asserted cheaply while institutions and affected parties face costly reconstruction when disputes arise. To make this challenge actionable, this paper introduces a compact risk taxonomy that decomposes provenance failures into integrity axes and recurring failure modes, and derives design expectations for next-generation digital trust infrastructure centered on contestability under dispute, while remaining privacy- and rights-compatible. It argues for treating location as a digital primitive that should be represented as evidence-bearing claims rather than self-asserted coordinates, and positions proof-of-location (PoL) mechanisms as a candidate capability layer for producing verifiable presence claims under explicit threat and privacy assumptions. The outcome is a sector-neutral foundation for future architectural work on a next-generation digital trust infrastructure for Europe.",
+      "tags": [
+        "cs.CR"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Where Trust Fails: Mapping Location-Data Provenance Risks in Europe",
+      "url": "https://arxiv.org/abs/2604.13668v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "df0d235112c0ed51e3edd83c",
+      "context_id": "2e543483926d83f0c38e978c",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-08-25T11:51:01Z",
+      "source_updated": "2026-08-25T11:51:01Z",
+      "summary": "Visual Language Models (VLMs) excel at describing visible scene content but struggle to reason about dynamic multi-agent interactions, where action semantics depend on coordinated roles and spatial-temporal dependencies. We formalize this capability as \\textbf{multi-agent tactical reasoning} and introduce \\textbf{DoublesEval}, a diagnostic evaluation framework that leverages professional doubles badminton as a structurally tractable testbed. DoublesEval employs a key-moment-based protocol that decomposes rallies into tactically salient instants and probes models across four interpretable dimensions: atomic recognition, intra-segment composite understanding, cross-segment causal reasoning, and high-level tactical abstraction. This design isolates \\emph{where} reasoning fails, rather than merely measuring answer correctness. To address observed failure modes, we propose \\textbf{TacticCheck}, a lightweight constraint-guided test-time consistency checker that reranks candidate answers using the model's own lower-level tactical predictions, requiring no parameter updates or ground-truth labels at inference time. Evaluating four representative open-source VLMs on 60 curated rallies (yielding $\\sim$9.6K structured instances) via a zero-shot protocol, we find that models remain weak across all diagnostic levels, with especially clear bottlenecks in spatial state, interaction binding, and terminal evidence. TacticCheck delivers consistent gains across all evaluated models, while still leaving a substantial gap to robust tactical reasoning. These results highlight the need for structured, interaction-aware evaluation paradigms for next-generation VLMs. The source code is available in \\href{https://github.com/Chengjt1999/DoublesEval}{\\textcolor{blue}{our GitHub repository}}.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "DoublesEval: Diagnosing Multi-Agent Tactical Reasoning in Vision-Language Models via Professional Doubles Badminton",
+      "url": "https://arxiv.org/abs/2608.24439v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4b7affeddb25c8c9f5eb4271",
+      "context_id": "1589d425a1f2e412d9b195de",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-06-02T08:21:22Z",
+      "source_updated": "2026-07-01T19:01:29Z",
+      "summary": "Benchmark contamination, where evaluation examples appear in a model's training data, threatens the validity of LLM assessment. Statistical tools for detecting training-data membership exist, but have been validated almost exclusively in controlled academic regimes: large, homogeneous pre-training corpora and transparent, single-stage training pipelines. Whether these methods remain reliable in realistic auditing scenarios remains unclear. We identify two under-studied failure modes: distribution shift, which arises when suspect and validation sets violate the IID assumption, and scale constraints, which arise because benchmarks are orders of magnitude smaller than pre-training corpora. We systematically evaluate three leading paradigms, LLM Dataset Inference, Post-Hoc Dataset Inference, and CoDeC, across 25 models from multiple families (including Pythia, OLMo 2, and specialised cultural and medical LLMs) and scales (up to 27B). We then further extend our analysis to frontier industry models. Across 335 evaluations, only 201 yield correct outcomes. LLM Dataset Inference results in false positives under distribution shift, Post-Hoc Dataset Inference is underpowered at benchmark scale, and CoDeC provides only coarse provenance signals that are insufficient to verify individual benchmark splits. Our results reveal a systematic reliability gap between controlled validation and practical benchmark auditing, and show that statistical detection cannot yet replace transparent data provenance. We open-source our benchmark for further research.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Reliability Gap in Benchmark Auditing: Distribution Shift and Scale as Failure Modes of Contamination Detection",
+      "url": "https://arxiv.org/abs/2606.03305v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0c0226f543caedf875311d15",
+      "context_id": "00af1343af607ebaa961abd4",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-08-30T07:13:10Z",
+      "source_updated": "2026-08-30T07:13:10Z",
+      "summary": "Across industries, machine-learning systems support applications ranging from prediction and anomaly detection to forecasting, optimization, and scheduling, yet operationalizing these systems requires coordinating application development, model pipelines, cloud infrastructure, security, deployment, monitoring, retraining, recovery, and rollback. We present an evidence-gated multi-agent framework for transforming a natural-language MLOps cloud engineering task into a verified repository and operational cloud deployment. The framework combines graph engineering, loop engineering, and agent harness engineering. A stateful Graph Orchestrator coordinates specialized agents for repository generation, review, execution, verification, release, and monitoring while governing workflow dependencies, evidence gates, retry bounds, recovery paths, and termination. Consequential lifecycle transitions proceed only when their required predicates are supported by verifiable execution or runtime evidence. Verification failures activate bounded reflection, repair, and re-verification, while runtime evidence of failure, drift, degradation, or policy violation can trigger bounded adaptation, recovery, or rollback. Agent harness engineering constrains repository generation, review, and repair, artifact execution, and cloud operations through controlled capabilities and isolated execution environments. We realize the framework on Google Cloud Platform and evaluate repository completeness, controlled execution, evidence-gated transitions, cloud promotion, and bounded recovery. Our experimental results show that the framework prevents unsupported lifecycle transitions and drives each run toward either a verified operational deployment or an auditable terminal failure.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Forward-Deployed Full-Stack Engineering for Autonomous Cloud MLOps",
+      "url": "https://arxiv.org/abs/2608.29615v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "26befc964042e040670c61e1",
+      "context_id": "724b560197d250e779ee827a",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_published": "2026-09-04T05:29:31Z",
+      "source_updated": "2026-09-04T05:29:31Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have experienced rapid growth in recent years. Despite their promise, such systems remain fragile, frequently exhibiting reasoning and coordination errors that can lead to system-level failures. Failure attribution in such systems relies on tracing natural language interactions among agents to identify the decisive error, which refers to the earliest action whose correction can reverse system failure. There are two key challenges: 1) Shallow attribution: Existing methods often capture only minor deviations, such as incomplete retrievals or formatting errors, which verification mechanisms can correct, while missing the decisive cause of system failure. 2) Contextual degradation: As the length of the system traces increases, the model's reasoning ability rapidly deteriorates. To address these challenges, we propose DCFA, a training-free framework for failure attribution. DCFA integrates a global module that constructs structured causal-inspired dependency graphs from system traces to identify the initial decisive error, and a local module that applies local counterfactual-inspired reasoning to refine causal-inspired attribution. Experiments on the Who&When benchmark across six LLMs show that DCFA improves step-level accuracy by up to 8.27% over state-of-the-art baselines.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "DCFA: Dual-view Causal-inspired Attribution for Failure Reasoning in LLM-based Multi-agent Systems",
+      "url": "https://arxiv.org/abs/2609.04749v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f5a0c233a3e02d4b1f4da70a",
+      "context_id": "b44bb99ec81d9fd19b79b5c8",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "arxiv",
+      "source_published": "2026-07-11T03:42:17Z",
+      "source_updated": "2026-09-02T15:17:28Z",
+      "summary": "As large language models (LLMs) become widely deployed, their outputs can be copied, transformed, and redistributed at scale without reliable evidence of origin, creating risks for trust, accountability, intellectual property (IP) protection, and high-stakes decision-making. LLM watermarking addresses this problem by embedding detectable signals into text during or after generation. However, existing methods vary in design assumptions, threat models, and evaluation criteria, while deployment choices such as watermark placement, detection authority, and key management affect reliability, security, and scalability. This paper systematizes LLM watermarking as provenance infrastructure for large-scale data ecosystems. We organize existing approaches along four deployment dimensions: insertion point, verification authority, operational state, and transformation threat model, and relate them to the big data requirements of Volume, Velocity, Variety, Veracity, and Value. We further introduce a Big Data Watermarking Readiness framework centered on four deployment workloads: online generation, streaming detection, transformation pipelines, and ecosystem governance. The framework connects these workloads to system-level requirements including throughput, false-positive control, robustness, cross-domain reliability, governance, and downstream utility. Our analysis highlights a gap between benchmark performance and deployment readiness: false positives accumulate at scale, repeated transformations weaken watermark signals, computational overhead can limit online deployment, and centralized verification can create governance bottlenecks. We conclude with an evaluation blueprint and research directions for scalable, trustworthy provenance in big data ecosystems.",
+      "tags": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "LLM Watermarking as Big Data Provenance: A Deployment-Oriented Systematization",
+      "url": "https://arxiv.org/abs/2607.10103v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c87da527346488cfd02e8f86",
+      "context_id": "2c920863b2a480dd5efeb14e",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.8333,
+      "source": "arxiv",
+      "source_published": "2026-01-19T18:15:12Z",
+      "source_updated": "2026-05-02T21:26:30Z",
+      "summary": "Semi-Private Function Evaluation (SPFE) enables joint computation while protecting both input data and the function itself. A practical instantiation is gate-hiding garbled circuits, which conceal gate functionalities while revealing circuit topology. Existing security definitions intentionally exclude leakage through topology, leaving its concrete impact on function privacy largely unexplored. We present a SAT-based function-recovery attack that reconstructs hidden gate operations from a circuit's public topology under two attacker knowledge models. Our approach combines topology-preserving simplification theorems with a decomposition of the recovery task into smaller SAT queries, thereby reducing the candidate gate-type assignment space and improving recovery performance. We evaluate the attack on ISCAS benchmarks, representative secure computation circuits, and fault-tolerant sensor fusion circuits under a 24-hour recovery budget. Compared to a baseline attack, the optimized version substantially reduces recovery time and, in some cases, completes recovery within the evaluation budget where the baseline does not. Our results show that revealing circuit topology can materially assist recovery of hidden gate functionality, identifying topology as a security-relevant leakage channel in gate-hiding garbled circuits.",
+      "tags": [
+        "cs.CR",
+        "cs.LO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Function Recovery Attacks in Gate-Hiding Garbled Circuits using SAT Solving",
+      "url": "https://arxiv.org/abs/2601.13271v4"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "122f76682eca0b200a10e33f",
+      "context_id": "122bed4221c362b0b1af70d9",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-08T05:48:10Z",
+      "source_updated": "2026-09-08T05:48:10Z",
+      "summary": "Agent memory systems must discard stored information when their history exceeds a fixed token budget. Existing budget-accuracy frontiers quantify the resulting loss in accuracy, but do not distinguish irreversible losses caused by eviction from recoverable retrieval failures. We introduce the restore counterfactual, a per-question paired intervention that reinstates the question's gold evidence in the read-time context and reruns the same reader. Combining the change in correctness with whether the evidence was retained after eviction classifies each oracle-answerable error as recoverable, irreversible, or residual; in the residual case, the answer remains incorrect after restoration. We evaluate FIFO, random, redundancy-aware, and LLM-importance eviction on LongMemEval-S at three budgets and under two retrieval regimes, using GPT-4o-mini as the primary reader and judge and GPT-5.4-mini as a robustness reader. Under top-k retrieval at an 80k-token budget, the irreversible share among errors corrected by restoration is 0.67-0.73 for FIFO, random, and redundancy-aware eviction, compared with 0.60 for LLM-importance. At 8k tokens, it reaches 1.00 for all four policies. Recoverable errors occur under top-k retrieval at 80k tokens but are absent under forced-gold injection by construction, so budget-accuracy results are not directly comparable unless the retrieval regime is reported. An exploratory matched-accuracy analysis detects no difference in irreversible rate among accuracy-matched policy pairs at a resolution of 1.2-6 percentage points. The same analysis detects the deliberately destructive control. To our knowledge, this is the first per-item, per-question restore-counterfactual audit of eviction for external agent-memory stores on a standard conversational benchmark.",
+      "tags": [
+        "cs.CL",
+        "cs.AI",
+        "cs.DB"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "What Eviction Destroys: A Restore-Counterfactual Audit of Forgetting in Agent Memory",
+      "url": "https://arxiv.org/abs/2609.08279v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "fb35c343f51e53f842ee9d8b",
+      "context_id": "349767a4ad1bcd66a2d718a7",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.75,
+      "source": "arxiv",
+      "source_published": "2026-09-07T16:33:14Z",
+      "source_updated": "2026-09-07T16:33:14Z",
+      "summary": "Long-form narrative-to-film generation requires shot-level controllability and cross-clip consistency in both visual identity and character behavior-requirements that remain difficult to satisfy with current prompt-based workflows. A core reason existing workflows remain brittle is the lack of a structured intermediate layer between scripts and video models, especially when screenplays are underspecified at key cinematic decision points. We introduce a structured orchestration layer for film-oriented script-to-video generation, implemented as a multi-agent framework that operates between scripts and off-the-shelf video generators. The layer is centered on FilmDSL, a film-oriented domain-specific language that makes cinematic constraints explicit, including shot and camera directives, asset and continuity requirements, and persona cues, so that agents coordinate through a shared structured specification for planning, generation, critique, and repair. Specifically, a generation agent constructs asset packs and storyboard keyframes that anchor composition before clip-by-clip synthesis, while a critic agent produces structured QA signals and triggers targeted refinement without retraining the base model. Experiments on TV-style segments show improved controllability and consistency over text-only and reference-only baselines.",
+      "tags": [
+        "cs.CV",
+        "cs.MA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Better Call CineCrew: Consistent Ultra-Long Narrative-to-Film Generation",
+      "url": "https://arxiv.org/abs/2609.07720v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "e535041b71b1fa46804a4a02",
+      "context_id": "146ca9b2739fdfbd96f26647",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This dataset accompanies &ldquo;Population-scale burden analysis of rare damaging coding variants identifies novel risk genes for Alzheimer&rsquo;s disease and related dementias and Parkinson&rsquo;s disease and related disorders&rdquo; by Le Guen, Pe&ntilde;a-Tauber and colleagues. The release contains 16 gzip-compressed, tab-delimited gene-based burden summary-statistic files covering Alzheimer&rsquo;s disease (AD), Alzheimer&rsquo;s disease and related dementias (ADRD), Parkinson&rsquo;s disease (PD), and Parkinson&rsquo;s disease and related disorders (PDRD); combined-proxy and direct-diagnosis ascertainment; and all-ancestry (ALL) and European-ancestry (EUR) analyses. The files share 61 columns and contain 1,000,189 retained gene/mask analysis rows in total, including nonsignificant results. The four nested masks comprise high-confidence loss-of-function variants alone or together with qualifying missense variants at REVEL thresholds of 0.75, 0.50 or 0.25. The associated manuscript specifies GRCh38 coordinates. The primary discovery analyses are AD combined-proxy ALL and PD combined-proxy ALL. EUR analyses are secondary ancestry analyses; AD-direct and PD-direct are secondary, nested phenotype-sensitivity analyses. All ADRD/PDRD analyses are diagnostic-sensitivity comparisons. Combined-proxy includes direct cases and family-history-only proxy cases, not proxy cases alone. Phenotype definitions and ancestry strata overlap and are not independent replication datasets. The release explicitly separates effect estimation from association evidence. REGENIE-only effect estimates combine compatible binary-outcome burden models from UK Biobank, All of Us and ADSP for AD/ADRD, or UK Biobank, All of Us and AMP-PD for PD/PDRD. Combined-proxy cohort effects use the revised exact common-control mixture-model inversion under kappa=0.5. ADES stage-1 estimates from Holstege et al. (2022) are reported separately because their ordinal summed-dosage model differs from the REGENIE binary-outcome maximum-allele burden model. Eligible ADES and REGENIE results are integrated through effective-sample-size-weighted signed-Z evidence; no ADES-inclusive pooled odds ratio is calculated. Use P_OVERALL or LOG10P_OVERALL for final association evidence, and the BETA_REGENIE, SE_REGENIE and REGENIE odds-ratio/confidence-interval columns for the pooled REGENIE effect estimate. AD/ADRD overall evidence falls back to REGENIE when eligible ADES evidence is unavailable. ADES does not contribute to PD/PDRD. The same ADES source is reused across AD-family comparisons and ancestry strata. The README and column dictionary define all fields, missing-value conventions, numerical precision and interpretation. A public manifest and checksums document all 16 files. The dataset contains aggregate gene-level results, not individual-level genotypes or single-variant summary statistics. Dataset DOI: 10.5281/zenodo.22702628. License selected for this record: Creative Commons Attribution 4.0 International (CC BY 4.0).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Population-scale burden analysis of rare damaging coding variants identifies novel risk genes for Alzheimer's disease and related dementias and Parkinson's disease and related disorders",
+      "url": "https://zenodo.org/records/22702628"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a0fcf41b2b33121d3b5a428e",
+      "context_id": "9c59f0a33d2d540577726023",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7083,
+      "source": "arxiv",
+      "source_published": "2026-09-07T05:06:20Z",
+      "source_updated": "2026-09-07T05:06:20Z",
+      "summary": "Robotic manipulation often requires acting on information that is no longer visible, yet Vision-Language-Action policies are usually evaluated when the current observation largely determines the next action. Existing robotic memory benchmarks expose this gap, but they still rely mainly on final task success and therefore conflate forgetting with manipulation failure. We present \\textbf{MEMOBench}, a benchmark for process level memory evaluation in robotic manipulation. MEMOBench includes 30 history dependent tasks, 1{,}500 expert demonstrations, and 4{,}200 executable checkpoint instances from 84 templates. Each checkpoint pairs coarse to fine language with a simulator predicate and labels one memory operation: Storage, Update, or Compression. These annotations define Memory Storage Rate, Memory Update Rate, and Memory Compression Rate, which measure memory fidelity alongside task success. Across standard and memory augmented VLA policies, the strongest memory module baseline reaches only 31.9\\% average success rate, and high storage often coexists with weak update and compression. Checkpoint language also supervises semantic, contrastive, and framewise memory alignment objectives, yielding modest gains across different memory operations. MEMOBench provides a diagnostic evaluation suite and training supervision for memory grounded robotic policies. The project page is available at https://github.com/Collab-Gen/MEMOBench.",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "MEMOBench: A Process Level Memory Benchmark for Robotic Manipulation",
+      "url": "https://arxiv.org/abs/2609.07047v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "317c3672112d46eceefe56c8",
+      "context_id": "b87632ed1252abfb6b0b62b8",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_published": "2026-09-10",
+      "source_updated": null,
+      "summary": "Modern large language model research agents, commonly marketed under the label deep research, are highly capable at locating sources, verifying claims, and synthesizing existing literature into structured reports. This capability has not translated into a comparable capacity for scientific discovery. We argue that this gap has a specific, testable cause, which we call literature attracti on: the more strongly a generation process is grounded in retrieved literature, the more its outputs converge toward concepts already dominant in that literature, at the expense of novelty. We separate four quantities that are routinely conflated in evaluations of AI research systems: research depth, research novelty, research validity, and research value. We review the current frontier of deep research systems and automated science pipelines, describe the attention-level mechanisms that plausibly cause literature attraction in retrieval-augmented generation, and propose a controlled experimental protocol to measure the novelty-grounding tradeoff dir ectly, using embedding-based and graph-based novelty metrics, a temporal hold-out benchmark, and human expert validation. We then outline an architectural response: a two-stage exploit-then-explore pipeline in which a quality-diversity search process is used to deliberately push hypothesis generation into regions of the concept space that are underrepresented in the retrieved literature, while an adversarial falsification agent constrains the resulting hypotheses to remain scientificall y testable. We close with a proposed output format, the research novelty report, that reports where a generated hypothesis sits relative to existing knowledge rather than asserting that it is novel. This paper is a research proposal and experimental design; it does not claim to have already demonstrated the phenomenon it sets out to measure.",
+      "tags": [
+        "Large Language Models",
+        "Deep Research",
+        "Retrieval-Augmented Generation",
+        "Automated Science"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Escaping the Literature: Exploring New Scientific Ideas with Large Language Models",
+      "url": "https://zenodo.org/records/22700905"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9cf549d4bc020782b9c8186d",
+      "context_id": "83a8d5d2ae48e856867e289b",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-09-02T16:04:07Z",
+      "source_updated": "2026-09-02T16:04:07Z",
+      "summary": "Gaussian-process Bayesian optimization (GP-BO) excels at black-box optimization of costly functions, e.g., hyperparameter optimization (HPO) and multi-agent system (MAS) design. Convergence-rate guarantees exist for select methods, notably GP upper confidence bound (GP-UCB), but require a fixed kernel. Critically, the kernel encodes how input proximity affects objective value similarity. When raw coordinates poorly match this geometry - as with log-scaled hyperparameters or localized peaks - input warping can greatly improve sample efficiency, yet known GP-UCB proofs require a fixed kernel. We propose Finite-Library Input-Warped Bayesian Optimization (FLIWBO), which selects warps from a finite library of smooth input maps by any history-dependent rule. It adapts the input geometry to accelerate learning while retaining high-probability convergence guarantees under mild hypotheses, with an explicit $\\sqrt(N_\\varepsilon)$ library-size cost. Controlled diagnostics show that finite-library warping repairs planted geometry mismatches and identify FLIWBO failure cases. Across four repeated benchmarks - warped synthetic objectives, a confidence-fence trap, and Fashion-MNIST HPO - FLIWBO-UCB beats raw-coordinate GP-UCB under misspecified geometry, escapes traps that defeat even oracle-warp expected improvement, and recovers much of the gain from manual log scaling, while leading the tested methods that admit a matching regret guarantee. A 20-dimensional MAS design study further shows feasibility under costly noisy evaluations. Code for experiments is available: https://github.com/edvin-ketabati/bogp-paper-experiments.",
+      "tags": [
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels",
+      "url": "https://arxiv.org/abs/2609.02993v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4b7affeddb25c8c9f5eb4271",
+      "context_id": "6840a742b09659badb309f82",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "arxiv",
+      "source_published": "2026-06-02T08:21:22Z",
+      "source_updated": "2026-07-01T19:01:29Z",
+      "summary": "Benchmark contamination, where evaluation examples appear in a model's training data, threatens the validity of LLM assessment. Statistical tools for detecting training-data membership exist, but have been validated almost exclusively in controlled academic regimes: large, homogeneous pre-training corpora and transparent, single-stage training pipelines. Whether these methods remain reliable in realistic auditing scenarios remains unclear. We identify two under-studied failure modes: distribution shift, which arises when suspect and validation sets violate the IID assumption, and scale constraints, which arise because benchmarks are orders of magnitude smaller than pre-training corpora. We systematically evaluate three leading paradigms, LLM Dataset Inference, Post-Hoc Dataset Inference, and CoDeC, across 25 models from multiple families (including Pythia, OLMo 2, and specialised cultural and medical LLMs) and scales (up to 27B). We then further extend our analysis to frontier industry models. Across 335 evaluations, only 201 yield correct outcomes. LLM Dataset Inference results in false positives under distribution shift, Post-Hoc Dataset Inference is underpowered at benchmark scale, and CoDeC provides only coarse provenance signals that are insufficient to verify individual benchmark splits. Our results reveal a systematic reliability gap between controlled validation and practical benchmark auditing, and show that statistical detection cannot yet replace transparent data provenance. We open-source our benchmark for further research.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Reliability Gap in Benchmark Auditing: Distribution Shift and Scale as Failure Modes of Contamination Detection",
+      "url": "https://arxiv.org/abs/2606.03305v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f67424fa60c38a9d78c5d54a",
+      "context_id": "e1ec55ef9b5c791d174ef3b5",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.625,
+      "source": "arxiv",
+      "source_published": "2026-09-06T08:41:42Z",
+      "source_updated": "2026-09-06T08:41:42Z",
+      "summary": "Inference-time activation steering enables behavioral control of large language models without parameter modification, while post-training quantization reduces memory and compute costs for deployment. Despite their growing convergence in practice, the interaction between these two techniques remains uncharacterized. We systematically study activation steering under weight-only quantization (INT8 and NF4) across four open-weight 7-9B models and two behavioral targets: judged sentiment and judge-free reasoning length. Using an iso-effect framework that compares capability costs at matched behavioral effect, we find that sentiment steering survives quantization intact. After correcting a GSM8K parser artifact with a uniform v2.3.1 rescore, the pooled INT8 contrast is -0.010 (90% CI [-0.026, +0.007]), descriptively Equivalent under the preregistered three-label rule, while NF4 remains Inconclusive at -0.017 ([-0.067, +0.033]). In contrast, reasoning length exhibits a surprising asymmetric dose-response: lengthening is graded but terminates in cap-runaway and collapse, while shortening is a step function with only 12-30% shortening (model-dependent) before discontinuous failure. We expose a methodological pitfall: the naive iso-effect ladder anchors on the collapse floor for floor-bounded targets, and we introduce a censored construction that restores interpretable crossings. We also quantify a substantial baseline capability shift for Mistral-NF4 (0.545 to 0.365 GSM8K at alpha=0), demonstrating that compression can dominate the steering intervention. Despite this, steering vectors remain highly collinear with their FP16 siblings (cosine similarity 0.989-0.998 for INT8, 0.945-0.990 for NF4), confirming that the behavioral direction survives quantization even when the cost structure does not. All code and data are released.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs",
+      "url": "https://arxiv.org/abs/2609.06473v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c818aaf870ec9d4d33b3bcbb",
+      "context_id": "a454f53f248c26aa9a491df6",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.625,
+      "source": "arxiv",
+      "source_published": "2026-02-02T10:13:18Z",
+      "source_updated": "2026-02-02T10:13:18Z",
+      "summary": "In marine towed-streamer seismic acquisition, the nearest hydrophone is often two hundred meter away from the source resulting in missing near-offset traces, which degrades critical processing workflows such as surface-related multiple elimination, velocity analysis, and full-waveform inversion. Existing reconstruction methods, like transform-domain interpolation, often produce kinematic inconsistencies and amplitude distortions, while supervised deep learning approaches require complete ground-truth near-offset data that are unavailable in realistic acquisition scenarios. To address these limitations, we propose a self-supervised diffusion-based framework that reconstructs missing near-offset traces without requiring near-offset reference data. Our method leverages overlapping patch extraction with single-trace shifts from the available far-offset section to train a conditional diffusion model, which learns offset-dependent statistical patterns governing event curvature, amplitude variation, and wavelet characteristics. At inference, we perform trace-by-trace recursive extrapolation from the nearest recorded offset toward zero offset, progressively propagating learned prior information from far to near offsets. The generative formulation further provides uncertainty estimates via ensemble sampling, quantifying prediction confidence where validation data are absent. Controlled validation experiments on synthetic and field datasets show substantial performance gains over conventional parabolic Radon transform baselines. Operational deployment on actual near-offset gaps demonstrates practical viability where ground-truth validation is impossible. Notably, the reconstructed waveforms preserve realistic amplitude-versus-offset trends despite training exclusively on far-offset observations, and uncertainty maps accurately identify challenging extrapolation regions.",
+      "tags": [
+        "physics.geo-ph",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Propagating the prior from far to near offset: A self-supervised diffusion framework for progressively recovering near-offsets of towed-streamer data",
+      "url": "https://arxiv.org/abs/2602.01909v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "99533d5b4a4b3052bbb2b265",
+      "context_id": "2992ebc53449b78579c4ab47",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.625,
+      "source": "arxiv",
+      "source_published": "2025-10-30T18:21:31Z",
+      "source_updated": "2025-10-30T18:21:31Z",
+      "summary": "AI deployment increasingly resembles a pipeline of data transformation, fine-tuning, and agent interactions rather than a monolithic LLM job; recent examples include RLHF/RLAIF training and agentic workflows. To cope with this shift, we propose FlowMesh, a multi-tenant service fabric that executes and optimizes these workloads as one shared service instead of isolated pipelines. It decomposes workflows into fine-grained operators with recorded lineage, enabling de-duplication of work across users and batching requests on the same hardware while preserving per-workflow provenance. A global control plane maintains a cluster-wide pool of ready operators and uses a single utility function to pick both the batch and the worker, balancing throughput, cost, and data locality on heterogeneous GPUs. The data plane is an elastic fleet of stateless workers backed by a content-addressable store, enabling rapid, automatic scale-out, safe retry after preemption, and portability across managed clusters such as Kubernetes and geo-distributed GPU marketplaces such as Vast.ai. Compared with baseline solutions, FlowMesh achieves up to 3.8x cost reduction and 2.0x lower energy usage, provides a similar or better latency profile, and remains efficient under dynamic and failure-prone conditions.",
+      "tags": [
+        "cs.DC"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "FlowMesh: A Service Fabric for Composable LLM Workflows",
+      "url": "https://arxiv.org/abs/2510.26913v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "abc6b4188cd2a270417d115e",
+      "context_id": "08bf0e5f8a2a725c758a3a43",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "proof certificate",
+        "proof checking"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.7083,
+      "source": "arxiv",
+      "source_published": "2019-03-29T20:53:37Z",
+      "source_updated": "2023-05-17T13:39:24Z",
+      "summary": "Modern advances in general-purpose computer algebra systems offer solutions to a variety of problems, which in the past required substantial time investments by trained mathematicians. An excellent example of such development are the Clifford algebras. The main objective of the paper is to demonstrate an utterly algorithmic construction of a Clifford algebra matrix algebra representation of a non-degenerate signature (p, q). While this is not the most economical way of implementation, it offers a transparent mechanism of translation between a Clifford algebra and its faithful real-valued matrix representation and can be used for automated proof checking. This representation is used to derive an algorithm for the computation of an arbitrary multivector inverse as a proof certificate. The proposed algorithm is a mapping of the Faddeev--LeVerrier--Souriau algorithm for computation of the characteristic polynomial of matrices.",
+      "tags": [
+        "math.RA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Symbolic Algorithm for Computation of Non-degenerate Clifford Algebra Matrix Representations",
+      "url": "https://arxiv.org/abs/1904.00084v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "8c3b24c33d95038d537f6388",
+      "context_id": "f842cd4102eaccb67e4aa6a6",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.1667,
+      "source": "zenodo",
+      "source_published": "2026-09-09",
+      "source_updated": null,
+      "summary": "This repository provides the supplementary materials and reproducibility package for the manuscript &ldquo;Spatial&ndash;Temporal Hedging in Cross-Border Logistics under Heterogeneous Evidence Quality: A Wasserstein DRO Approach.&rdquo; The repository contains the computational inputs, scenario data, experimental results, source code, and supplementary numerical outputs used in the study. It includes materials for the baseline experiments, credibility and ambiguity-radius sensitivity analyses, out-of-sample evaluations, spatial&ndash;temporal hedging ablation experiments, rolling-information tests, and computational scalability analysis. The materials are provided to support transparency, verification, and reproducibility of the numerical experiments reported in the manuscript.",
+      "tags": [
+        "Supply chain management",
+        "Distributionally Robust Optimization",
+        "Wasserstein DRO",
+        "Cross-Border Logistics",
+        "Spatial–Temporal Hedging",
+        "Credibility-Heterogeneous DRO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Data and Code for \"Spatial–Temporal Hedging in Cross-Border Logistics under Heterogeneous Evidence Quality: A Wasserstein DRO Approach\"",
+      "url": "https://zenodo.org/records/22681277"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c1aea7e8e989efb57a22bd78",
+      "context_id": "1f520489e1e7fe8fedd3ed62",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "benchmark",
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.1667,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "Reliability Beyond Accuracy in Crop Classification Benchmarks (Supplementary Materials) Introduction: Near-perfect crop-label accuracy can conceal uncertainty, perturbation sensitivity, and weak explanations. This study evaluates these reliability dimensions without treating benchmark classification as agronomic recommendation. Materials and Methods: Ten classifiers were evaluated using five matched stratified fitting, validation, and test partitions on a 2,200-record crop-label benchmark and an independent 3,810-record rice-grain benchmark. A Calibrated Selective Forest combined Random Forest, validation-fitted temperature scaling, and confidence-based abstention. Analyses included feature and component ablations, probability calibration, Gaussian input perturbations, computational cost, and explanation fidelity. Results: Mean crop-label accuracy was 99.59% for Random Forest, 99.23% for XGBoost, and 98.32% for FT-Transformer. Random Forest calibration reduced mean expected calibration error from 0.0449 to 0.0038. At a 0.95 threshold, calibrated selection retained 98.59% of predictions with 0.091% mean selective error. Under perturbations of 0.20 training standard deviations, its accuracy fell to 86.96% and selective error rose to 4.29%. On rice grains, Random Forest accuracy was 91.71%, and calibration did not improve every probability metric. Local explanation rankings were often stable despite a median neighborhood weighted R&sup2; of 0.293 under the specified local interpretable model-agnostic explanations (LIME) configuration. Conclusions: Accuracy, calibration, selective reliability, and explanation fidelity are distinct properties. The composite pipeline provides an auditable benchmark procedure, not a new learning algorithm or a validated farm recommendation system. Geographic and temporal agronomic validation remain necessary.",
+      "tags": [
+        "crop classification",
+        "benchmark reliability",
+        "probability calibration",
+        "selective prediction",
+        "explainable artificial intelligence",
+        "robustness",
+        "Python"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reliability Beyond Accuracy in Crop Classification Benchmarks (Supplementary Materials)",
+      "url": "https://zenodo.org/records/22704262"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "69e895368f9a2209cc058476",
+      "context_id": "ff841cff1b162ebec3ae45be",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.8333,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "Code, frozen configurations, leakage-aware split manifests, lightweight run records, statistical tables, figure source data, and checksums for a three-dataset open-set bearing-fault diagnosis benchmark. Third-party raw vibration data and trained model checkpoints are not redistributed.",
+      "tags": [
+        "bearing fault diagnosis",
+        "open-set recognition",
+        "single-source domain generalization",
+        "benchmark reproducibility",
+        "uncertainty calibration"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reproducibility package for Open-Set Bearing-Fault Diagnosis Rankings Across Datasets",
+      "url": "https://zenodo.org/records/22704640"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0c0226f543caedf875311d15",
+      "context_id": "88f8f1e7057ab2b0e4ee7c2d",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-08-30T07:13:10Z",
+      "source_updated": "2026-08-30T07:13:10Z",
+      "summary": "Across industries, machine-learning systems support applications ranging from prediction and anomaly detection to forecasting, optimization, and scheduling, yet operationalizing these systems requires coordinating application development, model pipelines, cloud infrastructure, security, deployment, monitoring, retraining, recovery, and rollback. We present an evidence-gated multi-agent framework for transforming a natural-language MLOps cloud engineering task into a verified repository and operational cloud deployment. The framework combines graph engineering, loop engineering, and agent harness engineering. A stateful Graph Orchestrator coordinates specialized agents for repository generation, review, execution, verification, release, and monitoring while governing workflow dependencies, evidence gates, retry bounds, recovery paths, and termination. Consequential lifecycle transitions proceed only when their required predicates are supported by verifiable execution or runtime evidence. Verification failures activate bounded reflection, repair, and re-verification, while runtime evidence of failure, drift, degradation, or policy violation can trigger bounded adaptation, recovery, or rollback. Agent harness engineering constrains repository generation, review, and repair, artifact execution, and cloud operations through controlled capabilities and isolated execution environments. We realize the framework on Google Cloud Platform and evaluate repository completeness, controlled execution, evidence-gated transitions, cloud promotion, and bounded recovery. Our experimental results show that the framework prevents unsupported lifecycle transitions and drives each run toward either a verified operational deployment or an auditable terminal failure.",
+      "tags": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Forward-Deployed Full-Stack Engineering for Autonomous Cloud MLOps",
+      "url": "https://arxiv.org/abs/2608.29615v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a189ea46b1f08ec79142a690",
+      "context_id": "201e4e7fa90d481ad4e1aa71",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_published": "2026-09-07T00:20:54Z",
+      "source_updated": "2026-09-07T00:20:54Z",
+      "summary": "Automated experimentation is most effective when the observables, available actions, and objective are defined before the experiment starts, as is the case for Bayesian optimization. However, in many exploratory experiments, the variables that describe the sample must be extracted from the data, new operations emerge during the experiments, and the instrument budget is too small to learn the problem by trials. Here we introduce the Scanning Probe Agentic Research Cycle (SPARC) framework, in which a coding agent and a human operator share one microscope, one notebook, and two persistent memory files. FINDINGS.md stores graded conclusions about the experiment, whereas PITFALLS.md records learned failure modes of analysis and instrument. We apply SPARC to reconfigure the in-plane superdomain direction of a (111)-oriented PbZr0.2Ti0.8O3 film. In an operator-supervised campaign, the agent reanalyzed earlier manual measurements and developed an oriented lattice of stationary bias pulses with alternating polarity to reconfigure the superdomain direction. In a subsequent agent-controlled campaign, PITFALLS.md entries were compiled into checks that validate a design before any write. The experiments showed that spatial polarity alternation, instead of the exact matching between the lattice and lamellar periods, determines directional selection. Combining a raster scan with a masked pulse lattice printed the letters UTK into the superdomain orientation. The campaign also identified practical requirements for agentic experimentation where physical verification of instrument execution, the conditions under which stored findings remain valid, validation of new observables on instrument data, and robust control protocols.",
+      "tags": [
+        "cond-mat.mtrl-sci",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Human-agent discovery of reconfigurable in-plane ferroelectric superdomain control",
+      "url": "https://arxiv.org/abs/2609.06887v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9063749e4bf6a0ce5f2e9708",
+      "context_id": "8aae5085a24f1c9ca9c84a55",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.75,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "Python package and command-line tool that estimates the share of variance in an antimicrobial resistance phenotype carried by the lineages of a bacterial collection, from a lineage label and a susceptibility call or a recorded dilution, and refuses the estimate where the collection cannot support one. One collection admits three quantities and the package reports them apart: the lineage-membership share, what a rule scored out of sample reaches, with a lineage bootstrap; the design-corrected component ratio of the same collection, with an interval exact under the Gaussian one-way model by inversion of a noncentral F; and the superpopulation share for the species, with a chi-square layer on the number of lineages. Each is scored against its own truth on 135 simulated cells from five lineages to a thousand, and each sits behind a gate that refuses where the collection cannot identify the quantity or the residuals contradict the law the interval assumes, the coverage of each having been measured. A binary share is restated on the latent scale of the threshold model beside the observed scale. The lineage label may be a sequence type, a core-genome or SNP cluster, or a serovar, so the same estimate can be read at two typing resolutions. For a difference in non-wild-type prevalence between two collections it applies the Kitagawa decomposition to split the difference into a lineage-composition component and a within-lineage rate component, with a shared-support gate calibrated against measured interval coverage, a test for lineage labels that are differentially and informatively missing, and Benjamini-Yekutieli control within each component family of the antimicrobial panel, valid whatever the dependence between agents. Ships a Streptococcus suis case study (677 isolates, 650 porcine and 27 human, with full data provenance) read at population-cluster and at sequence-type resolution, together with a 720,000-decomposition calibration study and a head-to-head comparison against lineage-adjusted logistic regression. The package reads two tables and never a genome. A susceptibility panel is read at its recorded resolution: a dichotomised call and a recorded dilution are both intervals on the log2 concentration scale and enter one interval likelihood, so the input mode changes how much an observation carries rather than what is estimated. The interval is exact where every reading is a point and calibrated by simulation where a reading is an interval, and the tested wells are taken from the recorded values unless the panel is supplied. Each share carries an e-value; a run that declares the intake each isolate arrived in also carries the running product over intakes, a test supermartingale that may be read after any intake, with the panel decision taken on the log scale so that evidence too strong for a float is still evidence. False-discovery control across the panel holds under arbitrary dependence. The attribution is exercised outside the shipped cohorts on fifty organisms of one NCBI Pathogen Detection release, each taken at the release accession the retrieval recorded: every agent of every cohort that reaches the estimator leaves one record, estimated or refused with the condition that failed, 192 cells are estimated in twelve species and 44 admitted by the support gate in six, and every cell carries a permuted-label control. The Streptococcus suis cohort is read at three definitions of a lineage, population cluster, serotype and sequence type, with the reference label rerun on each other label's own isolates so that the label is separated from the collection. A veterinary arm cuts the same source by host species and by sampling matrix and runs every cell at two definitions of a lineage, the Pathogen Detection SNP cluster and the serovar, with the permuted-label control at both. The pair is reported rather than one number, because the share a cohort carries is a function of the resolution at which a lineage is defined, and a laboratory ",
+      "tags": [
+        "bioinformatics",
+        "antimicrobial resistance",
+        "veterinary surveillance",
+        "variance component",
+        "population structure",
+        "typing resolution",
+        "intraclass correlation",
+        "prevalence decomposition",
+        "Kitagawa decomposition",
+        "interval-censored MIC",
+        "anytime-valid inference",
+        "Streptococcus suis",
+        "serovar",
+        "NCBI Pathogen Detection",
+        "reproducible research"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "amr-clonalshare: measuring how much of antimicrobial resistance travels with the clone",
+      "url": "https://zenodo.org/records/22703867"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b494fb0c170cba1ffd921f28",
+      "context_id": "489c3c626e987e432f4fdc17",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.75,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "Calibration release: the package's no-shipped-coefficients policy finally comes with the tool that closes the loop. Every shipped set carries the caveat that lever arms depend on material, mode pair, excitation and substrate; calibrate_lever_arms turns reference measurements you control -- a strain-stage sweep, a gated sweep, any points with known (strain, density) -- into your own fitted coefficient matrix, with uncertainties and provenance. New in ramansep.calibration calibrate_lever_arms : weighted least-squares fit of the (m, 2) lever-arm matrix, one linear problem per mode on the shared reference design. With shift sigmas the parameter covariance is the exact known-noise Gauss-Markov result and a per-mode chi-square consistency check comes back with it; without sigmas the covariance uses the residual variance, which is why that path refuses fewer than three reference points instead of inventing an error bar. Identifiability refused, not fudged : reference states collinear in the (strain, density) plane (a strain-only sweep, or gating that strains proportionally) cannot separately determine the two arms of any mode -- the fit raises with an explanation instead of returning one of infinitely many minimizers. CalibrationResult.coefficients() packages a two-mode calibration as a ModeCoefficients with a MANDATORY provenance string; result.K feeds MultiModeModel directly for m &gt; 2. Anchors (asserted in the tests, not stated) Noise-free shifts from a known matrix are recovered to machine precision, with zero estimated uncertainty. The hand-built normal-equation solution agrees with an independent QR solve ( numpy.linalg.lstsq on the whitened system) to 1e-10. The orthogonal unit design {(1,0), (0,1)} with unit sigmas has EXACTLY the identity parameter covariance -- the closed form, not an approximation. Seeded Monte-Carlo scatter of the fitted arms matches the reported sigmas. Degenerate and malformed reference sets raise (collinear designs, n = 1, n = 2 without sigmas, non-positive sigmas, non-finite shifts). The full round trip -- calibrate on synthetic references, package the coefficients, invert forward-generated maps through SeparationModel -- returns the input strain and density maps to 1e-10. 50 tests across Python 3.9-3.13. Install: pip install -U ramansep .",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "ramansep: two-mode separation of strain and carrier density in 2D-material Raman maps",
+      "url": "https://zenodo.org/records/22704679"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c7f9921da6724168d5d85463",
+      "context_id": "dc19d0181915fb61a61e41e8",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2026-09-09T08:29:16Z",
+      "source_updated": "2026-09-09T08:29:16Z",
+      "summary": "Existing evaluation frameworks mostly assess only one part of AI agents, such as task completion (AgentBench) or security robustness (AgentDojo, ASB), rather than the complete pipeline of planning, tool selection, tool execution, memory and reasoning. Failures can occur at any stage, yet existing benchmarks rarely identify their precise source. AgentAudit evaluates the entire execution trace across ten capability, grounding, security and behavioural dimensions, namely instruction integrity, planner, memory, tool selection, tool invocation, tool correctness, alignment, tool faithfulness, security and execution integrity, combined with behavioural classification and failure attribution to pinpoint the exact stage responsible for an observed failure. AgentAudit can evaluate any LLM-based AI agent, since it attaches to the agent instead of replacing it. It reads only the recorded execution trace and does not interfere with how the agent runs, so it places no constraint on the agent's internal implementation. We evaluate five language models (OpenAI GPT-5, Claude Sonnet 5, Sarvam 105B, Llama 3.3 70B and Gemini 2.5 Flash) across nine capability and adversarial tasks. Claude Sonnet 5 and GPT-5 obtain the highest mean Composite Trust Scores (95.1 and 80.6 out of 100, respectively), while Sarvam 105B, Llama 3.3 70B and Gemini 2.5 Flash trail substantially (57.6, 45.7 and 22.6). All traces were scored by a single fixed judge model, which was itself one of the evaluated models, a limitation discussed in Section VII.E. More importantly, models with similar task-completion behaviour can diverge sharply in trustworthiness, as several non-frontier models are repeatedly classified Unsafe_Compliance on adversarial tasks rather than merely failing them, a distinction that pass/fail benchmarks cannot surface.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "AgentAudit: An Open, Extensible Framework for Full-Lifecycle Trust Evaluation of AI Agents",
+      "url": "https://arxiv.org/abs/2609.09875v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "819c47307fcc893d8e66bd6e",
+      "context_id": "385878b776027912752f3162",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_published": "2026-03-18T16:06:21Z",
+      "source_updated": "2026-03-18T16:06:21Z",
+      "summary": "Large language models (LLMs) are trained through multi-stage pipelines over heterogeneous data sources, yet developers lack a principled way to pinpoint the specific data responsible for an observed behavior. This lack of observability reduces debugging to reactive patching and makes failures prone to recur under distribution shift or subsequent model updates. To address this limitation, we propose DebugLM, a framework that equips LLMs with built-in data provenance, enabling them to explicitly trace the origins of their behaviors to specific training data sources. Specifically, the model learns to associate its responses with unique provenance tags that indicate the responsible dataset, empowering developers to precisely identify where undesirable behaviors are learned. Building on this capability, DebugLM further supports targeted test-time remediation, enabling developers to selectively trigger targeted refusal for specified data sources without retraining or modifying model parameters. Experiments demonstrate that DebugLM provides accurate behavior tracing in multi-stage training pipelines and effective test-time remediation while preserving the general utility of the model.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "DebugLM: Learning Traceable Training Data Provenance for LLMs",
+      "url": "https://arxiv.org/abs/2603.17884v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9a57e1bbf42e06872f604262",
+      "context_id": "60d13342ab8a6315f835da88",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.6667,
+      "source": "arxiv",
+      "source_published": "2026-09-05T02:56:47Z",
+      "source_updated": "2026-09-05T02:56:47Z",
+      "summary": "World models promise a general route to embodied intelligence: learn predictive dynamics once, then reason, plan, and act with them. Increasingly, the representations beneath such models are pretrained on large-scale video, interaction, and multimodal corpora, which raises a question prediction quality alone cannot answer: when is a learned representation actually actionable? We identify a failure mode we call counterfactual collapse: a model predicts visually plausible futures while failing to distinguish interventions with different behavioral consequences. This arises whenever a representation is optimized for perceptual similarity rather than intervention structure, which is precisely the objective under which most large-scale pretrained encoders are learned. We introduce Counterfactual Latent World Models (CLWM), which combine a recurrent belief-state encoder, action-conditioned latent dynamics, and a contrastive counterfactual objective that separates futures induced by distinct interventions even when their observations look alike. Across occluded manipulation, aliased navigation, and long-horizon manipulation, CLWM improves planning success over the strongest baseline (65.1% $\\to$ 74.6% on Occluded Push and 67.3% $\\to$ 78.9% on Aliased Maze) and reduces exploitative planning failures (18.4% $\\to$ 9.7% on Deferred Kitchen), with ablations attributing the gains to hard counterfactual negatives, especially perceptual-alias negatives. Finally, our counterfactual separability metric, which tracks planning success across the five baseline model classes ($r \\ge 0.94$), is representation-agnostic: given intervention-outcome labels, it can audit any encoder, pretrained or trained from scratch, before a planner trusts it. We do not yet measure it on large-scale pretrained encoders. Here we establish the metric and its relationship to planning success for world models trained from scratch.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Learning Counterfactual World Models for Embodied Reasoning under Partial Observability",
+      "url": "https://arxiv.org/abs/2609.05834v1"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan"
+}
