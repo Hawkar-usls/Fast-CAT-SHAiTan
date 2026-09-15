@@ -6,6 +6,7 @@
   "required_reviewers": 2,
   "submission_protocol_file": "experiments/pilot_001/independent_review_submission_protocol.json",
   "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+  "submission_protocol_canonical_sha256": "645db2a129c42d5220cd34e9f7da81366e446ddf524be9ad47e6687690a92cac",
   "consensus_policy_file": "experiments/pilot_001/multi_reviewer_consensus_protocol.json",
   "consensus_policy_schema": "Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0",
   "collection_states": {
@@ -69,5 +70,5 @@
   "software_fixture_policy": "CI may synthesize reviewer bundles only to test collection-state transitions and fail-closed checks. Synthetic bundles are never real reviewer submissions or biological evidence.",
   "current_real_data_status": "NO_REAL_REVIEWER_COLLECTION_RECEIVED",
   "independent_frame_level_estimate_established": false,
-  "claim_ceiling": "This protocol establishes a machine-verifiable pre-consensus collection boundary only. READY_FOR_CONSENSUS means the supplied artifacts are structurally and cryptographically admissible for the frozen consensus implementation; it does not prove human independence, CatFACS competence, EAD onset truth, mimicry, feline latency, population-level behavior, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+  "claim_ceiling": "This protocol establishes a machine-verifiable pre-consensus collection boundary only. READY_FOR_CONSENSUS means the supplied artifacts are structurally and cryptographically admissible for the exact frozen submission protocol and consensus implementation; it does not prove human independence, CatFACS competence, EAD onset truth, mimicry, feline latency, population-level behavior, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
 }
