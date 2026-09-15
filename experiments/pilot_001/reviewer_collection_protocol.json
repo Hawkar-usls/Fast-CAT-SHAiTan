@@ -1,22 +1,22 @@
 {
-  "schema": "Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.0",
+  "schema": "Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.1",
   "experiment_id": "PILOT_001",
   "source_id": "commons_hugging_2019",
-  "purpose": "admit zero, one, or multiple externally completed blinded reviewer bundles into a fail-closed collection receipt before the frozen unanimous multi-reviewer consensus gate",
+  "purpose": "admit zero, one, or multiple externally completed blinded reviewer bundles bound to transport-independent canonical package content into a fail-closed collection receipt before the frozen unanimous multi-reviewer consensus gate",
   "required_reviewers": 2,
   "submission_protocol_file": "experiments/pilot_001/independent_review_submission_protocol.json",
-  "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+  "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2",
   "consensus_policy_file": "experiments/pilot_001/multi_reviewer_consensus_protocol.json",
   "consensus_policy_schema": "Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0",
   "collection_states": {
     "WAITING_FOR_FIRST_REVIEWER": "no admissible reviewer bundle has been received; this is an expected external-dependency state, not a software failure",
     "WAITING_FOR_SECOND_REVIEWER": "exactly one admissible reviewer bundle has been received; consensus remains blocked",
-    "READY_FOR_CONSENSUS": "at least two admissible distinct reviewer bundles are bound to the frozen package and the consensus core preflight passes",
-    "INVALID_COLLECTION": "one or more submitted artifacts fail integrity, attestation, package-binding, verifier-binding, reviewer-distinctness, or consensus-core preflight checks"
+    "READY_FOR_CONSENSUS": "at least two admissible distinct reviewer bundles are bound to the exact canonical blinded package content and the consensus core preflight passes",
+    "INVALID_COLLECTION": "one or more submitted artifacts fail integrity, attestation, content-identity, package-binding, verifier-binding, reviewer-distinctness, or consensus-core preflight checks"
   },
   "per_bundle_admission": {
     "analysis_status_pass_required": true,
-    "exact_frozen_package_binding_required": true,
+    "transport_independent_exact_package_content_binding_required": true,
     "submission_integrity_required": true,
     "verifier_status_pass_required": true,
     "independent_verifier_replay_required": true,
@@ -30,14 +30,16 @@
     "analysis_attestation_canonical_sha256_binding_required": true,
     "analysis_attestation_verifier_completed_review_form_sha256_binding_required": true,
     "analysis_and_verifier_frame_manifest_must_equal_frozen_package": true,
-    "attestation_package_digest_must_equal_frozen_package": true,
+    "attestation_analysis_verifier_content_identity_hashes_must_equal_frozen_package": true,
     "attestation_blank_form_sha256_must_equal_frozen_package": true,
+    "outer_transport_sha256_equality_required": false,
     "single_bundle_replayed_through_consensus_validation_core": true
   },
   "cross_reviewer_admission": {
     "distinct_reviewer_ids_required": true,
     "distinct_attestation_hashes_required": true,
     "completed_review_form_hashes_may_match": true,
+    "different_outer_transport_hashes_may_both_be_valid": true,
     "reason_completed_review_form_hashes_may_match": "two genuinely independent reviewers can legitimately produce byte-identical completed CSV files when every categorical label and review_notes field are identical; forcing inequality would create a false independence criterion",
     "full_consensus_core_preflight_required_before_ready_state": true,
     "disagreement_is_not_an_admission_failure": true,
@@ -45,7 +47,7 @@
   },
   "independence_semantics": {
     "software_can_establish": [
-      "exact blinded-package artifact lineage",
+      "exact canonical blinded-package content identity",
       "exact frame-manifest lineage",
       "completed review form hash binding across attestation, analysis and verifier",
       "canonical attestation identity",
@@ -64,10 +66,16 @@
     ],
     "human_independence_proven_by_software": false
   },
+  "transport_semantics": {
+    "original_actions_artifact_is_origin_provenance": true,
+    "original_actions_artifact_is_sole_admission_authority": false,
+    "byte_distinct_repacked_or_mirrored_transport_may_be_admitted": true,
+    "canonical_package_content_must_match_exactly": true
+  },
   "waiting_state_exit_semantics": "WAITING_FOR_FIRST_REVIEWER and WAITING_FOR_SECOND_REVIEWER are successful machine states that preserve an unmet external dependency; they must not be converted into INVALID_COLLECTION or a fabricated biological result",
   "invalid_state_semantics": "INVALID_COLLECTION is fail-closed and must block consensus until the invalid artifacts are replaced or corrected without mutating any already frozen valid submission",
   "software_fixture_policy": "CI may synthesize reviewer bundles only to test collection-state transitions and fail-closed checks. Synthetic bundles are never real reviewer submissions or biological evidence.",
   "current_real_data_status": "NO_REAL_REVIEWER_COLLECTION_RECEIVED",
   "independent_frame_level_estimate_established": false,
-  "claim_ceiling": "This protocol establishes a machine-verifiable pre-consensus collection boundary only. READY_FOR_CONSENSUS means the supplied artifacts are structurally and cryptographically admissible for the frozen consensus implementation; it does not prove human independence, CatFACS competence, EAD onset truth, mimicry, feline latency, population-level behavior, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
+  "claim_ceiling": "This protocol establishes a machine-verifiable pre-consensus collection boundary only. READY_FOR_CONSENSUS means supplied artifacts are structurally and cryptographically admissible for the frozen consensus implementation and are bound to the exact canonical blinded-package content; it does not prove human independence, CatFACS competence, EAD onset truth, mimicry, feline latency, population-level behavior, or INDEPENDENT_FRAME_LEVEL_ESTIMATE."
 }

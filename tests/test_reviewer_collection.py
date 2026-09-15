@@ -1,4 +1,3 @@
-import copy
 import unittest
 
 from fastcat.review_consensus import canonical_sha256
@@ -6,22 +5,29 @@ from fastcat.reviewer_collection import build_reviewer_collection_receipt
 from tests.test_review_consensus import make_bundle, policy
 
 
+CONTENT_IDENTITY_SHA = "c" * 64
+PACKAGE_MANIFEST_SHA = "p" * 64
+FILES_PAYLOAD_SHA = "d" * 64
+
+
 def collection_policy():
     return {
-        "schema": "Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.0",
+        "schema": "Fast-CAT/PILOT-001/reviewer-collection-protocol/v1.1",
         "required_reviewers": 2,
-        "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+        "submission_protocol_schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2",
         "consensus_policy_schema": "Fast-CAT/PILOT-001/multi-reviewer-consensus-protocol/v1.0",
     }
 
 
 def submission_protocol():
     return {
-        "schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+        "schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2",
         "source_id": "commons_hugging_2019",
         "expected_blinded_package": {
             "frame_manifest_file_sha256": "f" * 64,
-            "workflow_artifact_digest": "sha256:" + "e" * 64,
+            "content_identity_file_sha256": CONTENT_IDENTITY_SHA,
+            "package_manifest_file_sha256": PACKAGE_MANIFEST_SHA,
+            "files_payload_sha256": FILES_PAYLOAD_SHA,
             "blank_review_form_sha256": "b" * 64,
         },
     }
@@ -35,9 +41,32 @@ def consensus_policy():
 
 def admissible_bundle(reviewer_id):
     bundle = make_bundle(reviewer_id)
-    form_sha = bundle["attestation"]["completed_review_form_sha256"]
-    bundle["analysis"]["completed_review_form_sha256"] = form_sha
-    bundle["verifier"]["review_form_sha256"] = form_sha
+    attestation = bundle["attestation"]
+    attestation["schema"] = "Fast-CAT/PILOT-001/reviewer-attestation/v1.1"
+    attestation.pop("blinded_package_artifact_digest", None)
+    attestation["blinded_package_content_identity_file_sha256"] = CONTENT_IDENTITY_SHA
+    attestation["blinded_package_manifest_sha256"] = PACKAGE_MANIFEST_SHA
+    attestation["blinded_package_files_payload_sha256"] = FILES_PAYLOAD_SHA
+    attestation["blank_review_form_sha256"] = "b" * 64
+    attestation["blinded_package_transport_sha256"] = "a" * 64
+
+    form_sha = attestation["completed_review_form_sha256"]
+    analysis = bundle["analysis"]
+    analysis["schema"] = "Fast-CAT/PILOT-001/independent-review-ingestion/v1.2"
+    analysis["completed_review_form_sha256"] = form_sha
+    analysis["reviewer_attestation_sha256"] = canonical_sha256(attestation)
+    analysis["blinded_package_content_identity_file_sha256"] = CONTENT_IDENTITY_SHA
+    analysis["blinded_package_manifest_sha256"] = PACKAGE_MANIFEST_SHA
+    analysis["blinded_package_files_payload_sha256"] = FILES_PAYLOAD_SHA
+    analysis["transport_independent_package_content_binding_established"] = True
+
+    verifier = bundle["verifier"]
+    verifier["schema"] = "Fast-CAT/PILOT-001/independent-review-verifier/v1.1"
+    verifier["review_form_sha256"] = form_sha
+    verifier["blinded_package_content_identity_file_sha256"] = CONTENT_IDENTITY_SHA
+    verifier["blinded_package_manifest_sha256"] = PACKAGE_MANIFEST_SHA
+    verifier["blinded_package_files_payload_sha256"] = FILES_PAYLOAD_SHA
+    verifier["transport_independent_package_content_binding_replayed"] = True
     return bundle
 
 
@@ -74,6 +103,11 @@ class ReviewerCollectionTests(unittest.TestCase):
         self.assertEqual(report["collection_state"], "READY_FOR_CONSENSUS")
         self.assertTrue(report["consensus_admission_ready"])
         self.assertEqual(report["consensus_core_preflight_status"], "PASS")
+        self.assertEqual(
+            report["package_binding_authority"],
+            "transport_independent_canonical_content_identity",
+        )
+        self.assertFalse(report["outer_transport_sha256_equality_required"])
         self.assertFalse(report["independent_frame_level_estimate_established"])
 
     def test_duplicate_reviewer_id_fails_closed(self):
@@ -143,18 +177,33 @@ class ReviewerCollectionTests(unittest.TestCase):
         self.assertEqual(report["completed_review_form_hash_collision_count"], 1)
         self.assertFalse(report["completed_review_forms_must_be_distinct"])
 
-    def test_tampered_package_digest_fails_closed(self):
+    def test_tampered_content_identity_fails_closed(self):
         bundle = admissible_bundle("reviewer-A")
-        bundle["attestation"]["blinded_package_artifact_digest"] = "sha256:" + "0" * 64
+        bundle["attestation"]["blinded_package_content_identity_file_sha256"] = "0" * 64
         bundle["analysis"]["reviewer_attestation_sha256"] = canonical_sha256(
             bundle["attestation"]
         )
         report = receipt([bundle])
         self.assertEqual(report["status"], "FAIL")
         self.assertIn(
-            "REVIEW_0:ATTESTATION_PACKAGE_DIGEST_MISMATCH",
+            "REVIEW_0:ATTESTATION_CONTENT_IDENTITY_FILE_SHA256_MISMATCH",
             report["failures"],
         )
+
+    def test_different_outer_transports_are_allowed(self):
+        first = admissible_bundle("reviewer-A")
+        second = admissible_bundle("reviewer-B")
+        first["attestation"]["blinded_package_transport_sha256"] = "1" * 64
+        second["attestation"]["blinded_package_transport_sha256"] = "2" * 64
+        first["analysis"]["reviewer_attestation_sha256"] = canonical_sha256(
+            first["attestation"]
+        )
+        second["analysis"]["reviewer_attestation_sha256"] = canonical_sha256(
+            second["attestation"]
+        )
+        report = receipt([first, second])
+        self.assertEqual(report["status"], "PASS")
+        self.assertEqual(report["collection_state"], "READY_FOR_CONSENSUS")
 
 
 if __name__ == "__main__":

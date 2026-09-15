@@ -6,8 +6,10 @@ from typing import Any
 from fastcat.review_consensus import build_consensus_report, canonical_sha256
 
 
-ATTESTATION_SCHEMA = "Fast-CAT/PILOT-001/reviewer-attestation/v1.0"
-COLLECTION_SCHEMA = "Fast-CAT/PILOT-001/reviewer-collection/v1.0"
+ATTESTATION_SCHEMA = "Fast-CAT/PILOT-001/reviewer-attestation/v1.1"
+ANALYSIS_SCHEMA = "Fast-CAT/PILOT-001/independent-review-ingestion/v1.2"
+VERIFIER_SCHEMA = "Fast-CAT/PILOT-001/independent-review-verifier/v1.1"
+COLLECTION_SCHEMA = "Fast-CAT/PILOT-001/reviewer-collection/v1.1"
 
 
 def _prefixed(index: int, code: str) -> str:
@@ -27,6 +29,10 @@ def _validate_attestation_semantics(
 
     if attestation.get("schema") != ATTESTATION_SCHEMA:
         failures.append(_prefixed(index, "ATTESTATION_SCHEMA_MISMATCH"))
+    if analysis.get("schema") != ANALYSIS_SCHEMA:
+        failures.append(_prefixed(index, "ANALYSIS_SCHEMA_MISMATCH"))
+    if verifier.get("schema") != VERIFIER_SCHEMA:
+        failures.append(_prefixed(index, "VERIFIER_SCHEMA_MISMATCH"))
     if not str(attestation.get("reviewer_id", "")).strip():
         failures.append(_prefixed(index, "REVIEWER_ID_MISSING"))
     if attestation.get("independent_of_fastcat_model_evidence_before_label_freeze") is not True:
@@ -39,6 +45,13 @@ def _validate_attestation_semantics(
         failures.append(_prefixed(index, "ATTESTATION_CATFACS_COMPETENCE_BASIS_MISSING"))
     if not str(attestation.get("review_completed_utc", "")).strip():
         failures.append(_prefixed(index, "ATTESTATION_REVIEW_COMPLETED_UTC_MISSING"))
+
+    transport = str(attestation.get("blinded_package_transport_sha256", "")).strip()
+    if transport and (
+        len(transport) != 64
+        or any(c not in "0123456789abcdefABCDEF" for c in transport)
+    ):
+        failures.append(_prefixed(index, "ATTESTATION_TRANSPORT_SHA256_INVALID"))
 
     analysis_form_sha = str(analysis.get("completed_review_form_sha256", ""))
     attestation_form_sha = str(attestation.get("completed_review_form_sha256", ""))
@@ -60,15 +73,44 @@ def _validate_attestation_semantics(
     if str(verifier.get("frame_manifest_file_sha256", "")) != expected_manifest_sha:
         failures.append(_prefixed(index, "VERIFIER_FRAME_MANIFEST_NOT_FROZEN_PACKAGE"))
 
-    if str(attestation.get("blinded_package_artifact_digest", "")) != str(
-        expected.get("workflow_artifact_digest", "")
-    ):
-        failures.append(_prefixed(index, "ATTESTATION_PACKAGE_DIGEST_MISMATCH"))
+    bindings = (
+        (
+            "blinded_package_content_identity_file_sha256",
+            "content_identity_file_sha256",
+            "CONTENT_IDENTITY_FILE_SHA256",
+        ),
+        (
+            "blinded_package_manifest_sha256",
+            "package_manifest_file_sha256",
+            "PACKAGE_MANIFEST_SHA256",
+        ),
+        (
+            "blinded_package_files_payload_sha256",
+            "files_payload_sha256",
+            "FILES_PAYLOAD_SHA256",
+        ),
+    )
+    for field, expected_key, label in bindings:
+        expected_value = str(expected.get(expected_key, ""))
+        if str(attestation.get(field, "")) != expected_value:
+            failures.append(_prefixed(index, f"ATTESTATION_{label}_MISMATCH"))
+        if str(analysis.get(field, "")) != expected_value:
+            failures.append(_prefixed(index, f"ANALYSIS_{label}_MISMATCH"))
+        if str(verifier.get(field, "")) != expected_value:
+            failures.append(_prefixed(index, f"VERIFIER_{label}_MISMATCH"))
+
     if str(attestation.get("blank_review_form_sha256", "")) != str(
         expected.get("blank_review_form_sha256", "")
     ):
         failures.append(_prefixed(index, "ATTESTATION_BLANK_FORM_SHA256_MISMATCH"))
-
+    if analysis.get("transport_independent_package_content_binding_established") is not True:
+        failures.append(
+            _prefixed(index, "ANALYSIS_TRANSPORT_INDEPENDENT_CONTENT_BINDING_NOT_ESTABLISHED")
+        )
+    if verifier.get("transport_independent_package_content_binding_replayed") is not True:
+        failures.append(
+            _prefixed(index, "VERIFIER_TRANSPORT_INDEPENDENT_CONTENT_BINDING_NOT_REPLAYED")
+        )
     if canonical_sha256(attestation) != analysis.get("reviewer_attestation_sha256"):
         failures.append(_prefixed(index, "ATTESTATION_CANONICAL_SHA256_MISMATCH"))
     return failures
@@ -100,14 +142,11 @@ def build_reviewer_collection_receipt(
 ) -> dict[str, Any]:
     """Validate a collection of blinded reviewer bundles before consensus.
 
-    This boundary answers only whether the received artifacts are structurally
-    and cryptographically admissible for the already-frozen consensus gate.
-    Human independence and competence remain reviewer-declared facts; software
-    can verify the attestation contents and distinct artifact identities, but it
-    cannot prove personhood, off-channel non-collusion, or the truthfulness of a
-    competence declaration.
+    This boundary verifies exact canonical package content lineage, reviewer-
+    declared independence fields and independent replay. It does not claim that
+    software can prove human personhood, competence truthfulness or absence of
+    off-channel collusion.
     """
-
     failures: list[str] = []
     required = int(collection_policy.get("required_reviewers", 2))
     if required < 2:
@@ -128,15 +167,13 @@ def build_reviewer_collection_receipt(
     for index, bundle in enumerate(bundles):
         bundle_failures: list[str] = []
         if not isinstance(bundle, dict):
-            bundle_failures.append(_prefixed(index, "BUNDLE_NOT_OBJECT"))
             analysis: dict[str, Any] = {}
             attestation: dict[str, Any] = {}
             verifier: dict[str, Any] = {}
+            bundle_failures.append(_prefixed(index, "BUNDLE_NOT_OBJECT"))
         else:
             analysis = bundle.get("analysis") if isinstance(bundle.get("analysis"), dict) else {}
-            attestation = (
-                bundle.get("attestation") if isinstance(bundle.get("attestation"), dict) else {}
-            )
+            attestation = bundle.get("attestation") if isinstance(bundle.get("attestation"), dict) else {}
             verifier = bundle.get("verifier") if isinstance(bundle.get("verifier"), dict) else {}
             if not analysis:
                 bundle_failures.append(_prefixed(index, "ANALYSIS_REPORT_MISSING"))
@@ -178,9 +215,20 @@ def build_reviewer_collection_receipt(
                 ),
                 "analysis_report_sha256": canonical_sha256(analysis) if analysis else None,
                 "verifier_report_sha256": canonical_sha256(verifier) if verifier else None,
-                "frame_manifest_file_sha256": analysis.get(
-                    "frame_manifest_file_sha256"
+                "frame_manifest_file_sha256": analysis.get("frame_manifest_file_sha256"),
+                "blinded_package_content_identity_file_sha256": analysis.get(
+                    "blinded_package_content_identity_file_sha256"
                 ),
+                "blinded_package_manifest_sha256": analysis.get(
+                    "blinded_package_manifest_sha256"
+                ),
+                "blinded_package_files_payload_sha256": analysis.get(
+                    "blinded_package_files_payload_sha256"
+                ),
+                "blinded_package_transport_sha256": attestation.get(
+                    "blinded_package_transport_sha256"
+                )
+                or None,
                 "reviewer_declared_independence": attestation.get(
                     "independent_of_fastcat_model_evidence_before_label_freeze"
                 ),
@@ -254,8 +302,10 @@ def build_reviewer_collection_receipt(
         "consensus_core_preflight_status": (
             full_consensus_probe.get("status") if full_consensus_probe else None
         ),
+        "package_binding_authority": "transport_independent_canonical_content_identity",
+        "outer_transport_sha256_equality_required": False,
         "human_independence_proven_by_software": False,
-        "reviewer_independence_semantics": "Software verifies reviewer-declared independence fields, exact package lineage, distinct reviewer identifiers and distinct attestation identities. It does not prove personhood, institutional independence, competence truthfulness or absence of off-channel collusion.",
+        "reviewer_independence_semantics": "Software verifies reviewer-declared independence fields, exact canonical package content lineage, distinct reviewer identifiers and distinct attestation identities. It does not prove personhood, institutional independence, competence truthfulness or absence of off-channel collusion.",
         "independent_frame_level_estimate_established": False,
         "claim_ceiling": "Reviewer collection admission establishes only artifact readiness for the frozen multi-reviewer consensus gate. Waiting states are not failures; invalid bundles fail closed. No collection receipt by itself establishes EAD onset, mimicry, latency, population-level feline behavior, or INDEPENDENT_FRAME_LEVEL_ESTIMATE.",
     }

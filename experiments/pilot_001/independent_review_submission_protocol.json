@@ -1,34 +1,35 @@
 {
-  "schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1",
+  "schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2",
   "experiment_id": "PILOT_001",
   "source_id": "commons_hugging_2019",
-  "purpose": "ingest a completed model-blinded EAD103/EAD104 review without creating or guessing labels inside Fast-CAT",
+  "purpose": "ingest a completed model-blinded EAD103/EAD104 review bound to transport-independent canonical blinded-package content without creating or guessing labels inside Fast-CAT",
   "expected_blinded_package": {
     "producer_fastcat_head_sha": "70e20113aa1acd2311bed3a61e77fb1ee26e5424",
     "producer_fastcat_tree_sha": "cd90a48a77eff3f3ee183427dfd3716cb4cb9dfc",
-    "workflow_run_id": 31293673630,
-    "workflow_artifact_id": 9032245626,
-    "workflow_artifact_name": "pilot-001-hugging-blinded-review-package",
-    "workflow_artifact_digest": "sha256:ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f",
+    "content_identity_schema": "Fast-CAT/PILOT-001/blinded-review-content-identity/v1.0",
+    "content_identity_file": "experiments/pilot_001/blinded_review_content_identity.json",
+    "content_identity_file_sha256": "87877d69e5fcfd44433b93106740ef641c320a8037b06aefe281fff9179378fd",
+    "package_manifest_file_sha256": "85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4",
+    "files_payload_sha256": "2a550d1d32fff07757c6838f224a63fa5d87a00017b4dcc110154bd75fd99513",
     "raw_media_sha256": "1ac95b351424d63d944969e19949a925e502fbb380153aa404f99390c9845e2e",
     "decoded_frame_count": 50,
     "frame_pts_sha256": "98532adfb0c29815d780116b557802d2b45a81ae47a0cb6a8e569973684e31ee",
     "frame_manifest_file_sha256": "0271018446726ccabd3be78e29c426e03d772e2bc01bb40ceb32ff246ae51c67",
     "blank_review_form_sha256": "b464040c69491ac1ce7e1083f2745a85361fe3884cce1b37d6c9c7bae946622d",
-    "package_manifest_file_sha256": "85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4",
     "instructions_file_sha256": "f0a4df4aa28214a71088f57a0b9b5ee7c5982b1888f2300c17c6b94df3ae0a5b",
-    "artifact_receipt_file_sha256": "6919096c442a379c56816de3e8c48846566aafa355c2fa030562b37d45fcf1be",
-    "package_verifier_file_sha256": "2c0a9f1b25871147d366ae0f2078d51a51aea44762735af894652c2a0ec53cc6",
     "blinded_package_protocol_sha256": "d507feb69bf3d9977abba491b28a874bf865022e7447835364272388b33b437f",
-    "action_review_protocol_sha256": "7ab9f0fe83c2b52febf6c8a1dcac856199d93027648c19ad47a5c2b2ab2f9879",
     "frame_ledger_file_sha256": "a8dda9d30996b6da3e7be1587f0df21fbb92c857925cd5025b914cdf76e0dee4",
-    "frame_verifier_file_sha256": "78fd6efae866b37d85ad4aea2ee2a43ff30ad0b5c35ba7ee5d495d446f7ecba9",
+    "original_transport_provenance": {
+      "workflow_run_id": 31293673630,
+      "workflow_artifact_id": 9032245626,
+      "workflow_artifact_name": "pilot-001-hugging-blinded-review-package",
+      "workflow_artifact_digest": "sha256:ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f",
+      "expires_at_utc": "2026-09-08T04:02:27Z",
+      "admission_authority": false
+    },
     "model_evidence_excluded": true,
     "action_labels_present_in_frozen_package": false,
-    "subjects": [
-      "subject_A",
-      "subject_B"
-    ],
+    "subjects": ["subject_A", "subject_B"],
     "expected_annotation_rows": 100,
     "expected_review_dimensions": [
       "left_ear_EAD103",
@@ -37,26 +38,21 @@
       "right_ear_EAD104"
     ]
   },
-  "allowed_review_states": [
-    "ABSENT",
-    "PRESENT",
-    "UNCERTAIN",
-    "NOT_VISIBLE"
-  ],
-  "allowed_identity_states": [
-    "yes",
-    "no",
-    "uncertain"
-  ],
+  "allowed_review_states": ["ABSENT", "PRESENT", "UNCERTAIN", "NOT_VISIBLE"],
+  "allowed_identity_states": ["yes", "no", "uncertain"],
   "reviewer_attestation_required": {
+    "schema": "Fast-CAT/PILOT-001/reviewer-attestation/v1.1",
     "reviewer_id": "non-empty pseudonymous or institutional identifier",
     "independent_of_fastcat_model_evidence_before_label_freeze": true,
     "saw_landmark_or_motion_rankings_before_label_freeze": false,
     "labels_frozen_before_model_reveal": true,
     "catfacs_competence_basis": "non-empty description; competence is declared and preserved, not inferred by software",
-    "completed_review_form_sha256": "must equal the submitted completed CSV bytes",
-    "blinded_package_artifact_digest": "must equal expected_blinded_package.workflow_artifact_digest",
+    "completed_review_form_sha256": "must equal submitted completed CSV bytes",
+    "blinded_package_content_identity_file_sha256": "must equal expected_blinded_package.content_identity_file_sha256",
+    "blinded_package_manifest_sha256": "must equal expected_blinded_package.package_manifest_file_sha256",
+    "blinded_package_files_payload_sha256": "must equal expected_blinded_package.files_payload_sha256",
     "blank_review_form_sha256": "must equal expected_blinded_package.blank_review_form_sha256",
+    "blinded_package_transport_sha256": "optional provenance for the exact ZIP/mirror received; may differ across byte-distinct transports and is not an admission authority",
     "review_completed_utc": "non-empty ISO-8601-like reviewer-declared timestamp"
   },
   "label_admission": {
@@ -70,8 +66,12 @@
     "completed_csv_sha256_frozen_before_any_model_comparison": true,
     "exact_frozen_package_lineage_required": true,
     "frame_manifest_file_sha256_must_match_frozen_package": true,
-    "blank_form_sha256_must_match_frozen_package": true,
-    "workflow_artifact_digest_must_match_frozen_package": true
+    "content_identity_file_sha256_must_match": true,
+    "package_manifest_file_sha256_must_match": true,
+    "files_payload_sha256_must_match": true,
+    "blank_form_sha256_must_match": true,
+    "outer_transport_sha256_may_differ_if_canonical_content_verifies": true,
+    "original_workflow_artifact_digest_is_provenance_not_admission_authority": true
   },
   "onset_derivation": {
     "unit": "subject + action + laterality",
@@ -85,10 +85,7 @@
     "all_derived_onsets_preserved": true
   },
   "matching": {
-    "actions": [
-      "EAD103",
-      "EAD104"
-    ],
+    "actions": ["EAD103", "EAD104"],
     "same_action_required": true,
     "other_subject_required": true,
     "laterality": "preserve signaller and responder laterality explicitly; matching is by action code regardless of left/right laterality",
@@ -107,6 +104,7 @@
   "claim_gate": {
     "successful_ingestion_may_establish": [
       "independent_review_submission_integrity",
+      "transport_independent_exact_blinded_package_content_binding",
       "independently_reviewed_frame_state_table",
       "derived_first_visible_action_onset_table_in_review_scope",
       "deterministic_same_action_pairing_in_review_scope"
@@ -122,5 +120,5 @@
     "reason": "final admission still requires the full protocol claim gate, including independently adequate subject identity and admissible landmark/manual geometry evidence; this ingestion gate cannot self-promote those conditions"
   },
   "negative_outcome_policy": "a valid completed review with zero onsets or zero matched pairs is a successful scientific outcome and must be frozen as such",
-  "claim_ceiling": "This gate can validate and deterministically replay a genuinely independent blinded review submission bound to one exact frozen model-blinded package. It cannot fabricate a reviewer, infer missing labels, or by itself establish a universal feline latency or causal mimicry claim."
+  "claim_ceiling": "This gate can validate and deterministically replay a genuinely independent blinded review submission bound to one exact canonical model-blinded package content identity, regardless of which verified byte-distinct ZIP transport delivered those exact package bytes. It cannot fabricate a reviewer, infer missing labels, prove personhood/collusion absence, or by itself establish a universal feline latency or causal mimicry claim."
 }

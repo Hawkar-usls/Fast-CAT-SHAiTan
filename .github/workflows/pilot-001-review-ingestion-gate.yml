@@ -1,10 +1,10 @@
 name: pilot-001-review-ingestion-gate
 
 on:
-  pull_request:
-  workflow_dispatch:
   push:
     branches: [main]
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -37,53 +37,75 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install ffmpeg and Pillow
+      - name: Ensure ffmpeg and Pillow are available
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          if command -v ffmpeg >/dev/null 2>&1 && command -v ffprobe >/dev/null 2>&1; then
+            echo "FFMPEG_SOURCE = RUNNER_PREINSTALLED"
+          else
+            echo "FFMPEG_SOURCE = BOUNDED_APT_FALLBACK"
+            timeout 300s sudo apt-get -o Acquire::Retries=3 update
+            timeout 300s sudo apt-get -o Acquire::Retries=3 install -y ffmpeg
+          fi
           python -m pip install --upgrade pip
           python -m pip install pillow==11.3.0
 
-      - name: Unit-test review ingestion and frozen-package binding
+      - name: Unit-test review ingestion and canonical-package binding
         run: |
           python -m unittest \
             tests.test_review_ingestion \
+            tests.test_blinded_package_identity \
             tests.test_review_submission_binding \
             tests.test_bound_review_ingestion \
             -v
 
-      - name: Assert reviewer attestation template is fail-closed
+      - name: Assert reviewer attestation template is fail-closed v1.1
         run: |
           python - <<'PY'
           import json
-          p='experiments/pilot_001/reviewer_attestation.template.json'
-          d=json.load(open(p))
-          assert d['reviewer_id'] == ''
+          d=json.load(open('experiments/pilot_001/reviewer_attestation.template.json'))
+          assert d['schema']=='Fast-CAT/PILOT-001/reviewer-attestation/v1.1'
+          assert d['reviewer_id']==''
           assert d['independent_of_fastcat_model_evidence_before_label_freeze'] is None
           assert d['saw_landmark_or_motion_rankings_before_label_freeze'] is None
           assert d['labels_frozen_before_model_reveal'] is None
-          assert d['completed_review_form_sha256'] == ''
-          assert d['blinded_package_artifact_digest'] == ''
-          assert d['blank_review_form_sha256'] == ''
-          print('ATTESTATION_TEMPLATE_FAIL_CLOSED = PASS')
+          assert d['completed_review_form_sha256']==''
+          assert d['blinded_package_content_identity_file_sha256']=='87877d69e5fcfd44433b93106740ef641c320a8037b06aefe281fff9179378fd'
+          assert d['blinded_package_manifest_sha256']=='85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4'
+          assert d['blinded_package_files_payload_sha256']=='2a550d1d32fff07757c6838f224a63fa5d87a00017b4dcc110154bd75fd99513'
+          assert d['blank_review_form_sha256']=='b464040c69491ac1ce7e1083f2745a85361fe3884cce1b37d6c9c7bae946622d'
+          assert d['blinded_package_transport_sha256']==''
+          print('ATTESTATION_TEMPLATE_FAIL_CLOSED_V1_1 = PASS')
           PY
 
-      - name: Assert frozen blinded-package receipt identity
+      - name: Assert frozen transport-independent package identity
         run: |
           python - <<'PY'
-          import json
+          import hashlib, json
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,'rb') as f:
+                  for block in iter(lambda:f.read(1024*1024),b''):
+                      h.update(block)
+              return h.hexdigest()
+          identity_path='experiments/pilot_001/blinded_review_content_identity.json'
+          identity_sha=sha(identity_path)
+          assert identity_sha=='87877d69e5fcfd44433b93106740ef641c320a8037b06aefe281fff9179378fd', identity_sha
+          i=json.load(open(identity_path))
+          assert i['schema']=='Fast-CAT/PILOT-001/blinded-review-content-identity/v1.0'
+          assert i['canonical_package']['payload_file_count']==53
+          assert i['canonical_package']['package_manifest_file_sha256']=='85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4'
+          assert i['canonical_package']['files_payload_sha256']=='2a550d1d32fff07757c6838f224a63fa5d87a00017b4dcc110154bd75fd99513'
+          assert i['original_transport']['artifact_zip_sha256']=='ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f'
           p=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
-          assert p['schema'] == 'Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.1'
+          assert p['schema']=='Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2'
           e=p['expected_blinded_package']
-          assert e['producer_fastcat_head_sha'] == '70e20113aa1acd2311bed3a61e77fb1ee26e5424'
-          assert e['producer_fastcat_tree_sha'] == 'cd90a48a77eff3f3ee183427dfd3716cb4cb9dfc'
-          assert e['workflow_run_id'] == 31293673630
-          assert e['workflow_artifact_id'] == 9032245626
-          assert e['workflow_artifact_name'] == 'pilot-001-hugging-blinded-review-package'
-          assert e['workflow_artifact_digest'] == 'sha256:ee86e46ab1979d5836a96788106e3e2f809268f6cbe7ccf1c6b328478e6f3f2f'
-          assert e['model_evidence_excluded'] is True
-          assert e['action_labels_present_in_frozen_package'] is False
-          print('FROZEN_BLINDED_PACKAGE_RECEIPT_IDENTITY = PASS')
+          assert e['content_identity_file_sha256']==identity_sha
+          assert e['package_manifest_file_sha256']==i['canonical_package']['package_manifest_file_sha256']
+          assert e['files_payload_sha256']==i['canonical_package']['files_payload_sha256']
+          assert e['original_transport_provenance']['admission_authority'] is False
+          assert p['label_admission']['outer_transport_sha256_may_differ_if_canonical_content_verifies'] is True
+          print('CANONICAL_BLINDED_PACKAGE_CONTENT_IDENTITY = FROZEN')
+          print('OUTER_TRANSPORT_IS_ADMISSION_AUTHORITY = FALSE')
           PY
 
       - name: Fetch frozen hugging source
@@ -120,19 +142,22 @@ jobs:
               return h.hexdigest()
           p=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
           e=p['expected_blinded_package']
-          checks = {
-              'artifacts/review_ingestion_test/package/frame_manifest.json': e['frame_manifest_file_sha256'],
-              'artifacts/review_ingestion_test/package/review_form.csv': e['blank_review_form_sha256'],
-              'artifacts/review_ingestion_test/package/package_manifest.json': e['package_manifest_file_sha256'],
-              'artifacts/review_ingestion_test/package/REVIEW_INSTRUCTIONS.md': e['instructions_file_sha256'],
+          checks={
+              'artifacts/review_ingestion_test/package/frame_manifest.json':e['frame_manifest_file_sha256'],
+              'artifacts/review_ingestion_test/package/review_form.csv':e['blank_review_form_sha256'],
+              'artifacts/review_ingestion_test/package/package_manifest.json':e['package_manifest_file_sha256'],
+              'artifacts/review_ingestion_test/package/REVIEW_INSTRUCTIONS.md':e['instructions_file_sha256'],
           }
-          for path, expected in checks.items():
+          for path,expected in checks.items():
               actual=sha(path)
-              assert actual == expected, (path, actual, expected)
-          print('FROZEN_BLINDED_PACKAGE_LINEAGE_REBUILT = PASS')
+              assert actual==expected,(path,actual,expected)
+          manifest=json.load(open('artifacts/review_ingestion_test/package/package_manifest.json'))
+          assert manifest['files_payload_sha256']==e['files_payload_sha256']
+          assert len(manifest['files'])==53
+          print('CANONICAL_BLINDED_PACKAGE_LINEAGE_REBUILT = PASS')
           PY
 
-      - name: Build software-only zero-event fixture
+      - name: Build software-only zero-event fixture v1.2
         run: |
           python - <<'PY'
           import csv, hashlib, json, pathlib
@@ -155,15 +180,18 @@ jobs:
           proto=json.load(open('experiments/pilot_001/independent_review_submission_protocol.json'))
           exp=proto['expected_blinded_package']
           att={
-              'schema':'Fast-CAT/PILOT-001/reviewer-attestation/v1.0',
+              'schema':'Fast-CAT/PILOT-001/reviewer-attestation/v1.1',
               'reviewer_id':'CI_SYNTHETIC_SOFTWARE_FIXTURE_NOT_SCIENTIFIC_REVIEW',
               'independent_of_fastcat_model_evidence_before_label_freeze':True,
               'saw_landmark_or_motion_rankings_before_label_freeze':False,
               'labels_frozen_before_model_reveal':True,
               'catfacs_competence_basis':'SOFTWARE TEST FIXTURE ONLY; NOT A SCIENTIFIC CATFACS REVIEW',
               'completed_review_form_sha256':form_sha,
-              'blinded_package_artifact_digest':exp['workflow_artifact_digest'],
+              'blinded_package_content_identity_file_sha256':exp['content_identity_file_sha256'],
+              'blinded_package_manifest_sha256':exp['package_manifest_file_sha256'],
+              'blinded_package_files_payload_sha256':exp['files_payload_sha256'],
               'blank_review_form_sha256':exp['blank_review_form_sha256'],
+              'blinded_package_transport_sha256':'1'*64,
               'review_completed_utc':'2000-01-01T00:00:00Z',
               'attestation_note':'CI synthetic zero-event fixture; must never be admitted as biological evidence.'
           }
@@ -171,7 +199,7 @@ jobs:
           print('SYNTHETIC_FIXTURE_FORM_SHA256='+form_sha)
           PY
 
-      - name: Replay synthetic zero-event submission through analysis
+      - name: Replay synthetic zero-event submission through v1.2 analysis
         run: |
           python scripts/ingest_independent_action_review.py \
             --protocol experiments/pilot_001/independent_review_submission_protocol.json \
@@ -180,9 +208,9 @@ jobs:
             --attestation artifacts/review_ingestion_test/synthetic_attestation.json \
             --out artifacts/review_ingestion_test/synthetic_analysis.json
 
-      - name: Independently replay synthetic zero-event submission
+      - name: Independently replay synthetic zero-event submission v1.2
         run: |
-          python scripts/verify_independent_action_review.py \
+          python scripts/verify_independent_action_review_v1_2.py \
             --protocol experiments/pilot_001/independent_review_submission_protocol.json \
             --frame-manifest artifacts/review_ingestion_test/package/frame_manifest.json \
             --review-form artifacts/review_ingestion_test/synthetic_completed_review.csv \
@@ -190,23 +218,38 @@ jobs:
             --analysis-report artifacts/review_ingestion_test/synthetic_analysis.json \
             --out artifacts/review_ingestion_test/synthetic_verifier.json
 
-      - name: Assert negative outcome is preserved without claim promotion
+      - name: Assert negative outcome and transport-independent binding
         run: |
           python - <<'PY'
           import json
           a=json.load(open('artifacts/review_ingestion_test/synthetic_analysis.json'))
           v=json.load(open('artifacts/review_ingestion_test/synthetic_verifier.json'))
+          assert a['schema']=='Fast-CAT/PILOT-001/independent-review-ingestion/v1.2'
           assert a['status']=='PASS'
           assert a['scientific_outcome']=='VALID_REVIEW_ZERO_MATCHES'
           assert a['exact_frozen_package_binding_established'] is True
+          assert a['transport_independent_package_content_binding_established'] is True
           assert len(a['derived_onsets'])==0
           assert a['summary']['n_matches']==0
           assert a['independent_frame_level_estimate_established'] is False
+          assert v['schema']=='Fast-CAT/PILOT-001/independent-review-verifier/v1.1'
           assert v['status']=='PASS'
+          assert v['transport_independent_package_content_binding_replayed'] is True
           assert v['derived_onsets_count_recomputed']==0
           assert v['matches_count_recomputed']==0
           assert v['independent_frame_level_estimate_established'] is False
           print('ZERO_EVENT_NEGATIVE_OUTCOME_PRESERVED = PASS')
-          print('EXACT_FROZEN_PACKAGE_BINDING = PASS')
+          print('TRANSPORT_INDEPENDENT_PACKAGE_CONTENT_BINDING = PASS')
           print('CI_SYNTHETIC_FIXTURE_IS_NOT_BIOLOGICAL_EVIDENCE = TRUE')
           PY
+
+      - name: Upload v1.2 synthetic replay receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-001-review-ingestion-v1-2-fixture
+          path: |
+            artifacts/review_ingestion_test/synthetic_analysis.json
+            artifacts/review_ingestion_test/synthetic_verifier.json
+            artifacts/review_ingestion_test/synthetic_attestation.json
+          if-no-files-found: error
+          retention-days: 30

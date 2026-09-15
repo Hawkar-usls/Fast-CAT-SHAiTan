@@ -19,7 +19,7 @@ Measure the delay between a facial action by one cat and the corresponding actio
 Δt_ms = (t_responder - t_signaller) * 1000
 ```
 
-Fast-CAT treats video timing, visual measurement, model inference and claim admission as separate evidence layers. SHA-256 is used for integrity/lineage, not as a biological feature.
+Fast-CAT treats video timing, visual measurement, model inference, human review and claim admission as separate evidence layers. SHA-256 is used for integrity/lineage, not as a biological feature.
 
 The project name is a tribute to **Shaitan**, the cat who inspired it; `SHA` in `SHAiTan` also reflects the provenance layer.
 
@@ -33,8 +33,10 @@ The project name is a tribute to **Shaitan**, the cat who inspired it; `SHA` in 
 | Primary-source candidate 48-landmark coverage | **50/50 candidate frames; not landmark ground truth** |
 | Conflict-control candidate 48-landmark coverage | **1218/1218 full-rate candidate frames; not landmark ground truth** |
 | Deterministic face-aligned ear-motion triage | **ESTABLISHED AS TRIAGE ONLY** |
-| Model-blinded EAD review package | **FROZEN** |
-| Fail-closed independent-review ingestion / replay | **ESTABLISHED AS SOFTWARE GATE** |
+| Numerical reproducibility of pinned candidate geometry | **VALIDATED WITHIN FROZEN TOLERANCES; not bitwise float identity** |
+| Model-blinded EAD review content | **FROZEN + transport-independent exact-content identity** |
+| Fail-closed independent-review ingestion / replay | **ESTABLISHED AS SOFTWARE GATE, active v1.2/v1.1** |
+| Reviewer collection readiness | **ESTABLISHED — waiting for first real reviewer** |
 | Two-reviewer exact-unanimity consensus | **ESTABLISHED AS SOFTWARE GATE** |
 | Real independent blinded reviewers | **pending — at least 2 required** |
 | Stable two-cat identity for biological claim scope | not established independently |
@@ -51,7 +53,7 @@ Frozen sources:
 1. `commons_hugging_2019` — affiliative candidate / primary source.
 2. `commons_tomcats_conflict_2020` — non-affiliative control.
 
-The exact downloaded media and stream timing have already passed independent replay:
+The exact downloaded media and stream timing have passed independent replay:
 
 | source | SHA-256 | video timing |
 | --- | --- | --- |
@@ -63,43 +65,40 @@ Frozen receipt: [`experiments/pilot_001/source_preflight.json`](experiments/pilo
 The current admission path is:
 
 ```text
-OPEN VIDEO / RAW SHA-256 / PTS        PASS + independent replay
+OPEN VIDEO / RAW SHA-256 / DECODED PTS      PASS + independent replay
                     ↓
-PINNED 48-LANDMARK CANDIDATE COVERAGE PASS_CANDIDATE_ONLY
+PINNED 48-LANDMARK CANDIDATE COVERAGE       PASS_CANDIDATE_ONLY
   hugging: 50/50
   conflict control: 1218/1218
                     ↓
-FACE-ALIGNED EAR-MOTION TRIAGE         ESTABLISHED AS TRIAGE ONLY
+FACE-ALIGNED EAR-MOTION TRIAGE               ESTABLISHED AS TRIAGE ONLY
                     ↓
-MODEL-BLINDED EAD REVIEW PACKAGE       FROZEN
+FROZEN MODEL-BLINDED PACKAGE CONTENT         EXACT CONTENT IDENTITY
                     ↓
-REAL INDEPENDENT BLINDED REVIEWS       OPEN — at least 2 required
+REAL REVIEWER #1                              WAITING_FOR_FIRST_REVIEWER
                     ↓
-EXACT-UNANIMITY FRAME-STATE CONSENSUS  SOFTWARE GATE READY
+REAL REVIEWER #2                              WAITING_FOR_SECOND_REVIEWER
                     ↓
-EAD103 / EAD104 FIRST-VISIBLE ONSET    OPEN
+REVIEWER COLLECTION                          READY_FOR_CONSENSUS
                     ↓
-Δt + event-local uncertainty           OPEN
+EXACT-UNANIMITY FRAME-STATE CONSENSUS        disagreement preserved
                     ↓
-FULL CLAIM / INDEPENDENT REPLAY         OPEN
+EAD103 / EAD104 FIRST-VISIBLE ONSET          OPEN
+                    ↓
+Δt + event-local uncertainty                 OPEN
+                    ↓
+FULL CLAIM / INDEPENDENT REPLAY               OPEN
 ```
 
 Candidate landmark coverage is **not** landmark-accuracy validation, independent subject-identity proof, or CatFACS action annotation. No geometric motion rank is promoted to EAD103/EAD104.
 
-The protocol is frozen before the latency measurement in [`experiments/pilot_001/protocol.json`](experiments/pilot_001/protocol.json). Primary facial actions are `EAD103` and `EAD104`; no-match windows are preserved and post-hoc source/action dropping is forbidden.
+The biological protocol was frozen before latency measurement in [`experiments/pilot_001/protocol.json`](experiments/pilot_001/protocol.json). Primary facial actions are `EAD103` and `EAD104`; no-match windows are preserved and post-hoc source/action dropping is forbidden.
 
 ### Timing precision
 
 Video PTS is authoritative. Nominal `frame_index / fps` is diagnostic only when PTS exists.
 
-For frame-localized event onsets, the acquisition component of the `Δt` uncertainty is conservatively bounded by at least one nominal frame interval:
-
-```text
-hugging 120 fps  -> ±8.33 ms acquisition radius
-control  30 fps  -> ±33.33 ms acquisition radius
-```
-
-Detector/action-onset localization error is **additional**; the figures above are not claims of total model accuracy.
+For frame-localized event onsets, acquisition uncertainty is event-local: the signaller and responder are each bracketed by their immediately preceding visible `ABSENT` frame and first visible `PRESENT` frame. Detector/reviewer localization uncertainty is additional; no sub-frame biological precision is claimed without a sub-frame measurement method.
 
 Genesis-derived correction record: [`experiments/pilot_001/genesis_corrections.json`](experiments/pilot_001/genesis_corrections.json)
 
@@ -107,7 +106,7 @@ Genesis-derived correction record: [`experiments/pilot_001/genesis_corrections.j
 
 The conflict-control path is no longer limited to its original deterministic 83-frame preflight. The frozen full-rate gate in [`experiments/pilot_001/control_full_rate_gate.json`](experiments/pilot_001/control_full_rate_gate.json) processes every one of the **1218 decoded frames** with the pinned two-ROI 48-landmark backend.
 
-The merged gate produced:
+The full-rate result is:
 
 ```text
 selected decoded frames                 1218 / 1218
@@ -122,15 +121,70 @@ adjacent ear-motion transitions          2434 / 2434
 
 This is `PASS_CANDIDATE_ONLY`: it establishes full-rate candidate geometry and deterministic triage availability for the control. It does **not** establish landmark accuracy, independent cat identity, EAD103/EAD104, action onset, mimicry, `Δt`, feline reaction latency, or `INDEPENDENT_FRAME_LEVEL_ESTIMATE`.
 
-Two independent runs of the same Fast-CAT tree and pinned backend reproduced the same admission outcome and cardinalities, but the raw floating landmark geometry was not byte-identical. Fast-CAT therefore treats exact hashes as lineage receipts for each individual run, not as evidence that TFLite floating inference is bitwise deterministic across runs. A tolerance-based numerical reproducibility gate is the next parallel engineering task.
+### Numerical reproducibility
+
+Independent full-rate runs of the same frozen source/tree/backend reproduced the same 1218/1218 coverage, zero duplicate/incomplete counts and exact 2434 transition-key set, while raw floating landmark geometry showed tiny non-bitwise jitter.
+
+Fast-CAT therefore does **not** pretend that pinned TFLite inference is byte-identical across runs. A numerical reproducibility protocol was frozen before a fresh validation replication. That fresh run reproduced all semantic invariants, both cats' top-10 transition sets at 10/10, and passed all seven frozen floating-difference limits.
+
+Current status:
+
+`VALIDATED_WITHIN_FROZEN_NUMERICAL_TOLERANCE`
+
+The tolerance gate strengthens candidate-geometry reproducibility only; it does not convert candidate landmarks into CatFACS ground truth.
+
+## Durable model-blinded reviewer package
+
+The scientific reviewer input is no longer identified solely by one expiring GitHub Actions ZIP container.
+
+The already-frozen blinded package now has a transport-independent content identity:
+
+- content identity file SHA-256: `87877d69e5fcfd44433b93106740ef641c320a8037b06aefe281fff9179378fd`
+- package manifest SHA-256: `85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4`
+- manifest files-payload SHA-256: `2a550d1d32fff07757c6838f224a63fa5d87a00017b4dcc110154bd75fd99513`
+- frame manifest SHA-256: `0271018446726ccabd3be78e29c426e03d772e2bc01bb40ceb32ff246ae51c67`
+- blank review form SHA-256: `b464040c69491ac1ce7e1083f2745a85361fe3884cce1b37d6c9c7bae946622d`
+- payload entries: **53**
+
+Identity record: [`experiments/pilot_001/blinded_review_content_identity.json`](experiments/pilot_001/blinded_review_content_identity.json)
+
+A mirror or repacked ZIP may have a different **outer** SHA-256. It is admissible only if `scripts/verify_blinded_package_content.py` proves every canonical package byte against the frozen manifest. Missing files, modified bytes, unexpected injected files, unsafe paths and duplicate ZIP member names fail closed.
+
+The original Actions artifact remains historical origin provenance. Its outer ZIP digest is not the long-term scientific admission authority.
 
 ## Independent blinded review boundary
 
-The software path for real review is already built. Each reviewer must submit the completed frozen form plus an attestation that binds the review to the exact model-blinded package. Ingestion rebinds the package, validates row states, re-derives onsets and matching, and is replayed by an independent verifier.
+No real reviewer submission has been received yet.
 
-The multi-reviewer gate requires at least two distinct valid reviewer bundles. It uses **exact unanimity** for `identity_confirmed` and the four EAD103/EAD104 ear-state channels. Any non-unanimous cell becomes `DISAGREEMENT`; it is not averaged, majority-voted, model-filled or silently dropped. Consensus onsets can arise only from unanimous adjacent-frame `ABSENT -> PRESENT` transitions with unanimous identity confirmation.
+The active submission path uses:
 
-Synthetic reviewer fixtures test the software boundary only and are never biological evidence. No real independent reviewer bundle has yet been admitted.
+- submission protocol `v1.2`;
+- reviewer attestation `v1.1`;
+- production ingestion report `v1.2`;
+- independent verifier report `v1.1`;
+- reviewer collection protocol `v1.1`;
+- unchanged exact-unanimity consensus rule `v1.0`.
+
+A reviewer first verifies the exact canonical blinded package content, completes all 100 rows without seeing Fast-CAT model-derived evidence, freezes the completed CSV SHA-256, and submits the completed CSV + frozen frame manifest + attestation. Production ingestion rebinds the canonical package content, validates rows, derives all admissible `ABSENT -> PRESENT` onsets and deterministic same-action pairing, then an independently implemented verifier recomputes the result.
+
+Reviewer handoff: [`experiments/pilot_001/REVIEWER_HANDOFF.md`](experiments/pilot_001/REVIEWER_HANDOFF.md)
+
+The collection gate has four explicit machine states:
+
+```text
+WAITING_FOR_FIRST_REVIEWER
+WAITING_FOR_SECOND_REVIEWER
+READY_FOR_CONSENSUS
+INVALID_COLLECTION
+```
+
+Waiting states are not software failures. Invalid artifacts fail closed. At least two admissible distinct reviewer bundles are required before consensus.
+
+The consensus gate uses **exact unanimity** for `identity_confirmed` and all four EAD103/EAD104 ear-state channels. Any non-unanimous cell becomes `DISAGREEMENT`; it is not averaged, majority-voted, model-filled or silently dropped. Consensus onsets can arise only from unanimous adjacent-frame `ABSENT -> PRESENT` transitions with unanimous identity confirmation.
+
+Two genuinely independent reviewers may produce byte-identical completed CSV files; forcing different CSV hashes would be a false independence criterion. Likewise, they may receive byte-distinct ZIP transports containing the same exact canonical package content. Distinct reviewer IDs and attestation identities are required, but software explicitly does **not** claim to prove human personhood, institutional independence, competence truthfulness or absence of off-channel collusion.
+
+Synthetic reviewer fixtures test the software boundary only and are never biological evidence.
 
 ## PILOT_000 — software fixture replay
 
@@ -172,7 +226,7 @@ Details: [`docs/CROSS_REPO_METHOD.md`](docs/CROSS_REPO_METHOD.md)
 
 Fast-CAT does not currently claim a universal feline reaction time, intentional communication from temporal correlation alone, equivalence between an AI detector and expert CatFACS annotation, or sub-frame precision without a sub-frame measurement method.
 
-Negative and inconclusive results are valid outcomes.
+Negative, zero-event, zero-match, disagreement and inconclusive results are valid outcomes.
 
 ## Reproducibility
 
@@ -181,7 +235,7 @@ python scripts/replay_pilot_000.py
 python -m unittest discover -s tests -v
 ```
 
-PILOT_001 CI downloads frozen open media, recomputes raw SHA-256, re-runs `ffprobe`, checks source manifests, replays decoded PTS/pixels, runs pinned candidate-landmark backends and publishes exact receipts. Floating model outputs are not assumed to be bitwise deterministic merely because the source/backend revisions are pinned.
+PILOT_001 CI downloads frozen open media, recomputes raw SHA-256, re-runs stream checks, replays decoded PTS/pixels, runs pinned candidate-landmark backends, verifies the frozen blinded-package content identity, replays synthetic reviewer boundaries and publishes exact receipts. Floating model outputs are not assumed to be bitwise deterministic merely because the source/backend revisions are pinned.
 
 ## Related work
 

@@ -1,13 +1,16 @@
 {
-  "schema": "Fast-CAT/PILOT-001/reviewer-attestation/v1.0",
+  "schema": "Fast-CAT/PILOT-001/reviewer-attestation/v1.1",
   "reviewer_id": "",
   "independent_of_fastcat_model_evidence_before_label_freeze": null,
   "saw_landmark_or_motion_rankings_before_label_freeze": null,
   "labels_frozen_before_model_reveal": null,
   "catfacs_competence_basis": "",
   "completed_review_form_sha256": "",
-  "blinded_package_artifact_digest": "",
-  "blank_review_form_sha256": "",
+  "blinded_package_content_identity_file_sha256": "87877d69e5fcfd44433b93106740ef641c320a8037b06aefe281fff9179378fd",
+  "blinded_package_manifest_sha256": "85bf6a190377a304b607bd611cd7d9476e521b98682286f4d9cfb47d5878e3e4",
+  "blinded_package_files_payload_sha256": "2a550d1d32fff07757c6838f224a63fa5d87a00017b4dcc110154bd75fd99513",
+  "blank_review_form_sha256": "b464040c69491ac1ce7e1083f2745a85361fe3884cce1b37d6c9c7bae946622d",
+  "blinded_package_transport_sha256": "",
   "review_completed_utc": "",
-  "attestation_note": "Fill this only after completing and freezing the blinded review CSV. The completed CSV SHA-256 must identify the submitted bytes. blinded_package_artifact_digest and blank_review_form_sha256 must identify the exact frozen model-blinded package from which the review began. The software verifies internal consistency and exact package lineage; it cannot independently prove reviewer identity, competence, or what the reviewer saw. False or unsupported attestations invalidate the scientific claim."
+  "attestation_note": "Fill this only after verifying an exact canonical blinded package transport, completing every review row, and freezing the completed CSV SHA-256 before any Fast-CAT model-derived evidence is revealed. The content-identity, package-manifest, files-payload and blank-form hashes are the scientific package binding. blinded_package_transport_sha256 is optional provenance for the particular ZIP or mirror received and is not the admission authority. Software verifies internal consistency and exact canonical package lineage; it cannot prove reviewer personhood, competence truthfulness, or absence of off-channel collusion."
 }

@@ -118,9 +118,7 @@ class ReviewIngestionTests(unittest.TestCase):
         def row(frame, subject):
             return review_rows[frame * 2 + (0 if subject == "subject_A" else 1)]
 
-        # A: left EAD104 appears at frame 1 (0.060 s).
         row(1, "subject_A")["left_ear_EAD104"] = "PRESENT"
-        # B: right EAD104 appears at frame 3 (0.180 s).
         row(3, "subject_B")["right_ear_EAD104"] = "PRESENT"
 
         report = build_submission_report(
@@ -146,25 +144,12 @@ class ReviewIngestionTests(unittest.TestCase):
     def test_uncertain_previous_frame_blocks_onset(self):
         review_rows = rows()
         review_rows[0]["left_ear_EAD103"] = "UNCERTAIN"
-        review_rows[2]["left_ear_EAD103"] = "PRESENT"  # subject_A frame 1
+        review_rows[2]["left_ear_EAD103"] = "PRESENT"
         events = derive_onsets(
-            [
-                {
-                    **r,
-                    "frame_index": int(r["frame_index"]),
-                }
-                for r in review_rows
-            ],
+            [{**r, "frame_index": int(r["frame_index"])} for r in review_rows],
             protocol(),
         )
-        self.assertFalse(
-            any(
-                x["subject_id"] == "subject_A"
-                and x["action"] == "EAD103"
-                and x["onset_frame_index"] == 1
-                for x in events
-            )
-        )
+        self.assertFalse(any(x["subject_id"] == "subject_A" and x["action"] == "EAD103" and x["onset_frame_index"] == 1 for x in events))
 
     def test_identity_uncertain_blocks_onset(self):
         review_rows = rows()
@@ -202,23 +187,41 @@ class ReviewIngestionTests(unittest.TestCase):
         self.assertIn("REVIEW_HEADERS_MISMATCH_OR_MODEL_FIELDS_PRESENT", report["failures"])
 
     def test_exact_blinded_package_binding(self):
+        content_identity_sha = "c" * 64
+        package_manifest_sha = "d" * 64
+        files_payload_sha = "e" * 64
+        binding_protocol = {
+            "schema": "Fast-CAT/PILOT-001/independent-review-submission-protocol/v1.2",
+            "expected_blinded_package": {
+                "frame_manifest_file_sha256": FRAME_MANIFEST_FILE_SHA,
+                "content_identity_file_sha256": content_identity_sha,
+                "package_manifest_file_sha256": package_manifest_sha,
+                "files_payload_sha256": files_payload_sha,
+                "blank_review_form_sha256": BLANK_FORM_SHA,
+            },
+        }
+        binding_attestation = {
+            "schema": "Fast-CAT/PILOT-001/reviewer-attestation/v1.1",
+            "blinded_package_content_identity_file_sha256": content_identity_sha,
+            "blinded_package_manifest_sha256": package_manifest_sha,
+            "blinded_package_files_payload_sha256": files_payload_sha,
+            "blank_review_form_sha256": BLANK_FORM_SHA,
+            "blinded_package_transport_sha256": "1" * 64,
+        }
         failures = validate_frozen_package_binding(
-            protocol=protocol(),
+            protocol=binding_protocol,
             frame_manifest_file_sha256=FRAME_MANIFEST_FILE_SHA,
-            attestation=attestation(),
+            attestation=binding_attestation,
         )
         self.assertEqual(failures, [])
-        bad = attestation()
-        bad["blinded_package_artifact_digest"] = "sha256:" + "0" * 64
+        bad = dict(binding_attestation)
+        bad["blinded_package_content_identity_file_sha256"] = "0" * 64
         failures = validate_frozen_package_binding(
-            protocol=protocol(),
+            protocol=binding_protocol,
             frame_manifest_file_sha256=FRAME_MANIFEST_FILE_SHA,
             attestation=bad,
         )
-        self.assertIn(
-            "ATTESTATION_BLINDED_PACKAGE_ARTIFACT_DIGEST_MISMATCH",
-            failures,
-        )
+        self.assertIn("ATTESTATION_CONTENT_IDENTITY_FILE_SHA256_MISMATCH", failures)
 
     def test_acquisition_interval_uses_both_local_brackets(self):
         interval = acquisition_interval_ms(
