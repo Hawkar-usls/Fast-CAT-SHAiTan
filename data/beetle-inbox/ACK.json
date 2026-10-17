@@ -1,10 +1,10 @@
 {
-  "acknowledged_at": "2026-10-17T11:10:34.827517Z",
-  "batch_id": "0cd27f24643a43bb4ae8",
-  "last_sequence": 3,
+  "acknowledged_at": "2026-10-17T14:25:14.914409Z",
+  "batch_id": "e84a24c88e2a4384352d",
+  "last_sequence": 4,
   "schema": "janus.beetle.inbox_ack.v1",
   "scientific_authority_delta": 0,
-  "sha256": "6e809929aae86ebaa3d71ce6de922ce5486921d141334565346fde1bff1cfe33",
+  "sha256": "ca120e8bf12dba9661d2680d186f1c44ade0e64d95f0162ff44d9c201b86babf",
   "status": "INBOX_DURABLE_UNVERIFIED__NOT_RUNTIME_CONSUMPTION",
   "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan"
 }

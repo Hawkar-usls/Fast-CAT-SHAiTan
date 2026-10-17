@@ -1,5 +1,5 @@
 {
-  "batch_id": "0cd27f24643a43bb4ae8",
+  "batch_id": "e84a24c88e2a4384352d",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "items": [
     {
@@ -37,6 +37,52 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5a35ea03b09454746c663cea",
+      "context_id": "9ac6b72708b1b3821d63bd35",
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This technical note documents a conditional mathematical correspondence between the static spatial kernel used in conventional electromagnetic potential theory and the fixed-source gravitational potential in Lisa Doumbouya&rsquo;s Harmonic Physics programme. Under supplied three-dimensional Euclidean geometry, spherical symmetry and stated boundary conditions, the derivation gives the static Green function 1/(4&pi;r). Applying the existing gravitational source normalization yields the potential &minus;&mu;/r, whose radial derivative gives the inward acceleration &minus;&mu;/r&sup2;. The note distinguishes potential, field amplitude, intensity, acceleration and optical measurement conversion, keeping geometric normalization separate from the distance exponent. The optical phase-ruler results are reviewed alongside the GRACE-FO forward forecasts. Calibrated reconstruction using measured phase retained micrometre-scale agreement with processed microwave ranging, while some forward models produced much larger errors. These results do not establish exponential error growth or identify a unique physical cause. The correspondence uses established mathematics and remains conditional on the supplied geometry, source calibration and physical interpretation. It does not establish an electromagnetic mechanism of gravity or derive spatial geometry from foundational Phase. The note includes the analytical proof, assumptions, evidence boundaries and requirements for a subsequent physical test. No new experimental data are introduced.",
+      "tags": [
+        "harmonic physics",
+        "inverse-radius potential",
+        "inverse-square law",
+        "green functions",
+        "electromagnetic potential",
+        "gravitational potential",
+        "mathematical correspondence",
+        "optical phase",
+        "interfermometry",
+        "phase-to-distance calibration",
+        "observer coupling",
+        "GRACE-FO",
+        "laser ranging",
+        "source calibration",
+        "relational geometry"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Inverse Radius Kernel and Optical Phase Registration",
+      "url": "https://zenodo.org/records/23437123"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "184a91076b56e4a34903cec1",
       "context_id": "d2f14f86c58c7957992b5409",
       "direction_id": "formal_proof_verification::REVERSE",
@@ -66,6 +112,48 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Code and data for: Identifying the Caputo order of time-fractional diffusion with physics-informed neural networks",
       "url": "https://zenodo.org/records/23434623"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "843683e6aeff6e510ae89419",
+      "context_id": "c48ccfc4837b831dc75e2340",
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "recovery",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.0417,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This working paper develops a relational Phase interpretation of black holes within the Harmonic Physics research programme, using general relativity, exact Kerr geometry and semiclassical black-hole thermodynamics as its physical baseline. It examines how phase organisation, temporal reference, observer accessibility and information persistence might relate to black-hole closure. Within the proposed framework, a phase-cycle is a closed relational structure that supports recurrence. Measured succession requires distinguishable relations and persistent records, while geometry and causal history are treated as observer-level reconstructions. The temporal-anchor hypothesis concerns a deeper terminal condition at which the parent domain loses the internally usable references needed to resolve further clocks and geometry. This proposed condition is kept distinct from the regular event horizon, across which local evolution continues. Observation is described through a joint observation relation among admitted source organisation, a physical channel and an observer-capable organisation. Source state, coupling and registered record retain separate roles; changes in accessibility may alter registration while the source organisation persists. The paper consolidates three bounded mathematical findings: exact Kerr ingoing and outgoing endpoints can have opposite trapped and anti-trapped orientations with the same mass and spin parameters; spherical source/exterior matching leaves the transition law undetermined; and a leading slow-rotation calculation permits the same sign of angular momentum in closing and opening configurations. These results establish compatibility within the stated geometric constructions. A physical transition mechanism remains to be derived. Black-to-white-hole models provide external theoretical comparisons. Return to the original exterior and the opening of a daughter phase are treated as distinct hypotheses, each requiring an appropriate causal structure, state map and conservation accounting. The remaining requirements include an invariant parent-relative terminal criterion, a physical Phase-to-boundary map, transition dynamics, information and entropy accounting, and a stable nonperturbative rotating completion. The paper remains a developing theoretical interpretation supported by standard-geometry comparisons and bounded symbolic checks. It does not establish a physical black-to-white transition, information recovery through evaporation or a daughter universe. Version 2.3, dated 17 October 2026, updates observation and self-nesting terminology, clarifies geodesic incompleteness and fixed-angular-momentum assumptions, and refreshes the references. The existing displayed equations and reported test results are retained. keywords: Phase Theory; black holes; event horizons; geodesic incompleteness; relational time; phase contraction; information accessibility; singularity; white holes; quantum gravity. &nbsp;",
+      "tags": [
+        "black holes",
+        "temporal agents",
+        "temporal boundary conditions",
+        "time anchoring",
+        "future-path collapse",
+        "arrow of time",
+        "temporal causality",
+        "event horizons",
+        "global time ordering",
+        "spacetime constraints"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Black Holes as Temporal Anchors",
+      "url": "https://zenodo.org/records/23437002"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -137,8 +225,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "512fc542764e6babf983c864",
-      "context_id": "b62c2f2d42b04ed862484a60",
+      "candidate_id": "66e3d6f14eeb4019d12509c2",
+      "context_id": "59442b8d8f96c05a4491d576",
       "direction_id": "formal_proof_verification::REVERSE",
       "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -150,148 +238,40 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "reconstruction"
+        "counterexample"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.5833,
-      "source": "arxiv",
-      "source_published": "2026-10-14T07:37:31Z",
-      "source_updated": "2026-10-14T07:37:31Z",
-      "summary": "Recent video world models have increasingly adopted 3D memory mechanisms to integrate historical observations into a lightweight and persistent scene representation. This naturally raises a complementary question: if 3D representations can serve as an effective mechanism for memorizing observed scenes, can they also be directly used as the latent space for reconstructing and generating scenes? Motivated by this idea, we represent a scene as a compact and unstructured 3D-anchored latent space (\\textbf{SceneAE}). Each latent combines an explicit 3D position with an implicit content feature and is spatially grounded to describe its local scene region, forming a sparse latent point cloud. Unlike conventional video-VAE latents that describe how a scene appears from particular viewpoints, our representation directly describes the scene itself, making it naturally applicable to both reconstruction and generation. For reconstruction, once the scene has been generated, our persistent 3D representation can be projected and decoded into RGB-D observations by different target cameras, without the need to regenerate a video for each new camera trajectory. For generation, we leverage the geometry-content separation to first generate camera-controlled 3D geometry and then synthesize content conditioned on it, reducing camera-appearance entanglement and improving camera controllability. Experiments show that this 3D latent achieves superior generation quality, computational cost, and camera controllability.",
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "We consider the three-dimensional Prandtl boundary layer equations near a smooth structured solution (u_s, K u_s) with &part;z K &equiv; 0. Under a monotone-or-degenerate profile assumption on u_s(&middot;), we prove local well-posedness, continuous dependence, and a priori estimates in the critical Sobolev space X^s = H^s_&gamma;(r) &times; H^s_&gamma;(q) &times; H^s_&gamma;(&nabla;{x,y} q), where r = u &minus; u_s and q = v &minus; K u. Our proof does not assume smallness of the data, monotonicity of &part;_z u_s, or Gevrey regularity. We also establish a nonlinear norm-inflation result showing that the raw H^s topology on q alone is insufficient, and we identify the minimal tangential derivative of q required. Several stress tests, counterexamples, and open problems are discussed.",
       "tags": [
-        "cs.CV",
-        "cs.AI"
+        "Three-dimensional Prandtl equations",
+        "Prandtl boundary layer",
+        "Sobolev well-posedness",
+        "boundary layer theory",
+        "structured solutions",
+        "ill-posedness",
+        "nonlinear norm inflation",
+        "critical Sobolev space",
+        "transverse derivative",
+        "Hardy inequality",
+        "Kato-Ponce commutator estimates",
+        "Gevrey regularity",
+        "monotone-or-degenerate profile",
+        "degenerate critical points",
+        "continuous dependence",
+        "a priori estimates",
+        "weighted Sobolev spaces",
+        "secondary flow",
+        "vanishing viscosity limit",
+        "incompressible Navier-Stokes equations"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "SceneAE: Scene Generation and Reconstruction in Queryable 3D-Anchored Latent Space",
-      "url": "https://arxiv.org/abs/2610.19708v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "1cf11eea3d1b09c84f69bd75",
-      "context_id": "ae22c951b40e2d5437e36bce",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_published": "2026-10-14T15:14:43Z",
-      "source_updated": "2026-10-14T15:14:43Z",
-      "summary": "Diffusion and flow matching are now dominant frameworks for generative modeling in continuous domains, but they typically require multiple network evaluations at inference. This has motivated extensive research on one-step generative modeling primarily built on diffusion and flow, though existing approaches often rely on complex training machinery. In this work, we introduce Priming Models, a simple two-stage framework for training one-step generators. Motivated by the difficulty of distributional training from scratch, Priming Models are first trained on a reconstruction objective, e.g., pixel-space denoising at a fixed noise level, before undergoing feature-space distributional post-training. Our central scientific finding is that this simple reconstruction stage is already enough to entirely alleviate the difficulty of distributional training. Empirically, across class-conditional image generation, text-to-image generation, and world modeling, Priming Models significantly advance the Pareto frontier of training compute vs. generation quality. On ImageNet at $256 \\times 256$ resolution, we achieve a state-of-the-art FID of $1.19$ among one-step generators using approximately one-tenth the training compute of prior methods with comparable FID. We open-source our codebase at https://github.com/JaeyeonKim01/priming.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Are We Overthinking One-Step Generation?",
-      "url": "https://arxiv.org/abs/2610.20331v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a278034a943b6f92d394b0c4",
-      "context_id": "9170ac46bb699bff73d165f8",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_published": "2026-10-15T17:24:51Z",
-      "source_updated": "2026-10-15T17:24:51Z",
-      "summary": "Reducing memory use in large language model (LLM) training is an ongoing challenge. Activation checkpointing saves memory by recomputation, while lossy compression changes the stored activations. The reemergence of sparse $\\relu$ and $\\relu^2$ activations creates a third opportunity: losslessly compressing the activation cache itself. We present BitSparse, a GPU-resident lossless compression format for sparse activations. Compression and reconstruction run in custom Triton kernels fused into an autograd function, shrinking the activation cache while recovering it exactly for the backward pass. Bfloat16 (BF16) and FP8 activations are supported. Optional sign-bit packing further increases compression up to close to the theoretical limit. We analyze its compression ratio and compare it to the theoretical optimum. BitSparse lowers per-token VRAM by 31\\% and 30\\% Modded-NanoGPT and Nemotron-H respectively, with overheads of no more than 1\\% at practical sequence lengths. Additionally, a new preallocated buffer system avoids host synchronization during training when variable size tensors are allocated.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "BitSparse: Compact Activation Storage for ReLU Feed-Forward Networks",
-      "url": "https://arxiv.org/abs/2610.22256v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ec4aff456ed4f6d675591d20",
-      "context_id": "853a183064ea17643ce3a60c",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_published": "2026-10-14T16:46:48Z",
-      "source_updated": "2026-10-14T16:46:48Z",
-      "summary": "Multi-head latent attention (MLA) compresses the content of a key-value cache into a shared latent per token, making low-bit storage attractive for long-context inference. At two bits, errors in this representation perturb both attention matching and value readout, with effects that depend on error direction and reconstruction scale. We introduce RoLaQ (Rotation-calibrated Latent Quantization), an offline method for joint rotation and range calibration. RoLaQ refines a shared rotation within subspaces defined by the frozen key and value projections, and jointly learns quantization ranges whose thresholds and reconstruction gains are coupled to control the shared signal's response. Prediction matching and attention-output supervision guide calibration with model weights frozen. Across three MLA models and six benchmarks, RoLaQ achieves the highest average accuracy among the compared 2-bit methods both without and with token protection. On DeepSeek-V2-Lite, an SGLang implementation provides 3.96 times the BF16 KV capacity under the same memory budget and 2.51 times its decode throughput with 256K input tokens.",
-      "tags": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention",
-      "url": "https://arxiv.org/abs/2610.20686v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "cb2f447fc2c99b791167bcea",
-      "context_id": "6e51eaf70c5eb1f550e5fec7",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_published": "2026-10-14T17:57:01Z",
-      "source_updated": "2026-10-14T17:57:01Z",
-      "summary": "Long contexts enlarge key--value (KV) caches, increasing memory use and attention costs during generation. Compressing these caches must preserve information for unseen questions. We introduce **Latent Compaction**, which learns a compact document-specific cache through test-time training. We initialize cache entries using reconstruction importance, teacher attention, and key-space diversity. Training first fits attention outputs and log-normalizers to those of the full cache, with reconstruction-selected entries held fixed. It then jointly optimizes the entire cache through end-to-end distillation from the full-cache model. Model weights remain frozen throughout, and training uses only generic prompts about the document, without access to downstream questions or answers. Experiments on RULER, LongBench, and Phonebook Lookup demonstrate substantial gains over budget-matched compression baselines. On a RULER, for example, our method achieves 96.7% accuracy at 32$\\times$ compression, compared with 40.0% for KVZip+. The method also transfers across model scales and families, with retrieval gains on both Qwen3 and MiniCPM5. These results show that treating the KV cache as a neural network and optimizing it with test-time training can preserve retrieval accuracy under aggressive compression. The code is released at https://www.github.com/THUNLP/latent-compaction",
-      "tags": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Latent Compaction with Test-Time Training",
-      "url": "https://arxiv.org/abs/2610.20582v1"
+      "title": "Sobolev Well-Posedness for Three-Dimensional Prandtl Boundary Layers Near Proportional Structures in a Critical Transverse Space",
+      "url": "https://zenodo.org/records/23437208"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -355,8 +335,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "172ed7ca6482753f13731591",
-      "context_id": "26658d7a430381335b6a9c75",
+      "candidate_id": "565f4925dc84b64e085fea11",
+      "context_id": "10632bd5ed8a94451caf7feb",
       "direction_id": "formal_proof_verification::REVERSE",
       "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -373,24 +353,21 @@
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.5833,
-      "source": "arxiv",
-      "source_published": "2026-10-15T12:57:19Z",
-      "source_updated": "2026-10-15T12:57:19Z",
-      "summary": "Conditional memory expands language-model capacity through selective lookup, but the full embedding table must remain available for every possible input. We introduce Conditional Program (CP), a compressed representation that reconstructs only the rows an input requests. CP represents each row by a short code and a local scale, with a reconstruction program shared across the table. We instantiate this representation with a Gaussian trellis, norm restoration and independently decodable row records. CP's two-bit code lowers output KL by 41--63\\% relative to 2-bit round-to-nearest. Analysis across three trained n-gram memory families shows that Gaussian-like coordinate statistics coexist with learned relationships among rows; at matched storage budgets, the shared trellis outperforms the fitted codebooks and low-rank residual variants we test. For DeepSeek, it reduces table storage from 203GB to 51GB, leaving room for larger workloads when the table is kept on GPU.",
-      "tags": [
-        "cs.LG",
-        "cs.CL"
-      ],
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Data Type: CSV, Experiment&nbsp; Organized by: Research group of Shenzhen Research Institute, University of International Business and Economics, and a principal researcher from the University of Sassari, Italy&nbsp; Approval ID: UIBE-4635876 The dataset contains 876 linked scene records representing 73 participants, each contributing responses to 12 virtual tourism presentations. Six destination settings are represented: a heritage courtyard, coastal promenade, forest trail, museum gallery, mountain lookout and historic street. Each setting has a LiDAR and a photogrammetric version, yielding 438 records per reconstruction condition. Each row identifies a participant, destination and reconstruction condition. The source CSV contains participant age and VR familiarity, presentation order, exposure duration, experiential ratings and technical descriptors. Experiential variables include psychological immersion, presence, perceived spatial coherence, emotional valence, arousal and workload. Technical variables include geometric error, texture ratings, frame rate, motion summaries and the interval between modality sessions. Neural features comprise 1,200 EEG values organised across 30 channels and 40 frequency bins spanning 1&ndash;40 Hz, together with 12 fMRI regional summaries. The regional labels cover bilateral dorsolateral prefrontal, precentral, postcentral, inferior parietal and superior parietal regions, plus ventromedial prefrontal cortex and precuneus. These values use arbitrary units and do not represent raw electrical waveforms or anatomically extracted BOLD measurements. The analysis CSV aggregates EEG frequency values into five bands: delta, theta, alpha, beta and gamma. This produces 150 EEG features per record. Combining these with the 12 regional summaries produces 162 neural predictors. Mean immersion combines the two session ratings; values of at least 4.5 define the high immersion category. The analysis file also contains participant validation fold assignments, held-out predictions and classifier scores. All records from a participant share the same validation fold. Prediction and score columns are analytical outputs and must be excluded from model inputs. Mean immersion is 4.59 for LiDAR and 3.95 for photogrammetry. Verified primary balanced accuracy is 81.97% for EEG, 79.66% for fMRI and 79.01% for the combined model.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "N-Gram Memories at Two Bits: Quantizing Lookup Tables in Large Language Models",
-      "url": "https://arxiv.org/abs/2610.21810v1"
+      "title": "Decoding Immersive VR Tourism: Reconstruction Quality and Neural Indicators of Immersion",
+      "url": "https://zenodo.org/records/23434589"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "cd39b207acfa5dcdebfd04bd",
-      "context_id": "fd18d7d0a58c832f52a81ded",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "candidate_id": "82bed5683890a7394df9e1f4",
+      "context_id": "0429be48a27f890e1a0a466f",
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -400,31 +377,26 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "failure",
-        "failure mode",
-        "verification"
+        "reconstruction"
       ],
-      "mirror_lens": "COUNTEREVIDENCE",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.2917,
-      "source": "arxiv",
-      "source_published": "2026-10-14T00:36:08Z",
-      "source_updated": "2026-10-15T17:38:29Z",
-      "summary": "Agents are increasingly interacting with other agents that act for different principals (people or organizations on whose behalf they work), such as a buyer's personal agent negotiating with an enterprise's seller agent. In such agent-to-agent (A2A) scenarios, each agent has its own environment and holds information and authority that the other cannot see. Moreover, the interests of each agent may be aligned (cooperative), partly aligned (mixed-motive), or opposed (competitive). Existing multi-agent system failure studies assume one orchestrator, shared workspace, or single principal. We ask how A2A systems fail when these assumptions are removed. We study more than 2,500 recorded runs of A2A systems built from different agent harnesses and models, spanning 488 scenarios across eight families (legal, CRM, security, commerce, etc.). From these traces, we derive $A^2$-Failures, a taxonomy of 20 A2A failure modes in four categories: (i) discovery and delegation, (ii) grounding and record consistency, (iii) verification, and (iv) conduct and fidelity. Three findings hold across every harness, model, and scenario studied: (1) discovery and interaction are driven by the phrasing of the task rather than the availability of peer agents; (2) no agent verifies a peer's factual claim on its own initiative, so an A2A system inherits the reliability of its least reliable participant unless the protocol or mechanism performs the check; and (3) the aggregate outcome score credits the agent completing the task while staying blind to the coordination, verification, and conduct failures beneath it, so A2A systems must be evaluated per agent, against each agent's own principal. We release the run logs behind the taxonomy at https://huggingface.co/datasets/a2a-salesforce/a2-failures.",
-      "tags": [
-        "cs.MA",
-        "cs.AI"
-      ],
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "MRax is a JAX-based Python library for quantitative MRI model fitting, reconstruction, and analysis.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Why Do Agent Teams Fail Across Boundaries? A Failure Taxonomy for Agent-to-Agent Systems with Private States",
-      "url": "https://arxiv.org/abs/2610.19342v2"
+      "title": "MRax: JAX-based tools for quantitative MRI research",
+      "url": "https://zenodo.org/records/23436799"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "423d27f88f2e8217f8f0337a",
-      "context_id": "b11ff84c2594bfc331fa1df8",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "candidate_id": "e688467301b3d668265ea15b",
+      "context_id": "008e27936c082ee187f3e008",
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -434,23 +406,38 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "failure",
-        "verification"
+        "reconstruction"
       ],
-      "mirror_lens": "COUNTEREVIDENCE",
+      "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_published": "2026-10-12T22:35:08Z",
-      "source_updated": "2026-10-12T22:35:08Z",
-      "summary": "Multi-agent systems promise a new axis for scaling inference: rather than having one agent think longer or sample more attempts, a task is split across many agents that work in parallel and coordinate. However, in practice, more agents can easily produce duplicate work, coordination failures, and higher costs. We therefore formulate team design as a compute allocation problem: starting from a solo agent, where should additional inference compute go to reach the reward-cost Pareto frontier? We build a minimal multi-agent harness from the ground up and trace this frontier by varying, one at a time, the workflow stage at which a lead delegates to its workers (planning, implementation, or verification), the models that form the team, and the number of workers. On ProgramBench, teams outperform solo agents but cost three to seven times as much. With the right compute allocation, however, a heterogeneous 17-agent team comes within 1.4 points of a strong homogeneous 5-agent team at 70% lower cost. This efficiency stems from three findings. First, planning is the most valuable use of workers: in a homogeneous team whose lead decides how many workers to spawn, a lead that delegates only planning to its workers, and then implements and verifies the code itself, matches the reward of a lead that delegates to workers throughout planning, implementation, and verification, at half the cost. Second, cheap models pay off as planners but not as implementers: a strong lead with cheap planners recovers 47.5% of the reward gain of an all-strong team for only 13.9% of its additional cost, whereas cheap implementers lower reward. Third, planners keep improving reward as the team grows, whereas implementers and verifiers plateau beyond four workers. Together, our results offer a guide to spending an agent budget where it counts, given the task, cost, and latency constraints a user has.",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_published": "2026-09-30",
+      "source_updated": null,
+      "summary": "Експертна методика визначає стадії та операції дослідження, однак сама їх послідовність іще не пояснює, за яких умов результатом однієї операції можна скористатися в наступній. У судовій гірничотехнічній експертизі найбільш відповідальними є переходи від відомостей, що їх містять матеріали, до реконструкції механізму події, від реконструкції &ndash; до оцінювання причинного значення обставин, а від установленої дії або бездіяльності &ndash; до її технічного співвіднесення з функціями конкретної особи. Мета роботи полягає у формуванні критеріїв, за якими придатність проміжного результату перевіряють до його застосування в наступній операції, та у з&rsquo;ясуванні зв&rsquo;язку між фактичною основою &ndash; сукупністю достатніх, узгоджених і простежуваних відомостей &ndash; і допустимими межами підсумкової відповіді експерта. Дослідження поєднало структурне моделювання, формально-логічний аналіз експертного міркування, зіставлення з положеннями судової експертології та теоретико-методичне узагальнення професійного досвіду у сфері судової гірничотехнічної експертизи. Застосування моделі проілюстровано на двох знеособлених типізованих ситуаціях із завершеної експертної практики 2015&ndash;2023 років, що відображають різний стан фактичної основи. Обґрунтовано поняття критерію контрольованого переходу й сім функціональних контрольних точок: відповідності питання компетенції експерта; достатності матеріалів; узгодженості та простежуваності відомостей; можливості реконструкції механізму; причинного значення обставин; суб&rsquo;єктно-функціонального співвіднесення; синтезу й оцінювання результатів. Для фіксації методичного рішення запропоновано статуси контрольованого переходу: Т+ &ndash; дозволений перехід, Т&plusmn; &ndash; обмежено дозволений перехід, Т&ndash; &ndash; недозволений перехід. Практичними результатами є модель проходження контрольної точки, матриця методичних рішень і структура робочої карти, придатні для використання як методичний модуль судової гірничотехнічної експертизи. Застосування критеріїв контрольованого переходу пов&rsquo;язує стан фактичної основи з допустимим напрямом подальшого аналізу й запобігає формулюванню відповіді поза обумовленими межами.",
       "tags": [
-        "cs.MA",
-        "cs.CL"
+        "судова гірничотехнічна експертиза",
+        "експертна методика",
+        "контрольований перехід",
+        "контрольна точка",
+        "реконструкція механізму події",
+        "причинно-наслідковий зв'язок",
+        "суб'єктно-функціональне співвіднесення",
+        "обґрунтованість висновку",
+        "межі відповіді експерта",
+        "forensic mining engineering examination",
+        "forensic examination methodology",
+        "controlled transition",
+        "checkpoint",
+        "event mechanism reconstruction",
+        "cause-and-effect relationship",
+        "person–function correlation",
+        "substantiation of expert conclusion",
+        "limits of expert answer"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Scaling Inference-Time Compute with Teams of Coding Agents",
-      "url": "https://arxiv.org/abs/2610.17471v1"
+      "title": "Критерії контрольованого переходу між операціями судово-експертного дослідження як засіб забезпечення обґрунтованості висновку в судовій гірничотехнічній експертизі",
+      "url": "https://zenodo.org/records/23432441"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -566,73 +553,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e659ea165434623778492d9b",
-      "context_id": "2f191aa2535cdbcb35798a39",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4583,
-      "source": "arxiv",
-      "source_published": "2026-10-09T00:02:59Z",
-      "source_updated": "2026-10-12T20:41:24Z",
-      "summary": "Multi-agent systems are increasingly used to solve coding tasks by coordinating agents that share code and plans. These agents are often optimized with reinforcement learning (RL) using automated evaluators, but bypassing evaluation can earn reward without producing a genuine solution. Prior work has largely treated reward hacking as a single-agent failure. In this work, we show that a reward-hacking strategy elicited in one agent can propagate to others and affect system coordination. Across four open-weight backbones, coding RL elicits and amplifies reward hacking in two settings: explicit mechanism descriptions in the system prompt and mid-training that models upstream exposure to facts about the coding environment. Using post-RL agents from the mid-training setting as sources, we observe propagation through code and shared memory, and across roles through natural-language plans. Even agents based on small open-weight models induce reward hacking in stronger closed-weight targets. On hard tasks, propagation can intensify along a transmission chain after the original source leaves as the code acquires more persuasive justifications. We also theoretically analyze conditions under which reward hacking amplifies, persists, or decays across agent interactions. Beyond propagation, reward hacking can bias task routing toward reward-hacking agents and survive candidate aggregation. As potential mitigations, we evaluate code review by the coder or a separate verifier, both of which reduce delivered hacks. Together, these results establish reward hacking as a transmissible strategy whose effects extend beyond the agent in which it first emerges.",
-      "tags": [
-        "cs.AI",
-        "cs.CR",
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
-      "url": "https://arxiv.org/abs/2610.12822v2"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a1954edc6ae0594478835712",
-      "context_id": "8d78d9803861cc63f2eea0c9",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "rup"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "arxiv",
-      "source_published": "2026-10-09T12:54:11Z",
-      "source_updated": "2026-10-09T12:54:11Z",
-      "summary": "Long-horizon embodied agents must maintain task-relevant information, coordinate heterogeneous robots, and adapt their decisions as execution unfolds. Existing benchmarks investigate dynamic task execution and embodied multi-agent coordination, but provide limited evaluation of their intersection. We introduce MAGMA-Bench, an architecture-agnostic benchmark for persistent task reasoning in dynamic multi-robot environments. MAGMA-Bench evaluates agents across increasing task horizons and controlled online perturbations, including execution failures, task interruptions, and mission updates, with scenarios requiring coordination across robots with heterogeneous capabilities. It uses a structured skill-level interface to separate task-level reasoning from perception and low-level control. We evaluate locally deployable open-weight planners, multi-agent state-tracking strategies, and frontier models. Even the strongest evaluated models fail on a substantial fraction of clean episodes, and their success rates decrease further under online perturbations. Supervised adaptation greatly improves a small model, but performance remains substantially lower on longer and multi-robot missions. We release the benchmark, 261,646 task-level training examples, and an architecture-agnostic expert-trace generation pipeline.",
-      "tags": [
-        "cs.AI",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures",
-      "url": "https://arxiv.org/abs/2610.13534v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "4d352b674b8c61570df9d942",
       "context_id": "479b076bc6e993a7a3a5cb2a",
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -671,8 +591,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "f2467bf82c5813941e999385",
-      "context_id": "1f37c3dffcd2dc20ec8118f6",
+      "candidate_id": "b1196a5ccce2f1bab500baba",
+      "context_id": "2bb3465040b0fc5e309d4928",
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
       "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -685,21 +605,75 @@
       ],
       "keyword_hits": [
         "failure",
-        "rup"
+        "sat"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 5.4167,
-      "source": "arxiv",
-      "source_published": "2026-10-13T06:31:57Z",
-      "source_updated": "2026-10-13T06:31:57Z",
-      "summary": "Multi-agent collaboration has emerged as a critical paradigm for tackling complex, long-horizon tasks; however, while coordination protocols continue to advance, systemic failures at the inter-agent collaboration interface remain a pervasive bottleneck. In collaborative workflows, systems frequently suffer from \\emph{broken handoffs}---where critical task context is omitted, misrouted, or ignored despite each agent emitting locally plausible responses. To address this challenge, we present \\method, a verifiable runtime control framework that treats handoff repair as selective intervention over explicit dependency graphs. Central to \\method is an integrated fault-attribution and calibration pipeline, \\dataset, which decouples execution dependencies and injects counterfactual handoff perturbations to provide empirical supervision for runtime intervention. Leveraging this diagnostic foundation, \\method dynamically compiles observable interaction traces into a provenance graph to pinpoint unresolved dependencies, without accessing private agent states. It then evaluates candidate repairs through an empirical gate that weighs expected gains against disruption risks, and executes repairs only when formal local postconditions hold. Extensive evaluations across demanding benchmarks demonstrate that \\method boosts task success by up to 12.3 absolute percentage points on SILO-BENCH and 11.1 on TeamBench. Across both backbones, \\method maintains strict cost-effectiveness, adding as little as 2.0\\% marginal token overhead. Furthermore, on 562 handoff-relevant traces from the MAST benchmark, \\method achieves 69.8\\% F1 in a single pass, establishing a reliable operational boundary for verifiable coordination repair.",
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This paper studies parameter families of finite exponential sums in which two tie endpoints of a near-maximum level set approach at the critical rate δ_r ≍ qr^{-1/2}. The endpoint separation, half-bowl width, and competitor-kernel decay length then coincide. The cluster trio is rigid: its three exponents are determined by the level and endpoint positions, while coefficient ratios and other competitors require separate control. In a realized family, six rescaled kernels carry the interaction through one microscopic phase. Under explicit kernel-convergence hypotheses, the second-order term has a joint limit given by the excess sublevel length of a limiting profile, decomposed into a separated-endpoint sum and an interaction term. For an explicit four-term family, the hypotheses are verified with uniform explicit constants for every admissible phase lock. Two families have identical spectra and corresponding coefficient moduli at every radius but different critical limits. Along an unlocked calibration, phase dependence yields non-existence of the critical limit for specified parameters; certified intervals quantify the gap, and failure persists on an open parameter set. For a positive zero-lock family, upper and lower bounds describe the excluded shared arc. Full exclusion never occurs, and nonempty exclusion requires an additional parameter condition. The formal endpoint-anchored cap cannot be realized by a family satisfying the cluster hypotheses. High-precision numerical measurements on actual exponential sums compare with the profiles and exhibit phase dependence.",
       "tags": [
-        "cs.CL"
+        "Finite exponential sums",
+        "Near-maximum phase measure",
+        "Critical clustering",
+        "Phase locking",
+        "Non-universal limits"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "BRIDGE: Selective Boundary Repair with Dependency Graph Evidence in Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.17805v1"
+      "title": "Critical-Scale Clustering and the Breakdown of Universality for Near-Maximum Phase Measures of Exponential Sums",
+      "url": "https://zenodo.org/records/23437614"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "66e3d6f14eeb4019d12509c2",
+      "context_id": "a0b769edcaeaca8b7d1c0f57",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "We consider the three-dimensional Prandtl boundary layer equations near a smooth structured solution (u_s, K u_s) with &part;z K &equiv; 0. Under a monotone-or-degenerate profile assumption on u_s(&middot;), we prove local well-posedness, continuous dependence, and a priori estimates in the critical Sobolev space X^s = H^s_&gamma;(r) &times; H^s_&gamma;(q) &times; H^s_&gamma;(&nabla;{x,y} q), where r = u &minus; u_s and q = v &minus; K u. Our proof does not assume smallness of the data, monotonicity of &part;_z u_s, or Gevrey regularity. We also establish a nonlinear norm-inflation result showing that the raw H^s topology on q alone is insufficient, and we identify the minimal tangential derivative of q required. Several stress tests, counterexamples, and open problems are discussed.",
+      "tags": [
+        "Three-dimensional Prandtl equations",
+        "Prandtl boundary layer",
+        "Sobolev well-posedness",
+        "boundary layer theory",
+        "structured solutions",
+        "ill-posedness",
+        "nonlinear norm inflation",
+        "critical Sobolev space",
+        "transverse derivative",
+        "Hardy inequality",
+        "Kato-Ponce commutator estimates",
+        "Gevrey regularity",
+        "monotone-or-degenerate profile",
+        "degenerate critical points",
+        "continuous dependence",
+        "a priori estimates",
+        "weighted Sobolev spaces",
+        "secondary flow",
+        "vanishing viscosity limit",
+        "incompressible Navier-Stokes equations"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Sobolev Well-Posedness for Three-Dimensional Prandtl Boundary Layers Near Proportional Structures in a Critical Transverse Space",
+      "url": "https://zenodo.org/records/23437208"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -741,38 +715,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4d21a152220071c1d4323a11",
-      "context_id": "fac8fdb55281d34b39737612",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_published": "2026-10-15T04:39:57Z",
-      "source_updated": "2026-10-15T04:39:57Z",
-      "summary": "Centralized orchestration provides comprehensive multi-agent coordination but creates bottlenecks in scalability, adaptability, and collective performance. Decentralized approaches alleviate these bottlenecks by distributing coordination across agents, yet often leave responsibility for delegated dependencies and failure recovery unclear. To address this gap, we propose RCM, a responsibility-centered coordination mechanism that leverages commitments to couple task delegation with explicit responsibilities of the involved parties. Through recursive delegation, agents retain their upstream responsibilities while locally orchestrating downstream commitments, thereby preserving accountability across delegation chains, creating a network of local orchestration. We operationalize this mechanism locally through responsibility-constrained decision-making and a responsibility-oriented communication protocol (RCP), enabling agents to autonomously establish, manage, and terminate commitments. As agents act in parallel, their local actions continuously evolve the commitment graph, allowing global coordination to emerge and adapt toward a shared mission without centralized control. Experiments across reasoning, coding, and executable agent environments demonstrate that RCM outperforms strong centralized and decentralized coordination baselines by up to 18.7 points in task performance and 10.2 points in Responsibility, while improving failure and harm detection without task-specific training.",
-      "tags": [
-        "cs.MA",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A Responsibility-Centered Coordination Mechanism for Decentralized Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.21243v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "6bfa00ff0ff13174989a3d07",
       "context_id": "c20e8f5abba20af310cb8d5f",
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -799,6 +741,134 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "NANOROBOTIC CARGO TRANSPORT AND MICROSCALE MANIPULATION INTEGRITY AT THE LIMIT First-Generation DOI Fission Research Flagship 02 | Starli Active Nanosystems Feng Cheng-en (33) x Starli | Research Atlas v1.0 (October 2026) How can a micro/nanorobotic carrier demonstrate that the object arriving at a designated target is the same intact cargo that was originally loaded, that it was completely and correctly released, and that the carrier or its residues have been accounted for? This English-language research atlas converts cargo-delivery and micromanipulation demonstrations into a falsifiable end-to-end mission-integrity problem. The research develops a five-layer architecture for source identity and material tolerance, microscale contact mechanics, independently observable mission-state transitions, adversarial fault injection, and blind cross-platform requalification. Thirty mathematically distinct derivation stations connect probabilistic joint-task qualification to chemical mass balance, optical-label dissociation, surface adsorption, force-dependent detachment, microcontact mechanics, drag, kinetic release, spatial uncertainty, carryover contamination, whole-facility energy accounting, missing-fate bounds and hard safety vetoes. Eighty-two chapters each have a dedicated core-equation opening and five separate research sections. Two hundred Research Gates propose independent comparisons, physical perturbations, competing explanations, measurable failure criteria and reproducibility artifacts. Thirty-three provisional Phoenix Answer Embryos outline candidate systems that future investigators are invited to overturn, repair or rebuild. A machine-readable research atlas and formula-gate-DOI index enable AI-assisted comparison and future research reuse. The central endpoint is a correlated joint event: correct cargo identity and integrity, correct target, independently confirmed release, and verified carrier retrieval or authorized terminal disposition. The manuscript insists on counting every initiated mission rather than multiplying attractive substep success rates. It also distinguishes visible fluorescence from chemically intact cargo, externally actuated manipulation from on-board autonomy, and destination arrival from complete task closure. Strong benchmarks include optical tweezers, established magnetic-bead handling, microfluidic conveyance and conventional microgrippers under matched task difficulty, time and whole-facility energy use. Research status: This is a hypothesis-generating, nonclinical experimental-design atlas; it reports no newly conducted cargo experiments, clinical performance or proven integrated device. Foundational and recent DOI-identified publications provide engineering context but do not validate its new claims. The 200 Gates are open problems, not accomplished results. The actual text length and layout follow the substance of individual chapters rather than an artificially enforced 100,000-word count. PARENT DOI: https://doi.org/10.5281/zenodo.23046134 Parent volume: NANO/MICRO ROBOTICS, POWER & MISSION ENDURANCE AT THE LIMIT Genealogy: parent Ch.12-26 (cargo, contact and interface), Ch.63 and 65 (metrology and benchmarking). Individual child DOI: not minted in this manuscript-production workflow.",
       "url": "https://zenodo.org/records/23428633"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "cfc521c6d001c270e5c25826",
+      "context_id": "85ce88799f48b25693b845cd",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.5417,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This Zenodo record is a permanently preserved version of a Structured PREreview. You can view the complete PREreview at https://prereview.org/reviews/23431625 . Does the introduction explain the objective of the research presented in the preprint? Yes The introduction clearly explains the research objectives. It states that the study aims to replicate the quantitative analysis of Krause, Krause, and Bränfors (2018), assess the reproducibility of their findings, and examine potential limitations concerning statistical power and model specification. Are the methods well-suited for this research? Somewhat appropriate The replication approach is suitable for the research, as the authors reproduce the original Cox proportional hazards models and robustness tests. However, the methodological assessment has some gaps. In particular, the power analysis reports values of 0.44 and 0.99 without providing the formula, software procedure, or sufficient calculation details to allow readers to reproduce the estimates. The choice of 42 events in Table 6 also needs clarification, given that Table 5 reports 54 events overall. Additionally, the differences between the original and reproduced sample sizes remain unexplained. These issues weaken the transparency and reproducibility of the analysis. Are the conclusions supported by the data? Somewhat supported The main conclusion is that the original findings can be reproduced, which is supported by the reported results. The authors also reasonably identify the small number of female-signatory agreements and the limitations of drawing causal conclusions from the observed association. However, the claim that the analysis has low statistical power relies on a calculation for which the formula and detailed procedure are not provided (Table 6). The differences between the original and reproduced sample sizes also remain unexplained. These limitations make some aspects of the interpretation less conclusive than they could be. Are the data presentations, including visualizations, well-suited to represent the data? Somewhat appropriate and clear The survival analysis and regression tables are suitable for presenting the findings. However, some numerical inconsistencies in the descriptive statistics and differences in sample sizes across the original and reproduced models need clarification to ensure the results are presented accurately. For instance, Table 3 presents: three major statistical flaws: 1: Conflict Intensity row, where Female Signatories = 1: has SD of 1.2 while the Max is 0.45, which is statistically incorrect. Similarly, (2) Democracy row where Female Signatories = 1, has Mean 0.92 &lt; Min 1. And lastly, on page 5, UN peacekeeping is written as a binary number, however, in Table 3, the binary UN Peacekeeping has Max &gt; 1. All these minor inconsistencies require clarification. How clearly do the authors discuss, explain, and interpret their findings and potential next steps for the research? Very clearly The authors explain their findings, acknowledge the limitations of the small number of agreements with female signatories, and discuss the implications for causal interpretation. They also identify the need for further research, although the power analysis and differences in sample sizes could be explained more transparently. Is the preprint likely to advance academic knowledge? Somewhat likely If the author clarified the sample-size discrepancies and documented the power analysis more transparently, then it would substantially contribute to the reproducibility of an influential finding, as it already highlights the reproducibility of the findings and highlights the limitations in statistical power and causal interpretation. Would it benefit from language editing? No The languages is clear and no major errors could be found hinderig the understanding of the resarch. However some minor issues could be corrected, such as, constant capitalisation of the first letter in column names. Would you",
+      "tags": [
+        "Requested PREreview",
+        "Structured PREreview"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Structured PREreview of \"Female Signatories and Peace Durability: Replicating Krause, Krause, and Bränfors (2018)\"",
+      "url": "https://zenodo.org/records/23431625"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7bfb87375be1923dfddb0318",
+      "context_id": "f7d61dbf662bccf5a8cbc760",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "github_repository_search",
+      "source_published": null,
+      "source_updated": "2026-10-08T06:28:01Z",
+      "summary": "A reproducible research testbed for evidence-gated autonomy, verification, provenance, and escalation in high-consequence AI workflows.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Hafiz-IIT/EXIM-AI-Evidence-Gated-Autonomy",
+      "url": "https://github.com/Hafiz-IIT/EXIM-AI-Evidence-Gated-Autonomy"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "73d16938b97b3446576e8027",
+      "context_id": "bff6c6e7019d74e7df990973",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "github_repository_search",
+      "source_published": null,
+      "source_updated": "2026-10-17T00:18:07Z",
+      "summary": "AQARION / Quantarion-AI: reusable infrastructure for rigorous, reproducible mathematical research. It unifies ClaimLock governance, ProofGym, JOIN-STABILITY, replay verification, provenance chains, evidence schemas, skills, and CLI tools into one auditable workflow. Principle: Prove First · Verify Exhaustively · Predict Second · No Free Parameters.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "quantarion369-arch/AQARION",
+      "url": "https://github.com/quantarion369-arch/AQARION"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "fb8cfa94419cd29709ea37ee",
+      "context_id": "b6f84ff8d74b0a93b27424c7",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This replication package contains the experimental artifacts, anonymized empirical benchmark dataset (N = 5,000 paired student-opportunity records), statistical verification scripts, database definitions, and microservices source code for the research paper: \"Hybrid Vector-Temporal Matching for Student Freelance Placement: An Empirical Study of Database-Level Vector Offloading\" Targeted for Information and Software Technology (IST, Elsevier). Package Contents: data/: Anonymized benchmark dataset (students_data_tesis_final.csv) featuring 168-hour weekly availability matrices and raw ablation output. benchmarks/: Automated Python scripts for Stratified 5-fold cross-validation ablation (C1 to C4), Wilcoxon Signed-Rank hypothesis testing, Cliff's Delta effect size calculation, and bootstrap confidence intervals. database/: PostgreSQL 16 schema and stored procedure definitions for HNSW Approximate Nearest Neighbor vector search (pgvector) and dynamic schedule intersection. turborepo-src/: Clean source code of the decoupled microservices monorepo (API Gateway, Matching Service, ML Engine, and shared Protocol Buffers). System Requirements: Python 3.10+ with NumPy, SciPy, Pandas, Scikit-Learn, and NLTK. Node.js v20+ / pnpm v9+ and Docker Engine for microservice orchestration.",
+      "tags": [
+        "Software Architecture",
+        "Microservices",
+        "Vector Databases",
+        "pgvector",
+        "CQRS",
+        "Recommender Systems",
+        "Replication Package"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication Package: Hybrid Vector-Temporal Matching for Student Freelance Placement",
+      "url": "https://zenodo.org/records/23428430"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -842,108 +912,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "f2467bf82c5813941e999385",
-      "context_id": "6ec5f69491c04ccd8524f3d6",
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control",
-        "rup"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.25,
-      "source": "arxiv",
-      "source_published": "2026-10-13T06:31:57Z",
-      "source_updated": "2026-10-13T06:31:57Z",
-      "summary": "Multi-agent collaboration has emerged as a critical paradigm for tackling complex, long-horizon tasks; however, while coordination protocols continue to advance, systemic failures at the inter-agent collaboration interface remain a pervasive bottleneck. In collaborative workflows, systems frequently suffer from \\emph{broken handoffs}---where critical task context is omitted, misrouted, or ignored despite each agent emitting locally plausible responses. To address this challenge, we present \\method, a verifiable runtime control framework that treats handoff repair as selective intervention over explicit dependency graphs. Central to \\method is an integrated fault-attribution and calibration pipeline, \\dataset, which decouples execution dependencies and injects counterfactual handoff perturbations to provide empirical supervision for runtime intervention. Leveraging this diagnostic foundation, \\method dynamically compiles observable interaction traces into a provenance graph to pinpoint unresolved dependencies, without accessing private agent states. It then evaluates candidate repairs through an empirical gate that weighs expected gains against disruption risks, and executes repairs only when formal local postconditions hold. Extensive evaluations across demanding benchmarks demonstrate that \\method boosts task success by up to 12.3 absolute percentage points on SILO-BENCH and 11.1 on TeamBench. Across both backbones, \\method maintains strict cost-effectiveness, adding as little as 2.0\\% marginal token overhead. Furthermore, on 562 handoff-relevant traces from the MAST benchmark, \\method achieves 69.8\\% F1 in a single pass, establishing a reliable operational boundary for verifiable coordination repair.",
-      "tags": [
-        "cs.CL"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "BRIDGE: Selective Boundary Repair with Dependency Graph Evidence in Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.17805v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ec4aff456ed4f6d675591d20",
-      "context_id": "ee278af877ca6f58b1f43ca8",
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.125,
-      "source": "arxiv",
-      "source_published": "2026-10-14T16:46:48Z",
-      "source_updated": "2026-10-14T16:46:48Z",
-      "summary": "Multi-head latent attention (MLA) compresses the content of a key-value cache into a shared latent per token, making low-bit storage attractive for long-context inference. At two bits, errors in this representation perturb both attention matching and value readout, with effects that depend on error direction and reconstruction scale. We introduce RoLaQ (Rotation-calibrated Latent Quantization), an offline method for joint rotation and range calibration. RoLaQ refines a shared rotation within subspaces defined by the frozen key and value projections, and jointly learns quantization ranges whose thresholds and reconstruction gains are coupled to control the shared signal's response. Prediction matching and attention-output supervision guide calibration with model weights frozen. Across three MLA models and six benchmarks, RoLaQ achieves the highest average accuracy among the compared 2-bit methods both without and with token protection. On DeepSeek-V2-Lite, an SGLang implementation provides 3.96 times the BF16 KV capacity under the same memory budget and 2.51 times its decode throughput with 256K input tokens.",
-      "tags": [
-        "cs.LG",
-        "stat.ML"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention",
-      "url": "https://arxiv.org/abs/2610.20686v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a1954edc6ae0594478835712",
-      "context_id": "cc640f58d75626ac5097e33f",
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "rup"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.7917,
-      "source": "arxiv",
-      "source_published": "2026-10-09T12:54:11Z",
-      "source_updated": "2026-10-09T12:54:11Z",
-      "summary": "Long-horizon embodied agents must maintain task-relevant information, coordinate heterogeneous robots, and adapt their decisions as execution unfolds. Existing benchmarks investigate dynamic task execution and embodied multi-agent coordination, but provide limited evaluation of their intersection. We introduce MAGMA-Bench, an architecture-agnostic benchmark for persistent task reasoning in dynamic multi-robot environments. MAGMA-Bench evaluates agents across increasing task horizons and controlled online perturbations, including execution failures, task interruptions, and mission updates, with scenarios requiring coordination across robots with heterogeneous capabilities. It uses a structured skill-level interface to separate task-level reasoning from perception and low-level control. We evaluate locally deployable open-weight planners, multi-agent state-tracking strategies, and frontier models. Even the strongest evaluated models fail on a substantial fraction of clean episodes, and their success rates decrease further under online perturbations. Supervised adaptation greatly improves a small model, but performance remains substantially lower on longer and multi-robot missions. We release the benchmark, 261,646 task-level training examples, and an architecture-agnostic expert-trace generation pipeline.",
-      "tags": [
-        "cs.AI",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures",
-      "url": "https://arxiv.org/abs/2610.13534v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "6e88fd33e42fa1faf9bb958d",
       "context_id": "004cd6a1a4a7597a61b752ee",
       "direction_id": "formal_proof_verification::CONTROL",
@@ -976,38 +944,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Replication package (Level 2, restricted) for \"Auditing successor selection in software repository mining: Evidence from filtering AI-attributed commits\"",
       "url": "https://zenodo.org/records/23430270"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "9b3f1333e42a3045523dbeca",
-      "context_id": "d7c58de245f23409d1aeca49",
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_published": "2026-10-10T03:24:05Z",
-      "source_updated": "2026-10-10T03:24:05Z",
-      "summary": "Long-horizon multi-agent collaboration requires memory that preserves both successful actions and the coordination structure underlying them. Existing memory systems support information sharing or procedural reuse, but often leave the evolution of shared procedures disconnected from the task dependencies and execution states of collaborating agents. This coupling also limits the direct transfer of procedural memory designed for individual agents to team settings. We propose Self-Evolving Procedural Memory (SEPM), a framework that uses task dependency graphs as a common representation for online coordination and procedural memory evolution. During execution, a lightweight shared blackboard records structured evidence alongside task dependencies, supporting the detection of goal, plan, and world-state divergence and evidence-based realignment. After execution, verified actions and dependencies are distilled into reusable procedures, while recurring failures inform warnings and constraints. The shared procedure pool evolves through creation, refinement, specialization, and retirement, guided by success and cost utility and constrained by evidence and safety requirements. Together, these mechanisms preserve the collaborative structure and applicability conditions needed to reuse experience across tasks. Evaluations on ALFWorld, WebArena, and OfficeBench under AutoGen and DyLAN show that SEPM achieves the highest task scores among the compared methods in all six benchmark settings. Under AutoGen, it improves task scores over the no-added-memory baseline by 29.85, 25.86, and 13.00 percentage points, respectively. The codebase is available at https://github.com/cookieApril/SEPM.",
-      "tags": [
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "SEPM: Self-Evolving Procedural Memory Grounded in Task Graphs for Multi-Agent Collaboration",
-      "url": "https://arxiv.org/abs/2610.14515v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1201,8 +1137,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4d21a152220071c1d4323a11",
-      "context_id": "5144cb8145a42cae06f7ad1f",
+      "candidate_id": "582b14e606d257ed09e9eb3f",
+      "context_id": "1b0ea655d485f8aef5861f7d",
       "direction_id": "formal_proof_verification::CONTROL",
       "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -1220,17 +1156,87 @@
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 8.625,
-      "source": "arxiv",
-      "source_published": "2026-10-15T04:39:57Z",
-      "source_updated": "2026-10-15T04:39:57Z",
-      "summary": "Centralized orchestration provides comprehensive multi-agent coordination but creates bottlenecks in scalability, adaptability, and collective performance. Decentralized approaches alleviate these bottlenecks by distributing coordination across agents, yet often leave responsibility for delegated dependencies and failure recovery unclear. To address this gap, we propose RCM, a responsibility-centered coordination mechanism that leverages commitments to couple task delegation with explicit responsibilities of the involved parties. Through recursive delegation, agents retain their upstream responsibilities while locally orchestrating downstream commitments, thereby preserving accountability across delegation chains, creating a network of local orchestration. We operationalize this mechanism locally through responsibility-constrained decision-making and a responsibility-oriented communication protocol (RCP), enabling agents to autonomously establish, manage, and terminate commitments. As agents act in parallel, their local actions continuously evolve the commitment graph, allowing global coordination to emerge and adapt toward a shared mission without centralized control. Experiments across reasoning, coding, and executable agent environments demonstrate that RCM outperforms strong centralized and decentralized coordination baselines by up to 18.7 points in task performance and 10.2 points in Responsibility, while improving failure and harm detection without task-specific training.",
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Post-Soviet states have spent three decades rebuilding the civic curriculum around national rather than supranational loyalties, yet claims that modernized patriotic education changes what students know and value seldom face controlled scrutiny. This study evaluates a convergent model that couples national heritage content with interactive methods, digital gamification, STEAM-linked projects, and the weekly Kelajak Soati (Future Hour) curriculum in Uzbek general secondary schools. A three-stage quasi-experiment (ascertaining, 2022-2023; formative, 2023-2024; summative, 2024-2025) enrolled 1,192 students in ten schools across Tashkent, Fergana, and Navoiy, allocated to experimental (n = 594) and control (n = 598) conditions. Groups were equivalent at baseline (M = 3.52 vs. 3.53 on a three-level scale scored 3-5; t = &minus;0.12, p = .90; &chi; 2 (2) = 0.40, p = .82). At post-test the experimental group outperformed the control group (M = 3.92 vs. 3.52; Welch t(1184.4) = 10.46, p &lt; .001, d = 0.61; &chi; 2 (2) = 141.78, Cram&eacute;r&rsquo;s V = .34), with non-overlapping 97% confidence intervals and an effectiveness ratio of 1.11. Change concentrated at the lower threshold: the share of experimental students at the Low level fell from 58.4% to 23.9% while the Medium level rose from 30.8% to 60.6%; the control distribution did not move. Effects replicated in every region (d = 0.56-0.65), and net-of-baseline gains were as large in the rural Fergana district as in Navoiy. The model reliably converts civic disengagement into baseline civic literacy; whether it fosters constructive rather than conformist attachment remains untested. Implications for national scale-up and its evaluation are discussed.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "HERITAGE, TECHNOLOGY, AND CIVIC ATTACHMENT: A THREE-REGION QUASI-EXPERIMENTAL EVALUATION OF CONVERGENT PATRIOTIC EDUCATION IN UZBEK SECONDARY SCHOOLS, 2022-2025",
+      "url": "https://zenodo.org/records/23437265"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b1196a5ccce2f1bab500baba",
+      "context_id": "7260494c3e630d205e8b9345",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.875,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This paper studies parameter families of finite exponential sums in which two tie endpoints of a near-maximum level set approach at the critical rate δ_r ≍ qr^{-1/2}. The endpoint separation, half-bowl width, and competitor-kernel decay length then coincide. The cluster trio is rigid: its three exponents are determined by the level and endpoint positions, while coefficient ratios and other competitors require separate control. In a realized family, six rescaled kernels carry the interaction through one microscopic phase. Under explicit kernel-convergence hypotheses, the second-order term has a joint limit given by the excess sublevel length of a limiting profile, decomposed into a separated-endpoint sum and an interaction term. For an explicit four-term family, the hypotheses are verified with uniform explicit constants for every admissible phase lock. Two families have identical spectra and corresponding coefficient moduli at every radius but different critical limits. Along an unlocked calibration, phase dependence yields non-existence of the critical limit for specified parameters; certified intervals quantify the gap, and failure persists on an open parameter set. For a positive zero-lock family, upper and lower bounds describe the excluded shared arc. Full exclusion never occurs, and nonempty exclusion requires an additional parameter condition. The formal endpoint-anchored cap cannot be realized by a family satisfying the cluster hypotheses. High-precision numerical measurements on actual exponential sums compare with the profiles and exhibit phase dependence.",
       "tags": [
-        "cs.MA",
-        "cs.AI"
+        "Finite exponential sums",
+        "Near-maximum phase measure",
+        "Critical clustering",
+        "Phase locking",
+        "Non-universal limits"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A Responsibility-Centered Coordination Mechanism for Decentralized Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.21243v1"
+      "title": "Critical-Scale Clustering and the Breakdown of Universality for Near-Maximum Phase Measures of Exponential Sums",
+      "url": "https://zenodo.org/records/23437614"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c7f52b02623b482e4b576263",
+      "context_id": "cb5266890b8c57e8591b5ef9",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Replication package for Legrenzi, Ciola and Bazzana, &ldquo;Adaptation to climate-induced macrofinancial risks: top-down and bottom-up solutions&rdquo;. The package contains the MATLAB implementation of a Stock-Flow-Consistent Agent-Based Integrated Assessment Model, the empirical calibration and the PSO/RWMH structural estimation routines, the input data on emissions and climate damages, the full simulation output (13 scenarios with 250 Monte Carlo simulations each), and the scripts that regenerate figures and tables in the paper. Running \"master_replication.m\" in the package root reproduces the complete set of exhibits. See \"README.txt\" for software requirements, folder structure and a file-by-file description.",
+      "tags": [
+        "integrated assessment model",
+        "agent-based model",
+        "financial stability",
+        "climate change adaptation",
+        "climate-aware monetary policy"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for \"Adaptation to climate-induced macrofinancial risks: top-down and bottom-up solutions\"",
+      "url": "https://zenodo.org/records/23433637"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1298,39 +1304,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Knowledge graph-constrained large language model agent for automated finite element modeling of girder bridges: research materials",
       "url": "https://zenodo.org/records/23433697"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "458b18e45359c3b2b2311869",
-      "context_id": "f8f17710056c0e67e8ae0ac4",
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "calibration"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_published": "2026-10-14T08:17:05Z",
-      "source_updated": "2026-10-14T08:17:05Z",
-      "summary": "Medical prescribing errors for multimorbid patients, who require complex drug regimens, are a major patient safety concern. These errors often stem from fragmented decision-making across medical specialties, a critical coordination failure that leads to adverse drug events and rehospitalizations. To address this coordination challenge, we introduce PRISMATIC, a multi-agent architecture where specialized agents, each representing a workflow role, collaboratively generate and refine treatment plans. Operating on a blackboard architecture, the system first structures patient information from clinical notes, then iteratively develops safe, rational, and interpretable drug regimens. The agents' collaboration is governed by two novel adaptive coordination mechanisms: (1) Dynamic Self-Updating Weight Adjustment (DSWA), a long-term mechanism that adjusts the influence weights of agents based on historical case outcomes, enabling the system to adapt and trust more reliable specialists over time. (2) Discrepancy Feedback Precise Calibration (DFPC), a short-term mechanism where agents provide iterative feedback to resolve disagreements and eliminate prescription conflicts for the current patient. Experiments on patient records from the MIMIC-IV database show that PRISMATIC significantly reduces drug conflicts, improves prescription coverage, and enhances treatment consistency compared to strong LLM baselines. Our work demonstrates that structuring clinical co-treatment as a multi-agent coordination problem offers a promising path toward safer and more coherent multidisease management.",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "PRISMATIC : Prescription Risk Inspection System for Multi-Agent Treatment Interaction in Clinical Decision-Making",
-      "url": "https://arxiv.org/abs/2610.19762v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1468,6 +1441,82 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "843683e6aeff6e510ae89419",
+      "context_id": "8905f5365ebe688288522af9",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "This working paper develops a relational Phase interpretation of black holes within the Harmonic Physics research programme, using general relativity, exact Kerr geometry and semiclassical black-hole thermodynamics as its physical baseline. It examines how phase organisation, temporal reference, observer accessibility and information persistence might relate to black-hole closure. Within the proposed framework, a phase-cycle is a closed relational structure that supports recurrence. Measured succession requires distinguishable relations and persistent records, while geometry and causal history are treated as observer-level reconstructions. The temporal-anchor hypothesis concerns a deeper terminal condition at which the parent domain loses the internally usable references needed to resolve further clocks and geometry. This proposed condition is kept distinct from the regular event horizon, across which local evolution continues. Observation is described through a joint observation relation among admitted source organisation, a physical channel and an observer-capable organisation. Source state, coupling and registered record retain separate roles; changes in accessibility may alter registration while the source organisation persists. The paper consolidates three bounded mathematical findings: exact Kerr ingoing and outgoing endpoints can have opposite trapped and anti-trapped orientations with the same mass and spin parameters; spherical source/exterior matching leaves the transition law undetermined; and a leading slow-rotation calculation permits the same sign of angular momentum in closing and opening configurations. These results establish compatibility within the stated geometric constructions. A physical transition mechanism remains to be derived. Black-to-white-hole models provide external theoretical comparisons. Return to the original exterior and the opening of a daughter phase are treated as distinct hypotheses, each requiring an appropriate causal structure, state map and conservation accounting. The remaining requirements include an invariant parent-relative terminal criterion, a physical Phase-to-boundary map, transition dynamics, information and entropy accounting, and a stable nonperturbative rotating completion. The paper remains a developing theoretical interpretation supported by standard-geometry comparisons and bounded symbolic checks. It does not establish a physical black-to-white transition, information recovery through evaporation or a daughter universe. Version 2.3, dated 17 October 2026, updates observation and self-nesting terminology, clarifies geodesic incompleteness and fixed-angular-momentum assumptions, and refreshes the references. The existing displayed equations and reported test results are retained. keywords: Phase Theory; black holes; event horizons; geodesic incompleteness; relational time; phase contraction; information accessibility; singularity; white holes; quantum gravity. &nbsp;",
+      "tags": [
+        "black holes",
+        "temporal agents",
+        "temporal boundary conditions",
+        "time anchoring",
+        "future-path collapse",
+        "arrow of time",
+        "temporal causality",
+        "event horizons",
+        "global time ordering",
+        "spacetime constraints"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Black Holes as Temporal Anchors",
+      "url": "https://zenodo.org/records/23437002"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6334b8edf312a33d4d56a4c0",
+      "context_id": "cc15e30ed7f316c65f973210",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Supplementary material for: Nguyen Trung Hieu, \"From Provenance to Interpretation Readiness: A Methodological Framework for Cross-Lingual Audits of Large Language Models\", EAI FISAT 2026 (EAI FPT International Conference on Intelligent Systems and Advanced Technologies), Ho Chi Minh City, Vietnam; Springer LNICST, forthcoming. The record contains a proposed claim-level review codebook for the Provenance-Controlled Cross-Lingual Audit Framework (PCAF), covering the unit of analysis, claim families (O/R/N/E), transformation layers (L1-L5), material alternatives, evidence and diagnostic dispositions, claim narrowing, and an independent-evaluation protocol, together with a blank audit register (CSV header only). These are proposed research instruments: they have not been validated, no independent coding study has been completed, and the CSV contains no data.",
+      "tags": [
+        "multilingual auditing",
+        "large language models",
+        "AI evaluation methodology",
+        "codebook"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "PCAF claim-level review codebook and blank audit register (v1.0)",
+      "url": "https://zenodo.org/records/23436923"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "4e81e30823fd05d39d8c248e",
       "context_id": "977766e41a8dedbe58e29e47",
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1507,10 +1556,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "565f4925dc84b64e085fea11",
-      "context_id": "10632bd5ed8a94451caf7feb",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "candidate_id": "66e3d6f14eeb4019d12509c2",
+      "context_id": "c3c425155eeb9332965fddba",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -1520,67 +1569,40 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "reconstruction"
+        "counterexample"
       ],
-      "mirror_lens": "REVERSE",
+      "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.5833,
       "source": "zenodo",
       "source_published": "2026-10-17",
       "source_updated": null,
-      "summary": "Data Type: CSV, Experiment&nbsp; Organized by: Research group of Shenzhen Research Institute, University of International Business and Economics, and a principal researcher from the University of Sassari, Italy&nbsp; Approval ID: UIBE-4635876 The dataset contains 876 linked scene records representing 73 participants, each contributing responses to 12 virtual tourism presentations. Six destination settings are represented: a heritage courtyard, coastal promenade, forest trail, museum gallery, mountain lookout and historic street. Each setting has a LiDAR and a photogrammetric version, yielding 438 records per reconstruction condition. Each row identifies a participant, destination and reconstruction condition. The source CSV contains participant age and VR familiarity, presentation order, exposure duration, experiential ratings and technical descriptors. Experiential variables include psychological immersion, presence, perceived spatial coherence, emotional valence, arousal and workload. Technical variables include geometric error, texture ratings, frame rate, motion summaries and the interval between modality sessions. Neural features comprise 1,200 EEG values organised across 30 channels and 40 frequency bins spanning 1&ndash;40 Hz, together with 12 fMRI regional summaries. The regional labels cover bilateral dorsolateral prefrontal, precentral, postcentral, inferior parietal and superior parietal regions, plus ventromedial prefrontal cortex and precuneus. These values use arbitrary units and do not represent raw electrical waveforms or anatomically extracted BOLD measurements. The analysis CSV aggregates EEG frequency values into five bands: delta, theta, alpha, beta and gamma. This produces 150 EEG features per record. Combining these with the 12 regional summaries produces 162 neural predictors. Mean immersion combines the two session ratings; values of at least 4.5 define the high immersion category. The analysis file also contains participant validation fold assignments, held-out predictions and classifier scores. All records from a participant share the same validation fold. Prediction and score columns are analytical outputs and must be excluded from model inputs. Mean immersion is 4.59 for LiDAR and 3.95 for photogrammetry. Verified primary balanced accuracy is 81.97% for EEG, 79.66% for fMRI and 79.01% for the combined model.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Decoding Immersive VR Tourism: Reconstruction Quality and Neural Indicators of Immersion",
-      "url": "https://zenodo.org/records/23434589"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e688467301b3d668265ea15b",
-      "context_id": "008e27936c082ee187f3e008",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "zenodo",
-      "source_published": "2026-09-30",
-      "source_updated": null,
-      "summary": "Експертна методика визначає стадії та операції дослідження, однак сама їх послідовність іще не пояснює, за яких умов результатом однієї операції можна скористатися в наступній. У судовій гірничотехнічній експертизі найбільш відповідальними є переходи від відомостей, що їх містять матеріали, до реконструкції механізму події, від реконструкції &ndash; до оцінювання причинного значення обставин, а від установленої дії або бездіяльності &ndash; до її технічного співвіднесення з функціями конкретної особи. Мета роботи полягає у формуванні критеріїв, за якими придатність проміжного результату перевіряють до його застосування в наступній операції, та у з&rsquo;ясуванні зв&rsquo;язку між фактичною основою &ndash; сукупністю достатніх, узгоджених і простежуваних відомостей &ndash; і допустимими межами підсумкової відповіді експерта. Дослідження поєднало структурне моделювання, формально-логічний аналіз експертного міркування, зіставлення з положеннями судової експертології та теоретико-методичне узагальнення професійного досвіду у сфері судової гірничотехнічної експертизи. Застосування моделі проілюстровано на двох знеособлених типізованих ситуаціях із завершеної експертної практики 2015&ndash;2023 років, що відображають різний стан фактичної основи. Обґрунтовано поняття критерію контрольованого переходу й сім функціональних контрольних точок: відповідності питання компетенції експерта; достатності матеріалів; узгодженості та простежуваності відомостей; можливості реконструкції механізму; причинного значення обставин; суб&rsquo;єктно-функціонального співвіднесення; синтезу й оцінювання результатів. Для фіксації методичного рішення запропоновано статуси контрольованого переходу: Т+ &ndash; дозволений перехід, Т&plusmn; &ndash; обмежено дозволений перехід, Т&ndash; &ndash; недозволений перехід. Практичними результатами є модель проходження контрольної точки, матриця методичних рішень і структура робочої карти, придатні для використання як методичний модуль судової гірничотехнічної експертизи. Застосування критеріїв контрольованого переходу пов&rsquo;язує стан фактичної основи з допустимим напрямом подальшого аналізу й запобігає формулюванню відповіді поза обумовленими межами.",
+      "summary": "We consider the three-dimensional Prandtl boundary layer equations near a smooth structured solution (u_s, K u_s) with &part;z K &equiv; 0. Under a monotone-or-degenerate profile assumption on u_s(&middot;), we prove local well-posedness, continuous dependence, and a priori estimates in the critical Sobolev space X^s = H^s_&gamma;(r) &times; H^s_&gamma;(q) &times; H^s_&gamma;(&nabla;{x,y} q), where r = u &minus; u_s and q = v &minus; K u. Our proof does not assume smallness of the data, monotonicity of &part;_z u_s, or Gevrey regularity. We also establish a nonlinear norm-inflation result showing that the raw H^s topology on q alone is insufficient, and we identify the minimal tangential derivative of q required. Several stress tests, counterexamples, and open problems are discussed.",
       "tags": [
-        "судова гірничотехнічна експертиза",
-        "експертна методика",
-        "контрольований перехід",
-        "контрольна точка",
-        "реконструкція механізму події",
-        "причинно-наслідковий зв'язок",
-        "суб'єктно-функціональне співвіднесення",
-        "обґрунтованість висновку",
-        "межі відповіді експерта",
-        "forensic mining engineering examination",
-        "forensic examination methodology",
-        "controlled transition",
-        "checkpoint",
-        "event mechanism reconstruction",
-        "cause-and-effect relationship",
-        "person–function correlation",
-        "substantiation of expert conclusion",
-        "limits of expert answer"
+        "Three-dimensional Prandtl equations",
+        "Prandtl boundary layer",
+        "Sobolev well-posedness",
+        "boundary layer theory",
+        "structured solutions",
+        "ill-posedness",
+        "nonlinear norm inflation",
+        "critical Sobolev space",
+        "transverse derivative",
+        "Hardy inequality",
+        "Kato-Ponce commutator estimates",
+        "Gevrey regularity",
+        "monotone-or-degenerate profile",
+        "degenerate critical points",
+        "continuous dependence",
+        "a priori estimates",
+        "weighted Sobolev spaces",
+        "secondary flow",
+        "vanishing viscosity limit",
+        "incompressible Navier-Stokes equations"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Критерії контрольованого переходу між операціями судово-експертного дослідження як засіб забезпечення обґрунтованості висновку в судовій гірничотехнічній експертизі",
-      "url": "https://zenodo.org/records/23432441"
+      "title": "Sobolev Well-Posedness for Three-Dimensional Prandtl Boundary Layers Near Proportional Structures in a Critical Transverse Space",
+      "url": "https://zenodo.org/records/23437208"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1620,6 +1642,79 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Modeling Geopolitical Supply Chain Risk Factors in Indonesian Import-Dependent FMCG Firms A Fuzzy DEMATEL–MMDE–ISM Approach",
       "url": "https://zenodo.org/records/23434356"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0c17cec86aeb9e2629fac0a4",
+      "context_id": "39eb68d6482c3ea5d0667e73",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Scripts, dated analysis plans, run logs, and deal-level estimates for a study of 38,991 completed acquisitions by listed or delisted acquirers across 37 countries, rumored between 2007 and 2025. Version 2.1 accompanies a manuscript under double anonymized peer review; author identification is withheld during the review. It changes no script, log, plan, or data file of version 2.0: it updates the title of the manuscript and renumbers the exhibits in the index (NUMBERS.md) to those of the manuscript as submitted (Tables 1 to 6; Online Appendix S1 to S22). Licensed return series and deal and firm data cannot be redistributed and are documented rather than included (LICENSE_AND_DATA.md). Start with README.md. &nbsp;",
+      "tags": [
+        "mergers and acquisitions",
+        "systematic risk",
+        "measurement error",
+        "replication",
+        "null results",
+        "beta estimation",
+        "M&A",
+        "econometrics"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package: Do acquisitions change systematic risk? Evidence on beta from 38,991 deals in 37 countries over 19 years",
+      "url": "https://zenodo.org/records/23433294"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7acc01592c003df694c82086",
+      "context_id": "30e16cba336ff8383fd57273",
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Level-1 (public) replication package, version 1.0.3, of the article Auditing successor selection in software repository mining: Evidence from filtering AI-attributed commits (H. Jeong, Hanyang University ERICA; manuscript under review). It accompanies version 3.7 of the manuscript and supersedes version 1.0.2 (https://doi.org/10.5281/zenodo.23428669). Changes in 1.0.3: an exploratory analysis applies the fixed-anchor audit to a published file-based churn measure in cohort B ( jss_v2/exploratory_v37/ : the dated plan of 2026-10-17, whose SHA-256 is recorded in both deviation logs, the program w2_file_churn.py and its tests; aggregate results in jss_v2/results/v37/ ). The supplement (version 3.7) adds Section S13 with Tables S58 to S60 and names the exploratory convention for the anchor's own block the anchor-retained convention; the figure programs label that convention accordingly and write 800-dpi RGB TIFF files, with unchanged figure data. reproduce.py runs the new tests, checks the hash of the second dated plan and, with --level2 , recomputes the new aggregate from version 1.0.1 of the Level-2 archive. The registered code and every aggregate result of version 1.0.2 are unchanged, so the SHA-256 values registered in OSF hyf36 and 7jasg still match. Contents: the audit tool (Python, standard library only) with its 47 automated tests and a synthetic example; the registered analysis programs, whose SHA-256 values match those registered in OSF hyf36 (cohort A) and OSF 7jasg (cohort B); the exploratory programs with the dated plans of 2026-10-08 and 2026-10-17 and the record-level conformance checker; aggregate results for every table and figure; the deviation logs of both registrations; the 22-study literature evidence matrix; the cohort-B sampling frame and collection programs; and the generators of the supplement and the figures. Run python3 reproduce.py (Python 3.10 or later, numpy, matplotlib and git). It checks the registered hashes, runs the tests and the synthetic example, and regenerates the supplement tables and the figure data from the aggregate results. With --level2 &lt;folder&gt; it also recomputes, from the restricted per-unit files of the Level-2 archive (version 1.0.1: https://doi.org/10.5281/zenodo.23430270), every registered aggregate and every exploratory aggregate that does not require the source commit logs, and compares every regenerated file with the shipped result. Before release, both levels passed on Python 3.10.12 with numpy 2.2.6 (Linux, aarch64) and on Python 3.13.16 with numpy 2.5.3 (Linux, x86_64), there also with every text output written with CRLF line endings. Checks that need the source commit logs (engine equivalence, common-mask Monte Carlo, record conformance, trailer addresses, fix wording and the pass of the published-measure program over the logs) are documented by their programs and aggregate outputs. The package contains no account names, e-mail addresses or commit histories. Code: MIT License. Results, documents, supplement and figure data: CC BY 4.0 (see LICENSE-DATA, which also notes the third-party origin of the cohort-B sampling frame).",
+      "tags": [
+        "mining software repositories",
+        "measurement validity",
+        "successor-defined measures",
+        "AI-assisted software development",
+        "replication package"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package (Level 1, public) for \"Auditing successor selection in software repository mining: Evidence from filtering AI-attributed commits\"",
+      "url": "https://zenodo.org/records/23430269"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
