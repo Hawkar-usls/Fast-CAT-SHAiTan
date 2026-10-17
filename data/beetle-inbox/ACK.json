@@ -1,0 +1,10 @@
+{
+  "acknowledged_at": "2026-10-17T08:36:38.703209Z",
+  "batch_id": "1099eee2774a194931ac",
+  "last_sequence": 1,
+  "schema": "janus.beetle.inbox_ack.v1",
+  "scientific_authority_delta": 0,
+  "sha256": "52aeda96aadb3d7bfecd168056476e5b1fa86c551a9ad02d52963604c4321d12",
+  "status": "INBOX_DURABLE_UNVERIFIED__NOT_RUNTIME_CONSUMPTION",
+  "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan"
+}
