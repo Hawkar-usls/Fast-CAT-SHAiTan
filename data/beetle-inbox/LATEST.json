@@ -1,5 +1,5 @@
 {
-  "batch_id": "b34fba1a0a2e5d0835d7",
+  "batch_id": "bf18353b234281d5d2d3",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "items": [
     {
@@ -101,6 +101,123 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Sobolev Well-Posedness for Three-Dimensional Prandtl Boundary Layers Near Proportional Structures in a Critical Transverse Space",
       "url": "https://zenodo.org/records/23437208"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "06b15442a84b63b7cf265c09",
+      "context_id": "e2200868426049b811771911",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.625,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Version 3 is an organisational change only: the four subsections of the verification section are reordered so that the two Krook levels, the amplitude equation and the Vlasov solver, precede the two with diffusion and drag, the amplitude equation with diffusion and drag and the Vlasov solver with the Fokker&ndash;Planck operator. No text, number, figure or table is changed from version 2, and the description below is version 2&rsquo;s. Version 2 of this paper adds a related-work section placing the work against the analytic quasi-steady theory of Lestz and Duarte (2021), the regime maps of Zhang et al. (2026) and the steady-or-chirping criterion of Duarte et al. (2017, 2018); places the near-marginal comparison against Lestz and Duarte's two validity constraints and withdraws version 1's reading of the 24 percent gap, which is now a candidate explanation and not an established one; relabels the drag ratio of the ITER-like slice as the collisional ratio of Lilley et al. and places the turbulence-corrected ITER ratio, an order of magnitude smaller, between the two steady slices tested; states the comparison with the cold-background regime map at the point where the reduced model fails; narrows three statements of version 1 to what was tested; and adds the experiments version 1 left open, a reverse ramp pair at the first operating point and the edge and a benchmark pair at a second operating point. An erratum corrects a sentence of version 1's Limits section that had the two near-threshold amplitudes reversed: the held level of the full- f solver is 24 percent above the cubic equation's steady state, not the other way round. The paper builds and verifies a two-level reduced model of a fast-ion-driven mode, the Berk&ndash;Breizman bump-on-tail problem, as a plant whose purpose is to locate and characterise the regime in which the mode saturates to a steady state, the regime a fusion power plant must stay in. Level 0 is the near-threshold cubic amplitude equation with Krook, diffusive and drag collisions; Level 1 is a full- f one-dimensional Vlasov solver with a Krook operator; Level 2 adds drag and diffusion acting on the departure from the initial distribution. Each level was verified against the literature before its results were used: the amplitude equation reproduces the critical Krook rate 4.4 and the critical diffusion rate 2.05; the Vlasov solver reproduces the linear growth rate and frequency to 0.01 percent, conserves energy to second order, and reproduces the Berk&ndash;Breizman saturation law within 4 percent across the steady region and the diffusive saturation formula within 4 to 7 percent away from marginal stability. For the warm distribution used, the external damping on the field is only 87 percent effective as an amplitude damping, so marginal stability lies at a damping of 1.15 times the collisionless drive rather than 1.0; with that correction the full- f solver agrees with the cubic equation on the steady side of the bifurcation near threshold, and saturates 24 percent above it at a finite distance from marginal stability, in the direction and of the size that other simulations have reported against the same theory. The steady region is mapped in the damping&ndash;collision plane: with Krook collisions the oscillating region is a tongue at collision rates below 0.3 to 0.4 of the drive, closed above it; with diffusion equal to the drive, with or without drag at 0.7 of diffusion, every damping from 0.1 to 0.9 of the drive is steady, one point still rising at the end of its run; with drag at 1.2 of diffusion no steady point was found, and at the strongest drives the reduced model leaves its validity where a cold-background resonant model saturates steadily. The edge of the steady region along the collision axis lies between diffusion rates of 0.4 and 0.5 of the drive at a damping of 0.5 of the drive, converged on two velocity grids, and within the same bracket at a damping of 0.3, where every steady level is 1.41",
+      "tags": [
+        "Berk-Breizman model",
+        "bump-on-tail instability",
+        "energetic particles",
+        "fast ions",
+        "wave-particle interaction",
+        "nonlinear saturation",
+        "Vlasov simulation",
+        "Fokker-Planck collisions",
+        "dynamical friction",
+        "regime map",
+        "steady operating region",
+        "detection benchmark",
+        "tokamak",
+        "fusion power"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A reduced bump-on-tail plant for the steady operating region of a fast-ion-driven mode: amplitude equation, full-f Vlasov solver with Fokker-Planck collisions, regime map and a detection benchmark",
+      "url": "https://zenodo.org/records/23440459"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b99c98087a5b4278b1fdbb94",
+      "context_id": "93b3f187e45318fc7066b3c7",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.625,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Pareto Support Proofs is the computational companion to &ldquo;Sparse exact certificates for weighted-sum unsupportedness in finite multi-objective optimisation&rdquo;. This R1 distribution, OPTL-R1-20261017, contains the corrected engine 0.6.2, the preserved standalone checker 0.6.1 and reproduction layer AC3-candidate.1. The new controlled run is AC3_REPAIRED_20261017_01. Historical engine 0.6.1, R1_01 results and their provenance remain separately preserved. The companion provides exact certificate generation, generator-independent checking, JSON schemas, instances, certificates, raw observations, source manifests, figure sources and editable ODG files. Negative certificates are checked by exact arithmetic on recorded feasible decisions. Positive objects distinguish full P1 verification from the explicitly retained trusted-oracle P2 boundary. The retained study contains 225 objects: 190 correctness, 27 scaling and eight timing-case objects. Of these, 213 are fully verified at P1 and 12 positive binary-linear objects remain conditional P2. Separately implemented checks reproduce the 190 classifications and the arithmetic of all 102 negative objects. The 225 mathematical certificate payloads match the historical R1_01 payloads. All 225 historical trace files are preserved byte-for-byte; new provenance identifies the corrected run. The historical R1_01 timing batch has eight cases, 240 measurements and 24 warmups. The corrected shortest-path timing batch has three cases, 90 measurements and nine warmups. They are reported separately, including the supportable three-objective case in which checking has the higher median. The historical runner-hash gap remains disclosed. These records do not constitute formal software verification or independent human review. Source code is licensed under BSD-3-Clause. Data, instances, certificates, results, figures and prose documentation are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). The component boundaries and retained historical licences are documented inside the companion. AI-assisted preparation and validation are disclosed in the associated manuscript and supporting documentation; Antonio Clim remains responsible for the content. The four deposited files are ESM_1_Pareto_Support_Proofs_R1.zip, Fig1_Editable_Sources_R1.zip, PUBLIC_RELEASE_CONTEXT.md and SHA256SUMS.txt. They match the four named assets of the corresponding GitHub release. The ESM file is the journal's Online Resource 1; automatic GitHub source-code archives are different files. Repository: https://github.com/antonioclim/pareto-support-proofs GitHub release: https://github.com/antonioclim/pareto-support-proofs/releases/tag/optl-r1-20261017 Historical software version 0.6.1 DOI: https://doi.org/10.5281/zenodo.20832039",
+      "tags": [
+        "multi-objective optimisation",
+        "weighted-sum supportability",
+        "unsupportedness",
+        "reproducible optimisation software",
+        "exact certificates"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Pareto Support Proofs: repaired R1 controlled-reproduction companion",
+      "url": "https://zenodo.org/records/23440598"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d4e1a15da06df29202335891",
+      "context_id": "e27c1e9aea315062b9adf873",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "rup",
+        "sat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.25,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Background. Antireflux fundoplication failure &mdash; recurrent reflux, dysphagia, gas-bloat syndrome, secondary to a herniated, slipped, too-tight, disrupted, or twisted valve &mdash; remains common, and its endoscopic diagnosis lacks a common, standardized reporting language. Aim. To narratively review existing endoscopic instruments for postoperative antireflux valve assessment, the evidence on their interobserver reliability, and to position an original instrument &mdash; the Endoscopic Fundoplication Score (SEF) &mdash; within this landscape. Methods. Narrative review, with a targeted search in PubMed/MEDLINE and Google Scholar (last search: 24 September 2026) using the terms &ldquo;fundoplication,&rdquo; &ldquo;endoscopic grading,&rdquo; &ldquo;gastroesophageal valve,&rdquo; &ldquo;Hill classification,&rdquo; &ldquo;antireflux surgery outcome,&rdquo; &ldquo;interobserver reliability,&rdquo; &ldquo;wrap integrity,&rdquo; and &ldquo;hiatal hernia recurrence,&rdquo; covering literature published between 1996 and 2026 in English or with an English abstract, supplemented by reference-list screening of identified articles. Results. Three major endoscopic instruments were identified &mdash; the Hill classification (1996), the Jobe system (2004), and the American Foregut Society (AFS) nomenclature (2025) &mdash; alongside a descriptive, non-scored taxonomy of failure types (herniated, slipped, tight, disrupted, twisted). The interobserver reliability studies [1,2] identified in this review for the postoperative setting report low agreement, and a retrospective comparison of endoscopy reports [3] documented major discrepancies between external endoscopists and operating surgeons. The AFS classification of esophagogastric junction integrity achieved substantial agreement on static images (&kappa;=0.65) but only fair agreement under dynamic conditions (&kappa;=0.371), and the postoperative AFS nomenclature has not yet been tested for interobserver reliability. The SEF score, an 11-item composite instrument (0&ndash;16 points) applied to a cohort of 178 patients, correlated in preliminary single-centre data with the Hill classification, Los Angeles (LA) esophagitis grade, and the Visick patient-satisfaction score (own data, manuscript submitted for publication), offering a numeric, quantifiable alternative to existing categorical systems. The SEF threshold of &le;10 points, defined in the same cohort, is exploratory. Conclusions. The field of postoperative endoscopic antireflux valve assessment remains fragmented, without an interobserver-reliable consensus standard. The SEF score partially addresses this gap through a numeric structure, with experience-based weights and an exploratory threshold, but requires formal interobserver reliability testing and multicenter validation against the surgical gold standard.",
+      "tags": [
+        "fundoplication",
+        "antireflux valve",
+        "endoscopy",
+        "Hill classification",
+        "interobserver reliability"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "ENDOSCOPIC EVALUATION OF THE ANTIREFLUX VALVE AFTER FUNDOPLICATION: SYNTHESIS OF THE EVIDENCE AND PROPOSAL OF A FUNCTIONAL ENDOSCOPIC SCORE",
+      "url": "https://zenodo.org/records/23438577"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -369,109 +486,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b1196a5ccce2f1bab500baba",
-      "context_id": "d628eaf195c91f8f19e3a9a6",
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "sat"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.125,
-      "source": "zenodo",
-      "source_published": "2026-10-17",
-      "source_updated": null,
-      "summary": "This paper studies parameter families of finite exponential sums in which two tie endpoints of a near-maximum level set approach at the critical rate δ_r ≍ qr^{-1/2}. The endpoint separation, half-bowl width, and competitor-kernel decay length then coincide. The cluster trio is rigid: its three exponents are determined by the level and endpoint positions, while coefficient ratios and other competitors require separate control. In a realized family, six rescaled kernels carry the interaction through one microscopic phase. Under explicit kernel-convergence hypotheses, the second-order term has a joint limit given by the excess sublevel length of a limiting profile, decomposed into a separated-endpoint sum and an interaction term. For an explicit four-term family, the hypotheses are verified with uniform explicit constants for every admissible phase lock. Two families have identical spectra and corresponding coefficient moduli at every radius but different critical limits. Along an unlocked calibration, phase dependence yields non-existence of the critical limit for specified parameters; certified intervals quantify the gap, and failure persists on an open parameter set. For a positive zero-lock family, upper and lower bounds describe the excluded shared arc. Full exclusion never occurs, and nonempty exclusion requires an additional parameter condition. The formal endpoint-anchored cap cannot be realized by a family satisfying the cluster hypotheses. High-precision numerical measurements on actual exponential sums compare with the profiles and exhibit phase dependence.",
-      "tags": [
-        "Finite exponential sums",
-        "Near-maximum phase measure",
-        "Critical clustering",
-        "Phase locking",
-        "Non-universal limits"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Critical-Scale Clustering and the Breakdown of Universality for Near-Maximum Phase Measures of Exponential Sums",
-      "url": "https://zenodo.org/records/23437614"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b8a81919cf2e5e56b57b64d6",
-      "context_id": "d3ac87f4aec3a6fde7721c99",
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "sat"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.125,
-      "source": "arxiv",
-      "source_published": "2026-10-05T12:57:49Z",
-      "source_updated": "2026-10-05T12:57:49Z",
-      "summary": "Ultrasound (US)-based auricular vagus nerve stimulation (aVNS) is emerging as a versatile, noninvasive modality for neuromodulation - spanning clinical therapies (e.g., pain management, depression) and general well-being applications. However, most existing US-based aVNS systems remain bulky and require wet coupling media (e.g., ultrasound gel) to achieve both spatially localized stimulation and efficient acoustic transmission. We present a wearable US stimulation system combining a personalized, dry-coupled earpiece with a battery-powered, wireless US probe. The earpiece integrates a 2 MHz piezoelectric transducer fully encapsulated in Humimic material designed for anatomical fit and stable coupling without externally applied gel. Hydrophone measurements of the fully encapsulated earpiece in water give a peak rarefactional pressure of 0.24 MPa at 15 mm for a 15 V unipolar excitation. We further demonstrate in vivo feasibility through fully dry, in-ear 2 MHz pulse-echo acquisitions under realistic wearing conditions, confirming effective US transmission without the need for coupling gel. These results demonstrate the integration of a personalized dry acoustic interface with battery-powered stimulation electronics, providing a wearable platform for investigating US-based aVNS. Future studies will focus on functional outcomes, including heart rate variability and pupillary responses during stimulation.",
-      "tags": [
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Towards an Earpiece for Wearable and Dry Ultrasonic Vagus Nerve Stimulation",
-      "url": "https://arxiv.org/abs/2610.06263v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "db8f769d92c55bca440de376",
-      "context_id": "8337ce672e852082ec15de1f",
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "sat"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.125,
-      "source": "zenodo",
-      "source_published": "2026-10-17",
-      "source_updated": null,
-      "summary": "Overview This repository contains the two processed datasets analyzed in \"Influence of land cover and shade on the thermal environments of schoolyards in Los Angeles\" by Levinson et al. (in preparation). The data come from the LAUSD Cool Schoolyards experiment, a field study of how schoolyard surfaces affect surface temperature, air temperature, radiant heat, and outdoor thermal comfort at Los Angeles Unified School District (LAUSD) elementary schools. The study compares four surface types: uncoated asphalt pavement, pavement with a high-reflectance coating (coated pavement), turf, and garden. The first file holds mobile measurements taken with an instrumented cart that was moved across each schoolyard. The second holds continuous measurements from three stationary weather stations placed over different surfaces. Study sites and measurement periods Each school is identified in the data by a two-letter code: HE : Harrison Elementary School, City Terrace, Los Angeles, CA BE : Braddock Drive Elementary School and Gifted Magnet, Culver City area, Los Angeles, CA SE : Saticoy Elementary School, North Hollywood, Los Angeles, CA Mobile cart measurements were made at HE on 2025-09-06, at BE on 2025-09-07, and at SE on 2025-09-14. The weather stations were deployed at BE from 2025-09-10 13:00 to 2025-10-10 09:00 and at HE from 2025-10-10 14:00 to 2025-11-02 00:00. File 1: Transect measurements Transect measurement stats at 1 min + coded transects + open-meteo weather + shade + LSH.csv An instrumented cart was moved along a route of numbered locations (\"transect points\") across each schoolyard. At each point it stopped for about one minute and recorded readings every second. Each row summarizes one stop, giving the mean, standard deviation, minimum, and maximum of every measured variable. The route was traversed repeatedly in forward and reverse directions. The file includes: Identifiers: school, measurement number, transect point, a tag of the form MMM_SS_PP (measurement number, school, point), transect number, and direction. Microclimate: air temperature, relative humidity, and wind speed and direction measured about 1.5 m above the ground. Radiation and surfaces: downward solar irradiance, ground albedo (the fraction of sunlight the ground reflects), ground surface temperature, sky temperature, and mean radiant temperature (MRT, a measure of the total radiant heat a person receives). Readings from 12 radiometers are also included: six measuring sunlight and six measuring longwave (thermal) radiation, facing up, down, forward, back, left, and right. Instrument orientation and position: radiometer tilt, roll, and zenith angles, plus GPS coordinates. Surface properties: surface description and classification of each point, along with measured solar reflectance and thermal emittance. Derived quantities: solar position, local solar hour, the Universal Thermal Climate Index (UTCI, an index of how hot conditions feel to a person) and its heat-stress category, and a shade classification for each stop. In the Classification column, the labels \"Warm pavement,\" \"Cool pavement,\" \"Grass,\" and \"Nature area\" correspond to uncoated pavement, coated pavement, turf, and garden, respectively. File 2: Weather station time series All-schools, all-stations + differences + open-meteo weather datatable, 2026-07-17.csv This file is a continuous 1-minute time series from three stationary weather stations placed side by side over different surfaces: Station A: coated pavement Station B: uncoated pavement Station C: garden at BE, turf at HE Each station recorded air temperature, relative humidity, dew point, and ground surface temperature, along with battery voltage, solar-panel voltage, and radiation-shield fan speed. Temperatures are given both as raw values (suffix \"_raw\") and as values corrected through a cross-calibration of the three stations. The file also gives air and ground temperature differences between stations: B&minus;A (uncoated minus coated pav",
-      "tags": [
-        "Schoolyard",
-        "Cool pavement",
-        "Albedo",
-        "Mean radiant temperature",
-        "Thermal comfort",
-        "Shade",
-        "Turf"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Influence of land cover and shade on the thermal environments of schoolyards in Los Angeles",
-      "url": "https://zenodo.org/records/23433299"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "08874516a770789837a850d6",
       "context_id": "019eb00459bc6435448a54c5",
       "direction_id": "formal_proof_verification::REVERSE",
@@ -652,6 +666,52 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Black Holes as Temporal Anchors",
       "url": "https://zenodo.org/records/23437002"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "06b15442a84b63b7cf265c09",
+      "context_id": "fd7c7ecc63a2da61e46d6b82",
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9167,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "Version 3 is an organisational change only: the four subsections of the verification section are reordered so that the two Krook levels, the amplitude equation and the Vlasov solver, precede the two with diffusion and drag, the amplitude equation with diffusion and drag and the Vlasov solver with the Fokker&ndash;Planck operator. No text, number, figure or table is changed from version 2, and the description below is version 2&rsquo;s. Version 2 of this paper adds a related-work section placing the work against the analytic quasi-steady theory of Lestz and Duarte (2021), the regime maps of Zhang et al. (2026) and the steady-or-chirping criterion of Duarte et al. (2017, 2018); places the near-marginal comparison against Lestz and Duarte's two validity constraints and withdraws version 1's reading of the 24 percent gap, which is now a candidate explanation and not an established one; relabels the drag ratio of the ITER-like slice as the collisional ratio of Lilley et al. and places the turbulence-corrected ITER ratio, an order of magnitude smaller, between the two steady slices tested; states the comparison with the cold-background regime map at the point where the reduced model fails; narrows three statements of version 1 to what was tested; and adds the experiments version 1 left open, a reverse ramp pair at the first operating point and the edge and a benchmark pair at a second operating point. An erratum corrects a sentence of version 1's Limits section that had the two near-threshold amplitudes reversed: the held level of the full- f solver is 24 percent above the cubic equation's steady state, not the other way round. The paper builds and verifies a two-level reduced model of a fast-ion-driven mode, the Berk&ndash;Breizman bump-on-tail problem, as a plant whose purpose is to locate and characterise the regime in which the mode saturates to a steady state, the regime a fusion power plant must stay in. Level 0 is the near-threshold cubic amplitude equation with Krook, diffusive and drag collisions; Level 1 is a full- f one-dimensional Vlasov solver with a Krook operator; Level 2 adds drag and diffusion acting on the departure from the initial distribution. Each level was verified against the literature before its results were used: the amplitude equation reproduces the critical Krook rate 4.4 and the critical diffusion rate 2.05; the Vlasov solver reproduces the linear growth rate and frequency to 0.01 percent, conserves energy to second order, and reproduces the Berk&ndash;Breizman saturation law within 4 percent across the steady region and the diffusive saturation formula within 4 to 7 percent away from marginal stability. For the warm distribution used, the external damping on the field is only 87 percent effective as an amplitude damping, so marginal stability lies at a damping of 1.15 times the collisionless drive rather than 1.0; with that correction the full- f solver agrees with the cubic equation on the steady side of the bifurcation near threshold, and saturates 24 percent above it at a finite distance from marginal stability, in the direction and of the size that other simulations have reported against the same theory. The steady region is mapped in the damping&ndash;collision plane: with Krook collisions the oscillating region is a tongue at collision rates below 0.3 to 0.4 of the drive, closed above it; with diffusion equal to the drive, with or without drag at 0.7 of diffusion, every damping from 0.1 to 0.9 of the drive is steady, one point still rising at the end of its run; with drag at 1.2 of diffusion no steady point was found, and at the strongest drives the reduced model leaves its validity where a cold-background resonant model saturates steadily. The edge of the steady region along the collision axis lies between diffusion rates of 0.4 and 0.5 of the drive at a damping of 0.5 of the drive, converged on two velocity grids, and within the same bracket at a damping of 0.3, where every steady level is 1.41",
+      "tags": [
+        "Berk-Breizman model",
+        "bump-on-tail instability",
+        "energetic particles",
+        "fast ions",
+        "wave-particle interaction",
+        "nonlinear saturation",
+        "Vlasov simulation",
+        "Fokker-Planck collisions",
+        "dynamical friction",
+        "regime map",
+        "steady operating region",
+        "detection benchmark",
+        "tokamak",
+        "fusion power"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A reduced bump-on-tail plant for the steady operating region of a fast-ion-driven mode: amplitude equation, full-f Vlasov solver with Fokker-Planck collisions, regime map and a detection benchmark",
+      "url": "https://zenodo.org/records/23440459"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -891,10 +951,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "5afc4351d326a8e151655ad6",
-      "context_id": "3a9909a7188b48d020a68bfe",
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "candidate_id": "d4e1a15da06df29202335891",
+      "context_id": "3d25839bf5c5008189af0cca",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -904,19 +964,27 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "reconstruction"
+        "failure",
+        "rup",
+        "sat"
       ],
-      "mirror_lens": "REVERSE",
+      "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
+      "score": 6.5417,
       "source": "zenodo",
       "source_published": "2026-10-17",
       "source_updated": null,
-      "summary": "Experiment-independent toolkit for (charged) particle track reconstruction in (high energy) physics experiments implemented in modern C++",
-      "tags": [],
+      "summary": "Background. Antireflux fundoplication failure &mdash; recurrent reflux, dysphagia, gas-bloat syndrome, secondary to a herniated, slipped, too-tight, disrupted, or twisted valve &mdash; remains common, and its endoscopic diagnosis lacks a common, standardized reporting language. Aim. To narratively review existing endoscopic instruments for postoperative antireflux valve assessment, the evidence on their interobserver reliability, and to position an original instrument &mdash; the Endoscopic Fundoplication Score (SEF) &mdash; within this landscape. Methods. Narrative review, with a targeted search in PubMed/MEDLINE and Google Scholar (last search: 24 September 2026) using the terms &ldquo;fundoplication,&rdquo; &ldquo;endoscopic grading,&rdquo; &ldquo;gastroesophageal valve,&rdquo; &ldquo;Hill classification,&rdquo; &ldquo;antireflux surgery outcome,&rdquo; &ldquo;interobserver reliability,&rdquo; &ldquo;wrap integrity,&rdquo; and &ldquo;hiatal hernia recurrence,&rdquo; covering literature published between 1996 and 2026 in English or with an English abstract, supplemented by reference-list screening of identified articles. Results. Three major endoscopic instruments were identified &mdash; the Hill classification (1996), the Jobe system (2004), and the American Foregut Society (AFS) nomenclature (2025) &mdash; alongside a descriptive, non-scored taxonomy of failure types (herniated, slipped, tight, disrupted, twisted). The interobserver reliability studies [1,2] identified in this review for the postoperative setting report low agreement, and a retrospective comparison of endoscopy reports [3] documented major discrepancies between external endoscopists and operating surgeons. The AFS classification of esophagogastric junction integrity achieved substantial agreement on static images (&kappa;=0.65) but only fair agreement under dynamic conditions (&kappa;=0.371), and the postoperative AFS nomenclature has not yet been tested for interobserver reliability. The SEF score, an 11-item composite instrument (0&ndash;16 points) applied to a cohort of 178 patients, correlated in preliminary single-centre data with the Hill classification, Los Angeles (LA) esophagitis grade, and the Visick patient-satisfaction score (own data, manuscript submitted for publication), offering a numeric, quantifiable alternative to existing categorical systems. The SEF threshold of &le;10 points, defined in the same cohort, is exploratory. Conclusions. The field of postoperative endoscopic antireflux valve assessment remains fragmented, without an interobserver-reliable consensus standard. The SEF score partially addresses this gap through a numeric structure, with experience-based weights and an exploratory threshold, but requires formal interobserver reliability testing and multicenter validation against the surgical gold standard.",
+      "tags": [
+        "fundoplication",
+        "antireflux valve",
+        "endoscopy",
+        "Hill classification",
+        "interobserver reliability"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "acts-project/acts: v48.2.0",
-      "url": "https://zenodo.org/records/23432467"
+      "title": "ENDOSCOPIC EVALUATION OF THE ANTIREFLUX VALVE AFTER FUNDOPLICATION: SYNTHESIS OF THE EVIDENCE AND PROPOSAL OF A FUNCTIONAL ENDOSCOPIC SCORE",
+      "url": "https://zenodo.org/records/23438577"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1244,6 +1312,41 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "86203c7b8ad82058eaa6d23d",
+      "context_id": "f6fa8cad58a07114aa458980",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_published": "2026-10-17",
+      "source_updated": null,
+      "summary": "First tagged release of vmtools, R helpers for cardiovascular epidemiology. Includes: PREVENT (total CVD, ASCVD, heart failure) and Pooled Cohort Equations risk scores; HOMA-IR, HOMA-β, QUICKI, Matsuda and Avignon insulin indices; GLI-2012 predicted FEV1 and FVC (ages 25–95); Human Metabolome Database lookups; and utilities. Validated against the Goff 2013 PCE worked example, the PREVENT reference values in the preventr test suite, and the official GLI-2012 lookup tables (within 0.5%). Fixes since earlier versions predict_FVC : corrected a sign error affecting predicted FVC in women calcPREVENT.HF : added the missing age factor to the BMI interaction term predict_FEV1 / predict_FVC : explicit Caucasian option; &quot;other&quot; now uses GLI Other/mixed coefficients calcAvignon.SI , mqsave and HMDB_ID_from_name now work as documented Install: remotes::install_github(&quot;vlmurthylab/vmtools@v0.1.0&quot;)",
+      "tags": [
+        "r",
+        "epidemiology",
+        "cardiovascular-risk",
+        "prevent-equations",
+        "insulin-resistance"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "vmtools: handy tools for cardiovascular epidemiology",
+      "url": "https://zenodo.org/records/23440812"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "6bfa00ff0ff13174989a3d07",
       "context_id": "c20e8f5abba20af310cb8d5f",
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -1301,76 +1404,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Diagnostic Significance of the FIGO PALM–COEIN Classification in the Evaluation of Abnormal Uterine Bleeding: An Integrative Critical Review",
       "url": "https://zenodo.org/records/23439501"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "cfc521c6d001c270e5c25826",
-      "context_id": "85ce88799f48b25693b845cd",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "limitation",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 2.5417,
-      "source": "zenodo",
-      "source_published": "2026-10-17",
-      "source_updated": null,
-      "summary": "This Zenodo record is a permanently preserved version of a Structured PREreview. You can view the complete PREreview at https://prereview.org/reviews/23431625 . Does the introduction explain the objective of the research presented in the preprint? Yes The introduction clearly explains the research objectives. It states that the study aims to replicate the quantitative analysis of Krause, Krause, and Bränfors (2018), assess the reproducibility of their findings, and examine potential limitations concerning statistical power and model specification. Are the methods well-suited for this research? Somewhat appropriate The replication approach is suitable for the research, as the authors reproduce the original Cox proportional hazards models and robustness tests. However, the methodological assessment has some gaps. In particular, the power analysis reports values of 0.44 and 0.99 without providing the formula, software procedure, or sufficient calculation details to allow readers to reproduce the estimates. The choice of 42 events in Table 6 also needs clarification, given that Table 5 reports 54 events overall. Additionally, the differences between the original and reproduced sample sizes remain unexplained. These issues weaken the transparency and reproducibility of the analysis. Are the conclusions supported by the data? Somewhat supported The main conclusion is that the original findings can be reproduced, which is supported by the reported results. The authors also reasonably identify the small number of female-signatory agreements and the limitations of drawing causal conclusions from the observed association. However, the claim that the analysis has low statistical power relies on a calculation for which the formula and detailed procedure are not provided (Table 6). The differences between the original and reproduced sample sizes also remain unexplained. These limitations make some aspects of the interpretation less conclusive than they could be. Are the data presentations, including visualizations, well-suited to represent the data? Somewhat appropriate and clear The survival analysis and regression tables are suitable for presenting the findings. However, some numerical inconsistencies in the descriptive statistics and differences in sample sizes across the original and reproduced models need clarification to ensure the results are presented accurately. For instance, Table 3 presents: three major statistical flaws: 1: Conflict Intensity row, where Female Signatories = 1: has SD of 1.2 while the Max is 0.45, which is statistically incorrect. Similarly, (2) Democracy row where Female Signatories = 1, has Mean 0.92 &lt; Min 1. And lastly, on page 5, UN peacekeeping is written as a binary number, however, in Table 3, the binary UN Peacekeeping has Max &gt; 1. All these minor inconsistencies require clarification. How clearly do the authors discuss, explain, and interpret their findings and potential next steps for the research? Very clearly The authors explain their findings, acknowledge the limitations of the small number of agreements with female signatories, and discuss the implications for causal interpretation. They also identify the need for further research, although the power analysis and differences in sample sizes could be explained more transparently. Is the preprint likely to advance academic knowledge? Somewhat likely If the author clarified the sample-size discrepancies and documented the power analysis more transparently, then it would substantially contribute to the reproducibility of an influential finding, as it already highlights the reproducibility of the findings and highlights the limitations in statistical power and causal interpretation. Would it benefit from language editing? No The languages is clear and no major errors could be found hinderig the understanding of the resarch. However some minor issues could be corrected, such as, constant capitalisation of the first letter in column names. Would you",
-      "tags": [
-        "Requested PREreview",
-        "Structured PREreview"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Structured PREreview of \"Female Signatories and Peace Durability: Replicating Krause, Krause, and Bränfors (2018)\"",
-      "url": "https://zenodo.org/records/23431625"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "fb8cfa94419cd29709ea37ee",
-      "context_id": "b6f84ff8d74b0a93b27424c7",
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.5,
-      "source": "zenodo",
-      "source_published": "2026-10-17",
-      "source_updated": null,
-      "summary": "This replication package contains the experimental artifacts, anonymized empirical benchmark dataset (N = 5,000 paired student-opportunity records), statistical verification scripts, database definitions, and microservices source code for the research paper: \"Hybrid Vector-Temporal Matching for Student Freelance Placement: An Empirical Study of Database-Level Vector Offloading\" Targeted for Information and Software Technology (IST, Elsevier). Package Contents: data/: Anonymized benchmark dataset (students_data_tesis_final.csv) featuring 168-hour weekly availability matrices and raw ablation output. benchmarks/: Automated Python scripts for Stratified 5-fold cross-validation ablation (C1 to C4), Wilcoxon Signed-Rank hypothesis testing, Cliff's Delta effect size calculation, and bootstrap confidence intervals. database/: PostgreSQL 16 schema and stored procedure definitions for HNSW Approximate Nearest Neighbor vector search (pgvector) and dynamic schedule intersection. turborepo-src/: Clean source code of the decoupled microservices monorepo (API Gateway, Matching Service, ML Engine, and shared Protocol Buffers). System Requirements: Python 3.10+ with NumPy, SciPy, Pandas, Scikit-Learn, and NLTK. Node.js v20+ / pnpm v9+ and Docker Engine for microservice orchestration.",
-      "tags": [
-        "Software Architecture",
-        "Microservices",
-        "Vector Databases",
-        "pgvector",
-        "CQRS",
-        "Recommender Systems",
-        "Replication Package"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Replication Package: Hybrid Vector-Temporal Matching for Student Freelance Placement",
-      "url": "https://zenodo.org/records/23428430"
     },
     {
       "base_direction_id": "formal_proof_verification",
