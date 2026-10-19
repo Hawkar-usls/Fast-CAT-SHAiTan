@@ -1,5 +1,5 @@
 {
-  "batch_id": "2e16c5bf562b2f21fee7",
+  "batch_id": "91a99eaf1b57ccc8bd71",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -147,53 +147,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "10a4d7343d36709d890a7095",
-      "context_id": "3a3e9f50371c21b3896cf77c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "recovery",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.0417,
-      "source": "zenodo",
-      "source_context_sha256": "63e8a26976a7e4d583125747f19b25099c9af5e4b6239da827922d94ee09b8af",
-      "source_published": "2026-09-14",
-      "source_updated": "",
-      "summary": "Every element of the causal chain that produced the five largest mass extinctions of the last half-billion years is presently accelerating in the Earth system. The rate of the modern perturbation exceeds every peer-reviewed paleoclimate reference case. A six-intervention portfolio, deployed together at wartime industrial scale beginning now, is the physically necessary and sufficient response. The window in which that portfolio remains fully effective closes between 2028 and 2040. The anthropogenic-versus-feedback tipping point is expected between 2035 and 2040; corrected for the at-least-order-of-magnitude higher rate of contemporary carbon release, loss of agency — the point at which coordinated intervention can no longer arrest the cascade — arrives 200 to 400 years after feedback engagement under sustained portfolio deployment, and collapses onto the tipping point itself under any scenario in which the portfolio is not deployed within the 2028–2040 window. Background. The five largest mass-extinction events of the Phanerozoic share a consistent causal chain: rapid carbon injection to the ocean-atmosphere system, followed by warming, ocean deoxygenation, acidification, and preferential loss of marine calcifiers, with multi-million-year recovery for reef ecosystems. Every element of that chain is presently active and gaining speed. The current anthropogenic perturbation is capable of driving a combination and magnitude of ocean geochemical changes unparalleled in the geological record reviewed by Hönisch et al. (2012), which covers approximately the past 300 million years. The reef–ocean-oxygen–land coupling documented in the End-Permian record demonstrates that marine biosphere collapse propagates to terrestrial extinction through the shared oxygen and biogeochemical infrastructure of the coupled Earth system; contemporary marine indicators are therefore leading indicators of terrestrial as well as marine risk. Approach. This three-part synthesis compiles peer-reviewed reconstructions of the Big Five causal chain, measures each element against the contemporary Earth system using the most recent authoritative data (Friedlingstein et al. 2026; Wu et al. 2021; Zeebe et al. 2016; Hönisch et al. 2012; Schmidtko et al. 2017; Eddy et al. 2021; Spady et al. 2026), specifies the physically necessary intervention portfolio, and characterizes the near-term feedback, resource, and civilizational risk environment those interventions must succeed in. Part I establishes the paleoclimate analog. Part II specifies the intervention portfolio. Part III maps the contemporary Earth system the Part II portfolio must succeed in — which climate feedbacks are already engaged and how they cascade, which physical resources are hitting hard limits inside the same two-to-three-decade window, and how those pressures translate into food, water, migration, health, economic, and governance strain — and closes with the North American Climate Pain Scale (NAPS), a 1–10 diagnostic instrument that anchors climate severity to concrete events so policymakers and the public can locate today&#x27;s conditions and the trajectory ahead. Findings. Every element of the paleoclimate extinction causal chain is presently active. Atmospheric CO₂ (422.8 ppm, 2024 global annual mean; Friedlingstein et al. 2026) has exceeded the reconstructed latest-Permian baseline of 426 (+133 / −96) ppm (Wu et al. 2021, Nature Communications). The rate of contemporary carbon release is at least an order of magnitude above the sustained maximum Paleocene-Eocene Thermal Maximum rate (Zeebe, Ridgwell and Zachos 2016, Nature Geoscience). Ocean acidification is proceeding at roughly ten times the PETM rate (Hönisch et al. 2012, Science). The global ocean has lost 4.8 ± 2.1 petamoles of dissolved oxygen since 1960 (Schmidtko, Stramma and Visbeck 2017, Nature). Global living coral cover has declined approximately 50 percent since 1957 (Eddy et al. 2021, One Earth), with cumulative satellite reef-",
-      "tags": [
-        "mass extinction",
-        "paleoclimate analog",
-        "carbon injection",
-        "ocean acidification",
-        "ocean deoxygenation",
-        "mercury enrichment",
-        "tipping cascades",
-        "direct air capture",
-        "ocean alkalinity enhancement",
-        "stratospheric aerosol injection",
-        "climate feedbacks",
-        "extinction risk"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Inside the Extinction Envelope: A Systemic Review and Meta-Analysis of Paleoclimate Extinction Markers with Comments on the Necessary Array of Last-Threshold Interventions",
-      "url": "https://zenodo.org/records/23305854"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "c589f23c1749601f9112a7f0",
       "context_id": "dea34f4b2efafa1a75c76e7a",
       "delivery_preview_only": true,
@@ -225,48 +178,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Single-knob quadrupole scans do not determine the intrinsic emittances",
       "url": "https://zenodo.org/records/23444672"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d3be34d8d11167a3a16bc0a9",
-      "context_id": "27e093913810321c5c8ae042",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0833,
-      "source": "zenodo",
-      "source_context_sha256": "9529a46d04412f1fec65e13983b906e26105d42bd481681b28c79f96002203b6",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "This reproducibility archive accompanies Marco Mantovanelli's A Multi-Arch Perturbed Hofstadter Q-Recursion: Gaussian Profiles and Exact Frequency Laws. It contains the manuscript PDF, complete LaTeX source, six vector figures, independent verification programs, figure-generation code, numerical reports, and sampled figure data. The paper studies Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2)) - (-1)^n for n &gt;= 8, with the seven prescribed initial values (1, 1, 3, 3, 3, 3, 5). A causal binary-word construction proves global existence and an exact factorization into three signed excursions. Their uniformly convergent Gaussian profiles explain three limiting sign transitions per standard dyadic block and a sharp normalized error envelope of approximately 0.067088003576. The paper also proves exact finite transition locations, an ordered frequency factorization, a shifted 2-adic valuation law on pure dyadic value blocks, and a summatory asymptotic with an explicit continuous periodic term. The archived verification compares all 33,554,432 directly computed terms with an independent word reconstruction, checks complete frequency blocks through level 21, and verifies the exact summatory identity at every even cutoff from 8 through 33,554,432. Separate programs audit the word maps, finite transitions, and exact two-head identities. These computations supplement the general proofs in the manuscript. The original perturbation, OEIS A394051, is discussed for comparison.",
-      "tags": [
-        "Hofstadter recursion",
-        "meta-Fibonacci sequence",
-        "parity perturbation",
-        "exact-fit interleaving",
-        "Gaussian profile",
-        "value frequencies",
-        "dyadic structure",
-        "summatory asymptotics"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A Multi-Arch Perturbed Hofstadter Q-Recursion: Gaussian Profiles and Exact Frequency Laws (Reproducibility Archive)",
-      "url": "https://zenodo.org/records/23439393"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -303,39 +214,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e57097b57eb159c368ec4d81",
-      "context_id": "f8b3c98053895a51b7231cb3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "recovery"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.9167,
-      "source": "zenodo",
-      "source_context_sha256": "b58d2572dacbcc64b4e5ffd6835dfb96ac5d30ebfb848ed906c1980b0b3594ae",
-      "source_published": "2026-10-18",
-      "source_updated": "",
-      "summary": "MULTI-AGENT ROUTING OF NEUROVASCULAR MICROROBOT SWARMS AT THE LIMIT This research monograph develops a falsifiable, non-clinical framework for routing heterogeneous microrobotic teams through branching neurovascular vessel phantoms. It asks whether decentralized task assignment, flow-aware navigation, independently tracked agent identity, and verifiable recovery can improve qualified sensing or inert-sample collection without increasing collision, occlusion, flow disturbance, thermal burden, sample confusion, or residual material risk. Organized around low-Reynolds-number hydrodynamics, multi-agent coordination, and independently enforced physical safety boundaries, the volume contains 30 mathematical derivation plates, 82 full research chapters with five separately paginated sections each, 200 detailed Research Gates, and 33 provisional Phoenix Answer Embryos. A DOI evidence ledger distinguishes established component physics and published demonstrations from the original system-level hypotheses proposed here. Strong passive-transport, single-agent, and information-matched centralized alternatives remain valid competitors throughout. Research failures, abandoned models, experimental uncertainty, and successor reconstruction are treated as scientific outputs, not editorial defects. The monograph provides a research architecture and prospective tests, not results from experiments performed for this publication. It does not assert demonstrated autonomous navigation in human cerebral vessels, clinical safety, therapeutic efficacy, or authorization for human intervention.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MULTI-AGENT ROUTING OF NEUROVASCULAR MICROROBOT SWARMS AT THE LIMIT This research monograph develops a falsifiable, non-clinical framework for routing heterogeneous microrobotic teams through branching neurovascular vessel phantoms. It asks whether decentralized task assignment, flow-aware navigatio",
-      "url": "https://zenodo.org/records/23443049"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "5f83b003884f2e8082ce7642",
       "context_id": "81f94a193122888e53a9a40d",
       "delivery_preview_only": true,
@@ -366,44 +244,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "mm-ADL-Home: A Cross-Environment Millimeter-Wave Radar Point-Cloud Dataset for Activities of Daily Living in Furnished Homes",
       "url": "https://zenodo.org/records/23456178"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "96458631e168a7c0b687e89e",
-      "context_id": "aca6a1f6a56f8cc0caafb419",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "a7b60f9b3ee77664b4c28a0abcaa0f5c23636bd1de8e6feb473119354959660a",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "Unrefereed AI-assisted mathematical candidate for the iid prophet inequality over time with arbitrary lease durations. The unrestricted asymptotic ratio exists and lies in [0.60922, 0.609816], below the inverse golden ratio. Includes a continuum game characterization and survival-weighted domination yielding deterministic near-optimality, not attainment by a bounded schedule. Written analytic arguments and Arb numerical certificates have distinct assurance scopes. Producer replay and negative controls do not establish external peer review, independent reproduction or formal verification. Original prose and data are CC0-1.0; original code is MIT licensed.",
-      "tags": [
-        "prophet inequalities",
-        "online algorithms",
-        "leasing over time",
-        "computer-assisted proof"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "The optimal i.i.d. prophet inequality over time is not the inverse golden ratio",
-      "url": "https://zenodo.org/records/23442742"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -442,6 +282,150 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Quantitative robust estimation for Gaussian inverse problems",
       "url": "https://zenodo.org/records/23447009"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7aaee83cb063f9499703f9bd",
+      "context_id": "9bcc4406bfb7434742d8c22f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "drat",
+        "inverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "1c2537acd5964ee4f2b55384dcbeb26f8f2f830d55a120820b9f65268ca2a0e9",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Two tools for a lab's own data, two bugs fixed, the k-point loops made many times faster, and two tutorials. No public function was removed or renamed; results of valid calls are unchanged except where a bug is fixed below (and by floating-point rounding, at most 1e-12 relative, where sums are now taken in a different order). Added carrier_density(model, mu, n_neutral, ...) and chemical_potential_from_density(model, density, n_neutral, density_err=None, ...) (new module hamop.carriers ): the net carrier density per cm^dim at a chemical potential, counted from a stated neutral filling, and the inverse, with the interval that the density's error maps to (solved exactly at density -/+ error), dn/dmu and the quantum capacitance e^2 dn/dmu in F/cm^dim. Refused: finite models, densities the bands cannot hold, T &lt;= 0 in the inverse, and a k-mesh too coarse for the temperature (one state carrying more than 5 % of dn/dmu ). Tests: the chain against the exact integral of its density of states by adaptive quadrature (1e-9, five chemical potentials); graphene against its closed-form dispersion summed on the same grid (1e-10) and electron-hole symmetry (1e-10); the inverse (mu to 1e-9; interval ends reproduce the density -/+ error to 1e-6 of the error); dn/dmu against a finite difference (1e-6) and the chain's closed form (1e-3); graphene at 0.2 and 0.4 eV against the Dirac-cone density (quadrature at 300 K) and the Dirac-cone quantum capacitance 2 e^2 mu / (pi (hbar v_F)^2) (graphene's quantum capacitance was measured by J. Xia, F. Chen, J. Li and N. Tao, Nature Nanotechnology 4, 505 (2009)), within 1 % (the lattice deviates from the cone by 0.1 % and 0.4 %). hamop.model.E_CHARGE = 1.602176634e-19 C, exact in the SI (CODATA 2018); the test suite checks it against scipy.constants.e . compare_models(build_simple, theta0_simple, build_extended, theta0_extended, kpts, energies, ..., embed=None) (module hamop.lab ): fits nested models to the same band energies and tests whether the extra parameters are needed, by the likelihood-ratio test (Delta chi-squared against chi-squared(Delta p); S. S. Wilks, Ann. Math. Statist. 9, 60 (1938)) with measurement errors, or by the F test of linear regression without them. embed verifies the nesting and starts the extended fit from the simple one. Refused: no extra parameters, no degrees of freedom, an embed that does not reproduce the simple model, and an extended fit that ends worse. Tests: both statistics against least-squares closed forms computed with numpy.linalg.lstsq (1e-6) and the p-values against the chi-squared and F tails (1e-6); 60 seeded experiments under the simple model (mean statistic 1.25, within 0.45 of 1; p &lt; 0.1 in 11 of 60, allowed 1 to 13); power against a real t2 = 0.1 eV (p &lt; 1e-10). drude_weight(..., degen_tol=1e-9) : the energy window (eV) within which two states count as degenerate (see Fixed). Fixed drude_weight summed |M_nn|^2 over the diagonal only. At a k-point where two bands are degenerate that diagonal depends on the eigenvectors the solver happens to return inside the degenerate pair. Graphene (t = -2.7 eV, a = 2.46 Angstrom, mu = 0, 300 K): with only the Dirac point K as k-point, D was 3068.84 along x and 0.0 along y (the eigenvector-free value is 3068.84 for both); on a 30 x 30 mesh through K and K', D_xx = 3.5382 and D_yy = 3.2815, 7 % apart where the hexagonal symmetry makes them equal. The sum now runs over all pairs with |e_n - e_m| &lt;= degen_tol , the zero-frequency limit (f_n - f_m)/(e_m - e_n) -&gt; -df/de of the Kubo formula, which is basis independent: 3068.84 in both directions, and D_xx = D_yy = 6.8196 on the mesh. Without degeneracies the result is unchanged (1e-12). Tests: test_drude_weight_at_a_degenerate_k_point_is_basis_independent , test_drude_weight_away_from_degeneracies_is_unchanged . principal_layers assigned sites to layers with floor((x - x0) / width), which falls one layer short when the division lands just below an integer (15 * 1.42 /",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "hamop: bands, DOS, Kubo optical conductivity and NEGF transmission from one tight-binding Hamiltonian",
+      "url": "https://zenodo.org/records/23443531"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "e1269449c34dae592857180b",
+      "context_id": "8131221b94f7e482a0c6f3cb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "ca7fa25c932cd44b23b5a46008386871ac0436d1828945c14e03c533b4c9e922",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Space Semiconductor Fabrication and Starship Nanofoundries at the Limit English Description and Research Position This research monograph asks which semiconductor unit processes could achieve a defensible mission advantage in microgravity, vacuum, radiation, remote-operation, and closed-resource environments. It does not assume that a complete advanced fab can operate in space. Instead, it compares crystal growth, deposition, etching, lithography, metrology, bonding, packaging, repair, and recycling against ground manufacture plus transport, launched spares, on-orbit packaging, and local repair. Every claimed advantage must survive matched controls, full functional qualification, and explicit mass, energy, heat, crew, contamination, maintenance, waste, and return ledgers. The volume contains 82 chapters with five research sections per chapter, 30 linked formula derivations, 200 detailed Research Gates, DOI-anchored references, and a formula-chapter-experiment-Gate crosswalk. Its central contribution is a mission-scale evidence architecture that connects process physics to contained workcells, independent metrology, safe autonomy, repair, return, circular resources, cross-platform reproduction, and successor reconstruction. Safety and irreversible environmental harm operate as hard vetoes rather than compensable score components. The literature base includes peer-reviewed DOI sources on microgravity semiconductor growth, in-space manufacturing, additive nanomanufacturing, atomic-layer processing, radiation effects, lunar resource extraction, digital twins, autonomous laboratories, and reproducible science. Recent orbital results are treated as early evidence for specific mechanisms, not as confirmation of a complete space foundry. Core research question Under what physical and mission conditions can a semiconductor unit process performed in space outperform ground manufacture plus transport or a narrower in-space alternative while preserving safety, resource closure, qualification, and independent reconstruction? Research architecture &bull; Space-specific process advantage and strongest comparator &bull; Environmental physics and bounded process window &bull; Closed mass energy heat contamination and evidence ledgers &bull; Autonomy safeing repair return and independent qualification &bull; Cross-platform reproduction successor rebuild and retirement Recommended citation note This is an exploratory research architecture. Candidate equations are measurement and mission-decision instruments, not universal laws. Empirical use requires process-specific units, preregistration, matched controls, aerospace and semiconductor expertise, independent qualification, and cross-platform replication.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Space Semiconductor Fabrication and Starship Nanofoundries at the Limit English Description and Research Position This research monograph asks which semiconductor unit processes could achieve a defensible mission advantage in microgravity, vacuum, radiation, remote-operation, and closed-resource env",
+      "url": "https://zenodo.org/records/23460271"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b6cc7b9e816be67b45f9b25b",
+      "context_id": "490b61daf5da0da8fbc97a9a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "0801acf7b649a79f2df7728a5b5ecd73bbc3d3344979135ab6a79f9ad0265fcc",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "This paper offers a candidate descriptive model based on the author&rsquo;s retrospective account of internal agent-like experience during a past period of social isolation, emotional distress and perceived high cognitive load. It is a non-clinical reconstruction, not a technique, treatment or recommendation. No contemporaneous physiological, behavioral or neuroimaging measurements were recorded. The Opposition&ndash;Load&ndash;Coupling vocabulary organizes reported phases of self-talk, opposition, felt load, perceived coupling, autonomy, boundary degradation and disengagement. These are reported experiences and interpretive constructs, not demonstrated causal mechanisms. Claimed benefits and harms are unmeasured first-person reports. The Shared Value Anchor is an untested candidate predictor, not an established stabilizer or necessary condition. The case does not establish whether value conflict preceded initial boundary degradation or distinguish the proposal from a simpler load-based account. The model is situated alongside dialogical-self, Internal Family Systems, predictive-processing, imaginary-companion, writer-agency and tulpa literature. Any incremental contribution lies in the proposed coupling vocabulary and separately testable value-anchor hypothesis, not in discovering internal multiplicity or proving a new mechanism. Safety: do not intentionally induce or replicate the conditions described. This is the author&rsquo;s own past experience, published at the author&rsquo;s direction; no formal ethics approval or exemption is claimed. Version 4 incorporates author-adopted revisions following advisory and changed-text checks, including prior-involved AI reviewers. Those checks are not independent peer review, clinical validation or evidence of effectiveness.",
+      "tags": [
+        "Opposition–Load–Coupling; OLC Model; Shared Value Anchor; Internal Cognitive Agent; Cognitive Load; "
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Opposition–Load–Coupling (OLC): A Candidate Descriptive Model of Internal Agent-Like Experience — Formation, Reported Stability, and Disengagement",
+      "url": "https://zenodo.org/records/23444694"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "1a4d7cb3d795387b9f5c74fd",
+      "context_id": "3d9dcd028635ffa35d998103",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "81c233ac7640fbef0bf0651b08eabbb24d64d41bd1b984d566e5567378dc5993",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "This article proposes a theoretical framework for transporting large physical masses at the speed of light C by analyzing the behavior of photons through advanced single-photon imaging techniques. By examining the temporal and spatial distribution of photons captured via Single-Photon Avalanche Diode (SPAD) cameras, we establish a correlation between the visual reconstruction of an object and its potential physical translation across space-time. We argue that light possesses an inherent volumetric, cell-like structure capable of carrying mass, provided an engineering mechanism can replicate its fundamental properties: diffraction, momentum, and precise synchronization.",
+      "tags": [
+        "travel at light speed",
+        "proof of possible travel at light speed",
+        "single photon imaging",
+        "photograph",
+        "Optical Effects & Diffraction",
+        "Cube-Rhombus Cell Formations",
+        "Light-Volume & Conical Propagation",
+        "Photon Arrival Data & Timing Precision",
+        "Mass Transport & Physical Mass",
+        "Single-Photon Imaging / Single-Photon Avalanche Diode (SPAD)",
+        "Speed of Light (C)",
+        "the path of light"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Single-photon imaging is evidence of the possibility of mass traveling at the speed of light.",
+      "url": "https://zenodo.org/records/23457949"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -516,6 +500,41 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "40c289f6e738b0f52b9e44c4",
+      "context_id": "a3cd5c51de57b93ea5b1e73c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "8ce7069c46df2e68bd06f51dc1ae53d7529099ad7188be2e89e78fa947684290",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Emergency-stop circuits built by engineering technology students are routinely treated as safe once they pass a functional test at commissioning, yet the relay contact welding that dominates their failure modes is invisible to such tests and accumulates silently across the workshop's operating life. The framework represents a student-built circuit as a series safety function whose integrity is degraded by contact welding, and derives the conditions under which a welded contact converts a demanded stop into an undetected loss of safety function. A replication-based evaluation of the before-after-control-impact estimator was conducted under a declared variance structure with a between-cluster standard deviation of 6.0, a residual standard deviation of 4.5 and an intraclass correlation of 0.64, across 2000 replications per design cell for cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points. The evaluation indicates that 54 clusters are required to detect a 5-percentage-point effect at 80% power, and that the minimum detectable effect at 80% power falls as the number of clusters rises. The framework proposes that workshop safety assurance should shift from commissioning-time functional testing to integrity monitoring that is sensitive to contact welding, and the design analysis implies that cluster-level evaluations of such interventions require cluster counts well above those typical of single-institution studies.",
+      "tags": [
+        "emergency-stop circuits; functional safety; relay contact welding; fault injection; injury-risk expo"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Functional-Safety-Integrity Degradation of Student-Built Emergency-Stop Circuits in Engineering Technology Education Workshops: A Fault-Injection Evaluation Linking Relay Contact Welding to Operator Injury-Risk Exposure",
+      "url": "https://zenodo.org/records/23460823"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "92bb5edfd0bfde7db9daab1a",
       "context_id": "811a0c7681e750f74bd6837a",
       "delivery_preview_only": true,
@@ -546,87 +565,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "AllenNeuralDynamics/ComputationalReviewTemplate: v1.1.0",
       "url": "https://zenodo.org/records/23456674"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "2e982ff3f959b8c47488f770",
-      "context_id": "42d8e48fc39faae593c1551e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "760306087e4fe3e87c6d5c820477910f2884aa41113ca6de6e64fc90a7e47b43",
-      "source_published": "2026-10-16",
-      "source_updated": "",
-      "summary": "Climate change affects human well-being through interacting physical, ecological, infrastructural, and socioeconomic processes rather than through a single exposure or disease pathway. Major assessments identify observed harms to health, food and water security, livelihoods, settlements, and ecosystems, alongside increasing risks with additional warming (IPCC, 2022a). This narrative review develops a cross-sector framework from a source inventory of 154 human-impact pathways in 14 domains, supported by major assessments, selected peer-reviewed studies, and institutional datasets. Literature selection used targeted web-index searches and source verification through 2 October 2026; the review does not estimate pooled effects or claim exhaustive systematic coverage. The synthesis distinguishes direct injury and illness, ecosystem-mediated harms, failures of essential services, financial transmission, and losses of social and cultural continuity. Representative quantitative findings illustrate substantial existing burdens, but attribution studies, ecological associations, exposure models, displacement records, and conditional forecasts measure different quantities and cannot be combined into a universal five-year trajectory (Vicedo-Cabrera et al., 2021; Wang et al., 2026; Clement et al., 2021). Compound hazards and service interdependencies can increase losses beyond the directly affected sector, while repeated shocks can reduce the capacity to recover or adapt (Zscheischler et al., 2018; IPCC, 2023). A reporting framework is proposed that records the outcome, population, baseline, geography, time horizon, emissions and development assumptions, adaptation, and uncertainty for each indicator. The central contribution is an integrated interpretation and measurement architecture, not a new forecast of global mortality, migration, or societal collapse. Effective assessment should preserve evidence of serious and interacting harms without converting uncertain thresholds or heterogeneous studies into unsupported calendar-specific predictions.",
-      "tags": [
-        "Climate change",
-        "Human health",
-        "Climate risk",
-        "Impact pathways",
-        "Cascading risks",
-        "Compound hazards",
-        "Food and water security",
-        "Climate-related displacement",
-        "Infrastructure resilience",
-        "Adaptation",
-        "Social vulnerability",
-        "Climate inequality",
-        "Risk quantification",
-        "Narrative review"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Climate change impacts humans: A cross-sector narrative review of impact pathways, cascading risks, and accountable quantification",
-      "url": "https://zenodo.org/records/23428939"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "761e967864d5354c6677268a",
-      "context_id": "2ceda9047fa6bfb3820f8037",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "93ed9ef14088da35380b864c36d32b4069c1f2bd2dd6eb46f6ab8215bbdba1a8",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "Coding agents can now interpret a specification, implement it, write and execute tests, repair failures, and declare the result ready for release. When the same agentic system produces both the software and the evidence of its correctness, a passing test suite no longer constitutes independent evidence. Visible tests become an optimization target, and code, tests, and oracles may share a single misinterpretation of the specification. This paper argues that agent-produced software requires an assurance plane that is structurally independent of the build plane. We first characterize four gaps along the chain from stakeholder intent to production, namely the requirement, conformance, evaluation, and model gaps, and identify which of them verification can close. We then propose a framework that separates building from verifying, introduces a Verification Contract stating what must be demonstrated before release, and organizes verification in two phases: a specification-first phase designed without access to the implementation, and an implementation-aware phase that strengthens the evidence through mutation analysis, property-based testing, and fuzzing. The resulting evidence is consolidated into an assurance report that makes residual uncertainty explicit and leaves the release decision to a human. We evaluate the framework in a pre-registered study on three stateful services, two of them written by third-party models, and an EvalPlus pilot, comparing self-validation with independent verification under context-level and model-level independence. The builder's programs were correct, but its own tests missed subtle interactions: a verifier in a fresh context detected more of the 46 seeded faults than the builder's tests (Holm-corrected p = 0.006), and surfaced the ambiguities of the specification, at the price of rare false oracles. A verifier from another provider did not add detection. The framework and the study provide a basis for governing the release of software produced by agents.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Who Verifies the Builder? Toward Independent Assurance for Agent-Produced Software",
-      "url": "https://zenodo.org/records/23442776"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -916,6 +854,38 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "08ef520d471172a44f60a3f6",
+      "context_id": "aaf771bf99d06e1c69e7b12e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_context_sha256": "42fd58a39cd1aa1d8141e48278dc73ae2b2a0cb819e61afae6bcf44d748ddd71",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "This technical companion preserves the complete derivations that are compressed in the Round8 Nature Supplementary Information. It contains the full theorem-and-proof source, the rendered 97-page proof document, the complete finite-menu and representation results, encoder covers, shape-entropy and hard-boundary complexity, independent-refit and same-sample selective inference, Gaussian polyhedral pivots, fixed-x and conformal limits, group contamination bounds, and the complete negative-route boundary text. The reader-facing Supplementary Information presents the same branches as theorem, assumptions, displayed key formulae and short proof summaries. The archive also contains selected fail-closed Cell2Fire audit receipts and the canonical manifest and SHA-256 inventory. Historical task identifiers are provenance-only unless a file is explicitly listed here. The DTW/Orekit reviewer evidence remains in the related published record 10.5281/zenodo.23427257. This archive makes no universal acceleration, physical-safety, clinical-validity or unrestricted transport claim.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Technical proofs and failure-boundary archive for action-qualified scientific computation — Round8",
+      "url": "https://zenodo.org/records/23447610"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "c4db98fc1cf0f74997acb0ee",
       "context_id": "074c01dbe6bb8dce4071a0f7",
       "delivery_preview_only": true,
@@ -1068,6 +1038,43 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "MadBezoui/XOPT: XOPT v1.0.0: Research Artifact — Code, Data, and Experiments",
       "url": "https://zenodo.org/records/23458562"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3aade279b3540ea5caa1b855",
+      "context_id": "5369b876e93fbbe9c9e5c49f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control",
+        "replication",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.3333,
+      "source": "zenodo",
+      "source_context_sha256": "30ac61612a5b003e9bf0a2a9baf13cd4d214243be95af05298aa00d8b099f317",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Oscilloscope probe compensation kits circulate between teaching laboratories, yet the calibration status of a kit is rarely transferred with the same rigour as the instrument it serves. the present analysis treats cross-course calibration transfer as a metrological problem and evaluates, by round-robin design, how bandwidth attenuation in a probe kit propagates into measurement discrepancy bounds when the kit is moved between courses. The evaluation is a replication-based characterisation of the before-after-control-impact estimator under a declared variance structure (between-cluster SD = 6.0, residual SD = 4.5, intraclass correlation = 0.64), with power estimated across 2000 design cells at cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points.54 clusters are required to detect a 5-percentage-point effect at 80% power, and that the minimum detectable effect falls steeply as cluster count rises from 8 to 32. A first-order attenuation model links probe bandwidth to the fractional amplitude error at the test frequency, and the round-robin design is shown to bound the transfer discrepancy that a receiving course can expect. The contribution is a design-level calibration-transfer protocol that makes the discrepancy bound explicit before a kit leaves its home course, rather than after a student records a suspect waveform.",
+      "tags": [
+        "probe compensation; calibration transfer; round-robin evaluation; bandwidth attenuation; measurement"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Cross-Course Calibration Transfer of Oscilloscope Probe Compensation Kits in Engineering Education: A Round-Robin Evaluation Linking Bandwidth Attenuation to Measurement Discrepancy Bounds",
+      "url": "https://zenodo.org/records/23460704"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1284,6 +1291,41 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "PHOTONIC CRYSTAL MICROROBOTICS AT THE LIMIT FLAGSHIP 12/30 | STARLI INSTITUTE XXIV | GROUP B This prospective research monograph examines whether bandgap engineering and localized photonic crystal modes can enable physically predictable, reversible optical manipulation of microscopic agents when act",
       "url": "https://zenodo.org/records/23456362"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "40c289f6e738b0f52b9e44c4",
+      "context_id": "26b32b4ca4a02a06860aae3f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_context_sha256": "580ff84051608ff7f995900efb3d67bf946920a8273784bd4fa04bff818b837a",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Emergency-stop circuits built by engineering technology students are routinely treated as safe once they pass a functional test at commissioning, yet the relay contact welding that dominates their failure modes is invisible to such tests and accumulates silently across the workshop's operating life. The framework represents a student-built circuit as a series safety function whose integrity is degraded by contact welding, and derives the conditions under which a welded contact converts a demanded stop into an undetected loss of safety function. A replication-based evaluation of the before-after-control-impact estimator was conducted under a declared variance structure with a between-cluster standard deviation of 6.0, a residual standard deviation of 4.5 and an intraclass correlation of 0.64, across 2000 replications per design cell for cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points. The evaluation indicates that 54 clusters are required to detect a 5-percentage-point effect at 80% power, and that the minimum detectable effect at 80% power falls as the number of clusters rises. The framework proposes that workshop safety assurance should shift from commissioning-time functional testing to integrity monitoring that is sensitive to contact welding, and the design analysis implies that cluster-level evaluations of such interventions require cluster counts well above those typical of single-institution studies.",
+      "tags": [
+        "emergency-stop circuits; functional safety; relay contact welding; fault injection; injury-risk expo"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Functional-Safety-Integrity Degradation of Student-Built Emergency-Stop Circuits in Engineering Technology Education Workshops: A Fault-Injection Evaluation Linking Relay Contact Welding to Operator Injury-Risk Exposure",
+      "url": "https://zenodo.org/records/23460823"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1673,6 +1715,47 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "cdfc5b01dec56e165a32892f",
+      "context_id": "e81f39da0f1185112e0942f3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.875,
+      "source": "zenodo",
+      "source_context_sha256": "0d284c77067ab85f77ab44301303dd0726616e3b7c2562466d74c8245ad8e96a",
+      "source_published": "2026-10-18",
+      "source_updated": "",
+      "summary": "Registered protocol of a systematic review reported according to PRISMA 2020. Question: how much performance do deep-learning models for precision agriculture lose when evaluated outside their training distribution (another farm, season, region, sensor or cultivar) or deployed in real field conditions, and how is deployment evidence (latency, energy, memory, field-trial duration) reported? Status at registration: searches completed on 15-16 October 2026 (Scopus, Web of Science Core Collection, OpenAlex, SpringerLink, plus citation searching); 14,174 records after deduplication; title/abstract screening not started. The protocol defines the research questions, search strategy, eligibility criteria (IN.1-IN.6, EX.1-EX.8), dual-reviewer active-learning screening with ASReview LAB and a pre-registered stopping rule (SAFE-based), the data-extraction codebook, the quality-appraisal rubric and the synthesis plan (internal-to-external relative performance loss). &nbsp; Version 1.1 adds Amendment 1 (18 October 2026, before any screening decision): AI-assisted title/abstract screening with human verification.",
+      "tags": [
+        "deep learning",
+        "precision agriculture",
+        "systematic review protocol",
+        "external validation",
+        "domain shift",
+        "edge deployment",
+        "PRISMA"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Protocol: From benchmark to field: a systematic review of external-validation and deployment evidence for deep learning in precision agriculture",
+      "url": "https://zenodo.org/records/23460583"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "d5c9c62dcdfe195e80191e12",
       "context_id": "4d1042720672e33190c2fab8",
       "delivery_preview_only": true,
@@ -1713,133 +1796,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Reproducibility Package for \"Multi-Representation Stylometry of Al-Sahifa al-Sajjadiyya: Internal Consistency and Register Variation in Classical Arabic\"",
       "url": "https://zenodo.org/records/23459045"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "2e982ff3f959b8c47488f770",
-      "context_id": "c07c24cc60047bad1f308d5b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "zenodo",
-      "source_context_sha256": "d4243750d7f9d7d224632e7e326d341d5e68afd7c7ae3e006564810fb0701f0b",
-      "source_published": "2026-10-16",
-      "source_updated": "",
-      "summary": "Climate change affects human well-being through interacting physical, ecological, infrastructural, and socioeconomic processes rather than through a single exposure or disease pathway. Major assessments identify observed harms to health, food and water security, livelihoods, settlements, and ecosystems, alongside increasing risks with additional warming (IPCC, 2022a). This narrative review develops a cross-sector framework from a source inventory of 154 human-impact pathways in 14 domains, supported by major assessments, selected peer-reviewed studies, and institutional datasets. Literature selection used targeted web-index searches and source verification through 2 October 2026; the review does not estimate pooled effects or claim exhaustive systematic coverage. The synthesis distinguishes direct injury and illness, ecosystem-mediated harms, failures of essential services, financial transmission, and losses of social and cultural continuity. Representative quantitative findings illustrate substantial existing burdens, but attribution studies, ecological associations, exposure models, displacement records, and conditional forecasts measure different quantities and cannot be combined into a universal five-year trajectory (Vicedo-Cabrera et al., 2021; Wang et al., 2026; Clement et al., 2021). Compound hazards and service interdependencies can increase losses beyond the directly affected sector, while repeated shocks can reduce the capacity to recover or adapt (Zscheischler et al., 2018; IPCC, 2023). A reporting framework is proposed that records the outcome, population, baseline, geography, time horizon, emissions and development assumptions, adaptation, and uncertainty for each indicator. The central contribution is an integrated interpretation and measurement architecture, not a new forecast of global mortality, migration, or societal collapse. Effective assessment should preserve evidence of serious and interacting harms without converting uncertain thresholds or heterogeneous studies into unsupported calendar-specific predictions.",
-      "tags": [
-        "Climate change",
-        "Human health",
-        "Climate risk",
-        "Impact pathways",
-        "Cascading risks",
-        "Compound hazards",
-        "Food and water security",
-        "Climate-related displacement",
-        "Infrastructure resilience",
-        "Adaptation",
-        "Social vulnerability",
-        "Climate inequality",
-        "Risk quantification",
-        "Narrative review"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Climate change impacts humans: A cross-sector narrative review of impact pathways, cascading risks, and accountable quantification",
-      "url": "https://zenodo.org/records/23428939"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "11619991919d51a826f27102",
-      "context_id": "f71c4803588045adc65dd538",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "906fd1aa5ea8c082095b5dfc76d5771b3f5b8da6864ca086d3f5f79899b74566",
-      "source_published": "2026-10-06",
-      "source_updated": "",
-      "summary": "This record accompanies the two-dimensional supplement to A gauge-invariant measure for lattice chiral fermions by Nathaniel Craig. It contains the supplement and its LaTeX source, together with the curated core reproducibility package, supplied in 65 standard tar.gz core archives and a separate evidence addendum. The supplement studies a two-dimensional chiral SU(5) theory with three conjugate-5 left-handed fermions, one 10 right-handed fermion, and five right-handed singlets. It presents an analytic measure construction on a specified admissible domain and numerical tests of selected currents, gauge responses, and determinant phases. The core archive contains all 74 scientific evidence references cited in the supplement, scientific implementations, the complete free-gap ledger, and the saved inputs needed for three principal scalar replays. It retains reports on other calculations and their limitations, but does not contain every raw matrix or intermediate record for those calculations. Extract all 65 archives into one directory to recover the complete core and run the documented checks. The remainder of the additional-data collection and the superseded full calculation archive are not included. The supported replays check saved evidence and recompute final scalar arithmetic; they do not rerun every historical current integration or matrix calculation. A separate gap replay checks the covering and residual bounds using implementation code shared with the producer. The README, result index, completeness record, manifests, and verification receipts specify the procedures and limits. These two-dimensional checks support, but do not prove, the four-dimensional result. The evidence addendum supplies 123 further scientific files referenced by the reports, including exact error ledgers, control results, fields, plots, and compact input records. Extract it alongside the 65 core archives and follow the updated README. Its verifier checks the added-file hashes and selected exact saved arithmetic for the finite-amplitude two-step curl and direct B1 endpoint comparison. It does not rerun the original matrix calculations or establish the analytic remainder estimate. License scope: Apache-2.0 for project-authored code; CC BY 4.0 for project-generated data and written documentation. Existing third-party licenses and notices remain in force. See LICENSES.txt.",
-      "tags": [
-        "lattice chiral fermions",
-        "two-dimensional gauge theory",
-        "SU(5)",
-        "fermion measure",
-        "overlap fermions",
-        "numerical calculations",
-        "reproducibility"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Two-dimensional chiral SU(5) measure and calculation records for A gauge-invariant measure for lattice chiral fermions",
-      "url": "https://zenodo.org/records/23196101"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "96458631e168a7c0b687e89e",
-      "context_id": "807cf70edf0ac542deaed810",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "8136762aa5d2d0813562bdd1f788e6c1109307ccafadc38f3cff465364179718",
-      "source_published": "2026-10-17",
-      "source_updated": "",
-      "summary": "Unrefereed AI-assisted mathematical candidate for the iid prophet inequality over time with arbitrary lease durations. The unrestricted asymptotic ratio exists and lies in [0.60922, 0.609816], below the inverse golden ratio. Includes a continuum game characterization and survival-weighted domination yielding deterministic near-optimality, not attainment by a bounded schedule. Written analytic arguments and Arb numerical certificates have distinct assurance scopes. Producer replay and negative controls do not establish external peer review, independent reproduction or formal verification. Original prose and data are CC0-1.0; original code is MIT licensed.",
-      "tags": [
-        "prophet inequalities",
-        "online algorithms",
-        "leasing over time",
-        "computer-assisted proof"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "The optimal i.i.d. prophet inequality over time is not the inverse golden ratio",
-      "url": "https://zenodo.org/records/23442742"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
