@@ -1,17 +1,17 @@
 {
-  "batch_id": "44798af1604d91ae8455",
+  "batch_id": "3fb0c33dfcaa43ded018",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "f3e30ea94c271a18617e5acd",
-      "context_id": "b63714eaefa6e226f5cf2b1f",
+      "candidate_id": "0adb23ae57c9e7adcea14df8",
+      "context_id": "c635e4ca682224cf144b2661",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -21,29 +21,429 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "inverse",
-        "inversion",
-        "recovery"
+        "sat",
+        "sat solver"
       ],
-      "mirror_lens": "REVERSE",
+      "mirror_lens": "FORWARD",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0,
+      "score": 4.125,
       "source": "arxiv",
-      "source_context_sha256": "0fe43736f82ab2b118b15e48c4f738d51631c8f8d04b605d523710e0269773d8",
-      "source_published": "2026-10-19T10:00:40Z",
-      "source_updated": "2026-10-19T10:00:40Z",
-      "summary": "Classical inverse bandit methods typically aim to recover true reward parameters. In contrast, we infer a demonstrator's subjective beliefs, specifically its internal estimates of suboptimality gaps. We consider no-regret demonstrators that follow randomized policies, such as Thompson sampling, and characterize a family of algorithms for which per-step inversion is possible. This enables gap estimates to be recovered directly from the arm-selection distribution. Our analysis identifies an inherent stability-coverage trade-off: inversion becomes ill-conditioned as the demonstrator concentrates its probability mass on a single arm, while the number of informative rounds depends on the rate at which its policy converges. We establish conditions under which inversion is reliable and provide theoretical guarantees on the resulting estimation error. Experiments on simulated data support the analysis and illustrate how these conditions affect gap recovery in practice.",
+      "source_context_sha256": "529cf318b7e2f00839e900fd35a83789992ff98546a4b3b2003b66c43405a818",
+      "source_published": "2026-10-17T01:47:55Z",
+      "source_updated": "2026-10-17T01:47:55Z",
+      "summary": "Modern SAT solvers combine a rich repertoire of proof rules with sophisticated strategies that determine when and how to apply them. Often, the internal implementations are tightly coupled to particular strategies, making it inconvenient to define new strategies without changing solver internals. We present Tactix, a proof-producing sequential CDCL solver that incorporates a wide range of techniques in state-of-the-art solvers with a clean separation of proof rules from solving strategies. This separation enables a public interface through which users can invoke particular techniques, observe their effects, and program a wide range of solving strategies. The default strategy of Tactix is programmable over this interface and outperforms state-of-the-art solvers on benchmarks from the 2024--2026 SAT Competitions. We also use the interface to develop novel strategies tailored to challenging benchmarks from two application domains, which led to performance gains over strong baselines. We intend Tactix to serve as an infrastructure for designing and evaluating novel solving strategies. Finally, we also present a self-study of the AI-assisted development process behind Tactix.",
       "tags": [
-        "cs.LG"
+        "cs.LO",
+        "cs.AI",
+        "math.LO"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Learning from a Bandit Learner",
-      "url": "https://arxiv.org/abs/2610.26103v1"
+      "title": "Tactix: Towards a Programmable Strategy Interface for Flexible SAT Solving",
+      "url": "https://arxiv.org/abs/2610.24369v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "aea6b839562fca1c4fe76dc8",
-      "context_id": "dac2c33a534790a2b04782f0",
+      "candidate_id": "d8e7c66381be8411a304ddfe",
+      "context_id": "b20c91036f7e08a113c514a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "rup",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.625,
+      "source": "arxiv",
+      "source_context_sha256": "3c5a262235e75511275bd86d340e41c5bd843565eb72538c560f1a27d082c233",
+      "source_published": "2026-10-18T13:14:40Z",
+      "source_updated": "2026-10-18T13:14:40Z",
+      "summary": "Recent test-time scaling methods improve model performance by increasing inference-time compute. One practical form of this is parallel scaling, where a model samples multiple independent reasoning streams and aggregates their answers using methods like voting, reranking, or verification. While effective, this approach leaves the streams uncoordinated, and a discovery made in one rollout cannot influence any other. Multi-Sequence Verifiers jointly score candidate answers after generation, but the reasoning streams remain independent during inference. ParScale takes a step toward model-internal parallel scaling by learning to aggregate multiple forward passes, but its streams still do not exchange information while processing a sequence. We introduce BatchParScale, an attention mechanism that allows parallel streams to exchange information through a small set of communication positions. We evaluate BatchParScale on a new Parallel Needle-in-a-Haystack retrieval benchmark and in pretraining, fine-tuning, and cooperative multi-agent reinforcement learning. Across these settings, BatchParScale outperforms ParScale on language-model loss and remains competitive on coordination-sensitive MARL tasks. Masked pretraining runs beat an unmasked single-sequence baseline despite local sequence corruption, and LoRA fine-tuning shows the mechanism can be added to a pretrained Transformer. At the same time, fact retrieval performance for pretrained and finetuned BatchParScale models remains unclear.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "BatchParScale: Sparse Batch-Mixing for Sequence Models",
+      "url": "https://arxiv.org/abs/2610.25254v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4742adb043942060ac990585",
+      "context_id": "4a14fd99d76669c8ea89eded",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.625,
+      "source": "arxiv",
+      "source_context_sha256": "41579919db8ec838def54d299ffc02af02e3e7dfb7dd0080faed52fb32c5f662",
+      "source_published": "2026-10-17T17:29:52Z",
+      "source_updated": "2026-10-17T17:29:52Z",
+      "summary": "Large Language Models (LLMs) are increasingly used to refactor source files, but file-local evaluations do not reveal changes to contracts, dependencies, or caller assumptions affecting repository adoption. To address this gap, we conduct 1,500 generation attempts across 150 production files from 15 open-source Java repositories, five LLM configurations, and two dependency-aware generation conditions: single-prompt refactoring and LangGraph-based multi-agent refactoring. Of these attempts, 1,455 yield complete candidates eligible for analysis. We evaluate these candidates using local changes, repository-facing structural indicators, detected caller impact, the behavioural-equivalence indicator, and available test evidence, and categorize them as Low-risk, Review-needed, High Contract/Dependency Risk, or Inconclusive. The results show that 1,365 candidates (93.8%) are classified as High Contract/Dependency Risk, whereas 106 (7.3%) have at least one detected broken downstream caller and 290 (19.9%) have a false behavioural-equivalence indicator; only eight satisfy the Low-risk criteria. Within the reason-covered subset, the High-risk rate decreases under more conservative dependency-delta thresholds, while 60 of the 65 candidates with conclusive targeted-test outcomes pass, including 50 classified as High risk. Paired analyses of 705 complete pairs identify no statistically significant generation-condition difference in the principal risk indicators, although model configurations differ in specific detected risk channels. These findings suggest that practitioners should treat LLM-generated refactorings as candidates requiring staged repository-level verification, while future research should validate screening and extraction precision and strengthen compilation, behavioural, and coordinated multi-file verification.",
+      "tags": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "When LLM-Generated Refactorings Ripple: An Empirical Study of Repository Adoption Readiness",
+      "url": "https://arxiv.org/abs/2610.24790v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "91ae79c834e0a90b0e5ecc2f",
+      "context_id": "f6a3df79ece74a5061600222",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "6629f71320df1693925dc69fc9860b940c7d48be5b55f3ba17f775ab946802a3",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "This repository contains the replication materials accompanying the research note Financial Pessimism and the Timing of Saving (Alexander Hansak, University of Graz, 2026). The archive includes the original Python analysis, an independent R implementation of the principal estimators and survey-design standard errors, supplementary empirical analyses, Julia preprocessing scripts, questionnaire documentation, and aggregate estimation results. The canonical Python replay and independent R implementation reproduce 21 reported coefficient and standard-error comparisons on identical model-ready samples. Additional analyses examine saving amounts, subsequent income and employment outcomes, and age heterogeneity. All nine supplementary verification stages passed. The additional empirical specifications have not been independently cross-implemented. The analysis uses the British Household Panel Survey (BHPS) and Understanding Society (UKHLS), distributed through UK Data Service study 6614 (DOI: 10.5255/UKDA-SN-6614-22). Licensed respondent-level data are not redistributed. Researchers wishing to reproduce the analysis must obtain authorized access to the original survey data. The archive provides source code, execution instructions, numerical verification reports, aggregate outputs, and SHA-256 integrity manifests. The empirical findings describe conditional associations rather than identified causal effects. Version: 1.1.0 (20 October 2026).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Financial Pessimism and the Timing of Saving: Replication Materials",
+      "url": "https://zenodo.org/records/23494871"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a470cfd45bebba8c64c4aaf5",
+      "context_id": "828346e1bb8be3bb5da7fc05",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "ed1f067a25fc6c35098f3b16a507c25a460182af0b841758cf79a4795f5888b6",
+      "source_published": "2026-10-19",
+      "source_updated": "",
+      "summary": "Version 2.3 of Adversarial Multi-AI Falsification is a bounded case study of AI-assisted scholarly workflow governance. It distinguishes selected public verbatim excerpts and message/line maps from author-reported recovery findings and hashes identifying internal artifacts. The public deposit does not contain the full captured transcripts or executed rubric. Four process-failure types required exclusion or downgrading: semantic drift with unsupported process certification; assignment-scope expansion; prior-task substitution; and unverified or misdescribed legal citations. E2 remains partial. The principal execution/adjudication sequence remains author-reconstructed, and panel unanimity cannot be independently recomputed from the public deposit. The operational proposition remains untested; this revision does not establish it as true. The paper proposes a three-field outcome record and six workflow controls, including a two-turn assignment-echo checkpoint. These are unvalidated design propositions, not demonstrated interventions. This is a case report and protocol demonstration, not a benchmark, product comparison, prevalence estimate or complete reproducibility study. AMAF_v2_3.pdf is the current controlling manuscript, with AMAF_v2_3.docx as its editable counterpart. All seven v2.2 files are retained unchanged as historical records, including the old preparation-candidate manuscript, README, manifest and checksum list. Read 00_README_AMAF_v2_3_RELEASE.txt for the current controlling-version guide; AMAF_v2_3_SHA256SUMS.txt lists this release's file identities. The historical v1.8 paper is retained only for its Section C dual-track summary. No additional private records, new experiment or new empirical validation are released. Generative AI systems were used for structured literature discovery, comparative issue mapping, adversarial review, source-check planning, language editing and revision support. They are not authors. The human author retains responsibility for the sources, interpretations, arguments and conclusions.",
+      "tags": [
+        "AI-assisted research",
+        "large language models",
+        "research integrity",
+        "human-AI decision making",
+        "falsification",
+        "peer review",
+        "correlated errors",
+        "citation verification"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Adversarial Multi-AI Falsification in Research Workflows: A Bounded Case Study of Scope Error, Verification Failure, and Human Adjudication",
+      "url": "https://zenodo.org/records/23489600"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b1974e9ce96f04b874fbc227",
+      "context_id": "5b3ebfcc8af777ed3711cc9f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "e85ba282af1234f960d0c4924140c4c1b77b4afb1094c6a16e138ebd769f7a71",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "annotations4all is a schema-first Python library for LLM-assisted span annotation, including named entity recognition. Users define their own tag schemas; the library generates chat prompts, parses annotated model responses and maps annotations to character offsets in the original text. The library keeps annotation mechanics separate from research workflows: it bundles no corpus or fixed ontology, performs no evaluation, and does not promise model quality. Provider support uses explicit OpenAI-compatible routes rather than native SDKs. What the library provides Schema-first prompt generation and response parsing. Configurable taggers, German and English prompt templates, metadata-bearing spans and structured parser warnings. Per-label annotation and deterministic merge. Independent label runs can be combined using containment-derived hierarchy, explicit conflict reports and bounded anchoring. One request per run has a corresponding inference cost; merge is not a semantic error repair. Provider policies and capability evidence. A generic OpenAI-compatible client, provider-policy clients, explicit reasoning activation and effort, request limits, packaged hints and offline capability reports. Remote verification requires opt-in; metadata does not prove account access or successful inference. Optional read-only terminal viewer. Browse saved annotations, inspect nested spans and compare two sources using synchronized split or compact diff views. The viewer does not modify annotation files or run inference. Release notes 0.3.1 Request pacing now resolves symlinks in the parent directories of the per-user state file, so a symlinked cache root no longer fails every paced request. The state file keeps its no-follow, regular-file and ownership protection, and cross-process locking is unchanged. Documentation is available in both languages: tutorial and viewer guide each in German and English. Release 0.3.0 introduced provider-policy clients, capability reporting, the optional viewer, data-dependent contrast optimization and deprecation warnings for the legacy native wrappers; the 0.3 notes remain the reference for that feature set. 0.3.1 release notes ; 0.3 feature release notes and screenshots ; initial 0.2 feature baseline . Installation, documentation and verification Python 3.11 or newer. Install with pip install annotations4all==0.3.1 ; add the optional viewer with pip install 'annotations4all[view]==0.3.1' . The tutorial in German and English, the API guides, release notes and screenshot provenance are included with the source archive. Verification: 984 passing tests, 92.8% coverage, Ruff lint/format checks, warning-free Markdownlint, package metadata checks and fresh-environment installation tests under Python 3.11 and 3.13. Viewer checks include real optimization subprocesses and terminal restoration. These are code and packaging checks, not live-provider benchmarks. Versioning, license and citation Version 0.3.1 . MIT license. The source archive includes machine-readable CITATION.cff metadata. Version DOI: 10.5281/zenodo.23494842 . The unchanged concept DOI 10.5281/zenodo.22011370 identifies the software across versions. Source code and issues ; Python package .",
+      "tags": [
+        "ner",
+        "llm",
+        "nlp",
+        "span-annotation",
+        "tagger",
+        "Project: annotations4all 🥼",
+        "Type: Software 💾"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "annotations4all",
+      "url": "https://zenodo.org/records/23494842"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a369935b112bd3957955a5c1",
+      "context_id": "4bcbf76b0be2b4b621bdf8a9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "arxiv",
+      "source_context_sha256": "0cc9ac56c396f4b8593f044f22af60e1e35ff96afc40bdff87470fff16488d42",
+      "source_published": "2026-10-19T07:39:25Z",
+      "source_updated": "2026-10-19T07:39:25Z",
+      "summary": "Developing coordination policies for complex multi-agent systems relies on either labor-intensive algorithm design or opaque task-specific reinforcement learning. With recent advances in autonomous coding agents, we show that policy search directly in code space offers a compelling third path that combines automated optimization with explicit interpretability. We investigate a human-directed workflow in which coding agents iteratively propose, implement, evaluate, diagnose, and eventually refine algorithms guided by simulation feedback and explicit correctness verification. We conducted two case studies and found that this workflow robustly outperformed any manually engineered solutions. On a challenging map in the 2024 League of Robot Runners competition, a two-day search discovered a policy that exceeds the stronger locally reproduced competition entry by 35.0% on the densest instance and generalizes to unseen map instances. In simulated real-world warehouses with irregular lanes, continuous robot geometry, and asynchronous motion, a week-long search discovered an entirely new class of multi-agent pathfinding algorithm that outperforms a calibrated proprietary solution in throughput by 58.9%. Under stated assumptions, we further prove that the new algorithm is collision-free and completes, in finite time, every accepted goal that is not withdrawn or replaced. Together, the studies show that policy search in code space powered by state-of-the-art coding agents offers a highly competitive path to building real engineering solutions that are both effective and analytically tractable.",
+      "tags": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Policy Search in Code Space for Multi-Agent Pathfinding",
+      "url": "https://arxiv.org/abs/2610.25946v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c6b877ea1c4393f9d3024bbe",
+      "context_id": "3f21c708c0ad880c6caddc97",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "arxiv",
+      "source_context_sha256": "de560921c38c9191ba115c50f0bcbe39fa11051792ee264129e8dee150ef3b56",
+      "source_published": "2026-10-19T15:13:56Z",
+      "source_updated": "2026-10-19T15:13:56Z",
+      "summary": "Long-horizon embodied agents face temporal confusion and incomplete or distorted records, recurring errors from fixed memory rules, and growing storage and retrieval costs. We present BetaMem, a framework for building and evolving traceable long-term memory through six linked layers: working, spatial, entity, episodic, experiential, and procedural memory. A dual-level write contract constrains operation executability and source support for content: supervised fine-tuning learns compliant memory operations, while reinforcement learning combines repeated sampling with teacher verification of the original observations to reward complete, accurate records and penalize omissions, distortion, and unsupported content. We formulate failure-driven policy recursive self-improvement through diagnosis along the causal sequence of memory operations and local rule repairs gated by independent replay. Atomic tools frame storage, updates, retrieval, and forgetting as cost-utility allocation under storage and read budgets. Using the open-source Qwen3.5-9B model for memory generation, BetaMem achieves overall scores of 48.08% on M3-Bench-robot, 92.08% on LoCoMo, 72.6% on OpenEQA EM-EQA, and 62.4% on EgoLifeQA, the highest among the listed memory methods under their respective evaluation protocols. Training the model for memory generation raises the contract pass rate from 50.9% to 86.2% while reducing output tokens per stored action by 47.3%. A separate Qwen3-VL-8B-Instruct evaluation on EMem-Bench achieves an average success rate of 38.4% and an average error recurrence rate of 24.9%. We perform best among evaluated methods using comparably sized open-source models. Category results show that we have advantages in integrating information across observations, recalling events over long histories, and inferring personal habits.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "BetaMem: Learning to Remember a Changing World for Embodied Agents",
+      "url": "https://arxiv.org/abs/2610.26554v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9963db214a60e3dafe6e0b39",
+      "context_id": "31db1c2e2d44415d14a8064d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "arxiv",
+      "source_context_sha256": "4f1240e71bc1833a4ec8993b46a428f783739f567aa1cb1f468144f6a3f61149",
+      "source_published": "2026-10-19T16:18:16Z",
+      "source_updated": "2026-10-19T16:18:16Z",
+      "summary": "Smartphone GUI agents complete tasks in mobile apps by repeatedly reading the screen and asking a model for the next action. Mobile neural processing units (NPUs) enable local execution, keeping screen contents on the phone, but model latency accumulates with every action. Hybrid linear attention models reduce memory requirements, yet reusing their recurrent state requires checkpoints at the appropriate input positions. Agent requests retain instructions but rewrite recent history, so checkpoint policies designed for chat continuation can miss reusable prefixes. Retaining rollback states for speculative decoding can also move prompt processing off the NPU's matrix unit, adding overhead that outweighs decoding savings on short action outputs. A loaded model can further hold the NPU awake between tasks. We present Tandem, a runtime for hybrid GUI agents on mobile NPUs. Tandem saves recurrent state where consecutive prompts diverge, allowing later requests to reuse previously processed context. It keeps most prefill on the matrix unit and produces rollback states through a short per-token tail. Its verification kernel reads each weight block once for all proposed tokens. Between request bursts, Tandem releases NPU power votes without unloading the model. We implement Tandem in llama.cpp and evaluate it on recorded agent interactions across two Snapdragon generations. On a Snapdragon 8 Elite, Tandem reduces per-step latency by 30% for text-based screen descriptions and 16% for screenshots relative to llama.cpp's fastest NPU configuration, reduces energy per text step by 33%, and lowers standby power with the model loaded from 0.76 to 0.22 W.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+      "url": "https://arxiv.org/abs/2610.26660v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6f1b9710f97238bf99b031ba",
+      "context_id": "29041decbe5f96fead042519",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "arxiv",
+      "source_context_sha256": "b7ca895f2caabb4c29884c75b3a9dad391f39a83ef579e1347c4dd53f6893962",
+      "source_published": "2026-10-19T06:20:44Z",
+      "source_updated": "2026-10-19T06:20:44Z",
+      "summary": "A small justification for a rule-based conclusion may disappear when a source is withdrawn, and multiple derivations need not provide independent evidence. We study minimum-cost certificates that preserve a Horn conclusion under every withdrawal of at most k source domains. Evidence records remain distinct from asserted facts, supporting replicated attestations and overlapping failure dependencies. Transversals of minimal-support footprints characterize robustness and explain why disjoint-proof requirements can reject valid certificates. An exact procedure alternates weighted evidence selection with a source-failure oracle. A rule-closed counterinterpretation yields a globally valid selection cut without enumerating supports or failure scenarios. We prove correctness, finite termination, and cost optimality, establish coNP-completeness of unrestricted verification and NP-completeness of synthesis for every fixed budget, and identify a tractable reachability restriction. Experiments on controlled benchmarks, reachability graphs, and ontology-derived instances demonstrate that our counterinterpretation-guided synthesis achieves up to 92% optimum coverage within practical resource bounds, outperforming scenario expansion and general abduction while confirming the necessity of transversal-based reasoning over proof-packing heuristics.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Minimum-Cost Robust Evidence Certificates for Horn Reasoning under Correlated Source Failures",
+      "url": "https://arxiv.org/abs/2610.25865v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3982860ad3b789ea193148f7",
+      "context_id": "0aa938cf1c7941bca46333ac",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "35c89df9fed9a2942daaef3178f8401dd0409ecfc1203ad0dd0cdf65f8334394",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Code, job scripts and derived results supporting a study of operational water level forecasting for flood monitoring in Lamphun, northern Thailand. Five compact single-hidden-layer neural networks forecast hourly stage 6 to 18 hours ahead at three gauges (P.5, P.87, P.85), each paired with an upstream gauge. The record contains the open-source NumPy (Levenberg&ndash;Marquardt) ANN on which all retrospective results are based, evaluated on 65 leave-one-flood-year-out blocks (configurations from an earlier MATLAB experiment published separately); benchmarks against persistence, a linear model given the same inputs, XGBoost, and long short-term memory (LSTM) and GRU networks with a sensitivity analysis; leakage checks (predictor selection by LASSO repeated inside every block, whole-year early stopping, an antecedent-rainfall candidate pool); Diebold&ndash;Mariano tests, a datum-independent Kling&ndash;Gupta efficiency, threshold exceedance scores, skill by flow state, upstream travel time and a scan for frozen gauge records; and the reference code and a 76-day evaluation (2 August&ndash;17 October 2026) of the deployed hourly forecasting and alerting service. Summary results for every table and figure are included, with a synthetic example dataset that demonstrates the input format and evaluation code. The hourly water levels and daily rainfall were obtained from the Royal Irrigation Department (RID), Thailand, and are not included because redistribution permission has not been confirmed; with those data, the retrospective analyses can be re-run from the scripts provided. The record supports a manuscript and does not constitute validation of an autonomous flood-warning system. &nbsp; Supports the manuscript submitted to *Natural Hazards*: *Selecting hourly water-level forecasting models for flood warning in small-to-medium basins of Thailand: benchmarks, leakage control and operational verification*. Every retrospective result is based on the open-source Python ANN (P.87 with 5 hidden units), with leakage checks and a 76-day operational record. - New analysis code: `python_main_evaluation.py`, `model_comparison.py` (all methods on the hours common to every method; Table 2, Fig. 3), `gbm_benchmark.py` (XGBoost), `infold_selection.py` (in-fold LASSO; base, causal-wavelet and rainfall pools; Table 3), `rain_daily_parse.py` (daily-rainfall parser; rainfall not included), `export_travel_time_data.py` and `export_travel_time_py.py` (Fig. 5 values), `rain_delta_rmse.py` (per-year rainfall effect), `gbm_tuned.py` and `gbm_tuned_eval.py` (nested-tuned XGBoost), `swrm_additions.py` (90% prediction intervals, P.87 one-unit check, P.85 bias and stage relation), `code/ann/python/ann_rerun.py` (5 hidden units for P.87; whole-year early stopping). - GRU: `lstm_benchmark.py` updated (`--cell gru`) and `hpc/slurm/gru_erawan.sbatch` added. - New results: `python_main_evaluation.json`, `model_comparison.json` and per-year CSVs, `gbm_runs.json`, `gru_benchmark.json`, `infold_selected_*.json`, `rain_delta_rmse_per_year.csv`, `gbm_tuned_runs.json`, `gbm_tuned_eval.json`, `swrm_additions.json`, `operational_evaluation_20261017.json` (window to 17 October 2026), per-year metrics of the ANN reruns. - `figures/`: the eight figures of the Natural Hazards manuscript (Fig1&ndash;Fig8); earlier figures remain in versions 1.0.0 and 1.1.0. - Removed: the MATLAB reference scripts with their registry builder and MATLAB-vs-Python comparison files (published separately by T. Chaipimonplin; `registry.json` is kept), and all figure-drawing scripts (the record ships the final figures only). - Environment: scikit-learn 1.7.1, xgboost 3.4.1, scipy 1.16.1 added.",
+      "tags": [
+        "flood forecasting",
+        "water level forecasting",
+        "artificial neural network",
+        "LSTM",
+        "GRU",
+        "XGBoost",
+        "data leakage",
+        "machine learning",
+        "operational forecasting",
+        "hydrology",
+        "Lamphun",
+        "Thailand"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Lamphun Flood Forecasting: Analysis Code and Evaluation Results",
+      "url": "https://zenodo.org/records/23502320"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "170ad40fe7c67e4839012ab1",
+      "context_id": "08a7a54dbdfa13309026ed8a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "c9435a371b99531a3984680dadadc8e9e2f7ca5e171ae3c683319899085da987",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Release notes - v2.1 This release adds the analysis layer produced for the alignment-monitoring and gap-diagnostics work, together with the tooling that keeps the repository's numbers traceable. It contains no manuscript source, cover letter or submission package. Included Analysis scripts ( tools/ ) checkpoint-monitoring analyses on the training split and the held-out split; retrieval-task monitoring analysis; evaluation-size sensitivity analysis for the order-preservation diagnostic; first-order ODE fit diagnostics by adaptation family; cross-file consistency report for shared numbers, page counts and archive DOIs; provenance gate and manifest renderer; staged submission-package build checker. Result archives ( outputs/analysis/ ) monitoring, retrieval, evaluation-size, ODE-diagnostic, consistency and package-check JSON files; the water-tank acoustic diagnostic archive (reported as an out-of-distribution boundary, not as a replication). Provenance metadata docs/provenance_manifest.json and docs/PROVENANCE_MANIFEST_2026-10-20.md : every result table/figure is mapped to its generating script and result archive (98 entries: 95 verified, 3 exempt with reasons). Notes docs/DEEPINFER_NOTES_2026-10-20.md : applicability note for the DeepInfer inference framework. Excluded (by repository policy) Manuscript source and PDFs, cover letters, title pages, highlights, and any submission-package content. Model weights and datasets. Verification Every JSON archive under outputs/analysis/ is produced by a script in tools/ and the provenance gate passes. Submission packages were checked to compile standalone from their own latex_source.zip with matching page counts (details in outputs/analysis/staged_package_check.json ).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "MoYUYao666/gap-susceptibility: v2.1",
+      "url": "https://zenodo.org/records/23510274"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "69a0ba3bb8cf31f9e8600e6e",
+      "context_id": "518a9a09e75fbfe556b33be4",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::REVERSE",
@@ -57,28 +457,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "inverse",
-        "reconstruction"
+        "reconstruction",
+        "reverse"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 8.875,
-      "source": "arxiv",
-      "source_context_sha256": "4f465779232acc6a67eb2152b63154e936d80ebbdb32b38bce47293ee4c21ed2",
-      "source_published": "2026-10-19T11:15:11Z",
-      "source_updated": "2026-10-19T11:15:11Z",
-      "summary": "Image restoration is a fundamental inverse problem that seeks to recover high-quality images from degraded observations. Plug-and-Play (PnP) methods provide a flexible framework for integrating pretrained denoisers into iterative reconstruction, whereas flow matching offers an efficient generative modeling approach based on continuous-time ODE dynamics. Very recently, Martin et al.\\ (ICLR, 2025) developed a PnP-Flow method, which integrates the PnP framework with flow matching through a time-dependent denoiser constructed from a pretrained flow matching model.By incorporating a different time schedule and an additional pixel-space projection operator, this paper proposes a novel efficient PnP-Flow algorithm (HP-PnP-Flow) that enjoys rigorous convergence guarantees under mild assumptions, without imposing restrictive conditions on iterates required by the aforementioned work. Numerical experiments on CelebA and AFHQ-Cat demonstrate that the newly proposed HP-PnP-Flow algorithm significantly outperforms PnP-Flow on several restoration tasks such as denoising, deblurring, super-resolution, random inpainting, and box inpainting. Notably, our algorithm achieves comparable or better reconstruction quality with substantially fewer iterations, reducing the iteration count from $500$ to $100$ for deblurring and super-resolution on AFHQ-Cat.",
+      "source": "zenodo",
+      "source_context_sha256": "ae6eefbe6a46f1f7a67cef49c304dcae92674f6d7c5b6ebe1650f30c85f5e609",
+      "source_published": "1999-02-05",
+      "source_updated": "",
+      "summary": "This paper demonstrates an objective method of computing monthly mean 700-mb height anomalies (H) at 108 grid points in the Western Hemisphere for a 40-yr period as a function of concurrent anomalies of monthly mean sea level pressure (P), at the same 108 points used for H, and monthly mean surface air temperature (T) averaged over 112 areas in North America. The authors applied a forward stepwise program to derive linear multiple regression equations that explained 81% of the variance of H by means of only 3.5 variables, averaged over all months and grid points. The stability of these equations held up well on 6 yr of independent data in terms of explained variance, root-mean-square error, and the spatial anomaly correlation coefficient. Therefore, it seems feasible to reconstruct maps of H for the first half of the twentieth century as a function of data on P and T only. Deposited content: descriptive metadata only; underlying research data are not included.",
       "tags": [
-        "cs.CV"
+        "Meteorology",
+        "Bering Sea",
+        "Alaska",
+        "Arctic",
+        "North Pacific Ocean",
+        "pices-metadata-only"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "HP-PnP-Flow: Hybrid Time Scheduling and Projection for Plug-and-Play Image Restoration via Flow Matching",
-      "url": "https://arxiv.org/abs/2610.26183v1"
+      "title": "Reconstruction of Monthly Mean 700-mb Heights from Surface Data by Reverse Specification - FGDC XML metadata artifact",
+      "url": "https://zenodo.org/records/23504942"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "0e993a8e85d46ae438a1cff0",
-      "context_id": "cf275892a549643e3830a0b5",
+      "candidate_id": "594f96bff15cac8490690233",
+      "context_id": "66e593a580f988973406b8bc",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::REVERSE",
@@ -93,57 +498,21 @@
       ],
       "keyword_hits": [
         "inverse",
-        "inversion"
+        "recovery",
+        "sat"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "9ca0a5a6c2ea02bae1c36ddc552f8060b6b5ce4b750753753c5d4999351e91e9",
-      "source_published": "2026-10-19T10:37:40Z",
-      "source_updated": "2026-10-19T10:37:40Z",
-      "summary": "Geometric full-waveform inversion aims to recover sharp subsurface interfaces from noisy waveform observations. We formulate this problem within a Bayesian level-set framework, where the unknown interface is represented as zero level set of a latent function endowed with a Gaussian prior. Although the level-set-to-medium-parameter map is discontinuous, we establish that the level-set-to-observation map is continuous almost surely with respect to the prior, thereby guaranteeing that the posterior measure is well-posed and locally Lipschitz continuous with respect to the data in the Hellinger metric. To enable tractable posterior computation under the severe nonlinearity of the inverse problem and the resulting multimodality, we develop a multiscale multimodal Laplace approximation. A frequency-continuation strategy incorporates waveform data progressively from low to high frequencies, identifying and propagating multiple candidate modes across successive scales. At the final frequency level, local Gaussian approximations are constructed around the retained modes and combined into a Gaussian mixture, whose weights are determined by least-squares fitting to the unnormalized posterior density. Numerical experiments demonstrate that the method accurately reconstructs anomalous interfaces while effectively capturing posterior multimodality and the local uncertainty associated with distinct plausible geometries.",
-      "tags": [
-        "math.NA"
-      ],
+      "score": 6.75,
+      "source": "zenodo",
+      "source_context_sha256": "b38666f5c0f7efbd89ac7163178bf58bacd314c2bb639030cb89241446f6d2da",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Code for the revised manuscript &quot;Inverse parameter estimation of horizontal capillary flow in porous media with hp-variational physics-informed neural networks&quot; (under revision). Package layout src/hpvpinn_capillarity (core, hpo, final_runs, analysis, conventional), with data, recorded HPO results, SLURM scripts, and a locked environment ( uv.lock ). Conventional-solver baseline using the public frontx ( requirements-conventional.txt ). The code of the original submission is tagged v1.0-submission . Licence: Apache-2.0.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Bayesian Geometric Inversion for Wave Equation: Well-Posedness and Multiscale Multimodal Posterior Approximation",
-      "url": "https://arxiv.org/abs/2610.26151v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "198d6bf604357be1bbe02571",
-      "context_id": "1860df8d83989066d8909b07",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reverse",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "b6162ebc01a8661df163bf3a6b8264652576462ecbaa323ad0a60dcd34cea1ab",
-      "source_published": "2026-10-19T12:42:37Z",
-      "source_updated": "2026-10-19T12:42:37Z",
-      "summary": "Extensive studies of hidden spin polarization have established a broad class of hidden phenomena in quantum materials. Here, we introduce the hidden piezo-Hall effect, in which strain induces finite anomalous Hall conductivities (AHCs) in individual sectors while the global AHC remains zero. At zero strain, neither the full system nor its sectors exhibit an anomalous Hall effect (AHE). Under uniaxial strain, however, opposite sector AHCs emerge while their sum remains canceled. We establish this effect for a $d$-wave hidden altermagnet using a tight-binding model and first-principles calculations for the experimentally synthesized material $\\mathrm{RbV_2Te_2O}$. Rotating the strain direction from the $x$ to the $y$ axis reverses the signs of the sector AHCs without generating a net Hall response. The same symmetry mechanism may also give rise to hidden piezomagneto-optical, piezo-thermal Hall, piezo-Nernst, and piezo-Ettingshausen effects. Our work extends hidden physics to strain-controlled transport and identifies $\\mathrm{RbV_2Te_2O}$ as a promising candidate for experimental verification.",
-      "tags": [
-        "cond-mat.mtrl-sci"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Hidden piezo-Hall effect",
-      "url": "https://arxiv.org/abs/2610.26293v1"
+      "title": "hpvpinn-capillarity: hp-VPINN for inverse hydraulic parameter recovery in unsaturated porous media",
+      "url": "https://zenodo.org/records/23510486"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -180,41 +549,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "6928c121102309d9e83eb8ac",
-      "context_id": "0d55c8276d64dc8a14c94ff6",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "arxiv",
-      "source_context_sha256": "543389ee67ac94529cad0e1c75d8f2f04e853a8fa855da77c0814a2e53b938bd",
-      "source_published": "2026-10-19T13:01:26Z",
-      "source_updated": "2026-10-19T13:01:26Z",
-      "summary": "We study how many output samples match the worst-case state reconstruction error obtainable from a continuous history under bounded measurement noise. For observable scalar-output linear time-varying systems with $n$ states, $n$ samples suffice for exact reconstruction, whereas at most $n^2$ attain the continuous-history minimax error in the $\\ell_\\infty$ norm. An explicit construction proves sharpness even for real-analytic systems. For time-invariant systems, strict total positivity yields one $n$-sample schedule optimal for every state coordinate; endpoint-observed tridiagonal cooperative chains satisfy this conclusion in physical coordinates. Interior sensing behaves differently: an explicit three-state family requires four samples despite positivity and distinct real eigenvalues. The strict three-state gap persists under small stabilizing damping. A nilpotent four-state example and an interval proof for a six-state mechanical system give gaps. The results identify how temporal sampling and the prescribed state-error geometry determine the measurements required for minimax reconstruction. Time-domain experiments illustrate the resulting estimation bounds.",
-      "tags": [
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Beyond Observability: Sharp Sample Bounds for Minimax State Reconstruction",
-      "url": "https://arxiv.org/abs/2610.26326v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "7dc8d2456ece9535b37d1702",
       "context_id": "f62948841ad5e1add008e893",
       "delivery_preview_only": true,
@@ -245,6 +579,46 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "AL-Nahrain-IRAQ: RNA-seq gene counts, SNPs and DESeq2 models of ethanol-producing Saccharomyces cerevisiae strains (SYNOVA)",
       "url": "https://zenodo.org/records/23502819"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "987dda6f7d3413ecfbee4815",
+      "context_id": "301665c6aaed2461f2653c7e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "e8e6eb364ecb5f16b0e7b2ddde319f390a468058b1da732784906ba20383b57f",
+      "source_published": "1999-02-05",
+      "source_updated": "",
+      "summary": "The island of St. Vincent and the other Windward Islands in the southeastern Caribbean were chosen as a field site for the study of weak mountain wakes. By the authorsメ definition, a モweak wakeヤ forms when the potential vorticity generated by a mountain is not strong enough to advect itself into eddies; rather, it is simply advocated downstream by the ambient flow. GOES-8 and Landsat sunlit images unambiguously revealed that the mountainous Windward Islands have remarkably long straight wakes. The length of St. Vincentメs wake exceeds 300 km although its width is only 20 km. Near the islands, the wake structures reflect the details of the island topography. These wakes do not exhibit any obvious diurnal effect. Boat surveys in the lee of St. Vincent confirmed the existence of features seen in the images: the sharp wake boundary, the small valley-induced jet embedded in the near wake, and the absence of any reverse flow. Aircraft surveys gave evidence of descent over the island and showed that the wake air is relatively warm and dry. The length of the wake (L) agrees with the formula L = H/2CD (where H is the wake depth and CD is the surface drag coefficient), implying that the reacceleration of the wake air is caused by the ambient streamwise pressure gradient rather than by lateral entrainment of momentum or geostrophic adjustment. Two numerical models were used to simulate St. Vincentメs wake, a single-layer hydrostatic model and a 3D nonhydrostatic model. Both models indicated that air descent, acceleration, wave breaking, and weak potential vorticity generation occur over the island, causing a long straight wake. Deposited content: descriptive metadata only; underlying research data are not included.",
+      "tags": [
+        "St. George Island, Alaska",
+        "Voyages",
+        "Bering Sea",
+        "Alaska",
+        "North Pacific Ocean",
+        "pices-metadata-only"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Wake of St. Vincent - FGDC XML metadata artifact",
+      "url": "https://zenodo.org/records/23504963"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -433,6 +807,73 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "8a564bfca7b5b54d0abb8921",
+      "context_id": "7544af57bd86af7c6e840150",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "3b6f7b22501809dfc19bc03b2f8ec5aaffdd94054648fbf9bb190a7555f887d2",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "The files in this repository contain a demo input dataset and the source C code for the reconstruction of transmission chains used in the work \"Intervention Timelines to Control Andes Hantavirus (ANDV) Transmission\" by&nbsp;Molina Gran&eacute; C, et al.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Code \"Intervention Timelines to Control Andes Hantavirus (ANDV) Transmission\"",
+      "url": "https://zenodo.org/records/23502559"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "78fe36369bb8b03153693ac0",
+      "context_id": "f160817704f7d3b0b2a6b690",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "48c98d1929f7af3ddf5579b134ee4d248a5715dc49a3c3713980796b200e84d9",
+      "source_published": "2026-10-19T08:01:32Z",
+      "source_updated": "2026-10-19T08:01:32Z",
+      "summary": "Chain-of-thought (CoT) reasoning can improve problem solving, but models often keep generating after the correct answer is already reachable; the extra steps raise serving costs and may replace a correct intermediate result with an incorrect one. We propose GLOBE (Geometry-Led Online Behavioral Early Exit), an online, training-free algorithm that terminates the model's CoT process early. GLOBE embeds each completed reasoning segment as a point on a unit sphere and reads the shape of the resulting semantic trajectory. GLOBE first applies a trial phase that generates short trial answers in a separate branch, stopping the main stream on an accepted trial after checking confidence against a threshold. If generation continues, a trajectory phase stops the stream once this path repeatedly reverses direction with little net progress. On five benchmarks including mathematical reasoning, tool calling, and agent memory, GLOBE cuts output tokens by 49.7% and active end-to-end wall time (E2E) by 51.0% across two models, and achieves a five-task average of 80.58%, comparable to Full CoT.",
+      "tags": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "GLOBE: Geometry-Led Online Behavioral Early Exit via Unit-Sphere Trajectories",
+      "url": "https://arxiv.org/abs/2610.25970v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "9502e4e98255cf3d342bc9d7",
       "context_id": "2f88e87bdb9553cddb46c7cc",
       "delivery_preview_only": true,
@@ -582,41 +1023,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c6b877ea1c4393f9d3024bbe",
-      "context_id": "a48bfce5bfa3f8a415932cbc",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "de2eaf4b6bb21dbb8e36f3690ea8201d54938029deb77d0daea740e6db889cdd",
-      "source_published": "2026-10-19T15:13:56Z",
-      "source_updated": "2026-10-19T15:13:56Z",
-      "summary": "Long-horizon embodied agents face temporal confusion and incomplete or distorted records, recurring errors from fixed memory rules, and growing storage and retrieval costs. We present BetaMem, a framework for building and evolving traceable long-term memory through six linked layers: working, spatial, entity, episodic, experiential, and procedural memory. A dual-level write contract constrains operation executability and source support for content: supervised fine-tuning learns compliant memory operations, while reinforcement learning combines repeated sampling with teacher verification of the original observations to reward complete, accurate records and penalize omissions, distortion, and unsupported content. We formulate failure-driven policy recursive self-improvement through diagnosis along the causal sequence of memory operations and local rule repairs gated by independent replay. Atomic tools frame storage, updates, retrieval, and forgetting as cost-utility allocation under storage and read budgets. Using the open-source Qwen3.5-9B model for memory generation, BetaMem achieves overall scores of 48.08% on M3-Bench-robot, 92.08% on LoCoMo, 72.6% on OpenEQA EM-EQA, and 62.4% on EgoLifeQA, the highest among the listed memory methods under their respective evaluation protocols. Training the model for memory generation raises the contract pass rate from 50.9% to 86.2% while reducing output tokens per stored action by 47.3%. A separate Qwen3-VL-8B-Instruct evaluation on EMem-Bench achieves an average success rate of 38.4% and an average error recurrence rate of 24.9%. We perform best among evaluated methods using comparably sized open-source models. Category results show that we have advantages in integrating information across observations, recalling events over long histories, and inferring personal habits.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "BetaMem: Learning to Remember a Changing World for Embodied Agents",
-      "url": "https://arxiv.org/abs/2610.26554v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "87d3624fb7b0e319e82599d0",
       "context_id": "017f72ecc015928be612ce52",
       "delivery_preview_only": true,
@@ -691,43 +1097,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "9d9719fdcaaa97668efbc026",
-      "context_id": "3c4fd2306e53039bd859e5f2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4583,
-      "source": "arxiv",
-      "source_context_sha256": "4e4ed566c4eddf7e2ccca075938cd3eb900604900d8799049e70064543ab0ec2",
-      "source_published": "2026-10-19T17:17:24Z",
-      "source_updated": "2026-10-19T17:17:24Z",
-      "summary": "Reinforcement learning enables learning high-performance control policies, but its reliance on extensive interaction limits deployment on physical systems where data collection is costly, and failures are unsafe. We introduce Prior-Informed Adaptation (PIA), an offline-to-online model-based RL framework that uses structured simulation priors for rapid adaptation. PIA pretrains a world model on heterogeneous low- and high-fidelity simulated trajectories, then adapts it with limited target-domain interaction using uncertainty-regularized planning. Rather than requiring an accurate simulator for policy transfer, PIA treats simulated trajectories as biased priors whose residual mismatch is corrected during online adaptation. We evaluate PIA in autonomous racing using high-fidelity simulation and on a real full-size autonomous race car. In simulation, PIA adapts faster across track and surface shifts than strong baselines, achieving lower lap times and fewer failures. On hardware, PIA achieves reliable few-shot adaptation with less than one hour of on-vehicle interaction.",
-      "tags": [
-        "cs.LG",
-        "cs.RO",
-        "eess.SY"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Simulation Priors for Rapid Adaptation in Model-Based RL for Autonomous Racing",
-      "url": "https://arxiv.org/abs/2610.26757v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "528fbcf9e0fd1905d06b8cb1",
       "context_id": "e7c3fea4bf3af2a86a5d3368",
       "delivery_preview_only": true,
@@ -798,39 +1167,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b7768870825273caefe364c4",
-      "context_id": "a55e6b31317980113214f4c5",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "rup"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "zenodo",
-      "source_context_sha256": "c50da877bba944b2ed10240dab676f23093ad0d4faccd5a79b6f64e2cbd5be57",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "🌟 Summary Ultralytics 8.4.183 expands hardware deployment and improves reliability across training, prediction, data handling, and evaluation. 🚀 📊 Key Changes Axelera Metis support for every YOLO26 task: With Voyager SDK 1.9.0, detection, instance and semantic segmentation, depth estimation, pose, OBB, and classification models can all export, predict, and validate through yolo . The NMS-free detection path is used by default. SDK 1.8 exports remain compatible; the updated setup requires metis-dkms 1.7.0 or newer and supports PyTorch versions below 2.15. Higher Axelera throughput: In the documented COCO128 benchmark, SDK 1.9 reached 109 images per second at batch 32 , compared with 40 images per second on SDK 1.8. Larger prediction batches can improve throughput; batch size 1 remains useful when per-image latency matters. Intel acceleration for LiteRT models: LiteRT exports can now run on Intel CPUs and NPUs, including support for YOLO26 task types such as detection, segmentation, depth, pose, OBB, and classification. More reliable training and depth calibration: Fixes address warmup and gradient accumulation edge cases, MPS memory growth during training, and depth calibration replacing an already-good calibration with a worse one. Interrupted runs can also resume under the same Ultralytics Platform model, and W&amp;B resuming works on Windows. More accurate and robust data workflows: Fixes improve ImageNet-subset classifier validation, accept UTF-8 labels with a byte-order mark, preserve non-ASCII grounding annotations, convert COCO RLE masks for segmentation, and align 16-bit NumPy images with image-file prediction behavior. Prediction, export, and visualization fixes: Negative FastSAM points now reliably exclude masks regardless of prompt order. Other fixes cover very thin images, rectangular INT8 calibration, grayscale LiteRT models, semantic overlay colors, depth-map saving, and several additional edge cases. Platform and documentation updates: Platform documentation now includes Gemma 4 and Nemotron as hosted annotation models and explains new visibility controls and workflows. Benchmark instructions were also clarified for NMS-free evaluation. 🎯 Purpose &amp; Impact Deploy YOLO26 on more hardware and tasks: Axelera users can use one integrated workflow across all seven YOLO26 tasks, while Intel LiteRT users gain CPU and NPU inference options. Get better throughput when processing batches: Axelera SDK 1.9 can substantially increase prediction throughput for larger batches, though actual results depend on hardware and workload. Trust training, validation, and predictions more: The fixes reduce avoidable failures and make reported results better reflect the supplied data and model—for example, correcting classifier label alignment changes ImageNette validation accuracy from 9.45% to 70.37% in the reported test. Keep existing workflows working: Many changes are targeted bug fixes or compatibility improvements; notably, Axelera models exported with SDK 1.8 do not need to be re-exported for SDK 1.9. What's Changed Fix R/B channel swap of semantic mask overlays in train/val mosaics by @cainiao33 in https://github.com/ultralytics/ultralytics/pull/26755 Scale 16-bit NumPy prediction inputs to 8 bits by @Nikhi00718 in https://github.com/ultralytics/ultralytics/pull/26741 Restore pre-existing temporary module aliases by @Vaishnavi220506 in https://github.com/ultralytics/ultralytics/pull/26756 Respect negative FastSAM points regardless of prompt order by @Nikhi00718 in https://github.com/ultralytics/ultralytics/pull/26759 Align ImageNet subset folders with classifier class IDs by @Nikhi00718 in https://github.com/ultralytics/ultralytics/pull/26760 Fix INT8 calibration crash when exporting with rect=True by @Y-T-G in https://github.com/ultralytics/ultralytics/pull/26750 Fix LiteRT layout detection for grayscale exports by @aswanth-07 in https://github.com/ultralytics/ultralytics/pull/26747 Clamp warmup accumulate ramp to the capped ",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Ultralytics YOLO",
-      "url": "https://zenodo.org/records/23486641"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "17fc54ef8770425ae6d1d052",
       "context_id": "23577ed79763bb14f6bb1940",
       "delivery_preview_only": true,
@@ -863,6 +1199,119 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "StepBench: Diagnosing Real-World Procedural Understanding in AI Agents",
       "url": "https://arxiv.org/abs/2610.26679v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "63b27994b5955c2e5de0d4d8",
+      "context_id": "18151ce120cac682e32aaa53",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_context_sha256": "f711fc805cf2bd3a2a3a73560025e22922388261c20f8d6b69507837eef124ca",
+      "source_published": "2026-10-17T18:59:40Z",
+      "source_updated": "2026-10-17T18:59:40Z",
+      "summary": "Small Language Models with quantisation and parameter-efficient adaptation are widely offered as the route to multilingual AI under compute constraints, and their efficiency is almost always reported as a single memory figure. We show that this figure is measured in English and does not transfer. Across a 131k-sentence corpus spanning eleven Indic scripts, TinyLlama-1.1B's tokeniser emits 1.34 subword tokens per Latin-script word and 22.60 per Kannada word. This is not inefficiency; it is absence. Its vocabulary contains 0% of Odia's codepoints, 1% of Telugu's and 2% of Kannada's, and for five of eleven scripts the measured fertility sits at the UTF-8 byte-fallback ceiling, on Odia at 99.6% of it, with 93.6% of emitted tokens being raw bytes. Because SentencePiece byte fallback never raises an unknown-token marker, this failure is entirely silent: TinyLlama's UNK rate is 0.0% on every script, including the one it reads as bytes. We further show that low fertility can indicate the opposite of efficiency: mBERT posts its best score anywhere (1.10 tokens/word, on Odia) while discarding 87.9% of the text as UNK. MuRIL, an Indic-vocabulary encoder with a fifth of TinyLlama's parameters, reads every script at 1.23-2.26 tokens/word with zero UNK and zero byte fallback. The binding constraint is the vocabulary, not the parameter count. The consequence is concrete: on a 2048-token context window, the same model gives an English user 1,528 words of usable context and a Kannada user 91.",
+      "tags": [
+        "cs.CL",
+        "cs.CY",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Efficiency Measured in English: Tokeniser Coverage Bounds Small Language Models on Indic Scripts",
+      "url": "https://arxiv.org/abs/2610.24818v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "23a992cd91dbf7cf8d82314a",
+      "context_id": "0f38a37daf43a4bd3d2a8ddd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_context_sha256": "434497133b3d6f0e9649bc4773ee4313e8752915afb1bf9e57fa4ab0ea041b1c",
+      "source_published": "2026-10-19T14:15:50Z",
+      "source_updated": "2026-10-19T14:15:50Z",
+      "summary": "Large language models (LLMs) are increasingly used to generate Verus contracts for Rust programs together with the proofs that establish them. Yet verifier acceptance, the common measure of success, shows only that the implementation satisfies the generated contract, so it leaves open whether the contract captures the intended behavior. Assessing specification generation therefore requires an evaluation methodology, not a single metric. We present VerusEval, a framework that evaluates generated contracts along six dimensions, including Verus-native checks for semantic triviality, validated input-output (I/O) suites, and contract equivalence, and that relates them so that the strength and blind spots of each become measurable. Evaluating 13,716 artifacts from four workflows, five LLMs, and two prompting settings on 762 tasks, we find that acceptance overstates quality: only 42.3\\% of the accepted artifacts complete all three semantic checks without a flag, and across workflows and models, higher acceptance does not consistently come with more correct contracts. I/O evaluation rejects 23.6\\% of the accepted artifacts, yet only 63.2\\% of those that pass it are proved equivalent. Of the accepted artifacts flagged by contract comparison, 84.1\\% have a rejected completeness obligation, and the direction of a failure prioritizes inspection of the generated contract or the reference; it does not by itself establish which artifact is defective. Screening and review further identify 36 candidate defects among 61 selected reference contracts, and repairing one of them makes 10 of its 11 failing artifacts equivalent. Based on these findings, we derive four actionable lessons for evaluation, generation, and benchmark maintenance.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "VerusEval: Evaluating LLM-Generated Verus Specifications Beyond Verifier Acceptance",
+      "url": "https://arxiv.org/abs/2610.26464v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3da59c1ea1715e557b3114f3",
+      "context_id": "89b4db70fb965dcc7a6b47cc",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "negative result"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.625,
+      "source": "zenodo",
+      "source_context_sha256": "28844bd26a514b05f15656f19635537fc1a20c36611722cf8a86a0b8fac0e57d",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Archival deposit accompanying A Controlled Audit of a Negative Result: Training Recipe, H.264 Compression Levels and a Frequency-Stream Deepfake Detector , under review at IEEE Access (revision 1). This is version v2.0.2 of the deposit; it goes with release v2.0.2 of the repository. This controlled, self-audited study tests one frequency-based design for compression-robust deepfake detection: CAFRL, which adds block-DCT and FFT-phase streams with compression-conditioned band attention, and an adversarial compression-invariance loss, to an EfficientNet-B0 face backbone. Five separate findings follow. (1) Under the registered rule, CAFRL as specified scored 3.66 AUC points below a backbone-matched EfficientNet-B0 at CRF 40 (paired, one seed). (2) After the audit found eight defects, the control's training recipe recovered 3.96 points for CAFRL's own components (post-audit pre-specified); in a one-seed ablation reverting changes singly, only the backbone learning rate gave an interval excluding zero. (3) At that recipe, these untuned frequency-stream implementations showed no detectable difference from the spatial controls at two feature widths (post-audit pre-specified), yet a standalone frequency head scored 85.27 test-split AUC points at CRF 40 at the selected checkpoints (exploratory). (4) Restoring the adversarial loss at that recipe made no detectable difference in a registered test (0.87 points, Holm-adjusted p = 0.084); the estimator stayed accurate at the selected checkpoints. (5) In registered three-seed tests, real H.264 training levels beat PSNR-matched JPEG versions of the same frames by 7.48 points at CRF 40 (averaged over CRF-40 exposure), and CRF-40-level data added 1.88 points averaged over codec; flat robustness was measured within the trained levels. CAFRL numbers use EMA weights. Evidence: FaceForensics++-family, GAN-era, single-pass H.264 compression. The repository &mdash; https://github.com/Capta1n-n9m0/cafrl-negative &mdash; holds the per-video model scores, the decision rules frozen before the runs they adjudicate, every run's configuration and validation curve, the evaluation and statistical harness, the face-crop and re-encode pipeline, the self-audit record with its defect ledger, and two claims maps that give the artifact and method for each reported value row by row. Its tagged tree (v2.0.2) is included here as cafrl-negative-v2.0.2.tar.gz . This version holds: cafrl-negative-v2.0.2.tar.gz &mdash; the repository at tag v2.0.2 (new). &lt;run&gt;.best.pt &mdash; 26 frozen model checkpoints (2.7&nbsp;GB in all), one file per run: the best.pt (best mean validation AUC) of each run added in revision 1, with checkpoints-r1-manifest.json giving each one's run, architecture, arm, training protocol, augmentation policy, seed, selected epoch, selection metric and SHA-256 (carried unchanged from v2.0.1, first deposited in v2.0.0; no best_valloss.pt ). The v2.0.0 release notes call this payload checkpoints-r1.tar ; the deposit holds the same 26 checkpoints as separate files. checkpoints.tar &mdash; 37 frozen model checkpoints (6.0&nbsp;GB), every best*.pt of the 27 v1.0.0 runs, with checkpoints-manifest.json (carried unchanged from v2.0.1, first deposited in v1.0.0). crop-coordinates.tar.zst &mdash; 48,294 per-video face-crop records: the frames selected, the bounding boxes, the five-point landmarks and the alignment settings. Given the source corpora, obtained under your own data-use agreement, these regenerate the exact crops the models were trained and evaluated on (carried unchanged from v2.0.1, first deposited in v1.0.0; this version adds no crop coordinates). SHA256SUMS (every file above, the carried ones included) and README-DEPOSIT.md . The v2.0.1 source tarball stays in the v2.0.1 record and is not part of this version. No dataset media is redistributed here or in the repository. FaceForensics++, DeepFakeDetection and Celeb-DF&nbsp;v2 are released by their authors under signed agreements that do not per",
+      "tags": [
+        "deepfake detection",
+        "video compression",
+        "frequency-domain learning",
+        "reproducibility",
+        "negative results",
+        "FaceForensics++",
+        "compression robustness",
+        "pre-registration"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Artifacts for \"A Controlled Audit of a Negative Result: Training Recipe, H.264 Compression Levels and a Frequency-Stream Deepfake Detector\"",
+      "url": "https://zenodo.org/records/23497508"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -900,46 +1349,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "GPT-6 Astra Is a Native Visuo-Tactile Policy for Contact-Rich Manipulation",
       "url": "https://arxiv.org/abs/2610.26846v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "0d58fe4ee95debe63a3ab12d",
-      "context_id": "c797034e2bf1851b482d9c78",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "arxiv",
-      "source_context_sha256": "1af98d79cb05df815059dd1c9767b7e2ede1acfffe5332930dc0bd9e9e1339ea",
-      "source_published": "2026-10-19T17:59:58Z",
-      "source_updated": "2026-10-19T17:59:58Z",
-      "summary": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.",
-      "tags": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG",
-        "cs.MM"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
-      "url": "https://arxiv.org/abs/2610.26860v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1091,41 +1500,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "BatchParScale: Sparse Batch-Mixing for Sequence Models",
       "url": "https://arxiv.org/abs/2610.25254v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b7768870825273caefe364c4",
-      "context_id": "5136bda286e5741af6d173d7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control",
-        "rup"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.25,
-      "source": "zenodo",
-      "source_context_sha256": "dcd1a81f352c22d1d803c47d3e75670fb85d6311b577ad35870c429eb5155e1a",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "🌟 Summary Ultralytics 8.4.183 expands hardware deployment and improves reliability across training, prediction, data handling, and evaluation. 🚀 📊 Key Changes Axelera Metis support for every YOLO26 task: With Voyager SDK 1.9.0, detection, instance and semantic segmentation, depth estimation, pose, OBB, and classification models can all export, predict, and validate through yolo . The NMS-free detection path is used by default. SDK 1.8 exports remain compatible; the updated setup requires metis-dkms 1.7.0 or newer and supports PyTorch versions below 2.15. Higher Axelera throughput: In the documented COCO128 benchmark, SDK 1.9 reached 109 images per second at batch 32 , compared with 40 images per second on SDK 1.8. Larger prediction batches can improve throughput; batch size 1 remains useful when per-image latency matters. Intel acceleration for LiteRT models: LiteRT exports can now run on Intel CPUs and NPUs, including support for YOLO26 task types such as detection, segmentation, depth, pose, OBB, and classification. More reliable training and depth calibration: Fixes address warmup and gradient accumulation edge cases, MPS memory growth during training, and depth calibration replacing an already-good calibration with a worse one. Interrupted runs can also resume under the same Ultralytics Platform model, and W&amp;B resuming works on Windows. More accurate and robust data workflows: Fixes improve ImageNet-subset classifier validation, accept UTF-8 labels with a byte-order mark, preserve non-ASCII grounding annotations, convert COCO RLE masks for segmentation, and align 16-bit NumPy images with image-file prediction behavior. Prediction, export, and visualization fixes: Negative FastSAM points now reliably exclude masks regardless of prompt order. Other fixes cover very thin images, rectangular INT8 calibration, grayscale LiteRT models, semantic overlay colors, depth-map saving, and several additional edge cases. Platform and documentation updates: Platform documentation now includes Gemma 4 and Nemotron as hosted annotation models and explains new visibility controls and workflows. Benchmark instructions were also clarified for NMS-free evaluation. 🎯 Purpose &amp; Impact Deploy YOLO26 on more hardware and tasks: Axelera users can use one integrated workflow across all seven YOLO26 tasks, while Intel LiteRT users gain CPU and NPU inference options. Get better throughput when processing batches: Axelera SDK 1.9 can substantially increase prediction throughput for larger batches, though actual results depend on hardware and workload. Trust training, validation, and predictions more: The fixes reduce avoidable failures and make reported results better reflect the supplied data and model—for example, correcting classifier label alignment changes ImageNette validation accuracy from 9.45% to 70.37% in the reported test. Keep existing workflows working: Many changes are targeted bug fixes or compatibility improvements; notably, Axelera models exported with SDK 1.8 do not need to be re-exported for SDK 1.9. What's Changed Fix R/B channel swap of semantic mask overlays in train/val mosaics by @cainiao33 in https://github.com/ultralytics/ultralytics/pull/26755 Scale 16-bit NumPy prediction inputs to 8 bits by @Nikhi00718 in https://github.com/ultralytics/ultralytics/pull/26741 Restore pre-existing temporary module aliases by @Vaishnavi220506 in https://github.com/ultralytics/ultralytics/pull/26756 Respect negative FastSAM points regardless of prompt order by @Nikhi00718 in https://github.com/ultralytics/ultralytics/pull/26759 Align ImageNet subset folders with classifier class IDs by @Nikhi00718 in https://github.com/ultralytics/ultralytics/pull/26760 Fix INT8 calibration crash when exporting with rect=True by @Y-T-G in https://github.com/ultralytics/ultralytics/pull/26750 Fix LiteRT layout detection for grayscale exports by @aswanth-07 in https://github.com/ultralytics/ultralytics/pull/26747 Clamp warmup accumulate ramp to the capped ",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Ultralytics YOLO",
-      "url": "https://zenodo.org/records/23486641"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1385,42 +1759,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "bdea4c10269d4c76f2fe3b22",
-      "context_id": "cff7aa43bcff397e077755dd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "ablation",
-        "baseline",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.9583,
-      "source": "arxiv",
-      "source_context_sha256": "d652e8107aeb01bf58c953de00f9042f9ba49f6bafea30aa1188737b140cf1c8",
-      "source_published": "2026-10-19T14:38:41Z",
-      "source_updated": "2026-10-19T14:38:41Z",
-      "summary": "Latent memory is gaining ground as a lightweight history supplement for GUI agents. It supplies history to a frozen vision-language model via prefix vectors trained with step-wise cross-entropy (CE). While resulting gains are naturally attributed to encoded history, our controlled experiments show they primarily stem from action revision. The prefix learns to alter the model's default actions. However, this revision is unscoped because step-wise CE pushes outputs toward reference actions at every step without explicitly preserving correct decisions. Consequently, it repairs errors but also breaks 8-13% of initially correct answers. Overall accuracy metrics hide these losses. We therefore propose ScopeMem, a latent-memory method for scoped revision. Its encoder conditions prefix generation on the model's initial answer and is trained to correct errors while preserving correct decisions. On the controlled ablation set, ScopeMem reduces the share of broken correct decisions to 5.6% while repairing more errors than any evaluated CE-trained prefix. On AndroidControl, GUI-Odyssey, and zero-shot AITW, ScopeMem outperforms all evaluated prompting and latent-memory baselines, enabling a frozen Qwen3-VL-8B to match or surpass GUI-specialized agents and Qwen3-VL-32B.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "ScopeMem: Latent Memory That Learns Where to Revise Frozen GUI Agents",
-      "url": "https://arxiv.org/abs/2610.26503v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "9502e4e98255cf3d342bc9d7",
       "context_id": "82db81183d7ecd6a29b9d3f0",
       "delivery_preview_only": true,
@@ -1455,346 +1793,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Axiomatic World Modeling for Physics Reasoning",
       "url": "https://arxiv.org/abs/2610.24519v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c762d5b757758236fd908a4f",
-      "context_id": "95a963db26992d1c2ed2fa0d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.7917,
-      "source": "zenodo",
-      "source_context_sha256": "a102985c153e691f041dc48e4eef672cb3e024de48359b0186a0525afd14fad3",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "This report presents Stage 3 of a computational investigation into Bell correlations and observer-resolved accessibility within a Phase-prior research programme. It examines how a receiver&rsquo;s polarization response changes the correlations accessible to measurement while the input source state remains fixed. A conditional optical bridge is derived from a supplied two-mode propagation generator to the receiver transformation, measurement effects and joint outcome probabilities. For a lossless retarder followed by a two-port linear analyser, the accessible Clauser&ndash;Horne&ndash;Shimony&ndash;Holt (CHSH) maximum depends on both relative phase delay and receiver eigenaxis orientation. Identical retardance can therefore produce different accessible Bell correlations without changing source entanglement. The original study covers 42 receiver configurations, three source/control states and 40,824 grid probabilities, supported by an analytic maximum over the full admitted measurement family. Version 1.1 adds an amplitude-weighted extension with 12 principal cases, 24 control cases and 11,664 grid probabilities. The 70/30 and 90/10 preparations retain entanglement and yield aligned-receiver CHSH values of approximately 2.713 and 2.332, respectively. These weights are declared model inputs. All specified numerical checks passed. Separable controls demonstrate that restricted measurements can reproduce the accessible statistics of an entangled source. The distinction between source entanglement and its accessibility therefore remains essential. The study provides a reproducible benchmark within the stated quantum-optical model. The Phase-prior interpretation assigns the joint state to nesting and its accessible records to observation coupling; a Phase-specific law deriving receiver response from nested organisation remains unresolved. Results are deterministic model calculations, with no experimental measurements or fitted data. The accompanying archive includes protocols, code, numerical outputs, controls, execution records, source provenance and checksums. Version 1.1, dated 20 October 2026, preserves the original report and appends the unequal-weight results.",
-      "tags": [
-        "bell correlations",
-        "CHSH inequality",
-        "quantum entanglement",
-        "Quantum optics",
-        "Quantum measurement",
-        "Observer coupling",
-        "Receiver response",
-        "Polarization"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "The Receiver Needs Phase and Orientation",
-      "url": "https://zenodo.org/records/23489430"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "0bff0f4cb6c6eac4fd277473",
-      "context_id": "3e5b9b0b6eecdd2f71d728e0",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "control",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.75,
-      "source": "arxiv",
-      "source_context_sha256": "c19c556328bf95ef3696b177760126c979e115b6dd5ada1222d5d54a678e02d6",
-      "source_published": "2026-10-19T17:38:36Z",
-      "source_updated": "2026-10-19T17:38:36Z",
-      "summary": "A market maker provides liquidity by quoting prices to buy and sell an asset, earning the spread while managing inventory risk. We study market makers trained with multi-agent reinforcement learning on prediction markets, specifically Polymarket, whose thin order books pose distinct challenges. Three challenges underpin this research: adverse selection may cause a policy trained on real data to stop quoting; the consequences of a quote can arrive many steps after the action; and prediction-market L2 data does not identify individual orders needed for simulation. We address these challenges by reconstructing order-level LOBSTER-format data from Polymarket and training agents in JaxMARL-HFT on 417 real markets. We enrich the baseline market maker's observation space with the book and recent flow, redesign its actions and inventory controls, and propose a cooperative multi-agent decomposition into a quoter and a risk manager trained using recurrent Independent Proximal Policy Optimisation (IPPO) with RNN policies. We investigate reward shaping, particularly reward blending and post-fill markout, to mitigate credit-assignment difficulties between the agents. Our redesigned single-agent market maker quotes more frequently and incurs smaller held-out losses than the retrained JaxMARL-HFT baseline, although the contributions of jointly changed observations, actions and risk constraints are not separately identified. Decomposition alone performs poorly; careful reward design substantially improves the desk relative to the unshaped split and yields our best result. Models are evaluated on realised end-of-episode portfolio value on held-out markets. None establishes positive average portfolio value in periodic held-out evaluation, and each configuration was trained with one seed. The environment, data and protocol lay a foundation for makers that quote many linked markets at once.",
-      "tags": [
-        "stat.ML",
-        "cs.LG",
-        "cs.MA",
-        "q-fin.TR"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Cooperative Multi-Agent Reinforcement Learning for Market Making on Prediction-Market Order Books",
-      "url": "https://arxiv.org/abs/2610.26789v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "9c3efdb68bafa582ca339af5",
-      "context_id": "039e1dee643f0dbeef8c9b0f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "replication"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.8333,
-      "source": "zenodo",
-      "source_context_sha256": "2d946ad8e5e4205e1b047c3856fa953bcdcd8b433b5839cc99be76640134aad8",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "Data and R code that reproduce the results of \"Divergence Between Absolute Emissions Benchmarks and Output-Adjusted Assessments: Evidence from Korea\" (manuscript version 7.7.1, submitted to Energy Economics). &nbsp; A single command, Rscript reproduce.R, runs 14 analysis scripts (about 15 seconds on a 32-core computer) and lists the 146 numbers reported in the paper in the order in which they appear, each next to the value the package computes or provides. Of the 146 numbers, 121 are recomputed from the distributed data; the other 25 rest on site-level records, coding records of business reports, a page-by-page reading of overseas reports and licensed revenue data, which cannot be distributed, and are provided as computed. &nbsp; The package requires only R with the jsonlite and ggplot2 packages (versions fixed in renv.lock). The random draws of the original computation are included as files; an included Python script (draws/make_draws.py, numpy) regenerates them byte for byte. &nbsp; The package of 101 files contains truncated salted hash codes, log changes and ratios for the Korean firm pairs, the overseas pair files, the producer price indices and the boundary audit of the 80 firms in the multi-industry frame. It contains no firm names, business identifiers or levels of emissions, energy, output or revenue for Korean firms. See README.md for the folder layout, the fixed inputs and the results that are provided as computed. &nbsp; Licences: code under MIT; data produced by the author under CC BY 4.0. Producer price indices and source data remain under their publishers' terms. The README inside the archive is labelled manuscript version 7.7; its data and code are identical to those of version 7.7.1.",
-      "tags": [
-        "replication package; absolute emissions benchmarks; physical output; emissions intensity; R; Korea"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Replication package for \"Divergence Between Absolute Emissions Benchmarks and Output-Adjusted Assessments: Evidence from Korea\"",
-      "url": "https://zenodo.org/records/23501951"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "501d1c88ef0d78115566f82f",
-      "context_id": "ab91bfdba65194c24a9351aa",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "0b357392618060f847f23891742a11fa31792c0ed6eecc69d6060a2bca5128ec",
-      "source_published": "2026-10-17T06:52:49Z",
-      "source_updated": "2026-10-17T06:52:49Z",
-      "summary": "Irregular time series require models to answer temporal queries at arbitrary coordinates, yet existing approaches typically retain observation-dependent representations that must be repeatedly resolved for each query. We introduce HiPPO Functional Memory (HiPPO-FM), a functional-memory attention operator that compiles an irregular history into a reusable coordinate-addressable state. Instead of storing observation-indexed tokens or latent trajectories, HiPPO-FM writes observations into a fixed-rank functional space and performs direct coordinate evaluation through matched functional geometry. Kernel-smoothed HiPPO coordinates and Gram-based readout define a shared write/read mechanism, while observed-support self-attention enables content-dependent representations before compression. We characterize the induced finite-dimensional query space and derive an error decomposition separating functional geometry approximation from learned-memory mismatch. Across continuous-coordinate reconstruction, irregular representation learning, real-world extrapolation, and event-sequence prediction, HiPPO-FM consistently improves strong irregular time-series baselines, achieving strong reconstruction accuracy on Spiral, competitive performance across 20 UEA datasets, improved real-world extrapolation, and superior results on several irregular event benchmarks. After encoding, the compact functional state can be reused across different query sets without reprocessing the observation history.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "HiPPO Functional Memory: Coordinate-Queryable Attention for Irregular Time Series",
-      "url": "https://arxiv.org/abs/2610.24501v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "27dc68eb0b37ca20310732ae",
-      "context_id": "95f53231c30288375d3087c1",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "9648ee64269214202cd8b2f7701a6fa95e457e19c6d3d4b4fb6a212fa1444dd2",
-      "source_published": "2026-10-18T08:44:06Z",
-      "source_updated": "2026-10-18T08:44:06Z",
-      "summary": "As model reasoning gets cheaper, the physical experiment becomes the slow and costly step in discovery. Each experiment returns a noisy reading: a high value can mean a good candidate or a lucky draw. With a fixed budget, an AI agent must keep choosing between exploring a new candidate and confirming a promising one by re-testing it. We measure that choice in Wellocate, a simulated assay campaign with known true values. It is built on a generated landscape and on two real protein datasets, GB1 and PhoQ, scrambled so no model can answer from memory. We test five language models as minimal agents, with no tools and no memory beyond the history in each prompt. They misallocate in both directions. Three over-confirm, spending most of the budget re-testing. On the generated landscape one under-confirms, trusting single readings, and there every model ends with a worse final pick than a basic scripted strategy. Each failure has its own cause. The over-confirmers run short of new candidates worth trying: a list of untried candidates cuts their re-testing and, on real protein data, makes two of them pick much better. A running summary of their readings or a description of the landscape changes it by at most five percentage points. For the under-confirmer, re-testing its top candidates in a final round, replayed on its own campaigns, recovers only about a quarter of what it loses by picking the wrong candidate. This suggests confirmation has to run through the whole campaign. We release Wellocate as a benchmark and reinforcement-learning environment with frozen splits and scripted baselines. With it, anyone can measure how an agent splits its budget before trusting it with real experiments, and train agents to split it better. Code, data and the environment are available at https://github.com/Xstendyl/wellocate.",
-      "tags": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Explore or Confirm? LLM Agents Misallocate Measurements Under Noise",
-      "url": "https://arxiv.org/abs/2610.25111v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d5a95b4e2984975da0482ed6",
-      "context_id": "8a0516d2ec5f92396b3d7fdd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "f0f48fa0405d6c07732ca8fb305be1d933f149548388d83cfaa9a2bdb34b5e33",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "Precomputed results for DOST (Distance-preserving Optimization for Spatial Transcriptomics), a method for identifying spatial domains in spatial transcriptomics data. This record accompanies the DOST code (see Related works) and the DOST paper. results.zip contains the outputs of the scripts in the reproducibility/ directory of the code repository, for DOST and for the baseline methods BANKSY, BASS, DR.SC, GraphST, STAGATE, SpaGCN, stCluster and ADEPT. These are the files read by the figure scripts in reproducibility/figures/ . To use the files, unzip results.zip , set dir.output in the figure scripts to the unzipped folder, and run the scripts as described in reproducibility/figures/README.md in the code repository. The datasets are not included. They are publicly available from the BenchmarkST Zenodo records (DLPFC12, BC, mMAMP and mHypothalamus) and from 10x Genomics (Xenium Human Breast); see reproducibility/DOST/README.md in the code repository.",
-      "tags": [
-        "spatial transcriptomics",
-        "spatial domain identification",
-        "clustering",
-        "benchmark results",
-        "DOST"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Precomputed results for DOST reproducibility",
-      "url": "https://zenodo.org/records/23486291"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "2068650e70cdf654d8d8beb3",
-      "context_id": "15e884c01fcab6590e8fc65b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "d89b6cc642ca16b79a820f2f284f8a2f6c7c8b25982f5c85289a009559d64db4",
-      "source_published": "2026-10-19T06:04:43Z",
-      "source_updated": "2026-10-19T06:04:43Z",
-      "summary": "Generator--critic trading systems pair an LLM-based trader that makes trading decisions with a red team agent that evaluates these decisions and provides feedback for revision. However, improving individual trading decisions does not ensure that both agents learn from experience and improve together over time. This raises an important question: how can the trader and red-Team select useful experience and learn from each other's evolving behavior? On one hand, experience that benefits decisions under one market condition may become ineffective or harmful under another. On the other hand, trading outcomes reflect both agents' actions, making it difficult to derive appropriate experience for each role. In this work, we propose ACE-Trader, an adversarial co-evolution trading framework. Specifically, we first develop separate context-dependent memory selectors that learn to identify useful experience for the current trading decision. Both selectors receive shared feedback from net-return differences between complete memory-assisted and memory-free trading pipelines, with online updates emphasizing recent outcomes. We further design a co-evolution mechanism that links role-specific memories through shared trading records. We use these records to evaluate the Red-Team's risk assessments and the effects of the Trader's revisions against realized market outcomes, then derive experience for their respective memories. By linking this experience to the corresponding records, we enable the Trader to improve its proposals based on prior critiques and the Red-Team to adjust its review focus as the Trader's behavior changes. Experiments on U.S. stock trading show that ACE-Trader outperforms all 22 active baselines in cumulative return and achieves the highest Sharpe ratio and lowest maximum drawdown across both active methods and passive benchmarks.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "ACE-Trader: Adversarial Co-Evolution for Generator-Critic Trading Systems",
-      "url": "https://arxiv.org/abs/2610.25847v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "121c6789fba3f6b04723975e",
-      "context_id": "00299279a4ebe9f52aa486ee",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "arxiv",
-      "source_context_sha256": "5d53112ef1a3b5c9f649ed6ee7a04d1545e4d4ec9fd2062f1ba1f47deef08541",
-      "source_published": "2026-10-19T05:17:36Z",
-      "source_updated": "2026-10-19T05:17:36Z",
-      "summary": "In reservoir computing, performance depends on whether the fixed dynamics of the reservoir suit the task, and the appropriate memory length and frequency response differ across tasks. The reservoir settings are found by a search on each task, and driving the reservoir with the input and collecting its states for every candidate setting dominates the cost of the search. In a reservoir with a linear recurrence, the dynamics decompose into modes, one per eigenvalue, and the eigenvalue distribution becomes a design variable. We propose the Sector-Ring Linear Reservoir (SRLR), in which the eigenvalue angles are fixed at evenly spaced positions around a circle and one decay timescale, chosen from a few values, is assigned to each sector of consecutive angles. To keep the scale of each mode's state equal across candidates, the input weights are scaled using the power spectrum of the training input. To reduce the cost of the search, the states of the modes for each decay-timescale value are computed once and reused across candidates. On prediction and reconstruction benchmarks built from chaotic systems, the SRLR achieved, in all eight cases, a lower mean test error than a reference model in which all modes share one decay timescale, and was competitive with nonlinear echo state network and leaky-integrator echo state network baselines. The selected decay-timescale profiles changed with the prediction target and horizon. The state reuse reduced the number of computed mode trajectories in the search by 99.8% relative to per-candidate recomputation.",
-      "tags": [
-        "cs.LG",
-        "cs.NE"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Sector-Ring Linear Reservoirs: Sector-Wise Decay-Timescale Allocation With State Reuse Across Candidate Settings",
-      "url": "https://arxiv.org/abs/2610.25806v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d0264db967fd42ddd1089b4b",
-      "context_id": "ca26aa093dc6f88f6144dce5",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_context_sha256": "1ae16de1976e80c4ad7e888a7dcdc6a9fb79ecaf60f581f100ec11a32f5bdce9",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "annotations-orchestration is a Python library for configuring and running LLM annotation and evaluation experiments. It combines a resumable, manifest-driven scheduler with an optional terminal editor and a declarative annotation runner. Span metrics are computed by annotations-evaluate ; annotation clients, taggers, provider capabilities and hints come from annotations4all . Scope and architecture Base scheduler: experiment YAMLs and optional controller manifests define runs, defaults, execution settings and ordering. The default legacy runner uses a subprocess CLI contract and does not require an annotation library. Optional editor: the tui extra provides annotations-tui , a Textual editor for single-run and multi-run experiments and controllers. Editing, inspection and effective-run previews do not execute experiments. Optional standard runner: the annotate extra uses annotations4all&gt;=0.3.1,&lt;1 to annotate from a declarative annotation block without a custom consumer frontend. Metrics: this package adapts run records and writes reports; it does not implement metric counting. Run reports use the SemEval-compatible flat scenarios of annotations-evaluate ; that library also provides a nested standard report. Release notes 0.3.0 This release adds the editor, standard runner and provider-aware configuration layer to the 0.2 scheduler. Existing state files, PID locks, graceful shutdown, resume planning, manifest-key validation and the metric definitions remain supported. Manifest editor: structured forms, full YAML editing and effective-run previews share a common side-effect-free resolver with the CLI. New, duplicate, remove, reorder and Save As workflows preserve comments and quotes where supported. Saves show a diff and use atomic replacement with conflict detection; ambiguous YAML falls back to raw editing. Read-only mode and unsaved-change dialogs protect documents. Inheritance and responsive forms: Experiment → Defaults → Runs shows effective values and their origin without materializing inherited overrides. New runs stay empty. Legacy-header migration requires explicit diff confirmation. Run cards group model/prompting, annotation/input and connection settings. Provider/model configuration: a packaged catalog and startup-directory overlay provide presets and manual IDs. Explicit Refresh reads metadata only for the selected provider/key context. Capability evidence is field-specific and session-only; custom endpoints require trust confirmation before receiving a key. Credentials and display: the editor manages only the startup directory's .env , masks values and uses explicit atomic writes. Secrets do not enter manifests, settings or diffs. F9 controls NerdFont icons and persistent themes; --theme overrides the session and Ctrl+P opens the command palette. Reasoning and hints: reasoning and effort are separate inherited fields. Contradictory settings are rejected; live-reported effort choices constrain selection while incompatible stored values remain diagnostic. Contextual hints cite sources and change no settings. Declarative annotation: runner: standard supports configurable and per-label tagging with schema-validated label/description pairs, context, German or English prompts and message splitting. A no-inference preflight validates inputs and a fresh output destination. Input and gold semantics: the runner and directory inspector share non-mutating normalization for top-level Prodigy spans and ground_truth.prodigy/tags . Missing gold produces an annotation-only completion; explicitly empty gold remains evaluable. Conflicting gold representations are rejected before inference. Scheduling and pacing: ordinary remote runs share a configurable pool; self-hosted runs are sequential per host. The exact HU endpoint has a dedicated serial lane capped at 10 requests per minute, independent of scheduling mode. Other explicitly paced endpoints share endpoint-scoped state below the results directory. Request-level policy belo",
-      "tags": [
-        "llm",
-        "evaluation",
-        "orchestration",
-        "ner",
-        "nlp",
-        "benchmark",
-        "Project: annotations4all 🥼",
-        "Type: Software 💾"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "annotations-orchestration",
-      "url": "https://zenodo.org/records/23495464"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
