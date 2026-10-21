@@ -1,5 +1,5 @@
 {
-  "batch_id": "c7081de265b61882ff72",
+  "batch_id": "b51bd16f6e8d3eefefdb",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -150,10 +150,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ae444585bcdf7fa87733d88e",
-      "context_id": "45a4a27e7b65104c31ae1ec9",
+      "candidate_id": "21f45d732ecd23c35d157720",
+      "context_id": "17d1feb3161e7b112d69900c",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
+      "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
       "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -172,14 +172,16 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 2.25,
       "source": "zenodo",
-      "source_context_sha256": "52061388eeb69c1e68f16c35c2051a34b14a9a1271bdc035e79b30b0d0e0aec1",
-      "source_published": "2026-10-20",
+      "source_context_sha256": "39f64b76670cf337239a3131e7c518539f8a90e7179ae807601e4dc557d015fe",
+      "source_published": "2026-10-21",
       "source_updated": "",
-      "summary": "Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit English Publication Description STARLI Flagship 22 &nbsp; 30 Physicalized Models &nbsp; 82 Chapters &nbsp; 200 Research Gates Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit is a high-density research monograph on manufacturing individualized cells, scaffolds, microtissues, and therapeutic components through distributed robotic systems without weakening lot release quality. The book treats every patient as a distinct manufacturing lot. Starting material, cell genealogy, material flow, agent action, calibration, environmental state, contamination evidence, identity, purity, maturation, and blind terminal function remain linked throughout production. Personalization changes the process path but never waives the release contract. Thirty physicalized models connect stochastic lot release, population dynamics, clonal diversity, living-product mass balance, contamination transport, Bayesian sterility, microfluidic residence time, oxygen and thermal transport, scaffold maturation, viscoelasticity, adhesion injury, swarm allocation, fault-bounded consensus, common-cause reliability, calibration drift, sensor fusion, change detection, small-lot inference, potency, multivariate release, logistics, recipe portability, provenance, economics, and robust joint qualification. Eighty-two chapters each open with a governing gold equation and develop five one-page research sections. Two hundred Research Gates challenge the system with donor shift, contamination, agent failure, supply interruption, calibration drift, reagent substitution, incomplete genealogy, and blinded transfer to a second laboratory. The work is a preclinical manufacturing research framework rather than a clinical protocol or release authorization. Contamination, identity failure, unclosed genealogy, invalid calibration, and failed independent function are noncompensable vetoes. Its Phoenix Answer Embryo, the Regenerative Microfactory Capsule, binds patient material, lineage, agent capability, process state, substitutions, deviations, blind potency, release, quarantine, and terminal disposition into one auditable and portable evidence object. Suggested Metadata Subtitle Patient-lot genealogy, distributed robotic manufacture, and independent functional release Primary fields regenerative medicine; cell manufacturing; biofabrication; swarm robotics; quality science Method fields stochastic processes; transport; reliability; metrology; Bayesian release; robust control Core keywords microfactory; personalized lot; cell genealogy; contamination; potency; cross-site transfer Scientific boundary Preclinical manufacturing framework only; no clinical protocol or release authorization Series STARLI Research Institute 27 Flagship 22 &nbsp; Short Catalog Description A research monograph on patient-specific regenerative production through distributed robotic microfactories. Thirty governing models, eighty-two chapters, and two hundred Research Gates test lot genealogy, living-material physics, contamination, agent faults, small-batch release, supply resilience, independent potency, and cross-site reconstruction. Every started lot remains visible, and local speed never compensates for failed identity, sterility, or function. STARLI FLAGSHIP 22 &nbsp; English Publication Description",
-      "tags": [],
+      "summary": "Satellite-cloud gaps corrupt the reflectance time series on which computer-agriculture crop-yield estimators depend, and the resulting coverage error propagates into famine early-warning reliability. The framework is evaluated through a replication-based benchmark in which 600 data sets of N = 500 were drawn from a declared data-generating process (intercept 12.0, exposure 0.42, group -3.1, severity 1.35, error SD 4.2) and the ordinary least squares estimator was characterised under the stated process. The benchmark produced an estimated bias of -0.07173 for the intercept and 0.00147 for the exposure coefficient, with RMSE values of 0.89562 and 0.0157 respectively, and empirical coverage of the nominal 95% confidence intervals of 1.0 for both parameters. The coverage-error bound formalises the conditions under which CDA-supported estimators preserve nominal coverage and therefore early-warning reliability, and it identifies the augmentation regimes in which coverage degrades. The contribution is a benchmark protocol and a bound that make the reliability consequences of cloud-gap augmentation auditable rather than assumed.",
+      "tags": [
+        "counterfactual data augmentation; crop-yield estimation; satellite-cloud gaps; coverage-error bound;"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit English Publication Description STARLI Flagship 22 30 Physicalized Models 82 Chapters 200 Research Gates Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit is a high-density research mono",
-      "url": "https://zenodo.org/records/23515136"
+      "title": "Benchmarking Evaluation of Counterfactual Data Augmentation for Computer Agriculture Crop-Yield Estimators Under Satellite-Cloud Gaps: An Artificial Intelligence Coverage-Error Bound for Famine Early-Warning Reliability",
+      "url": "https://zenodo.org/records/23544459"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -661,40 +663,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ae444585bcdf7fa87733d88e",
-      "context_id": "06e0e8a742b9a2da57089891",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "rup",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.8333,
-      "source": "zenodo",
-      "source_context_sha256": "973bf118351427072cf24721044049e14c64e43fe874ced77e55023d009103d2",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit English Publication Description STARLI Flagship 22 &nbsp; 30 Physicalized Models &nbsp; 82 Chapters &nbsp; 200 Research Gates Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit is a high-density research monograph on manufacturing individualized cells, scaffolds, microtissues, and therapeutic components through distributed robotic systems without weakening lot release quality. The book treats every patient as a distinct manufacturing lot. Starting material, cell genealogy, material flow, agent action, calibration, environmental state, contamination evidence, identity, purity, maturation, and blind terminal function remain linked throughout production. Personalization changes the process path but never waives the release contract. Thirty physicalized models connect stochastic lot release, population dynamics, clonal diversity, living-product mass balance, contamination transport, Bayesian sterility, microfluidic residence time, oxygen and thermal transport, scaffold maturation, viscoelasticity, adhesion injury, swarm allocation, fault-bounded consensus, common-cause reliability, calibration drift, sensor fusion, change detection, small-lot inference, potency, multivariate release, logistics, recipe portability, provenance, economics, and robust joint qualification. Eighty-two chapters each open with a governing gold equation and develop five one-page research sections. Two hundred Research Gates challenge the system with donor shift, contamination, agent failure, supply interruption, calibration drift, reagent substitution, incomplete genealogy, and blinded transfer to a second laboratory. The work is a preclinical manufacturing research framework rather than a clinical protocol or release authorization. Contamination, identity failure, unclosed genealogy, invalid calibration, and failed independent function are noncompensable vetoes. Its Phoenix Answer Embryo, the Regenerative Microfactory Capsule, binds patient material, lineage, agent capability, process state, substitutions, deviations, blind potency, release, quarantine, and terminal disposition into one auditable and portable evidence object. Suggested Metadata Subtitle Patient-lot genealogy, distributed robotic manufacture, and independent functional release Primary fields regenerative medicine; cell manufacturing; biofabrication; swarm robotics; quality science Method fields stochastic processes; transport; reliability; metrology; Bayesian release; robust control Core keywords microfactory; personalized lot; cell genealogy; contamination; potency; cross-site transfer Scientific boundary Preclinical manufacturing framework only; no clinical protocol or release authorization Series STARLI Research Institute 27 Flagship 22 &nbsp; Short Catalog Description A research monograph on patient-specific regenerative production through distributed robotic microfactories. Thirty governing models, eighty-two chapters, and two hundred Research Gates test lot genealogy, living-material physics, contamination, agent faults, small-batch release, supply resilience, independent potency, and cross-site reconstruction. Every started lot remains visible, and local speed never compensates for failed identity, sterility, or function. STARLI FLAGSHIP 22 &nbsp; English Publication Description",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit English Publication Description STARLI Flagship 22 30 Physicalized Models 82 Chapters 200 Research Gates Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit is a high-density research mono",
-      "url": "https://zenodo.org/records/23515136"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "d8adcb0df22feab6f327b7ba",
       "context_id": "52df57c7c01276122389b912",
       "delivery_preview_only": true,
@@ -933,6 +901,41 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5108ea5fcccfb38bfa433699",
+      "context_id": "7dfc41ddaf429b651677c63b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "f45c590c1572ae6551c782dd47e8b1bbc237cb47dc8be5eb77cf5e418afe93d8",
+      "source_published": "2026-08-21",
+      "source_updated": "",
+      "summary": "Act No. 328/2025 Coll., on Research, Development, Innovation and Knowledge Transfer, represents the most significant recodification of the Czech RDI system in more than two decades. It replaces Act No. 130/2002 Coll., whose repeated amendments gradually reduced the clarity of the original framework and weakened its ability to respond to the changing needs of the research and innovation system. The Act constitutes a comprehensive reconstruction of the legal framework, complemented by Amending Act No. 329/2025 Coll. and implementing regulations. This article interprets the Act as a framework for a more investment-oriented governance of public support for RDI: in other words, as a basis for deciding how the state supports the creation, development and use of knowledge and innovation. Its key principle is the connection between excellence and impact. Excellent research is no longer treated as a value in itself, but as a precondition whose contribution must be demonstrable in terms of the country&rsquo;s prosperity, security and international credibility. The Act therefore not only strengthens the capacity of research organisations to translate results into practice, but also opens space for instruments that may increase demand for knowledge, technologies and innovation. The text is not a legal commentary on the new legislation. Rather, it offers a sociological, historical and economic analysis that places the new legal framework within the broader context of the Czech RDI system. It is structured as a coherent arc: context &ndash; changes &ndash; implementation conditions &ndash; discussion &ndash; recommendations &ndash; conclusion.",
+      "tags": [
+        "STRATIN"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Act No. 328/2025 Coll., on Research, Development, Innovation, and Knowledge Transfer: Recodification of the R&D&I legal framework in the Czech Republic",
+      "url": "https://zenodo.org/records/22047737"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "13f59101dd9c07e3096bcd1c",
       "context_id": "be8048424da4c1c6770af0a4",
       "delivery_preview_only": true,
@@ -1039,40 +1042,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Interruption-Aware Recurrent Reinforcement Learning for UAS Navigation Under Temporary Overrides",
       "url": "https://arxiv.org/abs/2610.28121v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ae444585bcdf7fa87733d88e",
-      "context_id": "23c3625bcf486a910fc88ad7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "rup",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.5417,
-      "source": "zenodo",
-      "source_context_sha256": "7f941999b417121836ca441016ff54a378d31d0ac9c97eb6450a6abea6c4c4d6",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit English Publication Description STARLI Flagship 22 &nbsp; 30 Physicalized Models &nbsp; 82 Chapters &nbsp; 200 Research Gates Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit is a high-density research monograph on manufacturing individualized cells, scaffolds, microtissues, and therapeutic components through distributed robotic systems without weakening lot release quality. The book treats every patient as a distinct manufacturing lot. Starting material, cell genealogy, material flow, agent action, calibration, environmental state, contamination evidence, identity, purity, maturation, and blind terminal function remain linked throughout production. Personalization changes the process path but never waives the release contract. Thirty physicalized models connect stochastic lot release, population dynamics, clonal diversity, living-product mass balance, contamination transport, Bayesian sterility, microfluidic residence time, oxygen and thermal transport, scaffold maturation, viscoelasticity, adhesion injury, swarm allocation, fault-bounded consensus, common-cause reliability, calibration drift, sensor fusion, change detection, small-lot inference, potency, multivariate release, logistics, recipe portability, provenance, economics, and robust joint qualification. Eighty-two chapters each open with a governing gold equation and develop five one-page research sections. Two hundred Research Gates challenge the system with donor shift, contamination, agent failure, supply interruption, calibration drift, reagent substitution, incomplete genealogy, and blinded transfer to a second laboratory. The work is a preclinical manufacturing research framework rather than a clinical protocol or release authorization. Contamination, identity failure, unclosed genealogy, invalid calibration, and failed independent function are noncompensable vetoes. Its Phoenix Answer Embryo, the Regenerative Microfactory Capsule, binds patient material, lineage, agent capability, process state, substitutions, deviations, blind potency, release, quarantine, and terminal disposition into one auditable and portable evidence object. Suggested Metadata Subtitle Patient-lot genealogy, distributed robotic manufacture, and independent functional release Primary fields regenerative medicine; cell manufacturing; biofabrication; swarm robotics; quality science Method fields stochastic processes; transport; reliability; metrology; Bayesian release; robust control Core keywords microfactory; personalized lot; cell genealogy; contamination; potency; cross-site transfer Scientific boundary Preclinical manufacturing framework only; no clinical protocol or release authorization Series STARLI Research Institute 27 Flagship 22 &nbsp; Short Catalog Description A research monograph on patient-specific regenerative production through distributed robotic microfactories. Thirty governing models, eighty-two chapters, and two hundred Research Gates test lot genealogy, living-material physics, contamination, agent faults, small-batch release, supply resilience, independent potency, and cross-site reconstruction. Every started lot remains visible, and local speed never compensates for failed identity, sterility, or function. STARLI FLAGSHIP 22 &nbsp; English Publication Description",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit English Publication Description STARLI Flagship 22 30 Physicalized Models 82 Chapters 200 Research Gates Patient Specific Regenerative Microfactories and Swarm Manufacturing at the Limit is a high-density research mono",
-      "url": "https://zenodo.org/records/23515136"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1360,6 +1329,221 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "14076abd60bec648022510c1",
+      "context_id": "e83ac7c1948762e323820683",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "9bce72e6382d8f5d8464114cec928afe53452d69d0c36e7bd4fb844d5c4a4ed3",
+      "source_published": "2026-10-20T08:06:13Z",
+      "source_updated": "2026-10-20T08:06:13Z",
+      "summary": "Multi-agent systems rely on communication to complete tasks, and latent communication passes continuous representations to reduce text generation and re-encoding. However, multi-agent systems must reconfigure agent models, whereas existing latent-communication methods are built for fixed model combinations, so their interfaces may fail after replacement. Our pilot study confirms this interface failure and identifies the requirement for interface reuse after model replacement. We present LatBridge, which connects agent models through a shared Bridge and separate interfaces under a shared latent-communication protocol. After agent model replacement, LatBridge reuses unchanged interfaces, selects matching low-rank interfaces, and combines them through the Bridge, training only missing ones with all models frozen. The Bridge processes source representations in the basic mode and constructs target input without autoregressive generation in the accelerated mode. Experiments support effective communication after model replacement, with mean basic-mode accuracies of 14.8% on MATH and 27.3% on ALFWorld next-action prediction across eight small-model configurations. Analyses examine the factors supporting task accuracy and communication efficiency.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "LatBridge: Efficient and Stable Model Replacement in Latent-Communication Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.27813v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "12ed4c5c3be840a7ced6c6f6",
+      "context_id": "7d0c866eeb18e235103db649",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication",
+        "rup"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 14.25,
+      "source": "zenodo",
+      "source_context_sha256": "8ed05d0261b8b2af216e709c2357ae2378cbf192d1f95619c99a02dad76396c9",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Federated learning for crop-disease classification across heterogeneous farm clients is vulnerable to Byzantine participants who submit corrupted model updates, yet the aggregation literature reports robustness without a design-level account of how many adversarial clients a given federation can tolerate before diagnostic integrity collapses. The analysis treats the aggregation rule as a statistical estimator of the honest update direction and characterises the breakdown point of coordinate-wise median and trimmed-mean aggregation under a declared contamination model. A before-after-control-impact design is used to benchmark power across cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points, with 2000 replications per design cell and an intraclass correlation of 0.640. The contamination bound predicts that coordinate-wise median aggregation tolerates up to 50% adversarial clients in the limit but loses diagnostic integrity at a threshold that depends on the between-cluster standard deviation of 6.0 and the residual standard deviation of 4.5. The benchmarking results indicate that 54 clusters are required to detect a 5 percentage point degradation at 80% power. The contribution is a formal contamination bound that links aggregation-rule choice to the minimum federation size needed to certify diagnostic integrity, together with a benchmarking protocol that makes that link auditable.",
+      "tags": [
+        "federated learning; Byzantine robustness; crop disease classification; contamination bound; benchmar"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of Byzantine-Robust Federated Aggregation for Computer Agriculture Disease Classifiers Under Adversarial Client Participation: An Artificial Intelligence Contamination Bound for Diagnostic Integrity",
+      "url": "https://zenodo.org/records/23544414"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b589590877c4410b46c870ff",
+      "context_id": "999f347c4371c846d274c60c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "dd95102d8dd0ed35cf31a320f69cc9ff99036311e4573a054e2e226fb530ac8c",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Edge pest detection in computer agriculture is constrained less by classifier accuracy than by the thermal power budget of the sensing node. Spiking neural networks (SNNs) promise order-of-magnitude energy reductions on neuromorphic hardware, but the field lacks a design-level account of how that promise translates into deployable detection performance when the thermal sensor itself is the dominant load. The framework formalises a thermal-power budget, defines an energy-normalised detection rate, and derives a power-accuracy frontier for leaky integrate-and-fire classifiers operating on low-resolution thermal frames. A replication-based evaluation of the before-after-control-impact estimator was conducted under a declared variance structure (between-cluster SD = 6.0, residual SD = 4.5, intraclass correlation = 0.64), with power estimated across 2000 design cells. The analysis indicates that 54 clusters are required to detect a 5-percentage-point effect at 80% power. The contribution is a reproducible audit protocol that makes the energy-accuracy trade-off explicit and falsifiable before field deployment, and that identifies the sensor duty cycle, not the network, as the binding constraint in most edge configurations.",
+      "tags": [
+        "spiking neural networks; edge pest detection; thermal sensing; energy-accuracy trade-off; computer a"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of Spiking Neural Networks for Computer Agriculture Edge Pest-Detection Under Thermal-Sensor Power Constraints: An Artificial Intelligence Energy-Accuracy Trade-off Audit for Field-Deployment Safety",
+      "url": "https://zenodo.org/records/23544410"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "cc6cc9e7e2dcdc7cf1b31e9b",
+      "context_id": "956c42fb8e93b6d9b15df249",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "e9fa02d225b238d253d54f27cf78547237e193f486378a6f66817e6e6d4e0aa3",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Flood-risk mapping for agricultural insurance in vegetated terrain depends on computed-aperture radar interferometric coherence, yet canopy decoherence attenuates the signal that classifiers must detect. the present analysis formalises the detection problem as a before-after-control-impact design and derives the operating characteristics of a coherence-based flood detector under a declared variance structure with intraclass correlation 0.64, between-cluster standard deviation 6.0 and residual standard deviation 4.5. Power was estimated across 2000 replications per design cell for cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points. The design required 56 clusters to detect a 5 percentage-point effect at 80% power. The analysis characterises the detection-power bound that canopy decoherence imposes on payout-equity claims, showing that the cluster counts typical of agricultural insurance portfolios are insufficient to separate genuine flood signal from decoherence noise. The contribution is a benchmark-derived bound that links remote-sensing detection power to the actuarial fairness of index-based insurance payouts.",
+      "tags": [
+        "SAR interferometry; coherence; flood-risk mapping; detection power; insurance equity; canopy decoher"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of computed-Aperture Radar Interferometric Coherence for Computer Agriculture Flood-Risk Mapping Under Vegetation Canopy Decoherence: An Artificial Intelligence Detection-Power Bound for Insurance Payout Equity",
+      "url": "https://zenodo.org/records/23544408"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4d4f380d620e221dcb1a5147",
+      "context_id": "90bdd5f771c19ce4a96b3ace",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "87f2bd1769e25dc027a36a182f65887ab1b46123937300d1c072c75b43554998",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Tensor-network compression promises to fit convolutional disease classifiers into the memory ceilings of field-deployable diagnostic devices, but the accuracy cost of compression is usually reported as a single post-hoc number rather than as a bounded retention guarantee. the present analysis treats compression as a design problem with an auditable operating characteristic: given a declared memory ceiling, what fraction of the uncompressed diagnostic accuracy survives, and with what uncertainty? We formalise tensor-train decomposition of convolutional kernels as a rank-constrained projection, derive a retention bound that links bond dimension, kernel spectrum and the resulting classification margin, and then characterise the operating characteristics of a benchmarking protocol that estimates retention under a declared variance structure. The protocol is a before-after-control-impact design with between-cluster SD 6.0, residual SD 4.5 and intraclass correlation 0.64, evaluated across 2000 replications per design cell at cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points. Power reaches conventional levels only at 56 clusters for a 5-percentage-point retention effect, which exceeds every cluster count in the declared grid; the minimum detectable effect at 80% power therefore remains above the 5-percentage-point threshold throughout the grid. The contribution is a retention bound plus a power-calibrated audit protocol that tells practitioners when a compression benchmark is informative and when it is underpowered, and that reframes field diagnostic safety as a property of the evaluation design rather than of the compressor alone.",
+      "tags": [
+        "tensor-train decomposition; model compression; plant disease classification; on-device inference; ac"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of Tensor-Network Compression for Computer Agriculture Disease Classifiers Under On-Device Memory Ceilings: An Artificial Intelligence Accuracy-Retention Audit for Field Diagnostic Safety",
+      "url": "https://zenodo.org/records/23544418"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9683fec09fc7197b22b5c550",
+      "context_id": "2b12ebccffd1201f4c56e4b2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.125,
+      "source": "zenodo",
+      "source_context_sha256": "efe99833b9cc5e2beeccb2fedc2e9b04c1e0885cf55cae3dbaf1e63fd9ba6c48",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Differentiable logic-gate networks (DLGNs) are attractive for irrigation controllers because their learned Boolean structure can be verified exhaustively, yet the safety case for deploying them under actuator-failure cascades has not been formalised. The work is a design-and-power analysis of a before-after-control-impact (BACI) evaluation protocol, not an observational study: no field data are used or claimed. Operating characteristics were characterised under a declared variance structure with between-cluster SD = 6.0, residual SD = 4.5 and intraclass correlation = 0.64, across 2000 replications per design cell for cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points.52 clusters are required to detect a 5-percentage-point compliance effect at 80% power under this variance structure, and that the intraclass correlation of 0.64 dominates the design's sensitivity. A formal-safety audit of DLGN controllers is then specified as a finite-state reachability problem over the actuator-failure cascade, with water-rights compliance encoded as an invariant. The contribution is a benchmark protocol that couples a verifiable controller class to a statistically defensible evaluation design, and a demonstration that the evaluation design, not the controller, is the binding constraint on regulatory acceptance.",
+      "tags": [
+        "differentiable logic-gate networks; irrigation controllers; actuator-failure cascades; water-rights "
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of Differentiable Logic-Gate Networks for Computer Agriculture Irrigation Controllers Under Actuator-Failure Cascades: An Artificial Intelligence Formal-Safety Audit for Water-Rights Compliance",
+      "url": "https://zenodo.org/records/23544433"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "cbc51671050f1b6fe5762635",
       "context_id": "ec27088f8f5c7f57cc98eb99",
       "delivery_preview_only": true,
@@ -1469,6 +1653,43 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "21f45d732ecd23c35d157720",
+      "context_id": "0f8f63becb99b79c91cf172e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "replication",
+        "rup",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.0833,
+      "source": "zenodo",
+      "source_context_sha256": "beb61704a40bbefb36e417c5cd4e350f1d44780832fd366d5d5a5c3c15ab560b",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Satellite-cloud gaps corrupt the reflectance time series on which computer-agriculture crop-yield estimators depend, and the resulting coverage error propagates into famine early-warning reliability. The framework is evaluated through a replication-based benchmark in which 600 data sets of N = 500 were drawn from a declared data-generating process (intercept 12.0, exposure 0.42, group -3.1, severity 1.35, error SD 4.2) and the ordinary least squares estimator was characterised under the stated process. The benchmark produced an estimated bias of -0.07173 for the intercept and 0.00147 for the exposure coefficient, with RMSE values of 0.89562 and 0.0157 respectively, and empirical coverage of the nominal 95% confidence intervals of 1.0 for both parameters. The coverage-error bound formalises the conditions under which CDA-supported estimators preserve nominal coverage and therefore early-warning reliability, and it identifies the augmentation regimes in which coverage degrades. The contribution is a benchmark protocol and a bound that make the reliability consequences of cloud-gap augmentation auditable rather than assumed.",
+      "tags": [
+        "counterfactual data augmentation; crop-yield estimation; satellite-cloud gaps; coverage-error bound;"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of Counterfactual Data Augmentation for Computer Agriculture Crop-Yield Estimators Under Satellite-Cloud Gaps: An Artificial Intelligence Coverage-Error Bound for Famine Early-Warning Reliability",
+      "url": "https://zenodo.org/records/23544459"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "86d2a2b505a3fab17a30216a",
       "context_id": "dc579a89bd3e0dbe36e393c8",
       "delivery_preview_only": true,
@@ -1575,219 +1796,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "A Unified Theory of Solvability for Stochastic Linear-Quadratic Control Problems I: The Homogeneous Case",
       "url": "https://arxiv.org/abs/2610.27579v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b1f8822f696caae931e26b28",
-      "context_id": "fc00199b0a13b3c7aac35bee",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "replication",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.875,
-      "source": "zenodo",
-      "source_context_sha256": "b7223e9e7f4643419a2b19229728f4ad9f5c5d2784805177c0bd2a2bdba62aa4",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "This replication package contains the materials supporting the analysis presented in the paper. It includes the prompts collected analyzed from the DevGPT and GitHub repositories, and the prompts used in the controlled experiment. The excel file named \"Prompt_Categorization\" contains the full annotation of both the DevGPT dataset and the GitHub repository&nbsp;dataset, including all relevant metadata for each prompt/conversation. The markdown files contain conversation with Gemini 2.5 Pro and GPT 5 mini for two prompt techniques: zero-shot and few-shot, respectively.&nbsp; &nbsp;",
-      "tags": [
-        "Prompt Engineering",
-        "Human Computer Interaction"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Who Let the Prompt Out?",
-      "url": "https://zenodo.org/records/23538052"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a2210538c565ad2d65d27322",
-      "context_id": "98d57fc4dd4309a98666204d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "replication",
-        "rup"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.875,
-      "source": "zenodo",
-      "source_context_sha256": "7d5c81da4ff4b72707702a517dab42b9ab5e1871de9e2e9febec95dde6484588",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Version 1.1 extends the interrupted conversion series to 18 months and adds a late-wave summary with commit-level concentration. The measurement files are unchanged from version 1.0. Replication data and published results for a longitudinal study of SHA pinning in GitHub Actions workflows after the March 2025 tj-actions/changed-files compromise. The study follows 455 public repositories that depended on the compromised Action from six months before to eighteen months after the incident and reconstructs every external uses: reference and every change to it from the default-branch Git history. The record contains two archives. pintrace-measurements-v1.tar.zst holds the per-repository measurement snapshots for 457 measured repositories and 301 matched control repositories, the archived upstream release evidence and the matched-control assignments. pintrace-results-v1.tar.zst holds the published result files, the formal-statistics outputs, the 150-item gold set, the research documentation, the manuscript PDF and LaTeX source, and the claim ledger that maps every rendered number to a result file and JSON pointer. Each archive includes a SHA-256 manifest and a README with extraction and reproduction instructions. The measurement files contain repository identifiers but no commit author names, commit messages, e-mail addresses or credentials. The code is at https://github.com/JunjieChen0/PinTrace under the MIT license. Replication data and results are released under CC BY 4.0. The study has no comparison group shielded from the incident, so the reported quantities describe timing, targets and persistence rather than an incident effect.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "PinTrace: GitHub Actions SHA pinning after the tj-actions/changed-files compromise (replication data and results)",
-      "url": "https://zenodo.org/records/23525561"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "56b9fa5d4d398d676e641add",
-      "context_id": "683eb0a3522d4953b3bb971e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "rup"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.8333,
-      "source": "arxiv",
-      "source_context_sha256": "34a044770645cb2d9ca8160fe64ee6844d4549c5fbd5b2be5521fe37cdaf4271",
-      "source_published": "2026-10-20T12:30:41Z",
-      "source_updated": "2026-10-20T12:30:41Z",
-      "summary": "Safe autonomous navigation of UASs requires tactical deconfliction to address conflicts that strategic coordination cannot prevent. This task is challenging under partial observability, when sensor or traffic data are missing, delayed, or degraded. Geometry-based methods can offer separation assurances but face limitations in dense encounters. Recurrent reinforcement learning has therefore been proposed to learn navigation policies that integrate observation-action histories to optimise long-term safety-efficiency trade-offs. However, operational safeguards may require a remote pilot, onboard detect-and-avoid system, or runtime assurance mechanism to temporarily override the learned policy. A research gap remains in understanding how these interruptions affect recurrent policies when the agent regains authority. Benchmark evidence shows that interruptions make task variables less decodable from the recurrent hidden state and increase post-interruption collision risk. The findings suggest that altered recurrent context prolongs post-handback degradation through an action-observation feedback loop, in which changed actions alter the flight path and subsequent recurrent updates. To address this vulnerability, we propose three interruption-aware architectures that condition recurrent processing on interruption context through separate feature streams, dedicated interruption memory, or gated environmental features. Across simulations, all three architectures preserve more decodable task information than a standard recurrent policy. Moreover, the strongest architecture reduces post-interruption collisions by 74% and interruption-induced mission failures by 69% relative to the recurrent baseline, without degrading interruption-free performance. These results show that safe interruption does not guarantee safe handback, and support interruption-aware recurrent design for resilient UAS autonomy.",
-      "tags": [
-        "cs.AI",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Interruption-Aware Recurrent Reinforcement Learning for UAS Navigation Under Temporary Overrides",
-      "url": "https://arxiv.org/abs/2610.28121v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "0435696562dc82dab2b98bc1",
-      "context_id": "bc74376e4c463d1c3f47ed13",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.7917,
-      "source": "arxiv",
-      "source_context_sha256": "2c6fab8d0fdd806f8b9349300d0c252b9f0c05b691906b0fd4e88ab7d0bcc346",
-      "source_published": "2026-10-20T05:13:13Z",
-      "source_updated": "2026-10-20T05:13:13Z",
-      "summary": "Multi-agent systems (MAS) built from language models are deployed on the premise that collaboration beats a single-agent system (SAS), yet when it pays is unclear. The most systematic study to date gives a capability-saturation rule: coordination helps while the SAS is weak and hurts once it is strong, with the crossing near 45% single-agent accuracy. That rule was derived on autonomous benchmarks, where no user takes part. We test it where agents now work: in conversation with a user under a written policy, on $τ^2$-bench, the dual-control benchmark. On its airline, retail and telecom domains we compare the stock SAS with a centralized MAS built from the same model for six models from three families, over about 7,950 simulated conversations, with one completion-token ledger per episode per system. The study was pre-registered with a public change log; the MAS is reported as built, with one validity bar unmet (its planner never saw the tool schemas). Under a fixed simulated user no cell shows a MAS benefit: the MAS is worse in 12 of the 13 valid cells and tied in the thirteenth, and the fitted gain is negative across the observed capability range (weighted mean -28 points, 95% CI [-44, -12]). On the two cells where the rule predicts a benefit, the MAS loses by 13 and 22 points, and without a budget ceiling it at best draws level at 5.5 times the SAS's token spend. The one gain appears on the cell nearest 45%, under a second simulator. Whether the gain declines with capability is unresolved (slope -0.41, 95% CI [-1.51, +0.68]), because model-by-domain effects dominate. The MAS does not detectably reduce wrongful database writes; it converts other failures into budget exhaustion and inaction. For agents that serve people, the SAS is the default; a multi-agent design must show compute-matched evidence from the setting itself. We release all trajectories, ledgers, prompts and code.",
-      "tags": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Does Multi-Agent Collaboration Pay When Agents Serve Users? Testing Agent Scaling in Dual-Control Settings",
-      "url": "https://arxiv.org/abs/2610.27655v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "fdf93a5c4d887840c6a35a08",
-      "context_id": "42229ea69d8f179f510a1cd3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "replication"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7917,
-      "source": "zenodo",
-      "source_context_sha256": "3f191e9b1e484223af0a2bbec7f913b272392eaf532c3d7be401de5c645df5bd",
-      "source_published": "2026-10-20",
-      "source_updated": "",
-      "summary": "Open discrete-event simulator, experiment scripts, raw results and analysis scripts for the revised manuscript \"Model-Based Approach to Task Scheduling for Reduced Energy Consumption in Mobile Multimedia Systems\" (ASEAN Journal on Science and Technology for Development, manuscript AJSTD-D-26-00094). The package contains the Python simulation model of a mobile multimedia system (FIFO/SPT/EDF scheduling, stepped and slack-aware DVS policies, Linux governor baselines, CPU energy model), the scripts for the 3x3x3 factorial experiment with 30 replications, the refined-policy and baseline experiments, the sensitivity analyses, the raw results of all runs, the statistical tables and the figures. See README.md for instructions to reproduce all results.",
-      "tags": [
-        "dynamic voltage scaling; energy-aware scheduling; model-based systems engineering; discrete-event si"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Simulation code and data for: Model-Based Approach to Task Scheduling for Reduced Energy Consumption in Mobile Multimedia Systems",
-      "url": "https://zenodo.org/records/23514858"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e62cefb96fd3a761b13f0d89",
-      "context_id": "3afb0bc17cf050a301e74378",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "replication"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.75,
-      "source": "zenodo",
-      "source_context_sha256": "bea91954898ec7a0099481d7d3ac250c23433d2bd47ae23bae4fcdf0773cb002",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Version 1.5 contains the manuscript as submitted to the Journal of Software: Evolution and Process , together with the analyses added in the final pre-submission revision. Under paper/jsep/ it holds the submitted PDF, the LaTeX source, the figure files, the bibliography, the build scripts and claim_ledger.json ; the build regenerates main.tex byte for byte from the archived result files. reports/post_review.json and formal-stock-v1/ add the stock of pinned references over time, the period split of conversions, and the owner-clustered intervals. The measurement archive is unchanged from version 1.4. The record contains two archives. pintrace-measurements-v1.tar.zst holds the per-repository measurement snapshots for 457 measured repositories and 301 matched control repositories, the archived upstream release evidence and the matched-control assignments. pintrace-results-v1.tar.zst holds the published result files, the formal-statistics outputs, the 150-item gold set, the research documentation, the manuscript PDF and LaTeX source, and the claim ledger that maps every rendered number to a result file and JSON pointer. Each archive includes a SHA-256 manifest and a README with extraction and reproduction instructions. The measurement files contain repository identifiers but no commit author names, commit messages, e-mail addresses or credentials. The code is at https://github.com/JunjieChen0/PinTrace under the MIT license. Replication data and results are released under CC BY 4.0. The study has no comparison group shielded from the incident, so the reported quantities describe timing, targets and persistence rather than an incident effect.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "PinTrace: two waves of SHA pinning in GitHub Actions (replication data and results)",
-      "url": "https://zenodo.org/records/23531210"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
