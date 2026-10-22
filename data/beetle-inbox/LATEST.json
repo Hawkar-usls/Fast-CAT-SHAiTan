@@ -1,114 +1,9 @@
 {
-  "batch_id": "b9818226b36726a2594c",
+  "batch_id": "eb21ee67bcb35ee00b34",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "13f59101dd9c07e3096bcd1c",
-      "context_id": "3235142bcf2ed1c461bdba15",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample",
-        "drat"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.75,
-      "source": "arxiv",
-      "source_context_sha256": "71f07ec76350cf24389c042d54156c5d7853705b77985c77058b5baef7d307f7",
-      "source_published": "2026-10-20T03:45:45Z",
-      "source_updated": "2026-10-20T03:45:45Z",
-      "summary": "The existing theory of stochastic linear-quadratic (LQ) optimal control problems focuses on open-loop and closed-loop solvability. For finite horizon problems, it is widely accepted that those two types of solvability are not equivalent in general, as demonstrated by explicit counterexamples. In contrast, they coincide in standard infinite-horizon formulations with constant coefficients under suitable stabilizability and integrability assumptions. This paper aims at challenging this well-established paradigm by developing a novel framework of closed-loop solvability, namely generalized closed-loop solvability, which removes the $L^2$-integrability constraint on the feedback strategies from the existing formulation. It will be proven that open-loop and generalized closed-loop solvability are equivalent and the classical closed-loop solvablity is a particular case only when the admissible feedback strategy is $L^2$-integrable over the time horizon. In other words, the previously established non-equivalence between open-loop and closed-loop solvability stems solely from the limitations of the classical formulation which requires the $L^2$-integrability of the admissible feedback strategies over the time-horizon. Therefore, this paper unifies the theory of the solvabilitiy for stochastic LQ control problems. Moreover, our results offer a novel insight to stochastic LQ control problems: open-loop/generalized closed-loop solvability is essentially equivalent to piecewisely local closed-loop solvability in the classical sense. The current paper is focused on homogeneous cases only and non-homogeneous cases will be studied in a subsequent paper.",
-      "tags": [
-        "math.OC"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A Unified Theory of Solvability for Stochastic Linear-Quadratic Control Problems I: The Homogeneous Case",
-      "url": "https://arxiv.org/abs/2610.27579v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "27f9492db701dbbf360d824d",
-      "context_id": "ce0b068b1e28d8768ce2ac4d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "77c37724eabe9f7c2eefd8c1ef7608ee8f6d8388a6d3c6f5528ac0f9afe9473e",
-      "source_published": "2026-10-20T05:22:37Z",
-      "source_updated": "2026-10-20T05:22:37Z",
-      "summary": "We prove that the smooth affine hypersurfaces \\[ X_{m,n}=\\{ζ^mz_0^n+ (1+z_1ζ)z_2+ζz_3^2=1\\}\\subset\\mathbb{C}^5,\\;\\; m,n\\geq 2, \\] have the density property. For every odd integer $d\\geq 3$, we identify $X_{d-1,d}$ with a Kaliman modification along a Brieskorn variety of type $(d,2,2,2)$. We prove that the fourfolds $X_{d-1,d}$ are diffeomorphic to $\\mathbb{C}^4$ but not biholomorphic to $\\mathbb{C}^4$. These, therefore, give counterexamples to the Tóth-Varolin conjecture.",
-      "tags": [
-        "math.CV",
-        "math.AG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "A new class of smooth algebraic varieties with the density property and a counterexample to the Tóth-Varolin Conjecture",
-      "url": "https://arxiv.org/abs/2610.27660v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d381c6493590f07bf36c54bc",
-      "context_id": "604410633cff475836b416b2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "drat",
-        "verification"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 2.6667,
-      "source": "arxiv",
-      "source_context_sha256": "3d6ef3f89dcec874b21a7c20190bbe6b40c25f65a25945677a7d213fde29a8f8",
-      "source_published": "2026-10-20T16:22:00Z",
-      "source_updated": "2026-10-20T16:22:00Z",
-      "summary": "While large-scale human motion capture datasets provide a rich source of demonstrations for humanoid robot learning, retargeting the diverse motions to different humanoid robots remains a nontrivial challenge. Existing kinodynamic trajectory optimization pipelines are computationally expensive and often require manual adjustments per motion. We present FRDV (Fast Retargeting with Dynamics Validation), a scalable framework consisting of rapid constrained kinematic retargeting and an additional dynamics validation pipeline. Its kinematic stage integrates a custom Sequential Quadratic Programming solver, Real-Time Iteration, and parallel chunk-based processing, achieving up to 9,156 frames per second, approximately up to 136 times faster than GMR and ProtoMotions, while robot-specific constraints are incorporated into the optimization to reduce common retargeting artifacts, such as ground penetration and self-collision. For motions requiring additional verification, a contact implicit iLQR controller is utilized to test the retargeted reference under full rigid body dynamics. This dynamics-based validation identifies dynamically infeasible motions and refines contact-related artifacts such as foot floating and foot skating. We evaluate retargeting quality by training motion tracking reinforcement learning policies using several state-of-the-art pipelines and comparing their tracking fidelity and success rates. Furthermore, sim-to-real transfer is demonstrated on a Unitree G1 humanoid. Videos and code are available at: https://daroslab.github.io/frdv/.",
-      "tags": [
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Fast Motion Retargeting Pipeline for Scalable Humanoid Robot Learning",
-      "url": "https://arxiv.org/abs/2610.28470v1"
-    },
     {
       "base_direction_id": "formal_proof_verification",
       "candidate_id": "2fc92ae292ccfd2579a40faf",
@@ -146,8 +41,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d8adcb0df22feab6f327b7ba",
-      "context_id": "0a82b3436feb5dc1a61bafff",
+      "candidate_id": "4eaee6553ccc8b60ba7192a4",
+      "context_id": "41f88db72052bab1e7252b20",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
@@ -161,27 +56,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "drat",
+        "rup",
         "sat"
       ],
       "mirror_lens": "FORWARD",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 2.2917,
+      "score": 2.25,
       "source": "zenodo",
-      "source_context_sha256": "ac3db8eb12fff371f680c7f5671184a61c562f43de60d89c4e8539beade5fba7",
-      "source_published": "2026-10-21",
+      "source_context_sha256": "2537fcc219f234fe8a6d217791f31171b1428195525a149645cabac888fc8d85",
+      "source_published": "2026-10-20",
       "source_updated": "",
-      "summary": "Abstract (it) &nbsp; Leonardo's Spatial Grammar &egrave; l&rsquo;app che raccoglie le tre ricerche dedicate rispettivamente all&rsquo;Annunciazione, all&rsquo;Adorazione dei Magi e al Cenacolo: Leonardo's Rulers , Leonardo's CAD e Leonardo's Score . Non aggiunge una quarta indagine, ma riunisce i tre studi in una lettura unitaria, gi&agrave; depositata nel corpus accademico omonimo. Il corpus mette in discussione l&rsquo;idea di un&rsquo;applicazione standardizzata della prospettiva albertiana a base quadrata nell&rsquo;opera di Leonardo da Vinci e propone, in alternativa, un paradigma metrico-modulare fondato su evidenze geometriche oggettive e falsificabili. Dall&rsquo;Annunciazione all&rsquo;Adorazione dei Magi, fino al Cenacolo, emerge una grammatica spaziale in evoluzione: la rigida scacchiera lascia il posto a un sistema di righelli inseriti; la misura, inizialmente monodirezionale, diventa un&rsquo;architettura ritmica e stereometrica. Il metodo &egrave; la retroingegneria CAD, applicata secondo il &laquo; banale aristotelico &raquo;: partire da ci&ograve; che l&rsquo;opera mostra e che si pu&ograve; misurare. Bugne, mattonelle, arcate, arazzi e cassettoni non sono quinte, ma strumenti lasciati in vista, da cui le proporzioni &mdash; la progressione 1:2:3, il modulo 4:3 e i ritmi 1:4:1, 2:1:2 e 1:6:1 &mdash; si ricavano dalle stesse opere. Gli spazi restituiti sono misurabili, architettonicamente rimontabili e strutturati sulle misure umane. Le interpretazioni esoteriche e le simbologie non falsificabili restano fuori dal perimetro. L&rsquo;app come strumento di lettura Leonardo&rsquo;s Spatial Grammar riunisce le app dedicate alle singole ricerche e ne offre un accesso coordinato. Queste applicazioni sono strumenti di supporto alla lettura: facilitano l&rsquo;esplorazione delle ricostruzioni, dei moduli e dei confronti geometrici, integrando la ricerca accademica senza sostituirla. App e studi costituiscono un sistema speculare in continuo aggiornamento: le revisioni della ricerca alimentano gli strumenti digitali e, reciprocamente, il loro impiego rende pi&ugrave; immediata la verifica dei risultati. Spatial Grammar applica a Leonardo il principio che Leonardo stesso indica come fondamento del conoscere: prima l&rsquo;esperienza, poi la ragione. La sequenza operativa &egrave; precisa: Pura Visibilit&agrave;, esperienza, ragione, verifica. La Pura Visibilit&agrave; consiste nel lasciare che l&rsquo;opera si mostri prima di essere spiegata: nell&rsquo;osservarne i segni sensibili senza imporre loro un significato. Segue l&rsquo;esperienza, cio&egrave; la raccolta dei dati visibili &mdash; conci, cassettoni, gradini, allineamenti, proporzioni. Solo allora interviene la ragione, che riconosce moduli e ritmi; ma ogni ipotesi deve tornare all&rsquo;immagine per essere verificata. Non si impone una griglia a Leonardo: si legge la griglia che l&rsquo;opera stessa rende percepibile. Il Rasoio di Occam fa da cardine tra questa priorit&agrave; del visibile e il metodo induttivo: non si porta la griglia all&rsquo;opera, si ricava la regola da ci&ograve; che l&rsquo;opera mostra. I segni sono visibili, i numeri e le proporzioni elementari. &laquo;Il Re &egrave; nudo!&raquo; diventa &laquo; Res patet &raquo;. Gli spazi sono ricostruibili, alla portata del CAD o di qualsiasi riga e squadra. Pura Visibilit&agrave;: vedere prima di misurare, misurare prima di interpretare. Rasoio di Occam: non aggiungere alla realt&agrave; pi&ugrave; griglie di quante ne mostrino i segni. &nbsp; Fonti (Ricerca, app) &nbsp; Complete corpus (The Triptych) doi:10.5281/zenodo.20578821 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; App &nbsp; Leonardo's Rulers doi:10.5281/zenodo.20417508 App &nbsp; &nbsp; Leonardo's CAD doi:10.5281/zenodo.18981238 App &nbsp; Leonardo's Score doi:10.5281/zenodo.20334160 App &nbsp; Abstract (en) &nbsp; Leonardo's Spatial Grammar brings together the three studies devoted respectively to the Annunciation, the Adoration of th",
+      "summary": "Abstract &mdash; Universities must simultaneously contain costs, decarbonise their estates, and safeguard teaching, yet procurement of teaching-critical equipment still follows lowest-price, replace-on-failure practice. This paper develops a digital-twin framework for circular procurement in higher education, in which repair, refurbishment, inter-departmental asset sharing, and replacement are optimised jointly against lifecycle cost, embodied carbon, and pedagogical disruption. Asset condition, utilisation, and failure signals from campus twins are fused through Bayesian state estimation into a two-stage robust mixed-integer programme built on a budgeted uncertainty set over teaching demand. A computational study of a synthesised 1,240-asset estate, parameterised from published university estates statistics, life-cycle inventories, and manufacturer data, compares the framework with business-as-usual and single-objective policies over ten years. The joint robust policy lowers total cost of ownership by 18.7%, embodied procurement carbon by 41.3%, and expected lost teaching hours by 57.6%, with a 35.8% reduction in tail-risk disruption relative to the deterministic optimum; asset sharing absorbs nearly a third of incremental demand without new purchases. Results are stable across carbon-price, disruption-value, and demand-volatility sensitivities, giving estates teams an audit-ready pathway from smart-campus monitoring to circular, teaching-aware procurement. Keywords: Circular procurement, digital twins, robust optimisation, teaching continuity, university estates.",
       "tags": [
-        "Leonardo da Vinci",
-        "Perspective",
-        "Annunciazione",
-        "Adorazione dei Magi",
-        "Cenacolo"
+        "Circular procurement, digital twins, robust optimisation, teaching continuity, university estates."
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Leonardo's Spatial Grammar Un corpus di analisi basato sulla retroingegneria CAD (it) / A CAD Reverse-Engineering Analysis Corpus (en) Leonardo's CAD, Leonardo's Rulers, Leonardo's Score App di supporto alla ricerca accademica (it) / Academic Research Support App (en)",
-      "url": "https://zenodo.org/records/23531843"
+      "title": "Circular Procurement Through Digital Twins: Balancing University Costs, Carbon, and Teaching Continuity",
+      "url": "https://zenodo.org/records/23501094"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -217,6 +108,50 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Benchmarking Evaluation of Counterfactual Data Augmentation for Computer Agriculture Crop-Yield Estimators Under Satellite-Cloud Gaps: An Artificial Intelligence Coverage-Error Bound for Famine Early-Warning Reliability",
       "url": "https://zenodo.org/records/23544459"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3931706bf19b762e2334f219",
+      "context_id": "e129fa040d45a5eef59d141d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "eb7fe706abb034542206c2ff2ca32b210ec6a1ce735941860ac6aa470b523750",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Code, raw and processed data, production sources, figure scripts, provenance and verification for temporal filtering, dispersive stiffness, compacton collisions, corrected generalized-alpha damping experiments, Jacobian scaling, robustness screens, coherent-core benchmarks and accuracy-cost tradeoffs.",
+      "tags": [
+        "compactons",
+        "nonlinear dispersive waves",
+        "time integration",
+        "L-stability",
+        "Petrov-Galerkin",
+        "Direct-WENO",
+        "reproducibility",
+        "generalized-alpha",
+        "Jacobian spectra",
+        "MATLAB",
+        "robustness screening"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reproducibility code and data for Temporal filtering of dispersive stiffness in compacton collisions: coherent-scattering benchmarks and accuracy–cost tradeoffs",
+      "url": "https://zenodo.org/records/23554476"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -308,8 +243,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "99871452a8ad1b8d7facae93",
-      "context_id": "5c1ebd1ba164ce73c2896927",
+      "candidate_id": "7d906203770ed6176e0bcaf8",
+      "context_id": "238aa35ff6ad371547615d94",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
@@ -328,26 +263,22 @@
       "mirror_lens": "FORWARD",
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.5,
-      "source": "zenodo",
-      "source_context_sha256": "b4b87de8a3b9f94a55e84093b649b7490e9f9e5b4fc19a85f8733725ab556c6a",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "This archive provides the numerical models, processed experimental data, simulation results, statistical analyses, figure sources, and reproduction scripts associated with the study \"Measurement limits and model discrepancy in reconstructing pre-earthquake residual deformation.\" The package includes OpenSeesPy model implementations, nonlinear earthquake-sequence analyses, measurement-resolution and model-discrepancy evaluations, experimental response comparisons, and modal-probe diagnostics. The archive is distributed in five ZIP parts. Download and extract all five parts into the same directory, preserving the internal folder structure. Reproduction instructions, dependencies, input provenance, and file-integrity verification are provided in README.md. Experimental measurements support validation of essentially elastic global response; nonlinear retrospective-state reconstruction is evaluated numerically.",
+      "source": "arxiv",
+      "source_context_sha256": "129a025beab0082e4facb5894f5e05d8635b3dd8b0694274669d9b644305b5c1",
+      "source_published": "2026-10-21T16:34:28Z",
+      "source_updated": "2026-10-21T16:34:28Z",
+      "summary": "Long-term memory for multimodal agents remains challenging, as it must preserve fine-grained visual evidence while tracking entity evolution across sessions. Existing abstraction-based memories compress images into text, often discarding visually discriminative details, whereas pixel-preserving memories retain raw observations but struggle to reliably associate diverse observations with persistent entity identities and track their evolving states. To address these limitations, we propose MHG-Mem, a multimodal hypergraph memory that jointly organizes entity identity, state evolution, and provenance to visual evidence. Specifically, MHG-Mem represents distinct entity mentions and their observed facts as individual nodes, grouping identity-consistent mentions and facts through occurrence hyperedges. It then synthesizes aspect-specific evolution states from these grouped observations and links them to supporting entities, facts, and source evidence through evolutionary and evidential hyperedges. To navigate this structured memory, we introduce hypergraph-based agentic search, which adaptively selects an entry layer, traverses typed hyperedges across memory levels, and inspects source observations when fine-grained verification is required. These designs support both detailed visual verification and reasoning over cross-session state changes. Extensive experiments across three benchmarks demonstrate the effectiveness of MHG-Mem, improving performance by 8.20-9.98% over the strongest baseline.",
       "tags": [
-        "Structural identifiability",
-        "Residual deformation",
-        "Earthquake engineering",
-        "Model discrepancy",
-        "Reproducibility"
+        "cs.CL"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Measurement limits and model discrepancy in reconstructing pre-earthquake residual deformation: Reproduction package",
-      "url": "https://zenodo.org/records/23524056"
+      "title": "Remembering Through Change: Provenance-Preserving Hypergraph Memory for Multimodal Agents",
+      "url": "https://arxiv.org/abs/2610.29995v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c7ab168e645981873e088989",
-      "context_id": "aae4de9a6fa8551f014ea89d",
+      "candidate_id": "7f01d23703fe6df9b53377ca",
+      "context_id": "92757c005d88634a550d3501",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
@@ -367,55 +298,21 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.1667,
       "source": "arxiv",
-      "source_context_sha256": "1700978237240ea990ea6ee3b0746899dd333ce40c4091f716844e21dc14dd6b",
-      "source_published": "2026-10-20T17:56:05Z",
-      "source_updated": "2026-10-20T17:56:05Z",
-      "summary": "Graph generative models commonly use graph-specific Transformer architectures to jointly update node and edge features. However, these architectures do not directly benefit from recent hardware-aware attention implementations, limiting their scalability. The adaptation is, however, non-trivial: edge and graph-level features must be injected into pairwise attention scores, graph masks must be respected, and dynamic edge updates remain a major source of quadratic memory usage. We propose an edge-aware attention layer for graph generation that incorporates structural information through head-wise score modulation, while updating edge representations with a lightweight residual mechanism that retains attention-score dependent edge updates. This layer can be effectively implemented using PyTorch's FlexAttention. We achieve similar generation quality to our baseline while reducing peak GPU memory by around 65% and substantially improving training and sampling throughput. These results suggest that the proposed architecture is a practical step toward scalable graph foundation models.",
+      "source_context_sha256": "17488c1ecfd8cd1ec08d1e45b8f32ae15132e081fd8935faae653afdf8120356",
+      "source_published": "2026-10-21T16:37:09Z",
+      "source_updated": "2026-10-21T16:37:09Z",
+      "summary": "Reinforcement learning (RL) based on PPO-style clipping has become an effective approach to improving the reasoning capabilities of large language models (LLMs). However, standard token-level clipping measures policy change only through the conditional probability of the current token, while the prefix conditioning context is itself generated by the policy. This mismatch becomes especially consequential in long-response and off-policy training. We reformulate autoregressive generation as a finite-horizon Markov decision process and derive its performance-difference identity under behavior-policy sampling. The resulting change of measure identifies the cumulative likelihood ratio of the generated prefix as the exact importance weight for each stepwise policy-improvement term. Starting from the monotonic-improvement principle of trust-region policy optimization, we then construct a prefix-level trust region using the exact reverse-KL coordinate $r-1-\\log r$, whose behavior-policy expectation equals the corresponding prefix-distribution KL divergence. This yields EPIC, a PPO-style sequence-clipping method that directly regulates prefix-level policy drift without relying on a local quadratic approximation or expert-routing replay. Experiments on off-policy reinforcement learning with a sparse mixture-of-experts language model show that EPIC consistently outperforms standard and sequence-level clipping baselines across mathematical-reasoning benchmarks, while remaining competitive with routing-replay-based alternatives. Code is available at https://github.com/LiChengxi666/EPIC.",
       "tags": [
         "cs.LG"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Efficient Edge-aware Attention Network for Graph Generation",
-      "url": "https://arxiv.org/abs/2610.28618v1"
+      "title": "EPIC: Rethinking Trust Regions for Autoregressive LLM Policies via Exact-KL Prefix Importance-Ratio Clipping",
+      "url": "https://arxiv.org/abs/2610.29999v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4139be16aac8e54219b85d6c",
-      "context_id": "f29272a178cfe734fa489f99",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::FORWARD",
-      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "sat"
-      ],
-      "mirror_lens": "FORWARD",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 1.125,
-      "source": "arxiv",
-      "source_context_sha256": "320b5de8c3904cb137df9506e63105a23c9b0eafd2e2fc906076b51aebec17de",
-      "source_published": "2026-10-20T14:07:32Z",
-      "source_updated": "2026-10-20T14:07:32Z",
-      "summary": "Beam hopping technology enables LEO satellites to dynamically switch beam coverage positions, providing flexible resource allocation for non-uniformly distributed traffic demands. However, the severe spatial interference coupling among beams makes coordinated scheduling challenging. To address this problem, in this letter, we propose an interference-graph-aided multi-agent reinforcement learning approach that constructs an interference graph to capture beam coupling relationships and injects this structural prior into agent-side representation learning. Each beam agent aggregates information from interference neighbors via graph convolution before estimating local Q-values, which are then decomposed by the standard mixing network. Simulation results demonstrate that the proposed method achieves 34.4\\% higher throughput than QMIX with more stable interference management, under non-uniform traffic and co-channel interference settings.",
-      "tags": [
-        "eess.SP"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Interference-Graph-Aided Multi-Agent Reinforcement Learning for Beam Hopping LEO Satellite Networks",
-      "url": "https://arxiv.org/abs/2610.28248v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "418f2fb3e682a46b3e83fc44",
-      "context_id": "edb45fda24faf981d2ac9980",
+      "candidate_id": "f175fb5f2a16a0efe553cf6b",
+      "context_id": "d9e995c1a08ed885ff0d5317",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
@@ -435,23 +332,136 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.125,
       "source": "zenodo",
-      "source_context_sha256": "d6183f549eb7672c995be3cfb830e28cf977cd4c0bef8cc76fa4f6f767a536b0",
-      "source_published": "2026-10-21",
+      "source_context_sha256": "c979b8d4c58fee0f1ff9c168009ca4daaaba97bbfd73574abb6cf099d205b2f5",
+      "source_published": "2026-10-20",
       "source_updated": "",
-      "summary": "This Zenodo record contains the public participant package for the FABEST High-Cycle Fatigue (HCF) Competition, a blind round-robin benchmark for fatigue-life prediction of 42CrMo4+QT steel under multiaxial high-cycle fatigue loading. Participants are asked to submit fatigue-life predictions for plain and notched hollow cylindrical specimens subjected to combined axial and torsional loading, including in-phase and 90&deg; out-of-phase loading histories, with constant internal pressure. The package includes the competition rules, start-here guide, experimental basis, calibration data, public blind load matrix, specimen geometry information, manufacturing documentation, roughness and residual-stress characterisation, test setup and test-sequence descriptions, and participant submission templates. All files are provided as zipped folders to preserve the folder structure of the competition package.",
+      "summary": "This is a simulated photoacoustic data set based on the Monte Carlo Method using the simulation framework SIMPA. The simulations use a literature-based forearm model (see Appendix D of Schellenberg et al., Photoacoustics 28, 2022 ) and a digital twin of the MSOT Acuity Echo (iThera Medical). The generating script performs volume generation and optical forward simulation in 3D with MCX using 10⁸ photons and a spacing of 0.1 mm for 16 wavelengths (700 - 850nm in steps of 10nm). Acoustic simulations were performed on the central slice using k-Wave. Images were reconstructed with SIMPA&rsquo;s delay-and-sum reconstruction algorithm (1540 m/s speed of sound, Tukey windowed bandpass filtering (0.1 - 8 MHz), and Hilbert transform envelope detection.&nbsp; It comprises 1243 multispectral images in total, each of size 200 x 400 px containing these eight channels: oxygen saturation segmentation with classes: muscle, heavy water, blood vessel, epidermis, US gel, mediprene absorption coefficient scattering coefficient scattering anisotropy fluence initial pressure distribution delay-and-sum reconstruction &nbsp;",
       "tags": [
-        "high cycle fatigue",
-        "internal pressure",
-        "multiaxial fatigue",
-        "fatigue-life prediction",
-        "FABEST",
-        "42CrMo4+QT",
-        "FABER",
-        "round robin"
+        "Photoacoustic Imaging",
+        "Forearm Simulations",
+        "Monte Carlo simulation",
+        "Multispectral Photoacoustic Tomography",
+        "Oxygen Saturation",
+        "Segmentation",
+        "Digital Twin",
+        "Computational Modeling"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "FABEST High-Cycle Fatigue Competition: Participant Package for Blind Fatigue-Life Prediction",
-      "url": "https://zenodo.org/records/23532147"
+      "title": "Simulated multispectral photoacoustic forearm dataset with reference initial pressure, segmentation, and vessel oxygenation maps",
+      "url": "https://zenodo.org/records/23502653"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5108ea5fcccfb38bfa433699",
+      "context_id": "d543f5a7b09afc9aa69eb672",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "f82c53b9957069d7b4b431d66a627df72a7384249da132a7871b5fe5797a3b00",
+      "source_published": "2026-08-21",
+      "source_updated": "",
+      "summary": "Act No. 328/2025 Coll., on Research, Development, Innovation and Knowledge Transfer, represents the most significant recodification of the Czech RDI system in more than two decades. It replaces Act No. 130/2002 Coll., whose repeated amendments gradually reduced the clarity of the original framework and weakened its ability to respond to the changing needs of the research and innovation system. The Act constitutes a comprehensive reconstruction of the legal framework, complemented by Amending Act No. 329/2025 Coll. and implementing regulations. This article interprets the Act as a framework for a more investment-oriented governance of public support for RDI: in other words, as a basis for deciding how the state supports the creation, development and use of knowledge and innovation. Its key principle is the connection between excellence and impact. Excellent research is no longer treated as a value in itself, but as a precondition whose contribution must be demonstrable in terms of the country&rsquo;s prosperity, security and international credibility. The Act therefore not only strengthens the capacity of research organisations to translate results into practice, but also opens space for instruments that may increase demand for knowledge, technologies and innovation. The text is not a legal commentary on the new legislation. Rather, it offers a sociological, historical and economic analysis that places the new legal framework within the broader context of the Czech RDI system. It is structured as a coherent arc: context &ndash; changes &ndash; implementation conditions &ndash; discussion &ndash; recommendations &ndash; conclusion.",
+      "tags": [
+        "STRATIN"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Act No. 328/2025 Coll., on Research, Development, Innovation, and Knowledge Transfer: Recodification of the R&D&I legal framework in the Czech Republic",
+      "url": "https://zenodo.org/records/22047737"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5a7b162479ce0346acffbcd0",
+      "context_id": "ca8b1f0e0f87bd91dfe3631c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "rup"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "4756df41a54b6d42ac6f9953702f6c4dd8e4cc5f7856c0da440cfcb72b7da155",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "The Decolonial Intelligence Algorithmic (DIA) Framework&trade;: Twenty-First Edition Christian ZacaTechO Ortiz DOI: 10.5281/zenodo.23547322 15 September 2026 | Revised 21 October 2026 Abstract Bias in artificial intelligence is not a technical accident. It emerges from choices about what knowledge is collected, whose language is centered, which categories are treated as universal, how populations are represented, what objectives models are trained to optimize, and who holds authority over the systems that result. The Decolonial Intelligence Algorithmic (DIA) Framework&trade; is an operational decolonial architecture for identifying, interrupting, and replacing the epistemological and governance conditions through which Racial Empire Logic is reproduced in artificial intelligence. Rather than treating bias as a defect that can be corrected solely through post hoc fairness metrics, the Framework moves the site of intervention upstream into data formation, classification, model development, evaluation, deployment, and governance. Xam-Xam bu Gore: The Framework of Liberated Knowledge is the epistemological root of the DIA Framework. Authored by Christian ZacaTechO Ortiz and rooted in Wolof, Afro-Indigenous, and decolonial lineage, Xam-Xam bu Gore establishes that knowledge must exist in a state of liberation from colonial capture, epistemicide, institutional gatekeeping, extraction, and imposed hierarchies of intelligence. Its commitments to epistemological sovereignty, relational knowledge production, living knowledge, and liberation as the governing standard shape the Framework&rsquo;s treatment of artificial intelligence as a knowledge system rather than a neutral technical instrument. The DIA Framework operationalizes these commitments through Four Pillars: Decolonizing Data Collection, Algorithmic Transparency and Accountability, Intersectional Impact Assessment, and Decolonial AI Governance and Accountability Mechanisms. Together, these pillars locate technical decisions inside their political, historical, cultural, and material conditions. The Framework requires attention to intersecting structures of race, gender, sexuality, disability, neurotype, class, caste, citizenship, language, migration, and colonial status, while rejecting the assumption that Western institutional categories constitute the universal baseline against which all other epistemologies must be measured. This Twenty-First Edition extends the Framework from governance-at-inference toward governance-at-formation through Decolonizing Large-Scale Self-Supervised Pretraining on Heterogeneous Corpora . The protocol identifies corpus construction, provenance, language representation, weighting, training objectives, and corpus revision as sites of epistemic governance. It advances accountable reclamation rather than archival purity, recognizing that knowledge survives through occupation, displacement, translation, institutional capture, resistance, and recovery. Its pluriversal approach seeks meaningful engagement across knowledge systems without requiring those systems to surrender their distinct epistemological structures to a dominant Western frame. Global participation is therefore positioned as decision-making authority over how knowledge enters, shapes, evaluates, and may be revised within an AI system. The edition also provides a corrected mathematical foundation for examining categorical incompleteness and intersectional disparity. Its formal results are deliberately bounded. They show, under stated assumptions, how aggregate parity across coarse categories can conceal disparities among finer community-defined groups and why any fixed category system may require continued refinement and governance. The mathematics does not establish universal elimination of bias, clinical validity, legal validity, ontological completeness, or the effectiveness of any specific deployment. Mathematical guarantees apply only to the quantities, populations, partitions, assump",
+      "tags": [
+        "Decoloniality",
+        "Decolonization",
+        "Critical Race Theory",
+        "Decolonizing Artificial Intelligence",
+        "Eurocentrism",
+        "Colonial Dataset",
+        "Decolonizing Western Science",
+        "Operationalizing CRT",
+        "Decolonial Intelligence Algorithmic Framework",
+        "Christian ZacaTecho Ortiz",
+        "Decolonial Social Scientist",
+        "Ceremonial Technology"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Decolonial Intelligence Algorithmic (DIA) Framework™: Twenty-First Edition Official Version",
+      "url": "https://zenodo.org/records/23547322"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "12ed4c5c3be840a7ced6c6f6",
+      "context_id": "bb724f34bae46a7abcd89c4b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "rup"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "05fb6e52e30b897b5fc29ab88620a5555fecd73481a0cd01b21fcf4255a4200f",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Federated learning for crop-disease classification across heterogeneous farm clients is vulnerable to Byzantine participants who submit corrupted model updates, yet the aggregation literature reports robustness without a design-level account of how many adversarial clients a given federation can tolerate before diagnostic integrity collapses. The analysis treats the aggregation rule as a statistical estimator of the honest update direction and characterises the breakdown point of coordinate-wise median and trimmed-mean aggregation under a declared contamination model. A before-after-control-impact design is used to benchmark power across cluster counts of 8, 16, 24 and 32 and effect sizes of 3, 5 and 8 percentage points, with 2000 replications per design cell and an intraclass correlation of 0.640. The contamination bound predicts that coordinate-wise median aggregation tolerates up to 50% adversarial clients in the limit but loses diagnostic integrity at a threshold that depends on the between-cluster standard deviation of 6.0 and the residual standard deviation of 4.5. The benchmarking results indicate that 54 clusters are required to detect a 5 percentage point degradation at 80% power. The contribution is a formal contamination bound that links aggregation-rule choice to the minimum federation size needed to certify diagnostic integrity, together with a benchmarking protocol that makes that link auditable.",
+      "tags": [
+        "federated learning; Byzantine robustness; crop disease classification; contamination bound; benchmar"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Benchmarking Evaluation of Byzantine-Robust Federated Aggregation for Computer Agriculture Disease Classifiers Under Adversarial Client Participation: An Artificial Intelligence Contamination Bound for Diagnostic Integrity",
+      "url": "https://zenodo.org/records/23544414"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -492,8 +502,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d8adcb0df22feab6f327b7ba",
-      "context_id": "52df57c7c01276122389b912",
+      "candidate_id": "20c6e547cbf4a9302666e7f1",
+      "context_id": "d6fdbd4270f7b30ff694e11f",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::REVERSE",
@@ -507,28 +517,23 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "drat",
-        "reverse",
-        "sat"
+        "reconstruction",
+        "rup"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.5833,
-      "source": "zenodo",
-      "source_context_sha256": "5e670f4828be3adfd1aca11d8595a782d5a609fc21b9981466770c91f4d8bed1",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Abstract (it) &nbsp; Leonardo's Spatial Grammar &egrave; l&rsquo;app che raccoglie le tre ricerche dedicate rispettivamente all&rsquo;Annunciazione, all&rsquo;Adorazione dei Magi e al Cenacolo: Leonardo's Rulers , Leonardo's CAD e Leonardo's Score . Non aggiunge una quarta indagine, ma riunisce i tre studi in una lettura unitaria, gi&agrave; depositata nel corpus accademico omonimo. Il corpus mette in discussione l&rsquo;idea di un&rsquo;applicazione standardizzata della prospettiva albertiana a base quadrata nell&rsquo;opera di Leonardo da Vinci e propone, in alternativa, un paradigma metrico-modulare fondato su evidenze geometriche oggettive e falsificabili. Dall&rsquo;Annunciazione all&rsquo;Adorazione dei Magi, fino al Cenacolo, emerge una grammatica spaziale in evoluzione: la rigida scacchiera lascia il posto a un sistema di righelli inseriti; la misura, inizialmente monodirezionale, diventa un&rsquo;architettura ritmica e stereometrica. Il metodo &egrave; la retroingegneria CAD, applicata secondo il &laquo; banale aristotelico &raquo;: partire da ci&ograve; che l&rsquo;opera mostra e che si pu&ograve; misurare. Bugne, mattonelle, arcate, arazzi e cassettoni non sono quinte, ma strumenti lasciati in vista, da cui le proporzioni &mdash; la progressione 1:2:3, il modulo 4:3 e i ritmi 1:4:1, 2:1:2 e 1:6:1 &mdash; si ricavano dalle stesse opere. Gli spazi restituiti sono misurabili, architettonicamente rimontabili e strutturati sulle misure umane. Le interpretazioni esoteriche e le simbologie non falsificabili restano fuori dal perimetro. L&rsquo;app come strumento di lettura Leonardo&rsquo;s Spatial Grammar riunisce le app dedicate alle singole ricerche e ne offre un accesso coordinato. Queste applicazioni sono strumenti di supporto alla lettura: facilitano l&rsquo;esplorazione delle ricostruzioni, dei moduli e dei confronti geometrici, integrando la ricerca accademica senza sostituirla. App e studi costituiscono un sistema speculare in continuo aggiornamento: le revisioni della ricerca alimentano gli strumenti digitali e, reciprocamente, il loro impiego rende pi&ugrave; immediata la verifica dei risultati. Spatial Grammar applica a Leonardo il principio che Leonardo stesso indica come fondamento del conoscere: prima l&rsquo;esperienza, poi la ragione. La sequenza operativa &egrave; precisa: Pura Visibilit&agrave;, esperienza, ragione, verifica. La Pura Visibilit&agrave; consiste nel lasciare che l&rsquo;opera si mostri prima di essere spiegata: nell&rsquo;osservarne i segni sensibili senza imporre loro un significato. Segue l&rsquo;esperienza, cio&egrave; la raccolta dei dati visibili &mdash; conci, cassettoni, gradini, allineamenti, proporzioni. Solo allora interviene la ragione, che riconosce moduli e ritmi; ma ogni ipotesi deve tornare all&rsquo;immagine per essere verificata. Non si impone una griglia a Leonardo: si legge la griglia che l&rsquo;opera stessa rende percepibile. Il Rasoio di Occam fa da cardine tra questa priorit&agrave; del visibile e il metodo induttivo: non si porta la griglia all&rsquo;opera, si ricava la regola da ci&ograve; che l&rsquo;opera mostra. I segni sono visibili, i numeri e le proporzioni elementari. &laquo;Il Re &egrave; nudo!&raquo; diventa &laquo; Res patet &raquo;. Gli spazi sono ricostruibili, alla portata del CAD o di qualsiasi riga e squadra. Pura Visibilit&agrave;: vedere prima di misurare, misurare prima di interpretare. Rasoio di Occam: non aggiungere alla realt&agrave; pi&ugrave; griglie di quante ne mostrino i segni. &nbsp; Fonti (Ricerca, app) &nbsp; Complete corpus (The Triptych) doi:10.5281/zenodo.20578821 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; App &nbsp; Leonardo's Rulers doi:10.5281/zenodo.20417508 App &nbsp; &nbsp; Leonardo's CAD doi:10.5281/zenodo.18981238 App &nbsp; Leonardo's Score doi:10.5281/zenodo.20334160 App &nbsp; Abstract (en) &nbsp; Leonardo's Spatial Grammar brings together the three studies devoted respectively to the Annunciation, the Adoration of th",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "a2c104fd2e69c3829090a765607c0493346f3eb1a396650688e9dabcc2a36bc4",
+      "source_published": "2026-10-21T15:15:37Z",
+      "source_updated": "2026-10-21T15:15:37Z",
+      "summary": "The iron-based ferromagnetic materials have emerged as a promising system for spintronics due to their high Curie temperatures and significant anomalous Hall effect (AHE) driven by Berry curvature. While there have been investigations into the epitaxial growth of non-layered iron-based ferromagnetic materials, the realization of high-quality single crystal thin films continues to be a formidable obstacle. Meanwhile, the issues such as grain boundary scattering further hinder their characterization and application. Here, we report the first chemical vapor deposition (CVD) synthesis of single-crystalline cubic D0$_3$-Fe$_3$Ge nanoplates. This compound represents a substantial departure from the conventional hexagonal phases typically observed in the Fe-Ge system. Structural characterizations confirm the cubic lattice and stoichiometric purity of the crystals. Structural analysis identifies a strong epitaxial effect, resulting in a giant compressive strain of ~4.16% at the interface that relaxes gradually toward the surface. The second-harmonic generation (SHG) signals might further reveal that such interfacial strain disrupted the inherent centro-symmetry of the cubic phase. SQUID magnetometry shows robust room-temperature ferromagnetism and clear magnetic anisotropy. Magneto-transport measurements reveal a robust AHE that remains stable at temperatures far exceeding room temperature. The scaling observed between the anomalous Hall resistance and longitudinal resistance strongly suggests that this effect is dominated by the intrinsic Berry curvature mechanism. Furthermore, density functional theory (DFT) calculations reveal that the huge epitaxial strain induces band reconstructions and creates dense spin-orbit coupling gaps near the Fermi level, effectively doubling the anomalous Hall conductivity to match our experimental observations.",
       "tags": [
-        "Leonardo da Vinci",
-        "Perspective",
-        "Annunciazione",
-        "Adorazione dei Magi",
-        "Cenacolo"
+        "cond-mat.mtrl-sci"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Leonardo's Spatial Grammar Un corpus di analisi basato sulla retroingegneria CAD (it) / A CAD Reverse-Engineering Analysis Corpus (en) Leonardo's CAD, Leonardo's Rulers, Leonardo's Score App di supporto alla ricerca accademica (it) / Academic Research Support App (en)",
-      "url": "https://zenodo.org/records/23531843"
+      "title": "Robust Anomalous Hall Effect in Epitaxial Cubic D0$_3$-Fe$_3$Ge Nanoplates Grown by Chemical Vapor Deposition",
+      "url": "https://arxiv.org/abs/2610.29858v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -564,6 +569,42 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Act No. 328/2025 Coll., on Research, Development, Innovation, and Knowledge Transfer: Recodification of the R&D&I legal framework in the Czech Republic",
       "url": "https://zenodo.org/records/22047737"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b35eb99d703d72ed9e65a721",
+      "context_id": "765b60007fb1aa681793f436",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "5e6b7aff52e5b0ce9c27d56d95c7b17e957cb6a3e6471544978742ba8712b6bb",
+      "source_published": "2026-10-21T15:06:08Z",
+      "source_updated": "2026-10-21T15:06:08Z",
+      "summary": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced.",
+      "tags": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
+      "url": "https://arxiv.org/abs/2610.29845v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -642,6 +683,110 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories",
       "url": "https://arxiv.org/abs/2610.29378v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7f01d23703fe6df9b53377ca",
+      "context_id": "6be65d8a9a56c44b83b9b795",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "drat",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "arxiv",
+      "source_context_sha256": "237f55bf7737de3b9f349a80156430bd9ffab8186336e37ae68a9a9a2946ea06",
+      "source_published": "2026-10-21T16:37:09Z",
+      "source_updated": "2026-10-21T16:37:09Z",
+      "summary": "Reinforcement learning (RL) based on PPO-style clipping has become an effective approach to improving the reasoning capabilities of large language models (LLMs). However, standard token-level clipping measures policy change only through the conditional probability of the current token, while the prefix conditioning context is itself generated by the policy. This mismatch becomes especially consequential in long-response and off-policy training. We reformulate autoregressive generation as a finite-horizon Markov decision process and derive its performance-difference identity under behavior-policy sampling. The resulting change of measure identifies the cumulative likelihood ratio of the generated prefix as the exact importance weight for each stepwise policy-improvement term. Starting from the monotonic-improvement principle of trust-region policy optimization, we then construct a prefix-level trust region using the exact reverse-KL coordinate $r-1-\\log r$, whose behavior-policy expectation equals the corresponding prefix-distribution KL divergence. This yields EPIC, a PPO-style sequence-clipping method that directly regulates prefix-level policy drift without relying on a local quadratic approximation or expert-routing replay. Experiments on off-policy reinforcement learning with a sparse mixture-of-experts language model show that EPIC consistently outperforms standard and sequence-level clipping baselines across mathematical-reasoning benchmarks, while remaining competitive with routing-replay-based alternatives. Code is available at https://github.com/LiChengxi666/EPIC.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "EPIC: Rethinking Trust Regions for Autoregressive LLM Policies via Exact-KL Prefix Importance-Ratio Clipping",
+      "url": "https://arxiv.org/abs/2610.29999v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7772eb9a1eb5246299e2e89d",
+      "context_id": "53fd6422bb4dbeeae3f1d254",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_context_sha256": "12306159bcdc7e07bc213449bff31f58e1665769112f8d9a83051bca1ee564f2",
+      "source_published": "2026-10-21T14:01:02Z",
+      "source_updated": "2026-10-21T14:01:02Z",
+      "summary": "We explore the inverse problem of determining the reaction coefficient $q(x',t)$ in the time-fractional diffusion equation ${}^CD_t u-Lu+q(x',t)u=f$ in $\\mathbb{R}^n\\times(0,T]$, $x=(x',x_n)$, $0<α<1$, from the trace of the solution on the hyperplane $\\{x_n=0\\}$. Here ${}^CD_t$ is the Gerasimov--Caputo derivative and $L$ is a uniformly elliptic second-order operator with variable, $x_n$-independent coefficients and without zero-order term. For $L=Δ$ this problem was studied in dimensions $n=1,2,3$ by methods based on pointwise bounds of the kernels, which are not available for $n\\ge4$. Our approach relies on the Eidelman--Kochubei fundamental solution: although its singularity on the diagonal depends on the dimension, we show that it satisfies integral bounds of the same form for all $n\\ge1$. Using these bounds, we prove existence, uniqueness and stability of regular solutions of the direct problem with a Hölder continuous reaction coefficient. Without assuming additional smoothness of the solution, we show that the inverse problem is equivalent to a closed system of integral equations for $q$ and the derivatives $\\partial_{x_n}u$, $\\partial^2_{x_n}u$. For the inverse problem we establish a conditional Lipschitz stability estimate on the whole time interval and global uniqueness in every dimension, and prove local existence of a solution. In the case $a_{in}\\equiv0$, $b_n\\equiv0$ we obtain a stability estimate with explicit constants, which reduces to the known estimates for the Laplacian. An explicit two-dimensional example with a mixed coefficient and a normal drift shows that the hypotheses of the main theorems are compatible and that the corresponding terms in the trace condition cannot be omitted.",
+      "tags": [
+        "math.AP"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Recovering the reaction coefficient in a time-fractional diffusion equation with variable coefficients in any spatial dimension",
+      "url": "https://arxiv.org/abs/2610.29763v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "92ca2547439c1c2424e0268d",
+      "context_id": "f533d2c7cf945081a811bd01",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "b516a5ba28224aca547984f55a009b77d7807163b5d70cd526a1c15daadd6946",
+      "source_published": "2026-10-21T13:18:03Z",
+      "source_updated": "2026-10-21T13:18:03Z",
+      "summary": "The Vertex Silicon Plane (VSP), installed close to the target in BM@N Run 9, can extend the tracking acceptance of the central tracking system toward larger polar angles. Using Monte Carlo simulations of Xe+Sn collisions at 3 AGeV, we reconstruct short tracklets from the primary vertex, one VSP hit, and hits in the first two Gas Electron Multiplier (GEM) stations. These tracklets extend the reconstructed primary-proton coverage toward midrapidity and higher transverse momenta. For the 10-30% centrality interval of the independent validation dataset, the conditional reconstruction efficiency for reconstructible high-$p_T$ primary protons after BDT selection is 67.0%, while the tracklet purity reaches 86.5%. For $p_T>1.2$ GeV/c, the VSP-assisted tracklets increase the number of reconstructed primary protons by 17.5% relative to standard BM@N tracking. Of these additional protons, 84.6% lie within $|y|<0.3$, where the relative reconstruction gain reaches 45.5%. The added acceptance is concentrated in the high-$p_T$, near-midrapidity region relevant for identified-proton observables. Its use in data requires particle identification in the same region.",
+      "tags": [
+        "physics.ins-det"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Monte Carlo study of extending the BM@N tracking acceptance toward midrapidity with the Vertex Silicon Plane",
+      "url": "https://arxiv.org/abs/2610.29705v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -756,12 +901,12 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "2cdbfb77d4f8c408a9212772",
-      "context_id": "b6ac51457821c716b58e8ce2",
+      "candidate_id": "4eaee6553ccc8b60ba7192a4",
+      "context_id": "f82962328a7c6e6e3871e87f",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -771,32 +916,33 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "reconstruction"
+        "failure",
+        "rup",
+        "sat"
       ],
-      "mirror_lens": "REVERSE",
+      "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "d6e19346983856be4a07ae3b118c3921614f3dfd09fdf961177dd8474e1f27f8",
-      "source_published": "2026-10-21T05:49:05Z",
-      "source_updated": "2026-10-21T05:49:05Z",
-      "summary": "Thermal cameras enable robots to perceive human activities in darkness while revealing less personally identifiable appearance information and fewer details of the surrounding environment than RGB cameras. As vision-language models (VLMs), originally developed for RGB imagery, are increasingly integrated into embodied systems for scene understanding and high-level planning, thermal sensing offers a promising way to extend activity perception to low-light and privacy-sensitive settings. However, the failure modes of VLMs in thermal human activity understanding for human-robot interaction (HRI) remain underexplored. We fill this gap by evaluating seven locally deployable VLMs, including models developed for physical AI and robotics, on two person-centric thermal datasets. Our diagnostic tasks examine fine-grained action recognition, activity timeline reconstruction, and the ability to withhold unsupported answers. Paired RGB recordings serve as a performance reference, while controlled variations in frame sampling, thermal input presentation, and reasoning are used to assess whether the observed errors can be mitigated. Our results show that models can recognize broad activity categories but struggle with fine-grained actions such as coughing, sneezing, and yawning. They also produce inaccurate event timelines and hallucinate actions involving objects. Simple thermal input preprocessing and additional reasoning offer only limited, model-dependent gains. Abstention behavior also varies across models even under explicit instructions, limiting their reliability for practical robotic use.",
+      "score": 6.5417,
+      "source": "zenodo",
+      "source_context_sha256": "8b34b93c928b319cded1ad9c37c5668d293d137d655fdd81f1384821677b8215",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Abstract &mdash; Universities must simultaneously contain costs, decarbonise their estates, and safeguard teaching, yet procurement of teaching-critical equipment still follows lowest-price, replace-on-failure practice. This paper develops a digital-twin framework for circular procurement in higher education, in which repair, refurbishment, inter-departmental asset sharing, and replacement are optimised jointly against lifecycle cost, embodied carbon, and pedagogical disruption. Asset condition, utilisation, and failure signals from campus twins are fused through Bayesian state estimation into a two-stage robust mixed-integer programme built on a budgeted uncertainty set over teaching demand. A computational study of a synthesised 1,240-asset estate, parameterised from published university estates statistics, life-cycle inventories, and manufacturer data, compares the framework with business-as-usual and single-objective policies over ten years. The joint robust policy lowers total cost of ownership by 18.7%, embodied procurement carbon by 41.3%, and expected lost teaching hours by 57.6%, with a 35.8% reduction in tail-risk disruption relative to the deterministic optimum; asset sharing absorbs nearly a third of incremental demand without new purchases. Results are stable across carbon-price, disruption-value, and demand-volatility sensitivities, giving estates teams an audit-ready pathway from smart-campus monitoring to circular, teaching-aware procurement. Keywords: Circular procurement, digital twins, robust optimisation, teaching continuity, university estates.",
       "tags": [
-        "cs.CV",
-        "cs.RO"
+        "Circular procurement, digital twins, robust optimisation, teaching continuity, university estates."
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Failure Modes of Vision-Language Models for Human Activity Understanding in Thermal HRI",
-      "url": "https://arxiv.org/abs/2610.29244v1"
+      "title": "Circular Procurement Through Digital Twins: Balancing University Costs, Carbon, and Teaching Continuity",
+      "url": "https://zenodo.org/records/23501094"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a40288e5368a559aff8b88fe",
-      "context_id": "d340a43c7aabbfb4022d305c",
+      "candidate_id": "37e7020427a4f51b35093574",
+      "context_id": "faa549f5fbff3c8cb102dcd3",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
       "firewall": [
         "ROUTED_NE_VERIFIED",
@@ -806,95 +952,24 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "inversion"
+        "failure",
+        "failure mode"
       ],
-      "mirror_lens": "REVERSE",
+      "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.375,
+      "score": 5.7917,
       "source": "arxiv",
-      "source_context_sha256": "2b414173b1e3d5655205f1dbafe56b9a3896742a00ca7705fa5fe7d497b5db07",
-      "source_published": "2026-10-21T01:00:43Z",
-      "source_updated": "2026-10-21T01:00:43Z",
-      "summary": "Verifier stacks increasingly sit inside post-training and test-time compute loops. We study a specific control loop: a component verifier is evaluated on fresh policy outputs against the full success label and refreshed when that aggregate score falls. For a conjunctive target $y = F \\wedge M$, its on-policy AUC is $(1-q)A_{\\mathrm{own}} + qA_{\\mathrm{cross}}$, where $q = \\Pr[F=1 \\mid y=0]$. As the policy masters $F$, $q$ can rise toward one, removing weight from $F$-failures and rewarding information about $M$. We call this on-policy audit collapse. We derive a sharp identified set, a complete-erasure threshold, and the exact point at which the audit can prefer a worse component verifier; its population optimum is the full-outcome predictor, not the component oracle. An exact oracle exhibits the collapse, a natural multi-label text control shows inversion can select a head with lower canonical $F$-AUC at the observed failure mixture, and a prediction-registered ECG study shows that acting on the audit can reduce off-policy $F$-AUC, transfer the damage to an unseen generator, and increase downstream constraint violations. Preserving own-failure support prevents the damage. Matching label-complexity bounds and a controlled-mixture audit give the corresponding repair: audit the component on its own failures, and keep those failures in the refresh distribution.",
+      "source_context_sha256": "9fd9de036aafe1f6d581b3c2884d36b8949234b8de689a843ffe7d3c911d90da",
+      "source_published": "2026-10-21T11:42:19Z",
+      "source_updated": "2026-10-21T11:42:19Z",
+      "summary": "Diffusion language models generate by iteratively denoising a masked sequence under bidirectional attention, without the strict left-to-right commitment of autoregressive decoding. Whether this difference affects how reliably they remain grounded in structured inputs is largely unexplored. We study this question in table-to-text generation using ToTTo, where highlighted source cells make factual grounding directly testable. We compare the masked diffusion models MDLM and LLaDA with GPT-2 and GPT-Neo under an identical retrieval-based few-shot protocol, together with a QLoRA-adapted LLaDA, and we score reference similarity and source grounding as separate axes. The two pull apart. Within LLaDA, additional demonstrations raise BLEU from 11.3 to 22.0 while NLI entailment against the source table falls from 0.78 to 0.52; QLoRA reaches the best BLEU of the study, 24.15, and grounds no better for it. Manual annotation shows the failure modes differ in kind: the autoregressive baselines tend to wander off the table, while LLaDA-based models more often stay on topic and swap out individual entities. Reference-based metrics alone are insufficient to assess faithfulness in table-to-text generation.",
       "tags": [
+        "cs.CL",
         "cs.LG"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Better Policies, Worse Verifier Audits",
-      "url": "https://arxiv.org/abs/2610.29029v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "1a9aaad9ab2b43c734885a3b",
-      "context_id": "a844856298107ed3295386f7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inversion"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.375,
-      "source": "arxiv",
-      "source_context_sha256": "02fcdeb1d6ed0b3805872a6001c370b1e375e3f39138c6fe94b5d63db2fd241d",
-      "source_published": "2026-10-21T09:41:25Z",
-      "source_updated": "2026-10-21T09:41:25Z",
-      "summary": "Nanoscale nonreciprocal elements are needed to control signal flow in scalable quantum technologies, but existing nonreciprocal components are often bulky. Here, we show that a strongly nonreciprocal current-voltage relation can arise entirely from coherent elastic scattering in a mesoscopic Rashba nanowire with gate-defined scatterers. We first identify the symmetry constraints that enforce reciprocal transmission in a phase coherent conductor even when inversion and time-reversal symmetry are broken. We then show how gates that are capacitively coupled to the leads, together with a magnetic scatterer or transverse subband mixing, can remove these constraints. In the weak-scattering regime, nonreciprocal conductance originates from interference between distinct backscattering paths. In the strong-scattering regime, nonreciprocity can be resonantly enhanced by the hybridization of the transmitting channel with bound states that arise from a higher transverse subband or spin-split band. In this regime, we find that a bias-induced change in the gate potentials of about one percent can produce an order-unity diode response, i.e., electrons are transmitted almost as in a clean wire for one bias polarity, whereas for the other polarity the current is strongly suppressed.",
-      "tags": [
-        "cond-mat.mes-hall"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Quantum Interference Enhanced Rectification in Mesoscopic Nanowires",
-      "url": "https://arxiv.org/abs/2610.29484v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4fabe61b43c56fcd6df42097",
-      "context_id": "e9b9ceeeb76dac54b05bcd85",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "ac3bbdeba97e5589c456223e4f58b6489d62b7971366ad582cab1ae4c3755702",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "This reproducible code and data documents substantial errors in the Science paper \" The air pollution benefits of low-severity fire \" (Higuera-Mendieta &amp; Burke 2026), that, when corrected, reverse the core conclusions of the paper. You can find their code here: https://zenodo.org/records/20944436 &nbsp; Their paper uses low-severity wildfire as a proxy for prescribed fire to estimate the tradeoff between the smoke generated by treatment (the costs) and the smoke it avoids in future wildfires (the benefit). However, the analysis contains errors that 1) substantially overestimate benefits and 2) underestimate costs. Correcting these issues reverse the paper's reported air pollution benefits.&nbsp; The analysis relies on two contradictory definitions of low-severity treatment that artificially inflate the benefit-cost tradeoff. The paper argues that low-severity wildfire (dNBR 100-270) is a valid proxy for prescribed fire when estimating treatment benefits, but then assumes that prescribed fire emits only ~15% as much smoke when estimating treatment costs (it assumes a much lower prescribed fire severity range of dNBR 10-40). Actual empirical ranges of MBTS-mapped prescribed fire in their focal landscapes have a mean fire severity of 133 dNBR. Correcting this issue (either using empirical MTBS dNBR ranges, or more appropriately, using an equivalent 100-270 dNBR low-severity fire range) reverses the findings of net air pollution benefits (their Figure 4 and Figure 5c).&nbsp; The analysis of the benefit-cost ratio (their Figure 4) also demonstrably overestimates benefits by counting emissions reductions that are not physically possible. For example, their analysis often counts modeled reductions in dNBR that exceed the the observed dNBR in the grid cell (e.g., counting a reduction of 169 dNBR units of emissions when there are only 79 dNBR units of observed wildfire), and counts reductions in dNBR when there was no observable wildfire in the first place (e.g., observed dNBR &lt; 0). Together, this error artificially inflates actual emissions reduction benefits of treatments. &nbsp; &nbsp; &nbsp;",
-      "tags": [
-        "net emissions",
-        "prescribed fire",
-        "PM2.5",
-        "air pollution",
-        "wildfire",
-        "low severity fire"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Code and data to document substantial errors in \"The air pollution benefits of low-severity fire\" by Higuera-Mendieta & Burke (2026)",
-      "url": "https://zenodo.org/records/23546955"
+      "title": "A Diagnostic Study of Faithfulness in Diffusion Language Models for Table-to-Text Generation",
+      "url": "https://arxiv.org/abs/2610.29602v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -985,6 +1060,43 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "BLLM: Beyond the LLM with Deep Human-Mind-AI",
       "url": "https://zenodo.org/records/23548148"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "89fb22d0143dd4a76696ea37",
+      "context_id": "bc3eb114b41b33b49705c589",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "bdf9bbcd57b7c26351842c805bc1feccd0f0f243dcdd089fb6104a3e0e534301",
+      "source_published": "2026-10-21T16:02:37Z",
+      "source_updated": "2026-10-21T16:02:37Z",
+      "summary": "A benchmark is not merely a collection of test questions; it naturally induces an empirical measure over difficulty. In this work, we develop this measure-based view of benchmark evaluation. This perspective allows us to identify and formalize two central failure modes: measure mismatch, where the benchmark difficulty distribution differs from the intended difficulty distribution, and coverage gaps, where uncovered regions along the difficulty axis prevent benchmarks from detecting meaningful localized training progress. We propose two diagnostic metrics that capture these two failure modes and provide rigorous theoretical guarantees. Empirically, we analyze 25 popular benchmarks spanning 7 domains using carefully estimated item difficulties. Our results show that many benchmarks implicitly overweight certain difficulty regions, so their leaderboard conclusions should be interpreted with caution; others leave substantial portions of the difficulty axis uncovered, limiting their ability to monitor the model improvement process. Finally, we turn diagnosis into action by introducing BenchFill, a simple difficulty-targeted item rewriting algorithm that effectively reduces local coverage gaps.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "url": "https://arxiv.org/abs/2610.29927v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1093,6 +1205,39 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "2ccfc6431282e95062823fae",
+      "context_id": "88000322d029b3bff2567e4e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "ca88752cc1e6be7a1c28c90e890800eba24a6133aa13641539f86aeeaaaa2ead",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Experimental outputs for manuscript \"Beyond Viewpoint Affinity: Measuring Political Bias in LLMs as a Failure of Epistemic Consistency\" Political bias in large language models is often measured by treating responses to political questionnaires as evidence of ideological preference. This approach can conflate bias with differences in evidential support: asymmetric viewpoint preferences are not necessarily biased if one side is better supported by the available evidence. We explore a different facet of political bias: failures of epistemic consistency, in which models apply different evidentiary or evaluative standards to substantively equivalent items that carry different political cues. We operationalize this definition in two sets of experimental tasks. In person-attribution tasks, models evaluate nonpolitical items&mdash;such as mathematical proofs, logical arguments, or artistic artifacts---while only the political identity of the person associated with the item changes. In politicized-context tasks, models judge politically framed items, such as research designs, news articles, or policy outcomes, while partisan sources, group identities, or the left&ndash;right valence of the substantive outcome change. Across thirty LLMs, person-attribution tasks yield only modest left-leaning asymmetry&mdash;and this bias shrinks toward zero in more capable models. By contrast, politicized-context tasks yield large left-leaning asymmetries that do not shrink with model capability. Debiasing interventions---such as increasing reasoning effort, system prompts that emphasize epistemic rigor, and explicit instructions to ignore specific political cues&mdash;mitigate bias, but only partially. These results suggest that current LLMs show little bias based on an individual&rsquo;s political identity when evaluating nonpolitical or politically orthogonal items. However, on politicized-context tasks, LLMs are persistently biased by task-irrelevant political cues, even when the relevant evidence is objectively assessable or held constant across political variants. Note: A previous version of the&nbsp; experimental_results &nbsp;archive contained partial and incomplete outputs for the legacy OpenAI model&nbsp; gpt-4-0613 from 2023 . These results were not included in the analyses reported in the paper. The run was stopped partway through after we observed that this older model was incurring excessive API costs. As of April 2026, the input/output costs per 1M tokens of gpt-4-0613 were 30\\$ and 60\\$ respectively (between one and several orders of magnitude higher than newer OpenAI models used in the study, see: https://developers.openai.com/api/docs/models/gpt-4).&nbsp; Completing the full benchmark for&nbsp; gpt-4-0613 would have caused the project to exceed its compute budget, so we created a new version of the experimental outputs archive with those incomplete files for gpt-4-0613 removed. In the code repository (https://anonymous.4open.science/r/llms_epistemic_consistency-D133/README.md) associated with this experimental output there is the following bug for the Debiasing interventions using system prompts (\"centrist\" and \"epistemically rigorous\") experiment, which does not affect the experimental results but affects one field of the meta information saved to the CSV files&nbsp; In vpei/epistemic_consistency/experiment_types.py, all six run_model functions build a payload dict before the API call: payload = { &nbsp; &nbsp; \"system_prompt\": system_prompt, &nbsp; # &larr; saves the BASE prompt only &nbsp; &nbsp; &nbsp; ... } messages = [{\"role\": \"system\", \"content\": system_prompt}, ...] tasks.append((payload, make_llm_request_async(model_name, messages, ...))) Then inside make_llm_request_async &rarr; prepare_request_params() (llm_requests_v3.py:309&ndash;314), the system_prompt_prefix (EPISTEMICALLY_RIGOROUS_LLM_SYSTEM_PROMPT) is prepended to the system message after the payload is already constructed. So: - LLM API receives: EPISTEMICALLY_RIGORO",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Dataset for \"Beyond Viewpoint Affinity: Measuring Political Bias in LLMs as a Failure of Epistemic Consistency\"",
+      "url": "https://zenodo.org/records/23552888"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "e9ad9a661190e28bddca1f00",
       "context_id": "3f8bbf1cde376009ec4aaa3d",
       "delivery_preview_only": true,
@@ -1162,8 +1307,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a26c050aa5db5d5b6628af39",
-      "context_id": "ccc21b2af39ec01474d05178",
+      "candidate_id": "a61e67b61c255b76f18d3b10",
+      "context_id": "fa99e08c9a04bcb32050d52e",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -1183,151 +1328,18 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 4.2917,
       "source": "arxiv",
-      "source_context_sha256": "9ef862e617366c7f49c6098d897c798b317ba436e4c552a19d748de5f14643eb",
-      "source_published": "2026-10-21T10:55:55Z",
-      "source_updated": "2026-10-21T10:55:55Z",
-      "summary": "We study inhomogeneous random graphs on $n$ vertices with independent Pareto weights of parameter $α>0$ and connection probabilities $\\min(\\varepsilon_n W_iW_j, 1)$. Our main focus is the infinite-mean regime $0<α<1$. Under the scaling $n\\varepsilon_n^α=λ$, with $λ>0$ fixed, the global architecture of the graph is entirely governed by the Poisson point process $Π$ of rescaled extreme weights. In particular, the size of the largest component, divided by $n$, converges to a non-degenerate random variable expressed as an explicit functional of $Π$. Through the point process $Π$, we also characterize the exact limiting connectivity probability, uncovering a non-sharp connectivity threshold. The second largest component and the diameter of the largest component are bounded with high probability. The distance between two uniformly chosen vertices in the largest component is at most three with high probability. We also prove convergence of the point process of rescaled degrees and identify the limiting distribution of the maximum degree. For completeness, we obtain expected degree asymptotics, typical degree limits and connectivity regimes for all $α>0$. Due to the failure of classical branching process approximations in the infinite-mean regime, our approach relies fundamentally on analyzing the extreme weight environment $Π$.",
+      "source_context_sha256": "64da183221017bc8633f331ddaff198a794031db5c44c39b8aaf08d14d486186",
+      "source_published": "2026-10-21T13:34:03Z",
+      "source_updated": "2026-10-21T13:34:03Z",
+      "summary": "Vision-language-action (VLA) policies need to recognize gaps in their training knowledge to request useful demonstrations or assistance in new situations, especially when failures are costly. Disagreement within an ensemble of independently trained policies can guide these decisions, but requires training and running multiple policies. We propose post-hoc kernel-variance heads that estimate epistemic uncertainty from the embeddings of a single policy. Each head computes the conditional variance of a Gaussian process conditioned on embeddings from the training demonstrations. Fitting requires no regression targets or gradient updates and leaves the policy unchanged. In experiments with SmolVLA on LIBERO-10, the kernel variance heads perform competitively with two-policy ensemble scores in task-level correlation with task success, in demonstration acquisition during active learning, and in referral to a stronger supervisor policy as a proxy for human assistance. For SmolVLA, the head on the vision-language backbone reduces uncertainty-scoring time by up to approximately a factor of 50 compared with ensemble scores, while also substantially reducing setup costs. We also show that the established evaluation protocol on LIBERO-10 primarily rewards recognition of coverage differences between tasks, while execution variability weakens assessment of within-task rankings. Thus, controlled perturbations provide a complementary evaluation: modality-specific heads identify unfamiliar camera, instruction, or state inputs, while fused heads can detect unfamiliar combinations of individually familiar inputs. With a supervisor proxy trained on the evaluated perturbation families, the decoder head improves within-task referral over ensemble disagreement. These findings show that useful uncertainty estimates for adaptive robot learning can be obtained from a single policy.",
       "tags": [
-        "math.PR"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Inhomogeneous random graphs: how heavy tails reshape connectivity",
-      "url": "https://arxiv.org/abs/2610.29564v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "71bf2b672033870f97d3f23d",
-      "context_id": "c993305c7e79ea4ffa58b4a2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "2c9d935467b643f6827e3bcd05e1df6a3715ef8f8d981504ef2d312da840da5d",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Background: &nbsp;Sodium-glucose cotransporter-2 inhibitors (SGLT2i) and glucagon-like peptide-1 receptor agonists (GLP-1RAs) have revolutionized the therapeutic landscape of type 2 diabetes mellitus (T2DM), heart failure (HF), and chronic kidney disease (CKD). Beyond their primary glucose-lowering actions, both drug classes exert profound organ-protective effects. Objective: &nbsp;This systematic review synthesizes current evidence on the molecular, cellular, and physiological mechanisms driving the cardio- and nephroprotective outcomes of SGLT2i and GLP-1RAs. Methods: &nbsp;A systematic literature search was conducted across PubMed/MEDLINE, Scopus, and Web of Science databases following PRISMA guidelines for studies published between 2018 and 2026. Results: &nbsp;SGLT2i act primarily via hemodynamic restoration, reducing intraglomerular pressure through tubuloglomerular feedback (TGF), shifting myocardial energetics toward ketone utilization, inhibiting Na⁺/H⁺ exchanger 1 and 3 (NHE1/NHE3), and suppressing renal/cardiac inflammation and fibrosis. GLP-1RAs act predominantly via anti-inflammatory pathways, endothelial protection, reduction of oxidative stress, inhibition of vascular smooth muscle cell proliferation, and attenuation of renal hyperfiltration via systemic anti-atherosclerotic pathways. Conclusion: SGLT2i and GLP-1RAs display distinct yet complementary molecular pathways. Their synergistic mechanism provides a strong rationale for combined therapy to achieve optimal cardiorenal protection in clinical practice.",
-      "tags": [
-        "SGLT2 inhibitors; GLP-1 receptor agonists; Cardioprotection; Nephroprotection; Tubuloglomerular feed"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MOLECULAR MECHANISMS UNDERLYING THE CARDIO- AND NEPHROPROTECTIVE EFFECTS OF SGLT2 INHIBITORS AND GLP-1 RECEPTOR AGONISTS: A SYSTEMATIC REVIEW",
-      "url": "https://zenodo.org/records/23532661"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "009b2e06da9a64f397508881",
-      "context_id": "a074f3002395af9e0be93265",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "516dd0d43d8020a13c3c30df2cef6a24f1b7495b728df84ed9064dd463aaffc1",
-      "source_published": "2026-10-20T18:12:07Z",
-      "source_updated": "2026-10-20T18:12:07Z",
-      "summary": "World models let agents compare imagined outcomes before acting, but an agent must still decide which alternatives to explore and when a proposed plan should replace its learned policy. We introduce SDI (Sibling Disagreement in Imagination), which connects these decisions through a shared actor-based reference. SDI compares action sequences imagined from the same model state, using repeated rollouts of the actor's own sequence to measure variation under fixed behavior. This reference scales both the spread across candidate returns, which provides an exploration signal, and a proposed plan's predicted advantage, which governs action acceptance. The agent executes a planned action when its advantage exceeds the reference variability by a fixed factor; otherwise, it follows the actor. SDI reuses the base agent's world model, actor, and critic without requiring an additional disagreement ensemble. Exploration and planning guide training data collection, while evaluation uses the learned actor alone. Across Meta-World, Adroit, and DM-Control, SDI achieves a higher observed task-average score than every compared baseline in each suite and matches or exceeds the strongest baseline's performance on 15 of 18 tasks. Component ablations and robustness analyses further examine the roles of exploration, planning exposure, and action acceptance. Paired evaluations from identical simulator states show that the gate improves both recovery from actor failures and preservation of successful behavior relative to ungated planning, while substantially reducing return degradation. Together, these results support comparing imagined alternatives against a shared actor reference as a unified approach to exploring and planning with world models.",
-      "tags": [
+        "cs.RO",
         "cs.LG",
-        "cs.AI"
+        "stat.ML"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Second Thoughts: Exploring and Planning through Comparative Imagination in World Models",
-      "url": "https://arxiv.org/abs/2610.28779v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ab20e8093861484028080b84",
-      "context_id": "96fd94b5a8439a73ddb5cdf4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "arxiv",
-      "source_context_sha256": "4c23608c5b2bd8087e329e203a2985e9a1c4fb21f18a12eab5822f36db13c080",
-      "source_published": "2026-10-21T08:59:02Z",
-      "source_updated": "2026-10-21T08:59:02Z",
-      "summary": "World models are increasingly used for planning, where a planner ranks candidate actions by returns imagined by the model. However, these models are judged mainly by how well they render frames, even though a visually faithful rollout can still assign the wrong return. To identify where this mismatch arises, we introduce a transition-level diagnostic that replaces imagined transitions with real ones and measures the reduction in return error against a budget-matched random control. Our analysis yields two findings. (1) Event transitions, the few steps where a reward is earned or an episode ends, are rendered as well as other steps (median pixel-error ratio 0.85), yet restoring them removes a median of 70% of the return error. In contrast, restoring transitions with the largest MSE, SSIM or LPIPS error removes less than a random choice. Across the 44 Atari-100k model--collection pairs that pass our reliability checks, including three released families, event patches outperform random patches in 39 (sign test p=1.4 x 10^{-7}), with a median gain of +44 percentage points. (2) The remaining error is structured: a complementary patch separates errors at true events from those elsewhere, while an eight-step timing tolerance recovers few events missed by our deterministic models. This structure also guides repair: a rule recorded before four repair outcomes were known predicts when a diffusion model repairs these failures. Event patches improve plan ranking, and the same concentration appears on control tasks with rare reward events.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Events, Not Pixels: Where World Models Get the Return Wrong",
-      "url": "https://arxiv.org/abs/2610.29435v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4aa488aa50cc7930982fde32",
-      "context_id": "8f14fa534a7fa704ccd9fd6e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "148f9fd87e71ec35d29afea360fb87c52b4585aea607cc24724281ce09f82253",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Terra Scientific Pipelines Service Overview Terra Scientific Pipelines Service, or teaspoons, facilitates running a number of defined scientific pipelines on behalf of users that users can't run themselves in Terra. The most common reason for this is that the pipeline accesses proprietary data that users are not allowed to access directly, but that may be used as e.g. a reference panel for imputation. Supported pipelines Current supported pipelines are: [in development] Imputation (TODO add link/info) Architecture WIP architecture doc Linked LucidChart Development This codebase is in initial development. Requirements This service is written in Java 17, and uses Postgres 13. To run locally, you'll also need: jq - install with brew install jq vault - see DSP's setup instructions here Note that for Step 7, &quot;Create a GitHub Personal Access Token&quot;, you'll want to choose the &quot;Tokens (classic)&quot; option, not the fine-grained access token option. Java 17 - can be installed manually or through IntelliJ which will do it for you when importing the project Postgres 13 - multiple solutions here as long as you have a postgres instance running on localhost:5432 the local app will connect appropriately Postgres.app https://postgresapp.com/ Brew https://formulae.brew.sh/formula/postgresql@13 Tech stack Java 17 temurin Postgres 13.1 Gradle - build automation tool SonarQube - static code security and coverage Trivy - security scanner for docker images Jib - docker image builder for Java Local development To run locally: Make sure you have the requirements installed from above. We recommend IntelliJ as an IDE. Clone the repo (if you see broken inputs build the project to get the generated sources) Run the commands in scripts/postgres-init.sql in your local postgres instance. You will need to be authenticated to access Vault. Run scripts/write-config.sh Run ./gradlew bootRun to spin up the server. Navigate to http://localhost:8080/# If this is your first time deploying to any environment, be sure to use the admin endpoint /api/admin/v1/updatePipelineWorkspaceId/{pipelineName}/{workspaceId} to set your pipeline's workspace id. Workspace id can be found through the terra ui workspace dashboard or through the Rawls GET workspace endpoint. Local development with debugging If using Intellij (only IDE we use on the team), you can run the server with a debugger. Follow the steps above but instead of running ./gradlew bootRun to spin up the server, you can run (debug) the App.java class through intellij and set breakpoints in the code. Be sure to set the GOOGLE_APPLICATION_CREDENTIALS=config/tsps-sa.json in the Run/Debug configuration Environment Variables. Running Tests/Linter Locally Testing Run ./gradlew service:test to run tests Linting Run ./gradlew spotlessCheck to run linter checks Run ./gradlew :service:spotlessApply to apply fix any issues the linter finds (Optional) Install pre-commit hooks [scripts/git-hooks/pre-commit] has been provided to help ensure all submitted changes are formatted correctly. To install all hooks in [scripts/git-hooks], run: git config core.hooksPath scripts/git-hooks Running SonarQube locally SonarQube is a static analysis code that scans code for a wide range of issues, including maintainability and possible bugs. Get more information from DSP SonarQube Docs If you get a build failure due to SonarQube and want to debug the problem locally, you need to get the sonar token from vault before running the gradle task. export SONAR_TOKEN=$(vault read -field=sonar_token secret/secops/ci/sonarcloud/tsps) ./gradlew sonarqube Running this task produces no output unless your project has errors. To generate a report, run using --info : ./gradlew sonarqube --info Connecting to the database To connect to the Teaspoons database, we have a script in dsp-scripts that does all the setup for you. Clone that repo and make sure you're either on Broad Internal wifi or connected to the VPN. Then run the following command: ./",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "github.com/DataBiosphere/terra-scientific-pipelines-service/SubsetVcfByBedFile",
-      "url": "https://zenodo.org/records/23538136"
+      "title": "Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies",
+      "url": "https://arxiv.org/abs/2610.29730v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1659,6 +1671,42 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7d906203770ed6176e0bcaf8",
+      "context_id": "97bd15a1a31d52c5fc11dc5f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "96930bcfd812bf72d6af656d65f79217b7b6c3e00a3bc8ba175c3a224b2de8ef",
+      "source_published": "2026-10-21T16:34:28Z",
+      "source_updated": "2026-10-21T16:34:28Z",
+      "summary": "Long-term memory for multimodal agents remains challenging, as it must preserve fine-grained visual evidence while tracking entity evolution across sessions. Existing abstraction-based memories compress images into text, often discarding visually discriminative details, whereas pixel-preserving memories retain raw observations but struggle to reliably associate diverse observations with persistent entity identities and track their evolving states. To address these limitations, we propose MHG-Mem, a multimodal hypergraph memory that jointly organizes entity identity, state evolution, and provenance to visual evidence. Specifically, MHG-Mem represents distinct entity mentions and their observed facts as individual nodes, grouping identity-consistent mentions and facts through occurrence hyperedges. It then synthesizes aspect-specific evolution states from these grouped observations and links them to supporting entities, facts, and source evidence through evolutionary and evidential hyperedges. To navigate this structured memory, we introduce hypergraph-based agentic search, which adaptively selects an entry layer, traverses typed hyperedges across memory levels, and inspects source observations when fine-grained verification is required. These designs support both detailed visual verification and reasoning over cross-session state changes. Extensive experiments across three benchmarks demonstrate the effectiveness of MHG-Mem, improving performance by 8.20-9.98% over the strongest baseline.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Remembering Through Change: Provenance-Preserving Hypergraph Memory for Multimodal Agents",
+      "url": "https://arxiv.org/abs/2610.29995v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "fe423f58dbe3b3f733e6d5fb",
       "context_id": "7e581065dc82d162fca5a052",
       "delivery_preview_only": true,
@@ -1714,8 +1762,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "0674555d68bcc3d836ab2dc1",
-      "context_id": "0ebe093cc106e8d7f5304d0f",
+      "candidate_id": "24adc549d95ca6dee052e4ed",
+      "context_id": "55f3b8703389ea317e006909",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1737,54 +1785,17 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 10.1667,
       "source": "arxiv",
-      "source_context_sha256": "9322eb268f74cff816601780039addab1f6d4cceffc47bf23e84efdcaa46164a",
-      "source_published": "2026-10-21T08:03:24Z",
-      "source_updated": "2026-10-21T08:03:24Z",
-      "summary": "Quantization-aware training (QAT) aims to recover reasoning capabilities in low-bit large language models (LLMs). Existing recipes typically supervise the quantized student with the original full-precision model on fixed response sequences. However, the resulting low-bit quantized models still struggle on long-horizon reasoning tasks and often fail to terminate within a token budget that suffices for the full-precision model. We identify two challenges in closing this gap. First, fixed-response supervision leaves a mismatch between training prefixes and those encountered during student generation, and this trajectory divergence grows as responses lengthen. Second, on its own prefixes, the student underpredicts some next-token candidates and overpredicts others, and this distributional misalignment becomes more frequent at high-entropy prefixes. We present OnQ, a low-bit recovery pipeline that combines on-policy distillation and candidate-wise Dynamic KL. Starting from block-wise calibration, the quantized student generates responses and receives full-precision teacher supervision on its own prefixes. Dynamic KL weights forward and reverse KL by each candidate's teacher-student probability ratio to balance correction of under- and overprediction. Across Qwen3-1.7B, 4B, and 8B at 2- and 3-bit precision, OnQ achieves the highest nine-benchmark average, with the largest gains on long-horizon reasoning benchmarks. At 2 bits, it outperforms every baseline on every benchmark at every model size, improving the Qwen3-8B average by 10.26 points over the strongest baseline. It also produces shorter responses with fewer truncations and repetitive errors.",
+      "source_context_sha256": "863b680fdc9bf1ebf09e97d31fe8c7bba14703e8123f8ab171779e1fa3d9e6e4",
+      "source_published": "2026-10-21T12:35:47Z",
+      "source_updated": "2026-10-21T12:35:47Z",
+      "summary": "Accurate short-term forecasting of atmospheric seeing is of significant interest for astronomical observations and free-space optical communication systems, where rapid variations in optical turbulence can affect system performance and operational planning. In this work, we benchmark machine learning models for predicting atmospheric seeing up to two hours in advance, with a particular focus on probabilistic forecasting and uncertainty quantification. We compare two probabilistic approaches, Gaussian Processes (GPs) and a normalizing-flow- based model (FloTS), against deterministic recurrent neural network (RNN) and long short-term memory (LSTM) baselines. All models are trained and evaluated on seeing measurements from the Maunakea summit. We assess the models using both deterministic metrics, including the root mean square error and the Pearson correlation coefficient, and probabilistic metrics that evaluate the quality and calibration of predictive uncertainty estimates. The results show that deep learning approaches outperform standard recurrent networks for short-term forecasting, with LSTM and FloTS achieving the best overall predictive accuracy. While Gaussian Processes provide a useful probabilistic baseline, their predictive distributions are limited by the Gaussian assumption. FloTS combines competitive forecasting accuracy with flexible uncertainty quantification and produces the most informative probabilistic forecasts.",
       "tags": [
-        "cs.CL",
-        "cs.LG"
+        "cs.LG",
+        "astro-ph.IM"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories",
-      "url": "https://arxiv.org/abs/2610.29378v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b8c651dd05bbca90e8406f08",
-      "context_id": "997f59f0a2cb014044fc7b91",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0833,
-      "source": "zenodo",
-      "source_context_sha256": "48f1e367bda523403b33edac90492a48ae44106e99be032baeea90919dbda8d7",
-      "source_published": "2026-10-21",
-      "source_updated": "",
-      "summary": "Description: Arduino firmware for the control unit of a low-cost, marble-type gas&ndash;water equilibrator used for continuous measurement of dissolved pCO₂ in inland waters. The firmware controls the water and gas pumps, reads a SenseAir K30 NDIR CO₂ sensor and a DS18B20 water-temperature probe, and logs the data to an SD card with timestamps from a real-time clock. It accompanies the manuscript &ldquo;A microcontroller-based, low-cost platform for continuous pCO₂ measurements in lakes and reservoirs&rdquo; (Grochocki and Mannich, Limnology and Oceanography: Methods, under review). Hardware &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arduino Uno (ATmega328P) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SenseAir K30 NDIR CO₂ sensor, 0&ndash;10,000 ppm (UART/Modbus via SoftwareSerial; RX pin 3, TX pin 2) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DS18B20 waterproof temperature probe (OneWire, pin 6) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DS1307 real-time clock (I&sup2;C) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SD card module (SPI, CS pin 10) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Two-channel relay module: water pump (pin 7) and gas pump (pin 5) Operating cycle 1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch on the water and gas pumps. 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For the duration of a measurement cycle, read CO₂ and water temperature at a fixed interval and append each reading to a daily file on the SD card. 3. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch off both pumps and stay idle until the next cycle. Configuration Timing parameters are read at boot from a config.txt file on the SD card, one key=value per line: &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; measurementInterval : idle time between cycles (minutes) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataCollectionInterval : time between readings (seconds) &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fullMeasurementTime : duration of each cycle (minutes) If the file does not exist, the firmware creates one with default values, which take effect at the next boot. The values hard-coded in the sketch are a 10-min cycle, 5-s readings and a 45-min idle period. Output One comma-separated text file per day, named YY-MM-DD.txt , with the header Date Time, CO2 (ppm), Water Temp (C) . Timestamps are written as YYYY-M-D H:M:S , without zero padding. Each file is opened and closed at every write, so data are not lost if power is cut. Notes &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The CO₂ values logged are the raw K30 output. Calibration against a reference analyzer, conversion to pCO₂ (water-vapor and pressure correction) and conversion to dissolved CO₂ are done in post-processing, as described in the accompanying paper (Eqs. 1&ndash;5). &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the RTC has not been set, it is set at first boot to the compile time of the sketch. &middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The K30 automatic baseline correction (ABC) assumes regular exposure to ~400 ppm air, so it should be disabled for underwater use. Required libraries: SD, SPI, Wire, SoftwareSerial (Arduino core); OneWire; DallasTemperature; TimeLib; DS1307RTC.",
-      "tags": [
-        "PCO2",
-        "arduino"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Arduino firmware for the control unit of a low-cost, marble-type gas–water equilibrator for continuous measurement of dissolved pCO2",
-      "url": "https://zenodo.org/records/23483283"
+      "title": "Probabilistic Machine Learning for Short-Term Atmospheric Seeing Forecasting",
+      "url": "https://arxiv.org/abs/2610.29654v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
