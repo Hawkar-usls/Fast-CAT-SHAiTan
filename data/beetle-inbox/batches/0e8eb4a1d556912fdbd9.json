@@ -1,0 +1,1784 @@
+{
+  "batch_id": "0e8eb4a1d556912fdbd9",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "db61ee203dd915fbab78652a",
+      "context_id": "870591f49291fd503c85622a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0833,
+      "source": "zenodo",
+      "source_context_sha256": "a71de66a4ea2a233d299d49694f365496e21150fc742fd7027f258dd6ae2c5a4",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Unrefereed research candidate. A random walk is robust if an adversary who may change every transition probability by a small relative amount cannot make it much slower to reach its targets. Zuckerman (Markov chain robustness, ITCS 2026, LIPIcs 362, 118) conjectured that the largest safe relative change is at least a constant divided by the graph's diameter (Conjecture 1.16). This package shows the conjecture is false. A graph can have short routes that the walk almost never uses; a small fixed bias away from a target accumulates between rare visits to them and depletes the target's stationary mass, and Kac's formula turns this into a long hitting time. For explicit cubic graphs J_b on N vertices with diameter O(log N), every effective resistance is at most 684 (proof), and a fixed perturbation of size 1/b, with error times diameter tending to zero, multiplies the worst-case hitting time by a factor of order b; the robustness is O(N^(-1/3)). For explicit 3m-regular graphs of diameter exactly three, the mixing time is at most 50(m+1), so with Zuckerman's mixing-time theorem the robustness lies between constant multiples of N^(-1/2) and N^(-1/4) (proof; not matching). An exact computation shows a 5.80-fold slowdown on a 5,995-vertex member with error times diameter 0.74. A diameter-two example, a reversible-perturbation bound and a comparison with Kemeny's constant are included. The archive contains the manuscript (PDF and LaTeX), seven verification scripts with a driver that reproduces the reference JSON results byte for byte under python -B -O, semantic negative controls, figures and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean replay in a separate copy; internal AI-assisted review, AI-assisted adversarial reviews (OpenAI gpt-5.6-sol; Anthropic Claude Opus 5.5; OpenAI gpt-6-astra) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
+      "tags": [
+        "Markov chains",
+        "random walks",
+        "hitting times",
+        "robustness",
+        "relative perturbations",
+        "effective resistance",
+        "mixing time",
+        "cubic graphs",
+        "counterexample"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Small diameter does not control hitting-time robustness",
+      "url": "https://zenodo.org/records/23575572"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d9db9598e8bde4ebde8824d1",
+      "context_id": "a47dc2c696f3886398361429",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "rup",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.625,
+      "source": "zenodo",
+      "source_context_sha256": "0c754ab415f79eec5ee960ccb82d8279e24bba1fac1c112d27858788dec3fd55",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "TRUSTWORTHY AUTONOMOUS BIOLABORATORIES THROUGH MICROROBOTICS AND QUANTUM SENSING AT THE LIMIT Replayable Experiments x Permission Governance x External Metrology STARLI Research Institute XXIX - Flagship Research Monograph 20 Can an autonomous biolaboratory become scientifically useful without acquiring the authority to redefine its own permissions, validate its own evidence, or release untraceable measurements? This nonclinical research monograph investigates a bounded laboratory architecture connecting microrobotic sample handling, quantum-enabled and classical sensing, independent metrological reference chains, experiment replay, physical safe stopping, and human authority. Its central proposition is that reliable autonomy is a property of the entire evidence pathway rather than of any single robotic manipulator or AI model. A laboratory result is eligible for release only when sample identity and integrity, authorized execution, traceable references, justified uncertainty limits, and external acceptance are all demonstrated. An apparently successful action is not equivalent to a scientifically accepted sample. Digital replay does not replace physical replication, cryptographic event integrity does not guarantee sensor truth, and a quantum hardware label does not establish a practical sensing advantage. The research design is developed across 82 chapter-level inquiries with five independently paginated investigations per chapter, 30 connected mathematical research plates, 200 distinct Research Gates, and 33 Phoenix Answer Embryos. The chapters address typed authority graphs, specimen provenance, sample exposure, closed-chip physics, covariance-aware sensing, AI planning within finite action spaces, common-cause fault injection, external interlocks, blinded classical benchmarks, evidence DAGs, cross-site replication, data retention, and responsible system retirement. The proposed minimum experimental prototype uses a closed microfluidic chip with interchangeable handling modules, two independently referenced readout channels, simulated or inert-tracer specimens, a separate audit service, and a physically verifiable stop mechanism. Proposed tests include unauthorized-action challenges, hidden calibration drift, interrupted events, sample contamination, unannounced network partitions, and independent laboratory replay or rerun. DOI-linked scientific references establish the relevant literature in automated laboratories, microrobotics, quantum sensing, uncertainty metrology, FAIR data stewardship, and computational reproducibility. They do not independently validate the integrated system proposed here. SCIENTIFIC STATUS AND LIMITATIONS This book is a hypothesis-forming nonclinical research architecture. It reports no completed microrobotic or quantum biosensing experiments, no demonstrated clinical performance, no universal quantum advantage, and no autonomous system capable of authorizing itself. Statistical models, formulas, and decision policies require experimental verification, specialized review, and appropriate boundary conditions. A failed external reference, unavailable provenance chain, or revoked permission requires abstention rather than inference by convenience. STARLI RESEARCH PHILOSOPHY A trustworthy laboratory must remain answerable to evidence outside itself. Autonomy becomes scientifically meaningful when an experiment can be stopped, questioned, reconstructed, and handed to future researchers who retain the right to refuse its original assumptions.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "TRUSTWORTHY AUTONOMOUS BIOLABORATORIES THROUGH MICROROBOTICS AND QUANTUM SENSING AT THE LIMIT Replayable Experiments x Permission Governance x External Metrology STARLI Research Institute XXIX - Flagship Research Monograph 20 Can an autonomous biolaboratory become scientifically useful without acqui",
+      "url": "https://zenodo.org/records/23572483"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "2fc92ae292ccfd2579a40faf",
+      "context_id": "298e6fe7a4170a94cd6084b8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.625,
+      "source": "arxiv",
+      "source_context_sha256": "7eb0f568396a7c98d79f33ff0e9b220bed451eb127e1cb62db2dc9418c9f8a8b",
+      "source_published": "2026-10-21T11:27:25Z",
+      "source_updated": "2026-10-21T11:27:25Z",
+      "summary": "Reliable video perception over bandwidth-constrained wireless links requires transmitting information that the receiver cannot already recover from its evolving scene representation. This paper introduces WorldGT, a world-model-guided semantic packet transmission framework that prioritizes information according to its contribution to the receiver's perception. A shared feature-space world model predicts the receiver's scene state through affine motion compensation and learned residual displacement, while sender-side verification identifies reusable predictions. An acknowledgment-synchronized receiver twin estimates task-impact scores through two counterfactual evaluations, guiding packet selection and unequal error protection over LDPC-coded wireless channels. A compact 3-bit feature representation increases spatial coverage under stringent bandwidth constraints, while predictive fallback sustains perception during packet outages. Experiments on KITTI and VisDrone under Rayleigh fading and AWGN demonstrate substantial gains in low-SNR conditions. On KITTI at a 4.13% reference bandwidth budget, WorldGT achieves 47.5% J&F at 0 dB Rayleigh SNR, outperforming H.264 by 11.3 percentage points. Controlled ablations show that world-model prediction contributes up to 8.7 points under Rayleigh fading. Object-detection experiments further demonstrate the transferability of receiver-relative predictive transmission across visual perception tasks. These results establish world-model-guided, receiver-state-aware transmission as an effective approach to robust video perception under severe communication constraints.",
+      "tags": [
+        "cs.MM"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Guess and Send: World-Model-Guided Semantic Packet Transmission for Robust Video Perception",
+      "url": "https://arxiv.org/abs/2610.29587v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4eaee6553ccc8b60ba7192a4",
+      "context_id": "41f88db72052bab1e7252b20",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "rup",
+        "sat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.25,
+      "source": "zenodo",
+      "source_context_sha256": "2537fcc219f234fe8a6d217791f31171b1428195525a149645cabac888fc8d85",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Abstract &mdash; Universities must simultaneously contain costs, decarbonise their estates, and safeguard teaching, yet procurement of teaching-critical equipment still follows lowest-price, replace-on-failure practice. This paper develops a digital-twin framework for circular procurement in higher education, in which repair, refurbishment, inter-departmental asset sharing, and replacement are optimised jointly against lifecycle cost, embodied carbon, and pedagogical disruption. Asset condition, utilisation, and failure signals from campus twins are fused through Bayesian state estimation into a two-stage robust mixed-integer programme built on a budgeted uncertainty set over teaching demand. A computational study of a synthesised 1,240-asset estate, parameterised from published university estates statistics, life-cycle inventories, and manufacturer data, compares the framework with business-as-usual and single-objective policies over ten years. The joint robust policy lowers total cost of ownership by 18.7%, embodied procurement carbon by 41.3%, and expected lost teaching hours by 57.6%, with a 35.8% reduction in tail-risk disruption relative to the deterministic optimum; asset sharing absorbs nearly a third of incremental demand without new purchases. Results are stable across carbon-price, disruption-value, and demand-volatility sensitivities, giving estates teams an audit-ready pathway from smart-campus monitoring to circular, teaching-aware procurement. Keywords: Circular procurement, digital twins, robust optimisation, teaching continuity, university estates.",
+      "tags": [
+        "Circular procurement, digital twins, robust optimisation, teaching continuity, university estates."
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Circular Procurement Through Digital Twins: Balancing University Costs, Carbon, and Teaching Continuity",
+      "url": "https://zenodo.org/records/23501094"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "80593440e0b5fb1f84a268de",
+      "context_id": "f198807630af5bb8abcd92fd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "9ab2936b7fab8fddde5b62cc58ee9576eee2a0d71f28d9dae4c15015c66ed262",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "This document defines a deterministic conformance profile and test-vector corpus for Evidence Qualification Receipts (EQRs). The profile, named eqr-core-1, makes receipt conformance mechanically reproducible: strict JSON structure, SHA-256 digest encoding, UTC timestamp handling, evidence-reference integrity, requirement-state derivation, and three-valued PASS, FAIL, or INDETERMINATE results are checked by a closed algorithm. The profile is intentionally narrow. Conformance does not establish that evidence is true, that a proposition is scientifically valid, that an issuer is trustworthy, or that an action is authorized. The goal is interoperable verification of receipt semantics, not promotion of conformance into substantive truth. Status: IETF Internet-Draft draft-watts-eqr-conformance-03 , an individual submission (not adopted by any working group); a work in progress, not an IETF standard or RFC. Revision -02 is the latest revision posted on the Datatracker (10.5281/zenodo.23524504 / 23524796 on Zenodo). -03 is not yet posted on the Datatracker: an API submission on 2026-10-22 was refused because an earlier upload of -03 (submission 170699, 2026-10-21, state 'uploaded', never completed) is still open; it must be cancelled or completed at https://datatracker.ietf.org/submit/status/170699/ first. Source and validation: based on the author's draft-watts-eqr-conformance-03-nits-fixed.xml (author name in ASCII, full BCP 14 keyword list, wrapped JSON). Mechanical markup fixes only: two JSON example lines re-indented by two spaces to fit 72 columns; the four-row 'Artifact digests' table (too wide for text output) recast as a definition list with identical file names and SHA-256 values; front date set to 22 October 2026. Validated with xml2rfc 3.34.1 (no errors, no warnings) and idnits 3 in submission mode (0 errors, 0 warnings, 0 comments). The author's review package (vectors, schema, verifier, second oracle, tests) is attached unchanged; its recorded local results are 21/21 vectors passing and 20/20 oracle agreements (independent replication NOT RUN). Published per the author's standing approval; source: iCloud Recents files dated 2026-10-21, downloaded 2026-10-22. Copyright / license: The document is an Internet-Draft subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents ( https://trustee.ietf.org/license-info ). Code Components extracted from the document must include Revised BSD License text as described in Section 4.e of the Trust Legal Provisions. No Creative Commons license is granted; the Zenodo license field ('other open') refers to these IETF Trust provisions. Files: draft-watts-eqr-conformance-03.pdf (sha256 72bc563d5a836394a4472e1eae027bf98f3a7d401636751e24396c9c871ff729) draft-watts-eqr-conformance-03.xml (sha256 d4ac13a56f999c9c48f55e4aca476602cda6e91e48bba8b9040879ea0c323c0a) draft-watts-eqr-conformance-03.txt (sha256 3eeeb08addfb319a22d23d144130e32e2c36937223860a74cd92f52a9fee22d5) draft-watts-eqr-conformance-03-review-package.zip (sha256 30a5cd8751b61b491cf537e06e863a3cee537c0bfbab3b1fef3c07e28b561fef)",
+      "tags": [
+        "IETF",
+        "Internet-Draft",
+        "individual submission",
+        "draft-watts-eqr-conformance",
+        "evidence qualification receipts",
+        "conformance",
+        "test vectors"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Deterministic Conformance Profile and Test Vectors for Evidence Qualification Receipts (IETF Internet-Draft draft-watts-eqr-conformance-03)",
+      "url": "https://zenodo.org/records/23572703"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3931706bf19b762e2334f219",
+      "context_id": "e129fa040d45a5eef59d141d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "eb7fe706abb034542206c2ff2ca32b210ec6a1ce735941860ac6aa470b523750",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Code, raw and processed data, production sources, figure scripts, provenance and verification for temporal filtering, dispersive stiffness, compacton collisions, corrected generalized-alpha damping experiments, Jacobian scaling, robustness screens, coherent-core benchmarks and accuracy-cost tradeoffs.",
+      "tags": [
+        "compactons",
+        "nonlinear dispersive waves",
+        "time integration",
+        "L-stability",
+        "Petrov-Galerkin",
+        "Direct-WENO",
+        "reproducibility",
+        "generalized-alpha",
+        "Jacobian spectra",
+        "MATLAB",
+        "robustness screening"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reproducibility code and data for Temporal filtering of dispersive stiffness in compacton collisions: coherent-scattering benchmarks and accuracy–cost tradeoffs",
+      "url": "https://zenodo.org/records/23554476"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3b6fa1e9ef79e323f228a588",
+      "context_id": "c40eb86b3fe4312e7af9f3e2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "4cb88e4a633eec4923b801736529b0416dfbc867376c32d81b3077a088e5731d",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "A falsifiable, typed model separates ontological categories, epistemic states, evidence, consensus, uncertainty, provenance, and authority. The proposed protocol forbids consensus-only promotion of physical claims and requires traceable evidence for changes in verification status. Novelty and empirical advantage remain unestablished. The record also includes EM-001, a 100-case synthetic pilot (20 per domain: physics, medicine, finance, law, subjective experience) comparing majority vote, evidence-weighted scoring and RKCS. Illustrative synthetic accuracy: majority 0.30, evidence-weighted 0.70, RKCS 0.94 — labels are rule-derived and RKCS is scored against an oracle aligned with its own rules (circularity risk), so this is a software smoke test, not a performance claim. Preregistration draft NOT REGISTERED; human adjudication NOT RUN. Status: frozen proposed specification plus deterministic reference checker (7/7 synthetic unit tests pass), 2026-10-20; AI-assisted formulation. Source: the author's iCloud Recents (files dated 2026-10-21), downloaded 2026-10-22; published on Zenodo per the author's standing approval to publish all of his research, including items marked confidential/proprietary. The PDF was compiled with pdflatex from the package's unmodified main.tex (no PDF existed). The v0.1 package ZIP is also contained inside the EM-001 ZIP (folder rkcs_v0_1/ ); both original ZIPs are deposited. IETF status: converted by the author's assistant into the RFCXML v3 Internet-Draft draft-watts-reality-knowledge-consensus-separation-00 (intended status Informational), validated with xml2rfc 3.34.1 (no errors or warnings) and idnits 3 (0 errors, 0 warnings; 1 comment for the non-ASCII author name). Submitted to the IETF Datatracker on 2026-10-22 as submission 170763 ( status ); it is awaiting the author's email confirmation and is not posted until confirmed. Internet-Drafts are works in progress, not IETF standards. The I-D text is a faithful conversion of the paper (math rendered as plain text; the figure described in prose); the confidentiality handling label was left out of the I-D because it cannot carry one under BCP 78, and IANA/Security Considerations sections were added. License: the research package's own LICENSE file is retained unchanged (it carries the author's 'CONFIDENTIAL — PROPRIETARY' handling label and reserves rights; the author has since approved open publication). No Creative Commons license is granted; the Zenodo license field ('other open') refers to these terms. The attached Internet-Draft files ( .xml , .txt , .pdf named draft-watts-* ) are subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents ( https://trustee.ietf.org/license-info ). Files: RKCS_v0.1_Reality_Knowledge_Consensus_Separation.pdf (sha256 69654afe15c797d033dfc6794bdef8f51e79ca27f570ae05655eec68ab244fb7) RKCS_v0.1_research_package.zip (sha256 f11948ac63ac065aa4330fecd0ed0eafe8a04f9f77a3f2f600ceea3bfca50cb0) RKCS_EM001_100_claim_synthetic_pilot.zip (sha256 924530a25e59148918118ba784df9f546d88169efc96ab7a0056a54c0f25428c) draft-watts-reality-knowledge-consensus-separation-00.xml (sha256 445e36c4f4da9212110b3ea4e8f603ba5ceba32488db62608913bd8738282976) draft-watts-reality-knowledge-consensus-separation-00.txt (sha256 348b586a99ee9cbd118e333607f0a7c7f9eb4b0e1064ae321a2e8268a58ee944) draft-watts-reality-knowledge-consensus-separation-00.pdf (sha256 6bdd47bf2b5b26c8a04971eb064246092e9a2bc7e8fea5aa00431f1d4dd5b861)",
+      "tags": [
+        "RKCS",
+        "claim verification",
+        "consensus",
+        "epistemic status",
+        "evidence provenance",
+        "preregistration",
+        "synthetic benchmark",
+        "IETF",
+        "Internet-Draft"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "RKCS v0.1: Reality–Knowledge–Consensus Separation Framework, with the EM-001 100-Claim Synthetic Pilot",
+      "url": "https://zenodo.org/records/23572701"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "582d881ceb2c348d00dd96db",
+      "context_id": "b421ea7a77b7a278aa735f47",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "arxiv",
+      "source_context_sha256": "36007752ea171654a3270093c4491dc13d242d6605c6af2020514e89b91b4a2f",
+      "source_published": "2026-10-21T09:51:01Z",
+      "source_updated": "2026-10-21T09:51:01Z",
+      "summary": "Process reward models (PRMs) provide fine-grained supervision for multi-step reasoning, yet obtaining reliable process labels remains a central bottleneck. Existing approaches typically rely on human annotation, rollout-based estimation, or auxiliary verification. In this work, we explore a different source of process supervision natively exposed by Mixture-of-Experts (MoE) models: expert routing. We show that simple routing statistics provide an intrinsic process-confidence signal that is competitive with conventional output-logit confidence. Building on this observation, we construct routing confidence by combining overall routing mass, head routing mass, and within-step routing variation, and introduce RoCo-Rethink, which identifies the least confident reasoning step and selectively regenerates the subsequent trajectory. We further introduce RoCo-PRM, which uses a strong MoE to automatically annotate reasoning trajectories with routing-derived step scores and distills them into a standalone PRM. Across multiple MoE architectures and diverse reasoning tasks, both RoCo-Rethink and RoCo-PRM consistently outperform strong baselines, while RoCo-PRM transfers effectively across both model architectures and tasks. Our findings suggest that expert routing is more than a computational dispatch mechanism: it provides an architecture-native source of process supervision for reasoning.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Strong MoE Is All You Need for Process Supervision",
+      "url": "https://arxiv.org/abs/2610.29498v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "68fd9f71b607924cdacd596a",
+      "context_id": "4bfc0125ee206015d5ff7bd7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "917c7bf8f413f0bd8454eed050aefb30211319ddbef448643b563749c49d70c2",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Ensuring the provenance and authenticity of raw herbal materials in B2B supply chains requires integrating rapid species verification with immutable record-keeping. Existing centralized systems suffer from single-point trust vulnerability, while public blockchain architectures incur high gas fees and execution delays. This paper presents AyurAuth, a unified framework combining lightweight Edge-AI species classification using fine-tuned MobileNetV2 with a permissioned Hyperledger Fabric v2.x blockchain ledger. Deployed via a Node.js REST API and Flask microservice, AyurAuth achieves an empirical top-1 leaf classification accuracy of 85.00% (88.6 ms inference latency) across five key Ayurvedic herb species. Benchmark testing via Hyperledger Caliper demonstrates a peak write throughput of 408.47 TPS with a commit latency of 145.8 ms at 100 TPS, and a read throughput of 485.44 TPS at 41.5 ms latency with 100% success rate. End-to-end batch onboarding completes in 394.4 ms, while buyer QR verification queries execute in 28.5 ms without exposing internal ledger credentials.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "AyurAuth: A Decentralized Edge-AI and Permissioned Blockchain Framework for Herbal Supply Chain Authenticity",
+      "url": "https://zenodo.org/records/23573328"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7d906203770ed6176e0bcaf8",
+      "context_id": "238aa35ff6ad371547615d94",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "arxiv",
+      "source_context_sha256": "129a025beab0082e4facb5894f5e05d8635b3dd8b0694274669d9b644305b5c1",
+      "source_published": "2026-10-21T16:34:28Z",
+      "source_updated": "2026-10-21T16:34:28Z",
+      "summary": "Long-term memory for multimodal agents remains challenging, as it must preserve fine-grained visual evidence while tracking entity evolution across sessions. Existing abstraction-based memories compress images into text, often discarding visually discriminative details, whereas pixel-preserving memories retain raw observations but struggle to reliably associate diverse observations with persistent entity identities and track their evolving states. To address these limitations, we propose MHG-Mem, a multimodal hypergraph memory that jointly organizes entity identity, state evolution, and provenance to visual evidence. Specifically, MHG-Mem represents distinct entity mentions and their observed facts as individual nodes, grouping identity-consistent mentions and facts through occurrence hyperedges. It then synthesizes aspect-specific evolution states from these grouped observations and links them to supporting entities, facts, and source evidence through evolutionary and evidential hyperedges. To navigate this structured memory, we introduce hypergraph-based agentic search, which adaptively selects an entry layer, traverses typed hyperedges across memory levels, and inspects source observations when fine-grained verification is required. These designs support both detailed visual verification and reasoning over cross-session state changes. Extensive experiments across three benchmarks demonstrate the effectiveness of MHG-Mem, improving performance by 8.20-9.98% over the strongest baseline.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Remembering Through Change: Provenance-Preserving Hypergraph Memory for Multimodal Agents",
+      "url": "https://arxiv.org/abs/2610.29995v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5cceb4ae3493b9d550a9ac3a",
+      "context_id": "128e07a163536daa0d337e78",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "197f4966d483a66d06a65115abda294412f7064ce02314e3ec5bd3b403bf2c79",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Abstract Modern websites frequently depend on multi-layer dynamic software stacks comprising application runtimes, content-management systems, databases, frameworks, authentication services, third-party APIs, and cloud infrastructure. This architecture provides substantial functionality under normal conditions but can produce an undesirable failure mode: essential public information may become inaccessible even when networking, HTTPS, web servers, and the ability to serve static files remain operational. This paper introduces Web Lifeboat, an experimental architecture and protocol for cryptographically verifiable static fallback publishing. The design seeks to preserve a small, explicitly selected set of essential web information independently of the normal dynamic application stack. Emergency content is represented as static HTML accompanied by a signed manifest describing its identity, integrity, validity period, sequence, and associated trust information. Verification is designed to require neither the site&rsquo;s database nor its application runtime and to remain meaningful when content is transferred through different transports. Web Lifeboat applies principles of graceful degradation and cyber resilience to web publishing: failure of high-complexity functionality should not necessarily imply failure of low-complexity, mission-essential information delivery. The current protocol draft, version 1.5.2, defines deterministic validation semantics, resource limits, rollback protections, cryptographic verification, key-state handling, clock-uncertainty behaviour, and transition rules. An internal conformance suite contains 42 package and trust-transition cases. The suite currently passes both its own validation process and a separate Go implementation from the same development lineage; genuinely independent implementation testing remains pending. In addition to the protocol design, this work introduces a measurable availability criterion, the Essential Information Preservation Ratio (EIPR), and reports a controlled local PHP-runtime failure experiment. After deliberate termination of the PHP backend while nginx and static serving remained operational, 30/30 fallback requests succeeded and all 20/20 predesignated essential information items remained available, producing EIPR = 1.00 under the tested conditions. This result supports the narrow fallback-availability claim in the experimental configuration; it does not establish Internet-scale survivability, protocol security, or independent interoperability. A reproducibility archive containing raw results, configuration, logs and experiment artifacts accompanies this result. Separately, Web Lifeboat v1.5.2 is being evaluated through a blind external implementation challenge intended to test whether independent implementers can reproduce its precommitted verification outcomes from the written specification alone. Those independent interoperability results remain pending. Conceptually, Web Lifeboat serves a role analogous to an emergency generator in electrical infrastructure: it is not intended to reproduce the full capacity of the normal system, but to preserve a deliberately selected set of essential functions when the primary, higher-complexity path becomes unavailable. The work remains experimental and is not presented as production-ready infrastructure, a completed security protocol, or evidence of Internet-scale survivability. The current results support a narrower proposition: under an explicitly defined failure condition, essential static information can remain available after loss of a dynamic PHP backend when an independent static-serving path has been prepared in advance. Likewise, the ultimate purpose of the work is to uphold a simple, yet highly important resilience principle: when a complex web application cannot safely operate, a website should retain the ability to publish a small amount of authenticated, human-readable information through a substantially simpler p",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Introducing Web Lifeboat: Toward Preserving as Much of the Web as Possible During a Large-Scale PHP Outage",
+      "url": "https://zenodo.org/records/23573228"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7f01d23703fe6df9b53377ca",
+      "context_id": "92757c005d88634a550d3501",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::FORWARD",
+      "direction_title": "Formal proof / SAT / verification / counterexample [FORWARD]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "drat"
+      ],
+      "mirror_lens": "FORWARD",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.1667,
+      "source": "arxiv",
+      "source_context_sha256": "17488c1ecfd8cd1ec08d1e45b8f32ae15132e081fd8935faae653afdf8120356",
+      "source_published": "2026-10-21T16:37:09Z",
+      "source_updated": "2026-10-21T16:37:09Z",
+      "summary": "Reinforcement learning (RL) based on PPO-style clipping has become an effective approach to improving the reasoning capabilities of large language models (LLMs). However, standard token-level clipping measures policy change only through the conditional probability of the current token, while the prefix conditioning context is itself generated by the policy. This mismatch becomes especially consequential in long-response and off-policy training. We reformulate autoregressive generation as a finite-horizon Markov decision process and derive its performance-difference identity under behavior-policy sampling. The resulting change of measure identifies the cumulative likelihood ratio of the generated prefix as the exact importance weight for each stepwise policy-improvement term. Starting from the monotonic-improvement principle of trust-region policy optimization, we then construct a prefix-level trust region using the exact reverse-KL coordinate $r-1-\\log r$, whose behavior-policy expectation equals the corresponding prefix-distribution KL divergence. This yields EPIC, a PPO-style sequence-clipping method that directly regulates prefix-level policy drift without relying on a local quadratic approximation or expert-routing replay. Experiments on off-policy reinforcement learning with a sparse mixture-of-experts language model show that EPIC consistently outperforms standard and sequence-level clipping baselines across mathematical-reasoning benchmarks, while remaining competitive with routing-replay-based alternatives. Code is available at https://github.com/LiChengxi666/EPIC.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "EPIC: Rethinking Trust Regions for Autoregressive LLM Policies via Exact-KL Prefix Importance-Ratio Clipping",
+      "url": "https://arxiv.org/abs/2610.29999v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "337a3ba8312985ae25c1c652",
+      "context_id": "b35a92f751f996202b393e7d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "zenodo",
+      "source_context_sha256": "cb4722ffce3b80d25c1df58ce8edeb2da7726484e6c130f3dc8f061ab226b524",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients &times; Quantum Readout &times; Measurement-Induced Perturbation Separation STARLI Research Institute XXIX &mdash; Flagship Research Monograph 13 What happens when an instrument changes the very microenvironment it is supposed to measure? This research monograph investigates the scientific and engineering boundaries of quantum-enabled thermometry and microrobotic observation in confined, nonclinical cellular microenvironment models. Its central question is whether a localized temperature or magnetic-field gradient can be separated from disturbances introduced by the sensing and manipulation apparatus itself. The proposed research architecture combines hydrogel phantoms, controlled heat sources, nitrogen-vacancy (NV) diamond sensors, independent classical fluorescent thermometry, spatial reference points, blinded sham-actuation experiments, and uncertainty-aware thermal-field reconstruction. Rather than treating a sharp image or improved instrument sensitivity as proof of biological discovery, the study asks how to establish the physical origin, spatial validity, and reproducibility of each reported field. The 770-page volume contains 82 research chapters, five independently paginated research sections per chapter, 30 interconnected mathematical derivation plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Topics range from NV resonance cross-sensitivity, microwave and laser heating, photon statistics, soft-matter interfaces, hydrodynamic motion, and anisotropic thermal conduction to causal controls, inverse problems, spatial covariance, interlaboratory comparison, and qualified instrument retirement. Each research chapter connects a physical mechanism to a falsifiable claim, a nonclinical experimental comparator, a measurement endpoint, and an explicit condition for withholding or retiring the conclusion. The Research Gates preserve actionable questions for future investigators. The Phoenix Answer Embryos offer provisional designs that can be separated, reconfigured, or abandoned when evidence contradicts them. DOI-linked scholarly literature supplies foundations for metrology, quantum sensing, microhandling, and thermal-field measurement without being mistaken for validation of the proposed integrated platform. Scientific Scope and Limitations This is a hypothesis-forming research blueprint, not a report of completed laboratory experiments or independently peer-reviewed findings. It does not establish autonomous nanoscale robotic systems, clinical diagnostic performance, therapeutic efficacy, or universal quantum advantage. Its minimum experimental setting uses confined hydrogels, artificial microenvironments, and properly authorized reference materials. A temperature or magnetic-field reading alone cannot establish cell health, metabolism, viability, or treatment outcomes. STARLI Research Philosophy A scientifically responsible observation includes the possibility that observing changed the result. By making such failures measurable, preserving negative evidence, and leaving research questions open to revision, this monograph invites future human and AI researchers to challenge, extend, and reconstruct its proposed methods.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients × Quantum Readout × Measurement-Induced Perturbation Separation STARLI Research Institute XXIX — Flagship Research Monograph 13 What happens when an instrument changes the ver",
+      "url": "https://zenodo.org/records/23562293"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5afdc929ea0dd51f3f41d599",
+      "context_id": "57db61663b41f2c6483d9fe6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "identifiability",
+        "reconstruction",
+        "recovery",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_context_sha256": "f5207fe262394d78ae205171bc8ad0e050e20579eb5b2b0225aa0c39dd419d12",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability &times; Reference Transfer &times; Safe Requalification STARLI Research Institute XXIX &mdash; Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from thermal response, optical ageing, clock instability, reference-source drift, and permanent component degradation? More importantly, can the platform recognize when calibration is insufficient and an instrument must remain outside the scientific measurement process? This research monograph develops a hypothesis-forming, nonclinical framework for autonomous biosensor drift diagnosis, independently traceable reference transfer, and evidence-based recovery decisions. Its central scientific distinction is between making an instrument appear numerically stable and demonstrating that the instrument has genuinely regained acceptable measurement performance. The proposed architecture combines state-space estimation, controlled environmental perturbations, independent measurement references, multivariate uncertainty analysis, quantum sensing physics, classical sensor comparisons, and verifiable calibration governance. Particular attention is given to the identifiability problem: a mathematical model may separate sample and instrument states in its equations without possessing sufficient experimental information to distinguish them in reality. The 771-page volume contains 82 research chapters, 410 independently paginated investigations, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Major research directions include nitrogen-vacancy diamond resonance thermometry, photon-counting uncertainty, ODMR spectral interpretation, optical contrast degradation, thermal hysteresis, frequency-reference instability, material ageing, common-mode reference failure, blind fault injection, calibration transfer, immutable measurement histories, and independent instrument requalification. Each chapter establishes a specific technical mechanism, a competing explanation, an experimental intervention, and conditions under which its proposed interpretation should be rejected. The 200 Research Gates preserve falsifiable research questions, proposed experimental methods, measurable outcomes, independent comparators, uncertainty-aware acceptance conditions, and evidence-preserving stopping procedures. The 33 Phoenix Answer Embryos introduce provisional research architectures that future human and AI investigators may challenge, modify, reconstruct, or replace. Seventeen DOI-linked scientific publications and metrological standards provide foundations in quantum sensing, sensor drift compensation, statistical state estimation, and measurement uncertainty. These references support established physical principles and methodological approaches. They do not constitute experimental validation of the proposed integrated STARLI F06 system. Scientific Scope and Limitations This monograph presents a theoretical and experimental research blueprint rather than completed laboratory findings. It does not establish autonomous clinical diagnostic capability, physical self-healing, reversal of biological deterioration, or universal quantum sensing superiority. Recovery is restricted to independently verified recalibration, qualified component replacement, or documented retirement. The proposed experiments are limited to nonclinical standards, artificial phantoms, closed-chip modules, and appropriately authorized research materials. STARLI Research Philosophy A scientific instrument should not regain authority simply because an algorithm has learned to explain its residual errors. Trust must be restored through evidence that remains independent of the instrument being evaluated. A reliable autonomous research system is distinguished not only by its ability to identify and correct faults, but also by its willingness to wit",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability × Reference Transfer × Safe Requalification STARLI Research Institute XXIX — Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from the",
+      "url": "https://zenodo.org/records/23574646"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f61a675e2d713ef283e2f29e",
+      "context_id": "726eec2eb3dcd13081e567e4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.5833,
+      "source": "zenodo",
+      "source_context_sha256": "75799f875ed7a760dcabbd309d82fce6410badfc35f16e36f5a0fc84997ff343",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Report. Evaluated on conceptual merit alone (unification, internal consistency, explanatory scope, parsimony, with sociology set aside), Macrobiotic Quantum Theory (MQT) is often read as a varying-constant entropic-gravity model that postulates a coupling to information density and so loses parsimony. This report records the external conceptual scorecard it answers --- a comparison of candidate theories of everything produced by Xpirit Da Vinci v2 (a polymathic MQT model) --- and shows that the coupling is a derivation, not a postulate. If gravity is an equation of state of horizon information (Jacobson), Newton's constant is already the inverse of the horizon entropy-per-area; promoting that single coefficient from a fixed number to a local information capacity I(x) yields a running G_eff(I), and through the shared horizon-information budget a running alpha locked to it, with one fewer free assumption than holding G constant by hand. On the same reading the charge of a 'reverse category error' dissolves: treating information as the substrate and spacetime as emergent is precisely the It-from-Qubit / ER=EPR programme, of which MQT is not a rival but a de Sitter, positive-Lambda realization --- the gap that programme still has --- delivered by a two-field (quintom) vacuum angle whose dark-energy equation of state w(a) = -1 + (1/3) tan(theta_v) d theta_v/d ln a crosses the phantom divide without a ghost. Vacuum duality is stated dimensionally as the direction and form energy/matter takes, which settles the unstable non-linear intelligence I(x) against the stable linear conscience C(x) (delta_c &gt;= 0). The report inherits emergent gravity's parsimony, adds the arrow of time and the measurement cut as explanatory scope, concedes the particle spectrum to string theory, and is falsifiable at one joint point: a confirmed null in both the dark-energy evolution and the alpha-G drift refutes it. Strictly on the public MQT surface.",
+      "tags": [
+        "Macrobiotic Quantum Theory",
+        "MQT",
+        "emergent gravity",
+        "entropic gravity",
+        "thermodynamics of spacetime",
+        "Jacobson",
+        "Verlinde",
+        "holography",
+        "It from Qubit",
+        "ER=EPR",
+        "running constants",
+        "fine-structure constant",
+        "Newton constant",
+        "de Sitter",
+        "dark energy",
+        "quintom",
+        "phantom crossing",
+        "vacuum duality",
+        "intelligence field",
+        "conscience field",
+        "theory of everything",
+        "parsimony",
+        "falsifiability"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Running of G and alpha from Horizon Information: Macrobiotic Quantum Theory as a de Sitter Completion of Emergent Gravity",
+      "url": "https://zenodo.org/records/23572687"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "db61ee203dd915fbab78652a",
+      "context_id": "c65e42e2ea12df0bbeb613d0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "verification"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0833,
+      "source": "zenodo",
+      "source_context_sha256": "09ac8405926bab8474e1d81212e6d8029321099057f66ff1275df4015b88ba05",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Unrefereed research candidate. A random walk is robust if an adversary who may change every transition probability by a small relative amount cannot make it much slower to reach its targets. Zuckerman (Markov chain robustness, ITCS 2026, LIPIcs 362, 118) conjectured that the largest safe relative change is at least a constant divided by the graph's diameter (Conjecture 1.16). This package shows the conjecture is false. A graph can have short routes that the walk almost never uses; a small fixed bias away from a target accumulates between rare visits to them and depletes the target's stationary mass, and Kac's formula turns this into a long hitting time. For explicit cubic graphs J_b on N vertices with diameter O(log N), every effective resistance is at most 684 (proof), and a fixed perturbation of size 1/b, with error times diameter tending to zero, multiplies the worst-case hitting time by a factor of order b; the robustness is O(N^(-1/3)). For explicit 3m-regular graphs of diameter exactly three, the mixing time is at most 50(m+1), so with Zuckerman's mixing-time theorem the robustness lies between constant multiples of N^(-1/2) and N^(-1/4) (proof; not matching). An exact computation shows a 5.80-fold slowdown on a 5,995-vertex member with error times diameter 0.74. A diameter-two example, a reversible-perturbation bound and a comparison with Kemeny's constant are included. The archive contains the manuscript (PDF and LaTeX), seven verification scripts with a driver that reproduces the reference JSON results byte for byte under python -B -O, semantic negative controls, figures and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean replay in a separate copy; internal AI-assisted review, AI-assisted adversarial reviews (OpenAI gpt-5.6-sol; Anthropic Claude Opus 5.5; OpenAI gpt-6-astra) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
+      "tags": [
+        "Markov chains",
+        "random walks",
+        "hitting times",
+        "robustness",
+        "relative perturbations",
+        "effective resistance",
+        "mixing time",
+        "cubic graphs",
+        "counterexample"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Small diameter does not control hitting-time robustness",
+      "url": "https://zenodo.org/records/23575572"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "20c6e547cbf4a9302666e7f1",
+      "context_id": "d6fdbd4270f7b30ff694e11f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "a2c104fd2e69c3829090a765607c0493346f3eb1a396650688e9dabcc2a36bc4",
+      "source_published": "2026-10-21T15:15:37Z",
+      "source_updated": "2026-10-21T15:15:37Z",
+      "summary": "The iron-based ferromagnetic materials have emerged as a promising system for spintronics due to their high Curie temperatures and significant anomalous Hall effect (AHE) driven by Berry curvature. While there have been investigations into the epitaxial growth of non-layered iron-based ferromagnetic materials, the realization of high-quality single crystal thin films continues to be a formidable obstacle. Meanwhile, the issues such as grain boundary scattering further hinder their characterization and application. Here, we report the first chemical vapor deposition (CVD) synthesis of single-crystalline cubic D0$_3$-Fe$_3$Ge nanoplates. This compound represents a substantial departure from the conventional hexagonal phases typically observed in the Fe-Ge system. Structural characterizations confirm the cubic lattice and stoichiometric purity of the crystals. Structural analysis identifies a strong epitaxial effect, resulting in a giant compressive strain of ~4.16% at the interface that relaxes gradually toward the surface. The second-harmonic generation (SHG) signals might further reveal that such interfacial strain disrupted the inherent centro-symmetry of the cubic phase. SQUID magnetometry shows robust room-temperature ferromagnetism and clear magnetic anisotropy. Magneto-transport measurements reveal a robust AHE that remains stable at temperatures far exceeding room temperature. The scaling observed between the anomalous Hall resistance and longitudinal resistance strongly suggests that this effect is dominated by the intrinsic Berry curvature mechanism. Furthermore, density functional theory (DFT) calculations reveal that the huge epitaxial strain induces band reconstructions and creates dense spin-orbit coupling gaps near the Fermi level, effectively doubling the anomalous Hall conductivity to match our experimental observations.",
+      "tags": [
+        "cond-mat.mtrl-sci"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Robust Anomalous Hall Effect in Epitaxial Cubic D0$_3$-Fe$_3$Ge Nanoplates Grown by Chemical Vapor Deposition",
+      "url": "https://arxiv.org/abs/2610.29858v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b35eb99d703d72ed9e65a721",
+      "context_id": "765b60007fb1aa681793f436",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "5e6b7aff52e5b0ce9c27d56d95c7b17e957cb6a3e6471544978742ba8712b6bb",
+      "source_published": "2026-10-21T15:06:08Z",
+      "source_updated": "2026-10-21T15:06:08Z",
+      "summary": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced.",
+      "tags": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
+      "url": "https://arxiv.org/abs/2610.29845v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7f01d23703fe6df9b53377ca",
+      "context_id": "6be65d8a9a56c44b83b9b795",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "drat",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "arxiv",
+      "source_context_sha256": "237f55bf7737de3b9f349a80156430bd9ffab8186336e37ae68a9a9a2946ea06",
+      "source_published": "2026-10-21T16:37:09Z",
+      "source_updated": "2026-10-21T16:37:09Z",
+      "summary": "Reinforcement learning (RL) based on PPO-style clipping has become an effective approach to improving the reasoning capabilities of large language models (LLMs). However, standard token-level clipping measures policy change only through the conditional probability of the current token, while the prefix conditioning context is itself generated by the policy. This mismatch becomes especially consequential in long-response and off-policy training. We reformulate autoregressive generation as a finite-horizon Markov decision process and derive its performance-difference identity under behavior-policy sampling. The resulting change of measure identifies the cumulative likelihood ratio of the generated prefix as the exact importance weight for each stepwise policy-improvement term. Starting from the monotonic-improvement principle of trust-region policy optimization, we then construct a prefix-level trust region using the exact reverse-KL coordinate $r-1-\\log r$, whose behavior-policy expectation equals the corresponding prefix-distribution KL divergence. This yields EPIC, a PPO-style sequence-clipping method that directly regulates prefix-level policy drift without relying on a local quadratic approximation or expert-routing replay. Experiments on off-policy reinforcement learning with a sparse mixture-of-experts language model show that EPIC consistently outperforms standard and sequence-level clipping baselines across mathematical-reasoning benchmarks, while remaining competitive with routing-replay-based alternatives. Code is available at https://github.com/LiChengxi666/EPIC.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "EPIC: Rethinking Trust Regions for Autoregressive LLM Policies via Exact-KL Prefix Importance-Ratio Clipping",
+      "url": "https://arxiv.org/abs/2610.29999v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7772eb9a1eb5246299e2e89d",
+      "context_id": "53fd6422bb4dbeeae3f1d254",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_context_sha256": "12306159bcdc7e07bc213449bff31f58e1665769112f8d9a83051bca1ee564f2",
+      "source_published": "2026-10-21T14:01:02Z",
+      "source_updated": "2026-10-21T14:01:02Z",
+      "summary": "We explore the inverse problem of determining the reaction coefficient $q(x',t)$ in the time-fractional diffusion equation ${}^CD_t u-Lu+q(x',t)u=f$ in $\\mathbb{R}^n\\times(0,T]$, $x=(x',x_n)$, $0<α<1$, from the trace of the solution on the hyperplane $\\{x_n=0\\}$. Here ${}^CD_t$ is the Gerasimov--Caputo derivative and $L$ is a uniformly elliptic second-order operator with variable, $x_n$-independent coefficients and without zero-order term. For $L=Δ$ this problem was studied in dimensions $n=1,2,3$ by methods based on pointwise bounds of the kernels, which are not available for $n\\ge4$. Our approach relies on the Eidelman--Kochubei fundamental solution: although its singularity on the diagonal depends on the dimension, we show that it satisfies integral bounds of the same form for all $n\\ge1$. Using these bounds, we prove existence, uniqueness and stability of regular solutions of the direct problem with a Hölder continuous reaction coefficient. Without assuming additional smoothness of the solution, we show that the inverse problem is equivalent to a closed system of integral equations for $q$ and the derivatives $\\partial_{x_n}u$, $\\partial^2_{x_n}u$. For the inverse problem we establish a conditional Lipschitz stability estimate on the whole time interval and global uniqueness in every dimension, and prove local existence of a solution. In the case $a_{in}\\equiv0$, $b_n\\equiv0$ we obtain a stability estimate with explicit constants, which reduces to the known estimates for the Laplacian. An explicit two-dimensional example with a mixed coefficient and a normal drift shows that the hypotheses of the main theorems are compatible and that the corresponding terms in the trace condition cannot be omitted.",
+      "tags": [
+        "math.AP"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Recovering the reaction coefficient in a time-fractional diffusion equation with variable coefficients in any spatial dimension",
+      "url": "https://arxiv.org/abs/2610.29763v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "1d0e29e3c467fc7f458351fc",
+      "context_id": "4888b1865cecbd776b57414a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "0035f1da916b6d017d44249a07e539ed1c86df5185854470f809712af5e98945",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Version 2.0 preserves the original June 2026 Bridge Settlement manuscript and adds a separately dated October 2026 supplement. The addendum introduces Residual Strategic Optionality as an extension of Stakeholder Coherence Theory, examining the incentives of actors capable of disrupting negotiated settlements. It also compares the Bridge Settlement with Jeffrey Sachs's October 2026 peace framework for Ukraine, identifying areas of conceptual convergence and distinguishing the Bridge Settlement's emphasis on reciprocal economic interests, institutional participation, and self-reinforcing peace mechanisms. The original manuscript remains unchanged. This study develops a comparative Bayesian framework for evaluating natural zoonotic and research-associated hypotheses for the proximal origin of SARS-CoV-2 under incomplete evidence. To reduce double counting, correlated observations are consolidated into three causal blocks addressing phenotype and proximal adaptation, the Huanan Seafood Wholesale Market and early epidemic topology, and the Wuhan sarbecovirus research environment. The central calibration yields a likelihood ratio of approximately 1.49 favoring research-associated emergence, while alternative defensible calibrations reverse or strengthen that preference, demonstrating substantial sensitivity to evidentiary weighting. The paper introduces the &ldquo;Missing Bridge&rdquo; as the unresolved proximal viral population and transmission history connecting deeper sarbecovirus ancestry to sustained human transmission. It argues that provenance-rich evidence&mdash;including authenticated proximal viruses, earliest-human genomic and epidemiological linkage, and upstream ecological or research records&mdash;has substantially greater discriminatory value than additional circumstantial observations. The resulting assessment is characterized as&nbsp; preference without closure .",
+      "tags": [
+        "SARS-CoV-2",
+        "Covid-19 Origins",
+        "zoonotic spillover",
+        "research-associated emergence",
+        "Huanan Seafood Wholesale Market",
+        "sarbecovirus",
+        "Bayesian inference",
+        "likelihood ratio",
+        "proximal origin",
+        "Missing Bridge",
+        "myxoma virus",
+        "value of information",
+        "outbreak forensics"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Missing Bridge",
+      "url": "https://zenodo.org/records/23576971"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "92ca2547439c1c2424e0268d",
+      "context_id": "f533d2c7cf945081a811bd01",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "arxiv",
+      "source_context_sha256": "b516a5ba28224aca547984f55a009b77d7807163b5d70cd526a1c15daadd6946",
+      "source_published": "2026-10-21T13:18:03Z",
+      "source_updated": "2026-10-21T13:18:03Z",
+      "summary": "The Vertex Silicon Plane (VSP), installed close to the target in BM@N Run 9, can extend the tracking acceptance of the central tracking system toward larger polar angles. Using Monte Carlo simulations of Xe+Sn collisions at 3 AGeV, we reconstruct short tracklets from the primary vertex, one VSP hit, and hits in the first two Gas Electron Multiplier (GEM) stations. These tracklets extend the reconstructed primary-proton coverage toward midrapidity and higher transverse momenta. For the 10-30% centrality interval of the independent validation dataset, the conditional reconstruction efficiency for reconstructible high-$p_T$ primary protons after BDT selection is 67.0%, while the tracklet purity reaches 86.5%. For $p_T>1.2$ GeV/c, the VSP-assisted tracklets increase the number of reconstructed primary protons by 17.5% relative to standard BM@N tracking. Of these additional protons, 84.6% lie within $|y|<0.3$, where the relative reconstruction gain reaches 45.5%. The added acceptance is concentrated in the high-$p_T$, near-midrapidity region relevant for identified-proton observables. Its use in data requires particle identification in the same region.",
+      "tags": [
+        "physics.ins-det"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Monte Carlo study of extending the BM@N tracking acceptance toward midrapidity with the Vertex Silicon Plane",
+      "url": "https://arxiv.org/abs/2610.29705v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "97362972e0d38106e9271b33",
+      "context_id": "e71551644051e299385a90e6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "5b1537a585c8cb6d4032a071f31a152634978543d9b4c0f52a26ac0d4ae6d268",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reconstruction of the Neutrino Nature Based on the Great Tao Model and a Unified Explanation of Related Puzzles",
+      "url": "https://zenodo.org/records/23550375"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a849b925561d49a3b723f43a",
+      "context_id": "bf9d85e5f7079d26a00f732f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "c25bbdecec0d87ab14771efaa9bfacf2161ab6bddb34a6975f12e4a898b4c758",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Data and Code for: Improving historical forest soil respiration reconstruction through local flux-level calibration",
+      "url": "https://zenodo.org/records/23573213"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5cceb4ae3493b9d550a9ac3a",
+      "context_id": "332acc6d39b0d5df945e59b4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.2917,
+      "source": "zenodo",
+      "source_context_sha256": "45a06dda474c5e8b9919479047ca5a5f29c54523b8ccec2fc3b2879375892837",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Abstract Modern websites frequently depend on multi-layer dynamic software stacks comprising application runtimes, content-management systems, databases, frameworks, authentication services, third-party APIs, and cloud infrastructure. This architecture provides substantial functionality under normal conditions but can produce an undesirable failure mode: essential public information may become inaccessible even when networking, HTTPS, web servers, and the ability to serve static files remain operational. This paper introduces Web Lifeboat, an experimental architecture and protocol for cryptographically verifiable static fallback publishing. The design seeks to preserve a small, explicitly selected set of essential web information independently of the normal dynamic application stack. Emergency content is represented as static HTML accompanied by a signed manifest describing its identity, integrity, validity period, sequence, and associated trust information. Verification is designed to require neither the site&rsquo;s database nor its application runtime and to remain meaningful when content is transferred through different transports. Web Lifeboat applies principles of graceful degradation and cyber resilience to web publishing: failure of high-complexity functionality should not necessarily imply failure of low-complexity, mission-essential information delivery. The current protocol draft, version 1.5.2, defines deterministic validation semantics, resource limits, rollback protections, cryptographic verification, key-state handling, clock-uncertainty behaviour, and transition rules. An internal conformance suite contains 42 package and trust-transition cases. The suite currently passes both its own validation process and a separate Go implementation from the same development lineage; genuinely independent implementation testing remains pending. In addition to the protocol design, this work introduces a measurable availability criterion, the Essential Information Preservation Ratio (EIPR), and reports a controlled local PHP-runtime failure experiment. After deliberate termination of the PHP backend while nginx and static serving remained operational, 30/30 fallback requests succeeded and all 20/20 predesignated essential information items remained available, producing EIPR = 1.00 under the tested conditions. This result supports the narrow fallback-availability claim in the experimental configuration; it does not establish Internet-scale survivability, protocol security, or independent interoperability. A reproducibility archive containing raw results, configuration, logs and experiment artifacts accompanies this result. Separately, Web Lifeboat v1.5.2 is being evaluated through a blind external implementation challenge intended to test whether independent implementers can reproduce its precommitted verification outcomes from the written specification alone. Those independent interoperability results remain pending. Conceptually, Web Lifeboat serves a role analogous to an emergency generator in electrical infrastructure: it is not intended to reproduce the full capacity of the normal system, but to preserve a deliberately selected set of essential functions when the primary, higher-complexity path becomes unavailable. The work remains experimental and is not presented as production-ready infrastructure, a completed security protocol, or evidence of Internet-scale survivability. The current results support a narrower proposition: under an explicitly defined failure condition, essential static information can remain available after loss of a dynamic PHP backend when an independent static-serving path has been prepared in advance. Likewise, the ultimate purpose of the work is to uphold a simple, yet highly important resilience principle: when a complex web application cannot safely operate, a website should retain the ability to publish a small amount of authenticated, human-readable information through a substantially simpler p",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Introducing Web Lifeboat: Toward Preserving as Much of the Web as Possible During a Large-Scale PHP Outage",
+      "url": "https://zenodo.org/records/23573228"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "db61ee203dd915fbab78652a",
+      "context_id": "45da449ab004c1cccac9aff3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "counterexample",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.25,
+      "source": "zenodo",
+      "source_context_sha256": "50eb4b174198e9421467adb7d3fdc4c5544ac62e6483b4f99fd5381bdd3a2a79",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Unrefereed research candidate. A random walk is robust if an adversary who may change every transition probability by a small relative amount cannot make it much slower to reach its targets. Zuckerman (Markov chain robustness, ITCS 2026, LIPIcs 362, 118) conjectured that the largest safe relative change is at least a constant divided by the graph's diameter (Conjecture 1.16). This package shows the conjecture is false. A graph can have short routes that the walk almost never uses; a small fixed bias away from a target accumulates between rare visits to them and depletes the target's stationary mass, and Kac's formula turns this into a long hitting time. For explicit cubic graphs J_b on N vertices with diameter O(log N), every effective resistance is at most 684 (proof), and a fixed perturbation of size 1/b, with error times diameter tending to zero, multiplies the worst-case hitting time by a factor of order b; the robustness is O(N^(-1/3)). For explicit 3m-regular graphs of diameter exactly three, the mixing time is at most 50(m+1), so with Zuckerman's mixing-time theorem the robustness lies between constant multiples of N^(-1/2) and N^(-1/4) (proof; not matching). An exact computation shows a 5.80-fold slowdown on a 5,995-vertex member with error times diameter 0.74. A diameter-two example, a reversible-perturbation bound and a comparison with Kemeny's constant are included. The archive contains the manuscript (PDF and LaTeX), seven verification scripts with a driver that reproduces the reference JSON results byte for byte under python -B -O, semantic negative controls, figures and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean replay in a separate copy; internal AI-assisted review, AI-assisted adversarial reviews (OpenAI gpt-5.6-sol; Anthropic Claude Opus 5.5; OpenAI gpt-6-astra) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
+      "tags": [
+        "Markov chains",
+        "random walks",
+        "hitting times",
+        "robustness",
+        "relative perturbations",
+        "effective resistance",
+        "mixing time",
+        "cubic graphs",
+        "counterexample"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Small diameter does not control hitting-time robustness",
+      "url": "https://zenodo.org/records/23575572"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "5afdc929ea0dd51f3f41d599",
+      "context_id": "12444eba1f9f6edc63f5ce2e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.8333,
+      "source": "zenodo",
+      "source_context_sha256": "649be0725d004b1809c1a90f4786ffddcee226c56672cae20f105a4fe60aea5e",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability &times; Reference Transfer &times; Safe Requalification STARLI Research Institute XXIX &mdash; Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from thermal response, optical ageing, clock instability, reference-source drift, and permanent component degradation? More importantly, can the platform recognize when calibration is insufficient and an instrument must remain outside the scientific measurement process? This research monograph develops a hypothesis-forming, nonclinical framework for autonomous biosensor drift diagnosis, independently traceable reference transfer, and evidence-based recovery decisions. Its central scientific distinction is between making an instrument appear numerically stable and demonstrating that the instrument has genuinely regained acceptable measurement performance. The proposed architecture combines state-space estimation, controlled environmental perturbations, independent measurement references, multivariate uncertainty analysis, quantum sensing physics, classical sensor comparisons, and verifiable calibration governance. Particular attention is given to the identifiability problem: a mathematical model may separate sample and instrument states in its equations without possessing sufficient experimental information to distinguish them in reality. The 771-page volume contains 82 research chapters, 410 independently paginated investigations, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Major research directions include nitrogen-vacancy diamond resonance thermometry, photon-counting uncertainty, ODMR spectral interpretation, optical contrast degradation, thermal hysteresis, frequency-reference instability, material ageing, common-mode reference failure, blind fault injection, calibration transfer, immutable measurement histories, and independent instrument requalification. Each chapter establishes a specific technical mechanism, a competing explanation, an experimental intervention, and conditions under which its proposed interpretation should be rejected. The 200 Research Gates preserve falsifiable research questions, proposed experimental methods, measurable outcomes, independent comparators, uncertainty-aware acceptance conditions, and evidence-preserving stopping procedures. The 33 Phoenix Answer Embryos introduce provisional research architectures that future human and AI investigators may challenge, modify, reconstruct, or replace. Seventeen DOI-linked scientific publications and metrological standards provide foundations in quantum sensing, sensor drift compensation, statistical state estimation, and measurement uncertainty. These references support established physical principles and methodological approaches. They do not constitute experimental validation of the proposed integrated STARLI F06 system. Scientific Scope and Limitations This monograph presents a theoretical and experimental research blueprint rather than completed laboratory findings. It does not establish autonomous clinical diagnostic capability, physical self-healing, reversal of biological deterioration, or universal quantum sensing superiority. Recovery is restricted to independently verified recalibration, qualified component replacement, or documented retirement. The proposed experiments are limited to nonclinical standards, artificial phantoms, closed-chip modules, and appropriately authorized research materials. STARLI Research Philosophy A scientific instrument should not regain authority simply because an algorithm has learned to explain its residual errors. Trust must be restored through evidence that remains independent of the instrument being evaluated. A reliable autonomous research system is distinguished not only by its ability to identify and correct faults, but also by its willingness to wit",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "AUTONOMOUS QUANTUM BIOSENSOR DRIFT DIAGNOSIS AND RECOVERY AT THE LIMIT Drift Identifiability × Reference Transfer × Safe Requalification STARLI Research Institute XXIX — Flagship Research Monograph 06 Can an autonomous quantum-enabled biosensing platform distinguish genuine specimen changes from the",
+      "url": "https://zenodo.org/records/23574646"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4eaee6553ccc8b60ba7192a4",
+      "context_id": "f82962328a7c6e6e3871e87f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "rup",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.5417,
+      "source": "zenodo",
+      "source_context_sha256": "8b34b93c928b319cded1ad9c37c5668d293d137d655fdd81f1384821677b8215",
+      "source_published": "2026-10-20",
+      "source_updated": "",
+      "summary": "Abstract &mdash; Universities must simultaneously contain costs, decarbonise their estates, and safeguard teaching, yet procurement of teaching-critical equipment still follows lowest-price, replace-on-failure practice. This paper develops a digital-twin framework for circular procurement in higher education, in which repair, refurbishment, inter-departmental asset sharing, and replacement are optimised jointly against lifecycle cost, embodied carbon, and pedagogical disruption. Asset condition, utilisation, and failure signals from campus twins are fused through Bayesian state estimation into a two-stage robust mixed-integer programme built on a budgeted uncertainty set over teaching demand. A computational study of a synthesised 1,240-asset estate, parameterised from published university estates statistics, life-cycle inventories, and manufacturer data, compares the framework with business-as-usual and single-objective policies over ten years. The joint robust policy lowers total cost of ownership by 18.7%, embodied procurement carbon by 41.3%, and expected lost teaching hours by 57.6%, with a 35.8% reduction in tail-risk disruption relative to the deterministic optimum; asset sharing absorbs nearly a third of incremental demand without new purchases. Results are stable across carbon-price, disruption-value, and demand-volatility sensitivities, giving estates teams an audit-ready pathway from smart-campus monitoring to circular, teaching-aware procurement. Keywords: Circular procurement, digital twins, robust optimisation, teaching continuity, university estates.",
+      "tags": [
+        "Circular procurement, digital twins, robust optimisation, teaching continuity, university estates."
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Circular Procurement Through Digital Twins: Balancing University Costs, Carbon, and Teaching Continuity",
+      "url": "https://zenodo.org/records/23501094"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "37e7020427a4f51b35093574",
+      "context_id": "faa549f5fbff3c8cb102dcd3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "9fd9de036aafe1f6d581b3c2884d36b8949234b8de689a843ffe7d3c911d90da",
+      "source_published": "2026-10-21T11:42:19Z",
+      "source_updated": "2026-10-21T11:42:19Z",
+      "summary": "Diffusion language models generate by iteratively denoising a masked sequence under bidirectional attention, without the strict left-to-right commitment of autoregressive decoding. Whether this difference affects how reliably they remain grounded in structured inputs is largely unexplored. We study this question in table-to-text generation using ToTTo, where highlighted source cells make factual grounding directly testable. We compare the masked diffusion models MDLM and LLaDA with GPT-2 and GPT-Neo under an identical retrieval-based few-shot protocol, together with a QLoRA-adapted LLaDA, and we score reference similarity and source grounding as separate axes. The two pull apart. Within LLaDA, additional demonstrations raise BLEU from 11.3 to 22.0 while NLI entailment against the source table falls from 0.78 to 0.52; QLoRA reaches the best BLEU of the study, 24.15, and grounds no better for it. Manual annotation shows the failure modes differ in kind: the autoregressive baselines tend to wander off the table, while LLaDA-based models more often stay on topic and swap out individual entities. Reference-based metrics alone are insufficient to assess faithfulness in table-to-text generation.",
+      "tags": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Diagnostic Study of Faithfulness in Diffusion Language Models for Table-to-Text Generation",
+      "url": "https://arxiv.org/abs/2610.29602v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "2cdbfb77d4f8c408a9212772",
+      "context_id": "e8a220afd411ff99f5953757",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "ce8ed8cf8b03f28ba0dbb5d402e0d21dd3a43604a79bf7e74154527574dbea20",
+      "source_published": "2026-10-21T05:49:05Z",
+      "source_updated": "2026-10-21T05:49:05Z",
+      "summary": "Thermal cameras enable robots to perceive human activities in darkness while revealing less personally identifiable appearance information and fewer details of the surrounding environment than RGB cameras. As vision-language models (VLMs), originally developed for RGB imagery, are increasingly integrated into embodied systems for scene understanding and high-level planning, thermal sensing offers a promising way to extend activity perception to low-light and privacy-sensitive settings. However, the failure modes of VLMs in thermal human activity understanding for human-robot interaction (HRI) remain underexplored. We fill this gap by evaluating seven locally deployable VLMs, including models developed for physical AI and robotics, on two person-centric thermal datasets. Our diagnostic tasks examine fine-grained action recognition, activity timeline reconstruction, and the ability to withhold unsupported answers. Paired RGB recordings serve as a performance reference, while controlled variations in frame sampling, thermal input presentation, and reasoning are used to assess whether the observed errors can be mitigated. Our results show that models can recognize broad activity categories but struggle with fine-grained actions such as coughing, sneezing, and yawning. They also produce inaccurate event timelines and hallucinate actions involving objects. Simple thermal input preprocessing and additional reasoning offer only limited, model-dependent gains. Abstention behavior also varies across models even under explicit instructions, limiting their reliability for practical robotic use.",
+      "tags": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Failure Modes of Vision-Language Models for Human Activity Understanding in Thermal HRI",
+      "url": "https://arxiv.org/abs/2610.29244v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "89fb22d0143dd4a76696ea37",
+      "context_id": "bc3eb114b41b33b49705c589",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "bdf9bbcd57b7c26351842c805bc1feccd0f0f243dcdd089fb6104a3e0e534301",
+      "source_published": "2026-10-21T16:02:37Z",
+      "source_updated": "2026-10-21T16:02:37Z",
+      "summary": "A benchmark is not merely a collection of test questions; it naturally induces an empirical measure over difficulty. In this work, we develop this measure-based view of benchmark evaluation. This perspective allows us to identify and formalize two central failure modes: measure mismatch, where the benchmark difficulty distribution differs from the intended difficulty distribution, and coverage gaps, where uncovered regions along the difficulty axis prevent benchmarks from detecting meaningful localized training progress. We propose two diagnostic metrics that capture these two failure modes and provide rigorous theoretical guarantees. Empirically, we analyze 25 popular benchmarks spanning 7 domains using carefully estimated item difficulties. Our results show that many benchmarks implicitly overweight certain difficulty regions, so their leaderboard conclusions should be interpreted with caution; others leave substantial portions of the difficulty axis uncovered, limiting their ability to monitor the model improvement process. Finally, we turn diagnosis into action by introducing BenchFill, a simple difficulty-targeted item rewriting algorithm that effectively reduces local coverage gaps.",
+      "tags": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Your Benchmark Is an Empirical Measure Over Difficulty",
+      "url": "https://arxiv.org/abs/2610.29927v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d9f64d39575d65679e541224",
+      "context_id": "8458ac311a6c9e5536e3cc63",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "failure mode"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "arxiv",
+      "source_context_sha256": "af70fd77851bb92931764ef4623b50dddba2ab6f39b6ac7c9e8e8fe6acd16648",
+      "source_published": "2026-10-20T18:36:33Z",
+      "source_updated": "2026-10-20T18:36:33Z",
+      "summary": "Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To address this issue, we propose Successive Scale Racing (SSR), a framework that adaptively searches for optimal evidence combinations in each evolution round. SSR constructs diverse evidence combinations based on the corresponding task quality and coverage, and efficiently races the resulting candidate harnesses under a small compute budget. Empirically, across three distinct benchmarks, SSR achieves state-of-the-art results in all six configurations. Notably, as the task pool grows from 40 to 200, SSR steadily improves the pass rate from 64.3% to 68.3%, while the baselines' performances all drop. Furthermore, its racing mechanism identifies near-optimal candidates while reducing validation executions by 60%.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
+      "url": "https://arxiv.org/abs/2610.28815v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "30e7c6c3bd6908f2468851c2",
+      "context_id": "fd24375571c6103d3bc2d36b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "de8717c7fedcb1a3809e9dbe33717546f9ba824803fec8127559927fdfb056e8",
+      "source_published": "2026-10-21T04:15:15Z",
+      "source_updated": "2026-10-21T04:15:15Z",
+      "summary": "Root cause analysis (RCA) and mitigation prediction are essential for incident management, enabling the identification of underlying causes of failures and ensuring the reliability of complex cloud-based systems. With rising incident volume and system complexity, incident reports have become a valuable resource for these tasks. Recent studies have shown promising results using Large Language Models (LLMs) to predict root causes and mitigation actions from textual descriptions in incident reports. Despite these advances, further progress is hindered by the lack of publicly available datasets; existing work relies on private data, which limits transparency, reproducibility, and generalization. To address this gap, we introduce CloudIR-Bench, the first publicly available benchmark providing a dataset and evaluation framework for incident report-based RCA and mitigation prediction. Curated from incident reports across five leading cloud-based systems, CloudIR-Bench captures a diverse range of real-world production scenarios representing authentic failures and engineers' reasoning. We also release an open-source evaluation framework that includes eight recent LLM-based approaches. Our comprehensive evaluation includes zero-shot and in-context learning experiments, along with a qualitative analysis to identify where and why LLMs fail. Benchmarking results reveal the capabilities and limitations of existing LLMs in this domain. The benchmark, including the dataset, framework and supplementary materials, is available at https://github.com/hoangtnm/CloudIR-Bench.",
+      "tags": [
+        "cs.SE"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "CloudIR-Bench: A Benchmark for Root Cause Analysis and Mitigation of Cloud Incidents",
+      "url": "https://arxiv.org/abs/2610.29185v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "337a3ba8312985ae25c1c652",
+      "context_id": "ceb2866aefd86b4e57347691",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "caa915dbceeedf8771f378868d4a0e2f83bb465ccf613442228979d0de7e5eb0",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients &times; Quantum Readout &times; Measurement-Induced Perturbation Separation STARLI Research Institute XXIX &mdash; Flagship Research Monograph 13 What happens when an instrument changes the very microenvironment it is supposed to measure? This research monograph investigates the scientific and engineering boundaries of quantum-enabled thermometry and microrobotic observation in confined, nonclinical cellular microenvironment models. Its central question is whether a localized temperature or magnetic-field gradient can be separated from disturbances introduced by the sensing and manipulation apparatus itself. The proposed research architecture combines hydrogel phantoms, controlled heat sources, nitrogen-vacancy (NV) diamond sensors, independent classical fluorescent thermometry, spatial reference points, blinded sham-actuation experiments, and uncertainty-aware thermal-field reconstruction. Rather than treating a sharp image or improved instrument sensitivity as proof of biological discovery, the study asks how to establish the physical origin, spatial validity, and reproducibility of each reported field. The 770-page volume contains 82 research chapters, five independently paginated research sections per chapter, 30 interconnected mathematical derivation plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Topics range from NV resonance cross-sensitivity, microwave and laser heating, photon statistics, soft-matter interfaces, hydrodynamic motion, and anisotropic thermal conduction to causal controls, inverse problems, spatial covariance, interlaboratory comparison, and qualified instrument retirement. Each research chapter connects a physical mechanism to a falsifiable claim, a nonclinical experimental comparator, a measurement endpoint, and an explicit condition for withholding or retiring the conclusion. The Research Gates preserve actionable questions for future investigators. The Phoenix Answer Embryos offer provisional designs that can be separated, reconfigured, or abandoned when evidence contradicts them. DOI-linked scholarly literature supplies foundations for metrology, quantum sensing, microhandling, and thermal-field measurement without being mistaken for validation of the proposed integrated platform. Scientific Scope and Limitations This is a hypothesis-forming research blueprint, not a report of completed laboratory experiments or independently peer-reviewed findings. It does not establish autonomous nanoscale robotic systems, clinical diagnostic performance, therapeutic efficacy, or universal quantum advantage. Its minimum experimental setting uses confined hydrogels, artificial microenvironments, and properly authorized reference materials. A temperature or magnetic-field reading alone cannot establish cell health, metabolism, viability, or treatment outcomes. STARLI Research Philosophy A scientifically responsible observation includes the possibility that observing changed the result. By making such failures measurable, preserving negative evidence, and leaving research questions open to revision, this monograph invites future human and AI researchers to challenge, extend, and reconstruct its proposed methods.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients × Quantum Readout × Measurement-Induced Perturbation Separation STARLI Research Institute XXIX — Flagship Research Monograph 13 What happens when an instrument changes the ver",
+      "url": "https://zenodo.org/records/23562293"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "86f92cb55eb4428393ed61be",
+      "context_id": "59cc3b5d474d48f83c8506b3",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "arxiv",
+      "source_context_sha256": "d6df10b54fe50ae1d900d454e5ca8d8902b2b403bea7f577949ed66fdfc94280",
+      "source_published": "2026-10-20T18:33:19Z",
+      "source_updated": "2026-10-20T18:33:19Z",
+      "summary": "Agentic systems have demonstrated strong capabilities on complex tasks by enabling multiple interacting large language model (LLM)-based agents to collaborate and execute subtasks in parallel. However, this collaborative structure introduces new challenges for reliably evaluating and diagnosing system failures, particularly failure attribution: tracing a system's execution to identify the agent step responsible for an incorrect final outcome. Because manually performing this task is time- and labor-intensive, recent work has turned to LLMs as judges to automate the process, referred to as automated failure attribution (AFA). These approaches assume that a sufficiently capable model can infer the failing step directly from an interaction transcript. In practice, however, direct prompting often performs poorly, which motivates follow-up work that explores various ways to improve AFA performance, including alternative prompting strategies and inference-time interventions. In this paper, we examine a more fundamental question: whether this weak behavioral performance reflects a genuine capability limitation. Using linear probes applied to internal activations, we uncover a significant \\emph{knows-but-won't-say gap:} models encode sufficient information to attribute a failure correctly but fail to explicitly output the responsible step. Building on this finding, we propose \\emph{grafting}, a simple manual intervention that exploits knowledge already encoded in the model to improve AFA performance without requiring ground-truth labels at inference time. Extensive evaluations across multiple LLMs and benchmark settings demonstrate that grafting consistently outperforms direct-prompting approaches, underscoring the potential of leveraging latent model knowledge for more reliable failure attribution. Our code is available at https://github.com/wendyzheng22/mi4afa.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Mechanistic Study of Automated Failure Attribution in LLM-based Agentic Systems",
+      "url": "https://arxiv.org/abs/2610.28811v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "2ccfc6431282e95062823fae",
+      "context_id": "88000322d029b3bff2567e4e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "ca88752cc1e6be7a1c28c90e890800eba24a6133aa13641539f86aeeaaaa2ead",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Experimental outputs for manuscript \"Beyond Viewpoint Affinity: Measuring Political Bias in LLMs as a Failure of Epistemic Consistency\" Political bias in large language models is often measured by treating responses to political questionnaires as evidence of ideological preference. This approach can conflate bias with differences in evidential support: asymmetric viewpoint preferences are not necessarily biased if one side is better supported by the available evidence. We explore a different facet of political bias: failures of epistemic consistency, in which models apply different evidentiary or evaluative standards to substantively equivalent items that carry different political cues. We operationalize this definition in two sets of experimental tasks. In person-attribution tasks, models evaluate nonpolitical items&mdash;such as mathematical proofs, logical arguments, or artistic artifacts---while only the political identity of the person associated with the item changes. In politicized-context tasks, models judge politically framed items, such as research designs, news articles, or policy outcomes, while partisan sources, group identities, or the left&ndash;right valence of the substantive outcome change. Across thirty LLMs, person-attribution tasks yield only modest left-leaning asymmetry&mdash;and this bias shrinks toward zero in more capable models. By contrast, politicized-context tasks yield large left-leaning asymmetries that do not shrink with model capability. Debiasing interventions---such as increasing reasoning effort, system prompts that emphasize epistemic rigor, and explicit instructions to ignore specific political cues&mdash;mitigate bias, but only partially. These results suggest that current LLMs show little bias based on an individual&rsquo;s political identity when evaluating nonpolitical or politically orthogonal items. However, on politicized-context tasks, LLMs are persistently biased by task-irrelevant political cues, even when the relevant evidence is objectively assessable or held constant across political variants. Note: A previous version of the&nbsp; experimental_results &nbsp;archive contained partial and incomplete outputs for the legacy OpenAI model&nbsp; gpt-4-0613 from 2023 . These results were not included in the analyses reported in the paper. The run was stopped partway through after we observed that this older model was incurring excessive API costs. As of April 2026, the input/output costs per 1M tokens of gpt-4-0613 were 30\\$ and 60\\$ respectively (between one and several orders of magnitude higher than newer OpenAI models used in the study, see: https://developers.openai.com/api/docs/models/gpt-4).&nbsp; Completing the full benchmark for&nbsp; gpt-4-0613 would have caused the project to exceed its compute budget, so we created a new version of the experimental outputs archive with those incomplete files for gpt-4-0613 removed. In the code repository (https://anonymous.4open.science/r/llms_epistemic_consistency-D133/README.md) associated with this experimental output there is the following bug for the Debiasing interventions using system prompts (\"centrist\" and \"epistemically rigorous\") experiment, which does not affect the experimental results but affects one field of the meta information saved to the CSV files&nbsp; In vpei/epistemic_consistency/experiment_types.py, all six run_model functions build a payload dict before the API call: payload = { &nbsp; &nbsp; \"system_prompt\": system_prompt, &nbsp; # &larr; saves the BASE prompt only &nbsp; &nbsp; &nbsp; ... } messages = [{\"role\": \"system\", \"content\": system_prompt}, ...] tasks.append((payload, make_llm_request_async(model_name, messages, ...))) Then inside make_llm_request_async &rarr; prepare_request_params() (llm_requests_v3.py:309&ndash;314), the system_prompt_prefix (EPISTEMICALLY_RIGOROUS_LLM_SYSTEM_PROMPT) is prepended to the system message after the payload is already constructed. So: - LLM API receives: EPISTEMICALLY_RIGORO",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Dataset for \"Beyond Viewpoint Affinity: Measuring Political Bias in LLMs as a Failure of Epistemic Consistency\"",
+      "url": "https://zenodo.org/records/23552888"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d9f64d39575d65679e541224",
+      "context_id": "5d16036b52df7042c01622bf",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "arxiv",
+      "source_context_sha256": "a7ef93fedda3ce4cfd0cffe74de57455f1d30ff0bf5b48c64748e8b816f59168",
+      "source_published": "2026-10-20T18:36:33Z",
+      "source_updated": "2026-10-20T18:36:33Z",
+      "summary": "Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our further analysis demonstrates that this degradation stems from suboptimal evidence selection during optimization, as different evidence combinations lead to substantially different evolution outcomes. To address this issue, we propose Successive Scale Racing (SSR), a framework that adaptively searches for optimal evidence combinations in each evolution round. SSR constructs diverse evidence combinations based on the corresponding task quality and coverage, and efficiently races the resulting candidate harnesses under a small compute budget. Empirically, across three distinct benchmarks, SSR achieves state-of-the-art results in all six configurations. Notably, as the task pool grows from 40 to 200, SSR steadily improves the pass rate from 64.3% to 68.3%, while the baselines' performances all drop. Furthermore, its racing mechanism identifies near-optimal candidates while reducing validation executions by 60%.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
+      "url": "https://arxiv.org/abs/2610.28815v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d031d59e17a038baa1ab6065",
+      "context_id": "18f27d1abcde9a23b8e57724",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "arxiv",
+      "source_context_sha256": "a9052ed16ae0ccdc5ff2ca81d22281030a91101f32f3897558e345295b18fa8c",
+      "source_published": "2026-10-21T10:25:15Z",
+      "source_updated": "2026-10-21T10:25:15Z",
+      "summary": "Direct preference optimization (DPO) incurs training costs in output scoring, sequence execution, and backpropagation, so reducing supervision alone does not necessarily save computation. We introduce a unified framework for stochastic pruning of the DPO computation graph that independently samples response positions for scoring, response prefixes for execution, and preference branches for backpropagation. By making these selections before the corresponding operations, the framework omits computation at each stage of a training step. Our analysis characterizes the objective changes induced by position and sequence pruning and uses inverse-probability weighting to obtain a conditionally unbiased single-branch gradient estimator for the sampled objective. Controlled measurements show that position and sequence pruning primarily reduce peak memory, with most output-memory savings attributable to an implementation that retains full response supervision. Branch pruning yields a $1.426\\times$ step-time speedup over a concatenated DPO baseline and reduces training time by about 30\\% relative to stock DPO across two model families, with slightly lower mean accuracy and benchmark-dependent changes in open-ended scores. These findings relate the resource benefits of stochastic graph pruning to the computation omitted and the resulting changes in the training objective.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Stochastic Pruning of the DPO Computation Graph: 1.4x Faster Training and Lower Peak Memory",
+      "url": "https://arxiv.org/abs/2610.29538v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d9db9598e8bde4ebde8824d1",
+      "context_id": "a9e3c3a2eb595b9fae75edb1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "calibration",
+        "replication",
+        "rup",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 12.9167,
+      "source": "zenodo",
+      "source_context_sha256": "0b279d4b4db35dc971ee9ccd275d699d0a94ce28c10c72610adeb70e0a19f191",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "TRUSTWORTHY AUTONOMOUS BIOLABORATORIES THROUGH MICROROBOTICS AND QUANTUM SENSING AT THE LIMIT Replayable Experiments x Permission Governance x External Metrology STARLI Research Institute XXIX - Flagship Research Monograph 20 Can an autonomous biolaboratory become scientifically useful without acquiring the authority to redefine its own permissions, validate its own evidence, or release untraceable measurements? This nonclinical research monograph investigates a bounded laboratory architecture connecting microrobotic sample handling, quantum-enabled and classical sensing, independent metrological reference chains, experiment replay, physical safe stopping, and human authority. Its central proposition is that reliable autonomy is a property of the entire evidence pathway rather than of any single robotic manipulator or AI model. A laboratory result is eligible for release only when sample identity and integrity, authorized execution, traceable references, justified uncertainty limits, and external acceptance are all demonstrated. An apparently successful action is not equivalent to a scientifically accepted sample. Digital replay does not replace physical replication, cryptographic event integrity does not guarantee sensor truth, and a quantum hardware label does not establish a practical sensing advantage. The research design is developed across 82 chapter-level inquiries with five independently paginated investigations per chapter, 30 connected mathematical research plates, 200 distinct Research Gates, and 33 Phoenix Answer Embryos. The chapters address typed authority graphs, specimen provenance, sample exposure, closed-chip physics, covariance-aware sensing, AI planning within finite action spaces, common-cause fault injection, external interlocks, blinded classical benchmarks, evidence DAGs, cross-site replication, data retention, and responsible system retirement. The proposed minimum experimental prototype uses a closed microfluidic chip with interchangeable handling modules, two independently referenced readout channels, simulated or inert-tracer specimens, a separate audit service, and a physically verifiable stop mechanism. Proposed tests include unauthorized-action challenges, hidden calibration drift, interrupted events, sample contamination, unannounced network partitions, and independent laboratory replay or rerun. DOI-linked scientific references establish the relevant literature in automated laboratories, microrobotics, quantum sensing, uncertainty metrology, FAIR data stewardship, and computational reproducibility. They do not independently validate the integrated system proposed here. SCIENTIFIC STATUS AND LIMITATIONS This book is a hypothesis-forming nonclinical research architecture. It reports no completed microrobotic or quantum biosensing experiments, no demonstrated clinical performance, no universal quantum advantage, and no autonomous system capable of authorizing itself. Statistical models, formulas, and decision policies require experimental verification, specialized review, and appropriate boundary conditions. A failed external reference, unavailable provenance chain, or revoked permission requires abstention rather than inference by convenience. STARLI RESEARCH PHILOSOPHY A trustworthy laboratory must remain answerable to evidence outside itself. Autonomy becomes scientifically meaningful when an experiment can be stopped, questioned, reconstructed, and handed to future researchers who retain the right to refuse its original assumptions.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "TRUSTWORTHY AUTONOMOUS BIOLABORATORIES THROUGH MICROROBOTICS AND QUANTUM SENSING AT THE LIMIT Replayable Experiments x Permission Governance x External Metrology STARLI Research Institute XXIX - Flagship Research Monograph 20 Can an autonomous biolaboratory become scientifically useful without acqui",
+      "url": "https://zenodo.org/records/23572483"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "db61ee203dd915fbab78652a",
+      "context_id": "af4a81920a327989f99d2008",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "counterexample",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.375,
+      "source": "zenodo",
+      "source_context_sha256": "6fd340082385ee60e057c463d5d71f0796fa56bc1025819db403f93495c431b5",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "Unrefereed research candidate. A random walk is robust if an adversary who may change every transition probability by a small relative amount cannot make it much slower to reach its targets. Zuckerman (Markov chain robustness, ITCS 2026, LIPIcs 362, 118) conjectured that the largest safe relative change is at least a constant divided by the graph's diameter (Conjecture 1.16). This package shows the conjecture is false. A graph can have short routes that the walk almost never uses; a small fixed bias away from a target accumulates between rare visits to them and depletes the target's stationary mass, and Kac's formula turns this into a long hitting time. For explicit cubic graphs J_b on N vertices with diameter O(log N), every effective resistance is at most 684 (proof), and a fixed perturbation of size 1/b, with error times diameter tending to zero, multiplies the worst-case hitting time by a factor of order b; the robustness is O(N^(-1/3)). For explicit 3m-regular graphs of diameter exactly three, the mixing time is at most 50(m+1), so with Zuckerman's mixing-time theorem the robustness lies between constant multiples of N^(-1/2) and N^(-1/4) (proof; not matching). An exact computation shows a 5.80-fold slowdown on a 5,995-vertex member with error times diameter 0.74. A diameter-two example, a reversible-perturbation bound and a comparison with Kemeny's constant are included. The archive contains the manuscript (PDF and LaTeX), seven verification scripts with a driver that reproduces the reference JSON results byte for byte under python -B -O, semantic negative controls, figures and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean replay in a separate copy; internal AI-assisted review, AI-assisted adversarial reviews (OpenAI gpt-5.6-sol; Anthropic Claude Opus 5.5; OpenAI gpt-6-astra) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
+      "tags": [
+        "Markov chains",
+        "random walks",
+        "hitting times",
+        "robustness",
+        "relative perturbations",
+        "effective resistance",
+        "mixing time",
+        "cubic graphs",
+        "counterexample"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Small diameter does not control hitting-time robustness",
+      "url": "https://zenodo.org/records/23575572"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7d906203770ed6176e0bcaf8",
+      "context_id": "97bd15a1a31d52c5fc11dc5f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "96930bcfd812bf72d6af656d65f79217b7b6c3e00a3bc8ba175c3a224b2de8ef",
+      "source_published": "2026-10-21T16:34:28Z",
+      "source_updated": "2026-10-21T16:34:28Z",
+      "summary": "Long-term memory for multimodal agents remains challenging, as it must preserve fine-grained visual evidence while tracking entity evolution across sessions. Existing abstraction-based memories compress images into text, often discarding visually discriminative details, whereas pixel-preserving memories retain raw observations but struggle to reliably associate diverse observations with persistent entity identities and track their evolving states. To address these limitations, we propose MHG-Mem, a multimodal hypergraph memory that jointly organizes entity identity, state evolution, and provenance to visual evidence. Specifically, MHG-Mem represents distinct entity mentions and their observed facts as individual nodes, grouping identity-consistent mentions and facts through occurrence hyperedges. It then synthesizes aspect-specific evolution states from these grouped observations and links them to supporting entities, facts, and source evidence through evolutionary and evidential hyperedges. To navigate this structured memory, we introduce hypergraph-based agentic search, which adaptively selects an entry layer, traverses typed hyperedges across memory levels, and inspects source observations when fine-grained verification is required. These designs support both detailed visual verification and reasoning over cross-session state changes. Extensive experiments across three benchmarks demonstrate the effectiveness of MHG-Mem, improving performance by 8.20-9.98% over the strongest baseline.",
+      "tags": [
+        "cs.CL"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Remembering Through Change: Provenance-Preserving Hypergraph Memory for Multimodal Agents",
+      "url": "https://arxiv.org/abs/2610.29995v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "24adc549d95ca6dee052e4ed",
+      "context_id": "55f3b8703389ea317e006909",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.1667,
+      "source": "arxiv",
+      "source_context_sha256": "863b680fdc9bf1ebf09e97d31fe8c7bba14703e8123f8ab171779e1fa3d9e6e4",
+      "source_published": "2026-10-21T12:35:47Z",
+      "source_updated": "2026-10-21T12:35:47Z",
+      "summary": "Accurate short-term forecasting of atmospheric seeing is of significant interest for astronomical observations and free-space optical communication systems, where rapid variations in optical turbulence can affect system performance and operational planning. In this work, we benchmark machine learning models for predicting atmospheric seeing up to two hours in advance, with a particular focus on probabilistic forecasting and uncertainty quantification. We compare two probabilistic approaches, Gaussian Processes (GPs) and a normalizing-flow- based model (FloTS), against deterministic recurrent neural network (RNN) and long short-term memory (LSTM) baselines. All models are trained and evaluated on seeing measurements from the Maunakea summit. We assess the models using both deterministic metrics, including the root mean square error and the Pearson correlation coefficient, and probabilistic metrics that evaluate the quality and calibration of predictive uncertainty estimates. The results show that deep learning approaches outperform standard recurrent networks for short-term forecasting, with LSTM and FloTS achieving the best overall predictive accuracy. While Gaussian Processes provide a useful probabilistic baseline, their predictive distributions are limited by the Gaussian assumption. FloTS combines competitive forecasting accuracy with flexible uncertainty quantification and produces the most informative probabilistic forecasts.",
+      "tags": [
+        "cs.LG",
+        "astro-ph.IM"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Probabilistic Machine Learning for Short-Term Atmospheric Seeing Forecasting",
+      "url": "https://arxiv.org/abs/2610.29654v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "009b2e06da9a64f397508881",
+      "context_id": "afd3247857791f8620fcb784",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.9583,
+      "source": "arxiv",
+      "source_context_sha256": "14a845003d320c38c8de126e9a2e0fa373938adc033c2407f3efb84c9985dab9",
+      "source_published": "2026-10-20T18:12:07Z",
+      "source_updated": "2026-10-20T18:12:07Z",
+      "summary": "World models let agents compare imagined outcomes before acting, but an agent must still decide which alternatives to explore and when a proposed plan should replace its learned policy. We introduce SDI (Sibling Disagreement in Imagination), which connects these decisions through a shared actor-based reference. SDI compares action sequences imagined from the same model state, using repeated rollouts of the actor's own sequence to measure variation under fixed behavior. This reference scales both the spread across candidate returns, which provides an exploration signal, and a proposed plan's predicted advantage, which governs action acceptance. The agent executes a planned action when its advantage exceeds the reference variability by a fixed factor; otherwise, it follows the actor. SDI reuses the base agent's world model, actor, and critic without requiring an additional disagreement ensemble. Exploration and planning guide training data collection, while evaluation uses the learned actor alone. Across Meta-World, Adroit, and DM-Control, SDI achieves a higher observed task-average score than every compared baseline in each suite and matches or exceeds the strongest baseline's performance on 15 of 18 tasks. Component ablations and robustness analyses further examine the roles of exploration, planning exposure, and action acceptance. Paired evaluations from identical simulator states show that the gate improves both recovery from actor failures and preservation of successful behavior relative to ungated planning, while substantially reducing return degradation. Together, these results support comparing imagined alternatives against a shared actor reference as a unified approach to exploring and planning with world models.",
+      "tags": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Second Thoughts: Exploring and Planning through Comparative Imagination in World Models",
+      "url": "https://arxiv.org/abs/2610.28779v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7f01d23703fe6df9b53377ca",
+      "context_id": "d5a59574da6f83aa9d2ddb8f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "drat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.875,
+      "source": "arxiv",
+      "source_context_sha256": "293d82fc851dc0176195de62abbc2826c48e09d91d5cf532a1e417270568f58a",
+      "source_published": "2026-10-21T16:37:09Z",
+      "source_updated": "2026-10-21T16:37:09Z",
+      "summary": "Reinforcement learning (RL) based on PPO-style clipping has become an effective approach to improving the reasoning capabilities of large language models (LLMs). However, standard token-level clipping measures policy change only through the conditional probability of the current token, while the prefix conditioning context is itself generated by the policy. This mismatch becomes especially consequential in long-response and off-policy training. We reformulate autoregressive generation as a finite-horizon Markov decision process and derive its performance-difference identity under behavior-policy sampling. The resulting change of measure identifies the cumulative likelihood ratio of the generated prefix as the exact importance weight for each stepwise policy-improvement term. Starting from the monotonic-improvement principle of trust-region policy optimization, we then construct a prefix-level trust region using the exact reverse-KL coordinate $r-1-\\log r$, whose behavior-policy expectation equals the corresponding prefix-distribution KL divergence. This yields EPIC, a PPO-style sequence-clipping method that directly regulates prefix-level policy drift without relying on a local quadratic approximation or expert-routing replay. Experiments on off-policy reinforcement learning with a sparse mixture-of-experts language model show that EPIC consistently outperforms standard and sequence-level clipping baselines across mathematical-reasoning benchmarks, while remaining competitive with routing-replay-based alternatives. Code is available at https://github.com/LiChengxi666/EPIC.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "EPIC: Rethinking Trust Regions for Autoregressive LLM Policies via Exact-KL Prefix Importance-Ratio Clipping",
+      "url": "https://arxiv.org/abs/2610.29999v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "da11e0847432289137237a39",
+      "context_id": "3ff641e64ae6faf4efdf6789",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.8333,
+      "source": "arxiv",
+      "source_context_sha256": "545ac086456c50527d83efb1324be3dc94010ac61b9fedc5a5c946e002c3f7b5",
+      "source_published": "2026-10-21T17:37:58Z",
+      "source_updated": "2026-10-21T17:37:58Z",
+      "summary": "Today's multimodal assistants are typically prompted to interpret the visual evidence presented to them. To offload the cognitive burden of remembering across long horizons, wearable assistants should instead proactively acquire and maintain useful memory as the user's surroundings evolve. Doing so on the user's behalf requires identifying what matters, understanding the scene in real time, and initiating memory maintenance in the background while the user stays focused on their activities. We introduce ProactEgoMem, a benchmark that evaluates proactive memory in streaming egocentric video. Three tasks ground the evaluation in ambient environmental needs: Information Capture (IC) preserves transient yet dense visual information, State Tracking (ST) follows changing object states, and Location Tracking (LT) records object movements. The benchmark defines its protocol at two levels of proactiveness: the Notification Level asks for a single timely notification that satisfies the user's intent, while the deeper Intervention Level asks the agent to maintain memory on the user's behalf through an active start-to-stop tool lifecycle. Parallel ProactEgoMem-Daily and ProactEgoMem-Sci tracks contain 300/100 clips covering daily and scientific use cases, paired with 1000/500 questions in ProactEgoMem-QA, which measures the quality of the proactively acquired memory. Across proprietary, open-source, video-language, and streaming baselines, even the strongest models fail to capture memory both timely and accurately. ProactEgoMem provides a rigorous evaluation foundation for proactive multimodal assistance and for video agents that co-exist with their users.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "ProactEgoMem: Benchmarking Proactive Memory in Streaming Egocentric Video",
+      "url": "https://arxiv.org/abs/2610.30089v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "863434849f4f7b76b6dcf722",
+      "context_id": "edc6fa95d2a239e32f1381a6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.7917,
+      "source": "arxiv",
+      "source_context_sha256": "17bfce07804aff3465bdbff8e25f891d5c5b5bf3f1302bd68ef7d356a069c5c2",
+      "source_published": "2026-10-21T05:55:20Z",
+      "source_updated": "2026-10-21T05:55:20Z",
+      "summary": "Omni-modal assistants must remember not only what users say, but also what they show and convey. Existing long-term memory benchmarks are mostly text-and-image or report a single end-to-end score, so they cannot locate whether evidence is lost when it is represented, retrieved, delivered, or read. We introduce MOSAIC, a benchmark of 923 questions over persona-grounded histories of 11-24 sessions spanning text, image, video, and audio. MOSAIC constructs targeted spatial, temporal, and prosodic signals rather than decorative media, with the strongest causal validation for spatial information and selector-level validation for annotated prosody, and pairs them with a matched diagnostic protocol that freezes the question, reader, prompt, and budget while intervening on representation, retrieval, and delivery. Matched decomposition shows that representation loss is modality-dependent, residual reading dominates even under gold evidence, and abstention remains weak on these controls: strong answerable scores coexist with failures to refuse. MOSAIC thus turns omni-modal memory evaluation from a leaderboard into a diagnosis of write, retrieve, deliver, and read failures.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "MOSAIC: An Omni-Modal Benchmark for Long-Term Memory and Cross-Modal Reasoning in Conversational Agents",
+      "url": "https://arxiv.org/abs/2610.29249v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "017e7bf745ae46c8410eac77",
+      "context_id": "fac4b17ddc36f2daeb2ad28b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.75,
+      "source": "arxiv",
+      "source_context_sha256": "e2f8f575c394e1d3322db2efbd3552d87ce99298972e6aacd4bb25c38ffc3776",
+      "source_published": "2026-10-21T16:27:42Z",
+      "source_updated": "2026-10-21T16:27:42Z",
+      "summary": "Koopman operator theory represents nonlinear systems with linear and bilinear terms in the state and input observables, greatly simplifying control design. However, incorporating input constraints into Koopman-based controller synthesis remains challenging, limiting their applicability to constrained control tasks such as tracking. This paper develops a constrained Koopman Control Parametrization (cKoCoP) framework for synthesizing state-feedback controllers that satisfy prescribed input constraints with Lyapunov-certified stability of the identified lifted closed loop. The cKoCoP offers nonlinear state-feedback via linear-in-observables feedback, enabling linear controller design. The proposed controller is obtained through convex optimization: we incorporate ellipsoidal or polytopic input constraints with the S-procedure or Farkas-lemma-based conditions. We also introduce a Control Lyapunov Function (CLF) for trajectory tracking which incorporates input constraints. The approach is validated on two canonical nonlinear systems, a double pendulum and a unicycle, demonstrating data-driven tracking while respecting input constraints. Experiments validate the method's robustness to measurement noise, and runtime improvements over Koopman Model Predictive Control (KMPC) baselines. The results demonstrate that cKoCoP achieves competitive tracking performance with substantially reduced online computational cost, supporting its potential for real-time constrained tracking applications.",
+      "tags": [
+        "eess.SY"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Constrained Koopman Control Parametrization: Convex Controller Synthesis for Tracking under Input Constraints",
+      "url": "https://arxiv.org/abs/2610.29984v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0fe96e230871aa22761a094f",
+      "context_id": "8e4b212216503ddad0af08d9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_context_sha256": "949e98b6b533d97039c1c89ce6cef4a628f52281f510e33e3a30fc991972df79",
+      "source_published": "2026-10-22",
+      "source_updated": "",
+      "summary": "This package contains the code and data needed to reproduce every table, figure, and number in El Akrouchi and Mhada, &ldquo;When one funder is the field: reporter concentration, voluntary sustainability disclosure, and the measurement of philanthropic development finance&rdquo; (Frontiers in Sustainability). The study uses OECD Creditor Reporting System (CRS) microdata on philanthropic development finance, 2009 to 2023. It shows that a 2017 discontinuity in policy-marker coverage across nineteen subsystems follows the identity of one dominant reporter rather than reporter concentration. It then reconstructs thematic targeting for the unreported period from project text and examines commitment horizons and crop-system content in agricultural philanthropy. Contents: Notebook 1 ( 1_concentration_all_sectors.ipynb ): extraction of philanthropic grants across all sectors and the concentration test (Tables 1, 2, S1, S3, S16 to S20; Figures 2 and S1). Notebook 2 ( 2_disclosure_horizons_crops.ipynb ): the agricultural analyses, including the text-based reconstruction with bootstrap uncertainty, commitment horizons, and crop-system content (Tables 3, 4, S2, S4 to S15, S21 to S25; Figures 1 and 3 to 7). data/ : the agricultural extraction, the public ODA control series, derived all-sector datasets, the hand-coded audit of the crop dictionary, the crop dictionary, and the reporter list. outputs/ : every table and figure, named after the manuscript item it produces, and the fitted reconstruction model (serialized objects and portable coefficients). Both notebooks run top to bottom with fixed random seeds. The README describes data sources, run order, software versions, and where each result is produced.",
+      "tags": [
+        "philanthropic development finance",
+        "OECD Creditor Reporting System",
+        "policy markers",
+        "voluntary disclosure",
+        "sustainability reporting",
+        "ESG measurement",
+        "reporter concentration",
+        "agricultural development"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for \"When one funder is the field: reporter concentration, voluntary sustainability disclosure, and the measurement of philanthropic development finance\"",
+      "url": "https://zenodo.org/records/23576330"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 48,
+  "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan"
+}
