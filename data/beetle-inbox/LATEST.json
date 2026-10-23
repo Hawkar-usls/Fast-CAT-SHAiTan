@@ -1,5 +1,5 @@
 {
-  "batch_id": "a65ab89ac240fd8c6e53",
+  "batch_id": "e96bbca5e2e3d6db85bb",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -491,39 +491,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "337a3ba8312985ae25c1c652",
-      "context_id": "b35a92f751f996202b393e7d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "zenodo",
-      "source_context_sha256": "cb4722ffce3b80d25c1df58ce8edeb2da7726484e6c130f3dc8f061ab226b524",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients &times; Quantum Readout &times; Measurement-Induced Perturbation Separation STARLI Research Institute XXIX &mdash; Flagship Research Monograph 13 What happens when an instrument changes the very microenvironment it is supposed to measure? This research monograph investigates the scientific and engineering boundaries of quantum-enabled thermometry and microrobotic observation in confined, nonclinical cellular microenvironment models. Its central question is whether a localized temperature or magnetic-field gradient can be separated from disturbances introduced by the sensing and manipulation apparatus itself. The proposed research architecture combines hydrogel phantoms, controlled heat sources, nitrogen-vacancy (NV) diamond sensors, independent classical fluorescent thermometry, spatial reference points, blinded sham-actuation experiments, and uncertainty-aware thermal-field reconstruction. Rather than treating a sharp image or improved instrument sensitivity as proof of biological discovery, the study asks how to establish the physical origin, spatial validity, and reproducibility of each reported field. The 770-page volume contains 82 research chapters, five independently paginated research sections per chapter, 30 interconnected mathematical derivation plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Topics range from NV resonance cross-sensitivity, microwave and laser heating, photon statistics, soft-matter interfaces, hydrodynamic motion, and anisotropic thermal conduction to causal controls, inverse problems, spatial covariance, interlaboratory comparison, and qualified instrument retirement. Each research chapter connects a physical mechanism to a falsifiable claim, a nonclinical experimental comparator, a measurement endpoint, and an explicit condition for withholding or retiring the conclusion. The Research Gates preserve actionable questions for future investigators. The Phoenix Answer Embryos offer provisional designs that can be separated, reconfigured, or abandoned when evidence contradicts them. DOI-linked scholarly literature supplies foundations for metrology, quantum sensing, microhandling, and thermal-field measurement without being mistaken for validation of the proposed integrated platform. Scientific Scope and Limitations This is a hypothesis-forming research blueprint, not a report of completed laboratory experiments or independently peer-reviewed findings. It does not establish autonomous nanoscale robotic systems, clinical diagnostic performance, therapeutic efficacy, or universal quantum advantage. Its minimum experimental setting uses confined hydrogels, artificial microenvironments, and properly authorized reference materials. A temperature or magnetic-field reading alone cannot establish cell health, metabolism, viability, or treatment outcomes. STARLI Research Philosophy A scientifically responsible observation includes the possibility that observing changed the result. By making such failures measurable, preserving negative evidence, and leaving research questions open to revision, this monograph invites future human and AI researchers to challenge, extend, and reconstruct its proposed methods.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients × Quantum Readout × Measurement-Induced Perturbation Separation STARLI Research Institute XXIX — Flagship Research Monograph 13 What happens when an instrument changes the ver",
-      "url": "https://zenodo.org/records/23562293"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "014d2c6b214767f4e989e2fd",
       "context_id": "8af54a48883e9e677fc526e7",
       "delivery_preview_only": true,
@@ -909,6 +876,41 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7b82db1d9b39730a66949dec",
+      "context_id": "62425ebfdbe1071625d3659e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "verification"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.0833,
+      "source": "zenodo",
+      "source_context_sha256": "05306a89e0e91f2b2bfd4f677a5f173a2e16bc236cd82e26d7c9732e8e3190af",
+      "source_published": "2026-10-21",
+      "source_updated": "",
+      "summary": "Abstract: Artificial intelligence increasingly mediates game production and player participation, but claims about game merging frequently conflate different technical achievements. This article examines AI game melding as the convergence of agent-assisted reconstruction, executable interoperability, and creative recombination. An integrative narrative review connects procedural generation, computational blending, modding, co-creation, and decompilation research with public documentation available through October 15, 2026. Cases include meme-based and Wii Sports crossovers in World at War Zombies, a Call of Duty and Minecraft hybrid, runtime bridging, and agent-assisted reconstruction. The analysis separates creator demonstrations and reported acceleration from independently validated performance. It proposes a five-layer composability stack comprising representation, semantics, runtime, verification, and permission. Reduced implementation friction may relocate production bottlenecks, making behavioral validation, design coherence, maintenance, and rights governance increasingly consequential. Four conditional scenarios are considered: expanded bespoke play, abundance accompanied by discoverability problems, stronger enclosure, and governed experimentation. The literature gap concerns limited integrated evidence linking substantial game reconstruction and interoperability to community, economic, and governance outcomes, rather than an absence of earlier blending research. Proposed studies address acceleration, player experience, attribution, preservation, and platform power. Game melding may redistribute creative authority, but its consequences depend on institutions and verification practices surrounding programmable play rather than technical capability alone.",
+      "tags": [
+        "generative artificial intelligence; game melding; modding; decompilation; human-AI co-creation; plat"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "AI Game Melding: Agent-Assisted Reconstruction, Player Co-Creation, and the Future of Programmable Play",
+      "url": "https://zenodo.org/records/23585810"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "d6319c0619eadf67decddf80",
       "context_id": "2b119e58335b3c6561baf517",
       "delivery_preview_only": true,
@@ -1270,39 +1272,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "337a3ba8312985ae25c1c652",
-      "context_id": "ceb2866aefd86b4e57347691",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "limitation"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "zenodo",
-      "source_context_sha256": "caa915dbceeedf8771f378868d4a0e2f83bb465ccf613442228979d0de7e5eb0",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients &times; Quantum Readout &times; Measurement-Induced Perturbation Separation STARLI Research Institute XXIX &mdash; Flagship Research Monograph 13 What happens when an instrument changes the very microenvironment it is supposed to measure? This research monograph investigates the scientific and engineering boundaries of quantum-enabled thermometry and microrobotic observation in confined, nonclinical cellular microenvironment models. Its central question is whether a localized temperature or magnetic-field gradient can be separated from disturbances introduced by the sensing and manipulation apparatus itself. The proposed research architecture combines hydrogel phantoms, controlled heat sources, nitrogen-vacancy (NV) diamond sensors, independent classical fluorescent thermometry, spatial reference points, blinded sham-actuation experiments, and uncertainty-aware thermal-field reconstruction. Rather than treating a sharp image or improved instrument sensitivity as proof of biological discovery, the study asks how to establish the physical origin, spatial validity, and reproducibility of each reported field. The 770-page volume contains 82 research chapters, five independently paginated research sections per chapter, 30 interconnected mathematical derivation plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Topics range from NV resonance cross-sensitivity, microwave and laser heating, photon statistics, soft-matter interfaces, hydrodynamic motion, and anisotropic thermal conduction to causal controls, inverse problems, spatial covariance, interlaboratory comparison, and qualified instrument retirement. Each research chapter connects a physical mechanism to a falsifiable claim, a nonclinical experimental comparator, a measurement endpoint, and an explicit condition for withholding or retiring the conclusion. The Research Gates preserve actionable questions for future investigators. The Phoenix Answer Embryos offer provisional designs that can be separated, reconfigured, or abandoned when evidence contradicts them. DOI-linked scholarly literature supplies foundations for metrology, quantum sensing, microhandling, and thermal-field measurement without being mistaken for validation of the proposed integrated platform. Scientific Scope and Limitations This is a hypothesis-forming research blueprint, not a report of completed laboratory experiments or independently peer-reviewed findings. It does not establish autonomous nanoscale robotic systems, clinical diagnostic performance, therapeutic efficacy, or universal quantum advantage. Its minimum experimental setting uses confined hydrogels, artificial microenvironments, and properly authorized reference materials. A temperature or magnetic-field reading alone cannot establish cell health, metabolism, viability, or treatment outcomes. STARLI Research Philosophy A scientifically responsible observation includes the possibility that observing changed the result. By making such failures measurable, preserving negative evidence, and leaving research questions open to revision, this monograph invites future human and AI researchers to challenge, extend, and reconstruct its proposed methods.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "QUANTUM SENSING AND MICROROBOTIC PERTURBATION ANALYSIS OF CELLULAR MICROENVIRONMENTS AT THE LIMIT Microenvironment Gradients × Quantum Readout × Measurement-Induced Perturbation Separation STARLI Research Institute XXIX — Flagship Research Monograph 13 What happens when an instrument changes the ver",
-      "url": "https://zenodo.org/records/23562293"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "88df6c9cc825721803c34cf0",
       "context_id": "ebb887f7d76b002972ac58e9",
       "delivery_preview_only": true,
@@ -1336,6 +1305,42 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Same Entity, Different Script: Diagnosing Cross-Script Entity Matching Failures in Language Models",
       "url": "https://arxiv.org/abs/2610.31407v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "fe198d1c308df2ab776db799",
+      "context_id": "ff68763f1ea87f742bf70b7c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_context_sha256": "e848a60127d46bc7f0cb4b36eedcb1aacf54b6ec3e08372f325ebaf16bc94aa4",
+      "source_published": "2026-10-22T14:08:48Z",
+      "source_updated": "2026-10-22T14:08:48Z",
+      "summary": "Large language models can repeat an instruction while failing to keep obeying it. We study this recall-compliance dissociation in long-horizon dialogue and define State Integrity Collapse: a model preserves a stated constraint in memory but stops applying it to later turns. We introduce StateTrack-Bench, a controlled suite of conversations covering numerical, format, role/persona, factual-memory, and logical-rule constraints. Across seven provider-pinned model snapshots and five dialogue-depth probes, strict joint retention ranges from 62.4% to 100.0%, with degradation concentrated in symbolic constraints and in one especially brittle model. A forked recall audit shows that 88.6% of observed failures are behavioral-drift failures rather than ordinary forgetting; excluding the brittle outlier preserves this diagnosis (84.4% of failures). Extended evaluations at depths up to 50 turns confirm that the dissociation persists beyond the core benchmark, while Structured State Anchoring recovers up to 24.4 points on immutable constraints. The results show that reliability cannot be inferred from single-turn instruction following alone; evaluation must track whether remembered constraints remain operational as dialogue state grows. Code and artifacts are available at: https://github.com/xzzvsxd/StateTrack.",
+      "tags": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "When LLMs Forget What They Believe: Characterizing State Integrity Collapse in Long-Horizon Dialogues",
+      "url": "https://arxiv.org/abs/2610.31314v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
