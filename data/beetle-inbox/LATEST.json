@@ -1,5 +1,5 @@
 {
-  "batch_id": "4cf17653c9caff2eef5b",
+  "batch_id": "3c40c9cbb59c7f8cec22",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -307,8 +307,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b3fce2473de9d76a97d3bc9b",
-      "context_id": "de6d5cf09c88facf515759fe",
+      "candidate_id": "46c795c59969a8d624d1af73",
+      "context_id": "d4c408cbcae89439269da801",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
@@ -328,20 +328,22 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.5,
       "source": "zenodo",
-      "source_context_sha256": "d2064c0b8377b6a26bfd771e6fc8b7fb917ce7b9d73986784986c76462c90ce8",
-      "source_published": "2026-10-23",
+      "source_context_sha256": "2b1c11d60ef8ba6349bcf31a20a631d1783b46a67f0e2f6ce0018da4c2c61323",
+      "source_published": "2026-10-24",
       "source_updated": "",
-      "summary": "EFGB MATLAB Simulator v1.0.0 Initial research software release | MATLAB R2024a This release provides the MATLAB implementation of Energy-Feasibility-Guaranteed Bidding (EFGB): for decentralized task allocation among heterogeneous UAVs under battery constraints and lossy communication. Associated manuscript: EFGB: Team-Independent Round-Trip Energy Admission for Decentralized Multi-UAV Rescue Allocation under Lossy Communication (submitted to Robotics and Autonomous Systems). Features Team-independent round-trip energy admission with capacity-bounded workload charges. Capacity-proportional workload sharing and reserve-aware mission admission. Gilbert–Elliott communication modeling with lossy awards and acknowledgments. Comparative policies including outbound-only admission, reactive safety override, SGA, the earlier conference auction, and CBBA. SGA + EFGB and CBBA + EFGB for separating allocation-protocol effects from the safety admission rule. Experiments covering ablations, docking-order validation, communication degradation, energy-model mismatch, deadlines, and robustness. Physics-based and flight-data-derived energy-error evaluation. Repository structure | Directory | Contents | | --- | --- | | harness/ | Main simulator, policies, campaign drivers, analysis functions | | figures/ | MATLAB figure-generation programs | | tests/ | Docking-order and CBBA verification programs | | examples/ | Reduced single-run demonstration | | data/ | Derived flight-energy data and summary | | docs/ | Reproducibility instructions, assumptions, and data provenance | Requirements MATLAB R2024a Statistics and Machine Learning Toolbox for selected analyses Parallel Computing Toolbox (optional) Quick start From the repository root in MATLAB R2024a: addpath(fullfile(pwd, 'harness')); addpath(fullfile(pwd, 'tests')); run(fullfile('examples', 'single_run.m')); Run the included checks: run(fullfile('tests', 'run_tests.m')); For complete experiment instructions, see README.md and docs/REPRODUCIBILITY.md . The demonstration uses reduced settings and is not a reproduction of the published tables. Scope and reproducibility The analytical reserve guarantee depends on the assumptions stated in the associated manuscript. The simulator charges on-scene service energy at arrival without imposing the entire corresponding elapsed service duration. Large Monte Carlo results are prepared separately for research-data archiving. Citation and license See CITATION.cff for citation metadata and LICENSE for the software license. Users of the research methods should also cite the associated article when available. Version v1.0.0 — Initial public source release. Full changelog: https://github.com/arefinsarker068/EFGB-MultiUAV-Rescue/commits/v1.0.0",
+      "summary": "Companion Lean 4 formalization and computational verification materials for Yunkun Song's manuscript \"Pattern-avoiding binary arrays and a Stirling-type table: explicit formulas, exact recurrence orders, and non-D-finiteness\" (OEIS A207123). The archive contains 80 Lean modules with a pinned Lean 4/Mathlib v4.34.1 toolchain, verification scripts (414 automated checks in 14 modules), supporting notes, input snapshots, historical verification logs, and the corresponding manuscript. Manuscript Section 9 maps results to formal theorem names and describes the scope of formalization. This deposit freezes source revision 7ced433fadc1ca3dedced4e0d2fdce4032f7d5e5 of the previously published repository. It is independently downloadable without access to that GitHub account. See ARCHIVE_README.md for entry points, reproduction instructions, provenance, and the checks performed in preparing this deposit. The full Lean compilation and 414-check suite were not rerun for the deposit. Licensing is mixed and unchanged: code is MIT licensed; the manuscript, report, notes and other text are excluded and remain all rights reserved; OEIS snapshots retain CC BY-SA 4.0 and attribution; other third-party data retains its original terms. See the included LICENSE and NOTICE files.",
       "tags": [
-        "multi-robot task allocation",
-        "energy-feasible admission",
-        "heterogeneous UAVs",
-        "decentralized coordination",
-        "lossy communication"
+        "Lean 4",
+        "formal verification",
+        "Mathlib",
+        "OEIS A207123",
+        "pattern avoidance",
+        "Stirling numbers",
+        "D-finite functions"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "EFGB: Team-Independent Round-Trip Energy Admission for Decentralized Multi-UAV Rescue Allocation under Lossy Communication — MATLAB Simulator",
-      "url": "https://zenodo.org/records/23581830"
+      "title": "Lean formalization and verification scripts for \"Pattern-avoiding binary arrays and a Stirling-type table: explicit formulas, exact recurrence orders, and non-D-finiteness\"",
+      "url": "https://zenodo.org/records/23608721"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -409,8 +411,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c115152b6924d7f447bc7e84",
-      "context_id": "6a42a1e2b1c3a1b388f8e89e",
+      "candidate_id": "3b7538b20a347ad59e1de338",
+      "context_id": "92dcc2b5a35dbdced1907d47",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::FORWARD",
@@ -430,14 +432,23 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 1.5,
       "source": "zenodo",
-      "source_context_sha256": "00f63822d802f951afe3fc1ee9b0775313ba296359126b5e787db642b5fc5a73",
+      "source_context_sha256": "395d5ff34c9faf5b7fd15e70f0fa106e8b00defc277199525f06487be944866a",
       "source_published": "2026-10-23",
       "source_updated": "",
-      "summary": "This archive provides the code, preserved numerical results, historical replication fixtures, figure-source data, and provenance documentation supporting the manuscript &ldquo;An executable procedure for attributing performance differences in finite candidate itinerary evaluations.&rdquo; The package includes a configurable saved-count comparison interface, tests, expected outputs, and 48 preserved historical replication files. It supports reconstruction and verification of the documented V1-R and U2-R comparisons and one selected raw-input trace. The archive does not reproduce the complete original scenario-generation, optimization, or simulation pipeline. Its scope and limitations are documented in the accompanying files. Licensing and attribution: Original project software is released under the MIT License; authorized original documentation and generated research records under CC BY 4.0. City of Toronto source material retains the Open Government Licence &ndash; Toronto, and OpenStreetMap-derived database material retains ODbL 1.0. These component-specific terms do not relicense third-party materials. See CURRENT_COMPONENT_RELEASE_TERMS.md and SOURCE_CITATIONS_AND_RELEASE_BOUNDARIES.md for details.",
-      "tags": [],
+      "summary": "Conformance vectors for agent execution evidence, and the reference verifier that judges them. This release carries 39 corpus manifests across 38 suites and 2,154 vectors in all, among them the in-toto adversarial-execution-evidence predicate, the in-toto ai-agent-action predicate, an AI generation predicate, the observed-effect predicate, SCITT COSE carriage, signed decision receipts and receipt chains, an anchor-stream verifier, ACS core, artifact binding, MCP response-phase interception, the OWASP MCP verification draft, the W3C per-check reporting format and intake, A2A agent-card canonicalization, delegation lifecycle, authority at dispatch, done contracts and receipts, grader isolation, spoofed tool output, test tampering, and ACI deployments. One binary judges every one of them, selected by the suite each corpus manifest declares. Each corpus digest is listed, recomputed from the vector files, in CORPUS-DIGESTS.txt, which the GitHub release signs and timestamps. The predicate's model is execute-and-attest rather than match-and-assert: a consumer recomputes the outcome from the bytes the statement carries, instead of trusting a verdict the producer asserted about itself. This repository is a second, independently usable implementation of that contract, so that any producer of the predicate type can self-certify and any consumer can reject a lying emitter. For the adversarial-execution-evidence corpus this deposit covers suite revision 32: 288 vectors, of which 63 accept, 223 reject and 2 are indeterminate. Its bytes are fixed by the corpus digest bf3e5befd71640757ff1b3f0af63507364b823b5e3f9059678f72f64a46e11c1 recorded in vectors/MANIFEST.json. A published revision is never mutated in place; a normative change to the predicate, or an addition to the corpus, bumps the revision and regenerates every vector byte-identically from its generators, because the vendored specification's digest is itself a corpus input. The archive is the output of git archive --format=tar.gz --prefix=agent-evidence-vectors-0.25.0/ v0.25.0 and reproduces byte for byte from the signed tag (SHA-256 ffd80cc752769d69ef13745f55cac9ab99d5a3cd5476f19359c2646597290970). The intended use is citation by a conformance requirement. A requirement that names this suite, or any other suite demonstrated to exercise the same conditions, is checkable by a party who trusts neither the producer nor the implementer. Cite this version DOI for a conformance claim; the concept DOI 10.5281/zenodo.22758687 always resolves to the newest release.",
+      "tags": [
+        "conformance testing",
+        "attestation",
+        "supply chain security",
+        "in-toto",
+        "provenance",
+        "canonicalization",
+        "agentic systems",
+        "evidence"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "FreeTime Planner: Saved-count comparison and historical replication archive (code and data)",
-      "url": "https://zenodo.org/records/23584207"
+      "title": "agent-evidence-vectors: conformance vectors for agent execution evidence",
+      "url": "https://zenodo.org/records/23608468"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -517,6 +528,47 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7b1832b9afb305a3d1b5792c",
+      "context_id": "6cf831ee027a3876f6d8f570",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inversion",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.9583,
+      "source": "zenodo",
+      "source_context_sha256": "83ec2f3d96299b6482f873503c1ac0de6b2571e2591290d743e3725de148614d",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Reproducible Python/Colab pipeline that processes ECOSTRESS L2T LSTE v002 land surface temperature (70 m) to detect closed depressions acting as cold-air traps in the Central Middle Atlas (Morocco): local LST anomaly against a 5 km background, morphological reconstruction of closed depressions, D8 cold-air flow routing without depression filling, a harmonic model of nocturnal inversion development, statistical determinants, robustness and between-period stability.",
+      "tags": [
+        "cold-air pooling",
+        "ECOSTRESS",
+        "land surface temperature",
+        "closed depressions",
+        "topoclimate",
+        "Middle Atlas",
+        "Morocco"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "caps-ecostress-moyen-atlas: detection of cold-air pools from ECOSTRESS nocturnal land surface temperature and terrain morphology",
+      "url": "https://zenodo.org/records/23609163"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "014d2c6b214767f4e989e2fd",
       "context_id": "8af54a48883e9e677fc526e7",
       "delivery_preview_only": true,
@@ -550,40 +602,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Beyond Best-of-$k$: Prior-Consistent DAPS for Ambiguous Nonlinear Inverse Problems",
       "url": "https://arxiv.org/abs/2610.31592v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a3adabee0a0bbbf6db1a3bc8",
-      "context_id": "7fa259669c6824954e901735",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "identifiability",
-        "reconstruction",
-        "recovery"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.5417,
-      "source": "zenodo",
-      "source_context_sha256": "9508cad19e6b8786cf34a8dee1b8c493be208938061349d6fcc03d7a6d6eee61",
-      "source_published": "2026-10-22",
-      "source_updated": "",
-      "summary": "MICROROBOTIC NOISE SEPARATION ENGINEERING FOR QUANTUM BIOSENSING AT THE LIMIT Mechanical Vibration &times; Quantum Readout Noise &times; Causal Spectral Analysis STARLI Research Institute XXIX &mdash; Flagship Research Monograph 08 When a microrobotic biosensing instrument produces a cleaner waveform, what evidence distinguishes genuinely improved measurement from a signal-processing procedure that has silently removed the very event being investigated? This research monograph develops a nonclinical, hypothesis-forming framework for microrobotic noise separation, causal spectral attribution, and quantum-enabled biosensing. Its central scientific challenge is to distinguish physical specimen-surrogate fluctuations, mechanical vibration, photon-counting statistics, optical reference instability, and shared instrumental noise without incorrectly attributing unexplained residuals to quantum effects or biological activity. The proposed research architecture combines synchronized raw-waveform acquisition, controlled microrobotic actuation, independent reference measurements, complex cross-spectral estimation, uncertainty quantification, and prospective blinded signal-recovery experiments. The 772-page manuscript contains 82 research chapters, 410 independently paginated scientific investigations, 30 interconnected mathematical research plates, 200 Research Gates, and 33 Phoenix Answer Embryos. Major mathematical investigations address power spectral density decomposition, source cross-correlations, spectral coherence, transfer functions, photon shot noise, low-frequency flicker noise, spectral leakage, mechanical harmonics, lock-in detection, multichannel spectral matrices, identifiability, and uncertainty-aware release decisions. A central falsifiable proposition is that controlled alternating actuation combined with independent phase-locked references may improve the separation of movement artifacts from genuine time-localized signals compared with conventional frequency-only filtering. However, successful noise reduction must be demonstrated without sacrificing true-signal amplitude, timing, spectral content, or scientific traceability. Proposed experiments employ artificial pulse generators, controlled vibration platforms, quantum-enabled optical sensing modules, conventional photodetection systems, and independently calibrated references. Performance comparisons include passive vibration isolation, fixed bandpass filtering, stationary sensing, and longer conventional averaging under matched measurement time, bandwidth, energy, and resource constraints. The 200 Research Gates preserve falsifiable questions, competing explanations, proposed experiments, measurable outcomes, uncertainty conditions, and evidence-preserving stopping criteria. The 33 Phoenix Answer Embryos present provisional research architectures that future human and AI investigators may challenge, reconstruct, extend, or replace. Seventeen DOI-linked scientific publications and metrological references provide methodological foundations while maintaining a clear distinction between established research and the unverified integration proposed in this manuscript. Scientific Scope and Limitations This monograph presents a theoretical and experimental research blueprint rather than completed laboratory findings. It does not establish clinical biosensing effectiveness, verified autonomous nanoscale medical robotics, universal quantum sensing superiority, or demonstrated biological signal attribution. Initial validation is restricted to artificial pulses, controlled instrumentation, nonclinical phantoms, and appropriately authorized research environments. STARLI Research Philosophy A trustworthy scientific signal is not simply a signal that looks quieter. It is one whose physical meaning, original evidence, causal assumptions, measurement uncertainty, and rejected interpretations remain open to independent investigation. By preserving falsifiable questions, negative fin",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MICROROBOTIC NOISE SEPARATION ENGINEERING FOR QUANTUM BIOSENSING AT THE LIMIT Mechanical Vibration × Quantum Readout Noise × Causal Spectral Analysis STARLI Research Institute XXIX — Flagship Research Monograph 08 When a microrobotic biosensing instrument produces a cleaner waveform, what evidence d",
-      "url": "https://zenodo.org/records/23578718"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -691,39 +709,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Making Generative AI Workable at Work: Accountability, Localization, and Representation in Kenyan and Nigerian Small Businesses",
       "url": "https://arxiv.org/abs/2610.31344v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c115152b6924d7f447bc7e84",
-      "context_id": "74b572295e9897b21f34a162",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0833,
-      "source": "zenodo",
-      "source_context_sha256": "49bbb44bd70abd2016f863fe9443e7692620bbee079cf3689e88997a2e2b4428",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "This archive provides the code, preserved numerical results, historical replication fixtures, figure-source data, and provenance documentation supporting the manuscript &ldquo;An executable procedure for attributing performance differences in finite candidate itinerary evaluations.&rdquo; The package includes a configurable saved-count comparison interface, tests, expected outputs, and 48 preserved historical replication files. It supports reconstruction and verification of the documented V1-R and U2-R comparisons and one selected raw-input trace. The archive does not reproduce the complete original scenario-generation, optimization, or simulation pipeline. Its scope and limitations are documented in the accompanying files. Licensing and attribution: Original project software is released under the MIT License; authorized original documentation and generated research records under CC BY 4.0. City of Toronto source material retains the Open Government Licence &ndash; Toronto, and OpenStreetMap-derived database material retains ODbL 1.0. These component-specific terms do not relicense third-party materials. See CURRENT_COMPONENT_RELEASE_TERMS.md and SOURCE_CITATIONS_AND_RELEASE_BOUNDARIES.md for details.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "FreeTime Planner: Saved-count comparison and historical replication archive (code and data)",
-      "url": "https://zenodo.org/records/23584207"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -867,6 +852,54 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Trion-1: Unifying Language, Protein Sequence, and Structure with Diffusion Language Models",
       "url": "https://arxiv.org/abs/2610.31215v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ae7d8fae379a8ae0701104b4",
+      "context_id": "a515770028be9dc93e23a806",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "4542a120b260e576843d9ad0096115d98e7d91eb5ecaa73872b6c7f11ac6b3b3",
+      "source_published": "2026-10-23",
+      "source_updated": "",
+      "summary": "This paper develops the Phase Compatibility branch of Harmonic Physics: a framework for examining how physical participants enter constrained phase relations, produce collective outcomes, and form persistent higher-level organisations capable of further recursive participation. Building on established synchronization theory, phase locking, coupled-oscillator dynamics and phasor mathematics, the framework examines reinforcement, opposition, cancellation, reshaping and whole formation. It distinguishes mathematical admissibility, actual source occupancy, participant admission, active interaction, closure, continuing identity and observation. A compatibility basin is characterised through maintained relational organisation and persistence under declared conditions. Version 3.1 aligns the shared definitions with the current Foundations and Observer Theory papers, corrects the amplitude-weighted moment family, and clarifies the distinction between passive changes of representation and physical projection or coupling. It incorporates the completed mathematical nesting construction, which preserves a supplied quantum state&rsquo;s amplitude and relative-phase information, together with Born probabilities under corresponding joint measurements. Phase Theory Equations is identified as the consolidated reference for the current mathematical expressions. The observation account separates source organisation, information encoded into light, receiver coupling, registration, retention and calibrated reconstruction. Within the proposed optical terminology, light performs the observer role through source&ndash;receiver coupling, while the receiver registers and retains a physical response. Minimal relational consciousness and awareness retain separate definitions. The paper integrates controlled models, molecular spectral studies, a superconducting-qubit analogue, simulated liquid-water reorganisation, quantum-state encoding and specified receiver models, preserving the scope and limitations of each result. It sets out the state spaces, conservation requirements, comparison models and prospective failure conditions required for physical applications. Universal participant-admission and whole-formation laws remain open research questions; this revision introduces no new experimental validation.",
+      "tags": [
+        "phase compatibility framework",
+        "synchronization",
+        "coupled oscillators",
+        "phase locking",
+        "relative phase entrainment",
+        "kuramoto model",
+        "collective synchronization",
+        "phase stability",
+        "collective organization",
+        "order parameter",
+        "oscillator networks",
+        "registrability",
+        "non linear dynamics",
+        "scientific interpretation"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Phase Compatibility: Harmonic Combination, Selective Participation, Whole Formation, and Recursive Organisation",
+      "url": "https://zenodo.org/records/23597515"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1043,6 +1076,46 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Phase Compatibility: Harmonic Combination, Selective Participation, Whole Formation, and Recursive Organisation",
       "url": "https://zenodo.org/records/23597515"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "399c9d7e3ac9ccddbc78bc50",
+      "context_id": "f6e4343a03ac889db162edba",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "f4f4399750f74520974b9bd06bd469948c2be69604f8549edc62873b99b7699c",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Code, frozen configurations, input data, outputs and logs behind the Working sheet for MQG v0.3.8: chiral active Model H in three dimensions — computational validation addendum (MQG: magnetic quorum gravity). The archive contains the pre-registered canonical fit (v1.0), the frozen v1.1 analysis (angular torque test; joint fit with mixed noise), a reproduction on separate hardware, a second-algorithm check, and frozen acceptance tolerances for a future independent fitter. A SHA-256 manifest of every file is included. Interpretation level 1. All dispersion data are synthetic; the results verify software, uncertainty calibration and parameter identifiability, not the physics. The canonical fit v1.0 passes 15 of 16 pre-registered criteria and the v1.1 analysis passes 9 of 10; both failures stay on record. A pre-registered fit by an independent implementer is still open. Licences. Code ( *.py ): MIT licence. Data, outputs, figures and documents: CC BY 4.0. See LICENSE.md in the archive. Use of AI tools. Anthropic Claude, Microsoft Copilot and Google Gemini were used for code development, running the numerical workflow, drafting, editorial review, document organization, literature discovery and verification checks. The author independently reviewed the cited sources, equations, numerical procedures, computational results, scientific interpretations and final claims, and accepts full responsibility for the content. AI-assisted output was not treated as evidence, and computational verification was evaluated separately from physical evidence.",
+      "tags": [
+        "active matter",
+        "chiral active fluid",
+        "Brinkman screening",
+        "pre-registration",
+        "heteroscedastic regression",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Code, frozen configurations, input data, outputs and logs behind the MQG v0.3.8 working sheet",
+      "url": "https://zenodo.org/records/23609229"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1296,42 +1369,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "44692fb3fe29e342943579b2",
-      "context_id": "6fe6ad698875d11cf4b547c3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "rup"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "arxiv",
-      "source_context_sha256": "b67def2eb6f1060210a9608e923fe3ef4ae5e3b60e6678d3d5c82f4924c9e57f",
-      "source_published": "2026-10-22T14:13:59Z",
-      "source_updated": "2026-10-22T14:13:59Z",
-      "summary": "Many deployments require a model to move rapidly from a data-rich source to a related target observed only sparsely. This is especially consequential where target data are difficult to collect, as in healthcare settings with persistent population or acquisition imbalances. Retraining or fine-tuning a high-capacity generator for every target is costly and can be statistically unreliable when target data are scarce. We introduce Meta-Diff, which instead learns a recurring source--target relation once in a compact task space. A shared encoder maps each distribution to a low-dimensional coordinate; a learned relation transports a new source coordinate to its predicted target, and a shared diffusion backbone generates from that prediction without target-specific retraining. Controlled Gaussian-mixture experiments identify when this works: task identity must survive the representation, the relation must generalise across tasks, and the source--target shift must leave useful headroom for transport. On held-out CIFAR-100 validation tasks, correct source $+$ transport achieves 13.9% lower mean SW than transport from the wrong source. With validation-selected adaptation settings in the final-test one-target comparison, its mean SW is 14.7% lower than target-only modelling and 32.7% lower than full fine-tuning; the main route itself uses no target image and assumes the applicable relation is known. On matched CIFAR test episodes, generating from the clean-source coordinate and then applying the known corruption yields lower SW than task-space transport. Office-Home exposes a complementary boundary: transport can align target-domain statistics without reliable object identity. Together, these results recast extreme-few-shot adaptation as reusable transport in task space, while making the conditions for its success and failure directly measurable.",
-      "tags": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Bridging the Data Gap: Source-Informed Task-Space Transport for Few-Shot Diffusion",
-      "url": "https://arxiv.org/abs/2610.31323v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "abdf59c3157feee03081e8b4",
       "context_id": "eb6a82c8b23a19a3d3bc58ec",
       "delivery_preview_only": true,
@@ -1366,6 +1403,40 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Intermediate efficiency of censored regression tests on stationary random fields",
       "url": "https://zenodo.org/records/23585343"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "de2225cffa180c5e7b576b78",
+      "context_id": "79ba60b013eeda43955e593b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0,
+      "source": "zenodo",
+      "source_context_sha256": "3410c9d7f1c13eb9f5da21f750e596684a66a53bd3235eb4af3efe615a2f1ebe",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Complete saved-evidence artifact supporting manuscript commit 42170fdcdc7c4b68ae2639b319a4892d097532a0: 5,760 CM-0.1 cells (144 pilot reuse), 134,000 synthetic statistical studies with reuse provenance and 7,200 final endpoints, 72 budget-study cells, 18 urgency certificates, reviewed fixed-policy empty-start equivalence proof, code and analysis tools. Includes 384 TIME01 variable executions paired with reused baselines and 1,440 derived ABL01 controls (zero new simulations). Original raw provider traces and confidential reviewer materials are excluded. Synthetic timing is not hardware-calibrated. Reproduces saved-evidence analyses; no claim of turnkey fresh-provider-to-full-campaign reproduction or physical GPU validation. Release m3-v1.0.0, promoted without scientific changes from independently verified m3-v1.0.0-rc3. The canonical TAR contains 38,186 files, 3,898,019,840 bytes; SHA-256 dafaa0df527176a9c54e0c40f5e5e4d59cebbce052c034e4df4f0f5cd5278f89. Original provider traces are excluded. Frozen preparation-time metadata inside the immutable archive records its provenance and does not describe current public availability. Public companion records: curated source https://github.com/SoroushVahidi/llm-serving-scheduler-robustness-benchmark/releases/tag/m3-v1.0.0; authoritative result-table dataset https://huggingface.co/datasets/SoroushVahidi/llm-serving-common-contract-m3; Kaggle mirror https://www.kaggle.com/datasets/soroushvahidi/llm-serving-common-contract-m3. The table mirrors contain identical underlying result data and are not independent experiments. The separate older LSSP release is not overwritten.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Scheduler Equivalence and Performance Trade-offs under a Common LLM-Serving Contract — Complete Reproducibility Artifact — m3-v1.0.0",
+      "url": "https://zenodo.org/records/23608723"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1437,6 +1508,40 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "uibcdf/pyunitwizard: 0.29.0",
       "url": "https://zenodo.org/records/23604831"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "7443e731a64d10c9ba2ca314",
+      "context_id": "eadfeac48998c861d4e5a5e1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.125,
+      "source": "zenodo",
+      "source_context_sha256": "059b27d90b29b5f86d132e187ca0a545187ffdc874b5d9f4beb65f47f8ab0c15",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Release notes - v2.3 This release refreshes the analysis layer, the result archives and the auditing tooling. It contains code, result archives and provenance metadata only. Included Analysis scripts ( tools/ ) environment-variance decomposition with a seed-level bootstrap; per-layer coupling analysis for a second vision-language backbone; third-family robustness controls (small Idefics3-family model) with multi-seed runs; exact permutation tests for extreme-rank comparisons; allocation-baseline reproductions, including a name-adapter port of an official allocator; a content-audit script that cross-checks reported values against the JSON archives; local environment scripts for torch 2.4/CUDA 12.1 and torch 2.6/CUDA 12.4. Result archives ( outputs/analysis/ , paper3/scripts/outputs/experiments/ ) environment matrix archives for four software stacks; variance-decomposition, permutation-test and per-layer coupling archives; third-family multi-seed archives; updated final-verification and provenance-gate reports. Tooling and metadata provenance metadata extended for the newly added result entries; release-notes and packaging housekeeping; audit script that verifies archived values against their source JSON. Verification all repository gates pass: frozen-archive hashes, provenance gate, claim ledger, per-project audits and the final verification report. Excluded (by repository policy) Model weights and datasets.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "MoYUYao666/gap-susceptibility: v2.3 - analysis layer update",
+      "url": "https://zenodo.org/records/23609295"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1691,74 +1796,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "SWAN AI-SQL replay cache: recorded gpt-5.6-luna answers of SWAN, LOTUS, BlendSQL, Palimpzest, ThalamusDB and PLOP on SemBench, the PLOP hybrid bench and SWAN 2.0",
       "url": "https://zenodo.org/records/23116544"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e96345e24c1207edbb294c0f",
-      "context_id": "cee27367faa51477e16d92f2",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "87c440354423fcfcce6e6721825882457fbf820299f63b4e26897cb087a74e0c",
-      "source_published": "2026-10-22T12:59:42Z",
-      "source_updated": "2026-10-22T12:59:42Z",
-      "summary": "We envision a general-purpose protein foundation model as a unified, interactive model of sequence, structure, and function, capable of understanding, generation, and cross-modal translation while retaining the instruction-following and reasoning capabilities of modern LLMs. Toward this vision, we introduce Trion-1, the first native, unified, multimodal diffusion language model (dLLM) for proteins. Trion-1 is built on two key design choices: (1) a unified discrete token space that jointly represents sequence, structure, and natural language; (2) a dLLM backbone that replaces strict left-to-right factorization with bidirectional or semi-bidirectional token interactions, enabling global residue communication and long-range contact modeling that are naturally suited to structure modeling. This formulation unifies six core capabilities: folding, inverse folding, sequence understanding, structure understanding, sequence design, and structure design, while retaining the native language capabilities of general-purpose LLMs. On established benchmarks, Trion-1 achieves broadly competitive performance. In folding, Trion-1 achieves a TM-score above 0.8 with a single sample under strict homology control, matching or exceeding the existing tri-modal model using 200 samples. For sequence understanding, Trion-1 performs on par with top-tier LLMs such as Claude Opus 4.7 (62.37%). These results support well-aligned sequence-structure-language representations and strong cross-modal generative capabilities.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Trion-1: Unifying Language, Protein Sequence, and Structure with Diffusion Language Models",
-      "url": "https://arxiv.org/abs/2610.31215v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d863707a1cdc7efbaec80329",
-      "context_id": "9974ffd58ca30b51a639f31d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "zenodo",
-      "source_context_sha256": "273ce0a2220dbda81bfb884f3e9b220e0bcf8dfc3350891de1bcc83d38932529",
-      "source_published": "2026-10-23",
-      "source_updated": "",
-      "summary": "EnzyPair is a benchmark dataset for evaluating enzyme-function similarity at low sequence identity. It contains 1,664 same-EC4 protein pairs and 4,992 structure-matched different-EC4 controls involving 2,465 proteins. The release includes protein sequences, EC annotations, TM-align measurements, residue alignments, exclusion records, source provenance and software versions.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "EnzyPair: a dataset of same-function enzyme pairs with structure-matched controls at low sequence identity",
-      "url": "https://zenodo.org/records/23597110"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
