@@ -1,0 +1,1093 @@
+{
+  "batch_id": "0c0c72082735e20e628d",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "fragment_count": 1,
+  "fragment_index": 1,
+  "items": [
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "1e8a5a93e5b725aede8f816c",
+      "context_id": "5b60bc64dce03a33862af2d9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "7298d53eb860ee4eb61026107a9d4618d51c3ea2c217f131df1d7bf406f8b90f",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This repository contains the complete 10-water-year daily streamflow simulation archive ( 1989-10-01 through 1999-09-30 ; 3,652 daily steps across 531 canonical CAMELS-US basins) for ERA-Multi-Paradigm-Gauged (10-model ensemble) , evaluated as part of the CAMELS-US Hydrological Model Intercomparison Project (MIP) ( grey-nearing/camels-us-mip ). Model Name: ERA-Multi-Paradigm-Gauged (10-model ensemble) Target Leaderboard: gauged__multi_camels Spatial Evaluation Regime: Gauged Basins (All 531 Basins Trained &amp; Evaluated) Meteorological Forcings: Multi-Forcing (Daymet + Maurer + NLDAS) Ensemble Size: n = 10 independent random seed realizations ( seeds = 100..109 ) Open-Source Model Code: https://github.com/grey-nearing/camels-us-mip/tree/main/models/era_gauged_multi_paradigm ERA Discovery Notebook: https://github.com/grey-nearing/camels-us-mip/blob/main/era_experiments/era_gauged_newman_cv_winner.ipynb Model Architecture &amp; Experimental Protocol Architecture: Four-Family Multi-Paradigm Hydrological Ensemble combining two complementary feature-and-conditioning paradigms per seed: (1) Paradigm A (60 multi-scale hydroclimatic, PET, rolling water-balance deficit, and cross-forcing agreement features with basin-conditioned static embeddings, trajectory Huber-NSE + log1p MSE loss, and exponential moving average weight averaging): `CausalConvGRULSTM` (multi-scale causal dilated Conv1D d=1,3,9 + coupled GRU-LSTM, weight 0.38) and `MultiScaleFiLMEALSTM` (2-layer FiLM-modulated Entity-Aware LSTM, weight 0.12); and (2) Paradigm B (36 clean meteorological features augmented with continuous 10-year 3-forcing degree-day snowpack accumulation/melt and liquid water delivery across Daymet, Maurer, and NLDAS, conditioned strictly on 27 static catchment attributes with zero basin ID lookup embeddings): `DualPathwayFiLMGRULSTM` (parallel 2-layer LSTM + 2-layer GRU with static FiLM gates, weight 0.36) and `EntityAwareHydroLSTM` (2-layer Entity-Aware HydroLSTM, weight 0.14), evaluated with hybrid continuous 10-year rollout + overlapping 730-day sliding-window inference. Strict Non-Leakage Protocol: Architecture and blending weights discovered strictly within the Newman et al. (2015) training decade (`1998-10-01` to `2008-09-30`, XID 304144117, achieving `0.8410` Median NSE on the `1999-10-01` to `2003-09-30` validation split when trained on `2003-10-01` to `2008-09-30`), with zero access to the `1989-10-01` to `1999-09-30` Newman evaluation period. For benchmark evaluation, 10 independent random seeds (`seeds = 100..109`) of all 4 architectural families (40 trained models total) were trained on the full Newman training window (`1999-10-01` to `2008-09-30`, with 365-day spinup `1998-10-01` to `1999-09-30`) and evaluated out-of-sample on the blind Newman test period (`1989-10-01` to `1999-09-30`; 3,652 days across 531 basins). Benchmark Performance Summary (531 CAMELS-US Basins, 1989-10-01 to 1999-09-30) Ensemble Median NSE (n = 10): 0.826 Single-Model Median NSE (mean &plusmn; SD across 10 seeds): 0.822 ± 0.002 Ensemble Mean NSE: 0.776 Ensemble Median KGE: 0.806 Ensemble Median Peak-Flow Bias |FHV|: 13.28% Catastrophic Failure Basins (NSE &le; 0): 2 / 531 Included Files era_gauged_multi_paradigm_gauged_multi_camels_hydrographs_531x3652.npz : Compressed NumPy archive containing qsim / qsim_members of shape (10, 531, 3652) (float32, mm/day), qsim_ensemble_mean of shape (531, 3652) , qobs of shape (531, 3652) , basins of shape (531,) , dates of shape (3652,) , and seeds of shape (10,) . era_gauged_multi_paradigm_gauged_multi_camels.zarr.zip : Consolidated Zarr v2 store containing qsim (531, 3652) , qsim_members (10, 531, 3652) , basin (531,) , date (3652,) , huc_02 (531,) , and member (10,) . README.md : Complete documentation, schema reference, and Python loading example.",
+      "tags": [
+        "CAMELS-US",
+        "Hydrology",
+        "Streamflow Forecasting",
+        "Rainfall-Runoff Modeling",
+        "Model Intercomparison Project",
+        "HydrologyMIP",
+        "Deep Learning",
+        "Empirical Research Agent",
+        "ERA-Multi-Paradigm-Gauged (10-model ensemble)"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "CAMELS-US Hydrological Model Intercomparison Project (MIP) — ERA-Multi-Paradigm-Gauged (10-model ensemble) Daily Streamflow Hydrographs (531 Basins, Water Years 1990–1999)",
+      "url": "https://zenodo.org/records/23641695"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b4d64a57a3a1f84f9790d72d",
+      "context_id": "96976ce7ce4586aa8e01bc65",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "drat",
+        "rup"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.2917,
+      "source": "zenodo",
+      "source_context_sha256": "dedb0e0ff9dee10b141b813eb5574374349a028d873a7b4caa84a8f09c9f9cc2",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The manuscript develops a risk-aware operational research framework for strengthening NdFeB permanent-magnet supply-chain resilience under recycling delays, geopolitical disruptions, and uncertain material shortages. It integrates Caputo fractional-order dynamics, delayed recycling flows, strategic procurement and inventory decisions, Pontryagin-type optimality conditions, and Conditional Value-at-Risk (CVaR) within a unified decision model. The study makes three principal contributions. First, it formulates a memory-dependent dynamic model and establishes positivity, boundedness, feasible-region, shortage-free equilibrium, and fractional local-stability results. Second, it incorporates procurement, recycling investment, stock accumulation, and stock release as operational controls and derives the corresponding necessary optimality conditions. Third, it introduces a scenario-based CVaR formulation and compares import-dependent, recycling-oriented, stockpiling-based, and integrated resilience policies under a common non-anticipative framework. In the baseline risk-aware analysis, the recycling-oriented and integrated strategies reduce mean shortage by approximately 74% relative to the import-dependent strategy and decrease the empirical CVaR at the 0.95 level of quadratic shortage loss from approximately 0.921 to 0.067.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Caputo Fractional-Order Optimal Control Framework for NdFeB Permanent Magnet Supply-Chain Resilience under Recycling Delay and Geopolitical Risk",
+      "url": "https://zenodo.org/records/23637871"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "833b7db540f1d6beed558dfd",
+      "context_id": "b176a923beb5e00ead6eb1eb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "2b027d080ae7ea46634561d1a196ce8722beb883999210743ea0e5f9a8b69481",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Companion code for the manuscript 'A per-channel energy-loss budget predicts the quality factor of magnetoelectric laminate composites without structural fitting' (submitted to Smart Materials and Structures, 2026). Self-contained Python scripts (numpy, matplotlib): five-channel loss budget with exactly computed demagnetizing flux factor, stress-driven Rayleigh hysteresis with self-consistent amplitude-dependent Q, interval brackets, inverse bounds, and an automated verification suite.",
+      "tags": [
+        "magnetoelectric composite",
+        "quality factor",
+        "damping",
+        "eddy currents",
+        "Rayleigh hysteresis",
+        "Terfenol-D",
+        "energy harvesting"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "me-qfactor-budget: per-channel energy-loss budget predicting the quality factor of magnetoelectric laminate composites",
+      "url": "https://zenodo.org/records/23641024"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "91d2831fdf7b720481ef87a3",
+      "context_id": "8ae3f353f232ae2add423a01",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "bc053fac0b895097a14f8fe48c2dc087f0ac914f611298aeed91fbd9b63192f8",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The Structural Internet: Applying the Ly-Algebra, TIT BIT, and TIT GIT Framework to the Future of Computation and Network Architecture Chloe Jane Tully Founder, Ly-Algebra Framework &amp; 5-Fold Symmetry Platform Independent Researcher, Tamworth, NSW, Australia ORCID: 0009-0007-5661-7332 Abstract This paper examines how the Ly-Algebra, the TIT BIT, and the TIT GIT can serve as architectural primitives for a post-binary computing and networking stack. The TIT BIT is a \\mathbb{Z}/5\\mathbb{Z}-graded node whose product is fixed by explicit structure constants and whose integrity is measured by the Quasi-Equivalence Index (QEI) derived from the graded square. TIT GIT versions structural coherence under hybrid post-quantum signatures. We outline concrete mechanisms by which these objects can replace or augment binary state machines, packet headers, content-addressable storage, and consensus layers. The result is a design space in which data, geometry, and cryptographic verification are no longer separate concerns. Keywords: Ly-Algebra; TIT BIT; TIT GIT; Quasi-Equivalence Index; structural networking; post-quantum Internet; graded computation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Structural Internet: Applying the Ly-Algebra, TIT BIT, and TIT GIT Framework to the Future of Computation and Network Architecture",
+      "url": "https://zenodo.org/records/23641396"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "848836be4174a755f542cdc1",
+      "context_id": "5276b32f051381cf43ad5b31",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "74ca5361b0bc5e3d751f5b4435e08cb11e3a2d3497e1b29e50727d8a66e38bef",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This package contains the data and code needed to reproduce every table of results in the article &ldquo;Explaining the Decline of Natural Wealth per Capita: A Three-Pillar ESG Analysis of the World Bank Wealth Accounts&rdquo; (Sustainability, MDPI) and its Supplementary Materials. All results are built from a single public source: the bulk download of the World Bank Sovereign ESG Data Portal of 1 May 2026, included unchanged with its SHA-256 checksum. The package also contains the analysis dataset with a codebook, thirty-one Python scripts run in sequence by a master script, the exact package versions, and a verification report that compares every published value with its reproduced counterpart. The scripts cover the construction of the T&ouml;rnqvist component contributions, the panel estimates for the environmental, social and governance pillars, the decomposition of per capita growth into stock growth and population growth, and the joint specifications on a common sample. They also cover inference after lasso selection, and the clustering and machine learning modules. A full run takes about 45 minutes on two CPU cores, and all random elements are seeded. The code is released under the MIT licence; the data and documentation are released under CC BY 4.0.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for: Explaining the Decline of Natural Wealth per Capita: A Three-Pillar ESG Analysis of the World Bank Wealth Accounts",
+      "url": "https://zenodo.org/records/23638226"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a4fd185d4681899575059ce8",
+      "context_id": "c263d92dbf4be42c2c465ceb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "limitation"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4167,
+      "source": "zenodo",
+      "source_context_sha256": "344ab11702bbbd206f5a6c697c254ef93e8f2bbb7a87ddcec9c760c493012f5b",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Supplementary research materials accompanying the manuscript &ldquo;Lifecycle Assurance for AI-Enabled Clinical Software: A Systematic Literature Review.\" The dataset covers 141 independent studies: 94 primary-practice studies and 47 framework contributions. It documents reported assurance practices, lifecycle coverage, evidence maturity, deployment and operational activities, regulatory engagement, and requirement-to-control-to-evidence mappings. This release includes: &bull; Supplementary_Materials.pdf: review methods, search strings, eligibility rules, coding and appraisal criteria, selection summaries, and reviewer records. &bull; Lifecycle_Assurance_Supplementary_Workbook.xlsx: the final study-level dataset, source rationales, classifications, appraisals, and calculated results. &bull; Replication_Package_v1.0.0.zip: CSV data, Python scripts, reproduction instructions, decision records, and clearly labelled historical versions. Final maturity and regulatory classifications incorporate completed human reconciliation. The reviewer records distinguish the 68-study first-pass comparison from the subsequent 26-study review after exposure to the existing extraction. The scripts reproduce descriptive results, sensitivity analyses, joint-reporting measures, and initial reviewer-agreement statistics. Search-record and source-access limitations are documented in the accompanying materials.",
+      "tags": [
+        "AI-enabled clinical software",
+        "lifecycle assurance",
+        "software quality assurance",
+        "systematic literature review",
+        "clinical artificial intelligence",
+        "post-deployment monitoring"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Lifecycle Assurance for AI-Enabled Clinical Software: A Systematic Literature Review (Supplementary Data and Replication Package)",
+      "url": "https://zenodo.org/records/23641612"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0b0bc504de255bb6852c7dc3",
+      "context_id": "f3bd4b8432f93879d0819a37",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "926ae50388128db4b2e22235f31bb4905eb59b0cf1d46a28a8b4b87e438eb5da",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "We give computer-assisted, two-sided spectral-gap bounds for the untruncated SU(3) lattice gauge Hamiltonian on open chains of one, two, and three elementary cubes. All vertices satisfy the neutral Gauss law, and all elementary plaquettes, including shared interior faces, enter the Hamiltonian. The normalization is K = T + 3F &minus; M/2, with C2(3) = 4/3. Complete electric-energy windows of dimensions 141, 531, and 1205, exact Haar Gram matrices, and certified complementary-space estimates yield gap enclosures [2.915605103, 4.978456040], [0.777213074, 5.394807087], and [0.328406186, 5.692597307]. For three cubes, retaining the complete Wilson output resolved into 20 electric-energy layers closes the Schur inertia test. We quantify the energy-window ceiling, prove an unconditional exponential dimension obstruction for complete absolute electric windows, and obtain positive gap bounds throughout 0.45 &le; &beta; &le; 0.502 for K&beta; = T + &beta;(6F &minus; M). Larger-window rational trial vectors sharpen both endpoints; an additional certified minimal-truncation benchmark and independent Haar audits accompany the proof. The results concern finite lattices; no thermodynamic or continuum mass gap is inferred.",
+      "tags": [
+        "Spectral Gaps",
+        "SU(3) Lattice Gauge Hamiltonian",
+        "Cubes"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Certified Spectral Gaps for SU(3) Lattice Gauge Hamiltonians on One, Two, and Three Cubes",
+      "url": "https://zenodo.org/records/23641690"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "2194a175a5448ed4a190451a",
+      "context_id": "e8325a811cc249421c85b9c0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "3f609557bf4bfcf40ffcb3d7c7f09e98686952a5c4776f7fd469ce8ae2eb5ffd",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "pyslfp 3.0.0 The major version marks the reorganisation of the library around one sea level engine with two drivers, elastic sea level fingerprints and viscoelastic glacial isostatic adjustment (GIA), which first appeared in 2.2.1. This release adds the calibration of the initial sea level, makes the tutorials runnable in Colab, and brings the documentation up to date. New Calibration of the initial sea level against a present-day sea level: SeaLevelEvolution.calibrate_initial_sea_level , final_sea_level_misfit , and run_ice_history(..., final_sea_level=...) . With frozen shorelines the problem is linear and is solved in one run. With migrating shorelines it iterates, either by the classical update or by steepest descent with the adjoint gradient (Yu et al. 2025), with Anderson acceleration and optional weights. EarthState(..., ocean_function=...) , a prescribed ocean function for fixing the shorelines of a frozen-shoreline problem. Tutorial 10: calibrating the initial sea level for ICE-7G's ice thickness. Colab notebooks for all ten tutorials, generated automatically from the tutorial scripts. Changed The module-level calibrate_initial_sea_level now wraps the method. With frozen shorelines it returns the one-step solution, keeping the starting shorelines as a prescribed ocean function, and it warns if it does not converge. Runs with migrating shorelines refuse a state with a prescribed ocean function. The notebooks are now in tutorials/notebooks/ ; the old tutorials/tutorial1-4.ipynb are removed. Fixed Tutorials 6 to 9 had stopped running with current planetmodel; they now convert the radial model into the library's units with model.converted(parameters.scales) . Documentation New Theory and methods and Numerics and performance pages, a rewritten README covering both the elastic and viscoelastic sides, and an updated theory note ( docs/theory ) covering the viscoelastic adjoints, sensitivity kernels and the calibration. Upgrading from 2.2.0 or earlier Modules have moved: SeaLevelEquation is now in pyslfp.core , LinearSeaLevelEquation in pyslfp.elastic , and EarthState in pyslfp.core ; pyslfp.physics and pyslfp.state no longer exist. Top-level imports ( import pyslfp as sl ) and pyslfp.linear_operators are unchanged. The default units are now planetmodel's Scales.geophysical , in which the gravitational constant is one, rather than units in which surface gravity is one. Results converted to SI are unchanged, but raw non-dimensional numbers differ, and radial models must be in the same units as the Earth model.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "da380/pyslfp: v3.0.0",
+      "url": "https://zenodo.org/records/23637830"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a50706a261d48c6683d0af78",
+      "context_id": "661ea53b8bceab732d9f78a7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.125,
+      "source": "zenodo",
+      "source_context_sha256": "dc017ae5c98a5ae0f019579b7f6e5e32cd64ea339dc6c5f02799642015c35d8e",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Code, data, results and figures for the manuscript \"Parameter Identifiability Limits in Dynamic Modelling and Control of a Brackish-Water Reverse Osmosis System\" (A.G. Gadallah, submitted). A lumped nonlinear solution-diffusion model of a brackish-water RO pilot plant (Ansari et al., Clean. Eng. Technol. 4 (2021) 100134) is identified from a 5 x 5 operating grid reconstructed from the published regressions, validated on two withheld salinity levels and used unchanged for control analysis. The analysis shows that the salt permeability is practically non-identifiable from permeate-flow data and traces the consequences into permeate-quality prediction, the stability margins of the quality loop, the stability of optimised tunings and the comparison of decentralised PI and one-way feedforward control, including the role of valve and conductivity-sensor dynamics. Contents: romodel (Python model package); analysis scripts a1-a4 (identification, control analysis, common-objective re-optimisation, uncertainty propagation with Sobol indices and Monte Carlo); derive.py (collects every number quoted in the manuscript into a traceability table); make_figures.py; selftest.py; source data (reconstructed operating grid; secondary data transcribed from Sadek et al., J. King Saud Univ. Eng. Sci. 36 (2024) 438-445); all results (CSV, JSON, Data.xlsx) and figures. To reproduce: cd code; pip install -r requirements.txt; python selftest.py (1-2 min) or python run_all.py (about 70 min). Requires Python 3.10 or later with NumPy 2.0 or later, SciPy, pandas, matplotlib and openpyxl.",
+      "tags": [
+        "reverse osmosis",
+        "parameter identifiability",
+        "profile likelihood",
+        "salt permeability",
+        "process control",
+        "desalination",
+        "dynamic modelling",
+        "Sobol sensitivity analysis"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Parameter identifiability limits in dynamic modelling and control of a brackish-water reverse osmosis system: code and data",
+      "url": "https://zenodo.org/records/23630239"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b4d64a57a3a1f84f9790d72d",
+      "context_id": "1175f32d0a55b4b1ac914d32",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "drat",
+        "rup"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.9167,
+      "source": "zenodo",
+      "source_context_sha256": "003753e2ac9f5bff3643eff439ff030df95baee2a9f458ad3edb6dafbe7bddc7",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The manuscript develops a risk-aware operational research framework for strengthening NdFeB permanent-magnet supply-chain resilience under recycling delays, geopolitical disruptions, and uncertain material shortages. It integrates Caputo fractional-order dynamics, delayed recycling flows, strategic procurement and inventory decisions, Pontryagin-type optimality conditions, and Conditional Value-at-Risk (CVaR) within a unified decision model. The study makes three principal contributions. First, it formulates a memory-dependent dynamic model and establishes positivity, boundedness, feasible-region, shortage-free equilibrium, and fractional local-stability results. Second, it incorporates procurement, recycling investment, stock accumulation, and stock release as operational controls and derives the corresponding necessary optimality conditions. Third, it introduces a scenario-based CVaR formulation and compares import-dependent, recycling-oriented, stockpiling-based, and integrated resilience policies under a common non-anticipative framework. In the baseline risk-aware analysis, the recycling-oriented and integrated strategies reduce mean shortage by approximately 74% relative to the import-dependent strategy and decrease the empirical CVaR at the 0.95 level of quadratic shortage loss from approximately 0.921 to 0.067.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "A Caputo Fractional-Order Optimal Control Framework for NdFeB Permanent Magnet Supply-Chain Resilience under Recycling Delay and Geopolitical Risk",
+      "url": "https://zenodo.org/records/23637871"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "af8a5777a8be4e32862ec96a",
+      "context_id": "498a5564bc4249f2b1857385",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.8333,
+      "source": "zenodo",
+      "source_context_sha256": "303c7f81674e7667f444ea4e11c8aa2c243176c32863541d0e8b6aceccc47e70",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This record contains version 11 of the replication materials for &ldquo;When a Digital Audit Trail Becomes Audit Evidence: Source Selection and Identification under Ambiguous Reconciliation,&rdquo; accompanying the manuscript and proposed online appendix. The deposited file is 187_Replication_Materials_v11.zip. The archive supplies data, code, source-linked results and finite checks while distinguishing historical evidence from constructed mathematical examples. It includes source-conditioned reconciliation cases and finite query design; the one-query identification characterization and bounded-answer-error checks; source-bundled certificates, exact fault-budget thresholds and witness checks; named-absence query games, the fraction-of-deficit expected-cost derivation and randomized switching checks; and the bounded-unavailability proof, reconstruction comparison and finite validations. The expected-query-cost result assumes complete local candidate graphs, exact always-available unit-cost pair answers, free computation, and zero-error worst-input expected cost; it does not extend to arbitrary source-constrained graphs. The unavailability result gives a sharp feasibility boundary, not an optimal positive-unavailability query rate. Historical materials include the 254-report classifier panel, generated known-truth benchmark results, corrected record-read bookkeeping for 72,000 rows, and restricted-matching and complete-log-union checks. The 85.91 percent and 92.91 percent results describe different procedures and must not be interchanged. Original-source assessments of 57 historically clean-labelled reports identify 18 explicit exceptions, five assurance uncertainties and 34 without a comparable current-year adverse qualification located. These assessments do not validate or relabel the entire panel. The classifier is not validated as a prevalence measure, and historical visibility labels are assigned model conditions rather than field outcomes. Reproduction: extract the ZIP and use Python 3.11 or newer. The portable finite-check runner requires NumPy and SciPy. Run python run_checks.py --out-dir /absolute/path/to/new-results, choosing a new output directory outside the extracted package. The runner checks MANIFEST.json, preserves inputs and writes per-script logs and CHECK_RESULTS.json. Wider frozen analyses and figure generation can also require pandas, matplotlib, pypdf, python-docx and lxml; see the README and supplied requirements. Finite replay corroborates implementations but does not replace proofs, re-extract copyrighted reports or estimate field detection performance. Rights and access: derived public-source data, documentation and generated benchmark outputs are licensed under CC BY 4.0; original code is licensed under MIT. Copyrighted papers and annual-report PDFs and licensed WRDS, Compustat, Audit Analytics and CRSP rows are excluded and are not sublicensed. Source URLs, identifiers, page references and hashes support permitted reacquisition subject to the original access conditions. No participants were recruited and no new human-subject data were collected. Funding: none. Financial conflicts of interest: none. Nonfinancial conflicts of interest: none. Archive SHA-256: 7d2fec9f006d15602ffd7b1165692414848452e8f05e77f26a10aa917e18d684.",
+      "tags": [
+        "audit evidence",
+        "audit trail",
+        "audit data analytics",
+        "completeness",
+        "integrity",
+        "provenance",
+        "immutable ledger",
+        "continuous auditing",
+        "Rule 11(g)",
+        "ISA 500",
+        "reproducible research",
+        "JEL M42",
+        "source selection",
+        "ambiguous reconciliation",
+        "query complexity"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication materials for When a Digital Audit Trail Becomes Audit Evidence: Source Selection and Identification under Ambiguous Reconciliation",
+      "url": "https://zenodo.org/records/22996151"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a4fd185d4681899575059ce8",
+      "context_id": "a93b5a22c9abfd3314b93511",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.75,
+      "source": "zenodo",
+      "source_context_sha256": "b1d10f969a2124be5c4fc557bf1cef89a5cd4b7f0393c0bcc845e8ccb1890cd8",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Supplementary research materials accompanying the manuscript &ldquo;Lifecycle Assurance for AI-Enabled Clinical Software: A Systematic Literature Review.\" The dataset covers 141 independent studies: 94 primary-practice studies and 47 framework contributions. It documents reported assurance practices, lifecycle coverage, evidence maturity, deployment and operational activities, regulatory engagement, and requirement-to-control-to-evidence mappings. This release includes: &bull; Supplementary_Materials.pdf: review methods, search strings, eligibility rules, coding and appraisal criteria, selection summaries, and reviewer records. &bull; Lifecycle_Assurance_Supplementary_Workbook.xlsx: the final study-level dataset, source rationales, classifications, appraisals, and calculated results. &bull; Replication_Package_v1.0.0.zip: CSV data, Python scripts, reproduction instructions, decision records, and clearly labelled historical versions. Final maturity and regulatory classifications incorporate completed human reconciliation. The reviewer records distinguish the 68-study first-pass comparison from the subsequent 26-study review after exposure to the existing extraction. The scripts reproduce descriptive results, sensitivity analyses, joint-reporting measures, and initial reviewer-agreement statistics. Search-record and source-access limitations are documented in the accompanying materials.",
+      "tags": [
+        "AI-enabled clinical software",
+        "lifecycle assurance",
+        "software quality assurance",
+        "systematic literature review",
+        "clinical artificial intelligence",
+        "post-deployment monitoring"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Lifecycle Assurance for AI-Enabled Clinical Software: A Systematic Literature Review (Supplementary Data and Replication Package)",
+      "url": "https://zenodo.org/records/23641612"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "848836be4174a755f542cdc1",
+      "context_id": "a0be7a826ca5be43026ef43e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9583,
+      "source": "zenodo",
+      "source_context_sha256": "bb03eef5926aa42d9b9cf385b435788535298a4db1398af6d4b96dc994a10c5d",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This package contains the data and code needed to reproduce every table of results in the article &ldquo;Explaining the Decline of Natural Wealth per Capita: A Three-Pillar ESG Analysis of the World Bank Wealth Accounts&rdquo; (Sustainability, MDPI) and its Supplementary Materials. All results are built from a single public source: the bulk download of the World Bank Sovereign ESG Data Portal of 1 May 2026, included unchanged with its SHA-256 checksum. The package also contains the analysis dataset with a codebook, thirty-one Python scripts run in sequence by a master script, the exact package versions, and a verification report that compares every published value with its reproduced counterpart. The scripts cover the construction of the T&ouml;rnqvist component contributions, the panel estimates for the environmental, social and governance pillars, the decomposition of per capita growth into stock growth and population growth, and the joint specifications on a common sample. They also cover inference after lasso selection, and the clustering and machine learning modules. A full run takes about 45 minutes on two CPU cores, and all random elements are seeded. The code is released under the MIT licence; the data and documentation are released under CC BY 4.0.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for: Explaining the Decline of Natural Wealth per Capita: A Three-Pillar ESG Analysis of the World Bank Wealth Accounts",
+      "url": "https://zenodo.org/records/23638226"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0b0bc504de255bb6852c7dc3",
+      "context_id": "be7e20180b797c9c337eb5e9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.5,
+      "source": "zenodo",
+      "source_context_sha256": "83a104abe5ac224dc17b564c253fcc4420f0852eb8d6610a45a012127343ad3d",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "We give computer-assisted, two-sided spectral-gap bounds for the untruncated SU(3) lattice gauge Hamiltonian on open chains of one, two, and three elementary cubes. All vertices satisfy the neutral Gauss law, and all elementary plaquettes, including shared interior faces, enter the Hamiltonian. The normalization is K = T + 3F &minus; M/2, with C2(3) = 4/3. Complete electric-energy windows of dimensions 141, 531, and 1205, exact Haar Gram matrices, and certified complementary-space estimates yield gap enclosures [2.915605103, 4.978456040], [0.777213074, 5.394807087], and [0.328406186, 5.692597307]. For three cubes, retaining the complete Wilson output resolved into 20 electric-energy layers closes the Schur inertia test. We quantify the energy-window ceiling, prove an unconditional exponential dimension obstruction for complete absolute electric windows, and obtain positive gap bounds throughout 0.45 &le; &beta; &le; 0.502 for K&beta; = T + &beta;(6F &minus; M). Larger-window rational trial vectors sharpen both endpoints; an additional certified minimal-truncation benchmark and independent Haar audits accompany the proof. The results concern finite lattices; no thermodynamic or continuum mass gap is inferred.",
+      "tags": [
+        "Spectral Gaps",
+        "SU(3) Lattice Gauge Hamiltonian",
+        "Cubes"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Certified Spectral Gaps for SU(3) Lattice Gauge Hamiltonians on One, Two, and Three Cubes",
+      "url": "https://zenodo.org/records/23641690"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a50706a261d48c6683d0af78",
+      "context_id": "bace7243d98f538906b0831a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "c0125fee05d0a0b8fffc34acf67124a11f5110aeed599cba8f5bb6d864aed719",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Code, data, results and figures for the manuscript \"Parameter Identifiability Limits in Dynamic Modelling and Control of a Brackish-Water Reverse Osmosis System\" (A.G. Gadallah, submitted). A lumped nonlinear solution-diffusion model of a brackish-water RO pilot plant (Ansari et al., Clean. Eng. Technol. 4 (2021) 100134) is identified from a 5 x 5 operating grid reconstructed from the published regressions, validated on two withheld salinity levels and used unchanged for control analysis. The analysis shows that the salt permeability is practically non-identifiable from permeate-flow data and traces the consequences into permeate-quality prediction, the stability margins of the quality loop, the stability of optimised tunings and the comparison of decentralised PI and one-way feedforward control, including the role of valve and conductivity-sensor dynamics. Contents: romodel (Python model package); analysis scripts a1-a4 (identification, control analysis, common-objective re-optimisation, uncertainty propagation with Sobol indices and Monte Carlo); derive.py (collects every number quoted in the manuscript into a traceability table); make_figures.py; selftest.py; source data (reconstructed operating grid; secondary data transcribed from Sadek et al., J. King Saud Univ. Eng. Sci. 36 (2024) 438-445); all results (CSV, JSON, Data.xlsx) and figures. To reproduce: cd code; pip install -r requirements.txt; python selftest.py (1-2 min) or python run_all.py (about 70 min). Requires Python 3.10 or later with NumPy 2.0 or later, SciPy, pandas, matplotlib and openpyxl.",
+      "tags": [
+        "reverse osmosis",
+        "parameter identifiability",
+        "profile likelihood",
+        "salt permeability",
+        "process control",
+        "desalination",
+        "dynamic modelling",
+        "Sobol sensitivity analysis"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Parameter identifiability limits in dynamic modelling and control of a brackish-water reverse osmosis system: code and data",
+      "url": "https://zenodo.org/records/23630239"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f89858573f6dec771cfc2504",
+      "context_id": "d540bbbd44fe9bdca04632a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "dfa449c83d8f903ff61c9f5faeaaa2ec44cbd86c71d4c0f586bf7aec77e2fe18",
+      "source_published": "2007-05-28T16:00:37Z",
+      "source_updated": "2007-05-28T16:00:37Z",
+      "summary": "Classical population genetics a priori assigns fitness to alleles without considering molecular or functional properties of proteins that these alleles encode. Here we study population dynamics in a model where fitness can be inferred from physical properties of proteins under a physiological assumption that loss of stability of any protein encoded by an essential gene confers a lethal phenotype. Accumulation of mutations in organisms containing Gamma genes can then be represented as diffusion within the Gamma dimensional hypercube with adsorbing boundaries which are determined, in each dimension, by loss of a protein stability and, at higher stability, by lack of protein sequences. Solving the diffusion equation whose parameters are derived from the data on point mutations in proteins, we determine a universal distribution of protein stabilities, in agreement with existing data. The theory provides a fundamental relation between mutation rate, maximal genome size and thermodynamic response of proteins to point mutations. It establishes a universal speed limit on rate of molecular evolution by predicting that populations go extinct (via lethal mutagenesis) when mutation rate exceeds approximately 6 mutations per essential part of genome per replication for mesophilic organisms and 1 to 2 mutations per genome per replication for thermophilic ones. Further, our results suggest that in absence of error correction, modern RNA viruses and primordial genomes must necessarily be very short. Several RNA viruses function close to the evolutionary speed limit while error correction mechanisms used by DNA viruses and non-mutant strains of bacteria featuring various genome lengths and mutation rates have brought these organisms universally about 1000 fold below the natural speed limit.",
+      "tags": [
+        "q-bio.BM",
+        "q-bio.PE"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Hypercube of Life: How Protein Stability Imposes Limits on Organism Complexity and Speed of Molecular Evolution",
+      "url": "https://arxiv.org/abs/0705.4062v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ddfb841adb6a393353b66f04",
+      "context_id": "bf76c6f21f01798a315fc488",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "arxiv",
+      "source_context_sha256": "a8889802f34919a1650448060b20ea686935645711496c5ca94884dc6af66209",
+      "source_published": "2009-03-09T03:40:51Z",
+      "source_updated": "2009-03-09T03:40:51Z",
+      "summary": "Here we study how mutations which change physical properties of cell proteins (stability) impact population survival and growth. In our model the genotype is presented as a set of N numbers, folding free energies of cells N proteins. Mutations occur upon replications so that stabilities of some proteins in daughter cells differ from those in parent cell by random amounts drawn from experimental distribution of mutational effects on protein stability. The genotype-phenotype relationship posits that unstable proteins confer lethal phenotype to a cell and in addition the cells fitness (duplication rate) is proportional to the concentration of its folded proteins. Simulations reveal that lethal mutagenesis occurs at mutation rates close to 7 mutations per genome per replications for RNA viruses and about half of that for DNA based organisms, in accord with earlier predictions from analytical theory and experiment. This number appears somewhat dependent on the number of genes in the organisms and natural death rate. Further, our model reproduces the distribution of stabilities of natural proteins in excellent agreement with experiment. Our model predicts that species with high mutation rates, tend to have less stable proteins compared to species with low mutation rate.",
+      "tags": [
+        "q-bio.BM",
+        "q-bio.PE"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Lethal Mutagenesis in Viruses and Bacteria",
+      "url": "https://arxiv.org/abs/0903.1475v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "fd3b38d951a0a78974e8dc3e",
+      "context_id": "39a2b6941c48c061987607c9",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "2a3a398178bc595a3a6662af69509cb133d0348cddb93ad73ee3299c49437fd9",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Self-contained scaffold for FORRT replication studies: paper PDF in, Zenodo-archived release and Science Live nanopublication chain out. AI-guided via CLAUDE.md / AGENTS.md, pixi-based, with release workflows that record the version DOI and Software Heritage ID, and skills that use the forrt-research and replication-radar MCP servers. This record archives the template itself. Repositories created from the template replace this file with their own metadata when initialised.",
+      "tags": [
+        "FORRT",
+        "replication",
+        "reproducibility",
+        "nanopublication",
+        "Science Live",
+        "research software template"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "FORRT replication template",
+      "url": "https://zenodo.org/records/23641687"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "192fe5886dbbac01ff9ef771",
+      "context_id": "2bd1ab9bdaa221b0eea35b45",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "ecb8df053a21b5413cb8494173434481f3917f047fd301699483cfc4b1a9b18b",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "NRP-Exp v1.1.0 This release accompanies the revised journal submission and updates the replication package. Main changes Reproducibility Added a dedicated executable example reproducing Table 5 exactly. Added a dedicated notebook reproducing the illustrative workflow reported in the paper. Included pinned dependency specifications in the archived package. Framework validation Corrected the evaluation of multiplier-based value dependencies. Ensured semantic consistency between dynamic evaluation and static absorption during preprocessing. Added regression tests covering value-dependency behaviour. Solver integration Removed unsafe branch pruning from the Pruned Brute Force solver. Exactness is now guaranteed within the documented applicability scope (up to 22 active decision items). Documentation Updated examples and replication artefacts. Improved experiment reproducibility documentation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "imaguila/NRPExperimentFramework: NRP-Exp v1.1.0",
+      "url": "https://zenodo.org/records/23636175"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "13addba806be67cd88666597",
+      "context_id": "c7cf43bd8c9bbdcb952d0a28",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_context_sha256": "580cad270e579ccaf825ed1a5398ea4962f646279f1ab0d831dd7b43b3fec8c1",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Added Animations as GIF : Export GIF... in the animation bar (or Fields &gt; Export Animation as GIF...) saves all frames of the running animation as a looping GIF. Each frame is the view exactly as shown, in its pixel size, and the GIF runs at the speed you see: the bar measures the frames per second actually drawn during playback (shown next to the speed setting, it can be lower than the setting for heavy plots) and the GIF uses that rate. Without a measurement the export first plays the animation for a moment to measure it. All frames share one colour palette, so the colour scale and the field do not change colour from frame to frame. Object groups : Edit &gt; Group (Ctrl+G) puts the selected objects, also solids, sheets and lines together, into one group. A click on a member in the 3D view selects the whole group, so Move, Rotate, Mirror, Copy, Hide or Delete act on all of it; the model tree lists the groups under Groups (rename, ungroup, single members selectable there). Edit &gt; Ungroup (Ctrl+Shift+G) dissolves a group to edit single objects again. Groups are saved in the project. SMD components (C, L, R, Touchstone parts) are inserted as a group of pads, terminations and element sheet, and the integration line of a lumped port or element now moves with its objects. Box selection in the 3D view : a left drag draws a rectangle and selects every object that lies completely inside it (in face, edge or vertex mode: every face, edge or vertex completely inside). Ctrl + drag adds to the selection. A group is selected only when all its members are inside. Hidden objects are skipped; a click still selects one item. Mesh refinement &quot;AURA (EMerge)&quot; , EMerge's own local refinement, with the same error estimate, convergence criterion and curved elements as the other methods. A comparison script measures the time to solution against Local (Delaunay) on the benchmark models ( examples/benchmark/mesher ). Lumped Elements tab : inserts a chip resistor, inductor or capacitor, or a component measured by a Touchstone file: pick the package in the menu of the button and click the position on the board. The part comes with its pads (Perfect E), and its position is the design variables &lt;name&gt;_x/_y/_z, so it moves as a whole. With two traces selected it is placed in the gap between them. Packages 0201, 0402, 0603, 0805, 1206 and the RF series Coilcraft 0402HP/0402HPH/0402CS/0603HP/0603CS and Murata LQW15AN/LQP03TN/GJM03/GJM15 with their body dimensions. Hertzon adds the pads of the land pattern (made like the traces), the element sheet with its Lumped RLC boundary and integration line, and optionally a 3D body with metal terminations (the mounted inductance from the field solution). The ideal value can carry the typical ESL and ESR of the size. Lumped RLC: Model Parallel RLC (as before), Series RLC or Touchstone (.s1p, or .s2p measured in series or as a shunt). The Validation Check reads the Touchstone file; the solver warns when a sweep leaves its frequency range. Draw Integration Line (right click a Lumped Port or Lumped RLC in the project tree): start and end point picked with two clicks in the 3D view, with snapping to vertices and edge centers. Auto Integration Line places it between the conductors again. Changed Field plot animations compute much faster : a phase animation builds the plot (surfaces, cut planes, arrow positions) once and only turns the field for each frame, instead of building the whole plot again. On a patch antenna with 54 000 tetrahedra, 18 frames of Mag_E on the patch take 0.15 s instead of 21 s, on a cut plane 0.2 s instead of 6 s. Frequency and excitation animations no longer read the field file again for every frame, and the mesh faces of a plotted sheet or object are found only once per solution. Phase animation default: 35 steps (was 19) from 0 to 360 deg, for a smoother wave. Documentation brought up to the current state: the README, the website and the feature overview describe AURA as the defa",
+      "tags": [
+        "electromagnetics",
+        "finite element method",
+        "antenna design",
+        "microwave engineering",
+        "simulation"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Hertzon: a graphical 3D full-wave electromagnetic simulator built on EMerge",
+      "url": "https://zenodo.org/records/23638189"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "1e8a5a93e5b725aede8f816c",
+      "context_id": "8b68260c9fcaeef633949102",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_context_sha256": "65c41f9d3b7deb8abe83925803485a56145944fdf795c0cf0a27c33870f953f4",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This repository contains the complete 10-water-year daily streamflow simulation archive ( 1989-10-01 through 1999-09-30 ; 3,652 daily steps across 531 canonical CAMELS-US basins) for ERA-Multi-Paradigm-Gauged (10-model ensemble) , evaluated as part of the CAMELS-US Hydrological Model Intercomparison Project (MIP) ( grey-nearing/camels-us-mip ). Model Name: ERA-Multi-Paradigm-Gauged (10-model ensemble) Target Leaderboard: gauged__multi_camels Spatial Evaluation Regime: Gauged Basins (All 531 Basins Trained &amp; Evaluated) Meteorological Forcings: Multi-Forcing (Daymet + Maurer + NLDAS) Ensemble Size: n = 10 independent random seed realizations ( seeds = 100..109 ) Open-Source Model Code: https://github.com/grey-nearing/camels-us-mip/tree/main/models/era_gauged_multi_paradigm ERA Discovery Notebook: https://github.com/grey-nearing/camels-us-mip/blob/main/era_experiments/era_gauged_newman_cv_winner.ipynb Model Architecture &amp; Experimental Protocol Architecture: Four-Family Multi-Paradigm Hydrological Ensemble combining two complementary feature-and-conditioning paradigms per seed: (1) Paradigm A (60 multi-scale hydroclimatic, PET, rolling water-balance deficit, and cross-forcing agreement features with basin-conditioned static embeddings, trajectory Huber-NSE + log1p MSE loss, and exponential moving average weight averaging): `CausalConvGRULSTM` (multi-scale causal dilated Conv1D d=1,3,9 + coupled GRU-LSTM, weight 0.38) and `MultiScaleFiLMEALSTM` (2-layer FiLM-modulated Entity-Aware LSTM, weight 0.12); and (2) Paradigm B (36 clean meteorological features augmented with continuous 10-year 3-forcing degree-day snowpack accumulation/melt and liquid water delivery across Daymet, Maurer, and NLDAS, conditioned strictly on 27 static catchment attributes with zero basin ID lookup embeddings): `DualPathwayFiLMGRULSTM` (parallel 2-layer LSTM + 2-layer GRU with static FiLM gates, weight 0.36) and `EntityAwareHydroLSTM` (2-layer Entity-Aware HydroLSTM, weight 0.14), evaluated with hybrid continuous 10-year rollout + overlapping 730-day sliding-window inference. Strict Non-Leakage Protocol: Architecture and blending weights discovered strictly within the Newman et al. (2015) training decade (`1998-10-01` to `2008-09-30`, XID 304144117, achieving `0.8410` Median NSE on the `1999-10-01` to `2003-09-30` validation split when trained on `2003-10-01` to `2008-09-30`), with zero access to the `1989-10-01` to `1999-09-30` Newman evaluation period. For benchmark evaluation, 10 independent random seeds (`seeds = 100..109`) of all 4 architectural families (40 trained models total) were trained on the full Newman training window (`1999-10-01` to `2008-09-30`, with 365-day spinup `1998-10-01` to `1999-09-30`) and evaluated out-of-sample on the blind Newman test period (`1989-10-01` to `1999-09-30`; 3,652 days across 531 basins). Benchmark Performance Summary (531 CAMELS-US Basins, 1989-10-01 to 1999-09-30) Ensemble Median NSE (n = 10): 0.826 Single-Model Median NSE (mean &plusmn; SD across 10 seeds): 0.822 ± 0.002 Ensemble Mean NSE: 0.776 Ensemble Median KGE: 0.806 Ensemble Median Peak-Flow Bias |FHV|: 13.28% Catastrophic Failure Basins (NSE &le; 0): 2 / 531 Included Files era_gauged_multi_paradigm_gauged_multi_camels_hydrographs_531x3652.npz : Compressed NumPy archive containing qsim / qsim_members of shape (10, 531, 3652) (float32, mm/day), qsim_ensemble_mean of shape (531, 3652) , qobs of shape (531, 3652) , basins of shape (531,) , dates of shape (3652,) , and seeds of shape (10,) . era_gauged_multi_paradigm_gauged_multi_camels.zarr.zip : Consolidated Zarr v2 store containing qsim (531, 3652) , qsim_members (10, 531, 3652) , basin (531,) , date (3652,) , huc_02 (531,) , and member (10,) . README.md : Complete documentation, schema reference, and Python loading example.",
+      "tags": [
+        "CAMELS-US",
+        "Hydrology",
+        "Streamflow Forecasting",
+        "Rainfall-Runoff Modeling",
+        "Model Intercomparison Project",
+        "HydrologyMIP",
+        "Deep Learning",
+        "Empirical Research Agent",
+        "ERA-Multi-Paradigm-Gauged (10-model ensemble)"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "CAMELS-US Hydrological Model Intercomparison Project (MIP) — ERA-Multi-Paradigm-Gauged (10-model ensemble) Daily Streamflow Hydrographs (531 Basins, Water Years 1990–1999)",
+      "url": "https://zenodo.org/records/23641695"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ed3188ce2cfeb0541c90a0cb",
+      "context_id": "0194472248c965c784643bb1",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.3333,
+      "source": "zenodo",
+      "source_context_sha256": "fb98be1676389f535a58388412271bf74d6019d5327eec4a1eca203b327954a9",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Centralizing patient scans for training deep learning diagnostic models raises significant privacy and regulatory concerns, since medical images cannot easily leave the institution that produced them. This work presents a federated learning framework for pneumonia detection from chest radiographs in which multiple simulated hospital clients collaboratively train a shared convolutional neural network without transmitting any raw image data. A ResNet18 backbone, pretrained on ImageNet, is fine-tuned across five non-identically distributed clients using the Federated Averaging (FedAvg) algorithm implemented with the Flower framework. To address the opacity of the resulting model, Gradient-weighted Class Activation Mapping (Grad-CAM) is integrated so that every prediction is accompanied by a visual heatmap indicating the image regions that influenced the diagnosis. The system was trained on the Chest X-Ray Images (Pneumonia) dataset and evaluated against a centralized baseline trained on pooled data. The federated model reached 89.4% test accuracy compared with 91.5% for the centralized baseline, a gap of roughly two percentage points, while never exposing patient-level data to a central server. Interestingly, the federated model also showed more stable convergence across communication rounds than the centralized model exhibited across epochs, which we attribute to the implicit regularization effect of averaging weights from diverse local updates. A working prototype consisting of a FastAPI inference backend and a React-based diagnostic console was also built to demonstrate the end-to-end pipeline. The results indicate that federated learning combined with explainable AI can offer a practical, privacy-preserving alternative to centralized medical image analysis with only a modest reduction in diagnostic accuracy.",
+      "tags": [
+        "Federated Learning",
+        "Explainable AI",
+        "Grad-CAM",
+        "Medical Image Diagnosis",
+        "Privacy-Preserving Machine Learning",
+        "Convolutional Neural Networks",
+        "FedAvg",
+        "Chest X-Ray Classification"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Federated Learning-Based Privacy-Preserving Medical Image Diagnosis Using Explainable AI",
+      "url": "https://zenodo.org/records/23641248"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ab93b0d97da14f27e297383c",
+      "context_id": "91471cd8eda1727898ed1d12",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "github_repository_search",
+      "source_context_sha256": "022e768e28ac72e4a148f5e56afdb20be8354dc6bbee5682b330104ea8abc5c8",
+      "source_published": "",
+      "source_updated": "2026-10-23T17:38:48Z",
+      "summary": "CygnusX is an AI for Science infrastructure integrating research agents, expert-validated workflows, controlled scientific computing, and provenance-aware reproducible research across life sciences and beyond.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "CygnusX-Labs/CygnusX",
+      "url": "https://github.com/CygnusX-Labs/CygnusX"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "2194a175a5448ed4a190451a",
+      "context_id": "23c1b05f5ab3a89753a2be09",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 2.5833,
+      "source": "zenodo",
+      "source_context_sha256": "851791e414972f56e0b6d6b17579368eed6965e2ad9720806ed8b70782043ae4",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "pyslfp 3.0.0 The major version marks the reorganisation of the library around one sea level engine with two drivers, elastic sea level fingerprints and viscoelastic glacial isostatic adjustment (GIA), which first appeared in 2.2.1. This release adds the calibration of the initial sea level, makes the tutorials runnable in Colab, and brings the documentation up to date. New Calibration of the initial sea level against a present-day sea level: SeaLevelEvolution.calibrate_initial_sea_level , final_sea_level_misfit , and run_ice_history(..., final_sea_level=...) . With frozen shorelines the problem is linear and is solved in one run. With migrating shorelines it iterates, either by the classical update or by steepest descent with the adjoint gradient (Yu et al. 2025), with Anderson acceleration and optional weights. EarthState(..., ocean_function=...) , a prescribed ocean function for fixing the shorelines of a frozen-shoreline problem. Tutorial 10: calibrating the initial sea level for ICE-7G's ice thickness. Colab notebooks for all ten tutorials, generated automatically from the tutorial scripts. Changed The module-level calibrate_initial_sea_level now wraps the method. With frozen shorelines it returns the one-step solution, keeping the starting shorelines as a prescribed ocean function, and it warns if it does not converge. Runs with migrating shorelines refuse a state with a prescribed ocean function. The notebooks are now in tutorials/notebooks/ ; the old tutorials/tutorial1-4.ipynb are removed. Fixed Tutorials 6 to 9 had stopped running with current planetmodel; they now convert the radial model into the library's units with model.converted(parameters.scales) . Documentation New Theory and methods and Numerics and performance pages, a rewritten README covering both the elastic and viscoelastic sides, and an updated theory note ( docs/theory ) covering the viscoelastic adjoints, sensitivity kernels and the calibration. Upgrading from 2.2.0 or earlier Modules have moved: SeaLevelEquation is now in pyslfp.core , LinearSeaLevelEquation in pyslfp.elastic , and EarthState in pyslfp.core ; pyslfp.physics and pyslfp.state no longer exist. Top-level imports ( import pyslfp as sl ) and pyslfp.linear_operators are unchanged. The default units are now planetmodel's Scales.geophysical , in which the gravitational constant is one, rather than units in which surface gravity is one. Results converted to SI are unchanged, but raw non-dimensional numbers differ, and radial models must be in the same units as the Earth model.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "da380/pyslfp: v3.0.0",
+      "url": "https://zenodo.org/records/23637830"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "833b7db540f1d6beed558dfd",
+      "context_id": "63a31b982e7723937dca36ca",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "5efe218dc09e9227254cd00ce89948bcf1c2d2fe89e1a14c6702f1b2c94f8292",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Companion code for the manuscript 'A per-channel energy-loss budget predicts the quality factor of magnetoelectric laminate composites without structural fitting' (submitted to Smart Materials and Structures, 2026). Self-contained Python scripts (numpy, matplotlib): five-channel loss budget with exactly computed demagnetizing flux factor, stress-driven Rayleigh hysteresis with self-consistent amplitude-dependent Q, interval brackets, inverse bounds, and an automated verification suite.",
+      "tags": [
+        "magnetoelectric composite",
+        "quality factor",
+        "damping",
+        "eddy currents",
+        "Rayleigh hysteresis",
+        "Terfenol-D",
+        "energy harvesting"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "me-qfactor-budget: per-channel energy-loss budget predicting the quality factor of magnetoelectric laminate composites",
+      "url": "https://zenodo.org/records/23641024"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "91d2831fdf7b720481ef87a3",
+      "context_id": "2db5eb9155f75518fe2d2dc5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.5,
+      "source": "zenodo",
+      "source_context_sha256": "2c80cdbde5ff2ebebd0f071cc8e182fb92b790b6ca3a2491ab28db0f059097bf",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "The Structural Internet: Applying the Ly-Algebra, TIT BIT, and TIT GIT Framework to the Future of Computation and Network Architecture Chloe Jane Tully Founder, Ly-Algebra Framework &amp; 5-Fold Symmetry Platform Independent Researcher, Tamworth, NSW, Australia ORCID: 0009-0007-5661-7332 Abstract This paper examines how the Ly-Algebra, the TIT BIT, and the TIT GIT can serve as architectural primitives for a post-binary computing and networking stack. The TIT BIT is a \\mathbb{Z}/5\\mathbb{Z}-graded node whose product is fixed by explicit structure constants and whose integrity is measured by the Quasi-Equivalence Index (QEI) derived from the graded square. TIT GIT versions structural coherence under hybrid post-quantum signatures. We outline concrete mechanisms by which these objects can replace or augment binary state machines, packet headers, content-addressable storage, and consensus layers. The result is a design space in which data, geometry, and cryptographic verification are no longer separate concerns. Keywords: Ly-Algebra; TIT BIT; TIT GIT; Quasi-Equivalence Index; structural networking; post-quantum Internet; graded computation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "The Structural Internet: Applying the Ly-Algebra, TIT BIT, and TIT GIT Framework to the Future of Computation and Network Architecture",
+      "url": "https://zenodo.org/records/23641396"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9ccf79a54e5d556210d1f51e",
+      "context_id": "675461feaddf24a17b238b1d",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4583,
+      "source": "zenodo",
+      "source_context_sha256": "11779e2adbec20b6785eb4e1326e6350946d296cf2838eab58be9e88ead2774e",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "Finite-time binding measurements constrain kinetic rates through both a reaction model and its calibration parameters. We characterize the sharp upper bound for the association rate in a three-state conformational-selection model when the dissociation rate, conformational rate, equilibrium constant and concentration scale belong to a prescribed compact joint set. The observations are calibrated bound fractions subject to finitely many closed interval constraints. We first prove that each finite-time bound fraction is strictly increasing in the initial binding-competent population. The physical feasible set at a fixed calibration is therefore an interval in that population. Let V be the calibration parameters with a nonempty physical feasible interval and let C = cl(V) within the joint calibration set. The sharp rate supremum is the reciprocal of the minimum of lambda K0 L / b on C, where L is the lower inverse threshold. Uniform finiteness is equivalent to a positive joint separation from the zero-population limiting curve on C. Explicit examples distinguish pointwise finiteness from uniform finiteness, inaccessible closed boundary points from physical limiting models, and separation by different readings from separation by one fixed reading. A continuous calibration example admits a certified sharp bound. We also state the optical conditions needed to interpret fluorescence as bound population.",
+      "tags": [
+        "kinetic identifiability",
+        "conformational selection",
+        "joint calibration",
+        "feasible sets",
+        "sharp bounds",
+        "singular limits"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Sharp Identification Bounds for Binding Rates under Joint Calibration Uncertainty",
+      "url": "https://zenodo.org/records/23641372"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "b0d8c6cf366bfa0428cc820e",
+      "context_id": "617df309b90f77de6e0e7498",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4583,
+      "source": "zenodo",
+      "source_context_sha256": "47427c4455ebcce8b51fbc15dabb20033795e1405d8da020a1e4d27f69dd1ba8",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This deposit contains the model code, the complete parameter set with provenance labels, all numerical outputs, and the scripts required to regenerate every figure and table in the associated manuscript. The work is a physiologically based kinetic (PBK) analysis of the renal exposure window of emodin, an anthraquinone of rhubarb. The model is an eight-compartment, perfusion-limited PBK model with intestinal and hepatic first-pass metabolism, biliary excretion and enterohepatic recirculation, parameterised for mouse, rat and human. No experimental data were generated: the study is entirely computational. The published pharmacokinetic data used for calibration and external validation are cited in the manuscript; the extracted values are recorded in results/validation_split.csv. The absorption term was calibrated against four published rat plasma datasets, and the fitted value with all residuals is included. Code is additionally available under the MIT licence (see LICENSE-CODE.txt); data and figures are released under CC BY 4.0.",
+      "tags": [
+        "emodin",
+        "anthraquinone",
+        "physiologically based kinetic model",
+        "renal exposure window",
+        "in vitro-in vivo extrapolation",
+        "safety assessment"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Data and code for: A physiologically based kinetic analysis of the renal exposure window of emodin",
+      "url": "https://zenodo.org/records/23638439"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "ac6db95cfdfb85d0aaf87006",
+      "context_id": "0005b88e45e1795bcdaf9122",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 1.4583,
+      "source": "zenodo",
+      "source_context_sha256": "a45ace7d05107d44379c767cadbe92ea5b58e162a2415cb43b3b38fee9290b2c",
+      "source_published": "2026-10-25",
+      "source_updated": "",
+      "summary": "This deposit contains the model code, the complete parameter set with provenance labels, all numerical outputs, and the scripts required to regenerate every figure and table in the associated manuscript. The work is a physiologically based kinetic (PBK) analysis of the renal exposure window of emodin, an anthraquinone of rhubarb. The model is an eight-compartment, perfusion-limited PBK model with intestinal and hepatic first-pass metabolism, biliary excretion and enterohepatic recirculation, parameterised for mouse, rat and human. No experimental data were generated: the study is entirely computational. The published pharmacokinetic data used for calibration and external validation are cited in the manuscript; the extracted values are recorded in results/validation_split.csv. The absorption term was calibrated against four published rat plasma datasets, and the fitted value with all residuals is included. Code is additionally available under the MIT licence (see LICENSE-CODE.txt); data and figures are released under CC BY 4.0.",
+      "tags": [
+        "emodin",
+        "anthraquinone",
+        "physiologically based kinetic model",
+        "renal exposure window",
+        "in vitro-in vivo extrapolation",
+        "safety assessment"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Data and code for: A physiologically based kinetic analysis of the renal exposure window of emodin",
+      "url": "https://zenodo.org/records/23637351"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "selection": "BALANCED_LENS_ROLLING_TOP",
+  "snapshot_cap": 48,
+  "snapshot_items_total": 29,
+  "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan"
+}
