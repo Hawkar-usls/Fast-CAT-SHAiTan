@@ -1,5 +1,5 @@
 {
-  "batch_id": "1bde1ebc2e6cd4d6c5e1",
+  "batch_id": "3dba19614a59d14f5fa8",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -1293,6 +1293,46 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "bab4b5c8abfd21c04fc6ce56",
+      "context_id": "fabc093701d6793d47c59127",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "9b4cc996025d6bf03a4d43fbfc8b47ffa44c998e5e729d2f2b46180177721cd3",
+      "source_published": "2026-10-24",
+      "source_updated": "",
+      "summary": "Code, frozen configurations, input data, outputs and logs behind the Working sheet for MQG v0.3.8: chiral active Model H in three dimensions — computational validation addendum (MQG: magnetic quorum gravity). The archive contains the pre-registered canonical fit (v1.0), the frozen v1.1 analysis (angular torque test; joint fit with mixed noise), a reproduction on separate hardware, a second-algorithm check, and frozen acceptance tolerances for a future independent fitter. A SHA-256 manifest of every file is included. Interpretation level 1. All dispersion data are synthetic; the results verify software, uncertainty calibration and parameter identifiability, not the physics. The canonical fit v1.0 passes 15 of 16 pre-registered criteria and the v1.1 analysis passes 9 of 10; both failures stay on record. A pre-registered fit by an independent implementer is still open. Licences. Code ( *.py ): MIT licence. Data, outputs, figures and documents: CC BY 4.0. See LICENSE.md in the archive. Use of AI tools. Anthropic Claude, Microsoft Copilot and Google Gemini were used for code development, running the numerical workflow, drafting, editorial review, document organization, literature discovery and verification checks. The author independently reviewed the cited sources, equations, numerical procedures, computational results, scientific interpretations and final claims, and accepts full responsibility for the content. AI-assisted output was not treated as evidence, and computational verification was evaluated separately from physical evidence.",
+      "tags": [
+        "active matter",
+        "chiral active fluid",
+        "Brinkman screening",
+        "pre-registration",
+        "heteroscedastic regression",
+        "reproducibility"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Code, frozen configurations, input data, outputs and logs behind the MQG v0.3.8 working sheet",
+      "url": "https://zenodo.org/records/23628447"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "399c9d7e3ac9ccddbc78bc50",
       "context_id": "f6e4343a03ac889db162edba",
       "delivery_preview_only": true,
@@ -1473,38 +1513,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Precision boundaries in spiking transport of recursive mixture uncertainty: synthetic inputs and permitted evidence",
       "url": "https://zenodo.org/records/23608591"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "fb1576128b921af8b74ee4bd",
-      "context_id": "9b5648ed5ff5acd043d36e6d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "6b147be051eace6bc79b1414bda74e49784047ac62e48a9ba2c405f77157bb60",
-      "source_published": "2026-10-24",
-      "source_updated": "",
-      "summary": "Highlights of the Study This comprehensive review examines the fatigue behaviour of load-bearing polymeric bone scaffolds , addressing a critical but comparatively underexplored aspect of bone tissue engineering. It evaluates the mechanisms governing fatigue damage and systematically examines how polymer characteristics, microstructure, reinforcing materials, scaffold topology, manufacturing methods, loading conditions, body fluids, and tissue ingrowth influence fatigue performance, with particular emphasis on translating polymeric scaffolds toward reliable load-bearing clinical applications. Key findings: 🟢 Fatigue failure mechanisms: Polymeric scaffolds can undergo both mechanical and thermal fatigue. Repeated cyclic loading causes residual-strain accumulation, stiffness and peak-stress reduction, crack development, and hysteretic heating, which can progressively degrade polymer chains and ultimately cause structural failure. 🟢 Low- and high-cycle fatigue: Low-cycle fatigue generally occurs under relatively high stresses and involves repeated plastic deformation, whereas high-cycle fatigue develops over much larger numbers of cycles under lower stress levels and is primarily associated with elastic deformation and progressive material degradation. 🟢 Material and microstructural effects: Polymer fatigue resistance is strongly governed by molecular and microstructural characteristics. Increased crystallinity, molecular weight, and molecular-chain entanglement can improve fatigue resistance, emphasizing the importance of selecting and tailoring the polymer microstructure for load-bearing scaffolds. 🟢 Reinforcement strategy: Incorporating ceramic or metallic reinforcing phases can substantially improve the fatigue performance of polymeric scaffolds by redistributing applied loads and dissipating energy that would otherwise contribute to polymer deformation and heat generation. 🟢 Hydroxyapatite reinforcement: Incorporation of 15 wt% hydroxyapatite increased the fatigue limit of PLA scaffolds by approximately 17%, while also improving compressive modulus, crack resistance, and hysteresis energy compared with unreinforced PLA. 🟢 Scaffold topology: Pore architecture plays a decisive role in fatigue behaviour by controlling stress distribution and stress concentration. Even scaffolds fabricated from the same polymer and having comparable porosity can exhibit substantially different fatigue lives when their pore geometry and filament arrangement are changed. 🟢 Topology-dependent fatigue life: Among 3D-printed PLA scaffolds with comparable porosity, the tetragonal topology achieved a fatigue life of approximately 4400 cycles, outperforming hexagonal and wheel-like structures at approximately 3200 and 2500 cycles, respectively. 🟢 Advanced scaffold architectures: TPMS, Voronoi, functionally graded, auxetic, and other irregular architectures offer promising approaches for load-bearing scaffolds. TPMS structures are particularly attractive because their smooth transitions at strut junctions may reduce stress concentrations, although their polymer fatigue behaviour remains insufficiently investigated. 🟢 Bone-inspired architecture: Bio-inspired scaffold design can substantially improve fatigue performance. Increasing the thickness of transverse rod-like struts in bone-inspired structures was reported to enhance fatigue life by approximately 10&ndash;100 times with relatively minor effects on density and stiffness. 🟢 Porosity&ndash;strength trade-off: Increasing porosity promotes permeability, vascularization, cell migration, and tissue ingrowth but simultaneously reduces scaffold stiffness, strength, and load-bearing capacity. Therefore, successful scaffold design requires balancing biological benefits against fatigue and mechanical integrity. 🟢 Stress concentration: Geometrical discontinuities and sharp pore corners create localized stress concentrations that accelerate fatigue damage. Circular pores can provide more uniform stress distribu",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Fatigue behavior of load-bearing polymeric bone scaffolds: A review",
-      "url": "https://zenodo.org/records/23626656"
     },
     {
       "base_direction_id": "formal_proof_verification",
