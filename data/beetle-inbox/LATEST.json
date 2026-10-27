@@ -1,5 +1,5 @@
 {
-  "batch_id": "c008af7b047ec9b93959",
+  "batch_id": "80e6a890fd449150c008",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -44,6 +44,49 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Independent finite-field verification of a Hankel seed certificate for hyperbolicity cones",
       "url": "https://zenodo.org/records/23648332"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "092adbb79c2c601621de15bb",
+      "context_id": "7a94ee6c4d46c5113d9f7903",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inversion",
+        "reverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.7917,
+      "source": "zenodo",
+      "source_context_sha256": "cbceffbdef12f634cccd45b3add711fda2e0de538677746aebbfcab6f9fed466",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Deepwave provides wave propagation modules for PyTorch, for applications such as seismic imaging and inversion. It performs forward modelling and backpropagation, so it can simulate wave propagation to generate synthetic data, or invert for the scattering potential (reverse-time migration, RTM, or its least-squares counterpart, LSRTM), other model parameters (full-waveform inversion, FWI), initial wavefields, or source wavelets. It can also be used inside a larger chain of operations, with forward and backpropagation flowing through the whole chain end to end. You can use your own objective functions, or functions that generate the propagator's inputs, and PyTorch's automatic differentiation calculates how to backpropagate through them. New to seismic/wave-equation terminology? The glossary defines the terms (PML, CFL, Born, FWI, and more) used throughout this README and the rest of the documentation. Deepwave requires Python 3.9 or later and PyTorch 2.4 or later. First install PyTorch for your CPU or CUDA device using the instructions on the PyTorch website . Then install Deepwave: pip install deepwave &nbsp; macOS wheels support Apple Silicon. Intel Mac wheels are no longer provided: PyTorch 2.4 and newer do not publish wheels for that platform. Prebuilt x86 wheels require AVX2. Older CPUs need a source build; see installation troubleshooting . PyTorch is Deepwave's only dependency. The example scripts under docs/ additionally import matplotlib (to draw their figures) and, in some cases, numpy , scipy (smoothing and filter design), torchaudio (applying those filters), torchvision and geomloss , but those are needed only to run the examples, never by Deepwave itself. To install all of them: pip install 'deepwave[examples]' &nbsp; The documentation contains examples and instructions on how to install and use Deepwave. You might also like to watch a video summary of Deepwave . Not every propagator supports every option (dimensionality, backend, boundary faces, batching, second-order differentiation, callbacks, ...). See the capability matrix (declared in the code and checked by conformance tests) before assuming a combination works. Why Deepwave Computationally efficient. Deepwave's compiled kernels use a hand-derived adjoint for better performance and lower memory requirements than pure PyTorch implementations. See what Deepwave calculates . Second derivatives are supported, not just first. The scalar, acoustic, and elastic propagators can compute Hessian-vector products (derivatives of gradients); see the Hessian example . Born (linearised) modelling. Model scattered waves from perturbations to a background medium for linearised inversion and imaging. See the torch.func example . Deepwave fits into an ordinary PyTorch workflow. Because propagation is a normal PyTorch autograd Function , it works directly with PyTorch optimisers, DistributedDataParallel over shots, torch.func transforms, and any PyTorch loss function or neural-network model of the input parameters. See the capability matrix for exactly what each propagator supports. Deepwave does not try to be a general symbolic PDE solver, a multi-node HPC code, or a non-differentiable simulation toolkit &mdash; see Devito , SPECFEM , and k-Wave respectively for those needs. If you are choosing between wave-propagation packages, see the comparison guide . (Note: the DeepWave-KAUST GitHub organisation, home of the SWEEP package, is unrelated to this project.) Features Supports the 1D, 2D, and 3D constant density acoustic / scalar wave equation (regular and Born modelling), variable density acoustic, elastic, viscoacoustic (single-mechanism SLS attenuation), elastic VTI (anisotropic), and pseudo-acoustic VTI ( deepwave.acoustic_vti , the Duveneck et al. 2008 V_S=0 reduction) wave equations Runs on CPUs and appropriate GPUs The gradient of all outputs (final wavefields and receiver data) can be calculated with respect to the model parameters (wavespeed, scattering potential, etc",
+      "tags": [
+        "seismic",
+        "wave propagation",
+        "full waveform inversion",
+        "fwi",
+        "least squares reverse time migration",
+        "lsrtm",
+        "pytorch",
+        "geophysics"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Deepwave",
+      "url": "https://zenodo.org/records/23676108"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -401,42 +444,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "X-ray CT projection dataset of a composite plate with scintillator and distortion artefacts (Diamond Light Source I12, 2009)",
       "url": "https://zenodo.org/records/23645730"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "bd654301dd1871253869f263",
-      "context_id": "7a211e19a87eedf7e18b50d4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "0652ce0d0e64816097f4516d0d283f90ecd1d67d9458b4da3f408d64d1c0cc99",
-      "source_published": "2026-10-23T17:57:09Z",
-      "source_updated": "2026-10-23T17:57:09Z",
-      "summary": "Stratification can reduce the estimator variance in Monte Carlo simulations by partitioning the sample space according to a low-dimensional factor and sampling separately within the resulting strata, making it well suited to the valuation of path-dependent claims in high-dimensional financial models. Its performance, however, depends critically on the choice of the stratification factor, and effective low-dimensional factors are generally difficult to identify in complex continuous-time models. Neural networks provide a flexible approximation class for this purpose and have proved useful in related variance-reduction problems in quantitative finance. In this paper, we study the construction of neural stratification factors for derivative pricing under proportional allocation in continuous-time models. Since the numerical construction of a stratification factor typically involves approximation, we establish continuity results for the associated conditional expectations and, more generally, conditional distributions, and provide several counterexamples showing the limits of this continuity theory. Combined with density results for neural networks, our findings yield a universal approximation theorem for admissible stratification factors. We conclude with numerical experiments involving a constant-maturity-swap range accrual in a two-factor Gaussian short-rate model and a worst-of autocallable in a Wishart stochastic covariance model, where the learned factors outperform all considered benchmarks.",
-      "tags": [
-        "q-fin.CP",
-        "math.PR",
-        "q-fin.MF"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "On the continuity of conditional distributions and stratification for derivative pricing",
-      "url": "https://arxiv.org/abs/2610.32970v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -813,6 +820,39 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "aa51257badad92ff5976a9fd",
+      "context_id": "90eb5eae14570f1884661027",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7917,
+      "source": "zenodo",
+      "source_context_sha256": "e00608195d3cdf7e77de746d45040f5ac247c3f7bfe06fdcef30fd63ff78b856",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "A Turing machine carries a computation forward through successive configurations, but continuation beyond infinitely many steps requires a rule assigning the configuration from which the next instruction can proceed. The Quantum &Gamma;-Turing machine considered here retains a finite-dimensional register&rsquo;s trace-norm limit when it exists, preserving the coherence needed by subsequent operations. Averaging a history that never settles permits another continuation, although registers independent at every finite stage can then acquire correlations through their shared timing. We characterise when an assigned state can replace its history without changing a later joint calculation. For assignments compatible with every fixed quantum operation, the largest composition error equals the mean trace-norm distance from the assigned state, and a partner carrying classical labels can approach that value. Independent composition with every partner holds precisely when temporal variance under the chosen mean vanishes. Requiring this under every shift-invariant mean gives uniform vanishing of average squared fluctuations, a condition that permits sparse excursions despite failure of ordinary convergence. For a programme repeatedly applying one fixed channel, independent composition is instead equivalent to ordinary convergence, with the exact error determined by its surviving nonstationary spectral component. Algebraically specified channels and initial states admit a finite decision procedure and certified bounds, while bounded repetitions of states preserve the stronger averaging condition and transfer its certificates to a simulation. These results connect transfinite continuation to finite verification for specified programmes and provide composition certificates that can be carried through a controlled simulation.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Independent Composition and Quantum Limits in Transfinite Γ-Turing Machines",
+      "url": "https://zenodo.org/records/23676461"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "69727d8908bcf7fa032e7f1e",
       "context_id": "2674ba345af943f1ebcc570e",
       "delivery_preview_only": true,
@@ -847,41 +887,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "SPOOK: Sparse Pixel Optimization for Off-Manifold Knowledge in Vision Encoders",
       "url": "https://arxiv.org/abs/2610.32835v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "05c538d9b382f93bc6fab2fd",
-      "context_id": "0b3e4f321db03e8efedaae53",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "verification"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "56e525b8b23fb493b8fbf7853e83b437ab235057b959f71ff6768cfffe1ef2f0",
-      "source_published": "2026-10-23T06:27:37Z",
-      "source_updated": "2026-10-23T06:27:37Z",
-      "summary": "Websites and applications deploy CAPTCHAs and anti-automation mechanisms that use behavioral signals such as interaction trajectories and timing, not outcomes alone, to distinguish humans from automated agents. We call these protected GUI environments, where correctly solving a verification task is insufficient for end-to-end task completion. Agents must turn solver outputs into accepted interactions and adapt execution to runtime feedback under time constraints. We introduce SolveBind, a GUI-agent framework combining hierarchical solving with runtime supervision. A hierarchical solving tree decomposes verification into interdependent Perceive, Ground, Solve, Act, and Verify capabilities. A runtime supervisor grounds action commitments in tool-derived evidence, revises them as evidence arrives, and mediates execution under explicit recovery budgets. Across nine CAPTCHA task families and nine backbone models, SolveBind achieves the highest success rate on eight backbones, outperforming the strongest baseline by 13.3-34.5 percentage points. It achieves the highest success rate on all six AndroidWorld backbones. In a paired GPT-5.5 analysis, MobileAgent produces correct answers but fails dynamic verification on 13 of 90 tasks; SolveBind succeeds on seven of these tasks. With automatic submission, removing binding reduces success from 82.22% to 71.56% and increases latency and token usage. Recovery caps reduce execution cost with a small observed success trade-off: removing them raises success from 82.22% to 83.56%, while increasing latency and token usage to 3.7x and 2.4x their full-supervision values, respectively. These results support evidence-grounded execution control while identifying a success-cost trade-off in recovery and failure boundaries of heuristic submission rules.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Correct Answers, Closed Gates: SolveBind for GUI Agents at the Verification Barrier",
-      "url": "https://arxiv.org/abs/2610.32223v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -964,41 +969,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Interpreting Supervised Pairwise Graph Representations: Local Evidence, Confounding, and Provable Post-hoc Correction",
       "url": "https://arxiv.org/abs/2610.32611v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "8ca30beaf812b65d1ec6e53a",
-      "context_id": "91e6deb43af13a8e2d659687",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "control",
-        "holdout",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.0417,
-      "source": "zenodo",
-      "source_context_sha256": "e46a46e1ed7bcfdb3bf5b6f187b230feb4235504d68ef5d84ad3f5d1a8d538b9",
-      "source_published": "2026-10-25",
-      "source_updated": "",
-      "summary": "Reference inventory, Sentinel-1 product lists, detector outputs, scoring tables, robustness tests and code behind the paper \"Can open radar see war damage? A placebo-controlled validation of Sentinel-1 coherence and backscatter change detection at Iranian strike sites, 2025&ndash;2026\" (Raj Kumar Mishra, submitted to Science of Remote Sensing, October 2026). The deposit holds the 39-entry geolocated reference inventory with its sources; the 312 Sentinel-1 scene pairs and HyP3 processing options (79 war-period, 107 placebo, 66 burst and 60 summer-2026 products); cluster, score and placebo-comparison tables of the coherence-drop detector at eight settings; backscatter change-point rasters and scores for every site and window, with no-strike windows one, two and three years before each war; Sentinel-2 and LISS-IV optical checks; VIIRS fire (NASA FIRMS records), night-light, TROPOMI, MODIS, Landsat, OCO-2/3, lidar and EMIT before/after tests with the positive control in Russia and Crimea; the pass-timing tables; the six places found by the method with their source checks; the robustness tests (placebo transplant, empirical null, holdout and others), with the rules of the further tests, set before they were run; the PWTT baseline (separate file pwtt_baseline_v1.0.0.zip); and the Python and Earth Engine scripts. Original satellite products are not included (except the NASA FIRMS fire detections used for the fire tests; the others are open and can be regenerated as described in README.md); derived rasters, image views and tables are, and contain modified Copernicus Sentinel data (2022&ndash;2026). Access is restricted and granted on request for research use; code (09_code): BSD 3-Clause. MANIFEST.csv lists every file with MD5 and SHA-256.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Data and code for \"Can open radar see war damage? A placebo-controlled validation of Sentinel-1 coherence and backscatter change detection at Iranian strike sites, 2025–2026\"",
-      "url": "https://zenodo.org/records/23647081"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1394,39 +1364,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "5a9e4db26402c9cf2704dd6e",
-      "context_id": "a3e3c38cca5728761f1edd32",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "90434c186a32aadbaaae25d509facd51757cd87fe783211c7bb5bd7748950587",
-      "source_published": "2026-10-26",
-      "source_updated": "",
-      "summary": "Python code that reproduces all results of the manuscript: segmentation and feature extraction from the NASA/UC Berkeley milling data set, random-forest comparison of spindle current, vibration and acoustic-emission features against a no-sensor baseline under leave-one-case-out and cross-material validation, bootstrap confidence intervals, Wilcoxon tests and figures. The data set itself is not included; download mill.zip from https://data.nasa.gov/dataset/milling-wear . Code developed with the assistance of an AI tool (Claude, Anthropic); reviewed and verified by the author, who takes full responsibility for it.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Leakage-free tool-wear benchmark (NASA milling): code",
-      "url": "https://zenodo.org/records/23648735"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "3cff4558cf3c85a48ab7021e",
       "context_id": "9ef3960fde1cb68b342ab3c1",
       "delivery_preview_only": true,
@@ -1752,6 +1689,40 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f2f1e431691f969dc4c8c96e",
+      "context_id": "2568f550cecb343f3aa57b55",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "rup",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.5417,
+      "source": "zenodo",
+      "source_context_sha256": "91aa6f2471b181d2090a30c42b88fffec6e3283b43090e188a2272fd3415333c",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "Per distruggere la Rotta dei Chersoneso, venne fatta la Battaglia di Cheronea https://it.wikipedia.org/wiki/Battaglia_di_Cheronea_(87_a.C.) Per distruggere i commerci con Etruschi e Cartaginesi, venne fatta la Battaglia di Alalia https://it.wikipedia.org/wiki/Battaglia_del_Mare_Sardo Per distruggere i rapporti con la Facies Sarda dei Bessi di Perperikon, venne fatta la battaglia del Monte Emo: &nbsp; La battaglia del Monte Emo (o Haemus ) &egrave; storicamente legata a due momenti distinti dell'antichit&agrave; che videro scontrarsi gli eserciti invasori con le trib&ugrave; tracie, in particolare i Bessi , e il cui contesto geografico e spirituale &egrave; strettamente connesso al celebre sito monumentale di Perperikon , situato nelle montagne dei Rodopi in Bulgaria. [ 1 , 2 ] Ecco come si collegano questi tre elementi: &nbsp; 1. La prima battaglia del Monte Emo (335 a.C.) Prima di lanciare la sua campagna contro i Persiani, Alessandro Magno guid&ograve; una spedizione nei Balcani per rendere sicuri i confini settentrionali del suo regno. Sul Monte Emo (l'attuale catena dei Monti Balcani) affront&ograve; i Traci Liberi e altre trib&ugrave; locali. [ 1 , 2 , 3 ] La tattica dei carri: I Traci si erano posizionati sulla vetta e intendevano far rotolare dei pesanti carri gi&ugrave; dai ripidi pendii per rompere la falange macedone. [ 1 , 2 ] La contromossa di Alessandro: Il re macedone ordin&ograve; ai suoi soldati di aprire i ranghi per far passare i carri oppure di sdraiarsi a terra coprendosi con gli scudi intersecati (creando una sorta di testuggine). La tattica funzion&ograve; alla perfezione: i carri rimbalzarono sugli scudi senza causare vittime tra i Macedoni. Le truppe di Alessandro caricarono poi la vetta, sbaragliando i difensori. [ 1 , 2 , 3 ] &nbsp; 2. Lo scontro dei Bessi con Roma (72 a.C.) In epoca successiva, il nome della battaglia del Monte Emo si associa alla sottomissione definitiva dei Bessi , una delle trib&ugrave; tracie pi&ugrave; bellicose e fanaticamente dedite al culto religioso. Il proconsole romano Marco Licinio Lucullo affront&ograve; i Bessi proprio nei pressi della catena del Monte Emo, sconfiggendoli duramente in una grande battaglia campale, conquistando il loro centro principale ( Uscudama ) e aprendo la strada alla successiva egemonia romana nella regione. [ 1 , 2 , 3 ] &nbsp; 3. Il legame con Perperikon La trib&ugrave; dei Bessi era storicamente la custode del famosissimo Santuario e Oracolo di Dioniso , situato proprio sulla maestosa roccia sacra di Perperikon . Questo luogo ha un valore storico eccezionale per due importanti profezie collegate ai protagonisti di queste guerre: [ 1 , 2 ] La profezia di Alessandro Magno: Secondo le fonti antiche, prima di iniziare la sua spedizione in Asia (subito dopo aver pacificato la Tracia), Alessandro visit&ograve; l'oracolo di Dioniso a Perperikon. Il vino versato sull'altare cre&ograve; una fiammata altissima fino al cielo, un segno divino che i sacerdoti interpretarono come il presagio che avrebbe conquistato il mondo intero. [ 1 ] La profezia di Ottaviano Augusto: Anni dopo, anche il padre di Augusto (Gaio Ottavio) ricevette nello stesso santuario dei Bessi la medesima profezia sul futuro dominio globale di suo figlio. [ 1 ] In sintesi, la resistenza dei Traci sul Monte Emo rappresenta lo scontro militare per il controllo dei Balcani, mentre Perperikon costituisce il cuore spirituale, politico e identitario della trib&ugrave; dei Bessi che contro quegli imperi tent&ograve; invano di difendere la propria indipendenza. [ 1 , 2 ] &nbsp; Attenzione: questo documento &egrave; stato appena pensato: si tratta di una bozza iniziale basata sul Paradigma Sardo Corso Atlantideo di Luigi Usai. Verr&agrave; corretto ed espanso nel tempo, come tutti gli altri lavori di Usai Luigi. &nbsp; &nbsp; {\"@context\":{\"ra\":\"https://www.luigiusai.it/ontology/rotta-aristeica/index.html#\",\"rotta\":\"https://www.luigiusai.it/ontology/rotta-aristeica/\",\"schema\":\"https://schema.org/\"",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "ROMA CONTRO SARDEGNA: Roma dovette disintegrare l'impero sardo pezzo per pezzo con singole guerre da Divide et Impera",
+      "url": "https://zenodo.org/records/23676630"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "07a45022c620095c4523334c",
       "context_id": "19712d3f2a39463e933d395d",
       "delivery_preview_only": true,
@@ -1789,6 +1760,39 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Independent finite-field verification of a Hankel seed certificate for hyperbolicity cones",
       "url": "https://zenodo.org/records/23648332"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "3f35eaee2e97eaa2af937b3a",
+      "context_id": "f647ece32318b2bd9808a4a4",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.875,
+      "source": "zenodo",
+      "source_context_sha256": "726a253d7741c38f48435d1c475e58b304676f6e4dc1078a58900dcd885ddbae",
+      "source_published": "2026-10-26",
+      "source_updated": "",
+      "summary": "This collection provides the code, data, and verification evidence supporting the study &ldquo;Payment Menu Design for Safe Identification and Recoverable Coverage Deployment&rdquo; by Jiaming Hu and Cuixia Miao. The study examines payment-menu design for providers with unknown local update rules, jointly requiring safe identification, recovery to ordinary operation, and preservation of the informed benchmarks. The collection contains two complementary archives: &bull; S3_EJOR_Code_Data_v1.0.zip: versioned source code, frozen synthetic inputs and modeled coverage instances derived from public SNDlib topologies, original result ledgers, environment specifications, a data dictionary, mappings between manuscript results and source data, and scripts for rebuilding tables and figures and running verification tests. &bull; S3_EJOR_Full_Evidence_v1.0.zip: retained certificates, verification receipts, execution logs, and failure and timeout records, stored with hash-based deduplication and mappings for restoring their original relative paths. Extract both archives into the same parent directory and follow the README in the Code_Data archive. The public-network instances are modeled coverage and payment scenarios, not observations of real network operations. The external PaGE comparison uses a source-mapped adaptation rather than a successfully built native Storm implementation. All eight extended ten-site tasks passed full V1 verification; seven additional independent audits passed and one timed out. Failed, timed-out, and gated runs are retained and distinguished from completed results. Corresponding author: Jiaming Hu (14438120260091@sdmu.edu.cn).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Reproducibility materials for Payment Menu Design for Safe Identification and Recoverable Coverage Deployment",
+      "url": "https://zenodo.org/records/23659465"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
