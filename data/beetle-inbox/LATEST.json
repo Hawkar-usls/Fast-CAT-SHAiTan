@@ -1,9 +1,50 @@
 {
-  "batch_id": "e17dd019a0b75026a991",
+  "batch_id": "170b0f18094e2cea4260",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "15a87c1f480846fbc0575e35",
+      "context_id": "bf9056be35a182008922c532",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "reconstruction",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.2917,
+      "source": "zenodo",
+      "source_context_sha256": "9a3aff4ecdd58656a9fbbf0ff2eb6e6daee2aa365d020f273138943c4e164934",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "A cube can pass through a straight tunnel cut through another cube of the same size. From this seventeenth-century geometric paradox to recent counterexamples to the&nbsp; Rupert property, the problem has developed into a broader question concerning projections of convex bodies. The first part of this article reviews the historical background and introduces the essential geometric tools, including a&nbsp;vector-based reconstruction of the classical cube-passage configuration. The second part studies centred convex bodies whose support functions are expressed as spherical harmonic perturbations of the&nbsp;support function of a ball. For these bodies, we establish an exact passage&nbsp; criterion, construct explicit positive certificates for passage, and classify the three-parameter family \\[T_{a,b,c}=aP_4(x)+bP_4(y)+cP_4(z) : \\] the equality $D_2(T_{a,b,c}) = 0$ holds if and only if $ab = ac = bc = 0$. Proofs are included throughout.",
+      "tags": [
+        "Prince Rupert's problem",
+        "convex bodies",
+        "orthogonal projections",
+        "support functions",
+        "spherical harmonics of degree four",
+        "rigidity"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Prince Rupert's Problem: Geometric Foundations, Historical Background, and New Results on Convex Bodies",
+      "url": "https://zenodo.org/records/23697875"
+    },
     {
       "base_direction_id": "formal_proof_verification",
       "candidate_id": "092adbb79c2c601621de15bb",
@@ -306,6 +347,75 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "79448b651f7cbaf4c56b9ecc",
+      "context_id": "399b4425225aeaf9034995a6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "arxiv",
+      "source_context_sha256": "cac3f5e29ba3cb85b89bbe3f2390f2ab77f22366ebac2dfbf05430f55a50f07e",
+      "source_published": "2026-10-24T15:18:31Z",
+      "source_updated": "2026-10-24T15:18:31Z",
+      "summary": "In large language model (LLM)-based multi-agent systems, reported confidence increasingly determines the allocation of scarce downstream attention, computation, and decision influence. This makes reporting strategic: an agent may overstate the relevance of its contribution even when its underlying belief is well calibrated. Existing calibration methods largely assume passive reporting and therefore do not address strategic incentives created when confidence determines downstream allocation. We formulate strategic calibration as a reporting-layer incentive problem and propose the Audited Pivot Scoring Mechanism (APSM). APSM offsets platform-controlled allocation benefits, uses inverse-propensity-weighted sparse audits, charges the Clarke pivot externality, and applies a strictly proper score. Under the stated model assumptions, truthful reporting is the unique expected-utility best response. We also characterize approximate execution and the audit-variance trade-off. Calculator-free experiments show that LLM agents inflate confidence under Top-$K$ incentives. With a shared agent-local utility interface, LLM agents reduce distortion under both Compensated Proper Scoring (CPS) and APSM. CPS achieves higher exact allocation match, whereas APSM yields lower Brier loss and numerically fewer cutoff crossings. Experiments further show that APSM enlarges the utility margin against allocation-changing deviations by $1.93\\times$ and improves robustness under approximate execution. These results support incentive-aware elicitation as a distinct layer for reliable multi-agent coordination.",
+      "tags": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Strategic Calibration in LLM Multi-Agent Systems: Audited Pivot Scoring for Truthful Elicitation",
+      "url": "https://arxiv.org/abs/2610.33728v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "e4173e9e4b4894ffd200b4ba",
+      "context_id": "284ce351943ba96d94e6b574",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "2b8d63ed44e032040d30d235d8af813365de85245aab17463e5c8521aa18901b",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "oneAPI v2.9.3 Diff since v2.9.2 Fix @index(Global, Linear) for padded ndranges (#738) CI: build the support library with the Conda compiler (#744) This release has been identified as a backport. Automated changelogs for backports tend to be wildly incorrect. Therefore, the list of issues and pull requests is hidden. &lt;!-- **Merged pull requests:** - Fix `@index(Global, Linear)` for padded ndranges (2.9 backport) (#738) (@michel2323) - CI: build the support library with the Conda compiler (backport of #636) (#744) (@michel2323) **Closed issues:** - Report device exceptions to the host (#65) - Extremely slow reduction (#110) - Interactive profiling (#111) - Invalid bit width in input (#172) - Memory leak when running GPU broadcast in a loop (#327) - KernelAbstractions: add Atomix back-end (#336) - Multiplication of StridedMaybeAdjOrTransMat broken for certain matrix sizes (#442) - SYCL batching causes invalid results (#445) - Copying HostBuffer is broken (#458) - Support for logical indexing (#461) - Host to device copies should be blocking (#469) - Indexing `oneArray`s with a `oneArray{Bool}` fails for Julia 1.11 (#473) - Correctness issue when indexing &quot;big&quot; `oneArray`s (#509) - Error in oneAPI.jl tests (#541) - Atomic operations on local memory are broken (#572) - Internal compiler error when trying to run atomic operations (#575) - Segfault in multithreaded code: NEO SIGSEGV handler race (intel/compute-runtime#1009) (#607) - mkl sparse arrays aren't AbstractGPUSparseArray (#627) - Track outstanding GPU work per allocation for host-accessible arrays (#652) - Flaky: reductions of host-accessible arrays return 0 on Julia 1.13 (ALCF CI) (#661) - resize! frees its new buffer with free instead of release (#667) - Host JIT segfaults compiling @oneapi in a loop over a tuple of functions (#669) - Wrong results for overflowing Int16 arithmetic in a reduction kernel (#670) - Kernel launches are compiled for Vararg{Any} and dispatched at run time (#675) - Wrong result from a reduction with a branching operator on Julia 1.12 with --check-bounds=yes (#678) - Array construction queries device properties on every allocation (#690) - IGC heap corruption compiling findmax's reduction kernel on Julia 1.12 with --check-bounds=yes (#691) - Make blocking Level Zero calls GC-safe (#698) - Storage-level mul! gives wrong results or aborts for SubArray operands (#700) - BLAS-1 methods pass reversed views to oneMKL with a negative increment (#712) - Collecting a context together with its memory segfaults (#714) - Products with a Symmetric/Hermitian oneMKL sparse matrix ignore the wrapper (#718) - Make host-to-device uploads non-blocking via a host-USM staging pool (#719) - Segfault in zeCommandListHostSynchronize when reusing memory last used by a finished task (#736) - Require SPIRVIntrinsics 1.5.1 for local arrays of isbits unions (#737) --&gt;",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "oneAPI.jl",
+      "url": "https://zenodo.org/records/23698234"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "c51f62961bfabcc0cbd2ff1d",
       "context_id": "eed49e8a5ef59c106b3a7d54",
       "delivery_preview_only": true,
@@ -335,111 +445,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "takotsubo_ami_ai_ecg: trained ViT, ConvNeXtV2 and MLP-Mixer inference weights (v0.2.0)",
       "url": "https://zenodo.org/records/23666262"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d94db0f6f859cff17624828f",
-      "context_id": "e623fbd614e37000e1a47e6f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "zenodo",
-      "source_context_sha256": "61233b0a2046d5aeec932533664e526a731622c232514f056620e4dcf3b052f0",
-      "source_published": "2026-10-27",
-      "source_updated": "",
-      "summary": "Raw command log and analysis code supporting the article \"Bounding the command emission rate in low-cost robot teleoperation over consumer 4G\" (Bulletin of Electrical Engineering and Informatics, under review, paper ID 14318). &nbsp; The log holds 4,485 commands issued to a MyCobot 280 Pi six-axis arm through a browser-based Flask interface over a Celcom 4G link with a Tailscale virtual private network, across 12 sessions from 19 May to 23 June 2026. Each record gives the completion timestamp, control mode, joints, commanded angles and the browser-measured command latency. Six control modes are covered: three continuous coordinate-streaming modes (arm tracking, hand tracking, object detection) and three discrete modes (manual slider, Gemini large language model, voice). &nbsp; analysis.py reproduces every number in the article from the raw file, including the reconstruction of emission times, the number of commands outstanding at each emission, three service-time estimates, latency by emission-gap band, moving-block bootstrap confidence intervals and a sensitivity analysis of the zero-latency records. README.md documents the columns, the mode codes and the data preparation. &nbsp; This work was supported by Universiti Tun Hussein Onn Malaysia (UTHM) through Tier 1 Grant H761.",
-      "tags": [
-        "teleoperation",
-        "networked control"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Command log and analysis code for low-cost robot teleoperation over consumer 4G (MyCobot 280 Pi)",
-      "url": "https://zenodo.org/records/23689905"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "3a1e616e5465ce13fad9ac3b",
-      "context_id": "ae162b8314e1e6b2ae9540cd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "eb902e567926093436ae6d10fd305bf655aa7853c39c86a7b128034bc875c6b8",
-      "source_published": "2026-10-26T15:18:41Z",
-      "source_updated": "2026-10-26T15:18:41Z",
-      "summary": "We develop a direct analytic approach to positivity of relative pluricanonical direct images through a fixed-point Hermitian metric by direct differential curvature calculations. The curvature resolvent formula from fixed-point equation leads to two-sided estimates of entire Nakano curvature by determinant curvature. In this way, we identify generic rank of determinant curvature with birational variation dimension for a projective algebraic fibration between smooth connected projective varieties with general fiber of general type and maximal birational variation, assuming $mK_F$ is globally generated or the $m$-canonical map is birational for general fiber $F$. In the global generation case, Green--Griffiths Conjecture asks for the tautological bigness of the ordinary symmetric powers $\\operatorname{Sym}^{\\ell}f_*ω_{X/Y}^{\\otimes m}$, without passing to reflexive hulls, for $\\ell\\geq P_m(F)=h^0(F,mK_F)$ whenever $m\\geq 1$. We prove it for all $\\ell\\geq1$ at levels $m\\geq 2$, also in the case of birational $m$-canonical map, but construct a counterexample at level $m=1$. Over curves, curvature and boundary estimates give a direct analytic proof of Viehweg's ampleness theorem requested by Fujino. For smooth projective families, we also establish numerical dimension and vanishing results related to the birational variation dimension.",
-      "tags": [
-        "math.AG",
-        "math.CV"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Positivity of Relative Pluricanonical Direct Images via Fixed-Point Metrics",
-      "url": "https://arxiv.org/abs/2610.35590v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "504a1288d993d5ba97a15905",
-      "context_id": "a6f8c8b7460165c72f38dc5b",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.5833,
-      "source": "arxiv",
-      "source_context_sha256": "2ef23d1d07029b9132f6ddc92ea03406315a18b29ad5d99786e9a815933dbe1a",
-      "source_published": "2026-10-26T13:49:22Z",
-      "source_updated": "2026-10-26T13:49:22Z",
-      "summary": "AI-powered personal assistant frameworks such as OpenClaw combine LLM reasoning, persistent memory, tool invocation, local execution, and web-based workflows. These capabilities enable useful automation, but they also create security risks when untrusted inputs, model reasoning, tools, memory, and deployment configuration interact without explicit trust boundaries. This paper presents an empirical study of reported security concerns in OpenClaw using two complementary data sources: Reddit discussions and security-tagged GitHub issues. We analyze more than 25K Reddit posts from 13 OpenClaw-related subreddits and identify 162 security-relevant posts with 1,787 associated comments. We further collect 358 security-tagged GitHub issues and retain 180 issues describing concrete security concerns. Using qualitative analysis and evidence-grounded CWE mapping, we identify 521 CWE instances across 59 distinct weakness types, concentrated in access-control failures, sensitive-data exposure, injection, and unsafe execution. We also extract 543 practitioner mitigation suggestions and consolidate them into seven recurring strategies. To complement the empirical analysis, we present an evidence-grounded illustrative reconstruction of a representative sensitive-data exposure pathway using dummy secret values. Our findings show that OpenClaw security issues are not isolated implementation bugs; they reflect recurring trust-boundary failures across the agent execution pipeline. We discuss how these weaknesses map to both traditional software-security categories and agent-specific failure mechanisms, and derive implications for safer agentic systems, including explicit trust boundaries, least-privilege tool access, execution containment, runtime oversight, and defense-in-depth deployment.",
-      "tags": [
-        "cs.CR",
-        "cs.SE"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Then there is prompt injection, a malicious email, ...: The Wild Wide West of OpenClaw Agentic System Security",
-      "url": "https://arxiv.org/abs/2610.35451v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -799,6 +804,46 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "15a87c1f480846fbc0575e35",
+      "context_id": "105e2534f1188252e45d6d45",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "counterexample",
+        "rup"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "b932124cf63c14f403de8db8cd5b9c2c11d668559bcd68117169adf402c06ee0",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "A cube can pass through a straight tunnel cut through another cube of the same size. From this seventeenth-century geometric paradox to recent counterexamples to the&nbsp; Rupert property, the problem has developed into a broader question concerning projections of convex bodies. The first part of this article reviews the historical background and introduces the essential geometric tools, including a&nbsp;vector-based reconstruction of the classical cube-passage configuration. The second part studies centred convex bodies whose support functions are expressed as spherical harmonic perturbations of the&nbsp;support function of a ball. For these bodies, we establish an exact passage&nbsp; criterion, construct explicit positive certificates for passage, and classify the three-parameter family \\[T_{a,b,c}=aP_4(x)+bP_4(y)+cP_4(z) : \\] the equality $D_2(T_{a,b,c}) = 0$ holds if and only if $ab = ac = bc = 0$. Proofs are included throughout.",
+      "tags": [
+        "Prince Rupert's problem",
+        "convex bodies",
+        "orthogonal projections",
+        "support functions",
+        "spherical harmonics of degree four",
+        "rigidity"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Prince Rupert's Problem: Geometric Foundations, Historical Background, and New Results on Convex Bodies",
+      "url": "https://zenodo.org/records/23697875"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "1103c12387f37e0a40462514",
       "context_id": "5242f3585e841d434396cbd3",
       "delivery_preview_only": true,
@@ -832,41 +877,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Holding a Steady Course: Knowledge Evolution from Expertise and Lessons for Continual Agent Learning",
       "url": "https://arxiv.org/abs/2610.34043v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "52e69a16a553265969a9bffc",
-      "context_id": "39a8ee672f9a86681ace42ab",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "rup"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "arxiv",
-      "source_context_sha256": "e1df292e371a67760d23d63b1b831ce56e0bd17d01f0e71790d95b24a5c4a035",
-      "source_published": "2026-10-26T03:12:57Z",
-      "source_updated": "2026-10-26T03:12:57Z",
-      "summary": "Most agent-memory benchmarks frame long-term memory as retrieval: can an agent recover the relevant record from a long and evolving history? Scientific agents face a stricter problem: a correctly remembered fact may still be invalid to use. The same reported test result can support confirmation when the outcome and stopping rule were fixed in advance, yet only exploration when the outcome was selected from twenty inspected results. We call this scientific use validity: whether remembered evidence is eligible to influence a decision under the state governing its interpretation. We introduce SciValidityBench, an executable benchmark factory with 64 TaskSpecs spanning five validity modules and six scientific domains. TaskSpecs couple generated experimental histories with scientific-state definitions, programmatic decision oracles, controlled interventions, and automatic scoring. The SciStateForge compiler-reader framework turns distributed histories into explicit decision-governing state. Counterfactual pairs and targeted corruption-repair controls then test whether models use those dependencies and localize failures. Across four model families, compiled scientific state improves valid decision-making by 9.2-18.8 percentage points over a generic Event Graph. Retrieval alone does not reproduce this cross-family gain, while content-identical flat and typed views show that the improvement comes from exposing governing state rather than a particular graph serialization. SciValidityBench thus shifts memory evaluation from finding the right fact to deciding whether that fact should control the decision.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "The Right Fact, the Wrong Decision: SciValidityBench for Scientific Agent Memory",
-      "url": "https://arxiv.org/abs/2610.34767v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -951,8 +961,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a812c7c3bdd0c913cd034660",
-      "context_id": "2e41cfa0ee4a3f9a44d10a77",
+      "candidate_id": "46a2fd08b45b6a241f29f0b7",
+      "context_id": "c2cbc2f2f870c832f47f3f51",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -966,31 +976,96 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
+        "baseline",
         "benchmark",
-        "control",
         "verification"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.1667,
-      "source": "zenodo",
-      "source_context_sha256": "315009a4e92feb2a365bdd661082fa7b4c049fee57973789483aeb4f9fee492b",
-      "source_published": "2026-10-26",
-      "source_updated": "",
-      "summary": "University technical festivals combine event discovery, registration, payment collection, venue attendance, certification, feedback, and reporting in one workflow, yet they are commonly handled through disconnected forms, spreadsheets, and payment dashboards. This paper presents the design, implementation, and functional verification of Supernova 2.0, a web-based event management platform deployed for the School of Engineering and Technology, MGM University, for a festival held on 4–5 September 2026 with nine flagship competitions. The system is a lightweight PHP/MySQL monolith that binds registration to server-side Razorpay payment verification, records physical venue attendance against the same participant identity, and gates certificate access on that attendance record. Administrative, organizer, and finance duties are separated through role-based access control, and a spreadsheet import path admits offline attendance records. Security controls include CSRF tokens, password hashing, session regeneration, login throttling, prepared statements, security headers, and HMAC signature verification. Validation is functional and workflow-oriented; no performance benchmark, usability study, or penetration test was performed, and no quantitative results are reported. The contribution is the integration of established mechanisms into a single working workflow in a focused, single-event institutional deployment.",
+      "score": 10.2083,
+      "source": "arxiv",
+      "source_context_sha256": "9075b8ffab64c845549f5c49ef47c4d1fcc8cecff5baccf78afef2bbddee199b",
+      "source_published": "2026-10-25T17:38:55Z",
+      "source_updated": "2026-10-25T17:38:55Z",
+      "summary": "Multi-agent systems often rely on predefined collaboration structures, limiting their ability to adapt to diverse task requirements. We introduce DynaFlow, a framework that integrates free-form executable workflow synthesis into the action space of the main agent. The agent decides when collaboration is needed and generates task-specific programs that coordinate sub-agents through sequential or parallel execution, structured information exchange, and verification. Execution results and traces inform subsequent actions, enabling the agent to adapt collaboration as reasoning progresses. We train only the main agent through supervised fine-tuning on distilled trajectories, followed by refinement on examples filtered for unsupported premises, biased verification, and information-flow defects. All sub-agents remain fixed, separating orchestration learning from executor capability improvement. Across six benchmarks spanning mathematical reasoning, scientific question answering, and multi-hop retrieval, DynaFlow achieves 88.08% overall accuracy in Forced mode, outperforming the strongest evaluated baseline by 10.90 percentage points with the same Qwen3.5-27B backbone. Workflow analysis finds more explicit use, verification, and refinement of upstream outputs after training, highlighting cross-stage information flow as a key dimension of multi-agent orchestration.",
       "tags": [
-        "university event management",
-        "payment verification",
-        "attendance verification",
-        "certificate generation",
-        "role-based access control",
-        "Razorpay",
-        "PHP",
-        "MySQL"
+        "cs.MA"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "An Integrated Event Management System for a University",
-      "url": "https://zenodo.org/records/23663423"
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration",
+      "url": "https://arxiv.org/abs/2610.34467v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6de3635d449a94c7c2a8e878",
+      "context_id": "8d9ab08693c3159c06879d99",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0417,
+      "source": "arxiv",
+      "source_context_sha256": "6e465a63862deab5e571662c743689ebc4b413ab389b65b296960ce3d7be37c8",
+      "source_published": "2026-10-24T08:35:39Z",
+      "source_updated": "2026-10-24T08:35:39Z",
+      "summary": "Large language model (LLM)-based multi-agent systems have demonstrated remarkable capabilities across diverse tasks. Yet their memory and collaboration architectures often remain static, constraining continued adaptation and improvement over time. Recent work addresses this limitation by evolving memory or collaboration based on interaction experience. However, updates to these interdependent components are not necessarily aligned: an evolved workflow may require experience that memory does not provide, while evolved memory may encode guidance that the workflow cannot use. To address this problem, we propose CoEvolve, a skill-centered framework for aligned memory--collaboration evolution. CoEvolve represents reusable local collaboration patterns as skills that link evolving collaboration decisions to their supporting memories. It further compares original and counterfactual trajectories to identify local evolution signals, which coordinate updates to the skill library, skill memory, and executor memories across rounds. Experiments on the ALFWorld and WebShop benchmarks confirm that CoEvolve achieves the best overall performance among the evaluated baselines, while ablation studies further validate the effectiveness of aligned co-evolution and counterfactual-guided evolution.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "CoEvolve: Counterfactual-Guided Co-Evolution of Memory and Collaboration in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.33539v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "41a32c86ef159071f72dfee1",
+      "context_id": "71a2b6504dcd5e554e361a2e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.0,
+      "source": "arxiv",
+      "source_context_sha256": "5f583768d335a4dc3041f2949673cf2c90f6b5af1f41cf8aa0f0abebdea3faf3",
+      "source_published": "2026-10-26T02:19:53Z",
+      "source_updated": "2026-10-26T02:19:53Z",
+      "summary": "Multi-agent systems (MAS) require both effective coordination and specialized task execution. Existing prompt optimization approaches typically couple these functions within agent-specific prompts. We introduce Coordinator-Executor Prompt Optimization (CEPO), a general framework for improving prompt optimization in MAS. CEPO separates system-level coordination from agent-level execution through a shared coordinator prompt and agent-specific executor prompts, and guides their updates according to their respective roles. This structure allows shared coordination rules to be refined consistently across agents while keeping execution instructions separately adjustable. CEPO provides the prompt structure and optimization guidance, while existing prompt optimizers perform the underlying search. Extensive experiments spanning 11 benchmarks across four domains demonstrate that applying CEPO to four existing prompt optimizers consistently improves their performance. Ablations and qualitative analyses support the proposed design, while controlled studies on a document-understanding MAS further demonstrate improved optimization budget efficiency and performance scaling with the number of agents.",
+      "tags": [
+        "cs.AI"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "CEPO: A General Framework for Improving Prompt Optimization in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2610.34722v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1030,10 +1105,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "00d32df98f6ea7181786eab6",
-      "context_id": "6c14322aa1778c574bd7c076",
+      "candidate_id": "7dd8adadd01f5c38d45cdc4a",
+      "context_id": "cc832e87a6d1f37f908e96b2",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
+      "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
       "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -1045,21 +1120,24 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
+        "baseline",
         "control",
-        "replication"
+        "rup"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.75,
-      "source": "zenodo",
-      "source_context_sha256": "b61b3cc555eef0e5b5b63a6c2b6a81da3ac5514e132ea0fe0f05ea1023ecb9fa",
-      "source_published": "2026-10-26",
-      "source_updated": "",
-      "summary": "TEMPLATE-DIRECTED MASS FABRICATION OF BIOMEDICAL MICRO/NANOROBOTS AT THE LIMIT is a 770-page, high-density English research monograph on scaling template replication without losing dimensional fidelity, surface integrity, functional consistency or scientific traceability. The book treats the template as a stateful manufacturing ancestor rather than a passive tool. Every cavity and replication cycle is registered so that template wear, release-coating decay, demolding force, replica bias, particle residue, spatial defect clustering and functional outcomes can be linked across the full template life. Its central falsifiable claim asks whether lifetime-aware monitoring can predict rising defect probability before damage spreads. Thirty mathematically distinct research plates cover cavity filling, squeeze flow, material relaxation, cure conversion, shrinkage, residual stress, adhesion, demolding, fracture, Archard wear, coating survival, hidden wear states, geometry transfer, Hausdorff error, spatial point processes, defect ancestry, survival hazards, change points, capability, conservative yield, hierarchical variance and qualified-part cost. Across 82 chapters and 410 single-page studies, the monograph develops replication physics, release mechanics, template wear, spatial defect genealogy, adaptive process control, functional qualification, lifecycle economics and independent transfer. Two hundred Research Gates define blind challenges, strong comparators, evidence packages, hard stops and successor forks. Thirty-three Phoenix Answer Embryos present genuinely different witnesses, challenge artifacts, estimators, controllers, economic falsifiers, release keys and handoff kits. The work is explicitly nonclinical and hypothesis-generating. It does not claim a completed manufacturing campaign, human treatment, autonomous in-body efficacy or regulatory approval. Its release rule is conjunctive: wear, demolding force, geometry, defect clustering, unselected yield, task function and traceability must pass together over the complete template life. Author: Feng Cheng-en (33) x Starli Series: STARLI Research Institute XXXIV / Flagship 09 Edition: Research Working Edition v1.0 / October 2026",
-      "tags": [],
+      "score": 9.75,
+      "source": "arxiv",
+      "source_context_sha256": "b888afdcffb9d2e35fb9a14de4ce21a69599c727c9173e650d92eaaad72d06f0",
+      "source_published": "2026-10-24T10:24:37Z",
+      "source_updated": "2026-10-24T10:24:37Z",
+      "summary": "Cooperative transport with heterogeneous legged robots requires coordinating different motion capabilities while supporting an unfixed shared payload. We present HA-DiPO (Heterogeneous-Agent Diffusion Policy Optimization), a hierarchical multi-agent reinforcement learning framework under centralized training with decentralized execution (CTDE). The framework decouples team-level coordination from embodiment-specific motion control: at the high level, a centralized critic uses team-value estimates to jointly train independent coordination policies, aligning robot-specific action responses with a shared transport objective; at the low level, embodiment-specific robust motion policies track the coordination commands. The high-level diffusion policies offer more flexible action distributions than single-Gaussian parameterizations, allowing potentially multimodal coordination responses to be represented. The coordination policies learn from scratch through reward-driven simulator interaction without demonstrations. At execution, each robot generates coordination commands using only local robot and payload observations, without partner-state inputs or inter-robot messages. Simulation comparisons show that HA-DiPO achieves higher final mean returns and velocity-tracking success rates, as well as lower velocity errors, than the evaluated baselines. Real-world experiments further demonstrate quadrupedal-wheeled-legged and human-robot cooperative transport.",
+      "tags": [
+        "cs.RO"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "TEMPLATE-DIRECTED MASS FABRICATION OF BIOMEDICAL MICRO/NANOROBOTS AT THE LIMIT is a 770-page, high-density English research monograph on scaling template replication without losing dimensional fidelity, surface integrity, functional consistency or scientific traceability. The book treats the templat",
-      "url": "https://zenodo.org/records/23671702"
+      "title": "HA-DiPO: Diffusion Policy Optimization for Heterogeneous Cooperative Transport",
+      "url": "https://arxiv.org/abs/2610.33584v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1384,8 +1462,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "7f9d3616796c201293b16644",
-      "context_id": "7cb66dede16cc6f3a09747f1",
+      "candidate_id": "f09793f4bae409744a894163",
+      "context_id": "0f93ca8401f1c5530dc1174c",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1400,20 +1478,27 @@
       ],
       "keyword_hits": [
         "baseline",
-        "control"
+        "rup",
+        "sat",
+        "verification"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.625,
-      "source": "zenodo",
-      "source_context_sha256": "17bb9593ce7ecf1133726ab1e2c87d7b46c40310f5c1c581fe65012636eecbfd",
-      "source_published": "2026-10-26",
-      "source_updated": "",
-      "summary": "The Quantum Internet is commonly envisioned as a network that transports quantum states and distributes entanglement as the key resource underpinning distributed quantum applications. This view is necessary but incomplete if quantum phenomena are confined to what the network carries or manages, while network functionalities remain grounded predominantly in classical abstractions. This Perspective advances a broader thesis: quantum phenomena can also participate directly in the realization of network functionalities. We first establish the architectural baseline by introducing entanglement as a stateful network resource whose operational condition is non-locally distributed across remote nodes, evolves through manipulation or consumption, and degrades over time through decoherence. Its evolving state must therefore remain visible to the functionalities acting on it. We then move beyond resource visibility and use two mechanisms as proof points of a broader quantum-native functional design space: entanglement generation during propagation through coherent spatial-path superposition, and operational connectivity induced by shared entanglement that can depart from the physical graph. These examples show that paths, neighbors, or participating nodes may become operationally relevant in ways determined by quantum coherence and shared entanglement, rather than by physical connectivity alone. We identify Quantum Addressing as a transversal abstraction capable of representing such relations while complementing, rather than replacing, classical addressing and signaling. The resulting perspective broadens the Quantum Internet from transporting quantum information and distributing entanglement to exploiting quantum phenomena in network functioning, opening a coupled frontier spanning routing, forwarding, control, and functionality placement.",
-      "tags": [],
+      "score": 8.0833,
+      "source": "arxiv",
+      "source_context_sha256": "3664b358e6c515266ac514975c6129121e11fa11fed105f22bbc08508e5b67ac",
+      "source_published": "2026-10-25T07:39:23Z",
+      "source_updated": "2026-10-25T07:39:23Z",
+      "summary": "Multi-agent reinforcement learning supports cooperative decision-making in Internet of Things systems, but strategic deviations can disrupt coordination and undermine confidence in the training process. This paper proposes Blockchain-Enabled Centralized Training and Decentralized Execution (BE-CTDE), which uses blockchain as an active training-management layer. A behavioral verifier compares executed trajectories with shared-policy recommendations; its flags drive a token mechanism combining slashing, burning, rewards, and compensation. Retained balances determine each agent's contribution to the global policy update, connecting auditable behavior to learning influence. We derive a one-round incentive condition that accounts for action-dependent compensation and the payoff from deviation, and a finite expected exclusion-time bound under explicit conditional detection and accounting assumptions, showing perfect detection is unnecessary. An exact finite-population capacity bound characterizes the limits of the population-relative detector. In multi-agent path finding experiments, BE-CTDE outperforms a state-of-the-art learning-based path planner with substantially higher success rates under attack, even when adversaries form the majority. It also outperforms partially defended baselines in all configurations, with collision rates up to 35% lower than under detection without economic consequences and up to 43% lower than under conventional stake slashing. Together, these results characterize how behavioral verification and token feedback can support accountable cooperative learning.",
+      "tags": [
+        "cs.MA",
+        "cs.CR",
+        "cs.LG",
+        "cs.NI"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Beyond Quantum Messages: Toward Quantum-Native Network Functioning",
-      "url": "https://zenodo.org/records/23662698"
+      "title": "BE-CTDE: Blockchain-Enabled Multi-Agent Reinforcement Learning with Anomaly Detection and Token Economics",
+      "url": "https://arxiv.org/abs/2610.34121v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1454,8 +1539,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4cd213a75387b868a3aeb2f2",
-      "context_id": "4dc760b195c5df0defd0ac95",
+      "candidate_id": "7227ceb1c96d96cad53b7537",
+      "context_id": "e5f66e954aada36a7bc7199c",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1469,22 +1554,64 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "replication",
-        "rup",
+        "control",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9167,
+      "source": "zenodo",
+      "source_context_sha256": "d9764347f496e5990deea2bdaedbff28c46895f37f99d90432f71ceb1008ba26",
+      "source_published": "2026-10-27",
+      "source_updated": "",
+      "summary": "Companion data deposit for the manuscript \"Data coherence over data volume drives generalisable genome-based prediction of microbial carbon utilisation\". This record contains the phenotype labels, genome feature matrices, train/test splits, trained model checkpoints, predicted proteomes, and figure and table source data underlying every script-generated display item in the manuscript and its supplementary material. The code that consumes it is on GitHub (links below); this record contains data only. CONTENTS - trait-prediction-data.zip (60 MB, 453 MB unpacked). All derived data: KOFAM, RAST and GapMind feature matrices, harmonised phenotype tables, train/test splits for the random, leave-one-dataset-out and phylogeny-based evaluations, the pruned GTDB tree and distance matrix, KEGG reference mappings, source data for every script-generated main-text and supplementary figure and table, and 105 trained CatBoost checkpoints. Unpacks to a data/ tree that mirrors the analysis repository. - proteomes_all_seqs.zip (766 MB, 1.5 GB unpacked). 829 predicted-protein FASTA files: one for each of the 822 selected genome records, the input to the KOFAM and GapMind annotation, plus seven alternate assemblies of Marine strains included in the pangenome-completeness analysis. - Per-dataset phenotype matrices and genome tables, provided loose so they can be read without downloading an archive: atleaf (206 genomes x 44 substrates), biolog (362 x 59), marine (172 x 100, with 199 genome records in the genome table) and populus (55 x 175, plus a no-carbon control column). - genome_accessions.tsv, mapping all 822 genome records to NCBI, BV-BRC or JGI IMG accessions, with public KBase download links for the 166 Cedar Creek (CCESR) Biolog genomes. - biolog_assay_provenance.tsv, recording for each of the 362 Biolog genomes the assay type (Biolog plate or other assay), the originating source (source-study PMIDs for 193; the Cedar Creek (CCESR) isolate collection for 166; unpublished contributions for 2; not recorded for 1) and how the genome is paired with its phenotype record, since that dataset is a compilation rather than a single assay campaign. - substrate_identity_common15.csv and substrate_identity_all.csv, binding every phenotype column to the exact compound the originating study assayed. 46 Biolog and Populus columns, including all 30 in the 15 shared phenotypes, also carry a Biolog PM1/PM2A well position that identifies the compound (for the Biolog compilation, a compound reference rather than the well each source study used). - Populus_carbon_source_results.xlsx, the ORNL Plant-Microbe Interfaces Biolog assay as measured by Leah Hochanadel and Dale A. Pelletier, released publicly for the first time with this work and separately deposited at ORNL/OSTI doi:10.25983/PMI/3399550. - README.md with the full file-by-file description, dataset provenance, and reproduction instructions. MD5SUMS.txt for verification. SCOPE Four carbon-source utilisation datasets were harmonised: ATLeaf (Arabidopsis thaliana leaf isolates), Biolog (a compilation of published studies, the Cedar Creek (CCESR) isolate collection and unpublished contributions), Marine (heterotrophic marine bacteria) and Populus (Populus deltoides root isolates). Analyses focus on the 15 carbon sources shared by all four, drawn from 240 carbon sources in total. Each carbon source column is bound to a single compound, so distinct isomers are never merged. REUSE The deployment checkpoints in data/outputs/full_data_models/ and data/outputs/concordant_full_models/ give one CatBoost model per phenotype, trained on all labelled genomes and on the GapMind-concordant subset respectively. Each ships with metadata, feature importances and its selected-feature list, so a phenotype can be predicted for a new genome from its KOFAM presence/absence vector without retraining. The complete KOFAM, RAST and GapMind annotation matrices are also included for reuse. SOURCES AND CITATION Phenotype data originate w",
+      "tags": [
+        "carbon source utilisation",
+        "bacterial phenotypes",
+        "genome-based trait prediction",
+        "cross-dataset generalisation"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Data coherence over data volume drives generalisable genome-based prediction of microbial carbon utilisation (dataset)",
+      "url": "https://zenodo.org/records/23695901"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "79448b651f7cbaf4c56b9ecc",
+      "context_id": "855e326fd2dc6c220c44bd79",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control",
         "sat"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.7083,
-      "source": "zenodo",
-      "source_context_sha256": "6abf9db9e2a32128d523f4a9a58a708f52d61c5e7363bc8fa6f42f81d1bcb164",
-      "source_published": "2026-10-26",
-      "source_updated": "",
-      "summary": "Contents Folder Contents data/discovery/ Repository metadata and discovery scores for 500 projects. data/analysis/ The 1,500-record human&ndash;LLM dataset, 17,180 additional LLM classifications, classification inputs and counts for 117 repositories. data/extraction_used/ Per-repository exports of the analyzed candidates. data/manual_classify/ Master classification sheet and human&ndash;LLM comparison sheets. data/survey/ Category-level and demographic survey aggregates. protocol/ Taxonomy categories, LLM instructions, output schema and workbook prompts. scripts/archive/ Repository discovery, historical SATD extraction and LLM classification scripts. provenance/mining_logs/ Compressed SATD extraction logs. results/computed/ RQ1 and RQ2 counts, repository distributions, false-positive counts and RQ3 aggregates. figures/ AI-CPS taxonomy and practitioner criticality figures. survey/ Practitioner questionnaire. Setup Install Python and Git. Open a terminal in the folder containing requirements.txt , then install the Python dependencies: python -m pip install -r requirements.txt Repository discovery Run the discovery script to generate a repository metadata CSV: python scripts/archive/discover_repositories_original.py --output repos_for_satd.csv --max-repos 500 --include-readme The command exports up to 500 repositories and includes README inspection. Other available settings are listed with: python scripts/archive/discover_repositories_original.py --help For authenticated GitHub requests, set the GITHUB_TOKEN environment variable before running the script. Historical SATD extraction Run the miner on the supplied repository list: python scripts/archive/mine_satd_original.py --input data/discovery/repos_for_satd.csv --output-dir satd_results --repo-cache tmp_repos --log-dir satd_logs --since-year 2022 The script traverses available commits from the specified year, retrieves marker-bearing deleted source lines and their available pre-change context, and writes per-repository CSV files and logs. tmp_repos is the script's temporary clone directory. LLM classification In scripts/archive/llm_classification.py , replace the input, output and sample-count placeholders. For example, to classify the additional input: INPUT_FILE = r\"data/analysis/additional_input_17180.csv\" OUTPUT_FILE = r\"new_additional_llm_results.csv\" MAX_SAMPLES = 17180 To use the initial subset instead, set INPUT_FILE to data/analysis/manual_input_1500.csv and MAX_SAMPLES to 1500 . The sample count must be an integer. Set the OPENAI_API_KEY environment variable, then run: python scripts/archive/llm_classification.py The script reads ID , SATD_Keyword , SATD_Comment , Context_Type and Context_Code , and saves broad classifications, AI-CPS categories and proposed category names. Checkpoints are saved beside the output. To resume an interrupted run, use the same input, settings and output path. Results The supplied summaries are in results/computed/ . RQ1 percentages exclude false positives; RQ2 percentages use the AI-CPS-specific total within each analysis. Figures are supplied as PDFs in figures/ .",
-      "tags": [],
+      "score": 6.875,
+      "source": "arxiv",
+      "source_context_sha256": "2285dd359ed5c04d50724f7808e5a113394105ea09aa94cc8a7751d5d7dd41d9",
+      "source_published": "2026-10-24T15:18:31Z",
+      "source_updated": "2026-10-24T15:18:31Z",
+      "summary": "In large language model (LLM)-based multi-agent systems, reported confidence increasingly determines the allocation of scarce downstream attention, computation, and decision influence. This makes reporting strategic: an agent may overstate the relevance of its contribution even when its underlying belief is well calibrated. Existing calibration methods largely assume passive reporting and therefore do not address strategic incentives created when confidence determines downstream allocation. We formulate strategic calibration as a reporting-layer incentive problem and propose the Audited Pivot Scoring Mechanism (APSM). APSM offsets platform-controlled allocation benefits, uses inverse-propensity-weighted sparse audits, charges the Clarke pivot externality, and applies a strictly proper score. Under the stated model assumptions, truthful reporting is the unique expected-utility best response. We also characterize approximate execution and the audit-variance trade-off. Calculator-free experiments show that LLM agents inflate confidence under Top-$K$ incentives. With a shared agent-local utility interface, LLM agents reduce distortion under both Compensated Proper Scoring (CPS) and APSM. CPS achieves higher exact allocation match, whereas APSM yields lower Brier loss and numerically fewer cutoff crossings. Experiments further show that APSM enlarges the utility margin against allocation-changing deviations by $1.93\\times$ and improves robustness under approximate execution. These results support incentive-aware elicitation as a distinct layer for reliable multi-agent coordination.",
+      "tags": [
+        "cs.GT",
+        "cs.AI"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Replication Package of the Paper: \"Self-Admitted Technical Debt in AI-Intensive Cyber-Physical Systems: An Empirical Study\"",
-      "url": "https://zenodo.org/records/23663086"
+      "title": "Strategic Calibration in LLM Multi-Agent Systems: Audited Pivot Scoring for Truthful Elicitation",
+      "url": "https://arxiv.org/abs/2610.33728v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1633,110 +1760,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "SoK: Timestamps Are Not a Time Model: Rethinking Temporal Reasoning in Host-Based Intrusion Detection",
       "url": "https://arxiv.org/abs/2610.35151v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "69182d0d19fcf12f0ae1e3a1",
-      "context_id": "f0ca6d65d68e3c9bae69bf6c",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "arxiv",
-      "source_context_sha256": "93c7087545c12f5228077890135228b7e7bc238c1c3635ee8daaac5cc5875735",
-      "source_published": "2026-10-26T17:02:10Z",
-      "source_updated": "2026-10-26T17:02:10Z",
-      "summary": "Multivariate time series produced by industrial installations and server clusters are under continuous monitoring, and anomaly detection is the first line of defense before a local fault escalates into a system-wide failure. In the absence of labels, the dominant paradigm trains a reconstruction model on normal data and scores the residual to reach a verdict. Recent work has steadily enriched the expressiveness of the recovery map through Transformers, diffusion models, and cross-scale associations. A residual, however, only certifies that an observation can be recovered; it does not certify that the variables still explain one another as they do under normal operation. A coordinated yet unfamiliar operating transition inflates the residual without breaking any relationship, whereas a sensor drifting away from its peers may leave the residual silent. Methods that fold inter-variable dependencies into the reconstruction objective inherit this ambiguity, because their relational evidence is ultimately supervised by the same recovery loss. We therefore propose CLOSURE, which evaluates recoverability and cross-channel consistency as two normal-data prediction tasks learned in separation. The recoverability task is solved by a diffusion reconstructor conditioned on a discrete memory of normal temporal bases. The consistency task is solved by a relation-closure operator that predicts every channel exclusively from the others, where the target's own trajectory is withheld and sparse signed gates decide which peers are actually used. The two scores are reconciled only through calibration on normal data. Extensive experiments show that CLOSURE consistently outperforms recent reconstruction-, frequency-, and topology-based detectors on public benchmark streams, confirming the value of examining consistency alongside recoverability.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
-      "url": "https://arxiv.org/abs/2610.35753v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "aa51257badad92ff5976a9fd",
-      "context_id": "31265d37de105bf7b4b945c1",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "273d586beea7f19661d65e1ae337d3d37f551a61d680e5e7244754bef7c1ad5f",
-      "source_published": "2026-10-26",
-      "source_updated": "",
-      "summary": "A Turing machine carries a computation forward through successive configurations, but continuation beyond infinitely many steps requires a rule assigning the configuration from which the next instruction can proceed. The Quantum &Gamma;-Turing machine considered here retains a finite-dimensional register&rsquo;s trace-norm limit when it exists, preserving the coherence needed by subsequent operations. Averaging a history that never settles permits another continuation, although registers independent at every finite stage can then acquire correlations through their shared timing. We characterise when an assigned state can replace its history without changing a later joint calculation. For assignments compatible with every fixed quantum operation, the largest composition error equals the mean trace-norm distance from the assigned state, and a partner carrying classical labels can approach that value. Independent composition with every partner holds precisely when temporal variance under the chosen mean vanishes. Requiring this under every shift-invariant mean gives uniform vanishing of average squared fluctuations, a condition that permits sparse excursions despite failure of ordinary convergence. For a programme repeatedly applying one fixed channel, independent composition is instead equivalent to ordinary convergence, with the exact error determined by its surviving nonstationary spectral component. Algebraically specified channels and initial states admit a finite decision procedure and certified bounds, while bounded repetitions of states preserve the stronger averaging condition and transfer its certificates to a simulation. These results connect transfinite continuation to finite verification for specified programmes and provide composition certificates that can be carried through a controlled simulation.",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Independent Composition and Quantum Limits in Transfinite Γ-Turing Machines",
-      "url": "https://zenodo.org/records/23676461"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "e79f36fa82abd4f0c0739f70",
-      "context_id": "01b4b89e7de9c174cad70b91",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "496758f4321f6f41ce4ffd06db3c92e9cb0c193a354f090495ce871650c8e3de",
-      "source_published": "2026-10-26T10:46:03Z",
-      "source_updated": "2026-10-26T10:46:03Z",
-      "summary": "AI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) extends this process to inductive biases and to the mechanisms that govern future updates, which can themselves be revised and reused across improvement cycles. Yet self-modification alone does not guarantee trustworthy improvement. Reported gains may reflect flawed evaluations, previously acquired capabilities may deteriorate, and compliance with behavioral constraints may weaken. Compromised artifacts or sensitive information may also persist in successor systems. Changes to improvement mechanisms may invalidate earlier verification results and make human oversight less effective. This survey presents an operational definition and process framework for RSI and organizes the requirements for trustworthy RSI into four interconnected themes: genuine and sustained improvement; behavioral constraints, alignment, and fairness; system security and privacy; and transparency and controllability. We examine these themes from three perspectives: Improvement Validity, Constraint Preservation, and Effective Oversight. This analysis covers improvement diagnosis, proposal generation, proposal evaluation, and update implementation (S1--S4), including the recursive application of these stages to improvement mechanisms (RI). We review risks, safeguards, and evaluation evidence for individual updates, effects inherited by successor systems, and revisions to improvement mechanisms, while distinguishing direct RSI findings from evidence in related systems. Finally, we examine evaluation settings, identify requirements for independent and longitudinal assessment, and discuss applications and open research problems.",
-      "tags": [
-        "cs.AI",
-        "cs.CR"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
-      "url": "https://arxiv.org/abs/2610.35193v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
