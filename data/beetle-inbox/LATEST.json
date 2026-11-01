@@ -1,89 +1,9 @@
 {
-  "batch_id": "6910b24a93ec1c0e9296",
+  "batch_id": "47dc2bfc149ef99da3b2",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
   "items": [
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "64fbbfa9a100d5e1575200a6",
-      "context_id": "4fd6b7c01769f85e2fda07c0",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "identifiability",
-        "inverse",
-        "inversion",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.7917,
-      "source": "zenodo",
-      "source_context_sha256": "35feeba1057e846e53d77ccaf07f2696a7a365c884236c2ba934f4d6a6cf6c50",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Unrefereed research candidate. A wide binary star takes thousands of years to complete one orbit, so its eccentricity usually cannot be found by following the orbit. Astronomers instead use the angle &Gamma; between the pair's projected separation and projected relative velocity, whose distribution over many binaries depends on the population's eccentricity law. Hwang, Ting and Zakamska (MNRAS 2022, Appendix B) asked whether this angle distribution determines the eccentricity distribution uniquely. In the ideal model (random orbital phase, uniformly random 3D orientation, error-free projections) this package derives the likelihood of one angle in closed form, p(&gamma;|e) = [acosh(1/e) &minus; 1{|cos &gamma;| &gt; e} acosh(|cos &gamma;|/e)] / (&pi; sin&sup2;&gamma;), and shows that its mixtures are classical Abel transforms. This gives an explicit inverse for every eccentricity law, including atoms: different eccentricity laws never give the same angle law. The inverse is continuous in the weak topology but discontinuous in total variation, so fine structure can be nearly invisible. Moments need no inversion: E&radic;(1&minus;e&sup2;) = (&pi;/2) E sin&sup3;&Gamma; and E e&sup2; = 1/2 + E cos 2&Gamma; &minus; (1/2) E cos 4&Gamma;; these are the only symmetric unbiased single-angle observables for their targets and give near-efficient power-law index estimators. Two exact selection results bear on Gaia samples: thermal populations keep a uniform angle law under selections that ignore sky position angles, and binning by projected separation preserves the model under a log-uniform semimajor-axis law. The archive contains the 21-page manuscript (PDF and LaTeX source) with complete proofs, a Python library (likelihoods, observables, estimators, Kepler simulators), the full validation script with recorded results and figures, semantic negative controls, fast CI checks, the bounded novelty report and SHA-256 sums. All data are synthetic; no observational catalogue is analysed. Assurance boundary: written proofs; floating-point numerical checks and Kepler simulations; producer-side replay in normal and optimised modes; internal AI-assisted review (five roles, adversarial correctness review, proof audit and re-review). This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
-      "tags": [
-        "wide binaries",
-        "orbital eccentricity",
-        "Gaia",
-        "projected angle",
-        "Abel transform",
-        "identifiability",
-        "inverse problems",
-        "Kepler orbits",
-        "eccentricity distribution",
-        "selection effects"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "An exact projected-angle likelihood and population inversion for wide-binary eccentricities",
-      "url": "https://zenodo.org/records/23838665"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "2360ccc42b9b66530a84283d",
-      "context_id": "d0ef627a086e4799c67f386a",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "inversion",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.7917,
-      "source": "zenodo",
-      "source_context_sha256": "cd480a03ca36a4abe76286a164cbe794dbc4a01a6257d8c8b89a43d8e6e8f00d",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "The magnetotelluric (MT) method uses natural electromagnetic field variations&nbsp;to image subsurface electrical resistivity at depths ranging from tens of metres to hundreds of kilometres. It is widely used in geophysical exploration for natural resources, including minerals, geothermal energy, and groundwater, as well as in the characterisation of sites for CO$_2$ storage and in studies of crustal and lithospheric structure. The MT inverse problem is, however, inherently non-unique: many distinct resistivity models reproduce the&nbsp;observations equally well. Conventional practice nonetheless reports a single regularised model, with no quantitative&nbsp;measure of its uncertainty. MTGeophysics.jl is a Julia package developed to address this limitation. Its principal aim is the quantification of uncertainty in MT model building, advancing interpretation from a single deterministic model, through an ensemble of plausible models, towards the full posterior distribution. The package also provides tools for data analysis, mesh&nbsp;generation, masking, forward modelling, inversion, model analysis and&nbsp;visualisation for MT research and applications. MTGeophysics.jl v0.7.3 No breaking changes. Polishing docs for JOSS",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "MTGeophysics.jl: A software repository for magnetotelluric research and applications",
-      "url": "https://zenodo.org/records/23846290"
-    },
     {
       "base_direction_id": "formal_proof_verification",
       "candidate_id": "fb8349dba4b430d8de2b4dfc",
@@ -123,73 +43,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d082caee1fa1ed5bc0cff2ec",
-      "context_id": "d54b455c96e27fabd79e4324",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample",
-        "recovery",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.0417,
-      "source": "zenodo",
-      "source_context_sha256": "af2292f7251220473654818c5e0b5b98473d890a2de4dd829d7621cb1682d47f",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT Chinese Title / 中文書名:移動城市循環經濟與材料永續極限 55/90 CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 55 of 90). It investigates whether a deliberately unoccupied six-module mobile-city research system can reduce relocation-related material loss through qualified reuse, automated selective disassembly and auditable remanufacturing, while preserving deployment latency and critical-service safety. The three-way research coupling is Circular Materials x Autonomous Manufacturing x Urban Sustainability. Neither a functioning autonomous city nor a human-occupied habitat is asserted. The falsifiable proposal compares a frozen circular material strategy against competent conventional manual recovery, replacement and stationary emergency infrastructure under equal material, energy, sensing, technician-hour, tool, water and transport budgets. Original intake, declined parts, work in progress, consumed adhesives, repeated repairs, rejected batches and retired material remain in the denominator. Blind faults include grade swaps, hidden fatigue, wrong material passports, replayed scale measurements, contamination, source-energy omissions and optimistic virgin-substitution credits. A proposal fails whenever a load-bearing component, utility service, waste route, safety interlock or material identity cannot be independently reconstructed. Thirty mechanism-distinct research formula plates address mass custody, qualified yield, bond separation work, fatigue, polymer rheology, sensor residuals, covariance, electrical energy, verified lifecycle inventory, carbon-allocation sensitivity, replacement counterfactuals, tail risk, second-site reproduction and noncompensatory physical release. The original contract's cyber-physical residual r_k = y_k - yhat_k(x_k,u_k) is retained as one fault-detection method; it is not treated as a law of circularity or sustainability. Every mathematical plate states units, validity assumptions, a blinded counterexample and scientific chapter interfaces. Eighty-two chapters contain 410 separately paginated research studies and 200 Research Gates, each connected to a specified material state, independent reference, fault or competing process. Thirty-three different Phoenix Answer Embryos propose research instruments, material-qualification fixtures, provenance devices, circularity accounting tools and successor-ready evidence protocols. This work proposes hypotheses and reproducibility obligations, not physical trial outcomes. Its complete PDF also contains research limits, negative-result custody and second-laboratory transfer requirements. The scope remains prospective, scaled and non-occupancy. Environmental performance requires functional-unit parity and a complete lifecycle inventory; increasing recovered mass alone does not prove lower environmental burden. Relevant method references include Ostapska et al. (10.1016/j.spc.2024.05.014), Formentini et al. (10.1016/j.jclepro.2025.145459), Attia et al. (10.1016/j.autcon.2024.105521), Mao and Cao (10.1016/j.spc.2024.12.021), Poschmann et al. (10.1002/cite.201900107) and Keating et al. (10.1126/scirobotics.aam8986). The Flagship 13 mother genealogy identifiers (10.5281/zenodo.23318840 and 10.5281/zenodo.23318839) were provided by the author and their metadata have not been independently confirmed. No external study cited here establishes this integrated F55 architecture. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXVI / YULI Nano Supercar Trilogy / Flagship 55 of 90 Edition: Research Working Edition v1.0 / 1 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT Chinese Title / 中文書名:移動城市循環經濟與材料永續極限 55/90 CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Fl",
-      "url": "https://zenodo.org/records/23843026"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ea05ac6f2d263a26dccdec0f",
-      "context_id": "7f8a360cdc74b895f44d5237",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.0833,
-      "source": "zenodo",
-      "source_context_sha256": "31e86209aadf09b86dee39136c6cbddb33edc675e6fbc217df7de7e467de0eb4",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT Chinese Title / 中文書名:可變形移動居住系統長期宜居性極限 56/90 LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 56 of 90). It investigates whether a traceable unoccupied morphing habitat testbed can improve the joint coverage of measured thermal, airflow, moisture, energy and structural engineering envelopes across controlled seasonal sequences while preserving independently reconstructable module identity. Its core coupling is Human-Comfort Proxy Models x Environmental Control x Longitudinal Test Evidence. The project uses guarded coupons, scaled modules, environmental chambers, inert-water and tracer-air circuits, and hardware-in-the-loop tests; it does not observe residents or establish an occupancy certificate. The preregisterable hypothesis is that, under matched materials, energy reserves, maintenance, sensor access, control computation and test time, a frozen morphing environmental-control policy will improve complete-cohort comfort-envelope proxy coverage without worsening module-identity continuity relative to competent static-habitat and expert manual-reconfiguration baselines. The supplied selective-risk candidate R_sel(tau)=E[L(yhat,y)|c&gt;=tau] must be published with accepted coverage, so a low risk score cannot be purchased by refusing nearly every difficult climate or aging case. Hidden trials vary aging gaskets, radiant asymmetry, tracer-air pockets, power outages, sensor common-mode drift, broken connectors, incorrect material identity and ineffective physical stop contacts. Thirty mechanism-specific mathematical plates analyze heat balance, conductive and radiant transfer, operative temperature proxies, vapor mass and dew-point margins, air exchange, ventilation pressure, energy and water closure, sound, light, fatigue, reliability, stale information, uncertainty covariance, selective-risk coverage, tail excursions and second-site reconstruction. Eighty-two chapters contain 410 separately paginated investigations spanning material aging, climate control, indoor-environment proxy limitations, repair, operator authority and versioned evidence. Two hundred Research Gates formulate disconfirmable experimental questions across concealed faults, equal-resource comparisons and two-mechanism interfaces. Thirty-three distinct Phoenix Answer Embryos propose separately falsifiable future rigs, calibration artifacts, safe-stop witnesses and successor evidence packages. The volume is a prospective research design rather than a completed experimental study. An unoccupied thermal or tracer-gas rig cannot establish human comfort, healthy air, habitable water, fire and structural compliance, actual multiyear life, or a right to place people inside a mobile dwelling. The 777-page layout and enumerated items are structurally checked, but a language-duplication audit finds reused long editorial method spans; semantic uniqueness, physical modeling and all evidence inferences remain subject to deeper independent review. Relevant independently identified method references include Fanger (1973), DOI 10.1136/oem.30.4.313; de Dear and Brager (2001), DOI 10.1007/s004840100093; Brager and de Dear (1998), DOI 10.1016/S0378-7788(97)00053-4; Dang, Janssen and Roels (2024), DOI 10.1007/s12273-024-1176-8; Dang et al. (2025), DOI 10.1016/j.buildenv.2025.112867; and Broughton and Maxwell (2023), DOI 10.47120/npl.mgpg103. Standards ISO 7730:2025, ASHRAE 55-2023, and ASHRAE 62.1/62.2-2025 provide bounded normative context, not F56 verification. Author-provided Flagship 13 ancestor DOIs 10.5281/zenodo.23318840 and 10.5281/zenodo.23318839 remain pending independent resolver metadata confirmation. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXVI / YULI Nano Supercar Trilogy / Flagship 56 of 90 Edition: Researc",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT Chinese Title / 中文書名:可變形移動居住系統長期宜居性極限 56/90 LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institut",
-      "url": "https://zenodo.org/records/23842738"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "55364eea855c030b2b6ed25c",
       "context_id": "62c935e8b2a49ce926397677",
       "delivery_preview_only": true,
@@ -220,39 +73,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Saeedmomo/eralpha-anthraquinone-md: V9 reproducibility data for ERalpha anthraquinone recognition",
       "url": "https://zenodo.org/records/23866001"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "3966b23963546c3a522a83d1",
-      "context_id": "ff26b434199412a98de9bef5",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "recovery"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.9167,
-      "source": "zenodo",
-      "source_context_sha256": "213fbc3e3d6e3d8c725af987c06d01e81614db6c2aa9710395eeb74abab78d10",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "智能奈米機器人自主建築修復極限 41/90 INTELLIGENT NANOROBOTIC AUTONOMOUS ARCHITECTURAL REPAIR AT THE LIMIT INTELLIGENT NANOROBOTIC AUTONOMOUS ARCHITECTURAL REPAIR AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 41 of 90). It investigates whether locally operated micro-scale robotic inspection and repair methods might detect concealed cracks, moisture ingress, damaged mechanical interfaces and environmental faults, then restore independently measurable properties without concealing failure. The core coupling is Micro/Nano Sensing x Local Repair x Structural Reliability. Every proposed integrated test is limited to unoccupied scaled habitat panels, damaged coupons, environmental chambers and supervised hardware-in-the-loop systems; no inhabited dwelling, nanorobotic building maintenance system or structural certification is claimed. The falsifiable candidate predicts higher independently verified fault recall without worsening preregistered post-repair air-quality recovery under equal inspection exposure, material supply, energy, sensing, computation, time and human-operations budgets. Repair success is separately conditional on load-path requalification, credible reference identity, moisture containment and a functioning physical stop. A controlled localized robotic repair system must compete with scheduled expert inspection, replace-on-failure maintenance and expert-performed local treatment. Concealed moisture, common-mode sensor drift, inaccessible crack ligaments, incompatible repair chemistry and hidden support fixtures are ways the hypothesis can fail. Negative specimens, refused states, destructive tests and incomplete repairs remain in the full denominator. Thirty mechanically and statistically distinct research plates include Paris-regime fatigue crack growth, mode-I and mixed-mode fracture, energy release, cohesive-interface work, load balance, fatigue survival, detection recall and false clearance, ultrasound and acoustic observability, thermal and moisture transport, contaminant mass balance, resin flow, cure kinetics, correlated uncertainty, materials and energy accounting, conditional causal effects and physically verified stop latency. Each mathematical plate states its mechanism, dimensional assumptions, independent reference, blinded contradiction and research-chapter links. The seed Paris relation da/dN = C(Delta K)^m is a conditional empirical model for particular fatigue regimes, not a universal law of repair or evidence that a crack has healed. Eighty-two chapters and 410 single-page investigations examine specimen provenance, hidden crack truth, fracture and fatigue, imaging and sensor drift, repair-material chemistry, robotic deposition, wall-module utility boundaries, environmental requalification, long-cycle maintenance and independent laboratory reconstruction. Two hundred individually worded Research Gates challenge different physical witnesses, resource-matched rivals, coupled faults, false-clear decisions and reproducibility limits. Thirty-three distinct Phoenix Answer Embryos propose separate future scientific objects, including fracture-reference capsules, moisture witnesses, cure validation rigs, aerosol exposure ledgers, physical interlocks and cross-site specimen relays. These are research proposals and evidence contracts, not demonstrated autonomous repair devices. The research is hypothetical, non-occupancy and intentionally vulnerable to refutation. Existing studies establish bounded robotic crack inspection and concrete sealing methods, polymer-glass simulation mechanisms, fatigue testing practices and material measurement approaches, but do not validate the integrated F41 architecture. Relevant external literature includes Li et al. (2026), DOI 10.1038/s44172-026-00637-0; Ruiz-Franco and Giuntoli (2025), DOI 10.1038/s41467-025-59426-6; Huang et al. (2026), DOI 10.1016/j.autcon.2026.107006; Chen et al. (2022), DOI 10.1",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "智能奈米機器人自主建築修復極限 41/90 INTELLIGENT NANOROBOTIC AUTONOMOUS ARCHITECTURAL REPAIR AT THE LIMIT INTELLIGENT NANOROBOTIC AUTONOMOUS ARCHITECTURAL REPAIR AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 41 of 90). It in",
-      "url": "https://zenodo.org/records/23838460"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -292,6 +112,39 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "lean-pkg: a registry and trust gate for Lean 4 formalization packages",
       "url": "https://zenodo.org/records/23866040"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6513d2545eac1988110a5445",
+      "context_id": "e0e57c08e6fb5d13e13f10a5",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "267774379068fa732cd47d7596482079c067fc6f10758112733e767be96c0dd9",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Tomographic reconstruction is challenging because of limited angular coverage, noise, specimen motion and radiation damage. Here, I present GRECO, Geometric Registration of Electron Cryotomography Observations, an algorithm that uses local specimen structure to fit a shared three-dimensional geometry. Starting from central views, it selects landmarks from a working reconstruction and progressively adds neighbouring views. Near zero tilt, uncertainty in landmark depth has less effect on the predicted image position, allowing provisional landmarks to guide the first steps. Each landmark contributes through views with useful local information. For each observation, GRECO reconstructs a local reference from the other supporting views and compensates for the directional blur produced by those viewing angles. A joint fit updates image translations and landmark positions, linking overlapping angular tracks across the series. GRECO produced reconstructions suitable for subtomogram averaging, detection of small macromolecular complexes and detailed membrane segmentation across specimens ranging from vesicles with fiducials and a fiducial-free mixture to an intact near-minimal cell and cellular lamellae imaged in situ. The Greco software combines this registration algorithm with fast preprocessing, reconstruction and TinyCARE denoising, providing a practical workflow for studying molecular structure and cellular organization.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "GRECO: Geometric Registration of Electron Cryotomography Observations",
+      "url": "https://zenodo.org/records/23871074"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -444,6 +297,223 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "8fa61e58b676fcbfc4aa1c45",
+      "context_id": "5a2e29b587c4f280e3f9689a",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reverse",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "37babd8a04ac453303e69348df4984c2490cfae882089d04772f499196eb9f83",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "When a security commitment is defended by an organised interest, the interest may have preceded the commitment, grown out of it, or been built on purpose by its sponsor. These three readings come from interest-group research, policy-feedback research and research on designing policies to last, and are rarely set side by side. We make them testable and apply them to attempts to end security commitments in the United States and Europe after 1945. The dependent variable is the survival of a commitment under an attempt to reverse it, not the level of spending. In the United States cases (the B-1 bomber, the F-22 and C-17, the F136 alternate engine, the closure of military bases, and all programmes proposed for termination in 2009), the breadth of a programme's supplier spread does not decide its survival: the F-22 and the C-17, with suppliers in 44 and 43 states, had opposite fates in 2009. Three findings follow. The legislature's own record can be the defending interest: programmes Congress had created or restored against the executive survived where programmes it had merely funded did not. Executive pressure can be graded from the Statements of Administration Policy: the only unconditional veto threat ended its programme, while conditional threats and objections did not end programmes Congress owned. And what protects a commitment is whether its central defenders can be compensated, down to the production site. In Europe, as the European Defence Fund's rules are rewritten, the veto member states wrote for themselves is extended while the Commission's rule for spreading benefits is made optional. We register one prediction on the Fund's successor. The evidence extends to material published on 1 November 2026, including reporting on member-state divisions over the European Competitiveness Fund.",
+      "tags": [
+        "Policy feedback",
+        "Defence procurement",
+        "Policy termination",
+        "Eropean Defence Fund",
+        "Congressional Politics"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Grown or Built? Interests that Defend Commitments after 1945",
+      "url": "https://zenodo.org/records/23854386"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6f86efee6d5bde1dbb233c27",
+      "context_id": "ce270f6a7762923a6de4e8b0",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "7c89c9e9904b6e3aad1261221de369528be8c44542335768eb27024779cd574a",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "This repository contains the analysis code and public-safe source data accompanying the manuscript &ldquo;Mid-Holocene rise in Pinus pollen across Northeast Asia without resolved regional forest expansion&rdquo; (submitted to Communications Earth &amp; Environment )&nbsp;and its Supplementary Information. Package Contents code/ : five standalone Python scripts reproducing the REML random-effects meta-analysis ( reproduce_public_meta.py ), astronomical insolation calculations ( compute_orbital_insolation.py ), Lake Xiaolongwan marker-calibrated pollen accumulation rate (PAR) bootstraps ( confirmed_xlw_par.py ), genus-level taxon decompositions ( reproduce_taxon_decomposition.py ), and Lake Moon pseudocount sensitivity tests ( recompute_lake_moon_pseudocount.py ). source_data/tables/ : cell-by-cell synchronized CSV tables for Supplementary Tables S1&ndash;S15. source_data/figure_sources/ : underlying data points and summaries for main Figures 1&ndash;6 and Supplementary Figures S1&ndash;S8. source_data/moon_sensitivity/ : 100-year bin data and sensitivity outputs across four pseudocount treatments for Lake Moon. source_data/Supplementary_Data_1_Xiaolongwan_* : derived concentrations, PAR, bin summaries, and bootstrap outputs for Lake Xiaolongwan. source_data/Supplementary_Data_2_TraCE21ka.csv : nine-site TraCE-21ka climate metrics. source_data/taxon_aggregates/ , dali_aggregates/ , orbital_insolation/ : supporting aggregates, Berger&ndash;Loutre 1991 insolation inputs, and validation data. License &amp; Usage Rights Original custom code is released under the MIT License ( LICENSE_CODE_MIT.txt ). Author-compiled documentation and source data tables are released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license ( LICENSE_DATA_CC_BY_4.0.txt ). Third-party sources and orbital validation tables remain under their original citations and licenses.",
+      "tags": [
+        "Holocene",
+        "Northeast Asia",
+        "Pinus pollen",
+        "vegetation reconstruction",
+        "paleoclimate",
+        "Lake Xiaolongwan",
+        "meta-analysis",
+        "TraCE-21ka",
+        "REVEALS"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Mid-Holocene rise in Pinus pollen across Northeast Asia without resolved regional forest expansion — code and public-safe source data",
+      "url": "https://zenodo.org/records/23850538"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "80a2f9c0a6bab8b7c3a422af",
+      "context_id": "87e5dd538b3ad330f3a3ab5e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "7d99483dfb1709d7f5d6e16ea375f1aaa0a325e71f151e5725a2f49b149f2604",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Extending Granger causality to tell a direct link from a hidden common cause: the earlier signal is whitened on the joint past, then a rank-based HCR test of residual independence with calibrated p-values is applied, which works when the innovations are non-Gaussian. Includes a one-file Python tool, a browser version, and checks on synthetic data, rivers, stock returns and microservice incidents.",
+      "tags": [
+        "Granger causality, hidden common cause, latent confounder, causal discovery, time series, hierarchic"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Extending Granger causality to separate common cause in some cases",
+      "url": "https://zenodo.org/records/23859887"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "0899c911ce4d7bb53bdbf7db",
+      "context_id": "825ceb26b23894fe31f034ab",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "eb0e7277a683369f4d47ff8b82eb46b596934a79c4e1d8ba971796cdadb801ba",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Resolution Geometry: A Kernel&ndash;Stabilizer Geometry of Observability Abstract Resolution Geometry (RG) is a protocol-explicit framework for characterizing what a declared observation system can distinguish, preserve, and consistently infer. Its starting point is a family of observation laws together with admissible outcome relabelings, rather than a covariance decomposition, metric, or dynamical model. Equality of the joint observation law defines a kernel groupoid and an observational quotient, canonically identified with the law image. An experiment-internal quantity is identifiable precisely when it is constant on observational fibres. The quotient alone determines neither a metric nor a connection, causal structure, clock, physical scale, or law of motion. The framework separates exact observational equivalence from statistical distinguishability, admissibility, symmetry, and physical realization. The stabilizer of the observation law induces a faithful effective action on the quotient. Liftable symmetry is distinguished from symmetry of the law image: the former can depend on the latent presentation, whereas the observable layer is presentation-invariant once its law-space structures and declarations are fixed. On regular strata, natural modules defined by pullback from law space descend uniquely to the observational quotient. This gives representative independence and projectability for law-defined structures, without asserting that naturality selects those structures. In regular classical experiments, the Fisher tensor supplies infinitesimal distinguishability under the stated Markov-monotonicity assumptions; its radical agrees with the observational vertical space under the corresponding regularity conditions. Quantum protocols require a declared operational task to select within the family of monotone metrics. A central organizing result concerns task-preserving conversion . For a representation map and a declared family of downstream tasks, RG characterizes the exact set of compatible task outcomes on each representation fibre. Unique inference is possible exactly when this residual is a singleton. Otherwise the appropriate output is a correspondence or a typed abstention, not an arbitrary hidden representative. Pairing a representation with its tasks gives a terminal sufficient refinement. For declared operations, observational closure is expressed by the greatest operation-stable congruence contained in the observation kernel. These constructions distinguish local differential rank, global orbit separation, observational completeness, and reconstruction, and make preservation requirements explicit under composition. Second-order realizations provide concrete classification and computational tools. Under a declared block-orthogonal gauge, a covariance datum is encoded by a symmetric matrix tuple whose ordered word traces form a complete pointwise invariant, including repeated eigenvalues, vanishing couplings, and rank-deficient sectors. On simple-spectrum strata, mixed moments recover coupling magnitudes, while independent cycle holonomies complete the residual sign classification. This distinguishes hidden values omitted by a descriptor from distinctions that are genuinely observationally null . Under the different contract of covariance-preserving block-linear transformations, canonical correlations with multiplicity classify pointwise data; constant-type families additionally carry bundle and gluing information. Pointwise classification therefore does not replace the transport, relative alignment, or global data required by field-level tasks. Across rank, symmetry, and protocol changes, RG uses specialization maps when kernel inclusion permits them and correspondences otherwise. Smooth geometry is confined to its regular domain; proper-groupoid and tame settings support stratified descriptions with slices, tangent cones, and orbit-type changes. Finite-resolution statements are separated from exact model state",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Resolution Geometry of Observation Systems",
+      "url": "https://zenodo.org/records/23854358"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6b8d6ae1425b847e5c1f05ba",
+      "context_id": "4b2a58471a5fa04ace9a496e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.0833,
+      "source": "zenodo",
+      "source_context_sha256": "c872e59bb387f860854dab6b99ca12cd5eddcff2552f26d82bc8c79cf13617e3",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Flagship 56/60 Can cell identity, spatial accuracy, viability and function be assessed with traceable uncertainty that supports independent batch qualification? QUALITY METROLOGY FOR NANOROBOT-ASSISTED CELLULAR MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates traceable independent measurement chain and uncertainty-aware batch acceptance. Its scientific coupling is cell quality x microscale metrology x process reproducibility. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can cell identity, spatial accuracy, viability and function be assessed with traceable uncertainty that supports independent batch qualification? The proposed minimum demonstration is: Exchange blinded mixed-cell standard panels between two instruments and mask a rare misidentified phenotype. Strong comparators include single live-dead staining and expert microscopic counting. The central competing explanation is shared image-analysis software creating the illusion of reproducibility. The noncompensatory stop rule is: a critical channel lacks traceable calibration or sampling bias breaches tolerance. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 56 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 56/60 Can cell identity, spatial accuracy, viability and function be assessed with traceable uncertainty that supports independent batch qualification? QUALITY METROLOGY FOR NANOROBOT-ASSISTED CELLULAR MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Na",
+      "url": "https://zenodo.org/records/23870554"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "a124df8981779f1671866862",
+      "context_id": "f68022546b2279e363e60a42",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "rup",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.0417,
+      "source": "zenodo",
+      "source_context_sha256": "b793d95307aa53428cbdbb2cb37d7039c1b497bde7d50685747ab926a3da4fce",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 60/60 Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? TRUSTWORTHY AUTONOMOUS NANOROBOTIC MANUFACTURING PLATFORMS FOR REGENERATIVE MEDICINE AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates bounded autonomous manufacturing under explicit authorization and independent release. Its scientific coupling is nanorobotics x autonomous biomanufacturing x regenerative quality governance. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? The proposed minimum demonstration is: Two independent community laboratories reconstruct and release nonclinical mock devices from a shared open evidence package. Strong comparators include centralized controlled manufacture, skilled manual labs and single-vendor automation. The central competing explanation is distributed autonomy secretly dependent on centralized reagents, controls or calibration. The noncompensatory stop rule is: operator exit becomes impossible, site performance gap grows or minimum safe service is interrupted. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 60 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 60/60 Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? TRUSTWORTHY AUTONOMOUS NANOROBOTIC MANUFACTURING PLATFORMS FOR REGENERATIVE MEDICINE AT THE LIMIT This 777-page Research Design Work",
+      "url": "https://zenodo.org/records/23870929"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "4bd09ba9d6015ec928995af3",
       "context_id": "a466a730e1a1a741d4a83aa2",
       "delivery_preview_only": true,
@@ -476,6 +546,108 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Inverse Breakpoint Analysis: A Scale-Invariant Physics-Inspired Metrological Audit for Sanitary Big Data",
       "url": "https://zenodo.org/records/23865263"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d6574e547f3e1308520ea212",
+      "context_id": "e0b0f4d816bd73c1ca6a238b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9167,
+      "source": "zenodo",
+      "source_context_sha256": "98bdca09dbb5e094bce96653034b7cfabb835920e7262e9dc736fdaeccf2bc07",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Flagship 57/60 Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? FUNCTIONAL RELEASE AND INTERLABORATORY VALIDATION OF NANOROBOT-ASSISTED TISSUE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates independent physical function requalification after intersite transfer. Its scientific coupling is tissue function x release qualification x interlaboratory reproducibility. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? The proposed minimum demonstration is: Exchange masked tissue constructs across two sites and compare fixed release decisions under a blinded transport perturbation. Strong comparators include single-central-site endpoint tests and morphology-only release. The central competing explanation is unreported remote assistance or shared calibration that defeats nominal site independence. The noncompensatory stop rule is: the receiving lab cannot independently reproduce a decision or mature function underperforms the central baseline. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 57 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 57/60 Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? FUNCTIONAL RELEASE AND INTERLABORATORY VALIDATION OF NANOROBOT-ASSISTED TISSUE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition ",
+      "url": "https://zenodo.org/records/23870714"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "342405af30593710540bf476",
+      "context_id": "a7aa80312402081be1f90bc7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9167,
+      "source": "zenodo",
+      "source_context_sha256": "417c7591e57ef07f06e53188bfa9f2792080d3ade72653e0443d5177023a4e45",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 59/60 Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? LIFECYCLE AND SUSTAINABILITY ENGINEERING FOR NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates functional-unit normalized whole-system material and energy accounting. Its scientific coupling is biomanufacturing x resource efficiency x life-cycle governance. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? The proposed minimum demonstration is: Meter complete energy and consumables for a small-batch robotic and conventional tissue manufacturing comparison. Strong comparators include conventional bioprinting and centralized regulated-grade benchmark workflows. The central competing explanation is hidden reagent, compute or cold-chain displacement beyond the declared factory boundary. The noncompensatory stop rule is: material boundary is incomplete or advantage disappears per qualified functional unit. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 59 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 59/60 Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? LIFECYCLE AND SUSTAINABILITY ENGINEERING FOR NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777",
+      "url": "https://zenodo.org/records/23870861"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "65c322091131a272b66cef31",
+      "context_id": "844647c37c827f05d03d9afd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9167,
+      "source": "zenodo",
+      "source_context_sha256": "8775be9f9ca27c24bd4042927b0c157dc5891648080c15255d5f35a26b9d398a",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 58/60 Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? BIOSAFETY AND CONTAMINATION GOVERNANCE IN NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates source-resolved contamination detection, local containment and auditable recall. Its scientific coupling is biosafety x contamination control x manufacturing integrity. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? The proposed minimum demonstration is: Seed safe, coded surrogate contamination events in sealed mock-process zones; audit abstention and recall. Strong comparators include endpoint culture, manual inspection and precautionary all-batch disposal. The central competing explanation is lower contamination event count because the new system performs fewer useful tasks. The noncompensatory stop rule is: a dangerous contamination event is missed or sample ancestry cannot be recovered. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 58 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 58/60 Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? BIOSAFETY AND CONTAMINATION GOVERNANCE IN NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Des",
+      "url": "https://zenodo.org/records/23870804"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -552,39 +724,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Seismic Failure Mode Datasets for Coastal Pile-Group-Supported Bridge Bents Subjected to Scour and Corrosion",
       "url": "https://zenodo.org/records/23537022"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d082caee1fa1ed5bc0cff2ec",
-      "context_id": "eb8fc9572ba4a4b304f07ea8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "counterexample",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
-      "source": "zenodo",
-      "source_context_sha256": "a29545a4e0555373e902d9dc55a3becbcea6ee734ecb4bcf9c38ca1dd1938855",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT Chinese Title / 中文書名:移動城市循環經濟與材料永續極限 55/90 CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 55 of 90). It investigates whether a deliberately unoccupied six-module mobile-city research system can reduce relocation-related material loss through qualified reuse, automated selective disassembly and auditable remanufacturing, while preserving deployment latency and critical-service safety. The three-way research coupling is Circular Materials x Autonomous Manufacturing x Urban Sustainability. Neither a functioning autonomous city nor a human-occupied habitat is asserted. The falsifiable proposal compares a frozen circular material strategy against competent conventional manual recovery, replacement and stationary emergency infrastructure under equal material, energy, sensing, technician-hour, tool, water and transport budgets. Original intake, declined parts, work in progress, consumed adhesives, repeated repairs, rejected batches and retired material remain in the denominator. Blind faults include grade swaps, hidden fatigue, wrong material passports, replayed scale measurements, contamination, source-energy omissions and optimistic virgin-substitution credits. A proposal fails whenever a load-bearing component, utility service, waste route, safety interlock or material identity cannot be independently reconstructed. Thirty mechanism-distinct research formula plates address mass custody, qualified yield, bond separation work, fatigue, polymer rheology, sensor residuals, covariance, electrical energy, verified lifecycle inventory, carbon-allocation sensitivity, replacement counterfactuals, tail risk, second-site reproduction and noncompensatory physical release. The original contract's cyber-physical residual r_k = y_k - yhat_k(x_k,u_k) is retained as one fault-detection method; it is not treated as a law of circularity or sustainability. Every mathematical plate states units, validity assumptions, a blinded counterexample and scientific chapter interfaces. Eighty-two chapters contain 410 separately paginated research studies and 200 Research Gates, each connected to a specified material state, independent reference, fault or competing process. Thirty-three different Phoenix Answer Embryos propose research instruments, material-qualification fixtures, provenance devices, circularity accounting tools and successor-ready evidence protocols. This work proposes hypotheses and reproducibility obligations, not physical trial outcomes. Its complete PDF also contains research limits, negative-result custody and second-laboratory transfer requirements. The scope remains prospective, scaled and non-occupancy. Environmental performance requires functional-unit parity and a complete lifecycle inventory; increasing recovered mass alone does not prove lower environmental burden. Relevant method references include Ostapska et al. (10.1016/j.spc.2024.05.014), Formentini et al. (10.1016/j.jclepro.2025.145459), Attia et al. (10.1016/j.autcon.2024.105521), Mao and Cao (10.1016/j.spc.2024.12.021), Poschmann et al. (10.1002/cite.201900107) and Keating et al. (10.1126/scirobotics.aam8986). The Flagship 13 mother genealogy identifiers (10.5281/zenodo.23318840 and 10.5281/zenodo.23318839) were provided by the author and their metadata have not been independently confirmed. No external study cited here establishes this integrated F55 architecture. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXVI / YULI Nano Supercar Trilogy / Flagship 55 of 90 Edition: Research Working Edition v1.0 / 1 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT Chinese Title / 中文書名:移動城市循環經濟與材料永續極限 55/90 CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Fl",
-      "url": "https://zenodo.org/records/23843026"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -686,80 +825,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "0fc34988f56e59ecda32c0a9",
-      "context_id": "b513cf4711859188a12093b9",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "bfecaf5988d3dccaaf58684149cc400186940a8b56ae8a11b9709876f528f96e",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "This report was developed within seizmic &ndash; Scaling Social Entrepreneurship and Innovation: Zooming in on Multidisciplinary Interconnected Challenges, a Marie Skłodowska-Curie Doctoral Network funded under Horizon Europe. It synthesises insights from four literature reviews conducted within Work Package 3, Impact Investing for Social Entrepreneurship Scaling, to provide a practical framework for understanding how impact investing can support the sustainable scaling of social enterprises. The report explores impact investing as a system of relationships involving investors, social enterprises, beneficiaries, intermediaries, and policymakers. It examines how investment objectives, financial instruments, governance arrangements, impact measurement practices, and ecosystem dynamics shape the ability of social enterprises to scale their social and environmental impact while preserving mission integrity. Drawing on complementary reviews of impact investing strategies, financing instruments, mission drift, governance, and ecosystem coordination, the report analyses how different forms of impact capital support three major scaling pathways: scaling up (systemic and policy change), scaling out (replication and expansion), and scaling deep (changes in values, norms, and community practices). Particular attention is given to the opportunities and challenges associated with instruments such as crowdfunding, venture philanthropy, social impact bonds, blended finance, development finance institution investments, and social venture capital. The report highlights the importance of aligning investor expectations, enterprise missions, governance structures, and impact measurement systems throughout the investment lifecycle. It identifies key risks, including mission drift, coordination failures, reporting burdens, and scaling-related challenges, while proposing practical safeguards and governance mechanisms to foster long-term mission fidelity and impact effectiveness. Based on this synthesis, the report offers actionable recommendations for investors, social enterprises, intermediaries, and policymakers. It argues that successful impact investing depends not only on the availability of capital, but also on the design of investment relationships, ecosystem infrastructure, and measurement practices that remain aligned with social purpose over time. By translating academic evidence into practitioner-oriented guidance, the report contributes to the development of a more effective and resilient European impact investing ecosystem.",
-      "tags": [
-        "impact investing; social entrepreneurship; social enterprise scaling; mission drift; impact measurem"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Aligning Impact Capital for Social Enterprise Scaling: A Research for the European Impact Investing Ecosystem",
-      "url": "https://zenodo.org/records/23846109"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "61f8959710b83686e47f3075",
-      "context_id": "901e5f17363f2efc9c4360b7",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "ef0d002d80c5add7fc2f68557de330eee3cbe6f9c6fa757288e6452febfd7add",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "AnaTele is an open-source desktop tool for investigating ArduPilot flight logs (.tlog, .bin, .log). It infers flight phases, replays the recorded path in 3D, evaluates a versioned declarative rule pack with four explicit result states, and ranks competing failure hypotheses by capped evidence-family support minus contradictions, without assigning probabilities. Every finding links to the exact log record. It includes a fault-injection quadcopter simulator and a hash-verified shareable analysis format (.ant). Documentation: avinashistoocool.github.io/AnaTele",
-      "tags": [
-        "ArduPilot",
-        "MAVLink",
-        "drone",
-        "UAV",
-        "flight log analysis",
-        "crash investigation",
-        "telemetry"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "AnaTele: evidence-first investigation of ArduPilot flight logs",
-      "url": "https://zenodo.org/records/23843098"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "bbb341fee54bd9737380518d",
       "context_id": "7f42d919de43367b91612323",
       "delivery_preview_only": true,
@@ -791,106 +856,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "RevBench: code, scenarios, run logs and judgments for enforcing mid-task permission revocation in AI agents",
       "url": "https://zenodo.org/records/23854360"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "aa040f39c21b665a8f8d89da",
-      "context_id": "6835e7ea3fd5e38c10e206f0",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "839d85c9958931c56569e262e14a62a230039246082a116020347981ab40ad9b",
-      "source_published": "2026-11-01",
-      "source_updated": "",
-      "summary": "PyAutoLens v2026.11.1.1 What's New Breaking Changes feat: magnification latent from raw fluxes, no magzero (arc phase 7a) ( #813 ) magnification latent no longer needs magzero (its magzero argument is now optional and unused); default unchanged (off). New Features feat: expose four-panel introductory dataset plotting ( #809 ) Internal Docs: lead Start Here with natural language or Python ( #814 ) feat: al.twins model builder and posterior recovery table (LensTwin 4a) ( #811 ) Upstream Changes PyAutoFit fix: draw_randomly_via_pdf normalises sample weights ( #1751 ) fix: results index skips campaign task records; batch wait loop keeps the fit's exit status ( #1750 ) feat: campaign carbon estimate and end-of-campaign report (hpc-campaign p4) ( #1748 ) feat: campaign evidence readers, evidence-graded plan and pilot (hpc-campaign p3) ( #1747 ) feat: read zipped results in place — ZipMember, from_zip, value(kind=), Aggregator.from_index (results-library p1b) ( #1744 ) feat: results index, result states, dataset_identity.json and latest_per (results-library p1a) ( #1743 ) feat: campaign collector, digest, propose-only resubmits and retro mode (hpc-campaign p2b) ( #1742 ) feat: campaign.yaml, scheduler adapters and the GPU-partition lint (hpc-campaign p2a) ( #1741 ) feat: per-fit status record, failure record and run-state vocabulary (hpc-campaign phase 1) ( #1738 ) feat: results-library phase 0b — honest reads ( #1737 ) feat: results-library phase 0a — artefact integrity ( #1736 ) PyAutoArray feat(util.dataset): add simulate_if_needed one-line auto-simulate helper ( #670 ) fix: adaptive rectangular meshes report their true pixel centres ( #668 ) feat: exact kNN mesh magnification areas (arc phase 4b) ( #666 ) fix: exact mesh magnification areas (RectangularUniform + adaptive rectangular) with per-mesh tests (arc phase 4a) ( #664 ) chore: remove dead files/ experiment scripts and notes ( #663 ) feat: four-panel introductory imaging plot using standard styling ( #661 ) PyAutoGalaxy Docs: lead Start Here with natural language or Python ( #688 ) fix: area magnification sub-pixel area follows the generated sub-pixels ( #687 ) feat: LEGGOS area magnification on LensCalc (arc phase 6a) ( #685 ) fix: analytic Chameleon potential + jit-safe Chameleon profiles ( #683 ) fix: lmp.Gaussian potential from its analytic deflection (correct + ~100x faster) ( #681 ) feat: expose introductory imaging plots and shared contrast stretch ( #679 ) Full changelog: https://github.com/PyAutoLabs/PyAutoLens/compare/2026.10.29.1...2026.11.1.1",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "PyAutoLabs/PyAutoLens: v2026.11.1.1",
-      "url": "https://zenodo.org/records/23865668"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a86a62daeebd4373bbd507d9",
-      "context_id": "6433c81492f80b881d543f3f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.2917,
-      "source": "zenodo",
-      "source_context_sha256": "89613d988624ff5f6cc8c50be2ef33abfc6dc7ddffe1041139755feaf0354a66",
-      "source_published": "2026-11-01",
-      "source_updated": "",
-      "summary": "PyAutoGalaxy v2026.11.1.1 What's New Breaking Changes fix: analytic Chameleon potential + jit-safe Chameleon profiles ( #683 ) feat: expose introductory imaging plots and shared contrast stretch ( #679 ) Add autogalaxy.plot.subplot_imaging_dataset_intro and optional stretch to plot_array . Existing calls keep their defaults. See full details below. New Features feat: LEGGOS area magnification on LensCalc (arc phase 6a) ( #685 ) Bug Fixes fix: lmp.Gaussian potential from its analytic deflection (correct + ~100x faster) ( #681 ) Internal Docs: lead Start Here with natural language or Python ( #688 ) fix: area magnification sub-pixel area follows the generated sub-pixels ( #687 ) Upstream Changes PyAutoFit fix: draw_randomly_via_pdf normalises sample weights ( #1751 ) fix: results index skips campaign task records; batch wait loop keeps the fit's exit status ( #1750 ) feat: campaign carbon estimate and end-of-campaign report (hpc-campaign p4) ( #1748 ) feat: campaign evidence readers, evidence-graded plan and pilot (hpc-campaign p3) ( #1747 ) feat: read zipped results in place — ZipMember, from_zip, value(kind=), Aggregator.from_index (results-library p1b) ( #1744 ) feat: results index, result states, dataset_identity.json and latest_per (results-library p1a) ( #1743 ) feat: campaign collector, digest, propose-only resubmits and retro mode (hpc-campaign p2b) ( #1742 ) feat: campaign.yaml, scheduler adapters and the GPU-partition lint (hpc-campaign p2a) ( #1741 ) feat: per-fit status record, failure record and run-state vocabulary (hpc-campaign phase 1) ( #1738 ) feat: results-library phase 0b — honest reads ( #1737 ) feat: results-library phase 0a — artefact integrity ( #1736 ) PyAutoArray feat(util.dataset): add simulate_if_needed one-line auto-simulate helper ( #670 ) fix: adaptive rectangular meshes report their true pixel centres ( #668 ) feat: exact kNN mesh magnification areas (arc phase 4b) ( #666 ) fix: exact mesh magnification areas (RectangularUniform + adaptive rectangular) with per-mesh tests (arc phase 4a) ( #664 ) chore: remove dead files/ experiment scripts and notes ( #663 ) feat: four-panel introductory imaging plot using standard styling ( #661 ) Full changelog: https://github.com/PyAutoLabs/PyAutoGalaxy/compare/2026.10.29.1...2026.11.1.1",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "PyAutoLabs/PyAutoGalaxy: v2026.11.1.1",
-      "url": "https://zenodo.org/records/23865665"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a2c68e6c6860bd76270c606c",
-      "context_id": "8e4fb0e6e2a72d72fceeab58",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "calibration",
-        "control",
-        "replication"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 18.9167,
-      "source": "zenodo",
-      "source_context_sha256": "0bb16f34543e7f968aa41fb223afffb5b617d4293ec64a10cb2e55953aedafb9",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "量子輔助車房能源管理極限 38/90 Quantum-Assisted Energy Management For Autonomous Mobile Habitats At The Limit QUANTUM-ASSISTED ENERGY MANAGEMENT FOR AUTONOMOUS MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 38 of 90). It investigates whether a frozen quantum-assisted scheduling approach can coordinate photovoltaic generation, battery storage, power converters and representative habitat service loads while preserving independently measurable energy balances and a physically enforceable safe-stop authority. The three-way research coupling is Quantum Optimization x Distributed Energy x Habitat Service Loads. All proposed tests concern isolated, unoccupied low-voltage scaled apparatus, environmental chambers, hardware-in-the-loop sources and controlled load emulators. No habitable mobile building, live human occupancy, fire or grid interconnection certification is claimed. The principal falsifiable candidate is that, with identical solar forecasts, load traces, storage capacity, computational budgets, instrument calibration and safety rules, the frozen approach improves simulation-to-bench power prediction error without increasing the number of redesigns or losing any critical protected service. The strongest baselines are competent mixed-integer energy scheduling, model-predictive control and a well-tested rule-based fallback, not unrelated structural topology optimization. Six sealed solar-load-climate briefs test cloud ramps, winter demand, overheating, outages, aged storage and telemetry failures. Hidden auxiliary supply, forecast leakage, unsafe battery reserve, infeasible QUBO decoding and unmetered quantum-cloud work are legitimate ways to refute the claim. Thirty distinct mathematical research plates develop electrical and thermal energy balances, photovoltaic current-voltage behavior, storage dynamics, charge/discharge efficiency, AC power and converter losses, protected reserves, service deficit, weather-dependent demand, rolling-horizon constraints, chance and tail-risk measures, binary scheduling, QUBO and Ising mappings, QAOA evaluation, complete quantum computation time, feasible objective gaps, locked-reference Pareto hypervolume and physical simulation-to-test uncertainty. The F38 source's DeltaHV = HV(A_new) - HV(A_base) remains a secondary multiobjective research metric; its reference point and normalization must be frozen before measurement. Each mathematical plate defines units, assumptions, a specific blind falsification and related chapters. These are established conditional relations or proposed evaluation metrics, not newly discovered laws or demonstrations of quantum advantage. Eighty-two research chapters contain 410 separately paginated investigations about power custody, solar conversion, aging batteries, critical load services, control under uncertainty, quantum-classical comparisons and cross-laboratory evidence. Two hundred individually numbered Research Gates require targeted concealed faults, strong resource-matched rival explanations and hard-stop conditions. Thirty-three distinguishable Phoenix Answer Embryos propose specialized metering fixtures, load-emulation references, safety devices, computation audits and successor-ready evidence interfaces. These are prospective scientific objects, not fabricated instruments or completed research discoveries. Rejected runs, solver failures, negative experiments and correctly refused commands remain within the recorded study population. This monograph is a hypothesis-forming, non-occupancy research architecture; its methods require prospective physical validation, expert mathematical review and independent replication. Relevant scientific antecedents include Koch et al., The Quantum Optimization Benchmarking Library (DOI 10.1038/s43588-026-00991-1); Elkazaz et al., household microgrid MPC and real-time control (10.1016/j.apenergy.2020.115118); Tobajas et al., resi",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "量子輔助車房能源管理極限 38/90 Quantum-Assisted Energy Management For Autonomous Mobile Habitats At The Limit QUANTUM-ASSISTED ENERGY MANAGEMENT FOR AUTONOMOUS MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship",
-      "url": "https://zenodo.org/records/23837712"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -935,82 +900,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "32e61debafe5e8eb8d0a8b00",
-      "context_id": "3cc25c8a8f06f9499f04be01",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 13.0,
-      "source": "zenodo",
-      "source_context_sha256": "b1f65df888529e4f101e5e6a79d31ed46696105ea707f61b8a711e9a65f293df",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Phase-fixed weighted Gerchberg-Saxton (WGS) is the practical method for large arrays of optical traps, but it optimizes the hologram on an ideal model of the spatial light modulator (SLM), and the sequences that move traps interpolate between holograms that were never optimized for the frames in between. We test two hypotheses against the strongest baselines on the same scalar Fourier model. First, keeping the WGS weights but replacing the phase update by conjugate-gradient steps through the pixel-crosstalk kernel and the phase quantizer of the device (device-aware WGS) lowers the trap-intensity spread on the device. On a 10 x 10 lattice behind a crosstalk device, the relative standard deviation falls from a median of 5.21 percent for phase-fixed WGS at 30 iterations (5.21 percent at 100) to 0.205 percent, a median factor of 26 over 5 seeds (range 16 to 33) at a median 0.995 of the baseline's efficiency; the factor is 7.9 with 4-bit phase and a fill factor of 0.85 added, and 2.0 on a smaller 8 x 8 grid with flicker added and a fixed 30-iteration budget (the ratio of the means of 3 seeds); over the 5 geometries of the studio's benchmark on that device the median factor is 1.73 (0.97 to 4.69), and 2 of them meet both thresholds. A control that removes the device model from the loop gains nothing (5.14 percent), so the gain comes from the model. Second, optimizing every intermediate hologram of a moving-trap sequence with the trap phases locked to a smooth trajectory (flicker-bounded sequence) keeps the minimum transient intensity of the moving traps at a median 0.920 of their mean (range 0.915 to 0.932) over 5 seeds at 13 frames (below 0.9 at seven frames), against 0.654 (0.551 to 0.709) for linear phase interpolation. On longer moves, with the frames that keep the peak step per frame at most 0.2 Fourier units, the bound is met on 6 and 6 of 8 seeds of two lattice moves and on 5 of 6 seeds of a rearrangement case; the seeds that miss it miss it on the phase path their end phases prescribe, and at an equal number of frames on the rearrangement linear phase interpolation leads. Both results hold in a model of a simulated device and in a transient model that we define; neither is a hardware measurement. Interactive studio and reproducible pipeline (Apache-2.0): https://github.com/fsantibanezleal/CEFOP_DinHot . Interactive studio: https://dinhot.fasl-work.com .",
-      "tags": [
-        "holographic optical tweezers",
-        "weighted Gerchberg-Saxton",
-        "pixel crosstalk",
-        "phase quantization",
-        "linear phase interpolation",
-        "atom rearrangement"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Device-Aware Weighted Gerchberg-Saxton and Flicker-Bounded Phase-Continuous Sequences for Holographic Optical Trap Arrays",
-      "url": "https://zenodo.org/records/23837877"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ea05ac6f2d263a26dccdec0f",
-      "context_id": "306c2f3480a5ed11cb3b8fc0",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "calibration",
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.5833,
-      "source": "zenodo",
-      "source_context_sha256": "bc1a420aa628140055e10ede5c33924590eb5f4edef49d61e6a49d29e1802f83",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT Chinese Title / 中文書名:可變形移動居住系統長期宜居性極限 56/90 LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 56 of 90). It investigates whether a traceable unoccupied morphing habitat testbed can improve the joint coverage of measured thermal, airflow, moisture, energy and structural engineering envelopes across controlled seasonal sequences while preserving independently reconstructable module identity. Its core coupling is Human-Comfort Proxy Models x Environmental Control x Longitudinal Test Evidence. The project uses guarded coupons, scaled modules, environmental chambers, inert-water and tracer-air circuits, and hardware-in-the-loop tests; it does not observe residents or establish an occupancy certificate. The preregisterable hypothesis is that, under matched materials, energy reserves, maintenance, sensor access, control computation and test time, a frozen morphing environmental-control policy will improve complete-cohort comfort-envelope proxy coverage without worsening module-identity continuity relative to competent static-habitat and expert manual-reconfiguration baselines. The supplied selective-risk candidate R_sel(tau)=E[L(yhat,y)|c&gt;=tau] must be published with accepted coverage, so a low risk score cannot be purchased by refusing nearly every difficult climate or aging case. Hidden trials vary aging gaskets, radiant asymmetry, tracer-air pockets, power outages, sensor common-mode drift, broken connectors, incorrect material identity and ineffective physical stop contacts. Thirty mechanism-specific mathematical plates analyze heat balance, conductive and radiant transfer, operative temperature proxies, vapor mass and dew-point margins, air exchange, ventilation pressure, energy and water closure, sound, light, fatigue, reliability, stale information, uncertainty covariance, selective-risk coverage, tail excursions and second-site reconstruction. Eighty-two chapters contain 410 separately paginated investigations spanning material aging, climate control, indoor-environment proxy limitations, repair, operator authority and versioned evidence. Two hundred Research Gates formulate disconfirmable experimental questions across concealed faults, equal-resource comparisons and two-mechanism interfaces. Thirty-three distinct Phoenix Answer Embryos propose separately falsifiable future rigs, calibration artifacts, safe-stop witnesses and successor evidence packages. The volume is a prospective research design rather than a completed experimental study. An unoccupied thermal or tracer-gas rig cannot establish human comfort, healthy air, habitable water, fire and structural compliance, actual multiyear life, or a right to place people inside a mobile dwelling. The 777-page layout and enumerated items are structurally checked, but a language-duplication audit finds reused long editorial method spans; semantic uniqueness, physical modeling and all evidence inferences remain subject to deeper independent review. Relevant independently identified method references include Fanger (1973), DOI 10.1136/oem.30.4.313; de Dear and Brager (2001), DOI 10.1007/s004840100093; Brager and de Dear (1998), DOI 10.1016/S0378-7788(97)00053-4; Dang, Janssen and Roels (2024), DOI 10.1007/s12273-024-1176-8; Dang et al. (2025), DOI 10.1016/j.buildenv.2025.112867; and Broughton and Maxwell (2023), DOI 10.47120/npl.mgpg103. Standards ISO 7730:2025, ASHRAE 55-2023, and ASHRAE 62.1/62.2-2025 provide bounded normative context, not F56 verification. Author-provided Flagship 13 ancestor DOIs 10.5281/zenodo.23318840 and 10.5281/zenodo.23318839 remain pending independent resolver metadata confirmation. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXVI / YULI Nano Supercar Trilogy / Flagship 56 of 90 Edition: Researc",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT Chinese Title / 中文書名:可變形移動居住系統長期宜居性極限 56/90 LONG-TERM HABITABILITY OF MORPHING AUTONOMOUS MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institut",
-      "url": "https://zenodo.org/records/23842738"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "34cfe9dcf13d864c6c8a0e5c",
       "context_id": "6ee62f6da1fcc421551d2b4e",
       "delivery_preview_only": true,
@@ -1043,83 +932,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "50/60 MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT MISSION RELIABILITY IN AUTONOMOUS NANOROBOTIC REGENERATIVE MANUFACTURING AT THE LIMIT is a 777-page English-language Research Design Working Edition in the STARLI Micro/Nanorobot Fabrication and Regenerative ",
       "url": "https://zenodo.org/records/23865219"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "8a78f2a2da51b1b945369c41",
-      "context_id": "fe4cf43682f7f3299f5843e3",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.125,
-      "source": "zenodo",
-      "source_context_sha256": "da0eef17508dda9d5450e2f17b84abf7e0cee9e91411ddbf6469125b6900b3a2",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Online sensor telemetry feeds the digital-twin, forecasting, control, and maintenance tools of instrumented water infrastructure. Probes deployed in these assets silently accumulate drift, flatlines, volatility bursts, and outages that existing pipelines often miss, because detectors and imputers are evaluated separately and under inflated synthetic metrics, and decay is treated as isolated events. This work proposes HARDIO, a Health-Aware Reliable Detection-Imputation Orchestrator, an operational data-quality framework that pairs a duration-weighted sensor decay scorecard with a per-variable, chained detector-imputer benchmark. The assignment is selected by a four-pillar composite score (operational 35%, health coverage 30%, reconstruction 20%, calibration 15%) that scores the signal an operator actually receives after detection and imputation. HARDIO processes sensor installations independently, enabling parallel execution and avoiding the need to evaluate all plant channels jointly. HARDIO is validated on the Cheles wastewater treatment plant (WWTP), a real 1,177 population-equivalent (PE) plant, over 432 days, 19 channels, and eight sensor installations. No single detector-imputer pair is best for every channel, so detection and chained imputation distribute across SAITS, KNN Residual, and LSTM-AE. Chained quality is reported for all 19 channels using 1-NRMSE; relative R&sup2; is interpreted on the 16 channels where the signal variance makes it meaningful, and 12 of these exceed R&sup2;=0.90. On the held-out final 20% of the record (12 channels in five installations), HARDIO achieves a mean chained 1-NRMSE of 0.976, within 0.0035 of a per-channel oracle, and outperforms the uniform SAITS pipeline (p=0.003). Its reconstruction performance is close to that of the strongest uniform pipelines, without a statistically significant improvement over them, and slightly below that of a single detector-imputer pair selected on validation data (0.978). The released artefact exposes the model map, confidence labels, margins, and production masks for decision support.",
-      "tags": [
-        "Sensor Data Quality",
-        "Anomaly Detection",
-        "Time Series Imputation",
-        "Sensor Degradation",
-        "Wastewater Treatment Plant",
-        "Predictive Maintenance"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Experimental Artefacts for HARDIO: A Health-Aware Reliable Detection-Imputation Orchestrator for Operational Data Quality in Instrumented Water Infrastructure",
-      "url": "https://zenodo.org/records/23832539"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "59c812c277c6d6c1fef8bc8b",
-      "context_id": "b929434177e496ef948df2cb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "replication",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.9583,
-      "source": "zenodo",
-      "source_context_sha256": "723cfc9b184e9ec24addd5928f2bb26d9bbf520fdb85c435603d577f3279564c",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Replication package for the article \"Compiling is not correct: An execution-based study of small, locally deployable language models generating IEC 61131-3 Structured Text\" (Raszka, Grycz, Vilamov&aacute;; submitted to Empirical Software Engineering). It contains the OSCAT-Exec benchmark (197 tasks derived from the OSCAT BASIC library with prompts, generated test inputs and reference outputs), the RuSTy-based differential-testing harness, all responses and evaluations of eleven open-weight LLMs (0.5&ndash;14.8B parameters, GGUF Q4_K_M, greedy decoding) including compiler-feedback repair and dialect-normalisation re-evaluation, CPU throughput measurements, mutation analysis of the oracle, specification-adequacy and root-cause annotations, and scripts that reproduce every table and figure. See README_replication.md for instructions and tool versions.",
-      "tags": [
-        "large language models; code generation; PLC; IEC 61131-3; Structured Text; differential testing; ben"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "OSCAT-Exec: Execution-based benchmark, model outputs and analysis code for evaluating small local LLMs generating IEC 61131-3 Structured Text",
-      "url": "https://zenodo.org/records/23832921"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1179,8 +991,44 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a8875b77f9f5ceb806f03229",
-      "context_id": "db2727108bdcb0ed9806d86c",
+      "candidate_id": "a124df8981779f1671866862",
+      "context_id": "a5b26b45e65afaf0fde00763",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control",
+        "rup",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.5,
+      "source": "zenodo",
+      "source_context_sha256": "b9cc57e0caf308b7d1a6388de2a62a49e8f999653b126ecb88b72ed310f71bd4",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 60/60 Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? TRUSTWORTHY AUTONOMOUS NANOROBOTIC MANUFACTURING PLATFORMS FOR REGENERATIVE MEDICINE AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates bounded autonomous manufacturing under explicit authorization and independent release. Its scientific coupling is nanorobotics x autonomous biomanufacturing x regenerative quality governance. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? The proposed minimum demonstration is: Two independent community laboratories reconstruct and release nonclinical mock devices from a shared open evidence package. Strong comparators include centralized controlled manufacture, skilled manual labs and single-vendor automation. The central competing explanation is distributed autonomy secretly dependent on centralized reagents, controls or calibration. The noncompensatory stop rule is: operator exit becomes impossible, site performance gap grows or minimum safe service is interrupted. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 60 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 60/60 Can distributed research stations preserve qualified biosafe work and genuine operator exit when suppliers, control versions or core services disappear? TRUSTWORTHY AUTONOMOUS NANOROBOTIC MANUFACTURING PLATFORMS FOR REGENERATIVE MEDICINE AT THE LIMIT This 777-page Research Design Work",
+      "url": "https://zenodo.org/records/23870929"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "8f303dfb131da3b6a57b04cd",
+      "context_id": "66a747039c0f08108e334d7d",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1201,14 +1049,14 @@
       "schema": "janus.beetle.repo_memory_item.v2",
       "score": 8.75,
       "source": "zenodo",
-      "source_context_sha256": "1b5591800a9213a69d25dff0efe2b5b464a72c68400b1423fdd12b2ceaaea26b",
-      "source_published": "2026-10-30",
+      "source_context_sha256": "f02fbdde17d07643c24d8c91989acacdb0c2989f5c73e1532a04e6500e065e3c",
+      "source_published": "2026-06-01",
       "source_updated": "",
-      "summary": "This is the replication package of the paper \"Concurrency control for Stateful Policy Languages\" submitted to ITASEC 2027.",
+      "summary": "Replication data for: Cho, F. H. T., Rhodes, J. R., Maron, M., Lunney, D., Iftekhar, M. S., McIlwee, A., &amp; Williams, B. A. (forthcoming).&nbsp; Leakage effects of establishing protected areas in multi-use forests . This dataset contains the pre-computed data files needed to reproduce all figures and summary tables in the paper. The study estimates the causal effect of New South Wales (NSW) state forest revocations on deforestation in adjacent areas using a Before&ndash;After Control&ndash;Impact (BACI) design with propensity-score matching. Two leakage channels are estimated: (1) leakage to private land within 10 km of a revoked state forest, and (2) leakage to neighbouring state forests within 10 km. Contents: processed_data_for_plotting.RData &nbsp;&mdash; all model estimates, Average Marginal Effects (AME), matched pair summaries, and spatial objects required to reproduce Figures 1&ndash;6 (103 MB) state_forests_revoked_update.gpkg &nbsp;&mdash; NSW state forest polygons with revocation year and woody vegetation attributes focal_sf_year.gpkg &nbsp;&mdash; focal state forest polygons aggregated by revocation year nsw_grid_points.parquet &nbsp;&mdash; NSW 10 km regular grid cell centroids (712,714 cells; 1.2 GB) matching_data/parquet/ &nbsp;&mdash; pixel-level covariate and deforestation panel for all NSW grid cells, split across 1,000 Parquet files The R code for full replication is available at Github . To reproduce all figures, download the data files, place them in the&nbsp; data/ &nbsp;subdirectory of the code repository, and run&nbsp; scripts/05_replicate_figures.R with R &ge; 4.2.",
       "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Concurrency Control for Stateful Policy Languages: Replication Package",
-      "url": "https://zenodo.org/records/23820270"
+      "title": "Replication data: Leakage effects of establishing protected areas in multi-use forests in NSW, Australia",
+      "url": "https://zenodo.org/records/20483818"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1251,81 +1099,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "DinHot: A Holographic Optical Trap Studio Comparing Hologram Methods on a Device Model",
       "url": "https://zenodo.org/records/23850386"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c99a89abb93478b019ecd38a",
-      "context_id": "4f5504a33cb9f606639b6211",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "bf564734a9522c59114a21aaa4c30dd31ed74c9ed767f094ebc91f4eabbf5e2a",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "A phase-only spatial light modulator in the pupil of a microscope objective can form hundreds to thousands of optical traps at once, but only if the phase pattern it displays is computed well: the pattern fixes how much light reaches the traps, how equal the traps are, where stray light goes, how the pattern survives a real device, and how fast it can be recomputed when traps move. DinHot is an open studio that runs 24 methods (19 published ones and 5 proposed here) on the same task, with the same seeds, metrics and device model, in Python as the reference and in a TypeScript port that runs live in a browser. We describe the optical and device model, the methods with the measured acceptance of each, 14 cases from a 3 x 3 array to a disordered 819-trap array and shaped potentials, the benchmark protocol, two learned models, and the 5 proposed methods, three of which meet their acceptance criteria on their acceptance tasks, each within a scope that the benchmark or the scope measurements narrow (a device-aware weighted Gerchberg-Saxton update, a flicker-bounded phase-continuous sequence and an efficiency-uniformity front), one of which meets a narrowed criterion (an aberration-robust hologram) and one of which is refuted by measurement (a learned warm start for phase-fixed weighted GS). A network trained on three-plane volumes beats its baseline at equal wall-clock on all 162 held-out volumes (median accuracy ratio 1.140), whereas its two-dimensional counterpart ties with Gerchberg-Saxton (ratio 0.9994). The model is a scalar Fourier model of a simulated device, not a calibrated instrument. Interactive studio and reproducible pipeline (Apache-2.0): https://github.com/fsantibanezleal/CEFOP_DinHot . Interactive studio: https://dinhot.fasl-work.com .",
-      "tags": [
-        "holographic optical tweezers",
-        "spatial light modulator",
-        "weighted Gerchberg-Saxton",
-        "pixel crosstalk",
-        "neutral-atom arrays",
-        "hologram benchmarking",
-        "learned holography",
-        "reproducibility"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "DinHot: A Holographic Optical Trap Studio Comparing Hologram Methods on a Device Model",
-      "url": "https://zenodo.org/records/23837873"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "f51c60aea0041b5917e2edab",
-      "context_id": "15df0a7ec89db8b49e57c821",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.7083,
-      "source": "zenodo",
-      "source_context_sha256": "b6d66df8c4b2f7df9bb350cb15558db31afd16ce0a6e7e30ee8865534637aa7c",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Chinese Title / 中文書名:量子&mdash;經典混合車房數位孿生極限 39/90 HYBRID QUANTUM-CLASSICAL DIGITAL TWINS FOR MOBILE HABITATS AT THE LIMIT HYBRID QUANTUM-CLASSICAL DIGITAL TWINS FOR MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 39 of 90). It investigates whether an instrumented, unoccupied scaled mobile-habitat testbed can support a jointly reconstructable digital twin of structural configuration, mechanical load transfer, electric-energy state and interior thermal or air conditions, rather than merely displaying several plausible simulations. Its core coupling is Digital Twins x Hybrid Computing x Structural-State Prediction. No inhabited mobile home, certified building, operating vehicle or demonstrated quantum advantage is asserted. The author-supplied falsifiable seed asks whether a frozen hybrid pipeline can reduce design energy without worsening its declared objective gap under equal material, electricity, computation, sensing, time and operator budgets. For a scientifically valid twin, this book additionally requires held-out physical forecast error, interval coverage, event identity and correct abstention under missing evidence. Classical physics-based state estimation, energy models and competitive ordinary optimizers are the primary predecessors; finite-element topology design alone is not a sufficient digital-twin baseline. Blinded interventions include a hidden missing load path, shifted clock, stale authenticated telemetry, shared sensor drift, thermal model mismatch, unlogged auxiliary power and material-batch substitution. A system loses its claim whenever digital agreement conceals unsafe physical truth. Thirty different mathematical plates address dynamical state transitions, structural equilibrium, network consensus, observability, Bayesian updating, Kalman covariance, innovation checks, physical time age, multirate interpolation, thermal and air balances, power closure, battery SOC, actuator work, mechanical hysteresis, correlated uncertainty, safe-set conjunction, physical stopping, constrained hybrid solvers and full-denominator qualification. Each plate identifies the equation's physical meaning, units, assumptions, distinct concealed disproof, rival account and chapter correspondence. These expressions are established methods or bounded research candidates, not thirty newly discovered natural laws. The volume contains 82 chapters and 410 independently paginated investigations organized around structural chronology, indoor environment and power, metrological state inference, communication and authority, fault challenges, quantum-classical method comparison and second-laboratory succession. Two hundred Research Gates develop 200 different experiment questions and explanatory packets. Thirty-three Phoenix Answer Embryos propose distinct prospective instruments such as an external event chronometer, latch truth bench, humidity sorption chamber, QUBO feasibility inspector and physically witnessed stop oscilloscope. All are proposals for future validation, not built, tested or certified systems. Scientific antecedents include the quantum benchmarking framework DOI 10.1038/s43588-026-00991-1, building digital-twin reviews DOI 10.1016/j.aei.2023.102346 and 10.3390/buildings12112029, a 2026 integrated building-energy/structure review DOI 10.3390/engproc2026147012, and operational building-energy digital-twin research DOI 10.1016/j.jobe.2026.115705. These works document relevant prior methods, not experiments on F39's proposed complete architecture. The author-supplied Flagship 13 ancestry references are DOI 10.5281/zenodo.23318840 and DOI 10.5281/zenodo.23318839 (record metadata has not been independently confirmed for this edition). The manuscript is hypothesis-forming, unoccupied and scaled. Correct refusal is a valid scientific result. Structural and PDF checks were completed, while specialist mathematical review and a com",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Chinese Title / 中文書名:量子—經典混合車房數位孿生極限 39/90 HYBRID QUANTUM-CLASSICAL DIGITAL TWINS FOR MOBILE HABITATS AT THE LIMIT HYBRID QUANTUM-CLASSICAL DIGITAL TWINS FOR MOBILE HABITATS AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI",
-      "url": "https://zenodo.org/records/23837796"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1406,6 +1179,41 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "d6574e547f3e1308520ea212",
+      "context_id": "be3eed26c8012f5d1881fa3f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "calibration",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.4167,
+      "source": "zenodo",
+      "source_context_sha256": "8758ec8d6b207f558b4fd6013200373f3a3c90820c52b4149c49f582cbeee915",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Flagship 57/60 Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? FUNCTIONAL RELEASE AND INTERLABORATORY VALIDATION OF NANOROBOT-ASSISTED TISSUE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates independent physical function requalification after intersite transfer. Its scientific coupling is tissue function x release qualification x interlaboratory reproducibility. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? The proposed minimum demonstration is: Exchange masked tissue constructs across two sites and compare fixed release decisions under a blinded transport perturbation. Strong comparators include single-central-site endpoint tests and morphology-only release. The central competing explanation is unreported remote assistance or shared calibration that defeats nominal site independence. The noncompensatory stop rule is: the receiving lab cannot independently reproduce a decision or mature function underperforms the central baseline. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 57 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 57/60 Can a second laboratory reconstruct both functional acceptance and refusal using frozen criteria without original-author assistance? FUNCTIONAL RELEASE AND INTERLABORATORY VALIDATION OF NANOROBOT-ASSISTED TISSUE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition ",
+      "url": "https://zenodo.org/records/23870714"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "29bdd0ad6aeee01f6594e6af",
       "context_id": "e3892f7a8c59f9bdfd5fa03a",
       "delivery_preview_only": true,
@@ -1446,6 +1254,107 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Replication code and output for \"The Unit-Truncated Power Bilal Distribution: Structural Properties, Shape Analysis, and Statistical Inference",
       "url": "https://zenodo.org/records/23853700"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "342405af30593710540bf476",
+      "context_id": "6d8a7d847835975bd3cc9625",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.0,
+      "source": "zenodo",
+      "source_context_sha256": "6120d9ce2f075d8a1c0fe8efdc110c84da3ac0c27ea0d6566eef3b91ada3c7e7",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 59/60 Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? LIFECYCLE AND SUSTAINABILITY ENGINEERING FOR NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates functional-unit normalized whole-system material and energy accounting. Its scientific coupling is biomanufacturing x resource efficiency x life-cycle governance. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? The proposed minimum demonstration is: Meter complete energy and consumables for a small-batch robotic and conventional tissue manufacturing comparison. Strong comparators include conventional bioprinting and centralized regulated-grade benchmark workflows. The central competing explanation is hidden reagent, compute or cold-chain displacement beyond the declared factory boundary. The noncompensatory stop rule is: material boundary is incomplete or advantage disappears per qualified functional unit. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 59 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 59/60 Does microrobotic manufacture reduce cradle-to-disposal resources per independently function-qualified tissue unit rather than shifting burdens to computing or consumables? LIFECYCLE AND SUSTAINABILITY ENGINEERING FOR NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777",
+      "url": "https://zenodo.org/records/23870861"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "65c322091131a272b66cef31",
+      "context_id": "4df16458ba77aa9047b3b3c7",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "control",
+        "sat",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.9167,
+      "source": "zenodo",
+      "source_context_sha256": "60fa0651264c4b6f3cb55109e0b96e869c1ad637805e578a11d84a4ad28fd1d3",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Flagship 58/60 Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? BIOSAFETY AND CONTAMINATION GOVERNANCE IN NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Design Working Edition in the STARLI Nano Regenerative Biomanufacturing series investigates source-resolved contamination detection, local containment and auditable recall. Its scientific coupling is biosafety x contamination control x manufacturing integrity. The evidence perimeter is prospective and nonclinical, using closed in-vitro systems, organ-on-chip platforms or authorized ex-vivo material; neither clinical efficacy nor autonomous human intervention is claimed. The falsifiable question is: Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? The proposed minimum demonstration is: Seed safe, coded surrogate contamination events in sealed mock-process zones; audit abstention and recall. Strong comparators include endpoint culture, manual inspection and precautionary all-batch disposal. The central competing explanation is lower contamination event count because the new system performs fewer useful tasks. The noncompensatory stop rule is: a dangerous contamination event is missed or sample ancestry cannot be recovered. Every eligible, stopped, refused and unsuccessful experiment belongs to the full denominator. Thirty conditional mathematical plates specify different analytic roles, measurements, units and blind failure tests. Eighty-two chapters contain 410 individual research investigations. Two hundred Research Gates organize twenty causal challenge families across ten primary physical observables, each with an independently read companion, concealed intervention, matched comparator, explicit rival and refusal gate. Thirty-three Phoenix Answer Embryos propose future experimental and evidence instruments. All are experimental plans rather than executed observations. The source Atlas and methodology ancestors provide reference architecture but do not establish the new integrated candidate. Source-supplied ancestry includes 10.5281/zenodo.23046134 and 10.5281/zenodo.23486020; source-associated external DOI candidates must be bibliographically checked before citation. Research Gate lexical differentiation is not proof of scientific originality. The PDF is English-only and a separate QA record states outstanding independent physics, biology and DOI verification. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Nano Regenerative Biomanufacturing / Flagship 58 of 60 Edition: Research Design Working Edition v1.2 / 2 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Flagship 58/60 Can a closed microrobotic process detect and contain rare microbial, cellular and material carryover without untraceable exposures or false safety clearance? BIOSAFETY AND CONTAMINATION GOVERNANCE IN NANOROBOT-ASSISTED REGENERATIVE MANUFACTURING AT THE LIMIT This 777-page Research Des",
+      "url": "https://zenodo.org/records/23870804"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "00aacda262d8bd84c3e2db61",
+      "context_id": "a7eeb515f811cba6f7e6aebb",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.9167,
+      "source": "zenodo",
+      "source_context_sha256": "b0690badf4a0d0fa71c9df3c32aede7003ba77f09e6563dbaf757dc15bef685d",
+      "source_published": "2026-11-02",
+      "source_updated": "",
+      "summary": "Overview Many continuous treatments are published only in classes, for example broadband connections per 1,000 households in the FCC Form 477 tract files. The paper studies difference-in-differences when the dose is observed only up to an interval. It characterizes what midpoint and two-way fixed effects regressions recover, derives sharp identified sets for the dose&ndash;response function under Lipschitz and monotonicity restrictions, and provides uniformly valid moment-inequality confidence sets. This package contains the code and derived data needed to reproduce the simulations, the empirical applications, and all tables and figures. Contents Identification and inference. Sharp identified sets via chain inequalities (Theorem 5.3, Corollary 5.4); sharp sets with overlapping intervals over admissible orderings (Proposition 5.7); GMS confidence sets with Gaussian and wild cluster bootstrap critical values (Sections 6.4, 6.8 and 7.6); decomposition of staggered TWFE regressions with interval doses (Proposition 4.6). Monte Carlo simulations. Factorial design with 1,000 replications per cell (Section 7, Tables 3&ndash;4); sharp versus outer confidence sets; calibration of the Lipschitz constant; few clusters; power; comparison with midpoint, dichotomized and bin-mean estimators (Supplementary Appendix A6&ndash;A7). Applications. County dose intervals built from FCC tract classes; household unbanked status from the FDIC National Survey of Unbanked and Underbanked Households; bank branches by county from the FDIC Summary of Deposits; pre-period placebo tests and event studies; tract-level design exercise (Section 8, Supplementary Appendix A8). Figures. Illustration of identified sets (Figure 1) and event-study contrasts (Figure 3). Derived data included county_dose.csv : county dose intervals, December 2008 and December 2016, from FCC Form 477 tract classes (3,138 counties). sod_county_1999_2019.csv : bank branches and deposits by county and year, 1999&ndash;2019, aggregated from the FDIC Summary of Deposits. JSON files with the simulation and estimation results reported in the paper. Source data (not redistributed; public) FCC Form 477, residential fixed connections per 1,000 households by census tract: https://www.fcc.gov/general/broadband-deployment-data-fcc-form-477 FDIC National Survey of Unbanked and Underbanked Households, public-use multi-year file: https://www.fdic.gov/household-survey FDIC Summary of Deposits, BankFind Suite API: https://api.fdic.gov/banks/sod (retrieved 30 October 2026) How to reproduce Requires Python 3 with numpy, pandas, scipy, matplotlib, xlrd and statsmodels (see requirements.txt ). The README maps each script to the tables and figures it produces and gives the order of execution. Random seeds are fixed in each script.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for \"Nonparametric Bounds for Difference-in-Differences with an Interval-Observed Continuous Treatment\"",
+      "url": "https://zenodo.org/records/23871053"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1566,85 +1475,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "989cdb5b5bdf55072fc19d76",
-      "context_id": "199cd09f55ee653d75824316",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "calibration"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.8333,
-      "source": "zenodo",
-      "source_context_sha256": "3cc4c71365fa158fb9c910b10ee7084b52b082c761ceb91d6573127e6f13a070",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Where HCR multi-feature auto/cross-correlation helps, what it is compared with and how to read it: forecast validation and correction by predicted moments, adaptive Student-t normalization with its parameter sequences as contexts, bearings, rivers and finance, with frozen tests and standard benchmarks.",
-      "tags": [
-        "hierarchical correlation reconstruction; probabilistic forecast calibration; probability integral tr"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Applications of HCR multi-feature auto- and cross-correlation analysis",
-      "url": "https://zenodo.org/records/23832060"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "64fbbfa9a100d5e1575200a6",
-      "context_id": "efee651d91bd509925f9635d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "control",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "zenodo",
-      "source_context_sha256": "137fe8d29b3185cdad46f28fb3160052599ecdb77cfb7dfca29faba1cad36431",
-      "source_published": "2026-10-31",
-      "source_updated": "",
-      "summary": "Unrefereed research candidate. A wide binary star takes thousands of years to complete one orbit, so its eccentricity usually cannot be found by following the orbit. Astronomers instead use the angle &Gamma; between the pair's projected separation and projected relative velocity, whose distribution over many binaries depends on the population's eccentricity law. Hwang, Ting and Zakamska (MNRAS 2022, Appendix B) asked whether this angle distribution determines the eccentricity distribution uniquely. In the ideal model (random orbital phase, uniformly random 3D orientation, error-free projections) this package derives the likelihood of one angle in closed form, p(&gamma;|e) = [acosh(1/e) &minus; 1{|cos &gamma;| &gt; e} acosh(|cos &gamma;|/e)] / (&pi; sin&sup2;&gamma;), and shows that its mixtures are classical Abel transforms. This gives an explicit inverse for every eccentricity law, including atoms: different eccentricity laws never give the same angle law. The inverse is continuous in the weak topology but discontinuous in total variation, so fine structure can be nearly invisible. Moments need no inversion: E&radic;(1&minus;e&sup2;) = (&pi;/2) E sin&sup3;&Gamma; and E e&sup2; = 1/2 + E cos 2&Gamma; &minus; (1/2) E cos 4&Gamma;; these are the only symmetric unbiased single-angle observables for their targets and give near-efficient power-law index estimators. Two exact selection results bear on Gaia samples: thermal populations keep a uniform angle law under selections that ignore sky position angles, and binning by projected separation preserves the model under a log-uniform semimajor-axis law. The archive contains the 21-page manuscript (PDF and LaTeX source) with complete proofs, a Python library (likelihoods, observables, estimators, Kepler simulators), the full validation script with recorded results and figures, semantic negative controls, fast CI checks, the bounded novelty report and SHA-256 sums. All data are synthetic; no observational catalogue is analysed. Assurance boundary: written proofs; floating-point numerical checks and Kepler simulations; producer-side replay in normal and optimised modes; internal AI-assisted review (five roles, adversarial correctness review, proof audit and re-review). This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.",
-      "tags": [
-        "wide binaries",
-        "orbital eccentricity",
-        "Gaia",
-        "projected angle",
-        "Abel transform",
-        "identifiability",
-        "inverse problems",
-        "Kepler orbits",
-        "eccentricity distribution",
-        "selection effects"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "An exact projected-angle likelihood and population inversion for wide-binary eccentricities",
-      "url": "https://zenodo.org/records/23838665"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "16d3a92d8ce4eb4bedd76e69",
       "context_id": "3d923f4aee64d0ca1d790c17",
       "delivery_preview_only": true,
@@ -1725,8 +1555,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "f87de949491f87a7a21c75eb",
-      "context_id": "1748f860a2262c48c79b9b93",
+      "candidate_id": "af867c9b75334dc10c6560d6",
+      "context_id": "41f140f550507c3f92b06aad",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1740,43 +1570,28 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "calibration",
-        "control"
+        "replication",
+        "sat"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.75,
+      "score": 5.5833,
       "source": "zenodo",
-      "source_context_sha256": "2d02c169d1290f8b6548cf7f546755892082ea12adf59f5db5a910f97c4ce455",
+      "source_context_sha256": "2c04b934d7caa5fcfdb920bbd598cadbd2f150f9b2cc26e25a4dd1576500d15d",
       "source_published": "2026-10-31",
       "source_updated": "",
-      "summary": "Data and code for Mapping bioimage-analysis software adoption in microscopy. The registry contains 33 entries: 23 analysis packages, six microscope-control programs, MATLAB and Jupyter notebooks as references, Adobe Photoshop for figure preparation and NIH Image for historical counts. The 29-package aggregate combines the 23 analysis packages with six microscope-control programs. References, Photoshop and NIH Image are excluded. After about 2000, many \"NIH Image\" mentions refer to ImageJ. The deep-learning series uses 13 core analysis packages. Jupyter notebooks retain their aliases, notebook category and core scope. The original 14-package calibration sample remains frozen, and the three new-package precision samples are stored separately. The archive holds processed counts, annotator-labelled validation sets, identifier-only sampling frames, configuration, code and provenance. Data sources: Europe PMC (search API and open-access full text; metadata derived from MEDLINE/PubMed carries the NLM notice that the data may not be current and that NLM does not endorse this work; full text was mined and never redistributed), OpenAlex (CC0), the GitHub REST API (public repository counts), pypistats.org (30-day PyPI download totals from the Python Software Foundation's PyPI BigQuery dataset, CC BY 4.0), the image.sc forum (topic counts only, no posts), Crossref and ORCID (bibliographic metadata, CC0), and MeSH headings from MEDLINE records (2026 MeSH vocabulary, retrieved 15 October 2026). The archive contains no article titles, abstracts or full text. Article text can be rebuilt from identifiers with release/refetch_identifiers.py through Europe PMC. The data are licensed under CC BY 4.0 (LICENSE-DATA) and the code under MIT (LICENSE); this record carries CC BY 4.0 for the data and states the MIT licence for the code. Funding named without a grant identifier: EMBO Installation Grant EMBO-2020-IG-4734; Chan Zuckerberg Initiative Imaging Scientist award (2020-225445); la Caixa Foundation CaixaResearch Health 2025 award (VirusAwareScopes, HR25-00453); Sigrid Juselius Foundation; Cancer Society of Finland; Solutions for Health strategic funding to Åbo Akademi University; Finnish Cancer Institute (K. Albin Johansson Professorship); the Kavli Foundation co-funds the EOSS Cycle 6 award. MEDLINE/PubMed and MeSH data: Courtesy of the U.S. National Library of Medicine; NLM data may not be current, and NLM does not endorse this work.",
-      "tags": [
-        "bioimage analysis",
-        "microscopy",
-        "scientific software",
-        "research software sustainability",
-        "bibliometrics",
-        "software citation",
-        "deep learning",
-        "ImageJ/Fiji",
-        "QuPath",
-        "CellProfiler",
-        "napari",
-        "Cellpose",
-        "StarDist",
-        "ilastik"
-      ],
+      "summary": "This archive contains the replication package for the article \"Are colour-coded economies empirically distinct? A cross-country test of economic specialisation\" (submitted to Structural Change and Economic Dynamics). It includes four Google Colab notebooks that reproduce all results, a fifth notebook that assembles the package, the HS 2017 product lists used to define the trade colours (UNCTADstat classifications), the activity-to-colour concordance files, all processed data, the supplementary workbook (Supplementary_Data.xlsx) and a data dictionary. Employment specialisation is computed from ILOSTAT (ISIC Rev. 4 divisions) and export specialisation from CEPII BACI (HS 2017, version 202601) for 2017&ndash;2024. Raw source files are not redistributed; the notebooks download them from the providers. Code is released under the MIT licence; derived data and product lists under CC BY 4.0.",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "mapping-bioimage-software: data and code for Mapping bioimage-analysis software adoption in microscopy",
-      "url": "https://zenodo.org/records/23844634"
+      "title": "Replication package: Are colour-coded economies empirically distinct? A cross-country test of economic specialisation",
+      "url": "https://zenodo.org/records/23847236"
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d082caee1fa1ed5bc0cff2ec",
-      "context_id": "45b3075adf2bb02024f7daf2",
+      "candidate_id": "0e5acafb9a9e2de6983f6fb2",
+      "context_id": "d567482bc21bddffe1e8bd96",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
+      "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
       "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -1788,21 +1603,167 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "counterexample",
+        "benchmark",
         "sat"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
+      "score": 5.5,
       "source": "zenodo",
-      "source_context_sha256": "185bdd7cc85252c8b6ee5dba176979bc1e2d6e562393d0be98fd0fc4d1287745",
-      "source_published": "2026-10-31",
+      "source_context_sha256": "ae7ef41e117c6ebd90aa1546d8152d45d45ba662ff3f79fb19c82e7f3f269b77",
+      "source_published": "2026-11-01",
       "source_updated": "",
-      "summary": "CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT Chinese Title / 中文書名:移動城市循環經濟與材料永續極限 55/90 CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Flagship 55 of 90). It investigates whether a deliberately unoccupied six-module mobile-city research system can reduce relocation-related material loss through qualified reuse, automated selective disassembly and auditable remanufacturing, while preserving deployment latency and critical-service safety. The three-way research coupling is Circular Materials x Autonomous Manufacturing x Urban Sustainability. Neither a functioning autonomous city nor a human-occupied habitat is asserted. The falsifiable proposal compares a frozen circular material strategy against competent conventional manual recovery, replacement and stationary emergency infrastructure under equal material, energy, sensing, technician-hour, tool, water and transport budgets. Original intake, declined parts, work in progress, consumed adhesives, repeated repairs, rejected batches and retired material remain in the denominator. Blind faults include grade swaps, hidden fatigue, wrong material passports, replayed scale measurements, contamination, source-energy omissions and optimistic virgin-substitution credits. A proposal fails whenever a load-bearing component, utility service, waste route, safety interlock or material identity cannot be independently reconstructed. Thirty mechanism-distinct research formula plates address mass custody, qualified yield, bond separation work, fatigue, polymer rheology, sensor residuals, covariance, electrical energy, verified lifecycle inventory, carbon-allocation sensitivity, replacement counterfactuals, tail risk, second-site reproduction and noncompensatory physical release. The original contract's cyber-physical residual r_k = y_k - yhat_k(x_k,u_k) is retained as one fault-detection method; it is not treated as a law of circularity or sustainability. Every mathematical plate states units, validity assumptions, a blinded counterexample and scientific chapter interfaces. Eighty-two chapters contain 410 separately paginated research studies and 200 Research Gates, each connected to a specified material state, independent reference, fault or competing process. Thirty-three different Phoenix Answer Embryos propose research instruments, material-qualification fixtures, provenance devices, circularity accounting tools and successor-ready evidence protocols. This work proposes hypotheses and reproducibility obligations, not physical trial outcomes. Its complete PDF also contains research limits, negative-result custody and second-laboratory transfer requirements. The scope remains prospective, scaled and non-occupancy. Environmental performance requires functional-unit parity and a complete lifecycle inventory; increasing recovered mass alone does not prove lower environmental burden. Relevant method references include Ostapska et al. (10.1016/j.spc.2024.05.014), Formentini et al. (10.1016/j.jclepro.2025.145459), Attia et al. (10.1016/j.autcon.2024.105521), Mao and Cao (10.1016/j.spc.2024.12.021), Poschmann et al. (10.1002/cite.201900107) and Keating et al. (10.1126/scirobotics.aam8986). The Flagship 13 mother genealogy identifiers (10.5281/zenodo.23318840 and 10.5281/zenodo.23318839) were provided by the author and their metadata have not been independently confirmed. No external study cited here establishes this integrated F55 architecture. Author: Feng Cheng-en (33) x STARLI / Xingli Series: STARLI Research Institute XXXVI / YULI Nano Supercar Trilogy / Flagship 55 of 90 Edition: Research Working Edition v1.0 / 1 November 2026 Join the STARLI Research Community Explore more than 100 interdisciplinary research themes and follow the evolving STARLI Research Gate community: https://zenodo.org/communities/starli-research-gate/",
+      "summary": "Everything needed to redo the two analyses reported in the Technical Note named in the title, and nothing else. What is here the secondary analysis of published length-resolved binding: the contract frozen before any test statistic was computed and its two dated amendments, the resampling of the source's own trimmed-mean procedure, the anchored and anchor-free tests, the post-hoc robustness check across five normalisation variants, the superseded first run kept so the correction stays visible, and the figure generator; the two propositions behind the simulation and the script that checks both against the stored benchmark, per replicate; the simulated measurement study it checks: frozen primary and stress designs, the finite-chain engine, 7,200 simulated datasets under seven observation operators reported as all 302,400 planned rows including the undefined, outside-window and non-identified slots, an independent validator, the stress results, five focused tests, an 83-file manifest and a dependency lock; an 80-value subset of the Source Data for Fig. 2B/C of Sheikh et al., Nat. Commun. 13, 3617 (2022), with its sheet coordinates. These values keep the original article's CC BY 4.0 licence and attribution; the rest of the archive is under the MIT licence in LICENSE. Reproducing The added analysis runs from the archive root with the standard library plus NumPy; the README gives the four commands. It was re-run on an interpreter far older than the one that produced the shipped results (Python 3.7.6 with NumPy 1.19.1, against 3.13.17 with 2.5.3): the proposition checks were identical in all 520 compared values apart from the recorded environment, and three bootstrap interval endpoints differed in their last digits, by at most 1.5e-11. Figures redraw with the same layout; their byte sequences depend on which sans-serif face the host has. The base study's own replay script requires bit equality and returns a failure on Linux, where ten of its twenty tables differ in their last digits. What is deliberately not here the manuscript text; the original publisher workbook of Sheikh et al. and every panel of it other than the 80 values used; historical MCMC traces and the exploratory transcript analysis of an earlier, separate study, which this work does not use; correspondence and author-only files. REDACTION.md lists the three files whose description of the work was restated for publication, with the digest before and after; no number, method, decision rule or result changed. Scope Synthetic counts are idealised events, not biological replicates. The site-equivalent pool is not an alpha-dystroglycan molecule count, glycan mass, antibody intensity or muscle force. The published array values are technical replicates of one experiment, and the source states no independent experiments. No real assay's detection ceiling or recovery function is measured anywhere in this archive.",
+      "tags": [
+        "matriglycan",
+        "alpha-dystroglycan",
+        "chain-length distribution",
+        "right truncation",
+        "detection limit",
+        "measurement bias",
+        "identifiability",
+        "simulation study"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Code, frozen designs, tables and replay receipts for: A detection ceiling biases matriglycan chain-length estimates by a closed-form factor, and one extra count removes it",
+      "url": "https://zenodo.org/records/23847015"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "6bf137f07e794fe55e330467",
+      "context_id": "774a56f85496c1d763ef1f4c",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "rup"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.5,
+      "source": "arxiv",
+      "source_context_sha256": "a7daedcd98480adeb6309d4af1eeef887c254e7638084f5181eeaa36db3a7a17",
+      "source_published": "2025-09-30T17:31:17Z",
+      "source_updated": "2026-10-27T23:57:42Z",
+      "summary": "Genetic mutations can lead to disease by disrupting molecular interactions, altering protein stability, inducing misfolding, and promoting protein aggregation. Although existing predictive models have achieved promising performance, they often lack mechanistic interpretability and fail to fully incorporate the underlying physical and chemical principles governing mutation-induced effects. Moreover, current approaches typically address disease association, protein stability changes, and solubility alterations as separate prediction tasks rather than integrating them within a unified framework. In this study, we introduce a multiscale commutative algebra modeling framework for predicting disease-mutation association. Leveraging persistent Stanley-Reisner theory, we extract algebraic invariants to build two predictive models: Commutative Algebra Neural Network (CANet) and Commutative Algebra Gradient Boosting Tree (CATree). The proposed framework is applied to three biologically connected tasks: disease-associated mutation identification, mutation-induced protein stability change prediction, and mutation-induced protein solubility change classification. Across six benchmark tasks, CANet and CATree consistently achieve leading predictive performance, with up to 7.5% relative improvement over existing methods. These results demonstrate that commutative algebra provides a unified, interpretable, and generalizable modeling strategy for mutation-disease association prediction.",
+      "tags": [
+        "q-bio.QM",
+        "math.AC",
+        "q-bio.BM"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Commutative Algebra Modeling of Mutation and Disease Association",
+      "url": "https://arxiv.org/abs/2509.26566v2"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4bd09ba9d6015ec928995af3",
+      "context_id": "8ae2a9cc052aba79118cf0aa",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "72941c06ddfb895c7de2b68ec5cb57a1a2102cbc2b9e52e99001adc32a3a5d27",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Abstract: Classical inferential statistics and p-value hypothesis testing in healthcare big data repositories suffer from severe structural limitations, notably p-hacking, asymptotic N-bias, and the frequent violation of independent and identically distributed (i.i.d.) assumptions due to intra-patient longitudinal dependencies, hospital clustering, and epidemiological shockwaves. To overcome these failures, we introduce an Inverse Breakpoint Analysis, a scale-invariant, physics-inspired metrological audit framework. Our analysis treats discrete clinical event counts not as abstract probabilities, but as physical informational mass. Grounded in Garwood exact discrete limits and Wilson-Hilferty approximations, the framework extends our previous work on stress testing indices for Big health data and establishes three rigorous thresholds: a pure mass saturation limit, a baseline tolerance band, and a structural signal threshold. Through the use of these three parameters, our inverse break-point analysis eliminates false-positive artifacts induced by massive repository sizes while preventing under-powering in small cohorts. Ultimately, the framework demonstrates that percentage-based thresholds are kinematic artifacts of scale, whereas absolute excess discrete mass serves as the sole physical invariant for healthcare data validation. We validated this approach with numerous illustrative examples.",
       "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT Chinese Title / 中文書名:移動城市循環經濟與材料永續極限 55/90 CIRCULAR MATERIAL ECONOMIES FOR AUTONOMOUS MOBILE CITIES AT THE LIMIT is a 777-page English Research Working Edition in the STARLI YULI Nano Supercar Trilogy (Research Institute XXXVI, Fl",
-      "url": "https://zenodo.org/records/23843026"
+      "title": "Inverse Breakpoint Analysis: A Scale-Invariant Physics-Inspired Metrological Audit for Sanitary Big Data",
+      "url": "https://zenodo.org/records/23865263"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "47f56bf2a9ec02f62b71a5ed",
+      "context_id": "202b2ffa8fc761b7b245aeb6",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "a12aa481baccec8f1b8e56cb0850395f39bc95d16974ea672edeb57c2dd311cb",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "APEP — JGR manuscript release ( paper-jgr-v1.0 ) Code, data products and figures supporting the manuscript on the ionospheric response to the 14 October 2023 annular and 8 April 2024 total Great American Eclipses (GAEs). Summary We present a multipoint investigation of the ionospheric response to the 14 October 2023 annular and 8 April 2024 total Great American Eclipses (GAEs) using coordinated observations from five Digisondes, the Wallops Island VIPIR, the Millstone Hill incoherent scatter radar, and continental-scale GNSS TEC measurements. Key results Clear E- and F2-region depletions in both events across peak obscurations of 0.30–0.82, observed at local times 10:24–15:22 LT. E region depletion scales quasi-linearly with obscuration; the F2 region lags peak obscuration by 20–30 min, consistent with the longer O⁺ recombination timescale. No G-condition (NmF1 ≥ NmF2) in either event, even at 0.82 obscuration: high obscuration alone is insufficient without adequate F2-peak height reduction and favourable local-time/seasonal conditions. White Sands skymaps show a bifurcated echo population during the 2024 recovery phase; Wallops VIPIR frequency–time–intensity plots show cusp-like features confined to 3–6 MHz. Idealized ray tracing shows both signatures can arise from eclipse-excited wave structures at different horizontal scales, i.e. distinct HF manifestations of a common wave field. GNSS TEC : along-track relative change in minima exceeds 40 % (2023 and 2024) relative to the expected baseline. Figures in this release All manuscript figures are in manuscript_figures/jgr/ (PNG, plus PDF where produced). Generating code is in apep/jgr/ . Figures 2 and 4 (ionosonde time series) were redone as 5×4 grids: rows are the five stations sorted by peak obscuration; columns are foF2, h′F2/hmF2, foE, h′E/hmE. Each panel shows the eclipse-day series (smoothed, gaps ≤ 90 min interpolated) against the quiet-day median, with the eclipse interval shaded and the peak obscuration 𝒪ᵖ₁₉₃ annotated. Journal-style fonts, thin lines, no heavy markers; AGU double-column width. Figure 2 (2023, 13–21 UT) is built entirely from Datasets/Data/*_scaled.csv and *_median.csv ; WS833/KR835 use the despiked event files in Datasets/processing/final/ when present. Figure 4 (2024, 16–21 UT) is built from SAO data via jgr_2024_scaled.py . Shared code: apep/jgr/jgr_timeseries_5x4.py ( jgr_2023_scaled.py is a thin wrapper). Known data caveats AU930 h′E sits in 100–110 km steps against an ~85 km median (2023); the 2024 AU930 hmE median CSV is flat at 110 km. AU930 foF2 saturates near 9.9 MHz after ~18:30 UT (2023). BC840 h′F2 shows a ~340 km excursion near maximum obscuration (2023). KR835/WS833 median CSVs lack true hmF2/hmE; 2024 KR835/WS833 median CSVs do not exist (baseline falls back to the SAO mean); WS833 2024 has no data. Reproducing the time-series figures conda run -n apep python -m apep.jgr.jgr_timeseries_5x4 --year 2023 # Figure 2 conda run -n apep python apep/jgr/jgr_2024_scaled.py # Figure 4",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "shibaji7/APEP: JGR manuscript release (paper-jgr-v1.0)",
+      "url": "https://zenodo.org/records/23861123"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "068ba754e3e4f24b39874fd7",
+      "context_id": "1aa1fca935d169600d19f297",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_context_sha256": "e4e0849dd6728c6db5651299d2caf569a0b444036afac32f5b80eb6223a8d11d",
+      "source_published": "2026-11-01",
+      "source_updated": "",
+      "summary": "Describe the simulation experiments, variables, and results. This&nbsp;new version holds the data and code for the revised manuscript. Code and results for \"The Generalized-cmu Rule at a Job-Shop Bottleneck with Family Setups\" (revision). shop_sim/ &nbsp; simulator (shop_sim.py), experiment driver (master.py: usage python master.py SCENARIO OCC [SCALES]), &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; statistics (analysis.py), tables (gen_tables.py), figure (fig_setup.py); master/ holds the stored per-seed results. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Seeds: calibration 9001-9010, tuning 7001-7016, evaluation 4001-4080 (identical for all policies and tables). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Routes: shop_sim.ROUTES (reconstruction) and shop_sim.random_routes(seed) for the five alternative route sets. two_class_rw/ &nbsp;isolated two-class simulator in C (tc2.c), experiment driver and results. theory/ &nbsp; &nbsp; closed-form switching frequency with setups, its simulation, and the ordering test (504 cases). ratio_survey/ &nbsp;setup-to-processing ratios of benchmark instances. Results were reproduced on a second machine (Windows): max abs difference 5e-9 in the stored values. Files in this record: - code_and_results.zip: simulator, scripts, seeds, routes, per-seed result files (shop_sim, two_class_rw, theory, ratio_survey). - flowshop_instances.zip: the 900 flowshop group-scheduling instances (folder flowshop_instances, with README.txt and read_instance.py describing the format). Unzip both into the same folder to recover the original layout.",
+      "tags": [
+        "Scheduling; Discrete-Event Simulation; Queueing Theory; Job-Shop Scheduling; Gcµ Policy"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Simulation Dataset for The Generalized-cµ Rule at a Job-Shop Bottleneck with Family Setups: Analysis, Simulation, and a Setup-Aware Variant",
+      "url": "https://zenodo.org/records/23859532"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
