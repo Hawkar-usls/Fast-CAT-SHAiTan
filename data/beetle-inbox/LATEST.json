@@ -1,5 +1,5 @@
 {
-  "batch_id": "a4932910a6387d8062f8",
+  "batch_id": "c657452567da2e0f2f6b",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -43,6 +43,39 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "fcab90cfa79bb6958f6a86a3",
+      "context_id": "1d9e5d2e658746811c57f5dd",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "reverse"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.875,
+      "source": "zenodo",
+      "source_context_sha256": "648c27892c70df1710d962cbfa54d3602e749b881370d03ce36fc2379ed71bfd",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "Release v1.0.0 - Software Archive for AAS80155R1 This is the initial formal release and archival version of the color_to_spec package, associated with the paper: &quot;Optical Colors as Compressed Spectral Information for Trans-Neptunian Objects&quot; Author: Hsing-Wen Lin AAS Manuscript Number: AAS80155R1 Overview color_to_spec provides tools for optical-color-to-spectral inference of Trans-Neptunian Objects (TNOs) and asteroids: Trained PCA Spectral Manifold &amp; KDE Prior : Latent representation across $0.4\\ \\mu\\text{m}$ to $5.1\\ \\mu\\text{m}$. Bayesian Inference Pipeline : Reconstructs full-resolution reflectance spectra with uncertainty bounds ($1\\sigma$ and $90%$ credible intervals) from broadband magnitude colors (e.g., LSST or DES). Photometric &amp; Reverse Projection Utilities : Tools to sample latent distributions and project them back into synthetic optical color spaces. Contents &amp; Structure src/ : Core Python modules for spectral reconstruction, GMM sampling, reverse projection, and photometric flux conversions. models/ : Pre-trained PCA/KDE models and AutoGluon reconstructor configurations. .agents/skills/spectra_reconstruction/ : CLI scripts and automated agent skill definitions. CITATION.cff : Citation metadata. LICENSE : MIT License. Citation If you use this software in your research, please cite the associated AAS paper and this Zenodo archive (see CITATION.cff or click &quot;Cite this repository&quot; on GitHub / Zenodo).",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "color_to_spec: Software for Optical-to-NIR Spectral Inference of Trans-Neptunian Objects",
+      "url": "https://zenodo.org/records/23932428"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "e3bd4952782fc774927d761a",
       "context_id": "e9c7864f8f0f6d3c90903dd2",
       "delivery_preview_only": true,
@@ -82,10 +115,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c61503e65babe9a0e01afc8c",
-      "context_id": "713af34a0a907d99757dc79a",
+      "candidate_id": "effb6381e1c7baaab561ee89",
+      "context_id": "e42c96cc37e314178a4438bf",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
+      "delivery_preview_truncated": true,
       "direction_id": "formal_proof_verification::REVERSE",
       "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -97,31 +130,22 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "counterexample",
-        "sat",
+        "reconstruction",
+        "recovery",
         "verification"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.2083,
+      "score": 7.4167,
       "source": "zenodo",
-      "source_context_sha256": "48fc418d3b537216310364ab4a69bace7fe85da13fe2b5ed43fb54c0514d132e",
+      "source_context_sha256": "8b698cd94db9700f217b4e703814f48611910317120068d96792ee61cf8480d5",
       "source_published": "2026-11-03",
       "source_updated": "",
-      "summary": "Unrefereed research candidate. In one sentence: the matrix geometric mean can jump at singular matrices, every possible jump is described by one rank condition, and the same mechanism refutes a published claim that the symbol of the geometric mean of two GLT matrix-sequences is always the geometric mean of their symbols. The geometric mean A#B of two positive definite matrices is the matrix analogue of &radic;(ab), used to average covariance matrices and structured matrices and to define the Matsumoto fidelity of quantum states. It need not be continuous at singular pairs. Theorem 1 shows that X is a limit of A j #B j with positive definite A j &rarr; A, B j &rarr; B exactly when X &#8829; 0, the block matrix [[A, X], [X, B]] is positive semidefinite and its rank is at most the dimension N (a dilation description with an auxiliary contraction already follows from recent work of Jones; the explicit elimination is the contribution). At equal inputs this gives the full set of limits and the exact interval of limiting Matsumoto fidelities. For generalized locally Toeplitz (GLT) matrix-sequences, uniformly bounded positive definite inputs with identical scalar symbols can have geometric means with the wrong symbol (4/5 instead of 1 on half the interval) or no eigenvalue distribution at all. This refutes Theorem 4 and Conjecture 1 of the arXiv version of Ilyas, Khan, Loi and Serra-Capizzano and, according to an AI-assisted reading of the published text, Theorem 3 and Conjecture 1 of their article in Linear Algebra Appl. (2025); the failing step of the proof is located. Positive results: closure for every Kubo-Ando mean when the sum of the symbols is positive definite almost everywhere; a one-sided theorem that the regularised symbol is always an upper envelope; and, for bounded Riemann-integrable scalar symbols of the space variable only, a sharp dichotomy (the formula holds for every realisation if and only if the symbols have no common zero set of positive measure or essentially disjoint supports). The classical two-dimensional discontinuity, Ando's maximal characterisation and the envelope X &#8828; A#B are earlier work and are credited. The archive contains the manuscript (PDF and Markdown source), two figures with the script that draws them, an exact verifier (verify_exact.py, Python standard library only, 1,030 rational and Gaussian-rational checks of closed forms and finite assemblies, with a mutation self-test) and its retained output, the bibliography with its Crossref/arXiv records, the dated novelty ledger, a revision note, CI and SHA-256 sums. Assurance: written proofs; the verifier checks finite exact identities, not the theorems' limits or quantifiers; internal AI-assisted review only (not human peer review, independent reproduction or formal verification). Creator: Anonymous. Text and figures CC0-1.0; code MIT.",
-      "tags": [
-        "matrix geometric mean",
-        "Kubo-Ando means",
-        "positive semidefinite matrices",
-        "generalized locally Toeplitz sequences",
-        "spectral symbol",
-        "eigenvalue distribution",
-        "Matsumoto fidelity",
-        "counterexample"
-      ],
+      "summary": "RESEARCH COLLECTION / FLAGSHIPS 241&ndash;250 OF 300 Scientific Failure, Metrology and Independent Evidence at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 These ten research-design monographs move from nano-quantum failure physics and reconstructed microrobotic sampling truth to blinded biosensing, interlaboratory transfer, uncertainty budgets, reference-material commutability, manufacturing batch effects, contamination traceability, drift/biology separation and mission-failure classification. They propose testable experimental contracts, not observed new scientific laws or clinical results. The ten English working editions contain 7,770 pages, 300 mathematical plates, 820 chapter openings, 4,100 one-page studies, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate presents a three-part speculative letter&mdash;Origin, Extreme Extrapolation and Future Research Plan&mdash;without replacing measured falsification and independent physical witnesses. Structural counts do not establish scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F241&ndash;F245 F241 NANO-QUANTUM RESEARCH SYSTEM FAILURE PHYSICS AT THE LIMIT &mdash; Focus: optical source ageing and actuator stuck-state fault. Direct witness: rate of hazardous events [h^-1]. Test against single-site repeatability without transfer. A live rival is detector gain drift; refuse release if a hazardous defect is released. F242 MICROROBOTIC SAMPLING TRUTH RECONSTRUCTION AT THE LIMIT &mdash; Focus: microchannel-wall adsorption and sorption-desorption memory. Direct witness: sample provenance recovery [percent]. Test against paper batch record plus endpoint inspection. A live rival is pipette volume error; refuse release if material balance or provenance does not close. F243 QUANTUM BIOSENSOR BLINDED CHALLENGE AT THE LIMIT &mdash; Focus: spin-coherence reference substitution and charge-state switching. Direct witness: prospective correct acceptance [percent]. Test against standard statistical process control with frozen limits. A live rival is microwave pickup; refuse release if a second site cannot reconstruct the qualification decision. F244 NANOROBOTIC INTERLABORATORY RING COMPARISON AT THE LIMIT &mdash; Focus: laser wavelength transfer and microscale thermal probe offset. Direct witness: absolute between-site measurement bias [unit]. Test against single-site repeatability without transfer. A live rival is laboratory temperature contrast; refuse release if a hazardous defect is released. F245 MICROSCALE SAMPLING UNCERTAINTY BUDGET AT THE LIMIT &mdash; Focus: volume-metering error and wall-loss uncertainty. Direct witness: prospective interval coverage [percent]. Test against paper batch record plus endpoint inspection. A live rival is liquid surface tension; refuse release if material balance or provenance does not close. &nbsp; &nbsp; SECOND RESEARCH UNIT&nbsp; /&nbsp; EVIDENCE, TRANSFER AND SUCCESSION RESEARCH UNIT II&nbsp; &middot;&nbsp; F246&ndash;F250 F246 QUANTUM SENSOR REFERENCE-MATERIAL COMMUTABILITY AT THE LIMIT &mdash; Focus: matrix-dependent binding and fluorophore photobleaching. Direct witness: noncommutability bias [unit]. Test against standard statistical process control with frozen limits. A live rival is analyte concentration mismatch; refuse release if a second site cannot reconstruct the qualification decision. F247 NANOROBOTIC MANUFACTURING BATCH EFFECT IDENTIFICATION AT THE LIMIT &mdash; Focus: lithography mask alignment and coating pore defects. Direct witness: unselected qualified batch yield [percent]. Test against single-site repeatability without transfer. A live rival is postfabrication sorting; refuse release if a hazardous defect is released. F248 MICROFLUIDIC SAMPLING CONTAMINATION-SOURCE TRACEABILITY AT THE LIMIT &mdash; Focus: tubing adsorption reservoir and biofilm retention. Direct witness: correct source classification [percent]. Test against paper batch record plus endpoint i",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Boundary limits of the matrix geometric mean and the failure of unrestricted GLT closure",
-      "url": "https://zenodo.org/records/23912963"
+      "title": "RESEARCH COLLECTION / FLAGSHIPS 241–250 OF 300 Scientific Failure, Metrology and Independent Evidence at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 These ten research-design monographs move from nano-quantum failure physics and reconstructed ",
+      "url": "https://zenodo.org/records/23931688"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -156,6 +180,40 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "RESEARCH COLLECTION / FLAGSHIPS 71–80 OF 90 Meridian Metrology, Chronobiology & Multiscale Physiological Modeling at the Limit STARLI Acupuncture Trilogy | F71–F80 of 90 | Author 33 | Research Design Working Edition v1.1 This ten-volume research-design collection investigates classical meridian clai",
       "url": "https://zenodo.org/records/23925993"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "36827e4e064a57fadb0e37bc",
+      "context_id": "af4c09667b03e9e011de542f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "drat",
+        "reconstruction",
+        "sat"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 6.875,
+      "source": "zenodo",
+      "source_context_sha256": "38f0a0d777893feb0055171f103a194bf9244d98c60c7fc1edf85ea133a444f6",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "PHASE v7.1.7 Remove the temporary temporal-example button from the custom panel. Add Restore automatic residual trend for custom DET/STC, enabled by default. Disabled treats the removed field as a systematic observation component; residual modelling remains unchanged. Propagate uncertainty for the selected target, including shared-data and assigned-parameter cross terms. Export both the removed TemporalTrend_mm and applied RestoredTrend_mm ; total = custom + restored trend + residual. Record the target choice in JSON/MAT. Enable the native automatic temporal check by default and inspect individual PS as well as the AOI mean. Supported local trends can refit the existing polynomial with time-space interactions, preserving native uncertainty and outlier rejection. Guard new terms against rank deficiency. Preserve automatic STC atmospheric-offset semantics: Auto diagnoses without adding a confounded common trend in residualAtm mode. Correct degree-three 1D STC reconstruction so observation predictions include the quadratic terms too. Align app and all installer versions to 7.1.7. Conditional uncertainty excludes model-selection uncertainty and regularisation bias; detrending does not certify stationarity. PHASE v7.1.6 Simplify the custom panel by removing residual-mean and full assigned-covariance editors; preserve existing profile settings with a contextual indication when active. Fixed-parameter standard deviations remain in the parameter table. Add a temporal quadratic example: estimated a t + b t², no function-file override, and automatic displacement referencing. Existing model configurations remain unchanged until the example is selected. Keep automatic residual-field correction and component exports, allowing comparison of the time-only custom contribution with the full prediction. Align application and all installer versions to 7.1.6. PHASE v7.1.5 Correct automatic residual-field selection after custom modelling: temporal validation determines whether observed trends are removed. Spatial validation guides regularisation and reports prediction coverage; it no longer vetoes an observed temporal correction. Refine the automatic regularisation search while retaining the native polynomial and cubic spline bases, original outlier filter and covariance estimators. Subtract the selected additional mean before residual modelling and restore it at PS, grid and query locations with shared-data uncertainty propagation. Retain covariance plots and numeric checks; no residual diagnostic figures are generated. Verify covariance/derivative oracles, four custom paths, noise/oscillation safeguards, and a valid covariance that decays over the full finite observation range. Detrending does not certify stationarity; output uncertainty remains conditional on model selection and regularisation. App and installer versions aligned to 7.1.5 on all platforms. PHASE v7.1.4 Group temporal/spatial covariance controls in the 1D model / 2D model pages. Save custom and automatic figures together in the run figures folder, with PNG and editable FIG; add editable final-frame snapshots alongside animations. Automatically validate additional space-time residual mean fields for custom DET/STC in both dimensions, using native polynomial/cubic spline bases and temporal/spatial holdouts. Keep the supported common correction when spatial validation fails. No extra user controls. Preserve the fixed custom model and original outlier rejection. Propagate shared-data cross covariance and assigned-parameter uncertainty through the selected additional mean fit. Remove residual diagnostic figures from PHASE output; retain original covariance plots and numeric diagnostic files. Export candidate selection diagnostics and covariance review checks. Detrending does not certify stationarity; selected-field/regularisation uncertainty and bias are excluded from conditional output uncertainty. PHASE v7.1.3 Size Excel report columns from displayed numeric values, including large ",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "robimonti/PHASE: PHASE v7.1.7",
+      "url": "https://zenodo.org/records/23932825"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -231,10 +289,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b38903b38089433cc0676c21",
-      "context_id": "1fefeaaee678b17109bffa68",
+      "candidate_id": "88456e22b787b7e45fddf4e2",
+      "context_id": "068058b4a735cad1cd63dd1e",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
+      "delivery_preview_truncated": true,
       "direction_id": "formal_proof_verification::REVERSE",
       "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -247,25 +305,20 @@
       ],
       "keyword_hits": [
         "reconstruction",
-        "sat"
+        "recovery"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7083,
+      "score": 5.9167,
       "source": "zenodo",
-      "source_context_sha256": "f73778172b34c78a330dbd8a800e6149f6267bf714be60d9be667806399a7f18",
+      "source_context_sha256": "a9693bf0e079356aec178b968e0e45c12ab7d054cd21fe682a749c2848c4d5b8",
       "source_published": "2026-11-03",
       "source_updated": "",
-      "summary": "Dataset description This dataset provides gap-filled daily, high-resolution binary snow cover maps for 12 eddy-covariance stations within the FLUXNET, ICOS, and i-Box networks distributed across the French, Swiss, Austrian, and Italian Alps. The maps were generated to characterize surface snow conditions within the source areas of eddy-covariance measurements for the updated analysis of Scheidt et al. (2026). The dataset was specifically used to determine whether the area enclosed by a station&rsquo;s 80% flux-footprint contour was snow covered and to calculate the snow-cover fraction (SCF) within that footprint. Footprint-scale SCF can be calculated from the maps as the proportion of valid pixels within the footprint classified as snow covered. The data cover the following eddy-covariance sites for the hydrological years (1 st October - 30 th September) from 2013/14 to 2023/24: Alp Weissenstein (CH-Aws), Switzerland Col du Lautaret (FR-CLt), France Fr&uuml;eb&uuml;el (CH-Fru), Switzerland Monte Bondone (IT-MBo), Italy Mazia Pasture (IT-MtP), Italy Neustift (AT-Neu), Austria Nivolet (IT-NiG), Italy Torgnon (IT-Tor), Italy The i-Box observational network in the Inn Valley, Austria, comprising the Eggen (CS-SF1), Kolsass (CS-VF0), Hochh&auml;user (CS-NF27), and Weerberg (CS-NF10) stations For each station outside the i-Box network, the NetCDF files cover a 15 km &times; 15 km square centered on the station. Because the four i-Box stations are located close to one another, they are represented by a common 20 km &times; 20 km domain centered on the station cluster. The maps have a spatial resolution of 50 m and are provided in the WGS 84 / UTM zone 32N coordinate reference system (EPSG:32632). Files are organized by site and hydrological year. The binary snow cover condition variable represents daily snow-cover conditions, while the reconstruction_method variable distinguishes pixels obtained from high-resolution satellite observations from pixels reconstructed by the gap-filling procedure. High-resolution snow cover fraction maps were derived from Sentinel-2 MSI and Landsat 8 and Landsat 9 OLI imagery using SnowFLAKES ( Snow extent from applying a Flexible Learning Algorithm using KErnel-based Spectral unmixing ) at a resolution of 50m. SnowFLAKES is an unsupervised, image-adaptive snow-mapping approach developed for mountainous terrain and challenging observation conditions, including topographic shadows and variable illumination. The processing follows the approach described by Barella et al. (2022). Daily, spatially complete maps were generated by combining the available high-resolution snow observations with daily, lower-resolution MODIS SCF from the MOD10A1 product (Hall and Riggs, 2021). Gap filling and spatial downscaling were performed using an implementation adapted from the hierarchical multiresolution data-fusion method proposed by Premier et al. (2021). The approach uses spatial patterns learned from available optical observations to reconstruct snow-cover conditions on days without usable high-resolution satellite imagery. The resulting product represents daily binary snow presence at high spatial resolution. Raw Sentinel-2, Landsat, and MODIS imagery, eddy-covariance measurements, and flux footprint polygons are not included in this archive. The archive also includes an interactive Python viewer for the daily *_SC_GAM.nc snow-cover products. It can display snow-cover classes and reconstruction provenance over time, with station locations shown for context. Setup instructions and examples are provided in the README. NetCDF structure and value conventions For each site and hydrological year a NetCDF product is provided. Files ending in _SC_GAM.nc contain the 50 m high-resolution product. The main variable,&nbsp; binary_snow_cover_condition (time, y, x) , has units of percent and represents binary snow presence: 0 denotes snow-free ground and 100 denotes snow-covered ground. The product uses the dimensions time , y , a",
-      "tags": [
-        "snow cover product",
-        "daily high-resolution snow cover product",
-        "eddy-covariance station",
-        "FLUXNET"
-      ],
+      "summary": "RESEARCH COLLECTION / FLAGSHIPS 251&ndash;260 OF 300 Microscale Evidence, Fault Analysis &amp; Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an experimental subject: physical artifacts, raw-data custody, fair microrobotic comparators, quantum-sensor calibration, mission risk, repeat measurements, competing sensing models, post-failure containment, microfluidic fault injection and reconstructable correlated errors. None of the candidate systems is represented as independently validated or clinically authorized. Ten English 777-page working editions: 300 mathematical research plates, 820 chapter openings, 4,100 single-page investigations, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate includes three distinct future-facing essays: Origin, Extreme Extrapolation and Future Research Plan. Counts do not certify independent scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F251&ndash;F255 F251&nbsp; MICROSCALE MEASUREMENT ARTIFACT CAUSAL IDENTIFICATION AT THE LIMIT &mdash; Core: photon-detector afterpulsing; microfluidic stage drift. Witness: artifact-specific attribution recall [dimensionless]. Comparator: independently calibrated dual-sensor physical truth and a frozen classical artifact classifier. Rival: genuine delayed specimen fluorescence. Stop: sample reference identity is lost or unresolved artifact causes an unsafe physical release. F252&nbsp; NANO-QUANTUM SYSTEM RAW-DATA INTEGRITY AT THE LIMIT &mdash; Core: sensor frame loss during burst readout; sample barcode collision. Witness: independently replayable raw-record fraction [dimensionless]. Comparator: immutable append-only event log with independent checksum and physical raw acquisition. Rival: truly silent physical interval. Stop: source data or physical specimen identity cannot be reconstructed from an unmodified acquisition. F253&nbsp; MICROROBOTIC SAMPLING STRONG BENCHMARK COMPARISON AT THE LIMIT &mdash; Core: manual pipette aspiration limit; sampling operation energy. Witness: valid recovered sample mass per joule [ug J^-1]. Comparator: optimized calibrated manual pipetting plus passive microchannel control. Rival: robotic control simply uses more sample. Stop: sample contamination, unrecorded loss or physical damage exceeds preregistered limits. F254&nbsp; QUANTUM SENSOR CROSS-SITE CALIBRATION TRANSFER AT THE LIMIT &mdash; Core: ODMR microwave-frequency reference transfer; photodetector spectral response mismatch. Witness: cross-site bias [nT]. Comparator: independent site-specific NIST-traceable calibration and a frozen classical sensor transfer. Rival: true magnetic field shift. Stop: untraceable reference ancestry or unsafe calibration release under failed commutability. F255&nbsp; NANOROBOTIC MISSION RELIABILITY STATISTICS AT THE LIMIT &mdash; Core: early mission failure censoring; recovery-conditional survival bias. Witness: mission completion probability [dimensionless]. Comparator: fixed-limit statistical process control with transparent unselected failure registry. Rival: improved mission reliability. Stop: a hazardous failure has no traceable state or is incorrectly classified as safe. &nbsp; &nbsp; RESEARCH UNIT II&nbsp; /&nbsp; RECONSTRUCTION, RECOVERY AND SUCCESSION F256&nbsp; MICROSCALE EXPERIMENT REPEAT-MEASUREMENT BIAS AT THE LIMIT &mdash; Core: measurement sequence effect; sensor warm-up effect. Witness: paired measurement bias [native units]. Comparator: randomized blinded single-site repeatability with external second-operator reference. Rival: true specimen ageing. Stop: unidentified systematic error exceeds the preregistered accuracy margin. F257&nbsp; QUANTUM BIOSENSING RIVAL-MODEL VALIDATION AT THE LIMIT &mdash; Core: spin-state dependent fluorescence; surface adsorption optical rival. Witness: held-out calibrated log score [nats per case]. Comparator: optimiz",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Gap-filled daily high-resolution snow-cover maps around Alpine eddy-covariance stations derived with SnowFLAKES",
-      "url": "https://zenodo.org/records/23734461"
+      "title": "RESEARCH COLLECTION / FLAGSHIPS 251–260 OF 300 Microscale Evidence, Fault Analysis & Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an e",
+      "url": "https://zenodo.org/records/23932285"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -305,8 +358,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "8fe8d0d734906eda25e53c15",
-      "context_id": "ff8d836fb97859d31a8f2a91",
+      "candidate_id": "9b6e59a1319ad9fee6faf107",
+      "context_id": "ebbc70f3cb40e446a25e7162",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::REVERSE",
@@ -320,21 +373,25 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "inverse",
-        "sat"
+        "inversion",
+        "rup"
       ],
       "mirror_lens": "REVERSE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
+      "score": 5.5,
       "source": "zenodo",
-      "source_context_sha256": "82c378f9dfbcb3ca5a133bdd29f244a5d2405e271eea34bb6db5d29f00a84a8a",
-      "source_published": "2026-11-03",
+      "source_context_sha256": "745474b37c5e9443a7210cc9eafb22de1451924777ec70d56ce8a85fc03c5bc1",
+      "source_published": "2026-08-26",
       "source_updated": "",
-      "summary": "Abstract: Classical inferential statistics and p-value hypothesis testing in healthcare big data repositories suffer from severe structural limitations, notably p-hacking, asymptotic N-bias, and the frequent violation of independent and identically distributed (i.i.d.) assumptions due to intra-patient longitudinal dependencies, hospital clustering, and epidemiological shockwaves. To overcome these failures, we introduce an Inverse Breakpoint Analysis, a scale-invariant, physics-inspired metrological audit framework. Our analysis treats discrete clinical event counts not as abstract probabilities, but as physical informational mass. Grounded in Garwood exact discrete limits and Wilson-Hilferty approximations, the framework extends our previous work on stress testing indices for Big health data and establishes three rigorous thresholds: a pure mass saturation limit, a baseline tolerance band, and a structural signal threshold. Through the use of these three parameters, our inverse breakpoint analysis eliminates false-positive artifacts induced by massive repository sizes while preventing under-powering in small cohorts. Ultimately, the framework demonstrates that percentage-based thresholds are kinematic artifacts of scale, whereas absolute excess discrete mass serves as the sole physical invariant for healthcare data validation. We validated this approach with numerous illustrative examples.",
-      "tags": [],
+      "summary": "A provenance-bound values model published as a public evaluator rather than deployed as a filter — why open weights defeat a filter and strengthen a referee, why the same weights bear three different relations to the model they judge, and why an evaluator that gatekeeps its own judgments has reproduced the defect it exists to correct. A values model — a model that judges conduct against a standard — is an established artifact. Guard models, safety classifiers, critic models, preference models and process reward models all instantiate the family, and the engineering is not in dispute. What is in dispute, and what this paper specifies, is the posture in which such an artifact is published , which we argue is not a deployment detail but the property that determines whether the artifact does anything at all. We state an inversion as a design principle. A values model deployed as a filter — sitting in a serving path, permitting or refusing — is defeated by publication of its weights, because the published artifact is precisely the oracle against which an attacker optimizes; a staged black-box attack (STACK) reaches roughly 71% success against a defended classifier pipeline that had held earlier attacks near zero, and an attacker holding the weights has strictly more than that attack needed. The same model published as an evaluator — emitting verdicts about systems it does not control — is not defeated by publication, and its positive findings are strengthened by it, because open weights are what allow a third party to reproduce and therefore to trust its verdicts. The same openness hands the judged party an optimization target, and §4.1 states what that concedes: a clean or empty result from an open referee proves less against an adaptive party than the first draft of this paper allowed. Openness is not a property with a fixed sign. Its sign is set by posture, and in the referee posture it is mixed. From this we derive a second result. The independent-evaluation literature documents at length the ways in which the evaluated party's control over access corrupts evaluation: short access windows, low rate limits, evaluator dependence on the goodwill and funding of the party being evaluated. We observe that the defect is symmetric and that, in the work surveyed in §2, its mirror image has not been named. An evaluator that controls access to its own judgments holds the same kind of power, pointed the other way — it can decline to evaluate, deprioritize, or be unavailable for a party it wishes to spare or to punish. We therefore specify a non-gatekeeping constraint : the ability to obtain a judgment must not depend on the evaluator's permission, which requires that the model, the harness, and the evaluation corpus be freely runnable, and which makes any hosted endpoint a convenience rather than a channel. We specify provenance-binding as the constitutive constraint on the model's outputs: every judgment must resolve to a citation into a fixed canonical corpus, and a judgment that cannot be so resolved is withheld rather than emitted. This trades coverage for auditability deliberately, and it distinguishes the artifact from values models trained on preference data whose sources cannot be named, and from purpose-authored value-rule corpora, whose rules are written for the alignment task itself and therefore cannot serve as an independent ground truth. Finally we specify that a single such artifact bears three non-interchangeable relations to the systems it judges, selected by carrier: a gate in the publisher's own hardware, a citation requirement without veto in an autonomous successor agent, and a referee in the wider world. We state plainly that the middle case must not be implemented as the first, because a veto held by a smaller model over a more capable agent bounds that agent at the evaluator's ceiling — the weak-supervisor problem applied to the very system the arrangement exists to enable. A consequence we did not initially see, an",
+      "tags": [
+        "alignment",
+        "tier-a",
+        "defensive publication"
+      ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Inverse Breakpoint Analysis: A Scale-Invariant Physics-Inspired Metrological Audit for Sanitary Big Data",
-      "url": "https://zenodo.org/records/23913691"
+      "title": "The Referee, Not the Governor",
+      "url": "https://zenodo.org/records/23931689"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -375,88 +432,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "d78fad5b7dc06104530f8bf0",
-      "context_id": "c8f8e319c18167a2bbf9deb4",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "sat"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "zenodo",
-      "source_context_sha256": "37b459a493201698eed2505d1a9afca2c70a1dd559584592577719a963f5a9ec",
-      "source_published": "2026-11-01",
-      "source_updated": "",
-      "summary": "We show that a pre-geometric axiom set generates structures normally assumed in relativistic physics. The microscopic input is a closed, bi-infinite ordered history of binary choices; coarse-grained histories use local binary projectors and a decoherence functional; amplitudes compose unitarily between nearest-neighbor sites. No spacetime manifold, metric, connection, Lorentz group, or action principle is assumed. Four independent binary-projector implementations furnish {I, P, T, PT}. Their faithful amplitude realization forces a four-component complex carrier; unresolved crossing order with antiunitary reversal yields Grassmann history variables. The coherent-state functional integral is primary, not the quantization of a prior classical field theory. Bilinear closure gives the unique local noncompact algebra SO(4,1), while coarse-grained spin sums generate the collective SO(5,1) sector, whose infrared İn&ouml;n&uuml;&ndash;Wigner contraction yields the Poincar&eacute; group. Local spinors, Clifford closure, transport generators, and Poincar&eacute; invariance thus arise from causal composition rather than background symmetry. The same representation supplies the homogeneous cosmological limit. The compact orbital sector of the Hilbert space representation has no preferred position or direction, giving the cosmological principle; its infrared contraction fixes spatial flatness. Coherence loss in the resulting shell ensemble defines entropy, a thermodynamic arrow, and Gibbs temperature. The noncompact radial sector supplies the timelike support depth for homogeneous vacuum curvature. Inverse square scaling of this depth gives &Lambda;(t) &prop; t⁻&sup2; before saturation. Summed-history interference stops opening new resolved radial sectors at log₁₀ n⋆ = 60.3884215, saturating the timelike curvature radius. The late-time floor is &Lambda;⋆ = 13/(64 n⋆&sup2;ℓ_P&sup2;) = 1.30 &times; 10⁻⁵&sup2; m⁻&sup2;, the asymptotic cosmological constant.",
-      "tags": [
-        "Causal Chain Physics",
-        "causal discreteness",
-        "pregeometry",
-        "emergent spacetime",
-        "Poincaré invariance",
-        "Clifford algebra",
-        "Grassmann histories",
-        "spatial flatness",
-        "cosmological constant",
-        "thermodynamic arrow of time"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Causal Chain Physics I: Causal Discreteness, Poincaré Invariance and Cosmological Vacuum Curvature",
-      "url": "https://zenodo.org/records/23859018"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "4a2a84e5b8b1c00b163f6961",
-      "context_id": "7c1b526d67be75a0d332957f",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "cnf",
-        "inverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4167,
-      "source": "arxiv",
-      "source_context_sha256": "dd2245a2ee5e23092c0d4a030c5198cde521ce3386d3a8e843c444c8286e2989",
-      "source_published": "2026-11-02T09:02:36Z",
-      "source_updated": "2026-11-02T09:02:36Z",
-      "summary": "Reduced-order models (ROMs) learned from trusted numerical simulations enable the real-time simulation of complex physical systems, making computationally prohibitive tasks-such as uncertainty quantification and optimal control-tractable. In particular, data-driven ROMs are opening the opportunity to learn from both numerical simulations and experimental data. However, integrating these sources of information is far from straightforward. Real-world measurements often involve multiple sources of uncertainty, including non-Gaussian noise, latent heterogeneities, unknown or hidden system parameters, and multiscale phenomena occurring below the resolution of the data. Consequently, real-world data are better described by parametrized stochastic partial differential equations, for which the development of effective ROMs remains relatively unexplored. In this work, we introduce POD-CNF, a data-driven generative ROM for efficient uncertainty quantification of parametrized high-dimensional systems. The approach combines projection-based model reduction and deep generative modeling. First, Proper Orthogonal Decomposition (POD) is employed to obtain a low-dimensional representation of the solution manifold. A Conditional Normalizing Flow (CNF) is then trained to approximate the density of the reduced coefficients conditionally on the input parameters. This formulation allows the surrogate to capture complex, multimodal output distributions, going beyond standard regression-based ROMs and least-squares predictions. We assess the effectiveness of POD-CNF through numerical experiments, demonstrating its ability to accurately reproduce output distributions while substantially reducing computational costs. Finally, a proof-of-concept application illustrates how the generative paradigm facilitates integration into Bayesian inverse problems, highlighting promising directions for future research.",
-      "tags": [
-        "math.NA",
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "POD-CNF: reduced order modeling of parametrized stochastic PDEs via normalizing flows and proper orthogonal decomposition",
-      "url": "https://arxiv.org/abs/2611.02787v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c61503e65babe9a0e01afc8c",
-      "context_id": "6009a9d26ef1eba3d839f370",
+      "candidate_id": "6edf67283f098718e0308c3c",
+      "context_id": "5a5dd3864e7fea49a7c807e7",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -470,32 +447,34 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "counterexample",
         "failure",
+        "failure mode",
         "sat",
         "verification"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 11.5,
+      "score": 8.4167,
       "source": "zenodo",
-      "source_context_sha256": "8a65e0eb7301209beea00d9908efe967b37bd47106678bcd090f928bc8e6a342",
+      "source_context_sha256": "1528c010560b6c9f341d561dc83c684265cd6aabcb3d6ab5101bc1237faced8c",
       "source_published": "2026-11-03",
       "source_updated": "",
-      "summary": "Unrefereed research candidate. In one sentence: the matrix geometric mean can jump at singular matrices, every possible jump is described by one rank condition, and the same mechanism refutes a published claim that the symbol of the geometric mean of two GLT matrix-sequences is always the geometric mean of their symbols. The geometric mean A#B of two positive definite matrices is the matrix analogue of &radic;(ab), used to average covariance matrices and structured matrices and to define the Matsumoto fidelity of quantum states. It need not be continuous at singular pairs. Theorem 1 shows that X is a limit of A j #B j with positive definite A j &rarr; A, B j &rarr; B exactly when X &#8829; 0, the block matrix [[A, X], [X, B]] is positive semidefinite and its rank is at most the dimension N (a dilation description with an auxiliary contraction already follows from recent work of Jones; the explicit elimination is the contribution). At equal inputs this gives the full set of limits and the exact interval of limiting Matsumoto fidelities. For generalized locally Toeplitz (GLT) matrix-sequences, uniformly bounded positive definite inputs with identical scalar symbols can have geometric means with the wrong symbol (4/5 instead of 1 on half the interval) or no eigenvalue distribution at all. This refutes Theorem 4 and Conjecture 1 of the arXiv version of Ilyas, Khan, Loi and Serra-Capizzano and, according to an AI-assisted reading of the published text, Theorem 3 and Conjecture 1 of their article in Linear Algebra Appl. (2025); the failing step of the proof is located. Positive results: closure for every Kubo-Ando mean when the sum of the symbols is positive definite almost everywhere; a one-sided theorem that the regularised symbol is always an upper envelope; and, for bounded Riemann-integrable scalar symbols of the space variable only, a sharp dichotomy (the formula holds for every realisation if and only if the symbols have no common zero set of positive measure or essentially disjoint supports). The classical two-dimensional discontinuity, Ando's maximal characterisation and the envelope X &#8828; A#B are earlier work and are credited. The archive contains the manuscript (PDF and Markdown source), two figures with the script that draws them, an exact verifier (verify_exact.py, Python standard library only, 1,030 rational and Gaussian-rational checks of closed forms and finite assemblies, with a mutation self-test) and its retained output, the bibliography with its Crossref/arXiv records, the dated novelty ledger, a revision note, CI and SHA-256 sums. Assurance: written proofs; the verifier checks finite exact identities, not the theorems' limits or quantifiers; internal AI-assisted review only (not human peer review, independent reproduction or formal verification). Creator: Anonymous. Text and figures CC0-1.0; code MIT.",
+      "summary": "Measured failure modes of verifier panels: companion paper accepted (poster) at the NeurIPS 2026 workshop Who Verifies the Agents? — Verification Theater: Measured Failure Modes of AI Verifier Panels . Version of record: SSRN 7390698 , DOI 10.2139/ssrn.7390698 . Cite that version. The same text is also at https://polyhelper.ai/research/agreement-not-evidence/ and https://github.com/vadimchernets/papers/tree/main/agreement-not-evidence . Someone who asks one language model a question cannot tell a confidently wrong answer from a confidently right one. The two are identical on every surface cue available to a non-expert. Asking several models seems to solve this, but it mostly relocates the problem: reconciling several answers produces one confident text again, and that text now carries the borrowed authority of \"ten of them agreed.\" The protocol formalized here collects answers from several consumer chat models through the user's own browser or phone, with no API keys, no installation and no intermediary server. It reconciles them by anchor-and-enrich: the strongest available answer becomes the base, and each of the others contributes only what the base lacks. Every contribution is signed with the model that supplied it. Disagreements are kept in a section of their own rather than averaged away. The paper makes four contributions. The first is the protocol itself, stated as an algorithm that preserves provenance and forbids silent deletion, together with a taxonomy of five ways a merge can fail. Four of them are defects of naive pooling; the fifth is a failure of the operator rather than of the method: a synthesis that presents a single model's output as a collegial result. The second is the application of the correlated-witness arithmetic to protocol design. That arithmetic is not claimed here. Kohli (2026) applied the same Kish correction to a panel of nine frontier judges and measured about two effective votes, and Kim et al. (2025) established the underlying error correlation across more than 350 models. A council of N models whose errors carry intraclass correlation ρ is worth = N / (1 + (N−1)ρ) independent witnesses, and that quantity saturates at 1/ρ however many models are added. Once a council is larger than 1/ρ, halving ρ beats doubling N, and a pair with low error correlation can outweigh five with high correlation. Which pairs those are is measured, not read off the label: the larger and more accurate models carry the most correlated errors even when architecture and provider differ (Kim et al., 2025), and the author's per-pair measurements found no detectable effect of geopolitical bloc on error correlation and, in the pairs measured, none of shared lineage (Chernets, 2026). The estimation procedure of Section 5.5 supplies that measurement. The third is an account of three deployment tiers, manual, one-tap mobile and browser-agent, and of the axis that separates them epistemically: whether the second model sees the first model's answer. Conditioning the second model raises ρ in exchange for error correction. The fourth is a small-sample observation of the counterfeit-council failure across five models, the one-sentence intervention that removed it in a three-model re-run, and a blinded three-arm evaluation design with a stated falsification condition. Correlated agreement is treated here as established, not as a finding. That a panel of models is worth far fewer independent witnesses than it has members has been measured directly: nine frontier judges drawn from seven families supply about two effective votes (Kohli, 2026), and error correlation rises with model capability even across providers and architectures (Kim et al., 2025). Section 5 restates the design-effect arithmetic behind those measurements, because three of the protocol's rules are derived from it and read as fastidiousness without it. The protocol then takes the other side of the same problem. That literature measures the correlation; this protocol ",
       "tags": [
-        "matrix geometric mean",
-        "Kubo-Ando means",
-        "positive semidefinite matrices",
-        "generalized locally Toeplitz sequences",
-        "spectral symbol",
-        "eigenvalue distribution",
-        "Matsumoto fidelity",
-        "counterexample"
+        "correlated errors",
+        "model agreement",
+        "multi-model synthesis",
+        "multi-agent debate",
+        "LLM-as-a-judge",
+        "self-consistency",
+        "effective sample size",
+        "verification",
+        "AI hallucination",
+        "ensemble"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Boundary limits of the matrix geometric mean and the failure of unrestricted GLT closure",
-      "url": "https://zenodo.org/records/23912963"
+      "title": "Agreement Is Not Independent Evidence: Auditable Multi-Model Synthesis Without an API",
+      "url": "https://zenodo.org/records/23931802"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -582,10 +561,10 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "8fe8d0d734906eda25e53c15",
-      "context_id": "0b2a70b8b1c7a8333d715da2",
+      "candidate_id": "effb6381e1c7baaab561ee89",
+      "context_id": "89020239b5f310062dd144a9",
       "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
+      "delivery_preview_truncated": true,
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
       "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
       "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
@@ -599,58 +578,20 @@
       "keyword_hits": [
         "bias",
         "failure",
-        "limitation",
-        "sat"
+        "verification"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.0,
+      "score": 6.9583,
       "source": "zenodo",
-      "source_context_sha256": "0f815ad86c51b269b7aaf17cc7c2bb27f42a6f4934e8cfb799c6d440efc81b7c",
+      "source_context_sha256": "3290ad8fe71331c6d50559c3adb7e00c18061c0fd2c2fc4333c2022074be9c1d",
       "source_published": "2026-11-03",
       "source_updated": "",
-      "summary": "Abstract: Classical inferential statistics and p-value hypothesis testing in healthcare big data repositories suffer from severe structural limitations, notably p-hacking, asymptotic N-bias, and the frequent violation of independent and identically distributed (i.i.d.) assumptions due to intra-patient longitudinal dependencies, hospital clustering, and epidemiological shockwaves. To overcome these failures, we introduce an Inverse Breakpoint Analysis, a scale-invariant, physics-inspired metrological audit framework. Our analysis treats discrete clinical event counts not as abstract probabilities, but as physical informational mass. Grounded in Garwood exact discrete limits and Wilson-Hilferty approximations, the framework extends our previous work on stress testing indices for Big health data and establishes three rigorous thresholds: a pure mass saturation limit, a baseline tolerance band, and a structural signal threshold. Through the use of these three parameters, our inverse breakpoint analysis eliminates false-positive artifacts induced by massive repository sizes while preventing under-powering in small cohorts. Ultimately, the framework demonstrates that percentage-based thresholds are kinematic artifacts of scale, whereas absolute excess discrete mass serves as the sole physical invariant for healthcare data validation. We validated this approach with numerous illustrative examples.",
+      "summary": "RESEARCH COLLECTION / FLAGSHIPS 241&ndash;250 OF 300 Scientific Failure, Metrology and Independent Evidence at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 These ten research-design monographs move from nano-quantum failure physics and reconstructed microrobotic sampling truth to blinded biosensing, interlaboratory transfer, uncertainty budgets, reference-material commutability, manufacturing batch effects, contamination traceability, drift/biology separation and mission-failure classification. They propose testable experimental contracts, not observed new scientific laws or clinical results. The ten English working editions contain 7,770 pages, 300 mathematical plates, 820 chapter openings, 4,100 one-page studies, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate presents a three-part speculative letter&mdash;Origin, Extreme Extrapolation and Future Research Plan&mdash;without replacing measured falsification and independent physical witnesses. Structural counts do not establish scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F241&ndash;F245 F241 NANO-QUANTUM RESEARCH SYSTEM FAILURE PHYSICS AT THE LIMIT &mdash; Focus: optical source ageing and actuator stuck-state fault. Direct witness: rate of hazardous events [h^-1]. Test against single-site repeatability without transfer. A live rival is detector gain drift; refuse release if a hazardous defect is released. F242 MICROROBOTIC SAMPLING TRUTH RECONSTRUCTION AT THE LIMIT &mdash; Focus: microchannel-wall adsorption and sorption-desorption memory. Direct witness: sample provenance recovery [percent]. Test against paper batch record plus endpoint inspection. A live rival is pipette volume error; refuse release if material balance or provenance does not close. F243 QUANTUM BIOSENSOR BLINDED CHALLENGE AT THE LIMIT &mdash; Focus: spin-coherence reference substitution and charge-state switching. Direct witness: prospective correct acceptance [percent]. Test against standard statistical process control with frozen limits. A live rival is microwave pickup; refuse release if a second site cannot reconstruct the qualification decision. F244 NANOROBOTIC INTERLABORATORY RING COMPARISON AT THE LIMIT &mdash; Focus: laser wavelength transfer and microscale thermal probe offset. Direct witness: absolute between-site measurement bias [unit]. Test against single-site repeatability without transfer. A live rival is laboratory temperature contrast; refuse release if a hazardous defect is released. F245 MICROSCALE SAMPLING UNCERTAINTY BUDGET AT THE LIMIT &mdash; Focus: volume-metering error and wall-loss uncertainty. Direct witness: prospective interval coverage [percent]. Test against paper batch record plus endpoint inspection. A live rival is liquid surface tension; refuse release if material balance or provenance does not close. &nbsp; &nbsp; SECOND RESEARCH UNIT&nbsp; /&nbsp; EVIDENCE, TRANSFER AND SUCCESSION RESEARCH UNIT II&nbsp; &middot;&nbsp; F246&ndash;F250 F246 QUANTUM SENSOR REFERENCE-MATERIAL COMMUTABILITY AT THE LIMIT &mdash; Focus: matrix-dependent binding and fluorophore photobleaching. Direct witness: noncommutability bias [unit]. Test against standard statistical process control with frozen limits. A live rival is analyte concentration mismatch; refuse release if a second site cannot reconstruct the qualification decision. F247 NANOROBOTIC MANUFACTURING BATCH EFFECT IDENTIFICATION AT THE LIMIT &mdash; Focus: lithography mask alignment and coating pore defects. Direct witness: unselected qualified batch yield [percent]. Test against single-site repeatability without transfer. A live rival is postfabrication sorting; refuse release if a hazardous defect is released. F248 MICROFLUIDIC SAMPLING CONTAMINATION-SOURCE TRACEABILITY AT THE LIMIT &mdash; Focus: tubing adsorption reservoir and biofilm retention. Direct witness: correct source classification [percent]. Test against paper batch record plus endpoint i",
       "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Inverse Breakpoint Analysis: A Scale-Invariant Physics-Inspired Metrological Audit for Sanitary Big Data",
-      "url": "https://zenodo.org/records/23913691"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "52707f0c6d718b9c4c520614",
-      "context_id": "e6c38ffdcee6efbdd2b58c9d",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.9167,
-      "source": "arxiv",
-      "source_context_sha256": "c8235a95b33fef72c2f7d5235dfe7ae035cea32c8b2fb5f96299cf98f9f3ad9c",
-      "source_published": "2026-11-01T15:43:41Z",
-      "source_updated": "2026-11-01T15:43:41Z",
-      "summary": "Memory systems for LLM agents are evaluated mostly on social dialogue, where facts accumulate and rarely change, so remembering reduces largely to finding the turn in which something was said. Financial dialogue breaks this assumption: figures are revised, stances shift without being restated, rules stated once govern later questions, and a single company is discussed under several analytical lenses. Memory systems that retrieve the passages most similar to a question, or the most recent ones, therefore return superseded values, miss rules that share no wording with the question, and cannot recover a stance spread across sessions. We present TrackMem, a per-speaker graph memory that tracks the history of figures, separates perspectives by entity and lens, and preserves each speaker's actions in chronological order. To evaluate it, we introduce FinLoCoMo, a benchmark of 15 long-horizon investment conversations with 765 questions in two splits: one following the LoCoMo categories and one targeting four failure modes. With two readers, TrackMem outperforms existing memory systems on both splits. On the failure-mode split it reaches 73.9% macro accuracy against 69.4% for the strongest baseline, with the largest gains on questions about revised figures (86.5% against 73.4%).",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "TrackMem: Tracking Evolving Beliefs in Long-Horizon Financial Dialogue",
-      "url": "https://arxiv.org/abs/2611.02001v1"
+      "title": "RESEARCH COLLECTION / FLAGSHIPS 241–250 OF 300 Scientific Failure, Metrology and Independent Evidence at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 These ten research-design monographs move from nano-quantum failure physics and reconstructed ",
+      "url": "https://zenodo.org/records/23931688"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -734,42 +675,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "a76d2501bdd5f805c48ed7d6",
-      "context_id": "b937dd79305e444a061afc55",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "failure mode"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.7917,
-      "source": "arxiv",
-      "source_context_sha256": "3d3c56d761d94b244fa774f430ea81e2f45c5573eee3abfe91558e9e884daa8d",
-      "source_published": "2026-11-02T06:28:45Z",
-      "source_updated": "2026-11-02T06:28:45Z",
-      "summary": "Indirect prompt injection creates a distinctive risk for blue-team Large Language Model (LLM) agents in Security Operations Centers (SOCs). Malicious instructions can be embedded in telemetry, tickets, retrieval results, or memory and then propagate through alert triage, incident summarization, response recommendation, and Indicator of Compromise (IOC) extraction as locally plausible intermediate decisions. We characterize this failure mode as evidence-chain contamination of protected task state. The main challenge is task dependent: a suspicious string may be malicious control text for summarization but essential evidence for IOC extraction. To address this challenge, we propose StateFence, a task-aware evaluation and defense framework that treats severity labels, incident narratives, response policies, and IOC sets as protected states. StateFence maps indirect prompt-injection attacks into explicit, stealth, multi-hop, and persistent SOC evidence attacks, records observable propagation traces, and routes defenses according to the attacked state. Across controlled SOC cases and public-SOC validation cases, StateFence lowers attack success and reduces failures that appear only after evidence is poisoned, while preserving task utility and avoiding the indicator loss caused by task-mismatched filtering. Our findings indicate that robust blue-team LLM agents require mechanisms that preserve task-critical state under untrusted evidence.",
-      "tags": [
-        "cs.CR",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "StateFence: Task-State Protection Against Evidence-Chain Contamination in Blue-Team LLM Agents",
-      "url": "https://arxiv.org/abs/2611.02605v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "a075f90e5d7cbbb0150e435e",
       "context_id": "aec31c006f17dcb8bd53bdcf",
       "delivery_preview_only": true,
@@ -845,41 +750,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "48a35dad5fe691cdf0824872",
-      "context_id": "96cfeb1fafe1418c80ccc2b8",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "confound",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.625,
-      "source": "arxiv",
-      "source_context_sha256": "d335d37e9164010e898529f85aa7b54745c3a23126fa645d7b90177d18c9229b",
-      "source_published": "2026-10-31T16:09:21Z",
-      "source_updated": "2026-10-31T16:09:21Z",
-      "summary": "We introduce Synergetic Autonomous Intelligence (SAI), a theory and design program for learning systems that form, preserve, revise, and compose relations while continuing to learn. SAI is built on three axioms: consequential distinctions must not become orphaned (U); identity is determined by future-faithful continuation under a declared contract (I); and unresolved defects are repaired by the least lawful local completion at the lowest admitted grade (L). We model a model, agent, tool, team, or environment boundary as a recursive semi-closed system with a Kernel-Ring representation, a Compile-Open-Participate cycle, and a typed residual comparing actual with claimed continuation. Under explicit finite or affine contracts, we establish relative consistency and conditional non-redundancy of U/I/L, characterize a contract-relative semantic quotient, construct an exact joint stochastic refinement, derive a constrained residual contraction, prove finite-horizon continued-service viability, and give an executed-intervention identification result with an observational-confounding boundary. We define GRC-Close as the generative and repair schema for this contract. The framework also gives finite contracts for action-effect-feedback loop re-entry, partial failure, duplicate-effect idempotency, replay, concurrent delivery, causal uncertainty, and threshold-radix state representation. KREIT, the Kernel-Ring Equilibrium Information Theory layer, treats information as a typed, resource-bounded distinction; the control layer authorizes, executes, audits, and updates actions across cloud-edge-end scales. These results establish a common contract-level vocabulary for representation, relation, memory, action, communication, explanation, coordination, and growth, while marking the assumptions and open boundaries required for later generalization.",
-      "tags": [
-        "cs.LG"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Synergetic Autonomous Intelligence: Three Axioms for Recursive Semi-Closed Learning",
-      "url": "https://arxiv.org/abs/2611.01070v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "65edd858e03671ae98901fa7",
       "context_id": "2f7f77a217dfcf4d918acd2d",
       "delivery_preview_only": true,
@@ -914,6 +784,171 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Allocating a Simulated Review Budget to Sleep–Wake Disagreements: Exploratory Analyses of Two Public Datasets",
       "url": "https://zenodo.org/records/23912847"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "88456e22b787b7e45fddf4e2",
+      "context_id": "03755a8eaebee21a006b3603",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "bias",
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4583,
+      "source": "zenodo",
+      "source_context_sha256": "60015ee9b6c6528582b2cbdcf10b0dbb30bacb26b5c89e885b7653ddffa4c909",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "RESEARCH COLLECTION / FLAGSHIPS 251&ndash;260 OF 300 Microscale Evidence, Fault Analysis &amp; Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an experimental subject: physical artifacts, raw-data custody, fair microrobotic comparators, quantum-sensor calibration, mission risk, repeat measurements, competing sensing models, post-failure containment, microfluidic fault injection and reconstructable correlated errors. None of the candidate systems is represented as independently validated or clinically authorized. Ten English 777-page working editions: 300 mathematical research plates, 820 chapter openings, 4,100 single-page investigations, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate includes three distinct future-facing essays: Origin, Extreme Extrapolation and Future Research Plan. Counts do not certify independent scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F251&ndash;F255 F251&nbsp; MICROSCALE MEASUREMENT ARTIFACT CAUSAL IDENTIFICATION AT THE LIMIT &mdash; Core: photon-detector afterpulsing; microfluidic stage drift. Witness: artifact-specific attribution recall [dimensionless]. Comparator: independently calibrated dual-sensor physical truth and a frozen classical artifact classifier. Rival: genuine delayed specimen fluorescence. Stop: sample reference identity is lost or unresolved artifact causes an unsafe physical release. F252&nbsp; NANO-QUANTUM SYSTEM RAW-DATA INTEGRITY AT THE LIMIT &mdash; Core: sensor frame loss during burst readout; sample barcode collision. Witness: independently replayable raw-record fraction [dimensionless]. Comparator: immutable append-only event log with independent checksum and physical raw acquisition. Rival: truly silent physical interval. Stop: source data or physical specimen identity cannot be reconstructed from an unmodified acquisition. F253&nbsp; MICROROBOTIC SAMPLING STRONG BENCHMARK COMPARISON AT THE LIMIT &mdash; Core: manual pipette aspiration limit; sampling operation energy. Witness: valid recovered sample mass per joule [ug J^-1]. Comparator: optimized calibrated manual pipetting plus passive microchannel control. Rival: robotic control simply uses more sample. Stop: sample contamination, unrecorded loss or physical damage exceeds preregistered limits. F254&nbsp; QUANTUM SENSOR CROSS-SITE CALIBRATION TRANSFER AT THE LIMIT &mdash; Core: ODMR microwave-frequency reference transfer; photodetector spectral response mismatch. Witness: cross-site bias [nT]. Comparator: independent site-specific NIST-traceable calibration and a frozen classical sensor transfer. Rival: true magnetic field shift. Stop: untraceable reference ancestry or unsafe calibration release under failed commutability. F255&nbsp; NANOROBOTIC MISSION RELIABILITY STATISTICS AT THE LIMIT &mdash; Core: early mission failure censoring; recovery-conditional survival bias. Witness: mission completion probability [dimensionless]. Comparator: fixed-limit statistical process control with transparent unselected failure registry. Rival: improved mission reliability. Stop: a hazardous failure has no traceable state or is incorrectly classified as safe. &nbsp; &nbsp; RESEARCH UNIT II&nbsp; /&nbsp; RECONSTRUCTION, RECOVERY AND SUCCESSION F256&nbsp; MICROSCALE EXPERIMENT REPEAT-MEASUREMENT BIAS AT THE LIMIT &mdash; Core: measurement sequence effect; sensor warm-up effect. Witness: paired measurement bias [native units]. Comparator: randomized blinded single-site repeatability with external second-operator reference. Rival: true specimen ageing. Stop: unidentified systematic error exceeds the preregistered accuracy margin. F257&nbsp; QUANTUM BIOSENSING RIVAL-MODEL VALIDATION AT THE LIMIT &mdash; Core: spin-state dependent fluorescence; surface adsorption optical rival. Witness: held-out calibrated log score [nats per case]. Comparator: optimiz",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "RESEARCH COLLECTION / FLAGSHIPS 251–260 OF 300 Microscale Evidence, Fault Analysis & Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an e",
+      "url": "https://zenodo.org/records/23932285"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "685913395399f0d7e6530ff1",
+      "context_id": "b35dc2a10ec72f557bb9f9f2",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "rup"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "5789dec1a3a155ab7a713c0fe4136128dedf7ffea9cbe0b53e24df4207b93239",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "Abstract: Keeping the modern power grid running during heatwaves, wildfires, or cyberattacks requires knowing which power lines are the most dangerous \"dominoes\" if two or three of them fail at the same time. However, checking every possible combination of multiple broken lines across the Western U.S. grid is a math problem with millions of possibilities—far too slow for computers to solve in real time using standard physics equations. Conversely, taking shortcuts by simply looking at a map of the grid (to find the biggest, most connected hubs) fails because electricity does not travel like cars on a highway; it cannot be told which road to take. Instead, electricity automatically splits across all available wires based on their physical resistance. When a major line gets crowded or breaks, electricity surges onto smaller side-lines, causing chain-reaction blackouts far away from the original problem. In this memo, we introduce Physics-Informed Network Reshaping (PINR), an AI framework that bridges the gap between map-based speed and physical accuracy. PINR combines a specialized, mathematically predictable neural network with a network-disruption algorithm originally designed for counter-terrorism. Rather than testing millions of broken-wire combinations one by one, PINR uses a single, rapid pass to act as a dual-use stress gauge: For Grid Defenders (\"Blue Team\" Healing): It shows grid operators the exact 27 congested power lines where slightly \"throttling\" the flow (like adjusting valves on a water pipe) relieves 99.1% of grid overloads during a peak evening crunch, pushing excess electricity safely onto underused backup lines. For Security Analysts (\"Red Team\" Vulnerability Hunting): Because the lines that need the most throttling to heal the grid are the exact same lines carrying the most dangerous physical stress, PINR automatically narrows the search for catastrophic multi-line failures from 235 lines down to just 27. This cuts the number of three-line failure combinations to check by 99.86% (from over 2.1 million down to under 3,000). Most importantly, testing PINR on the 2026 Western Energy Imbalance Market (WEIM) proves that looking at a static map of the grid is dangerously misleading. While standard map-based analysis points to California's central grid hub (CAISO) as the most critical choke point, PINR's physics engine reveals that California's many parallel lines easily absorb the load. Instead, the true physical bottlenecks hide in the power-exporting corridors of the Desert Southwest (Arizona and the Lower Colorado River) and the mountain seams connecting Montana, the Pacific Northwest, and Utah. Correspondence and collaboration inquiries: aes@acm.org",
+      "tags": [
+        "Physics-Informed Network Reshaping (PINR)",
+        "Physics-Informed Machine Learning (PIML)",
+        "Input-Convex Neural Networks (ICNNs)",
+        "Projected Gradient Descent (PGD)",
+        "Continuous Topology Relaxation",
+        "Convex Surrogate Modeling",
+        "Bi-Level Optimization",
+        "Red-Team / Blue-Team Operational Duality",
+        "Network Destabilization Heuristics (STONE)",
+        "N-k Contingency Screening",
+        "Bulk Power System Resilience",
+        "Cascading Outage Analysis",
+        "Linearized DC Optimal Power Flow (DC-OPF)",
+        "Kirchhoff Loop-Flow Redistribution",
+        "Line Outage Distribution Factors (LODF)",
+        "Power Transfer Distribution Factors (PTDF)",
+        "Expected Demand Not Served (EDNS)",
+        "Corrective Topology Control",
+        "Flexible AC Transmission Systems (FACTS)",
+        "Distributed Series Reactors (DSRs)",
+        "Braess's Paradox in Power Grids",
+        "Western Energy Imbalance Market (WEIM)",
+        "Extended Day-Ahead Market (EDAM)",
+        "Western Interconnection",
+        "California ISO (CAISO)",
+        "Balancing Authority Area (BAA) Interties",
+        "Unrolled Multigraph Topology",
+        "Spectral Graph Theory",
+        "Topological Laplacian & Algebraic Connectivity (Fiedler Value)",
+        "Effective Resistance Distance (Klein Resistance)",
+        "Shortest-Path Betweenness Centrality",
+        "Minimum Edge Cut-Sets (Stoer-Wagner Min-Cut)"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Physics-Informed Network Reshaping (PINR) for Western Power Grid Resilience",
+      "url": "https://zenodo.org/records/23932315"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "9b34eae8d4d3a6b52437d6d8",
+      "context_id": "1cbfdc841e27abbb4a9c1b1b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "rup"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "9f383baaccdaa057fc2219eb0d48f96675f5f12d923ad73c88da3ea746e99536",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "Abstract: Keeping the modern power grid running during heatwaves, wildfires, or cyberattacks requires knowing which power lines are the most dangerous \"dominoes\" if two or three of them fail at the same time. However, checking every possible combination of multiple broken lines across the Western U.S. grid is a math problem with millions of possibilities—far too slow for computers to solve in real time using standard physics equations. Conversely, taking shortcuts by simply looking at a map of the grid (to find the biggest, most connected hubs) fails because electricity does not travel like cars on a highway; it cannot be told which road to take. Instead, electricity automatically splits across all available wires based on their physical resistance. When a major line gets crowded or breaks, electricity surges onto smaller side-lines, causing chain-reaction blackouts far away from the original problem. In this memo, we introduce Physics-Informed Network Reshaping (PINR), an AI framework that bridges the gap between map-based speed and physical accuracy. PINR combines a specialized, mathematically predictable neural network with a network-disruption algorithm originally designed for counter-terrorism. Rather than testing millions of broken-wire combinations one by one, PINR uses a single, rapid pass to act as a dual-use stress gauge: For Grid Defenders (\"Blue Team\" Healing): It shows grid operators the exact 27 congested power lines where slightly \"throttling\" the flow (like adjusting valves on a water pipe) relieves 99.1% of grid overloads during a peak evening crunch, pushing excess electricity safely onto underused backup lines. For Security Analysts (\"Red Team\" Vulnerability Hunting): Because the lines that need the most throttling to heal the grid are the exact same lines carrying the most dangerous physical stress, PINR automatically narrows the search for catastrophic multi-line failures from 235 lines down to just 27. This cuts the number of three-line failure combinations to check by 99.86% (from over 2.1 million down to under 3,000). Most importantly, testing PINR on the 2026 Western Energy Imbalance Market (WEIM) proves that looking at a static map of the grid is dangerously misleading. While standard map-based analysis points to California's central grid hub (CAISO) as the most critical choke point, PINR's physics engine reveals that California's many parallel lines easily absorb the load. Instead, the true physical bottlenecks hide in the power-exporting corridors of the Desert Southwest (Arizona and the Lower Colorado River) and the mountain seams connecting Montana, the Pacific Northwest, and Utah. Correspondence and collaboration inquiries: aes@acm.org",
+      "tags": [
+        "Physics-Informed Network Reshaping (PINR)",
+        "Physics-Informed Machine Learning (PIML)",
+        "Input-Convex Neural Networks (ICNNs)",
+        "Projected Gradient Descent (PGD)",
+        "Continuous Topology Relaxation",
+        "Convex Surrogate Modeling",
+        "Bi-Level Optimization",
+        "Red-Team / Blue-Team Operational Duality",
+        "Network Destabilization Heuristics (STONE)",
+        "N-k Contingency Screening",
+        "Bulk Power System Resilience",
+        "Cascading Outage Analysis",
+        "Linearized DC Optimal Power Flow (DC-OPF)",
+        "Kirchhoff Loop-Flow Redistribution",
+        "Line Outage Distribution Factors (LODF)",
+        "Power Transfer Distribution Factors (PTDF)",
+        "Expected Demand Not Served (EDNS)",
+        "Corrective Topology Control",
+        "Flexible AC Transmission Systems (FACTS)",
+        "Distributed Series Reactors (DSRs)",
+        "Braess's Paradox in Power Grids",
+        "Western Energy Imbalance Market (WEIM)",
+        "Extended Day-Ahead Market (EDAM)",
+        "Western Interconnection",
+        "California ISO (CAISO)",
+        "Balancing Authority Area (BAA) Interties",
+        "Unrolled Multigraph Topology",
+        "Spectral Graph Theory",
+        "Topological Laplacian & Algebraic Connectivity (Fiedler Value)",
+        "Effective Resistance Distance (Klein Resistance)",
+        "Shortest-Path Betweenness Centrality",
+        "Minimum Edge Cut-Sets (Stoer-Wagner Min-Cut)"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Physics-Informed Network Reshaping (PINR) for Western Grid Resilience",
+      "url": "https://zenodo.org/records/23930955"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1138,8 +1173,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b833ebc6e92ec160e79edb68",
-      "context_id": "46e985ad295a02a89e083a5a",
+      "candidate_id": "88456e22b787b7e45fddf4e2",
+      "context_id": "0047521e68313d8e1ce7beeb",
       "delivery_preview_only": true,
       "delivery_preview_truncated": true,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1154,128 +1189,21 @@
       ],
       "keyword_hits": [
         "benchmark",
-        "control",
-        "rup",
-        "sat"
+        "calibration",
+        "control"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.9167,
+      "score": 10.125,
       "source": "zenodo",
-      "source_context_sha256": "17e68e43243f97db85c1deb8f3953e87279333233d203dc4c48d097260a2dd39",
+      "source_context_sha256": "a3fba9613092ab991cf3ab716a3e143f9c0da3796ba4d22b228ae7c59e0a9e74",
       "source_published": "2026-11-03",
       "source_updated": "",
-      "summary": "Abstract Sān&eacute;r establishes a recursive control architecture for task regions by placing topology, self-modeling scheduling, and certificate-governed execution under one executable resource semantics. The nine-node construction supports exact recursive expansion and addressing. Its formal system establishes capacity safety, deterministic cross-layer selection, partition safety, conditional liveness, and computable deadline and recovery bounds. Using entity-isolated validation and one-time test splits, we evaluated the shared kernels and domain adapters in executable state-transition simulations and public benchmark workloads over 32&ndash;64 independent worlds, with deployment evidence obtained from 48 physical GPU blocks and eight fresh process pairs in the official Kubernetes scheduler-performance harness. Shared kernels with explicit domain realizations established task-level all-comparator superiority, while matched Kubernetes execution established a throughput advantage over the official default scheduler. The recursive representation preserved exact adjacency with a small measured footprint as graph size increased. Mechanism evidence remains separate from direct performance claims. Boundary results and nonidentifiability tests are reported independently. Together, the proofs and matched comparisons establish Sān&eacute;r as a reusable and auditable control architecture whose shared mechanisms transfer across structurally different systems tasks. Validation design The study reports 52 simulation tasks and two deployment endpoints. Simulation comparisons use matched frozen worlds, observable information, action spaces, resource ceilings, and decision-time budgets. The Kubernetes deployment uses fresh paired processes under the same official scheduling and binding boundaries. Independent-unit inference, primary endpoints, and comparison procedures follow the recorded experimental contracts. Task-level all-comparator conclusions require passage against every member of the specified comparator family. Suite-defined Holm or FDR adjustments control multiplicity. Direct performance, mechanism validation, boundary results, and nonidentifiability remain separate evidence classes. Comparator strength and field standing Comparator selection was deliberately demanding. The experiments include established scheduling methods, matched MPC and CP-SAT, public MAPF implementations, official Kubernetes scheduling, strong decentralized-learning algorithms, and mature domain-specific methods. Every direct comparison uses matched information and resources. Executed comparator implementations are identified precisely. The consensus experiment uses a HotStuff three-chain simulation and a validation-tuned partition-threshold selector. The distribution-estimation experiment uses a discounted-loss context-depth KT mixture alongside Bayesian online changepoint prediction and discounted KT estimation. Published BFTBrain and context-tree weighting provide the corresponding methodological lineages. Results overview Sān&eacute;r established task-level all-comparator superiority across 38 simulation tasks. Representative findings include a 764.53% improvement over equal-degree expander control, a 208.90% improvement over Exact Diffusion, and a 33.40% improvement over the Graph500 top-down port. At 5,000 nodes, the topology-based placement adapter sustained 69,258 placements per second. Under matched official Kubernetes execution, Sān&eacute;r achieved 892.80 placements per second versus 371.19 for the default scheduler, with a mean paired throughput ratio of 2.40. Exact recursive-topology representation preserved neighbor recovery at 508&ndash;716 measured bytes through 26,244 nodes. Complete self-modeling was measured independently. The full experimental result index is provided in the Additional Description. Confirmatory scope The 38 task-level conclusions cover their complete specified strong-comparator families. Other direct comparisons retain ",
-      "tags": [
-        "Sānér",
-        "recursive task regions",
-        "nine-node cubic topology",
-        "balanced-ternary addressing",
-        "self-modeling scheduling",
-        "bounded candidate synthesis",
-        "absolute-rank queuing",
-        "certificate-based governance",
-        "cross-layer atomic commit",
-        "fault-tolerant distributed control",
-        "all-comparator conjunctive inference",
-        "same-information benchmarking",
-        "nonidentifiability testing",
-        "equal-sparsity dependency retrieval",
-        "multi-echelon supply-chain control",
-        "urban signal control",
-        "dynamic multi-agent collaboration",
-        "unified constraint scheduling",
-        "dynamic multi-agent path finding",
-        "cyber lateral-movement defense",
-        "alpha queue scheduling",
-        "decentralization and anti-decapitation",
-        "same-resource scale control",
-        "Kubernetes constrained scheduling",
-        "control-plane latency",
-        "exact information transmission",
-        "native structural compression",
-        "generic compression boundary",
-        "airport takeoff queueing",
-        "intersection passage planning",
-        "decentralized governance",
-        "drifting discrete-distribution estimation"
-      ],
+      "summary": "RESEARCH COLLECTION / FLAGSHIPS 251&ndash;260 OF 300 Microscale Evidence, Fault Analysis &amp; Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an experimental subject: physical artifacts, raw-data custody, fair microrobotic comparators, quantum-sensor calibration, mission risk, repeat measurements, competing sensing models, post-failure containment, microfluidic fault injection and reconstructable correlated errors. None of the candidate systems is represented as independently validated or clinically authorized. Ten English 777-page working editions: 300 mathematical research plates, 820 chapter openings, 4,100 single-page investigations, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate includes three distinct future-facing essays: Origin, Extreme Extrapolation and Future Research Plan. Counts do not certify independent scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F251&ndash;F255 F251&nbsp; MICROSCALE MEASUREMENT ARTIFACT CAUSAL IDENTIFICATION AT THE LIMIT &mdash; Core: photon-detector afterpulsing; microfluidic stage drift. Witness: artifact-specific attribution recall [dimensionless]. Comparator: independently calibrated dual-sensor physical truth and a frozen classical artifact classifier. Rival: genuine delayed specimen fluorescence. Stop: sample reference identity is lost or unresolved artifact causes an unsafe physical release. F252&nbsp; NANO-QUANTUM SYSTEM RAW-DATA INTEGRITY AT THE LIMIT &mdash; Core: sensor frame loss during burst readout; sample barcode collision. Witness: independently replayable raw-record fraction [dimensionless]. Comparator: immutable append-only event log with independent checksum and physical raw acquisition. Rival: truly silent physical interval. Stop: source data or physical specimen identity cannot be reconstructed from an unmodified acquisition. F253&nbsp; MICROROBOTIC SAMPLING STRONG BENCHMARK COMPARISON AT THE LIMIT &mdash; Core: manual pipette aspiration limit; sampling operation energy. Witness: valid recovered sample mass per joule [ug J^-1]. Comparator: optimized calibrated manual pipetting plus passive microchannel control. Rival: robotic control simply uses more sample. Stop: sample contamination, unrecorded loss or physical damage exceeds preregistered limits. F254&nbsp; QUANTUM SENSOR CROSS-SITE CALIBRATION TRANSFER AT THE LIMIT &mdash; Core: ODMR microwave-frequency reference transfer; photodetector spectral response mismatch. Witness: cross-site bias [nT]. Comparator: independent site-specific NIST-traceable calibration and a frozen classical sensor transfer. Rival: true magnetic field shift. Stop: untraceable reference ancestry or unsafe calibration release under failed commutability. F255&nbsp; NANOROBOTIC MISSION RELIABILITY STATISTICS AT THE LIMIT &mdash; Core: early mission failure censoring; recovery-conditional survival bias. Witness: mission completion probability [dimensionless]. Comparator: fixed-limit statistical process control with transparent unselected failure registry. Rival: improved mission reliability. Stop: a hazardous failure has no traceable state or is incorrectly classified as safe. &nbsp; &nbsp; RESEARCH UNIT II&nbsp; /&nbsp; RECONSTRUCTION, RECOVERY AND SUCCESSION F256&nbsp; MICROSCALE EXPERIMENT REPEAT-MEASUREMENT BIAS AT THE LIMIT &mdash; Core: measurement sequence effect; sensor warm-up effect. Witness: paired measurement bias [native units]. Comparator: randomized blinded single-site repeatability with external second-operator reference. Rival: true specimen ageing. Stop: unidentified systematic error exceeds the preregistered accuracy margin. F257&nbsp; QUANTUM BIOSENSING RIVAL-MODEL VALIDATION AT THE LIMIT &mdash; Core: spin-state dependent fluorescence; surface adsorption optical rival. Witness: held-out calibrated log score [nats per case]. Comparator: optimiz",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Sānér, The Recursive Trinity Structure for Task Regions",
-      "url": "https://zenodo.org/records/23912570"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b089cb167a5faffae9ce3e53",
-      "context_id": "e4ab4b0c9a0c31962de9612e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "verification"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.2083,
-      "source": "arxiv",
-      "source_context_sha256": "6811d7f51ca4957be568db2be1b5c9290f8ab9b2b8222d5acfde46a7f877f1c1",
-      "source_published": "2026-11-02T18:41:14Z",
-      "source_updated": "2026-11-02T18:41:14Z",
-      "summary": "Multimodal large language models (MLLMs) can generate detailed video captions, yet they may overemphasize minor details while overlooking essential context and key events. We argue that not all visual evidence deserves equal attention, as the importance of visual information depends on the content of each video. Motivated by this observation, we propose Reviso, an agentic video captioning framework that learns what to observe and how to gather relevant visual evidence. From a low-frame-rate global preview, Reviso constructs a hierarchical Context--Focus--Points (CFP) observation plan that identifies the video context, prioritizes key aspects, and defines concrete observation targets and corresponding tools. Guided by this plan, Reviso performs goal-directed active perception by selectively revisiting temporal segments and combining tools for fine-grained inspection. It interprets the acquired evidence, updates its plan as needed, and integrates global and local information to generate the final caption. To learn this observation strategy, we develop a verification-guided pipeline that constructs high-quality training trajectories through factual verification and teacher-guided refinement. We further train Reviso using Group Relative Policy Optimization (GRPO), incorporating a key-fact reward for caption quality, a Plan Alignment Reward (PAR) for identifying important observation targets, and an Unproductive Tool-Call Penalty (UTCP) that adjusts observation-cost penalties based on caption quality. Experiments across four video captioning benchmarks show that Reviso outperforms the evaluated open-source baselines, while its generated captions better support downstream video question answering. These findings highlight the effectiveness and potential of priority-guided active observation for video captioning.",
-      "tags": [
-        "cs.CV"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
-      "url": "https://arxiv.org/abs/2611.03602v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "52707f0c6d718b9c4c520614",
-      "context_id": "34f550d7895ca35e7b0143de",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "benchmark",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.8333,
-      "source": "arxiv",
-      "source_context_sha256": "75d31e7a38e7bdebf10e172e9444cfb3ed3b4315a7d6c539e7e375d6328236d0",
-      "source_published": "2026-11-01T15:43:41Z",
-      "source_updated": "2026-11-01T15:43:41Z",
-      "summary": "Memory systems for LLM agents are evaluated mostly on social dialogue, where facts accumulate and rarely change, so remembering reduces largely to finding the turn in which something was said. Financial dialogue breaks this assumption: figures are revised, stances shift without being restated, rules stated once govern later questions, and a single company is discussed under several analytical lenses. Memory systems that retrieve the passages most similar to a question, or the most recent ones, therefore return superseded values, miss rules that share no wording with the question, and cannot recover a stance spread across sessions. We present TrackMem, a per-speaker graph memory that tracks the history of figures, separates perspectives by entity and lens, and preserves each speaker's actions in chronological order. To evaluate it, we introduce FinLoCoMo, a benchmark of 15 long-horizon investment conversations with 765 questions in two splits: one following the LoCoMo categories and one targeting four failure modes. With two readers, TrackMem outperforms existing memory systems on both splits. On the failure-mode split it reaches 73.9% macro accuracy against 69.4% for the strongest baseline, with the largest gains on questions about revised figures (86.5% against 73.4%).",
-      "tags": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "TrackMem: Tracking Evolving Beliefs in Long-Horizon Financial Dialogue",
-      "url": "https://arxiv.org/abs/2611.02001v1"
+      "title": "RESEARCH COLLECTION / FLAGSHIPS 251–260 OF 300 Microscale Evidence, Fault Analysis & Covariant Reconstruction at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 This research-design collection treats the integrity of scientific measurement as an e",
+      "url": "https://zenodo.org/records/23932285"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1331,6 +1259,44 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Robots and Jobs Revisited: A Bit-Exact Replication, Shift-Share Anatomy, and Capital-Stock Extension of Acemoglu and Restrepo (2020)",
       "url": "https://zenodo.org/records/23920579"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "4e03ee43d704a04a9fc3bddf",
+      "context_id": "e5d3a122e85f25977cf6b6ce",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 8.7917,
+      "source": "zenodo",
+      "source_context_sha256": "e44c26e84db87c550923cb55fc80a4be89f94440258df208befc3fd12bcbf0df",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "Replication package for the empirical study \"Who Migrates the Schema? An Empirical Study of Database Changes in AI Coding Agent Pull Requests\" (submitted to Empirical Software Engineering). The study analyses what AI coding agents (OpenAI Codex, GitHub Copilot, Devin, Cursor, Claude Code, Google Jules) do in the database layer (migrations, DDL, ORM schemas, raw SQL) of GitHub pull requests, and compares them with human pull requests from the same 889 database-bearing repositories and the same period (2024-12-24 to 2025-10-24). The package contains (i) code.zip: the frozen detector specification, mining code, human-baseline collector, independent re-implementation, statistical analysis (Python and R), revision analyses, all output tables and the human-validation labels; (ii) data.zip: sanitised per-PR and per-file derived tables sufficient to re-run the statistical analysis. GitHub person logins are pseudonymised (HMAC-SHA256 with a secret salt); bot and agent accounts are kept because they define the treatment. Patch text, PR titles/bodies and comments are not redistributed; scripts to re-collect them are included. Agent-side tables derive from the AIDev dataset (hao-li/AIDev, MSR '26; CC BY 4.0).",
+      "tags": [
+        "AI coding agents",
+        "pull requests",
+        "database schema migration",
+        "mining software repositories"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Replication package for \"Who Migrates the Schema? An Empirical Study of Database Changes in AI Coding Agent Pull Requests\"",
+      "url": "https://zenodo.org/records/23932656"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1508,8 +1474,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "c61503e65babe9a0e01afc8c",
-      "context_id": "c1c254d9a9c934e5dea4d873",
+      "candidate_id": "36827e4e064a57fadb0e37bc",
+      "context_id": "9782c62f08bcbc41b4519b0c",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::CONTROL",
@@ -1523,31 +1489,57 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "counterexample",
-        "sat",
+        "control",
+        "drat",
+        "holdout",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 7.875,
+      "source": "zenodo",
+      "source_context_sha256": "a7d42541e11664e5a6510164bba51fa1176b66c5d9b695c1dec337edf85254f3",
+      "source_published": "2026-11-03",
+      "source_updated": "",
+      "summary": "PHASE v7.1.7 Remove the temporary temporal-example button from the custom panel. Add Restore automatic residual trend for custom DET/STC, enabled by default. Disabled treats the removed field as a systematic observation component; residual modelling remains unchanged. Propagate uncertainty for the selected target, including shared-data and assigned-parameter cross terms. Export both the removed TemporalTrend_mm and applied RestoredTrend_mm ; total = custom + restored trend + residual. Record the target choice in JSON/MAT. Enable the native automatic temporal check by default and inspect individual PS as well as the AOI mean. Supported local trends can refit the existing polynomial with time-space interactions, preserving native uncertainty and outlier rejection. Guard new terms against rank deficiency. Preserve automatic STC atmospheric-offset semantics: Auto diagnoses without adding a confounded common trend in residualAtm mode. Correct degree-three 1D STC reconstruction so observation predictions include the quadratic terms too. Align app and all installer versions to 7.1.7. Conditional uncertainty excludes model-selection uncertainty and regularisation bias; detrending does not certify stationarity. PHASE v7.1.6 Simplify the custom panel by removing residual-mean and full assigned-covariance editors; preserve existing profile settings with a contextual indication when active. Fixed-parameter standard deviations remain in the parameter table. Add a temporal quadratic example: estimated a t + b t², no function-file override, and automatic displacement referencing. Existing model configurations remain unchanged until the example is selected. Keep automatic residual-field correction and component exports, allowing comparison of the time-only custom contribution with the full prediction. Align application and all installer versions to 7.1.6. PHASE v7.1.5 Correct automatic residual-field selection after custom modelling: temporal validation determines whether observed trends are removed. Spatial validation guides regularisation and reports prediction coverage; it no longer vetoes an observed temporal correction. Refine the automatic regularisation search while retaining the native polynomial and cubic spline bases, original outlier filter and covariance estimators. Subtract the selected additional mean before residual modelling and restore it at PS, grid and query locations with shared-data uncertainty propagation. Retain covariance plots and numeric checks; no residual diagnostic figures are generated. Verify covariance/derivative oracles, four custom paths, noise/oscillation safeguards, and a valid covariance that decays over the full finite observation range. Detrending does not certify stationarity; output uncertainty remains conditional on model selection and regularisation. App and installer versions aligned to 7.1.5 on all platforms. PHASE v7.1.4 Group temporal/spatial covariance controls in the 1D model / 2D model pages. Save custom and automatic figures together in the run figures folder, with PNG and editable FIG; add editable final-frame snapshots alongside animations. Automatically validate additional space-time residual mean fields for custom DET/STC in both dimensions, using native polynomial/cubic spline bases and temporal/spatial holdouts. Keep the supported common correction when spatial validation fails. No extra user controls. Preserve the fixed custom model and original outlier rejection. Propagate shared-data cross covariance and assigned-parameter uncertainty through the selected additional mean fit. Remove residual diagnostic figures from PHASE output; retain original covariance plots and numeric diagnostic files. Export candidate selection diagnostics and covariance review checks. Detrending does not certify stationarity; selected-field/regularisation uncertainty and bias are excluded from conditional output uncertainty. PHASE v7.1.3 Size Excel report columns from displayed numeric values, including large ",
+      "tags": [],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "robimonti/PHASE: PHASE v7.1.7",
+      "url": "https://zenodo.org/records/23932825"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "effb6381e1c7baaab561ee89",
+      "context_id": "5a54fd5136f8fe73e97f13d8",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": true,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "calibration",
+        "control",
         "verification"
       ],
       "mirror_lens": "CONTROL",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 7.2083,
+      "score": 7.25,
       "source": "zenodo",
-      "source_context_sha256": "41cf7ed4afdd81df172a50f4f9fe1285c196583bb4dc8c7feda7cc7ecef6eff9",
+      "source_context_sha256": "49ed77bca491dedece5b1de4400f71c0ce339d7190788c4eb10fdb1fff5d460c",
       "source_published": "2026-11-03",
       "source_updated": "",
-      "summary": "Unrefereed research candidate. In one sentence: the matrix geometric mean can jump at singular matrices, every possible jump is described by one rank condition, and the same mechanism refutes a published claim that the symbol of the geometric mean of two GLT matrix-sequences is always the geometric mean of their symbols. The geometric mean A#B of two positive definite matrices is the matrix analogue of &radic;(ab), used to average covariance matrices and structured matrices and to define the Matsumoto fidelity of quantum states. It need not be continuous at singular pairs. Theorem 1 shows that X is a limit of A j #B j with positive definite A j &rarr; A, B j &rarr; B exactly when X &#8829; 0, the block matrix [[A, X], [X, B]] is positive semidefinite and its rank is at most the dimension N (a dilation description with an auxiliary contraction already follows from recent work of Jones; the explicit elimination is the contribution). At equal inputs this gives the full set of limits and the exact interval of limiting Matsumoto fidelities. For generalized locally Toeplitz (GLT) matrix-sequences, uniformly bounded positive definite inputs with identical scalar symbols can have geometric means with the wrong symbol (4/5 instead of 1 on half the interval) or no eigenvalue distribution at all. This refutes Theorem 4 and Conjecture 1 of the arXiv version of Ilyas, Khan, Loi and Serra-Capizzano and, according to an AI-assisted reading of the published text, Theorem 3 and Conjecture 1 of their article in Linear Algebra Appl. (2025); the failing step of the proof is located. Positive results: closure for every Kubo-Ando mean when the sum of the symbols is positive definite almost everywhere; a one-sided theorem that the regularised symbol is always an upper envelope; and, for bounded Riemann-integrable scalar symbols of the space variable only, a sharp dichotomy (the formula holds for every realisation if and only if the symbols have no common zero set of positive measure or essentially disjoint supports). The classical two-dimensional discontinuity, Ando's maximal characterisation and the envelope X &#8828; A#B are earlier work and are credited. The archive contains the manuscript (PDF and Markdown source), two figures with the script that draws them, an exact verifier (verify_exact.py, Python standard library only, 1,030 rational and Gaussian-rational checks of closed forms and finite assemblies, with a mutation self-test) and its retained output, the bibliography with its Crossref/arXiv records, the dated novelty ledger, a revision note, CI and SHA-256 sums. Assurance: written proofs; the verifier checks finite exact identities, not the theorems' limits or quantifiers; internal AI-assisted review only (not human peer review, independent reproduction or formal verification). Creator: Anonymous. Text and figures CC0-1.0; code MIT.",
-      "tags": [
-        "matrix geometric mean",
-        "Kubo-Ando means",
-        "positive semidefinite matrices",
-        "generalized locally Toeplitz sequences",
-        "spectral symbol",
-        "eigenvalue distribution",
-        "Matsumoto fidelity",
-        "counterexample"
-      ],
+      "summary": "RESEARCH COLLECTION / FLAGSHIPS 241&ndash;250 OF 300 Scientific Failure, Metrology and Independent Evidence at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 These ten research-design monographs move from nano-quantum failure physics and reconstructed microrobotic sampling truth to blinded biosensing, interlaboratory transfer, uncertainty budgets, reference-material commutability, manufacturing batch effects, contamination traceability, drift/biology separation and mission-failure classification. They propose testable experimental contracts, not observed new scientific laws or clinical results. The ten English working editions contain 7,770 pages, 300 mathematical plates, 820 chapter openings, 4,100 one-page studies, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate presents a three-part speculative letter&mdash;Origin, Extreme Extrapolation and Future Research Plan&mdash;without replacing measured falsification and independent physical witnesses. Structural counts do not establish scientific novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F241&ndash;F245 F241 NANO-QUANTUM RESEARCH SYSTEM FAILURE PHYSICS AT THE LIMIT &mdash; Focus: optical source ageing and actuator stuck-state fault. Direct witness: rate of hazardous events [h^-1]. Test against single-site repeatability without transfer. A live rival is detector gain drift; refuse release if a hazardous defect is released. F242 MICROROBOTIC SAMPLING TRUTH RECONSTRUCTION AT THE LIMIT &mdash; Focus: microchannel-wall adsorption and sorption-desorption memory. Direct witness: sample provenance recovery [percent]. Test against paper batch record plus endpoint inspection. A live rival is pipette volume error; refuse release if material balance or provenance does not close. F243 QUANTUM BIOSENSOR BLINDED CHALLENGE AT THE LIMIT &mdash; Focus: spin-coherence reference substitution and charge-state switching. Direct witness: prospective correct acceptance [percent]. Test against standard statistical process control with frozen limits. A live rival is microwave pickup; refuse release if a second site cannot reconstruct the qualification decision. F244 NANOROBOTIC INTERLABORATORY RING COMPARISON AT THE LIMIT &mdash; Focus: laser wavelength transfer and microscale thermal probe offset. Direct witness: absolute between-site measurement bias [unit]. Test against single-site repeatability without transfer. A live rival is laboratory temperature contrast; refuse release if a hazardous defect is released. F245 MICROSCALE SAMPLING UNCERTAINTY BUDGET AT THE LIMIT &mdash; Focus: volume-metering error and wall-loss uncertainty. Direct witness: prospective interval coverage [percent]. Test against paper batch record plus endpoint inspection. A live rival is liquid surface tension; refuse release if material balance or provenance does not close. &nbsp; &nbsp; SECOND RESEARCH UNIT&nbsp; /&nbsp; EVIDENCE, TRANSFER AND SUCCESSION RESEARCH UNIT II&nbsp; &middot;&nbsp; F246&ndash;F250 F246 QUANTUM SENSOR REFERENCE-MATERIAL COMMUTABILITY AT THE LIMIT &mdash; Focus: matrix-dependent binding and fluorophore photobleaching. Direct witness: noncommutability bias [unit]. Test against standard statistical process control with frozen limits. A live rival is analyte concentration mismatch; refuse release if a second site cannot reconstruct the qualification decision. F247 NANOROBOTIC MANUFACTURING BATCH EFFECT IDENTIFICATION AT THE LIMIT &mdash; Focus: lithography mask alignment and coating pore defects. Direct witness: unselected qualified batch yield [percent]. Test against single-site repeatability without transfer. A live rival is postfabrication sorting; refuse release if a hazardous defect is released. F248 MICROFLUIDIC SAMPLING CONTAMINATION-SOURCE TRACEABILITY AT THE LIMIT &mdash; Focus: tubing adsorption reservoir and biofilm retention. Direct witness: correct source classification [percent]. Test against paper batch record plus endpoint i",
+      "tags": [],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Boundary limits of the matrix geometric mean and the failure of unrestricted GLT closure",
-      "url": "https://zenodo.org/records/23912963"
+      "title": "RESEARCH COLLECTION / FLAGSHIPS 241–250 OF 300 Scientific Failure, Metrology and Independent Evidence at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.0 These ten research-design monographs move from nano-quantum failure physics and reconstructed ",
+      "url": "https://zenodo.org/records/23931688"
     },
     {
       "base_direction_id": "formal_proof_verification",
