@@ -1,5 +1,5 @@
 {
-  "batch_id": "5df4405617c7796aaa88",
+  "batch_id": "de171ef0bc11d67d5da7",
   "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
   "fragment_count": 1,
   "fragment_index": 1,
@@ -110,39 +110,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "ConvexAD: differentiable phase retrieval with geometric regularization for high-strain, low-signal Bragg coherent diffraction imaging",
       "url": "https://arxiv.org/abs/2611.05020v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "fcab90cfa79bb6958f6a86a3",
-      "context_id": "1d9e5d2e658746811c57f5dd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "reconstruction",
-        "reverse"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.875,
-      "source": "zenodo",
-      "source_context_sha256": "648c27892c70df1710d962cbfa54d3602e749b881370d03ce36fc2379ed71bfd",
-      "source_published": "2026-11-03",
-      "source_updated": "",
-      "summary": "Release v1.0.0 - Software Archive for AAS80155R1 This is the initial formal release and archival version of the color_to_spec package, associated with the paper: &quot;Optical Colors as Compressed Spectral Information for Trans-Neptunian Objects&quot; Author: Hsing-Wen Lin AAS Manuscript Number: AAS80155R1 Overview color_to_spec provides tools for optical-color-to-spectral inference of Trans-Neptunian Objects (TNOs) and asteroids: Trained PCA Spectral Manifold &amp; KDE Prior : Latent representation across $0.4\\ \\mu\\text{m}$ to $5.1\\ \\mu\\text{m}$. Bayesian Inference Pipeline : Reconstructs full-resolution reflectance spectra with uncertainty bounds ($1\\sigma$ and $90%$ credible intervals) from broadband magnitude colors (e.g., LSST or DES). Photometric &amp; Reverse Projection Utilities : Tools to sample latent distributions and project them back into synthetic optical color spaces. Contents &amp; Structure src/ : Core Python modules for spectral reconstruction, GMM sampling, reverse projection, and photometric flux conversions. models/ : Pre-trained PCA/KDE models and AutoGluon reconstructor configurations. .agents/skills/spectra_reconstruction/ : CLI scripts and automated agent skill definitions. CITATION.cff : Citation metadata. LICENSE : MIT License. Citation If you use this software in your research, please cite the associated AAS paper and this Zenodo archive (see CITATION.cff or click &quot;Cite this repository&quot; on GitHub / Zenodo).",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "color_to_spec: Software for Optical-to-NIR Spectral Inference of Trans-Neptunian Objects",
-      "url": "https://zenodo.org/records/23932428"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -267,50 +234,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Sharp variance ordering for rotating Gaussian samplers",
       "url": "https://zenodo.org/records/23941497"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "108a3fd3a647a677855031f3",
-      "context_id": "75de0423f92a5a7a10803030",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::REVERSE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "inverse",
-        "sat",
-        "verification"
-      ],
-      "mirror_lens": "REVERSE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 6.9167,
-      "source": "zenodo",
-      "source_context_sha256": "44946e5ced7cce60e56d01b3aea27f01794f7313e7eb6134c67eb41e3f04a89d",
-      "source_published": "2026-11-04",
-      "source_updated": "",
-      "summary": "Unrefereed research candidate. In one sentence: identical Kuramoto oscillators scattered at random on a flat torus of any fixed dimension have stable twisted equilibria near every integer winding, which proves the twisted-equilibrium conjecture of Cirelli, Groisman, Huang and Vivas for every kernel in their class with |z|K(z) bounded. Place n identical oscillators at independent uniform points of the flat torus T d and couple points closer than &epsilon; n with weight K(z/&epsilon; n ). If &epsilon; n &rarr; 0 and n&epsilon; n d+2 /log n &rarr; &infin;, then with high probability, for every integer twist k with |k| &le; c/(&epsilon; n +&delta; n ), where &delta; n = (log n/(n&epsilon; n d+2 )) 1/2 , there is an asymptotically stable equilibrium whose phase differs from k&middot;x by at most C|k|&delta; n at every vertex (Theorem 2.1). The kernel need only be even, supported in the unit ball, positive almost everywhere near the origin and have sup|z|K(z) finite: this covers the hard-radius graph, every bounded kernel and |z| &minus;&alpha; , 0 &lt; &alpha; &le; 1. All twists k in Z d are covered, not only coordinate twists. Further results: at least c(&epsilon; n +&delta; n ) &minus;d distinct stable constructed states; a basin of fixed size; for bounded radial kernels, a heat-equation limit uniform over all times; and stable weighted harmonic lifts under smooth nonuniform sampling (bounded kernels). The key tool is a sup-norm bound for the inverse graph Laplacian uniform over all conductances above a bounded backbone. The archive contains the manuscript (PDF and LaTeX source), an exact standard-library checker of classical cycle twisted-state spectra, the numerical illustrations with their script and records, verification and claim records, preserved development drafts, two unrelated supplementary research notes kept for provenance, a rating-free internal review summary, CI and SHA-256 sums. Assurance: written informal proofs; internal AI-agent review and proof audits only (not peer review, independent reproduction or formal verification); kernels with |z|K unbounded and the connectivity regime n&epsilon; d ~ log n remain open; constants are not explicit; the numerics are small illustrations outside the theorem's regime. Creator: Anonymous. Text and figures CC0-1.0; code MIT.",
-      "tags": [
-        "Kuramoto model",
-        "random geometric graphs",
-        "twisted states",
-        "synchronisation",
-        "graph Laplacian",
-        "graph Poisson equation",
-        "Nash inequality",
-        "singular kernels",
-        "XY model"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Stable twisted equilibria on random geometric tori in every fixed dimension",
-      "url": "https://zenodo.org/records/23934300"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -457,6 +380,82 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "f003720fa508a75e584e1e2d",
+      "context_id": "54f76fc371ab6e705b88c20f",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "rup"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.7083,
+      "source": "zenodo",
+      "source_context_sha256": "50b9ce4d688a19f78cf646b2634f40200651469c1250d40ef880e61289d9a65c",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "This article connects demographic renewal with multinational recruitment control and the operating life of committed capital. Its host-choice argument engages resource bundling and global staffing, with explicit conditions for shared recruitment, competition and border disruption. Version 3.65.0 adds a Bayesian decision analysis to the Nitra–Puebla staffing appraisal. Under the existing flat-margin, equal-offer-odds benchmark, choosing Nitra after losing the whole UK route carries an expected loss from choosing the wrong host of EUR0.14–1.00 million. Losing only intakes after year fourteen reduces that expected loss to about EUR2,000–15,000. Nitra retains the higher expected value in these reference comparisons. Appendix K11 derives the decision rule, reports alternative priors and provides two independent integrations of 312 specifications. These are conditional public-information appraisals before capital commitment, not realised JLR losses or evidence about its internal contracts. Existing Bayesian panel estimates, demographic inputs, propositions and eight figures are retained. The article distinguishes the measured population-access specification from the recruitment-control mechanism and explains common tenure through the timing of workforce replacement. No observations or regressions are added. Start with Main_Manuscript_ANONYMOUS.pdf, Online_Appendix_ANONYMOUS.pdf and README.txt. Compilable sources, public inputs, code, figure files and aggregate outputs are supplied. The current replication overlay and nine frozen base archives restore the complete permitted replication. Licensed WRDS rows require subscriber access; queries and reconstruction instructions are supplied. Editor-only cover and title pages are excluded.",
+      "tags": [
+        "location strategy",
+        "foreign direct investment",
+        "internationalization",
+        "demographic change",
+        "labour migration",
+        "investment horizon",
+        "Bayesian inference"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Borrowed Youth: Demographic Change and Multinational Location Advantage — Article and Replication Materials",
+      "url": "https://zenodo.org/records/23942322"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "951ae24b70554c2754d2194d",
+      "context_id": "de9bb06c33472449758fc151",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::REVERSE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "inverse",
+        "recovery"
+      ],
+      "mirror_lens": "REVERSE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.625,
+      "source": "arxiv",
+      "source_context_sha256": "a9e377bb81e3b786845ba2a97e8f90a9a852e57f8784bf6f22b3a59aa00e4080",
+      "source_published": "2026-11-03T12:27:40Z",
+      "source_updated": "2026-11-03T12:27:40Z",
+      "summary": "We study forward and inverse problems for weakly viscous nonlocal wave equations with elastic term $(-Δ)^s u$ and dissipative term $(-Δ)^r\\partial_tu$, where $0\\leq r<s$. For time-dependent potentials in suitable $L^\\infty(0,T;L^p(Ω))$ classes, we establish finite energy well-posedness, strong continuity in time, and an energy identity by parabolic regularization and time-regularization arguments. Under explicit nonlocality and nonresonance assumptions on the fractional orders, we prove Runge approximation in $L^2(0,T;\\widetilde H^r(Ω))$ and hence in $L^2(Ω\\times(0,T))$. As an application, partial exterior Dirichlet-to-Neumann measurements uniquely determine the potential in all three exponent regimes of the Runge theorem, including integer elastic orders with noninteger dissipative orders. The recovery argument combines equality of solutions with the same exterior input, unique continuation or the entanglement principle, and a single Lebesgue-space Runge approximation. It applies to the full admissible potential class, without spatial boundedness, sign, or smallness assumptions.",
+      "tags": [
+        "math.AP"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Weakly viscous nonlocal wave equations: forward theory, Lebesgue Runge approximation, and inverse problems",
+      "url": "https://arxiv.org/abs/2611.04789v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "fe5b6bbd548465fe1c5a914d",
       "context_id": "5903f0987bf2232c48858c07",
       "delivery_preview_only": true,
@@ -498,43 +497,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Observable systems with divergent isolated Kalman covariances: a counterexample to the isolated Kalman filtering convergence conjecture",
       "url": "https://zenodo.org/records/23941896"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "1b975eba5bea838d07efebab",
-      "context_id": "8da241f2213731ea5d6b4db6",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "failure",
-        "negative result",
-        "sat"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 10.0417,
-      "source": "arxiv",
-      "source_context_sha256": "7b4740dffcfcc1a3c87164eda4173223aee0a9d93b15b6d9dd19409818a700fe",
-      "source_published": "2026-11-02T20:39:51Z",
-      "source_updated": "2026-11-02T20:39:51Z",
-      "summary": "We describe our approach to the LUMPI track of the UrbanTwin Sim2Real LiDAR Challenge, in which a 3D object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside LiDAR, while the synthetic point clouds are simultaneously scored for distributional realism. Our final entry scores 0.4793 combined, from a detection mAP of 0.1333 and a realism score of 0.9126. Our contribution is not a new architecture. Working from a PointPillars baseline, we obtained most of our gains from three sources. First, a diagnosis that small object failure in roadside LiDAR is a localisation problem rather than a detection problem, which led to a parameter free geometric refinement worth 86 percent relative on pedestrian AP. Second, an audit of our own post processing which revealed that a shipped rule was destroying valid predictions, the repair of which produced our single largest detection gain at 335 percent relative on the Van class. Third, treating the realism metrics analytically rather than as a black box, which showed that one of the four components is a closed form function of nine summary statistics. We also report an experimental methodology that we believe is the more transferable result. Because mean AP decomposes into independent per class terms, a single submission can carry several mutually controlled experiments, and a submission assembled entirely from previously measured components has a score that is known before it is sent. We predicted our final score to four decimal places prior to submission. We report negative results at equal length, and give a full account of data provenance and compliance in Section 8, including a full account of every mechanism contributing to the submitted score.",
-      "tags": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Geometric Refinement and Distributional Alignment for Sim2Real Roadside LiDAR Detection",
-      "url": "https://arxiv.org/abs/2611.03936v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -756,39 +718,6 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "25b50c83b2c28d24233bfd4c",
-      "context_id": "b9b20ea65231444cf00627eb",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": true,
-      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
-      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "bias",
-        "failure"
-      ],
-      "mirror_lens": "COUNTEREVIDENCE",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 5.4583,
-      "source": "zenodo",
-      "source_context_sha256": "701a58835089792d63fb08b8a7edd99f62c70f2e024ec63f0e1fd11916e40415",
-      "source_published": "2026-11-04",
-      "source_updated": "",
-      "summary": "RESEARCH COLLECTION / FLAGSHIPS 261&ndash;270 OF 300 Scientific Evidence, Reproducibility &amp; Successor Trust at the Limit Flagship 13 Fission&nbsp; |&nbsp; Volume III&nbsp; |&nbsp; Author 33&nbsp; |&nbsp; STARLI Research Design Working Edition v1.2 This ten-volume prospective collection challenges selection bias, autonomous experiment auditability, honest negative-result disclosure, bounded functional release, long-horizon data readability, cross-site quantum biosensing, degradation forecasting, impartial adjudication, retirement and successor reconstruction, and claim-to-evidence engineering. A candidate research design is not an observed new law, clinical result or experimentally established advantage. Ten English 777-page volumes collectively contain 300 mathematics plates, 820 chapter openings, 4,100 paginated studies, 2,000 Research Gates and 330 Phoenix Answer Embryos. Each Gate uses three independent future-facing essays &mdash; Origin, Extreme Extrapolation, Future Research Plan &mdash; which propose tests rather than report their success. Textual distinctness does not establish causal novelty. RESEARCH UNIT I&nbsp; &middot;&nbsp; F261&ndash;F265 F261&nbsp; NANOROBOTIC SAMPLE SELECTION BIAS AT THE LIMIT &mdash; Main endpoint: true-positive detection fraction on an independently enrolled cohort. Scientific contrast: survivor-biased microrobot recovery versus higher quality in selected starting specimens. Independent witness: external coded specimen census. Stop: unregistered specimen exclusion or identity-loss event. F262&nbsp; MICROSCALE AUTONOMOUS EXPERIMENT AUDITABILITY AT THE LIMIT &mdash; Main endpoint: fraction of blinded runs with complete replay and equal safety decision. Scientific contrast: actuation-command discrepancy versus software event acknowledgement without motion. Independent witness: laser displacement encoder. Stop: physical actuation cannot be reconciled with signed raw evidence. F263&nbsp; QUANTUM SENSOR NEGATIVE-RESULT REPORTING AT THE LIMIT &mdash; Main endpoint: fraction of registered null, failed and indeterminate measurements publicly traceable. Scientific contrast: null-run omission versus different detector gain for null samples. Independent witness: escrowed randomization list. Stop: unreported null cases or materially incomplete raw data. F264&nbsp; NANOROBOTIC FUNCTIONAL RELEASE CONTRACT AT THE LIMIT &mdash; Main endpoint: false release probability under hidden unsafe specimens. Scientific contrast: rare leakage into sample versus sensor false negatives. Independent witness: coded nanoparticle mass counter. Stop: a hidden physical hazard is classified safe. F265&nbsp; MICROSCALE RESEARCH DATA INTERGENERATIONAL READABILITY AT THE LIMIT &mdash; Main endpoint: successful clean-room rebuild fraction after toolchain change. Scientific contrast: obsolete raw-binary decoding versus floating-point rounding drift. Independent witness: independent raw-packet oracle. Stop: reconstruction requires undocumented secrets or unavailable instruments. &nbsp; &nbsp; RESEARCH UNIT II&nbsp; /&nbsp; RECONSTRUCTION, TRANSFER AND TRUST F266&nbsp; QUANTUM BIOSENSING EXTERNAL SENSING REPRODUCIBILITY AT THE LIMIT &mdash; Main endpoint: held-out external agreement within declared physical uncertainty. Scientific contrast: travelling standard drift versus site temperature changes real resonance. Independent witness: independent atomic frequency reference. Stop: correlated reference artefact masquerades as agreement. F267&nbsp; NANOROBOTIC LONG-HORIZON DEGRADATION PREDICTION AT THE LIMIT &mdash; Main endpoint: coverage of future failure intervals on unselected units. Scientific contrast: surface wear accumulation versus corrosion dominates wear. Independent witness: independent gravimetric loss assay. Stop: future wear enters an unregistered failure regime. F268&nbsp; MICROSCALE EXPERIMENT INDEPENDENT THIRD-PARTY ADJUDICATION AT THE LIMIT &mdash; Main endpoint: fraction of blinded case verdicts supported by indepe",
-      "tags": [],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "RESEARCH COLLECTION / FLAGSHIPS 261–270 OF 300 Scientific Evidence, Reproducibility & Successor Trust at the Limit Flagship 13 Fission | Volume III | Author 33 | STARLI Research Design Working Edition v1.2 This ten-volume prospective collection challenges selection bias, autonomous experiment audita",
-      "url": "https://zenodo.org/records/23934354"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
       "candidate_id": "bb3c85a80946d4dde8de25bb",
       "context_id": "cac45a6b6cd560d2e1b32920",
       "delivery_preview_only": true,
@@ -822,6 +751,47 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "The Right Source Is Not Enough: Understanding History Interference in Speech-LLM Memory",
       "url": "https://arxiv.org/abs/2611.05124v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "59f63ed594489af127bde379",
+      "context_id": "22ab82c9bb559b7d77575dac",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure",
+        "sat"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 5.4167,
+      "source": "zenodo",
+      "source_context_sha256": "216d0646b725cd581a148422cca4655308023250ee044b72789b31bf995313be",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Between 2010 and 2023, Niger faced escalating security and governance crises that culminated in the military coup of 26 July 2023. Conventional accounts often describe this trajectory in terms of state fragility, treating institutional weakness primarily as a deficit requiring technical reform. This article instead critically examines the explanatory value of Frantz Fanon's theory of postcolonial crisis in The Wretched of the Earth. Drawing on historical scholarship, empirical studies and policy reports, it develops five propositions concerning the inherited colonial state, the intermediary national bourgeoisie, the political marginalisation of the masses, neocolonial dependence, and the failure to transform national consciousness into social consciousness. Each proposition is assessed against developments in Niger between 2010 and 2023. The analysis finds that Fanon offers particular insight into elite intermediation, unequal access to state resources and externally mediated political power. Nevertheless, his framework gives insufficient attention to the relative autonomy of customary and religious authorities, transnational armed organisations and contemporary security partnerships. The 2023 coup further complicates his account by showing how military actors can appropriate the language of national liberation without demonstrating a corresponding commitment to social transformation. The article argues that Fanon's work remains valuable as a critical diagnosis of historically produced political relations, but should not be treated as a deterministic explanation of Niger's institutional trajectory.",
+      "tags": [
+        "Frantz Fanon",
+        "Postcolonial Crisis",
+        "State Fragility",
+        "Niger",
+        "Sahel",
+        "National Bourgeoisie",
+        "Neo-Colonialism"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Postcolonial Crisis and State Fragility in Niger, 2010–2023:A Critical Interrogation of Frantz Fanon's Theory",
+      "url": "https://zenodo.org/records/23942556"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -860,8 +830,8 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
-      "candidate_id": "28de11ad04d7f0f25f11a5be",
-      "context_id": "9707a448ac1e1459b475c41e",
+      "candidate_id": "ae6f74a13c095db6b72a9b7c",
+      "context_id": "6f92a6b34a406ab0ab7d8b92",
       "delivery_preview_only": true,
       "delivery_preview_truncated": false,
       "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
@@ -875,23 +845,65 @@
         "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
       ],
       "keyword_hits": [
-        "negative result"
+        "null result"
       ],
       "mirror_lens": "COUNTEREVIDENCE",
       "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 4.625,
-      "source": "arxiv",
-      "source_context_sha256": "32cdeb0528daa3fad726ef8d08639f7e48d7b51f7d161ee5d01ea5bd1d7f19aa",
-      "source_published": "2026-11-02T20:42:22Z",
-      "source_updated": "2026-11-02T20:42:22Z",
-      "summary": "We describe our approach to the V2X-Real track of the UrbanTwin Sim2Real LiDAR Challenge, in which a 3D object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside LiDAR from an Ouster OS1-64 unit, while the synthetic point clouds are simultaneously scored for distributional realism. Our final entry scores 0.7457 combined, from a detection mAP of 0.4382 and a realism score of 0.9251. Three findings account for most of our result, and all three were diagnostic rather than architectural. First, a coordinate frame mismatch between our predictions and the evaluation ground truth was suppressing detection AP entirely; recovering it took our score from 0.3520 to 0.5147 in a single submission. Second, a single global non maximum suppression threshold was destroying genuine pedestrian detections, because pedestrians occur in groups and a 0.3 IoU threshold applied to a 0.7 m box suppresses distinct neighbouring people; correcting this per class raised overall mAP from 0.0751 to 0.4295. Third, approximately 31 percent of the real reference point cloud consists of null returns encoded as the literal point (0, 0, 0), a format feature entirely absent from our synthetic clouds, which pinned Earth Mover's Distance near its floor until we modelled it. Negative results are reported at equal length, and Section 9 gives a full account of data provenance and compliance. That section also accounts for every mechanism contributing to the submitted score.",
+      "score": 4.4583,
+      "source": "zenodo",
+      "source_context_sha256": "8ff5c2bec83834540ea0122bef1e11c6011a6c3140ad32ec2923b853d261ceef",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Scripts, dated analysis plans, run logs, and deal-level estimates for a study of 40,271 completed acquisitions by listed or delisted acquirers across 37 countries, rumored between 2007 and 2025. The package accompanies a manuscript under double anonymized peer review; author identification is withheld during the review. It contains the construction of the sample, the three analyses and the robustness checks, each with its script and log, the deal-level betas and standard errors of the real and placebo windows under pseudonymous keys, and an index (NUMBERS_v7.md) from each table, figure, and appendix section of the manuscript to the script and log that produce it. Figure 2 can be recomputed from the package alone. Licensed return series and deal and firm data cannot be redistributed and are documented rather than included (LICENSE_AND_DATA.md). Start with README.md. &nbsp;",
       "tags": [
-        "cs.CV",
-        "cs.RO"
+        "mergers and acquisitions",
+        "systematic risk",
+        "measurement error",
+        "replication",
+        "null results",
+        "beta estimation",
+        "M&A",
+        "econometrics"
       ],
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Coordinate Frame Recovery, Per Class NMS and Null Return Modelling for Sim2Real V2X LiDAR Detection",
-      "url": "https://arxiv.org/abs/2611.03940v1"
+      "title": "Replication package: Do acquisitions change systematic risk? Evidence on beta from 40,271 deals in 37 countries over 19 years",
+      "url": "https://zenodo.org/records/23942785"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "01875f67a587b1dc5545387a",
+      "context_id": "c2317b19552faa9d4c09103e",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::COUNTEREVIDENCE",
+      "direction_title": "Formal proof / SAT / verification / counterexample [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_context_sha256": "98edbf123e3c9201619217410727e763800b53e44efdf84cfe112eee4b00d2b1",
+      "source_published": "2026-11-02T21:43:49Z",
+      "source_updated": "2026-11-02T21:43:49Z",
+      "summary": "LLM agents struggle to automate complex enterprise procedures because static, pre-built harness cannot capture proprietary policies, undocumented behaviors, or state-dependent recovery paths that surface only during execution. Procedural memory accrued from agent experience offers a training-free path to closing this gap -- yet unlike episodic records or semantic facts, it must consolidate repeated successes and diagnosed failures into reusable actions and recovery strategies. We introduce WASP-Mem (Wiki-based Agent-Synthesized Procedural Memory), a nimble but effective method that distills execution traces and feedback into persistent, interlinked wiki pages, enabling continual agent learning. On TheAgentCompany benchmark, WASP-Mem raises the checkpoint pass rate by 4.6-6.1% over the strongest baseline we compared across three models while requiring 57-61% less storage. We further present a systematic controlled study spanning consolidation method, feedback type, trace ingestion scope, and refinement rounds. Our results reveal that prescriptive knowledge organization such as human defined schemas and explicit deduplication rules hurts performance rather than closing the procedural-knowledge gap. In contrast, human diagnosis converts failed traces into corrective knowledge and drives sustained improvement: a single round of human diagnosis outperforms four rounds of self-judgment by 7.0-10.9%. These findings point to a simple division of labor: let agents organize procedural memory, and invest human effort where it matters most -- diagnosis.",
+      "tags": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "WASP-Mem: Let Agent Organize Procedural Memory. Human Spend Effort on Diagnosis",
+      "url": "https://arxiv.org/abs/2611.04003v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1010,6 +1022,46 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "GeoFaham: Domain-Specialized Multi-Agent Geospatial Analytics for Disaster Response",
       "url": "https://arxiv.org/abs/2611.04977v1"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "661888d94d782003e816ad33",
+      "context_id": "f3a685fe43ad578a91ff2453",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 13.0833,
+      "source": "zenodo",
+      "source_context_sha256": "888f4900716e83afb69c069226293b07684e67535b9e6100bb793423a2926c99",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Documentation release, results unchanged. ERA5-Land is no longer presented as a baseline: the model uses WorldClim and ERA5 (1991-2020) with Climate Digital Twin changes, which already agree against the null control. A new README section describes future work on daily indices (frost days, hot days, dry spells, length of the warm season) from daily data; the ERA5-Land download scripts and the era5land Snakemake step are kept for that work and labelled as not part of the results. Draft, open to correction by the authors of the original work.",
+      "tags": [
+        "replication",
+        "reproducibility",
+        "FORRT",
+        "nanopublication",
+        "Science-Live"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "anatolia-jerboa-climate-sdm",
+      "url": "https://zenodo.org/records/23949338"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1167,6 +1219,89 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "00e7fa22497fa0e7e29d43fd",
+      "context_id": "36c5d73b3f82bbb7c4b81f7b",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "control",
+        "sat"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 11.0833,
+      "source": "zenodo",
+      "source_context_sha256": "cdaf0166cb2bb7f337cd30e41b01b24ff1e3149def729760e60a4dd5c62a936a",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Code, derived data and result files for Differentiable Neuro-Fuzzy Reasoning (DNFR), a path-based link predictor that learns degree-aware edge memberships, a Schweizer–Sklar t-norm per metapath and metapath reliabilities, and aggregates paths by noisy-OR, used as an instrument for a controlled component analysis on medical knowledge graphs. Tasks: drug repurposing in Hetionet v1.0 and PrimeKG, disease–symptom prediction in Hetionet and in the graded health knowledge graph of Rotmensch et al. (2017), and a secondary test on a NHANES fuzzy relation, under leave-dyad-out random and disease-centred splits. Comparators: fixed t-norms, component ablations, restarts of the t-norm parameter, DWPC with logistic regression (with and without degree and prior features), a degree-preserving edge prior, popularity, AnyBURL, truncated and soft-thresholded SVD and knowledge graph embeddings. Version v3.0-rev3 (third revision) adds DNFR 2.0, four refinements tested one at a time and in combination (overlap-aware aggregation, Gumbel-softmax operator choice, an information-content hub discount and membership annealing), a fixed t-norm selected on validation data, a converged L-BFGS profile of the t-norm parameter, an unbounded parameterisation, a compact NBFNet baseline, an exact edge-level Shapley attribution of the explanations, a mechanistic classification of the drug-repurposing explanations, a sparsity variant that keeps the target relation, and 10 leave-dyad-out splits for the main comparisons on Hetionet compound–treats–disease, Hetionet disease–symptom and the graded health knowledge graph. Version 1.1.0 (second revision) added a profile analysis of the t-norm parameter, training without early stopping, additional splits, equivalence tests, the edge prior, share-matched and edge-level explanation tests, unit tests and the script that builds the manuscript from the statistics files. Includes per-query ranks for every method and split, trained models, path explanations, and the statistics files from which every number in the manuscript is read. Hetionet and PrimeKG are downloaded by download_data.py with MD5 checks.",
+      "tags": [
+        "knowledge graph",
+        "neuro-fuzzy reasoning",
+        "t-norm",
+        "identifiability",
+        "explainable AI",
+        "drug repurposing",
+        "link prediction",
+        "Hetionet",
+        "PrimeKG",
+        "NBFNet",
+        "Shapley attribution"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Code and derived results for: Which parts of a neuro-fuzzy path reasoner should be learned? A controlled component analysis on medical knowledge graphs, with four refinements (DNFR 2.0)",
+      "url": "https://zenodo.org/records/23949261"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
+      "candidate_id": "c593c62ee8fdb5617942a120",
+      "context_id": "f3346e27819c0e8b3d630886",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "replication",
+        "verification"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 10.3333,
+      "source": "zenodo",
+      "source_context_sha256": "f0ae5d2cc1dc05d6fce260b15fd4371b103cca8163b1153c7c18deab1cfc0fb7",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "Saigon300 is a semi-synthetic benchmark for the Vehicle Routing Problem with Time Windows (VRPTW) in Ho Chi Minh City, Vietnam. Version 1.0.0 archives 56 instances with 300 customers and one depot each: C1 (9), C2 (8), R1 (12), R2 (11), RC1 (8), and RC2 (8). The package contains eight shared asymmetric OSRM distance/duration matrices, instance files, BIH verification and OR-Tools code, figures, and recorded experimental outputs. Matrix units are metres and seconds; the routing profile is car. Source metadata reports an OpenStreetMap snapshot dated 2026-05-26. This deposit is an unchanged snapshot of public repository commit 555ac7d2eb9d2af402bdb23f9633e3af435d8ab4: https://github.com/ltlong-SGU/Saigon300-VRPTW . ZIP integrity and node IDs 0..300 for all 56 instance files have been checked. This is not a new solver experiment or full independent replication. Authors: Le Tan Long and Phan Tan Quoc (Saigon University); Do Phan Thuan (Ho Chi Minh City University of Industry and Trade), as stated in the source metadata. Original source licences are retained: CC BY 4.0 for the dataset; source metadata separately declares MIT for code. Upstream rights remain applicable to OpenStreetMap/OSRM-derived components; OpenStreetMap attribution: https://www.openstreetmap.org/copyright . This dataset deposit is separate from the accepted Saigon300 camera-ready paper, which is not included.",
+      "tags": [
+        "VRPTW"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "Saigon300: A VRPTW Benchmark Dataset for Urban Delivery in Ho Chi Minh City",
+      "url": "https://zenodo.org/records/23949217"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "c7b72055990aaf26967f2901",
       "context_id": "b60f6e2e9cdf4019235dc1fc",
       "delivery_preview_only": true,
@@ -1277,6 +1412,44 @@
     },
     {
       "base_direction_id": "formal_proof_verification",
+      "candidate_id": "684b4adeab2a230f195c5101",
+      "context_id": "fa42f3aadd58511ca3ef3087",
+      "delivery_preview_only": true,
+      "delivery_preview_truncated": false,
+      "direction_id": "formal_proof_verification::CONTROL",
+      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION",
+        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control",
+        "rup"
+      ],
+      "mirror_lens": "CONTROL",
+      "schema": "janus.beetle.repo_memory_item.v2",
+      "score": 9.7917,
+      "source": "zenodo",
+      "source_context_sha256": "8932ec88ad2dc18f177d5f64a3cb98135fdc1c8f2fc7a8a0bd21a4f8b2981d2b",
+      "source_published": "2026-11-04",
+      "source_updated": "",
+      "summary": "vFlow 4.4.3rc18 Compact gate list with one selected-gate editor for Rename, Delete, line style, width and thresholds. Keep transfer/application and editor navigation in gate Actions and right-click menus. Put Delete all gates in a list menu. Consolidate workspace commands into Open/Save plus a Workspace actions menu. Keep File menu and keyboard shortcuts. Consolidate interface preferences in Settings. Use one visible sample list, state-dependent Exclude/Restore and Cycle-only navigation buttons. Reject ambiguous multi-row sample actions. Preserve exclusion-list import/export and every source action. Remove repeated sample-action and gate-tool headers, reduce secondary button colours, and initially collapse advanced transform, gate-session and exclusion-list controls. Restore saved preferences. Preserve scientific algorithms, benchmark acquisitions, all RC17 interaction fixes and RC16 integrity/recovery. vFlow 4.4.3rc17 Make sample-row selection additive: click again to deselect, with Space/Enter toggling the focused row. Keep Active checkboxes independent of row highlights. Rapid double/triple clicks no longer invoke Show sample or change Overlay/Cycle mode; use the explicit button/menu or mode selector. Preserve the displayed Cycle sample when other samples are activated, excluded or restored, and keep saved Overlay axes through an empty Cycle population. Give Matplotlib Pan/Zoom exclusive pointer ownership, reject middle-button gate drawing, and restrict population-opening double-clicks to the left button. Keep workspace shortcuts out of descendant dialogs and leave editable-field undo to text controls. Consume sample context-menu gestures, ignore headings/empty areas, disable unavailable actions, and clean up population-tab context menus (including macOS Control-click). Dismiss tooltips before custom click/key handlers, prevent mouse-focus help from reopening over action buttons, and release tooltip binding callbacks when widgets are destroyed. Reject nonfinite/out-of-range gate widths during typing and restore the previous valid value on Return/focus loss. Preserve independent Batch Plot sample choices across file-list rebuilds. Retain workspace-integrity/recovery behavior and all supplied benchmark bytes. See UI_INTERACTION_REVIEW_v4.4.3rc17.md for validation, coverage and platform limits. vFlow 4.4.3rc16 Guard workspace commits with a saved byte revision, nonblocking concurrent-writer locking and a second revision check immediately before replacement. Refuse external edits, deletion and retargeted aliases while retaining live edits for Save As. Keep stable lock files and let the operating system release ownership on exit. Save per-instance recovery checkpoints with unsaved gate geometry, per-sample overrides, exclusions, activation and audit decisions. Preserve the last complete checkpoint and its gate revision through failed checkpoint writes; restore recovered work as dirty. Search older valid recovery files when a newer file is corrupt, and retain the original saved revision guard after recovery. Use full SHA-256 source, gate and audit identities for new references, preserve historical sampled fingerprints, and pin full bytes when accepting legacy references. Preserve relative-only missing locators through Save As and verify physical paths when relocating or saving through aliases. Keep acquisition identities captured at ingestion. Check source bytes before and after decoding. When an owned derivative CSV redirects to an original LMD, apply the outer integrity check and identity attributes only to samples sourced from that CSV; the recursively loaded original is checked independently and may legitimately regenerate the CSV. Add the derivative-refresh regression, including a mutation during recursive original decoding. Explain that statistical scores and exports retain the saved data/gate snapshot while Current state follows present inclusion. Preserve true numeric zeros, show unavailable comparisons explicitly, refres",
+      "tags": [
+        "immunofluorescence",
+        "Fluorescence Activated Synaptosome Sorting",
+        "FASS"
+      ],
+      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
+      "title": "vFlow",
+      "url": "https://zenodo.org/records/23955062"
+    },
+    {
+      "base_direction_id": "formal_proof_verification",
       "candidate_id": "dd847ddebf1c127437da65fd",
       "context_id": "e0358ec025f7bb21acc3ae22",
       "delivery_preview_only": true,
@@ -1316,43 +1489,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "Dynamic titration of exercise intensity in pulmonary rehabilitation",
       "url": "https://zenodo.org/records/23942602"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "1b975eba5bea838d07efebab",
-      "context_id": "48d70e5767d023bff7395fc5",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "baseline",
-        "control",
-        "sat"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 9.75,
-      "source": "arxiv",
-      "source_context_sha256": "bda2816e1604e6fec97ebbdb2ce9e27d172079f05dcbcd7c75a6955f83ac5b43",
-      "source_published": "2026-11-02T20:39:51Z",
-      "source_updated": "2026-11-02T20:39:51Z",
-      "summary": "We describe our approach to the LUMPI track of the UrbanTwin Sim2Real LiDAR Challenge, in which a 3D object detector must be trained exclusively on synthetic data and evaluated on unseen real roadside LiDAR, while the synthetic point clouds are simultaneously scored for distributional realism. Our final entry scores 0.4793 combined, from a detection mAP of 0.1333 and a realism score of 0.9126. Our contribution is not a new architecture. Working from a PointPillars baseline, we obtained most of our gains from three sources. First, a diagnosis that small object failure in roadside LiDAR is a localisation problem rather than a detection problem, which led to a parameter free geometric refinement worth 86 percent relative on pedestrian AP. Second, an audit of our own post processing which revealed that a shipped rule was destroying valid predictions, the repair of which produced our single largest detection gain at 335 percent relative on the Van class. Third, treating the realism metrics analytically rather than as a black box, which showed that one of the four components is a closed form function of nine summary statistics. We also report an experimental methodology that we believe is the more transferable result. Because mean AP decomposes into independent per class terms, a single submission can carry several mutually controlled experiments, and a submission assembled entirely from previously measured components has a score that is known before it is sent. We predicted our final score to four decimal places prior to submission. We report negative results at equal length, and give a full account of data provenance and compliance in Section 8, including a full account of every mechanism contributing to the submitted score.",
-      "tags": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Geometric Refinement and Distributional Alignment for Sim2Real Roadside LiDAR Detection",
-      "url": "https://arxiv.org/abs/2611.03936v1"
     },
     {
       "base_direction_id": "formal_proof_verification",
@@ -1670,113 +1806,6 @@
       "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
       "title": "CogniLife: Continuous Cognitive Distillation for Deployed Multi-Expert Agent Marketplaces",
       "url": "https://arxiv.org/abs/2611.04483v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "b4099a8c6bf6a9784a81d204",
-      "context_id": "4a4947107a8001912ee398a1",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "4ee64bf1712dd1d4dd19b06bca65d830ffec32bcafb7026b3adf84e313786b57",
-      "source_published": "2026-11-02T21:49:40Z",
-      "source_updated": "2026-11-02T21:49:40Z",
-      "summary": "Modern learning systems increasingly combine pretrained models with downstream heads. Despite the growing importance of such modular designs, how the downstream model co-adapts to the geometry of pretrained representations remains relatively underexplored. We study this problem through vision-language-action models (VLAs), where a pretrained vision-language model (VLM) conditions an action model for control. We find that the action model progressively concentrates its sensitivity on high-variance dimensions of the VLM outputs. Through controlled experiments across different backbone-head models, we further show that counteracting this sensitivity concentration can be beneficial under representation--task mismatch settings. Motivated by these observations, we introduce \\emph{Adaptive Interface Equalizer} (AdaIE), a parameter-free mechanism that reweights pretrained representations according to the evolving downstream sensitivity during training. AdaIE improves VLA success rates on simulation benchmarks, with gains of up to $+5.28$ percentage points (pp) on RoboCasa-GR1 and $+1.68$ pp on RoboTwin 2.0, and achieves an average gain of $+19$ pp across five real-world manipulation tasks. It further generalizes to diffusion policies and world models, improving downstream performance in both settings. Our results highlight interface co-adaptation as an important optimization problem when coupling pretrained representations with downstream models.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Controlling Action-Head Co-Adaptation to VLM Representation Anisotropy",
-      "url": "https://arxiv.org/abs/2611.04006v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "965173a298479f41d85474f2",
-      "context_id": "2ef337f6d7c3d462424259bd",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "e5666009520bddcaaad324cd384c5cd443554ae4ae04591e0f3d7bd229a3cb61",
-      "source_published": "2026-11-03T03:08:57Z",
-      "source_updated": "2026-11-03T03:08:57Z",
-      "summary": "Recent multimodal agents have shown promising progress in embodied planning and web interaction. However, existing evaluations often rely on simplified tasks with limited combinatorial structure, leaving it unclear whether current agents can robustly integrate perception and reasoning for multi-goal planning under temporal, physical, and multimodal constraints. We introduce DualWorldBench, a unified benchmark for evaluating agent planning under controlled symbolic--temporal and grounded--topological complexity. Built around a shared pickup--delivery interface, DualWorldBench consists of three complementary components: TextWorld, which isolates symbolic planning under varying task compositions and release dynamics; SimWorld, which evaluates grounded path planning under controlled topological variation with text, image, or multimodal inputs; and DualWorld-VQA, a diagnostic suite spanning perception, scene understanding, and planning. Experiments reveal a common gap between local understanding and globally consistent planning. In TextWorld, agents struggle to derive optimal task sequences under interacting temporal constraints; in SimWorld, grounded observations are not reliably converted into feasible action sequences. DualWorld-VQA further confirms that perception and topology understanding do not necessarily translate into constrained planning. Together, these results identify the central challenge as composing symbolic or grounded evidence into globally feasible and efficient multi-goal plans. These findings establish DualWorldBench as a challenging testbed for agents with tighter perception--reasoning--planning integration. All datasets and code are publicly available at our project website https://dualworld.netlify.app/.",
-      "tags": [
-        "cs.AI"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "DualWorldBench: Can Agents Plan Deliveries across Symbolic and Grounded Worlds?",
-      "url": "https://arxiv.org/abs/2611.04228v1"
-    },
-    {
-      "base_direction_id": "formal_proof_verification",
-      "candidate_id": "ef3e56eb3f627ef3d71f1819",
-      "context_id": "18983104f134b0351c5c738e",
-      "delivery_preview_only": true,
-      "delivery_preview_truncated": false,
-      "direction_id": "formal_proof_verification::CONTROL",
-      "direction_title": "Formal proof / SAT / verification / counterexample [CONTROL]",
-      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
-      "firewall": [
-        "ROUTED_NE_VERIFIED",
-        "INBOX_NE_EVIDENCE",
-        "PRIORITY_NE_TRUTH",
-        "MIRROR_LENS_NE_CONFIRMATION",
-        "SAME_SOURCE_CONTEXTS_NE_INDEPENDENT_SOURCES"
-      ],
-      "keyword_hits": [
-        "benchmark",
-        "control"
-      ],
-      "mirror_lens": "CONTROL",
-      "schema": "janus.beetle.repo_memory_item.v2",
-      "score": 8.6667,
-      "source": "arxiv",
-      "source_context_sha256": "6181d15159a4458393c5ac06d4fdf476eb21a9e7e68f1df9f20b648d566f0b21",
-      "source_published": "2026-11-03T06:25:06Z",
-      "source_updated": "2026-11-03T06:25:06Z",
-      "summary": "Vision-Language-Action (VLA) models generalize across tasks, but their autoregressive decoders need sequential forward passes in proportion to the action horizon, each bounded below on embedded aerial platforms by streaming billions of parameters from memory. We present Aero-VPA, a lightweight Vision-Predictor-Action architecture for 3D navigation on edge hardware. A compact RGB-D Vision Transformer and a five-head ensemble predictor, trained without pixel reconstruction, forecast the next latent state; a Conditional Flow Matching solver generates a velocity and yaw-rate chunk in two Euler steps, so each decision takes five sequential network evaluations; and the ensemble dispersion drives an uncertainty fallback. Version 1 specified the architecture, deployment and protocol without results. This version reports the first closed-loop evaluation: PX4 software-in-the-loop simulation of quadrotor missions in procedurally generated forests. Behaviour cloning failed on all 60 missions despite open-loop errors of 0.02-0.04 m/s: the policy copies its last command, a copycat form of causal confusion. DAgger with a privileged, safety-gated supervisor gave the first successes but plateaued at 11.1-21.1% across six checkpoints. A map-free runtime shield with a 15 s depth memory, barrier constraints, a cap on motion outside the 73-degree field of view and backoff along the flown path raised the first DAgger policy's success on 180 paired missions from 21.1% to 52.2% (95% CI [45.0, 59.4]; exact McNemar p = 1.2 x 10^-10) and cut its crashes from 72.2% to 22.2%, while timeouts rose from 2.8% to 23.3%. All six checkpoints gained 30.0-34.4 percentage points, at mean speeds of 1.16-1.36 m/s. The code (https://github.com/ylee-sling/Aero-VPA), the trained policy (72.6 MB, https://huggingface.co/ylee-sling/aero-vpa) and the full benchmark dataset are public.",
-      "tags": [
-        "cs.LO",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "target_repository": "Hawkar-usls/Fast-CAT-SHAiTan",
-      "title": "Aero-VPA: Few-Step Flow-Matching Control over Non-Reconstructive JEPA Latents for Agile Flight on Edge Hardware",
-      "url": "https://arxiv.org/abs/2611.04392v1"
     }
   ],
   "schema": "janus.beetle.repo_memory_batch.v1",
