@@ -1,0 +1,44 @@
+name: ESSENCE v0.4 singleton contract
+on:
+  pull_request:
+    paths:
+      - '.janus/essence/**'
+      - '.github/workflows/essence-collective-contract.yml'
+permissions:
+  contents: read
+jobs:
+  essence-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Independently verify exact root/factory and repo identity
+        env:
+          ESSENCE_REPO: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, importlib.util, json, os, tempfile
+          base=Path('.janus/essence')
+          def git_sha1(path):
+              raw=path.read_bytes()
+              return hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+          assert git_sha1(base/'kernel.py')=='de5199978fbafcbda836b77da370943f7ea2514e'
+          assert git_sha1(base/'collective_seed.py')=='4e0000b9bad7e44581b7834eff0ab4c634c69d13'
+          def imp(name):
+              spec=importlib.util.spec_from_file_location(name,base/(name+'.py'))
+              mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
+              return mod
+          root=imp('kernel');factory=imp('collective_seed')
+          manifest=json.loads((base/'manifest.json').read_text())
+          root.validate_manifest(manifest,os.environ['ESSENCE_REPO'])
+          factory.validate_manifest(manifest,os.environ['ESSENCE_REPO'])
+          factory.validate_innovations(json.loads((base/'innovations.json').read_text()),os.environ['ESSENCE_REPO'])
+          assert len(list(base.glob('kernel.py')))==1
+          assert not manifest['enabled'] and all(x is False for x in manifest['capabilities'].values())
+          assert len(manifest['microkernels'])>=6
+          print('ESSENCE_ONLY_VALIDATED_SAME_GIT_BLOBS_INERT=true')
+          PY
